@@ -15,7 +15,7 @@ if(USE_CUDA)
   set(CMAKE_CUDA_HOST_COMPILER "${CMAKE_CXX_COMPILER}")
 endif()
 
-project(TransformerModule LANGUAGES CXX)
+project(GlassHelix LANGUAGES CXX)
 
 # Set the C++ standard to C++23
 set(CMAKE_CXX_STANDARD 23)
