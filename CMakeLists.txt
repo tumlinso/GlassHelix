@@ -9,7 +9,7 @@ set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 
 if(USE_CUDA)
-  set(CMAKE_CUDA_COMPILER "nvcc")
+  set(CMAKE_CUDA_COMPILER "${CUDA_DIR}/bin/nvcc")
   set(CMAKE_CUDA_ARCHITECTURES 86)
   set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler")
   set(CMAKE_CUDA_HOST_COMPILER "${CMAKE_CXX_COMPILER}")
@@ -27,6 +27,18 @@ set(CMAKE_CXX_STANDALONE_MODULES ON)
 set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API ON)
 
 include_directories(.)
+include(FetchContent)
+
+# Configure Python
+find_package(Python3 REQUIRED COMPONENTS Development Interpreter)
+
+# Configure Pybind11
+FetchContent_Declare(
+        pybind11
+        GIT_REPOSITORY https://github.com/pybind/pybind11.git
+)
+FetchContent_MakeAvailable(pybind11)
+set(PYBIND11_CPP_STANDARD -std=c++23)
 
 # Configure CUDA
 if (USE_CUDA)
@@ -70,6 +82,23 @@ else()
   set(ARROW_USE_CUDA OFF)
 endif()
 
+# Simple Graph library
+add_library(Graph)
+target_sources(Graph
+        PRIVATE
+        src/Graph/Graph.cppm
+)
+target_compile_options(Graph PRIVATE -Ofast -stdlib=libc++)
+
+pybind11_add_module(
+        GraphBindings
+        src/Graph/GraphBindings.cpp
+        src/Graph/Graph.cppm
+)
+set_target_properties(GraphBindings PROPERTIES
+        LIBRARY_OUTPUT_DIRECTORY src/Graph/python
+)
+
 # TransformerTest
 add_executable(GlassHelix src/GlassHelix/main.cpp
         src/GlassHelix/GlassHelix.ixx
@@ -91,7 +120,7 @@ add_executable(GlassHelix src/GlassHelix/main.cpp
         src/GlassHelix/nn/primitives/Perceptron.cppm
         src/GlassHelix/nn/primitives/torch/TorchAttention.cppm
         src/GlassHelix/nn/primitives/torch/TorchAttention.cppm
-        src/Graph.cppm
+        src/Graph/Graph.cppm
 )
 target_sources(
         GlassHelix
