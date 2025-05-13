@@ -1,4 +1,9 @@
 #include <pybind11/pybind11.h>
-#include "src/Graph/Graph.cppm"
+
+import Graph;
+
+namespace py = pybind11;
+
+
 
 

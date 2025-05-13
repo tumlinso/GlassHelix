@@ -88,16 +88,7 @@ target_sources(Graph
         PRIVATE
         src/Graph/Graph.cppm
 )
-target_compile_options(Graph PRIVATE -Ofast -stdlib=libc++)
-
-pybind11_add_module(
-        GraphBindings
-        src/Graph/GraphBindings.cpp
-        src/Graph/Graph.cppm
-)
-set_target_properties(GraphBindings PROPERTIES
-        LIBRARY_OUTPUT_DIRECTORY src/Graph/python
-)
+target_compile_options(Graph PRIVATE -stdlib=libc++)
 
 # TransformerTest
 add_executable(GlassHelix src/GlassHelix/main.cpp
