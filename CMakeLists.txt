@@ -9,7 +9,7 @@ set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 
 if(USE_CUDA)
-  set(CMAKE_CUDA_COMPILER "nvcc")
+  set(CMAKE_CUDA_COMPILER "${CUDA_DIR}/bin/nvcc")
   set(CMAKE_CUDA_ARCHITECTURES 86)
   set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler")
   set(CMAKE_CUDA_HOST_COMPILER "${CMAKE_CXX_COMPILER}")
@@ -91,7 +91,9 @@ add_executable(GlassHelix src/GlassHelix/main.cpp
         src/GlassHelix/nn/primitives/Perceptron.cppm
         src/GlassHelix/nn/primitives/torch/TorchAttention.cppm
         src/GlassHelix/nn/primitives/torch/TorchAttention.cppm
-        src/Graph.cppm
+        src/Graph/Graph.cc
+        src/Graph/Graph.hh
+        src/Graph/Graph.inl
 )
 target_sources(
         GlassHelix
