@@ -1,6 +1,15 @@
 # Arrow files
 *.arrow
 
+# Pickled files
+*.pkl
+
+# CSV files
+*.csv
+
+# Binary files
+*.bin
+
 # Prerequisites
 *.d
 
