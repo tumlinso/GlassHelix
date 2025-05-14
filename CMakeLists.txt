@@ -72,16 +72,10 @@ endif()
 
 # TransformerTest
 add_executable(GlassHelix src/GlassHelix/main.cpp
-        src/GlassHelix/GlassHelix.ixx
-        src/GlassHelix/data/structures/Dictionary.cppm
         src/GlassHelix/nn/transformer/virtual/Transformer.cppm
-        src/GlassHelix/nn/primitives/Attention.cppm
-        src/GlassHelix/GlassHelix.ixx
         src/GlassHelix/nn/transformer/virtual/Tokenizer.cppm
         src/GlassHelix/GeneTokenizer.cppm
         src/GlassHelix/nn/transformer/virtual/Embedder.cppm
-        src/GlassHelix/data/structures/BidirectionalMap.cppm
-        src/GlassHelix/data/structures/SparseMatrix.cppm
         src/BioLogic/Cell.cppm
         src/BioLogic/Sequence.cppm
         src/BioLogic/Feature.cppm
@@ -94,6 +88,13 @@ add_executable(GlassHelix src/GlassHelix/main.cpp
         src/Graph/Graph.cc
         src/Graph/Graph.hh
         src/Graph/Graph.inl
+        src/GlassHelix/data/structures/SparseMatrix.hh
+        src/GlassHelix/data/structures/Dictionary.hh
+        src/GlassHelix/data/structures/BidirectionalMap.hh
+        src/GlassHelix/nn/primitives/Attention.hh
+        src/GlassHelix/nn/primitives/Attention.cc
+        src/GlassHelix/GlassHelix.cc
+        src/GlassHelix/GlassHelix.hh
 )
 target_sources(
         GlassHelix
@@ -101,15 +102,12 @@ target_sources(
         FILE_SET cxx_modules TYPE CXX_MODULES
         FILES
         src/GlassHelix/GlassHelix.ixx
-        src/GlassHelix/data/structures/Dictionary.cppm
         src/GlassHelix/nn/transformer/virtual/Transformer.cppm
         src/GlassHelix/nn/primitives/Attention.cppm
         src/GlassHelix/GlassHelix.ixx
         src/GlassHelix/nn/transformer/virtual/Tokenizer.cppm
         src/GlassHelix/GeneTokenizer.cppm
         src/GlassHelix/nn/transformer/virtual/Embedder.cppm
-        src/GlassHelix/data/structures/BidirectionalMap.cppm
-        src/GlassHelix/data/structures/SparseMatrix.cppm
         src/BioLogic/Cell.cppm
         src/BioLogic/Sequence.cppm
         src/BioLogic/Feature.cppm

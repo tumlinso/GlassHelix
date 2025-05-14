@@ -1,8 +1,9 @@
-export module Attention;
+#ifndef GLASSHELIX_ATTENTION_HH
+#define GLASSHELIX_ATTENTION_HH
 
-import <cstddef>;
+#include <cstddef>
+#include <torch/torch.h>
 
-export
 template<typename T>
 class Attention {
 public:
@@ -33,7 +34,7 @@ torch::Tensor Attention::forward(const torch::Tensor& input, const torch::Tensor
 }
 
 torch::Tensor Attention::scaledDotProduct(const torch::Tensor &K, const torch::Tensor &Q,
-                                           const torch::Tensor &V, const torch::Tensor &mask) {
+                                          const torch::Tensor &V, const torch::Tensor &mask) {
     auto d_k = K.size(-1);
     auto scores = torch::matmul(Q, K.transpose(-2, -1)) / std::sqrt(d_k);
 
@@ -42,3 +43,6 @@ torch::Tensor Attention::scaledDotProduct(const torch::Tensor &K, const torch::T
     this->weights = torch::softmax(scores, -1);
     return torch::matmul(weights, V);
 }
+
+
+#endif //GLASSHELIX_ATTENTION_HH

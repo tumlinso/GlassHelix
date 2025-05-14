@@ -1,0 +1,10 @@
+#ifndef GLASSHELIX_GLASSHELIX_HH
+#define GLASSHELIX_GLASSHELIX_HH
+
+
+class GlassHelix {
+
+};
+
+
+#endif //GLASSHELIX_GLASSHELIX_HH

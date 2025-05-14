@@ -1,8 +1,8 @@
-export module BidirectionalMap;
+#ifndef GLASSHELIX_BIDIRECTIONALMAP_HH
+#define GLASSHELIX_BIDIRECTIONALMAP_HH
 
-import <unordered_map>;
+#include <unordered_map>
 
-export
 template<typename T, typename U>
 class BidirectionalMap {
 protected:
@@ -23,7 +23,6 @@ public:
 
 
 // explicit use case for ULL id mapping
-export
 template <typename T>
 class IDMap : virtual public BidirectionalMap<T, unsigned long> {
 public:
@@ -39,3 +38,6 @@ public:
         }
     }
 };
+
+
+#endif //GLASSHELIX_BIDIRECTIONALMAP_HH

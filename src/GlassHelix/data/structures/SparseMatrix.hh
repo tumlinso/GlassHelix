@@ -1,9 +1,10 @@
-export module SparseMatrix;
+#ifndef GLASSHELIX_SPARSEMATRIX_HH
+#define GLASSHELIX_SPARSEMATRIX_HH
 
-import <unordered_map>;
-import <utility>;
+#include <cstddef>
+#include <unordered_map>
+#include <utility>
 
-export
 template <typename T, typename U>
 struct pairHash {
     std::size_t operator()(const std::pair<T, U> &pair) const {
@@ -11,7 +12,6 @@ struct pairHash {
     }
 };
 
-export
 template <typename T, typename U, typename V>
 class SparseMatrix { // composition, no inheritance from std::unordered_map, that would work maybe?
 protected:
@@ -44,3 +44,5 @@ public:
 
     [[nodiscard]] [[maybe_unused]] unsigned long size() const { return data.size(); }
 };
+
+#endif //GLASSHELIX_SPARSEMATRIX_HH
