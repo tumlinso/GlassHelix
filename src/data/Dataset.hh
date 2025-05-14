@@ -9,7 +9,7 @@
 #include "Dictionary.hh"
 
 class Dataset {
-    Dictionary
+    Dictionary Tokens
 
 };
 
