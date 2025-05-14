@@ -6,7 +6,10 @@
 #include <arrow/ipc/api.h>
 #include <iostream>
 
+#include "Dictionary.hh"
+
 class Dataset {
+    Dictionary
 
 };
 

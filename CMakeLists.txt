@@ -86,9 +86,9 @@ add_executable(GlassHelix src/main.cpp
         src/Graph/Graph.cc
         src/Graph/Graph.hh
         src/Graph/Graph.inl
-        src/data/structures/SparseMatrix.hh
-        src/data/structures/Dictionary.hh
-        src/data/structures/BidirectionalMap.hh
+        src/data/SparseMatrix.hh
+        src/data/Dictionary.hh
+        src/data/BidirectionalMap.hh
         src/nn/primitives/Attention.hh
         src/nn/primitives/Attention.cc
         src/GlassHelix.cc
