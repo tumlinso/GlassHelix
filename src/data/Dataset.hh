@@ -5,11 +5,17 @@
 #include <arrow/io/api.h>
 #include <arrow/ipc/api.h>
 #include <iostream>
+#include <string>
 
 #include "Dictionary.hh"
 
 class Dataset {
-    Dictionary Tokens
+private:
+    void readTokenDictionary(std::string filename);
+public:
+    Dictionary<std::string> Tokens;
+
+    Dataset(std::string PathTokenDict);
 
 };
 
