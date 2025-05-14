@@ -6,22 +6,25 @@
 
 struct Link;
 
-struct Node {
+class Node {
+private:
+
+public:
     std::vector<Link *> out;
     const double bias;
     double value;
     Node(double bias, double value)
             : bias(bias), value(value) {}
-    virtual void link(Node &sink, double bias, double value);
+    inline void link(Node &sink, double bias, double value);
 };
 
-struct Link : Node {
+class Link : Node {
     Node &source, &sink;
     explicit Link(Node &source, Node &sink, double bias, double value)
             : Node(bias, value), source(source), sink(sink) {}
 };
 
-class Graph : public std::vector<Node> {
+class Graph {
     virtual void link(Node &source, Node &sink, double bias, double value);
 };
 

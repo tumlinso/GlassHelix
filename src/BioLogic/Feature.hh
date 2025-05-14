@@ -1,6 +1,6 @@
-export module Feature;
+#ifndef GLASSHELIX_FEATURE_HH
+#define GLASSHELIX_FEATURE_HH
 
-export
 class Feature {
 public:
     enum struct Strand : signed char {
@@ -17,3 +17,7 @@ public:
 
     [[nodiscard]] inline unsigned long length() const { return end - start; }
 };
+
+
+
+#endif //GLASSHELIX_FEATURE_HH

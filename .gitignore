@@ -1,3 +1,6 @@
+# Arrow files
+*.arrow
+
 # Prerequisites
 *.d
 

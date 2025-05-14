@@ -21,23 +21,4 @@ public:
     [[nodiscard]] unsigned long size() const    { return forward.size(); }
 };
 
-
-// explicit use case for ULL id mapping
-template <typename T>
-class IDMap : virtual public BidirectionalMap<T, unsigned long> {
-public:
-    explicit IDMap() : BidirectionalMap<T, unsigned long>() {}
-
-    unsigned long generate(T t) {
-        if (this->contains(t)) {
-            return this->forward[t];
-        } else {
-            unsigned long id = this->size();
-            this->emplace(t, id);
-            return id;
-        }
-    }
-};
-
-
 #endif //GLASSHELIX_BIDIRECTIONALMAP_HH
