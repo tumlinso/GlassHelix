@@ -18,11 +18,12 @@ static inline constexpr unsigned long chunkSize = l3cacheMB * 1024 * 1024;
 
 class Dataset {
 private:
+    std::string pathTokenDict;
     void readTokenDictionary(std::string filename);
 public:
     Dictionary<std::string> Tokens;
 
-    Dataset(std::string PathTokenDict);
+    Dataset(std::string pathTokenDict);
 };
 
 
