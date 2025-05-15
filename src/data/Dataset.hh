@@ -15,10 +15,9 @@
 
 static inline const unsigned long l3cacheMB = 16;
 static inline constexpr unsigned long chunkSize = l3cacheMB * 1024 * 1024;
-
 static inline const maxToken = 25425;
 
-
+template<typename T>
 class Dataset {
 private:
     std::string pathTokenDict;
