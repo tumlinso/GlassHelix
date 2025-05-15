@@ -7,24 +7,28 @@
 #include <type_traits>
 #include <vector>
 #include <unordered_map>
+#include <stdexcept>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 template<typename T, typename U>
 class Dictionary {
     static constexpr bool is_int = std::is_integral_v<U>;
 
     std::unordered_map<T, U> forward_;
-    using ReverseType = std::conditional_t<
+    std::conditional_t<
             is_int,
             std::vector<const T*>,
             std::unordered_map<U, const T*>
-    >;
-    ReverseType reverse_;
+    > reverse_;
 
 public:
     Dictionary() = default;
 
-    // these are small—declare them inline:
     void reserve(std::size_t n);
+    void clear() noexcept;
     std::size_t size() const noexcept;
     bool contains(const T& t) const;
     bool contains(const U& u) const;
@@ -33,9 +37,10 @@ public:
     U       operator[](const T& t) const;
     const T& operator[](const U& u) const;
 
-    // heavier, defined out-of-line:
     void emplace(const T& t, const U& u);
     U     generate(const T& t);
+
+    void readFromFile(const std::string& filename, bool skip_header = false, unsigned long entries = 0);
 };
 
 #include "Dictionary.inl"

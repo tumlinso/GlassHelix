@@ -15,7 +15,9 @@
 
 static inline const unsigned long l3cacheMB = 16;
 static inline constexpr unsigned long chunkSize = l3cacheMB * 1024 * 1024;
+
 static inline const maxToken = 25425;
+
 
 class Dataset {
 private:
@@ -25,7 +27,7 @@ private:
     void readTokenDictionary(std::string filename);
     void readData(std::string filename);
 public:
-    Dictionary<std::string> Tokens;
+    Dictionary<std::string, unsigned short> tokenDict;
 
     Dataset(std::string pathTokenDict, std::string pathData) : pathTokenDict(pathTokenDict), pathData(pathData) {
         readTokenDictionary(pathTokenDict);

@@ -14,6 +14,12 @@ inline void Dictionary<T,U>::reserve(std::size_t n) {
 }
 
 template<typename T, typename U>
+inline void Dictionary<T,U>::clear() noexcept {
+    forward_.clear();
+    reverse_.clear();
+}
+
+template<typename T, typename U>
 inline std::size_t Dictionary<T,U>::size() const noexcept {
     return forward_.size();
 }
