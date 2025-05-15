@@ -5,7 +5,7 @@
 
 template<typename T, typename U>
 class BidirectionalMap {
-protected:
+private:
     std::unordered_map<T, U> forward{};
     std::unordered_map<U, T> reverse{};
 public:

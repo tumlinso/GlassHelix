@@ -1,11 +1,5 @@
 #include "Dataset.hh"
 
-Dataset::Dataset(std::string pathTokenDict) :
-    pathTokenDict(pathTokenDict) {
-    readTokenDictionary(pathTokenDict);
-
-}
-
 void Dataset::readTokenDictionary(std::string filename) {
     std::ifstream file(filename);
     if (!file.is_open()) throw std::runtime_error("Error opening Token Dictionary File: " + filename);
@@ -22,4 +16,8 @@ void Dataset::readTokenDictionary(std::string filename) {
         this->Tokens.emplace(token, index);
     }
     file.close();
+}
+
+void Dataset::readData(std::string filename) {
+
 }

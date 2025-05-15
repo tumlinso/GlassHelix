@@ -88,7 +88,7 @@ add_executable(GlassHelix src/main.cpp
         src/Graph/Graph.inl
         src/data/SparseMatrix.hh
         src/data/Dictionary.hh
-        src/data/BidirectionalMap.hh
+        archive/BidirectionalMap.hh
         src/nn/primitives/Attention.hh
         src/nn/primitives/Attention.cc
         src/GlassHelix.cc
@@ -104,6 +104,8 @@ add_executable(GlassHelix src/main.cpp
         src/BioLogic/Sequence.inl
         src/data/Dataset.cc
         src/data/Dataset.hh
+        src/data/Dictionary.cc
+        src/data/Dictionary.inl
 )
 target_sources(
         GlassHelix

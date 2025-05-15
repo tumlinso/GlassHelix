@@ -7,6 +7,9 @@
 # CSV files
 *.csv
 
+# JSON files
+*.json
+
 # Binary files
 *.bin
 
