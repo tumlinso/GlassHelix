@@ -15,11 +15,11 @@
 
 template<typename T, typename U>
 class Dictionary {
-    static constexpr bool is_int = std::is_integral_v<U>;
+    static constexpr bool int_key = std::is_integral_v<U>;
 
     std::unordered_map<T, U> forward_;
     std::conditional_t<
-            is_int,
+            int_key,
             std::vector<const T*>,
             std::unordered_map<U, const T*>
     > reverse_;
@@ -41,6 +41,12 @@ public:
     U     generate(const T& t);
 
     void readFromFile(const std::string& filename, bool skip_header = false, unsigned long entries = 0);
+
+    template<typename V>
+    Dictionary<V, U> compose(const Dictionary<V, T>& other) const;
+
+    template<typename W>
+    Dictionary<T, W> compose(const Dictionary<U, W>& other) const;
 };
 
 #include "Dictionary.inl"

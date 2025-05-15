@@ -31,7 +31,7 @@ inline bool Dictionary<T,U>::contains(const T& t) const {
 
 template<typename T, typename U>
 inline bool Dictionary<T,U>::contains(const U& u) const {
-    if constexpr (is_int) return u < reverse_.size();
+    if constexpr (int_key) return u < reverse_.size();
     else                  return reverse_.find(u) != reverse_.end();
 }
 
@@ -42,7 +42,7 @@ inline U Dictionary<T,U>::get(const T& t) const {
 
 template<typename T, typename U>
 inline const T& Dictionary<T,U>::get(const U& u) const {
-    if constexpr (is_int) return *reverse_[u];
+    if constexpr (int_key) return *reverse_[u];
     else                  return *reverse_.at(u);
 }
 

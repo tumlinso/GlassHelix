@@ -7,11 +7,13 @@
 
 static const unsigned long length = 1000;
 
-template<typename TokenType>
+template<typename TranscriptTokenType>
 class Cell {
 public:
     Cell() = default;
-    TokenType *tokens;
+    TranscriptTokenType *tokens;
+
+    std::vector<std::string> toTranscripts;
 };
 
 #include "Cell.inl"
