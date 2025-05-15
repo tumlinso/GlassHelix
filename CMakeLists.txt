@@ -106,6 +106,8 @@ add_executable(GlassHelix src/main.cpp
         src/data/Dataset.hh
         src/data/Dictionary.cc
         src/data/Dictionary.inl
+        src/data/Block.cc
+        src/data/Block.hh
 )
 target_sources(
         GlassHelix
