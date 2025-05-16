@@ -8,6 +8,7 @@
 #include <stdexcept>
 
 #include "Dictionary.hh"
+#include "Block.hh"
 
 template<typename T>
 class Dataset {
