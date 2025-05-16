@@ -93,9 +93,9 @@ add_executable(GlassHelix src/main.cpp
         src/nn/primitives/Attention.cc
         src/GlassHelix.cc
         src/GlassHelix.hh
-        src/BioLogic/Cell.cc
-        src/BioLogic/Cell.hh
-        src/BioLogic/Cell.inl
+        src/Cell.cc
+        src/Cell.hh
+        src/Cell.inl
         src/BioLogic/Feature.cc
         src/BioLogic/Feature.hh
         src/BioLogic/Feature.inl
@@ -106,7 +106,6 @@ add_executable(GlassHelix src/main.cpp
         src/data/Dataset.hh
         src/data/Dictionary.cc
         src/data/Dictionary.inl
-        src/data/Block.cc
         src/data/Block.hh
 )
 target_sources(

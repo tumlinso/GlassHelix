@@ -5,15 +5,12 @@
 #include <vector>
 #include <string>
 
-static const unsigned long length = 1000;
+template<typename T>
+struct Cell {
+    static inline const unsigned long length;
+    T *tokens;
 
-template<typename TranscriptTokenType>
-class Cell {
-public:
     Cell() = default;
-    TranscriptTokenType *tokens;
-
-    std::vector<std::string> toTranscripts;
 };
 
 #include "Cell.inl"
