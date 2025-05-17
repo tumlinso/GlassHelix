@@ -141,13 +141,46 @@ public:
         return out;
     }
 
-    std::vector<T> translate(const std::vector<U>& keys) const {
-        std::vector<T> out;
-        out.reserve(keys.size());
-        for (auto const& k : keys) {
-            out.push_back( get(k) );        // reverse_ lookup
+    // translate methods
+    {
+        std::vector<T> translate(const std::vector<U>& keys) const {
+            std::vector<T> out;
+            out.reserve(keys.size());
+            for (auto const& k : keys) {
+                out.push_back( get(k) );        // reverse_ lookup
+            }
+            return out;
         }
-        return out;
+
+        std::vector<U> translate(const T* keys, std::size_t count) const {
+            std::vector<U> out;
+            out.reserve(count);
+            for (std::size_t i = 0; i < count; ++i) {
+                out.push_back(get(keys[i]));    // throws if keys[i] missing
+            }
+            return out;
+        }
+
+        std::vector<T> translate(const U* keys, std::size_t count) const {
+            std::vector<T> out;
+            out.reserve(count);
+            for (std::size_t i = 0; i < count; ++i) {
+                out.push_back(get(keys[i]));    // throws if keys[i] missing
+            }
+            return out;
+        }
+
+        void translate(const T* keys, std::size_t count, U* out) const {
+            for (std::size_t i = 0; i < count; ++i) {
+                out[i] = get(keys[i]);
+            }
+        }
+
+        void translate(const U* keys, std::size_t count, T* out) const {
+            for (std::size_t i = 0; i < count; ++i) {
+                out[i] = get(keys[i]);
+            }
+        }
     }
 };
 
