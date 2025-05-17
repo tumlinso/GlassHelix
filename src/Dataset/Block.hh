@@ -1,6 +1,12 @@
 #ifndef GLASSHELIX_BLOCK_HH
 #define GLASSHELIX_BLOCK_HH
 
+//-----------------------------------------------------------------------------
+// Block.hh
+// Provides the Block<T> class for lazy-loading and chunked access to large binary files.
+//-----------------------------------------------------------------------------
+
+//--- Includes ---
 #include <cstddef>
 #include <cstdlib>
 #include <fstream>
@@ -10,27 +16,33 @@
 #include <algorithm>
 #include <omp.h>
 
+//-----------------------------------------------------------------------------
+// Class: Block<T>
+// Lazy-loading, chunked access to a large binary file of T records.
+//-----------------------------------------------------------------------------
 template<typename T>
 class Block {
-    // user parameters
+    // User parameters
     std::string filename_;
     size_t      recordCount_, recordLen_, recsPerChunk_;
 
-    // derived sizes
+    // Derived sizes
     size_t totalElems_;   // = recordCount_ * recordLen_
     size_t chunkElems_;   // = recsPerChunk_  * recordLen_  (elements)
     size_t chunkBytes_;   // = chunkElems_    * sizeof(T)   (bytes)
     size_t chunkCount_;   // = ceil(recordCount_/recsPerChunk_)
 
-    // storage & state
+    // Storage & state
     std::atomic<T*> *chunks_;    // array of atomics, nullptr until loaded
     std::atomic<size_t> cursor_{0};
 
-    // look-ahead prefetch
+    // Prefetch state
     std::thread        prefetcher_;
     std::atomic<bool>  shutting_down_{false};
 
-    // Low-level: allocate a buffer and read chunk #ci from disk
+    //-----------------------------------------------------------------------------
+    // Low-level file I/O
+    //-----------------------------------------------------------------------------
     T* allocate_and_read(size_t ci) {
         // how many elements in this chunk? (last one may be smaller)
         size_t elems = std::min(chunkElems_, totalElems_ - ci * chunkElems_);
@@ -54,7 +66,9 @@ class Block {
         return buf;
     }
 
-    // Ensure chunk ci is loaded exactly once
+    //-----------------------------------------------------------------------------
+    // Chunk loading with single-instantiation guarantee
+    //-----------------------------------------------------------------------------
     T* loadChunk(size_t ci) {
         T* p = chunks_[ci].load(std::memory_order_acquire);
         if (p) return p;
@@ -73,7 +87,9 @@ class Block {
         return buf;
     }
 
-    // Prefetch worker for a single chunk
+    //-----------------------------------------------------------------------------
+    // Background prefetch worker
+    //-----------------------------------------------------------------------------
     void prefetch_worker(size_t ci) {
         if (shutting_down_) return;
         try {
@@ -84,9 +100,11 @@ class Block {
         }
     }
 
+    //-----------------------------------------------------------------------------
+    // Public interface
+    //-----------------------------------------------------------------------------
 public:
-    /// ctor: file contains recordCount*recordLen elements,
-    /// grouped into recsPerChunk records per chunk.
+    /// Constructor: initialize all state and warm first chunk
     Block(std::string filename,
           size_t recordLen,
           size_t recordCount,
@@ -114,6 +132,7 @@ public:
         loadChunk(0);
     }
 
+    /// Destructor: shutdown prefetcher and free all memory
     ~Block() {
         shutting_down_ = true;
         if (prefetcher_.joinable())
@@ -137,7 +156,7 @@ public:
         }
     }
 
-    /// Fetch the next chunk in FIFO order, and prefetch the following one
+    /// Fetch next chunk (FIFO) with optional freeing of the previous chunk and lookahead prefetch
     T* fetch_chunk(bool freeLast = false) {
         size_t ci = cursor_.fetch_add(1);
         if (ci >= chunkCount_)
@@ -162,7 +181,7 @@ public:
         return ptr;
     }
 
-    /// Random‐access element load; lazy‐loads its chunk if needed
+    /// Random-access operator: returns element at global index, loading its chunk if needed
     T& operator[](size_t idx) {
         if (idx >= totalElems_)
             throw std::out_of_range("Block::operator[] idx");
@@ -172,7 +191,7 @@ public:
         return buf[off];
     }
 
-    // queries
+    // Queries
     size_t size()            const noexcept { return totalElems_;   }
     size_t num_chunks()      const noexcept { return chunkCount_;   }
     size_t elems_per_chunk() const noexcept { return chunkElems_;   }
