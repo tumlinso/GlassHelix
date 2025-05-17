@@ -5,14 +5,11 @@
 #include <vector>
 #include <string>
 
-template<typename T>
+template<typename T, unsigned long length>
 struct Cell {
-    static inline const unsigned long length;
-    T *tokens;
+    T *tokens = nullptr;
 
-    Cell() = default;
+    Cell() { tokens = new T[length]; }
 };
-
-#include "Cell.inl"
 
 #endif //GLASSHELIX_CELL_HH

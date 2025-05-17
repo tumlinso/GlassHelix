@@ -12,11 +12,9 @@
 
 template<typename T>
 class Dataset {
-private:
-    void readTokenDictionary(std::string filename);
-    void readData(std::string filename);
 public:
-    Dictionary<std::string, unsigned short> tokenDict;
+    Dictionary<std::string, T> dictionary;
+    Block<T> block;
 
     Dataset(std::string pathTokenDict, std::string pathData) {
         readTokenDictionary(pathTokenDict);

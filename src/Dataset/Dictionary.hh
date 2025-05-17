@@ -12,7 +12,6 @@
 #include <fstream>
 #include <sstream>
 
-
 template<typename V>
 inline V from_string(const std::string& s) {
     V v;
@@ -130,6 +129,24 @@ public:
         out.reserve(size());
         for (auto const& [t,u] : forward_)
             if (other.contains(u)) out.emplace(t, other.get(u));
+        return out;
+    }
+
+    std::vector<U> translate(const std::vector<T>& keys) const {
+        std::vector<U> out;
+        out.reserve(keys.size());
+        for (auto const& k : keys) {
+            out.push_back( get(k) );        // forward_ lookup
+        }
+        return out;
+    }
+
+    std::vector<T> translate(const std::vector<U>& keys) const {
+        std::vector<T> out;
+        out.reserve(keys.size());
+        for (auto const& k : keys) {
+            out.push_back( get(k) );        // reverse_ lookup
+        }
         return out;
     }
 };

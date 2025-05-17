@@ -168,7 +168,7 @@ void test_int_string(std::size_t n) {
 // --- Test readFromFile (both with and without header) ---
 void test_readFromFile(std::size_t n) {
     std::cout << "\n--- readFromFile with " << n << " entries ---\n";
-    // generate data
+    // generate Dataset
     auto keys = generate_random_strings(n, 12);
     std::string file_no_hdr = "dict_no_header_" + std::to_string(n) + ".csv";
     std::string file_hdr    = "dict_with_header_" + std::to_string(n) + ".csv";

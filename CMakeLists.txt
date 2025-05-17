@@ -72,8 +72,8 @@ endif()
 # BlockTest executable
 # -------------------------------------------------------------------
 add_executable(BlockTest
-        src/data/tests/BlockTest.cpp
-        src/data/Block.hh
+        src/Dataset/tests/BlockTest.cpp
+        src/Dataset/Block.hh
 )
 target_compile_options(BlockTest PRIVATE -O3)
 target_link_libraries(BlockTest PRIVATE OpenMP::OpenMP_CXX)
@@ -82,8 +82,8 @@ target_link_libraries(BlockTest PRIVATE OpenMP::OpenMP_CXX)
 # BlockPerformanceTest executable
 # -------------------------------------------------------------------
 add_executable(BlockPerformanceTest
-        src/data/tests/BlockPerformanceTest.cpp
-        src/data/Block.hh
+        src/Dataset/tests/BlockPerformanceTest.cpp
+        src/Dataset/Block.hh
 )
 target_compile_options(BlockPerformanceTest PRIVATE -O3)
 target_link_libraries(BlockPerformanceTest PRIVATE OpenMP::OpenMP_CXX)
@@ -92,7 +92,7 @@ target_link_libraries(BlockPerformanceTest PRIVATE OpenMP::OpenMP_CXX)
 # DictionaryTest executable
 # -------------------------------------------------------------------
 add_executable(DictionaryTest
-        src/data/tests/DictionaryTest.cpp
+        src/Dataset/tests/DictionaryTest.cpp
 )
 target_compile_options(DictionaryTest PRIVATE -O3)
 target_include_directories(DictionaryTest PRIVATE
@@ -120,25 +120,22 @@ add_executable(GlassHelix
         src/Graph/Graph.hh
         src/Graph/Graph.inl
         archive/SparseMatrix.hh
-        src/data/Dictionary.hh
+        src/Dataset/Dictionary.hh
         archive/BidirectionalMap.hh
         src/nn/primitives/Attention.hh
         src/nn/primitives/Attention.cc
         src/GlassHelix.cc
         src/GlassHelix.hh
-        src/Cell.cc
         src/Cell.hh
-        src/Cell.inl
         src/BioLogic/Feature.cc
         src/BioLogic/Feature.hh
         src/BioLogic/Feature.inl
         src/BioLogic/Sequence.cc
         src/BioLogic/Sequence.hh
         src/BioLogic/Sequence.inl
-        src/data/Dataset.cc
-        src/data/Dataset.hh
-        src/data/Block.hh
-        src/data/tests/BlockTest.cpp
+        src/Dataset/Dataset.hh
+        src/Dataset/Block.hh
+        src/Dataset/tests/BlockTest.cpp
 )
 target_sources(
         GlassHelix
