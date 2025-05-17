@@ -16,7 +16,7 @@
 #include <cstdlib>   // for aligned_alloc, free
 #include <new>       // for std::bad_alloc
 
-#include "src/BioLogic/Feature.hh"
+#include "Feature.hh"
 
 // Allow customizing the underlying memory type (e.g. SIMD types)
 template<typename Word = unsigned long>

@@ -73,10 +73,10 @@ endif()
 # GlassHelix (main) executable
 # -------------------------------------------------------------------
 add_executable(GlassHelix
-        src/main.cpp
+        src/incomplete/main.cpp
         src/nn/transformer/virtual/Transformer.cppm
         src/nn/transformer/virtual/Tokenizer.cppm
-        src/GeneTokenizer.cppm
+        src/incomplete/GeneTokenizer.cppm
         src/nn/transformer/virtual/Embedder.cppm
         src/nn/primitives/Linear.cppm
         src/nn/primitives/Linear.cppm
@@ -92,12 +92,10 @@ add_executable(GlassHelix
         archive/BidirectionalMap.hh
         src/nn/primitives/Attention.hh
         src/nn/primitives/Attention.cc
-        src/GlassHelix.cc
+        src/incomplete/GlassHelix.cc
         src/GlassHelix.hh
         src/Cell.hh
-        src/BioLogic/Feature.cc
-        src/BioLogic/Feature.hh
-        src/BioLogic/Feature.inl
+        src/Feature.hh
         src/Sequence.hh
         src/Dataset.hh
         src/Block.hh
