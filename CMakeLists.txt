@@ -17,7 +17,8 @@ set(CMAKE_CXX_EXTENSIONS  OFF)
 set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 
-include_directories(.)
+# Set source directory and include directories
+set(CMAKE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 find_package(OpenMP REQUIRED)
 
@@ -69,38 +70,6 @@ else()
 endif()
 
 # -------------------------------------------------------------------
-# BlockTest executable
-# -------------------------------------------------------------------
-add_executable(BlockTest
-        src/Dataset/tests/BlockTest.cpp
-        src/Dataset/Block.hh
-)
-target_compile_options(BlockTest PRIVATE -O3)
-target_link_libraries(BlockTest PRIVATE OpenMP::OpenMP_CXX)
-
-# -------------------------------------------------------------------
-# BlockPerformanceTest executable
-# -------------------------------------------------------------------
-add_executable(BlockPerformanceTest
-        src/Dataset/tests/BlockPerformanceTest.cpp
-        src/Dataset/Block.hh
-)
-target_compile_options(BlockPerformanceTest PRIVATE -O3)
-target_link_libraries(BlockPerformanceTest PRIVATE OpenMP::OpenMP_CXX)
-
-# -------------------------------------------------------------------
-# DictionaryTest executable
-# -------------------------------------------------------------------
-add_executable(DictionaryTest
-        src/Dataset/tests/DictionaryTest.cpp
-)
-target_compile_options(DictionaryTest PRIVATE -O3)
-target_include_directories(DictionaryTest PRIVATE
-        ${CMAKE_SOURCE_DIR}/src/data
-)
-target_link_libraries(DictionaryTest)
-
-# -------------------------------------------------------------------
 # GlassHelix (main) executable
 # -------------------------------------------------------------------
 add_executable(GlassHelix
@@ -109,7 +78,6 @@ add_executable(GlassHelix
         src/nn/transformer/virtual/Tokenizer.cppm
         src/GeneTokenizer.cppm
         src/nn/transformer/virtual/Embedder.cppm
-        src/BioLogic/Sequence.cppm
         src/nn/primitives/Linear.cppm
         src/nn/primitives/Linear.cppm
         src/nn/primitives/Perceptron.cppm
@@ -120,7 +88,7 @@ add_executable(GlassHelix
         src/Graph/Graph.hh
         src/Graph/Graph.inl
         archive/SparseMatrix.hh
-        src/Dataset/Dictionary.hh
+        src/Dictionary.hh
         archive/BidirectionalMap.hh
         src/nn/primitives/Attention.hh
         src/nn/primitives/Attention.cc
@@ -130,12 +98,9 @@ add_executable(GlassHelix
         src/BioLogic/Feature.cc
         src/BioLogic/Feature.hh
         src/BioLogic/Feature.inl
-        src/BioLogic/Sequence.cc
-        src/BioLogic/Sequence.hh
-        src/BioLogic/Sequence.inl
-        src/Dataset/Dataset.hh
-        src/Dataset/Block.hh
-        src/Dataset/tests/BlockTest.cpp
+        src/Sequence.hh
+        src/Dataset.hh
+        src/Block.hh
 )
 target_sources(
         GlassHelix
@@ -150,3 +115,42 @@ target_link_libraries(GlassHelix
         "${CUDAToolkit_LIBRARIES}"
         OpenMP::OpenMP_CXX
 )
+
+# -------------------------------------------------------------------
+# BlockTest executable
+# -------------------------------------------------------------------
+add_executable(BlockTest
+        src/tests/BlockTest.cpp
+        src/Block.hh
+)
+target_compile_options(BlockTest PRIVATE -O3)
+target_link_libraries(BlockTest PRIVATE OpenMP::OpenMP_CXX)
+
+# -------------------------------------------------------------------
+# BlockPerformanceTest executable
+# -------------------------------------------------------------------
+add_executable(BlockPerformanceTest
+        src/tests/BlockPerformanceTest.cpp
+        src/Block.hh
+)
+target_compile_options(BlockPerformanceTest PRIVATE -O3)
+target_link_libraries(BlockPerformanceTest PRIVATE OpenMP::OpenMP_CXX)
+
+# -------------------------------------------------------------------
+# DictionaryTest executable
+# -------------------------------------------------------------------
+add_executable(DictionaryTest
+        src/tests/DictionaryTest.cpp
+)
+target_compile_options(DictionaryTest PRIVATE -O3)
+target_link_libraries(DictionaryTest)
+
+# -------------------------------------------------------------------
+# SequenceTest executable
+# -------------------------------------------------------------------
+add_executable(SequenceTest
+        src/tests/SequenceTest.cpp
+        src/Sequence.hh
+)
+target_compile_options(SequenceTest PRIVATE -O3)
+target_link_libraries(SequenceTest PRIVATE OpenMP::OpenMP_CXX)
