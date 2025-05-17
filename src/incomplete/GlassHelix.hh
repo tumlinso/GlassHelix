@@ -4,7 +4,7 @@
 #include <cstddef>
 #include <iostream>
 
-#include "data/Dataset.hh"
+#include "../Dataset.hh"
 
 
 class GlassHelix {

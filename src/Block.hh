@@ -58,7 +58,7 @@ class Block {
         }
         f.seekg(static_cast<std::streamoff>(ci) * static_cast<std::streamoff>(chunkBytes_),
                 std::ios::beg);
-        f.read(reinterpret_cast<char*>(buf), bytes);
+        f.read(reinterpret_cast<char*>(buf), static_cast<std::streamsize>(bytes));
         if (!f) {
             std::free(buf);
             throw std::runtime_error("I/O error reading chunk " + std::to_string(ci));
@@ -150,7 +150,7 @@ public:
     /// Eagerly load all chunks in parallel via OpenMP
     void prefetch_all(int nThreads = omp_get_max_threads()) {
         omp_set_num_threads(nThreads);
-#pragma omp parallel for schedule(dynamic,1)
+#pragma omp parallel for schedule(dynamic,1) default(none) shared(this)
         for (size_t ci = 0; ci < chunkCount_; ++ci) {
             loadChunk(ci);
         }

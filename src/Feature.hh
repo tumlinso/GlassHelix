@@ -1,14 +1,14 @@
 #ifndef GLASSHELIX_FEATURE_HH
 #define GLASSHELIX_FEATURE_HH
 
+typedef enum struct Strand : signed char {
+    SENSE = 1,
+    UNDEFINED = 0,
+    ANTISENSE = -1
+} Strand;
+
 class Feature {
 public:
-    enum struct Strand : signed char {
-        SENSE = 1,
-        UNDEFINED = 0,
-        ANTISENSE = -1
-    };
-
     Strand strand;
     unsigned long start, end;
 

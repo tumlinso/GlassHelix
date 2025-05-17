@@ -93,7 +93,7 @@ add_executable(GlassHelix
         src/nn/primitives/Attention.hh
         src/nn/primitives/Attention.cc
         src/incomplete/GlassHelix.cc
-        src/GlassHelix.hh
+        src/incomplete/GlassHelix.hh
         src/Cell.hh
         src/Feature.hh
         src/Sequence.hh
