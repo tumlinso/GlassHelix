@@ -132,17 +132,17 @@ public:
         return out;
     }
 
-    std::vector<U> translate(const std::vector<T>& keys) const {
-        std::vector<U> out;
-        out.reserve(keys.size());
-        for (auto const& k : keys) {
-            out.push_back( get(k) );        // forward_ lookup
-        }
-        return out;
-    }
-
     // translate methods
     {
+        std::vector<U> translate(const std::vector<T>& keys) const {
+            std::vector<U> out;
+            out.reserve(keys.size());
+            for (auto const& k : keys) {
+                out.push_back( get(k) );        // forward_ lookup
+            }
+            return out;
+        }
+
         std::vector<T> translate(const std::vector<U>& keys) const {
             std::vector<T> out;
             out.reserve(keys.size());
