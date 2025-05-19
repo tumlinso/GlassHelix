@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include <stdexcept>
+#include <utility>
 
 #include "Dictionary.hh"
 #include "Block.hh"
@@ -22,13 +23,13 @@ public:
     Dictionary<std::string, T> transcriptDictionary;
     Block<T> transcriptBlock;
 
-    Dataset(std::string pathTokenDict, std::string pathTokenData, unsigned long maxTranscripts)
-        : pathTranscriptDictionary(pathTokenDict), pathTranscriptData(pathTokenData), maxTranscripts(maxTranscripts) {
+    Dataset(std::string pathTokenDict, std::string pathTokenData, unsigned long numCells)
+        : pathTranscriptDictionary(std::move(pathTokenDict)), pathTranscriptData(std::move(pathTokenData)), maxTranscripts(maxTranscripts) {
         transcriptDictionary.readFromFile(pathTranscriptDictionary);
-        transcriptBlock = Block<T>(pathTokenData, recordLength, maxTranscripts);
+        transcriptBlock = Block<T>(pathTokenData, recordLength, numCells);
     }
 
-    Cell<T, recordLength>
+
 };
 
 // for test: 15,229,000 records, 2048 length, unsigned short, max token 25425
