@@ -181,14 +181,25 @@ public:
         return ptr;
     }
 
-    /// Random-access operator: returns record at global index, loading its chunk if needed
-    T& operator[](size_t index) {
-        if (index >= recordCount_)
-            throw std::out_of_range("Block::operator[] index out of range");
-        size_t ci  = index / recsPerChunk_;
-        size_t off = index % recsPerChunk_;
+    /// Random-access record: returns pointer to the start of the record at the given index
+    T* operator[](size_t recordIdx) {
+        if (recordIdx >= recordCount_)
+            throw std::out_of_range("Block::operator[] recordIdx out of range");
+        size_t ci = recordIdx / recsPerChunk_;             // which chunk
+        size_t recOff = recordIdx % recsPerChunk_;         // record offset within chunk
         T* buf = loadChunk(ci);
-        return buf[off];
+        return buf + recOff * recordLen_;                  // pointer to record start
+    }
+
+    /// Const version of record-access operator[]
+    const T* operator[](size_t recordIdx) const {
+        if (recordIdx >= recordCount_)
+            throw std::out_of_range("Block::operator[] recordIdx out of range");
+        size_t ci = recordIdx / recsPerChunk_;
+        size_t recOff = recordIdx % recsPerChunk_;
+        // need const-cast to call loadChunk; or duplicate logic to a private const-load
+        T* buf = const_cast<Block*>(this)->loadChunk(ci);
+        return buf + recOff * recordLen_;
     }
 
     // Queries
