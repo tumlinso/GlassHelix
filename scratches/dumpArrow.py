@@ -75,5 +75,5 @@ def dump_until_error(arrow_path: str, bin_path: str):
 
 
 if __name__ == "__main__":
-    dump_until_error("/home/tumlinson/GlassHelix/data/genecorpus_30M_2048.dataset/dataset.arrow",
+    dump_until_error("/data/genecorpus_30M_2048.dataset/dataset.arrow",
                      "/data/dataset.bin")

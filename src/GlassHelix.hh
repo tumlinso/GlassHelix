@@ -3,16 +3,12 @@
 
 #include <cstddef>
 #include <iostream>
+#include <torch/torch.h>
 
-#include "../Dataset.hh"
-
+#include "Dataset.hh"
 
 class GlassHelix {
 
-    explicit GlassHelix();
-
-    void train(Dataset &TrainingData)
 };
-
 
 #endif //GLASSHELIX_GLASSHELIX_HH
