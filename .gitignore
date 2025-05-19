@@ -1,17 +1,11 @@
-# Arrow files
 *.arrow
-
-# Pickled files
 *.pkl
-
-# CSV files
 *.csv
-
-# JSON files
 *.json
-
-# Binary files
 *.bin
+*.tar
+*.gz
+*.zip
 
 # Pickled files
 *.pkl
