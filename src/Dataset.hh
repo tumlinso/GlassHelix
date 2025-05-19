@@ -29,7 +29,7 @@ public:
         if (index >= transcriptBlock.size()) {
             throw std::out_of_range("Index out of range");
         }
-        return Cell<T, recordLength>(
+        return Cell<T, recordLength>(transcriptBlock[index], index);
     }
 };
 
