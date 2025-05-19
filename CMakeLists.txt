@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.29)
 set(CUDA_DIR "/usr/local/cuda")
 option(USE_CUDA "Enable CUDA support" ON)
 
-project(GlassHelix LANGUAGES CXX)
+project(GlassHelix LANGUAGES CXX CUDA)
 
 # Use clang++ and C++23
 set(CMAKE_CXX_COMPILER "clang++")
@@ -73,27 +73,6 @@ endif()
 # GlassHelix (main) executable
 # -------------------------------------------------------------------
 add_executable(GlassHelix
-        src/incomplete/main.cpp
-        src/nn/transformer/virtual/Transformer.cppm
-        src/nn/transformer/virtual/Tokenizer.cppm
-        src/incomplete/GeneTokenizer.cppm
-        src/nn/transformer/virtual/Embedder.cppm
-        src/nn/primitives/Linear.cppm
-        src/nn/primitives/Linear.cppm
-        src/nn/primitives/Perceptron.cppm
-        src/nn/primitives/Perceptron.cppm
-        src/nn/primitives/torch/TorchAttention.cppm
-        src/nn/primitives/torch/TorchAttention.cppm
-        src/Graph/Graph.cc
-        src/Graph/Graph.hh
-        src/Graph/Graph.inl
-        archive/SparseMatrix.hh
-        src/Dictionary.hh
-        archive/BidirectionalMap.hh
-        src/nn/primitives/Attention.hh
-        src/nn/primitives/Attention.cc
-        src/incomplete/GlassHelix.cc
-        src/incomplete/GlassHelix.hh
         src/Cell.hh
         src/Feature.hh
         src/Sequence.hh
