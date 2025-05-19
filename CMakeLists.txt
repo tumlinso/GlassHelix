@@ -79,7 +79,7 @@ add_executable(GlassHelix
         src/Sequence.hh
         src/Dataset.hh
         src/Block.hh
-        src/Genome.hh
+        src/incomplete/Genome.hh
 )
 target_sources(
         GlassHelix

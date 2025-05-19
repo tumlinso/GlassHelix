@@ -11,24 +11,26 @@
 #include "Block.hh"
 #include "Cell.hh"
 
+template<typename T, size_t recordLength = 2048>
 class Dataset {
 private:
     std::string pathTranscriptDictionary;
     std::string pathTranscriptData;
-    std::string pathChromatinDictionary;
-    std::string pathChromatinData;
 
-    unsigned long maxTranscriptRecords = 0;
-    unsigned long maxChromatinRecords = 0;
+    unsigned long maxTranscripts;
 public:
-    Dictionary<std::string, unsigned short> transcriptDictionary;
-    Block<unsigned short> transcriptBlock;
+    Dictionary<std::string, T> transcriptDictionary;
+    Block<T> transcriptBlock;
 
-    Dictionary<std::string, unsigned short> chromatinDictionary;
-    Block<unsigned short> chromatinBlock;
-
-
+    Dataset(std::string pathTokenDict, std::string pathTokenData, unsigned long maxTranscripts)
+        : pathTranscriptDictionary(pathTokenDict), pathTranscriptData(pathTokenData), maxTranscripts(maxTranscripts) {
+        transcriptDictionary.readFromFile(pathTranscriptDictionary);
+        transcriptBlock = Block<T>(pathTokenData, recordLength, maxTranscripts);
+    }
 };
 
+// for test: 15,229,000 records, 2048 length, unsigned short, max token 25425
+// path to binary file: /home/tumlinson/GlassHelix/data/dataset.bin
+// path to dictionary file: /home/tumlinson/GlassHelix/data/token_dictionary.csv
 
 #endif //GLASSHELIX_DATASET_HH
