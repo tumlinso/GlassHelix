@@ -26,7 +26,7 @@ public:
     Dataset(std::string pathTokenDict, std::string pathTokenData, unsigned long numCells)
         : pathTranscriptDictionary(std::move(pathTokenDict)), pathTranscriptData(std::move(pathTokenData)), maxTranscripts(maxTranscripts) {
         transcriptDictionary.readFromFile(pathTranscriptDictionary);
-        transcriptBlock = Block<T>(pathTokenData, recordLength, numCells);
+        transcriptBlock = Block<T>(pathTranscriptData, recordLength, numCells);
     }
 
 
