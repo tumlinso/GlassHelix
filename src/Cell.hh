@@ -7,9 +7,10 @@
 
 template<typename T, unsigned long length>
 struct Cell {
-    T *tokens = nullptr;
-
-    Cell() { tokens = new T[length]; }
+    T *transcripts = nullptr;
+    T *chromatin = nullptr;
+    unsigned long transcriptOffset = 0;
+    unsigned long chromatinOffset = 0;
 };
 
 #endif //GLASSHELIX_CELL_HH

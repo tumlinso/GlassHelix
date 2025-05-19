@@ -56,6 +56,12 @@ public:
     //-------------------------------------------------------------------------
 
     Dictionary() = default;
+    Dictionary(std::string filename,
+               bool skip_header = false,
+               unsigned long entries = 0)
+    {
+        readFromFile(filename, skip_header, entries);
+    }
 
     /// Preallocate space for n entries in both mappings
     void reserve(std::size_t n) {

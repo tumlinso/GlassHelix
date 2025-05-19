@@ -9,17 +9,25 @@
 
 #include "Dictionary.hh"
 #include "Block.hh"
+#include "Cell.hh"
 
-template<typename T>
 class Dataset {
-public:
-    Dictionary<std::string, T> dictionary;
-    Block<T> block;
+private:
+    std::string pathTranscriptDictionary;
+    std::string pathTranscriptData;
+    std::string pathChromatinDictionary;
+    std::string pathChromatinData;
 
-    Dataset(std::string pathTokenDict, std::string pathData) {
-        readTokenDictionary(pathTokenDict);
-        readData(pathData);
-    }
+    unsigned long maxTranscriptRecords = 0;
+    unsigned long maxChromatinRecords = 0;
+public:
+    Dictionary<std::string, unsigned short> transcriptDictionary;
+    Block<unsigned short> transcriptBlock;
+
+    Dictionary<std::string, unsigned short> chromatinDictionary;
+    Block<unsigned short> chromatinBlock;
+
+
 };
 
 
