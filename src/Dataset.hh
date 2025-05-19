@@ -29,7 +29,12 @@ public:
         transcriptBlock = Block<T>(pathTranscriptData, recordLength, numCells);
     }
 
-
+    Cell<T, recordLength> getCell(unsigned long index) const {
+        if (index >= transcriptBlock.size()) {
+            throw std::out_of_range("Index out of range");
+        }
+        return Cell<T, recordLength>(transcriptBlock[index], index);
+    }
 };
 
 // for test: 15,229,000 records, 2048 length, unsigned short, max token 25425

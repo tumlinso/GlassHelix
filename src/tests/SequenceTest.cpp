@@ -10,7 +10,7 @@
 #include <cassert>
 #include <chrono>
 
-#include "Sequence.hh"
+#include "../Sequence.hh"
 using Clock = std::chrono::steady_clock;
 
 int main() {

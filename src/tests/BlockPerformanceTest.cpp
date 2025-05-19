@@ -1,6 +1,6 @@
 // BlockPerformanceTest.cpp
 
-#include "src/data/Block.hh"
+#include "../Block.hh"
 
 #include <iostream>
 #include <fstream>

@@ -8,9 +8,12 @@
 #include "Dictionary.hh"
 
 template<typename T, std::size_t length>
-struct Cell {
+class Cell {
+public:
     T* tokens = nullptr;         ///< pointer into the underlying block buffer
     std::size_t offset = 0;      ///< absolute offset (in tokens) from start of block
+
+    Cell(T* tokens, std::size_t offset) : tokens(tokens), offset(offset) {}
 
     inline T& operator[](std::size_t idx) const noexcept { return tokens[idx]; }
     static constexpr std::size_t size() noexcept { return length; }

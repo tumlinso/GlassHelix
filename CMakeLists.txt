@@ -133,3 +133,14 @@ add_executable(SequenceTest
 )
 target_compile_options(SequenceTest PRIVATE -O3)
 target_link_libraries(SequenceTest PRIVATE OpenMP::OpenMP_CXX)
+
+# -------------------------------------------------------------------
+# LoadDSTest executable
+# -------------------------------------------------------------------
+add_executable(LoadDSTest
+        src/tests/LoadDSTest.cpp
+        src/Block.hh
+        src/Cell.hh
+        src/Dictionary.hh
+        src/Dataset.hh
+)

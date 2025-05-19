@@ -1,5 +1,5 @@
 // DictionaryTest.cpp
-#include "src/data/Dictionary.hh"
+#include "../Dictionary.hh"
 
 #include <chrono>
 #include <iostream>
