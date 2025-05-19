@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.29)
 set(CUDA_DIR "/usr/local/cuda")
 option(USE_CUDA "Enable CUDA support" ON)
 
-project(GlassHelix LANGUAGES CXX CUDA)
+project(GlassHelix LANGUAGES CXX)
 
 # Use clang++ and C++23
 set(CMAKE_CXX_COMPILER "clang++")
@@ -24,6 +24,7 @@ find_package(OpenMP REQUIRED)
 
 # Configure CUDA
 if (USE_CUDA)
+  enable_language(CUDA)
   set(CMAKE_CUDA_COMPILER       "${CUDA_DIR}/bin/nvcc")
   set(CMAKE_CUDA_ARCHITECTURES  86)
   set(CMAKE_CUDA_FLAGS          "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler")
