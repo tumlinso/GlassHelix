@@ -27,6 +27,8 @@ public:
         transcriptDictionary.readFromFile(pathTranscriptDictionary);
         transcriptBlock = Block<T>(pathTokenData, recordLength, maxTranscripts);
     }
+
+    Cell<T, recordLength>
 };
 
 // for test: 15,229,000 records, 2048 length, unsigned short, max token 25425
