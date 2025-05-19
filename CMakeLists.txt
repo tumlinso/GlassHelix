@@ -144,3 +144,5 @@ add_executable(LoadDSTest
         src/Dictionary.hh
         src/Dataset.hh
 )
+target_compile_options(LoadDSTest PRIVATE -O3)
+target_link_libraries(LoadDSTest PRIVATE OpenMP::OpenMP_CXX)

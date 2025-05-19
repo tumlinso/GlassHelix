@@ -181,12 +181,12 @@ public:
         return ptr;
     }
 
-    /// Random-access operator: returns element at global index, loading its chunk if needed
-    T& operator[](size_t idx) {
-        if (idx >= totalElems_)
-            throw std::out_of_range("Block::operator[] idx");
-        size_t ci  = idx / chunkElems_;
-        size_t off = idx % chunkElems_;
+    /// Random-access operator: returns record at global index, loading its chunk if needed
+    T& operator[](size_t index) {
+        if (index >= recordCount_)
+            throw std::out_of_range("Block::operator[] index out of range");
+        size_t ci  = index / recsPerChunk_;
+        size_t off = index % recsPerChunk_;
         T* buf = loadChunk(ci);
         return buf[off];
     }

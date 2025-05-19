@@ -2,11 +2,6 @@
 #define GLASSHELIX_DATASET_HH
 
 #include <string>
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <stdexcept>
-#include <utility>
 
 #include "Dictionary.hh"
 #include "Block.hh"
@@ -24,16 +19,17 @@ public:
     Block<T> transcriptBlock;
 
     Dataset(std::string pathTokenDict, std::string pathTokenData, unsigned long numCells)
-        : pathTranscriptDictionary(std::move(pathTokenDict)), pathTranscriptData(std::move(pathTokenData)), maxTranscripts(maxTranscripts) {
-        transcriptDictionary.readFromFile(pathTranscriptDictionary);
-        transcriptBlock = Block<T>(pathTranscriptData, recordLength, numCells);
-    }
+            : pathTranscriptDictionary(std::move(pathTokenDict)),
+              pathTranscriptData(std::move(pathTokenData)),
+              maxTranscripts(maxTranscripts),
+              transcriptDictionary(pathTokenDict),
+              transcriptBlock(pathTokenData, recordLength, numCells, 100'000) {}
 
-    Cell<T, recordLength> getCell(unsigned long index) const {
+    Cell<T, recordLength> operator[](unsigned long index) {
         if (index >= transcriptBlock.size()) {
             throw std::out_of_range("Index out of range");
         }
-        return Cell<T, recordLength>(transcriptBlock[index], index);
+        return Cell<T, recordLength>(
     }
 };
 
