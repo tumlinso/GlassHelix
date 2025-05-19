@@ -10,18 +10,13 @@
 template<typename T, size_t recordLength = 2048>
 class Dataset {
 private:
-    std::string pathTranscriptDictionary;
-    std::string pathTranscriptData;
-
     unsigned long maxTranscripts;
 public:
     Dictionary<std::string, T> transcriptDictionary;
     Block<T> transcriptBlock;
 
     Dataset(std::string pathTokenDict, std::string pathTokenData, unsigned long numCells)
-            : pathTranscriptDictionary(std::move(pathTokenDict)),
-              pathTranscriptData(std::move(pathTokenData)),
-              maxTranscripts(maxTranscripts),
+            : maxTranscripts(maxTranscripts),
               transcriptDictionary(pathTokenDict),
               transcriptBlock(pathTokenData, recordLength, numCells, 100'000) {}
 

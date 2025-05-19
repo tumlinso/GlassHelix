@@ -54,7 +54,7 @@ class Block {
         std::ifstream f(filename_, std::ios::binary);
         if (!f) {
             std::free(buf);
-            throw std::runtime_error("Cannot open " + filename_);
+            throw std::runtime_error("Cannot open data binary " + filename_);
         }
         f.seekg(static_cast<std::streamoff>(ci) * static_cast<std::streamoff>(chunkBytes_),
                 std::ios::beg);

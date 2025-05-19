@@ -164,7 +164,7 @@ public:
 
         std::ifstream file(filename);
         if (!file)
-            throw std::runtime_error("Could not open file " + filename);
+            throw std::runtime_error("Could not open dictionary file " + filename);
 
         clear();
         if (entries) reserve(entries);
