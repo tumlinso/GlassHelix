@@ -6,6 +6,9 @@
 *.tar
 *.gz
 *.zip
+*.h5
+*.hdf5
+*.h5ad
 
 # Pickled files
 *.pkl
