@@ -80,6 +80,9 @@ add_executable(GlassHelix
         src/Dataset.hh
         src/Block.hh
         src/incomplete/Genome.hh
+        src/autoencoder/BinaryAutoencoder.hh
+        src/autoencoder/Binarizer.hh
+        src/autoencoder/Binarizer.cuh
 )
 target_sources(
         GlassHelix
@@ -130,6 +133,7 @@ target_link_libraries(DictionaryTest)
 add_executable(SequenceTest
         src/tests/SequenceTest.cpp
         src/Sequence.hh
+        src/autoencoder/TranscriptomeEncoder.cuh
 )
 target_compile_options(SequenceTest PRIVATE -O3)
 target_link_libraries(SequenceTest PRIVATE OpenMP::OpenMP_CXX)

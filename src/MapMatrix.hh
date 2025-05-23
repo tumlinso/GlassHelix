@@ -13,8 +13,7 @@ struct pairHash {
 };
 
 template <typename T, typename U, typename V>
-class SparseMatrix { // composition, no inheritance from std::unordered_map, that would work maybe?
-protected:
+struct MapMatrix { // composition, no inheritance from std::unordered_map, that would work maybe?
     std::unordered_map<std::pair<T, U>, V, pairHash<T, U>> data;
 
     // for (T, U) -> V
@@ -30,7 +29,7 @@ protected:
     void emplace(const std::pair<T, U> &pair, V &&v) { data.emplace(pair, std::move(v)); }
     V& at(const std::pair<T, U> &pair) { return data.at(pair); }
     [[maybe_unused]] void erase(const std::pair<T, U> &pair) { data.erase(pair); }
-public:
+
     // for (T, U) -> V
     V& operator()(const T &t, const U &u) { return data[{t, u}]; }
     const V& operator()(const T &t, const U &u) const { return data.at({t, u}); }
