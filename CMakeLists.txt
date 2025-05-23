@@ -83,6 +83,9 @@ add_executable(GlassHelix
         src/autoencoder/BinaryAutoencoder.hh
         src/autoencoder/Binarizer.hh
         src/autoencoder/Binarizer.cuh
+        src/SparseMatrix/CsrMatrix.hh
+        src/SparseMatrix/ISparseMatrix.hh
+        src/SparseMatrix/CooMatrix.hh
 )
 target_sources(
         GlassHelix
