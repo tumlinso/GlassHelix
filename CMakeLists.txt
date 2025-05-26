@@ -78,7 +78,7 @@ add_executable(GlassHelix
         src/Feature.hh
         src/Sequence.hh
         src/Dataset.hh
-        src/Block.hh
+        src/AsynchronousArray.hh
         src/incomplete/Genome.hh
         src/autoencoder/BinaryAutoencoder.hh
         src/autoencoder/Binarizer.hh
@@ -106,7 +106,7 @@ target_link_libraries(GlassHelix
 # -------------------------------------------------------------------
 add_executable(BlockTest
         src/tests/BlockTest.cpp
-        src/Block.hh
+        src/AsynchronousArray.hh
 )
 target_compile_options(BlockTest PRIVATE -O3)
 target_link_libraries(BlockTest PRIVATE OpenMP::OpenMP_CXX)
@@ -116,7 +116,7 @@ target_link_libraries(BlockTest PRIVATE OpenMP::OpenMP_CXX)
 # -------------------------------------------------------------------
 add_executable(BlockPerformanceTest
         src/tests/BlockPerformanceTest.cpp
-        src/Block.hh
+        src/AsynchronousArray.hh
 )
 target_compile_options(BlockPerformanceTest PRIVATE -O3)
 target_link_libraries(BlockPerformanceTest PRIVATE OpenMP::OpenMP_CXX)
@@ -146,7 +146,7 @@ target_link_libraries(SequenceTest PRIVATE OpenMP::OpenMP_CXX)
 # -------------------------------------------------------------------
 add_executable(LoadDSTest
         src/tests/LoadDSTest.cpp
-        src/Block.hh
+        src/AsynchronousArray.hh
         src/Cell.hh
         src/Dictionary.hh
         src/Dataset.hh

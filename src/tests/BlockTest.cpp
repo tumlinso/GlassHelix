@@ -1,6 +1,6 @@
 // BlockTest.cpp
 
-#include "../Block.hh"
+#include "../AsynchronousArray.hh"
 
 #include <iostream>
 #include <fstream>

@@ -18,6 +18,8 @@
 
 #include "Feature.hh"
 
+namespace glasshelix {
+
 // Allow customizing the underlying memory type (e.g. SIMD types)
 template<typename Word = unsigned long>
 class Sequence : public Feature {
@@ -141,7 +143,7 @@ Sequence<Word>::Sequence(Feature feature, Sequence *parent)
 
 template<typename Word>
 Sequence<Word>::Sequence(const std::string &sequenceString)
-        : Feature(0, sequenceString.length(), Feature::Strand::UNDEFINED), parent(nullptr) {
+        : Feature(0, sequenceString.length(), Strand::UNDEFINED), parent(nullptr) {
     // allocate enough blocks to hold 'end' bases
     size_t nunits = (end + BasesPerWord - 1) >> WordShift;
     data = static_cast<Word*>(std::aligned_alloc(
@@ -217,5 +219,7 @@ std::string Sequence<Word>::toString(const Sequence& sequence) {
     return sequenceString;
 }
 
+//--- End of class Sequence ---
+} // namespace glasshelix
 
 #endif //GLASSHELIX_SEQUENCE_HH
