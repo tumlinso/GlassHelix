@@ -1,22 +1,22 @@
 #ifndef GLASSHELIX_CSRMATRIX_HH
 #define GLASSHELIX_CSRMATRIX_HH
 
-#include "ISparseMatrix.hh"
+#include "IRandomAccess.hh"
 
 #include <vector>
 #include <stdexcept>
 #include <fstream>
 
-namespace glasshelix {
+namespace glasshelix::SparseMatrix {
 
     template<typename IndexT, typename ValueT>
-    class CooMatrix;
+    class CoordinateList;
 
     template<typename IndexT, typename ValueT>
-    class CsrMatrix : public ISparseMatrix<IndexT,ValueT> {
-        friend class CooMatrix<IndexT,ValueT>;
+    class CompressedSparseRow : public IRandomAccess<IndexT,ValueT> {
+        friend class CoordinateList<IndexT,ValueT>;
     public:
-        CsrMatrix(IndexT r=0, IndexT c=0)
+        CompressedSparseRow(IndexT r=0, IndexT c=0)
                 : _rows(r), _cols(c), _nnz(0)
         {
             _rowPtr.assign(r+1, 0);

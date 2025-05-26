@@ -1,10 +1,10 @@
 #ifndef GLASSHELIX_DOKMATRIX_HH
 #define GLASSHELIX_DOKMATRIX_HH
 
-#include "ISparseMatrix.hh"
+#include "IRandomAccess.hh"
 #include <unordered_map>
 
-namespace glasshelix {
+namespace glasshelix::SparseMatrix {
 
     template <typename I, typename J>
     struct PairHash {
@@ -14,11 +14,11 @@ namespace glasshelix {
     };
 
     template<typename IndexT, typename ValueT>
-    class DokMatrix : public ISparseMatrix<IndexT,ValueT> {
+    class DictionaryOfKeys : public IRandomAccess<IndexT,ValueT> {
     public:
         using Key = std::pair<IndexT,IndexT>;
 
-        DokMatrix(IndexT r=0, IndexT c=0)
+        DictionaryOfKeys(IndexT r=0, IndexT c=0)
                 : _rows(r), _cols(c) {}
 
         // dimensions

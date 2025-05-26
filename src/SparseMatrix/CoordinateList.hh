@@ -1,18 +1,18 @@
 #ifndef GLASSHELIX_COOMATRIX_HH
 #define GLASSHELIX_COOMATRIX_HH
 
-#include "ISparseMatrix.hh"
-#include "CsrMatrix.hh"
+#include "IRandomAccess.hh"
+#include "CompressedSparseRow.hh"
 #include <vector>
 #include <stdexcept>
 #include <algorithm>
 
-namespace glasshelix {
+namespace glasshelix::SparseMatrix {
 
     template<typename IndexT, typename ValueT>
-    class CooMatrix : public ISparseMatrix<IndexT,ValueT> {
+    class CoordinateList : public IRandomAccess<IndexT,ValueT> {
     public:
-        CooMatrix(IndexT r = 0, IndexT c = 0)
+        CoordinateList(IndexT r = 0, IndexT c = 0)
                 : _rows(r), _cols(c) {}
 
         // dimensions
@@ -78,8 +78,8 @@ namespace glasshelix {
         }
 
         // convert to CSR (simple two‐pass)
-        CsrMatrix<IndexT,ValueT> toCSR() const {
-            CsrMatrix<IndexT,ValueT> csr(_rows, _cols);
+        CompressedSparseRow<IndexT,ValueT> toCSR() const {
+            CompressedSparseRow<IndexT,ValueT> csr(_rows, _cols);
             // count per‐row
             std::vector<IndexT> counts(_rows, 0);
             for (auto i : _row) ++counts[i];

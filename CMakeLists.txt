@@ -83,9 +83,11 @@ add_executable(GlassHelix
         src/autoencoder/BinaryAutoencoder.hh
         src/autoencoder/Binarizer.hh
         src/autoencoder/Binarizer.cuh
-        src/SparseMatrix/CsrMatrix.hh
-        src/SparseMatrix/ISparseMatrix.hh
-        src/SparseMatrix/CooMatrix.hh
+        src/SparseMatrix/CompressedSparseRow.hh
+        src/SparseMatrix/IRandomAccess.hh
+        src/SparseMatrix/CoordinateList.hh
+        src/Layers/SparseReader.cuh
+        src/SparseMatrix/CsrDevice.hh
 )
 target_sources(
         GlassHelix
@@ -101,7 +103,7 @@ target_link_libraries(GlassHelix
         OpenMP::OpenMP_CXX
 )
 
-# -------------------------------------------------------------------
+#[[# -------------------------------------------------------------------
 # BlockTest executable
 # -------------------------------------------------------------------
 add_executable(BlockTest
@@ -136,7 +138,6 @@ target_link_libraries(DictionaryTest)
 add_executable(SequenceTest
         src/tests/SequenceTest.cpp
         src/Sequence.hh
-        src/autoencoder/TranscriptomeEncoder.cuh
 )
 target_compile_options(SequenceTest PRIVATE -O3)
 target_link_libraries(SequenceTest PRIVATE OpenMP::OpenMP_CXX)
@@ -152,4 +153,4 @@ add_executable(LoadDSTest
         src/Dataset.hh
 )
 target_compile_options(LoadDSTest PRIVATE -O3)
-target_link_libraries(LoadDSTest PRIVATE OpenMP::OpenMP_CXX)
+target_link_libraries(LoadDSTest PRIVATE OpenMP::OpenMP_CXX)]]

@@ -3,10 +3,10 @@
 
 #include <cstddef>
 
-namespace glasshelix {
+namespace glasshelix::SparseMatrix {
 
-    template<typename IndexT, typename ValueT>
-    class ISparseMatrix {
+template<typename IndexT, typename ValueT>
+    class IRandomAccess; {
     public:
         virtual ~ISparseMatrix() = default;
 
