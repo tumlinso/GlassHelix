@@ -103,8 +103,9 @@
 #include <cstdint>
 #include <cstddef>
 
-namespace GlassHelix {
-class GlassEtch;
+namespace GlassHelix::GlassEtch {
+
+
 
 }
 

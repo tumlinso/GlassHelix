@@ -1,79 +1,65 @@
 cmake_minimum_required(VERSION 3.29)
 
-# Directory configuration: APACHE-ARROW AND TORCH MUST BE IN PATH!
+# ─────────────────────────────────────────────────────────────────────────────
+# Project-wide configuration
+# ─────────────────────────────────────────────────────────────────────────────
+project(GlassHelix LANGUAGES CXX CUDA)
 
 set(CUDA_DIR "/usr/local/cuda")
 option(USE_CUDA "Enable CUDA support" ON)
 
-set(CMAKE_CUDA_ARCHITECTURES  86)
-project(GlassHelix LANGUAGES CXX CUDA)
+# Export compile_commands.json for IDEs
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Use clang++ and C++23
-set(CMAKE_CXX_COMPILER "clang++")
-set(CMAKE_CXX_STANDARD    23)
+set(CMAKE_CXX_COMPILER       "clang++")
+set(CMAKE_CXX_STANDARD       23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS  OFF)
+set(CMAKE_CXX_EXTENSIONS     OFF)
 
-# Project-wide: use libc++ and embed rpath so the loader finds it at runtime
+# libc++ + embed rpath so the loader finds it at runtime
 set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 
-# Set source directory and include directories
-set(CMAKE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-
+# OpenMP support
 find_package(OpenMP REQUIRED COMPONENTS CXX)
 
-# Configure CUDA
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CUDA configuration
+# ─────────────────────────────────────────────────────────────────────────────
 if (USE_CUDA)
   enable_language(CUDA)
   set(CMAKE_CUDA_COMPILER       "${CUDA_DIR}/bin/nvcc")
-  set(CMAKE_CUDA_ARCHITECTURES  86)
-  set(CMAKE_CUDA_FLAGS          "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler -stdlib=libc++")
   set(CMAKE_CUDA_HOST_COMPILER  "${CMAKE_CXX_COMPILER}")
+  set(CMAKE_CUDA_ARCHITECTURES  86)   # Ampere/Hopper
+  add_compile_options(
+          $<$<COMPILE_LANGUAGE:CUDA>:-allow-unsupported-compiler>
+          $<$<COMPILE_LANGUAGE:CUDA>:-stdlib=libc++>
+  )
 
   set(CMAKE_CUDA_STANDARD       20)
   set(CMAKE_CUDA_STANDARD_REQUIRED ON)
   set(CMAKE_CUDA_EXTENSIONS     OFF)
-  find_package(CUDAToolkit REQUIRED)
 
-  set(USE_CUDNN      ON)
-  set(USE_CUFILE     ON)
-  set(USE_CUDSS      ON)
-  set(USE_CUSPARSELT ON)
+  find_package(CUDAToolkit REQUIRED)
 else()
   message(STATUS "Building without CUDA support")
-  set(USE_CUDNN      OFF)
-  set(USE_CUFILE     OFF)
-  set(USE_CUDSS      OFF)
-  set(USE_CUSPARSELT OFF)
 endif()
 
-# Configure Torch (Caffe2 dependencies)
-if (USE_CUDA)
-  set(CAFFE2_USE_CUDNN      ON)
-  set(CAFFE2_USE_CUFILE     ON)
-  set(CAFFE2_USE_CUDSS      ON)
-  set(CAFFE2_USE_CUSPARSELT ON)
-else()
-  set(CAFFE2_USE_CUDNN      OFF)
-  set(CAFFE2_USE_CUFILE     OFF)
-  set(CAFFE2_USE_CUDSS      OFF)
-  set(CAFFE2_USE_CUSPARSELT OFF)
-endif()
-find_package(Torch REQUIRED)
 
-# Configure Arrow
-find_package(Arrow REQUIRED)
-if (USE_CUDA)
-  set(ARROW_USE_CUDA ON)
-  find_package(ArrowCUDA REQUIRED)
-else()
-  set(ARROW_USE_CUDA OFF)
-endif()
+# ─────────────────────────────────────────────────────────────────────────────
+# Global include dirs
+# ─────────────────────────────────────────────────────────────────────────────
+include_directories(
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/models/GlassEtch/include
+)
 
-# -------------------------------------------------------------------
+
+# ─────────────────────────────────────────────────────────────────────────────
 # GlassHelix (main) executable
-# -------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
 add_executable(GlassHelix
         src/Cell.hh
         src/memory/Feature.hh
@@ -81,80 +67,65 @@ add_executable(GlassHelix
         src/memory/Dataset.hh
         src/memory/AsynchronousArray.hh
         src/incomplete/Genome.hh
+
         src/models/GlassEtch/BinaryAutoencoder.hh
         src/models/GlassEtch/Binarizer.hh
         src/models/GlassEtch/Binarizer.cuh
+
         src/memory/SparseMatrix/CompressedSparseRow.hh
         src/memory/SparseMatrix/IRandomAccess.hh
         src/memory/SparseMatrix/CoordinateList.hh
         src/incomplete/Layers/SparseReader.cuh
         src/memory/SparseMatrix/CsrDevice.hh
+
         src/DeviceMacros.hh
         src/TranscriptomeEncoder.hh
-        src/models/GlassEtch/GlassEtch.hh
+
+        src/models/GlassEtch/src/GlassEtch.hh
+        src/models/GlassEtch/src/main.cc
 )
-target_sources(
-        GlassHelix
-        PRIVATE
-        FILE_SET cxx_modules TYPE CXX_MODULES
-        FILES
+
+# Any TU including *.cuh must be compiled with NVCC:
+set_source_files_properties(
+        src/models/GlassEtch/src/main.cc
+        PROPERTIES LANGUAGE CUDA
 )
+
 target_link_libraries(GlassHelix
-        "${TORCH_LIBRARIES}"
-        "${ARROW_LIBRARIES}"
-        "${ARROW_CUDA_LIBRARIES}"
-        "${CUDAToolkit_LIBRARIES}"
+        PRIVATE
+        $<$<BOOL:${USE_CUDA}>:${CUDAToolkit_LIBRARIES}>
         OpenMP::OpenMP_CXX
 )
 
-#[[# -------------------------------------------------------------------
-# BlockTest executable
-# -------------------------------------------------------------------
-add_executable(BlockTest
-        src/tests/BlockTest.cpp
-        src/AsynchronousArray.hh
-)
-target_compile_options(BlockTest PRIVATE -O3)
-target_link_libraries(BlockTest PRIVATE OpenMP::OpenMP_CXX)
 
-# -------------------------------------------------------------------
-# BlockPerformanceTest executable
-# -------------------------------------------------------------------
-add_executable(BlockPerformanceTest
-        src/tests/BlockPerformanceTest.cpp
-        src/AsynchronousArray.hh
-)
-target_compile_options(BlockPerformanceTest PRIVATE -O3)
-target_link_libraries(BlockPerformanceTest PRIVATE OpenMP::OpenMP_CXX)
+# ─────────────────────────────────────────────────────────────────────────────
+# GlassEtch (minimal prototype) executable
+# ─────────────────────────────────────────────────────────────────────────────
+add_executable(GlassEtch
+        src/models/GlassEtch/src/GlassEtch.hh
+        src/models/GlassEtch/src/main.cc
 
-# -------------------------------------------------------------------
-# DictionaryTest executable
-# -------------------------------------------------------------------
-add_executable(DictionaryTest
-        src/tests/DictionaryTest.cpp
-)
-target_compile_options(DictionaryTest PRIVATE -O3)
-target_link_libraries(DictionaryTest)
+        src/memory/AsynchronousArray.hh
+        src/memory/SparseMatrix/CompressedSparseRow.hh
+        src/memory/SparseMatrix/IRandomAccess.hh
+        src/memory/SparseMatrix/CoordinateList.hh
+        src/incomplete/Layers/SparseReader.cuh
+        src/memory/SparseMatrix/CsrDevice.hh
 
-# -------------------------------------------------------------------
-# SequenceTest executable
-# -------------------------------------------------------------------
-add_executable(SequenceTest
-        src/tests/SequenceTest.cpp
-        src/Sequence.hh
+        src/models/GlassEtch/include/types.cuh
 )
-target_compile_options(SequenceTest PRIVATE -O3)
-target_link_libraries(SequenceTest PRIVATE OpenMP::OpenMP_CXX)
 
-# -------------------------------------------------------------------
-# LoadDSTest executable
-# -------------------------------------------------------------------
-add_executable(LoadDSTest
-        src/tests/LoadDSTest.cpp
-        src/AsynchronousArray.hh
-        src/Cell.hh
-        src/Dictionary.hh
-        src/Dataset.hh
+# Compile those .cc files with NVCC so they see both <cstdint> and CUDA headers
+set_source_files_properties(
+        src/models/GlassEtch/src/main.cc
+        PROPERTIES LANGUAGE CUDA
 )
-target_compile_options(LoadDSTest PRIVATE -O3)
-target_link_libraries(LoadDSTest PRIVATE OpenMP::OpenMP_CXX)]]
+
+target_compile_options(GlassEtch PRIVATE -O3)
+
+target_link_libraries(GlassEtch
+        PRIVATE
+        $<$<BOOL:${USE_CUDA}>:${CUDAToolkit_LIBRARIES}>
+        OpenMP::OpenMP_CXX
+)
+
