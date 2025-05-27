@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.29)
 # ─────────────────────────────────────────────────────────────────────────────
 # Project-wide configuration
 # ─────────────────────────────────────────────────────────────────────────────
-project(GlassHelix LANGUAGES CXX CUDA)
+project(GlassHelix LANGUAGES CXX)
 
 set(CUDA_DIR "/usr/local/cuda")
 option(USE_CUDA "Enable CUDA support" ON)
@@ -13,7 +13,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Use clang++ and C++23
 set(CMAKE_CXX_COMPILER       "clang++")
-set(CMAKE_CXX_STANDARD       23)
+set(CMAKE_CXX_STANDARD       20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS     OFF)
 
@@ -29,18 +29,14 @@ find_package(OpenMP REQUIRED COMPONENTS CXX)
 # CUDA configuration
 # ─────────────────────────────────────────────────────────────────────────────
 if (USE_CUDA)
-  enable_language(CUDA)
+  set(CMAKE_CUDA_FLAGS          "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler")
   set(CMAKE_CUDA_COMPILER       "${CUDA_DIR}/bin/nvcc")
   set(CMAKE_CUDA_HOST_COMPILER  "${CMAKE_CXX_COMPILER}")
   set(CMAKE_CUDA_ARCHITECTURES  86)   # Ampere/Hopper
-  add_compile_options(
-          $<$<COMPILE_LANGUAGE:CUDA>:-allow-unsupported-compiler>
-          $<$<COMPILE_LANGUAGE:CUDA>:-stdlib=libc++>
-  )
-
   set(CMAKE_CUDA_STANDARD       20)
   set(CMAKE_CUDA_STANDARD_REQUIRED ON)
   set(CMAKE_CUDA_EXTENSIONS     OFF)
+  enable_language(CUDA)
 
   find_package(CUDAToolkit REQUIRED)
 else()
@@ -85,7 +81,7 @@ add_executable(GlassHelix
         src/models/GlassEtch/src/main.cc
 )
 
-# Any TU including *.cuh must be compiled with NVCC:
+# Ensure any .cc including .cuh is compiled by NVCC
 set_source_files_properties(
         src/models/GlassEtch/src/main.cc
         PROPERTIES LANGUAGE CUDA
@@ -102,7 +98,6 @@ target_link_libraries(GlassHelix
 # GlassEtch (minimal prototype) executable
 # ─────────────────────────────────────────────────────────────────────────────
 add_executable(GlassEtch
-        src/models/GlassEtch/src/GlassEtch.hh
         src/models/GlassEtch/src/main.cc
 
         src/memory/AsynchronousArray.hh
@@ -113,9 +108,10 @@ add_executable(GlassEtch
         src/memory/SparseMatrix/CsrDevice.hh
 
         src/models/GlassEtch/include/types.cuh
+        src/models/GlassEtch/include/encode.cuh
 )
 
-# Compile those .cc files with NVCC so they see both <cstdint> and CUDA headers
+# Compile those .cc files with NVCC so standard & CUDA headers resolve
 set_source_files_properties(
         src/models/GlassEtch/src/main.cc
         PROPERTIES LANGUAGE CUDA
@@ -128,4 +124,3 @@ target_link_libraries(GlassEtch
         $<$<BOOL:${USE_CUDA}>:${CUDAToolkit_LIBRARIES}>
         OpenMP::OpenMP_CXX
 )
-
