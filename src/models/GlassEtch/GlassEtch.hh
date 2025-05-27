@@ -100,8 +100,12 @@
 ──────────────────────────────────────────────────────────────────────────────*/
 
 
+#include <cstdint>
+#include <cstddef>
 
+namespace GlassHelix {
+class GlassEtch;
 
-
+}
 
 #endif //GLASSHELIX_GLASSETCH_HH

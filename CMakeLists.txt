@@ -81,17 +81,17 @@ add_executable(GlassHelix
         src/memory/Dataset.hh
         src/memory/AsynchronousArray.hh
         src/incomplete/Genome.hh
-        src/GlassEtch/BinaryAutoencoder.hh
-        src/GlassEtch/Binarizer.hh
-        src/GlassEtch/Binarizer.cuh
-        src/SparseMatrix/CompressedSparseRow.hh
-        src/SparseMatrix/IRandomAccess.hh
-        src/SparseMatrix/CoordinateList.hh
-        src/Layers/SparseReader.cuh
-        src/SparseMatrix/CsrDevice.hh
+        src/models/GlassEtch/BinaryAutoencoder.hh
+        src/models/GlassEtch/Binarizer.hh
+        src/models/GlassEtch/Binarizer.cuh
+        src/memory/SparseMatrix/CompressedSparseRow.hh
+        src/memory/SparseMatrix/IRandomAccess.hh
+        src/memory/SparseMatrix/CoordinateList.hh
+        src/incomplete/Layers/SparseReader.cuh
+        src/memory/SparseMatrix/CsrDevice.hh
         src/DeviceMacros.hh
         src/TranscriptomeEncoder.hh
-        src/GlassEtch/GlassEtch.hh
+        src/models/GlassEtch/GlassEtch.hh
 )
 target_sources(
         GlassHelix
