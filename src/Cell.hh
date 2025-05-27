@@ -5,14 +5,14 @@
 #include <string>
 #include <vector>
 
-#include "Dictionary.hh"
+#include "src/memory/Dictionary.hh"
 
 namespace glasshelix {
 
     template<typename T, std::size_t length>
     class Cell {
     public:
-        T *tokens = nullptr;         ///< pointer into the underlying block buffer
+        T *tokens = nullptr;         ///< pointer into the underlying buffer
         std::size_t offset = 0;      ///< absolute offset (in tokens) from start of block
 
         Cell(T *tokens, std::size_t offset) : tokens(tokens), offset(offset) {}

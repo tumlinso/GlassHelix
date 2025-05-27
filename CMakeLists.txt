@@ -5,7 +5,8 @@ cmake_minimum_required(VERSION 3.29)
 set(CUDA_DIR "/usr/local/cuda")
 option(USE_CUDA "Enable CUDA support" ON)
 
-project(GlassHelix LANGUAGES CXX)
+set(CMAKE_CUDA_ARCHITECTURES  86)
+project(GlassHelix LANGUAGES CXX CUDA)
 
 # Use clang++ and C++23
 set(CMAKE_CXX_COMPILER "clang++")
@@ -20,14 +21,14 @@ set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 # Set source directory and include directories
 set(CMAKE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
-find_package(OpenMP REQUIRED)
+find_package(OpenMP REQUIRED COMPONENTS CXX)
 
 # Configure CUDA
 if (USE_CUDA)
   enable_language(CUDA)
   set(CMAKE_CUDA_COMPILER       "${CUDA_DIR}/bin/nvcc")
   set(CMAKE_CUDA_ARCHITECTURES  86)
-  set(CMAKE_CUDA_FLAGS          "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler")
+  set(CMAKE_CUDA_FLAGS          "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler -stdlib=libc++")
   set(CMAKE_CUDA_HOST_COMPILER  "${CMAKE_CXX_COMPILER}")
 
   set(CMAKE_CUDA_STANDARD       20)
@@ -75,19 +76,22 @@ endif()
 # -------------------------------------------------------------------
 add_executable(GlassHelix
         src/Cell.hh
-        src/Feature.hh
+        src/memory/Feature.hh
         src/Sequence.hh
-        src/Dataset.hh
-        src/AsynchronousArray.hh
+        src/memory/Dataset.hh
+        src/memory/AsynchronousArray.hh
         src/incomplete/Genome.hh
-        src/autoencoder/BinaryAutoencoder.hh
-        src/autoencoder/Binarizer.hh
-        src/autoencoder/Binarizer.cuh
+        src/GlassEtch/BinaryAutoencoder.hh
+        src/GlassEtch/Binarizer.hh
+        src/GlassEtch/Binarizer.cuh
         src/SparseMatrix/CompressedSparseRow.hh
         src/SparseMatrix/IRandomAccess.hh
         src/SparseMatrix/CoordinateList.hh
         src/Layers/SparseReader.cuh
         src/SparseMatrix/CsrDevice.hh
+        src/DeviceMacros.hh
+        src/TranscriptomeEncoder.hh
+        src/GlassEtch/GlassEtch.hh
 )
 target_sources(
         GlassHelix

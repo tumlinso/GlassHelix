@@ -16,7 +16,7 @@
 #include <cstdlib>   // for aligned_alloc, free
 #include <new>       // for std::bad_alloc
 
-#include "Feature.hh"
+#include "src/memory/Feature.hh"
 
 namespace glasshelix {
 

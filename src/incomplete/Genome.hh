@@ -2,8 +2,8 @@
 #define GLASSHELIX_GENOME_HH
 
 #include "src/Sequence.hh"
-#include "src/Feature.hh"
-#include "src/Dictionary.hh"
+#include "src/memory/Feature.hh"
+#include "src/memory/Dictionary.hh"
 
 // should be the default parent for most sequences
 template<typename Word, typename T>
