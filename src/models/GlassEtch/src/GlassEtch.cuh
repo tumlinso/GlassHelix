@@ -1,8 +1,8 @@
-#ifndef GLASSHELIX_GLASSETCH_HH
-#define GLASSHELIX_GLASSETCH_HH
+#ifndef GLASSHELIX_GLASSETCH_CUH
+#define GLASSHELIX_GLASSETCH_CUH
 
 /*───────────────────────────────────────────────────────────────────────────────
-   GlassEtch  ─ Prototype kernel for the GlassHelix project
+   GlassEtch ─ Prototype kernel for GlassHelix
    ──────────────────────────────────────────────────────────────────────────────
    •  INPUT: A single-cell RNA-seq count vector (~60 000 genes, ≈ 2 % expressed).
       Each cell is treated as a sparse snapshot of its gene–regulatory programme.
@@ -96,17 +96,17 @@
       • Compare module graph across clusters for lineage tracing.
 
    ──────────────────────────────────────────────────────────────────────────────
-    2025 GlassHelix Project — proprietary, all applicable rights reserved.
+    GlassHelix — all  rights reserved.
 ──────────────────────────────────────────────────────────────────────────────*/
 
 
 #include <cstdint>
 #include <cstddef>
 
-namespace GlassHelix::GlassEtch {
+namespace glasshelix::glassetch {
 
 
 
 }
 
-#endif //GLASSHELIX_GLASSETCH_HH
+#endif //GLASSHELIX_GLASSETCH_CUH

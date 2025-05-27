@@ -72,13 +72,13 @@ add_executable(GlassHelix
         src/memory/SparseMatrix/IRandomAccess.hh
         src/memory/SparseMatrix/CoordinateList.hh
         src/incomplete/Layers/SparseReader.cuh
-        src/memory/SparseMatrix/CsrDevice.hh
 
-        src/DeviceMacros.hh
+        src/include/DeviceMacros.cuh
         src/TranscriptomeEncoder.hh
 
-        src/models/GlassEtch/src/GlassEtch.hh
+        src/models/GlassEtch/src/GlassEtch.cuh
         src/models/GlassEtch/src/main.cc
+        src/include/DeviceMatrix.cuh
 )
 
 # Ensure any .cc including .cuh is compiled by NVCC
@@ -105,10 +105,11 @@ add_executable(GlassEtch
         src/memory/SparseMatrix/IRandomAccess.hh
         src/memory/SparseMatrix/CoordinateList.hh
         src/incomplete/Layers/SparseReader.cuh
-        src/memory/SparseMatrix/CsrDevice.hh
 
-        src/models/GlassEtch/include/types.cuh
+        src/include/Types.cuh
         src/models/GlassEtch/include/encode.cuh
+        src/include/DeviceMatrix.cuh
+        src/models/GlassEtch/include/scatter.cuh
 )
 
 # Compile those .cc files with NVCC so standard & CUDA headers resolve
