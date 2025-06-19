@@ -79,6 +79,9 @@ add_executable(GlassHelix
         src/models/GlassEtch/src/GlassEtch.cuh
         src/models/GlassEtch/src/main.cc
         src/include/DeviceMatrix.cuh
+        src/tests/network/network.hh
+        src/include/sigmoid.hh
+        src/include/macros.h
 )
 
 # Ensure any .cc including .cuh is compiled by NVCC
@@ -110,6 +113,10 @@ add_executable(GlassEtch
         src/models/GlassEtch/include/encode.cuh
         src/include/DeviceMatrix.cuh
         src/models/GlassEtch/include/scatter.cuh
+        src/tests/network/network.hh
+        src/tests/network/Network.hh
+        src/include/sigmoid.hh
+        src/include/macros.h
 )
 
 # Compile those .cc files with NVCC so standard & CUDA headers resolve

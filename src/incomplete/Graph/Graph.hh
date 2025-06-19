@@ -2,32 +2,51 @@
 #define GLASSHELIX_GRAPH_HH
 
 #include <vector>
-#include <string>
+#include <list>
+#include <cmath>
 
-struct Link;
+static inline double sigmoid(double x) { return 1.0 / (1.0 + std::exp(-x)); }
 
-class Node {
-private:
-
+struct Node {
 public:
-    std::vector<Link *> out;
-    const double bias;
-    double value;
-    Node(double bias, double value)
-            : bias(bias), value(value) {}
-    inline void link(Node &sink, double bias, double value);
+    double bias, value;
 };
 
-class Link : Node {
-    Node &source, &sink;
-    explicit Link(Node &source, Node &sink, double bias, double value)
-            : Node(bias, value), source(source), sink(sink) {}
+struct Link {
+    double strength;
+    Node *sink, *source;
 };
 
 class Graph {
-    virtual void link(Node &source, Node &sink, double bias, double value);
-};
+public:
+    std::vector<Node> nodes;
+    std::list<Link> links;
 
-#include "Graph.inl"
+    Graph() = default;
+
+    Graph(size_t numNodes) {
+        nodes.resize(numNodes);
+        for (size_t i = 0; i < numNodes; ++i) {
+            nodes[i].bias = 0.0;
+            nodes[i].value = 0.0;
+        }
+    }
+
+    void addLink(size_t sourceIndex, size_t sinkIndex, double strength) {
+        if (sourceIndex >= nodes.size() || sinkIndex >= nodes.size()) {
+            throw std::out_of_range("Node index out of range");
+        }
+        Link link{strength, &nodes[sinkIndex], &nodes[sourceIndex]};
+        links.push_back(link);
+    }
+
+    void propagate() {
+        for (auto& link : links) {
+            double input = link.source->value + link.source->bias;
+            link.sink->value += sigmoid(input) * link.strength;
+        }
+    }
+
+};
 
 #endif //GLASSHELIX_GRAPH_HH

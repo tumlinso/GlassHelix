@@ -1,4 +1,4 @@
-#include "../memory/Dataset.hh"
+#include "../Dataset.hh"
 #include <iostream>
 
 int main() {
