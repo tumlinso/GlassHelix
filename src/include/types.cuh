@@ -4,7 +4,6 @@
 #include <cstdint>
 
 namespace glasshelix {
-    using IndexT = int;
     using fp32 = float;
     using fp64 = double;
     using ui8 = uint8_t;

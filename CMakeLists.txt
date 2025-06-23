@@ -72,7 +72,6 @@ add_executable(GlassHelix
         src/memory/SparseMatrix/CoordinateList.hh
         src/incomplete/Layers/SparseReader.cuh
 
-        src/include/deviceMacros.cuh
         src/TranscriptomeEncoder.hh
 
         src/models/GlassEtch/src/GlassEtch.cuh
@@ -111,7 +110,7 @@ add_executable(GlassEtch
 
         src/include/types.cuh
         src/models/GlassEtch/include/encode.cuh
-        src/models/GlassEtch/include/scatter.cuh
+        src/include/scatter.cuh
         src/include/sigmoid.cuh
         src/include/macros.cuh
         src/tests/network/NetworkLogic.hh
