@@ -1,15 +1,15 @@
 #ifndef GLASSHELIX_SCATTER_CUH
 #define GLASSHELIX_SCATTER_CUH
 
-#include "include/Types.cuh"
-#include "include/DeviceMatrix.cuh"
-#include "include/DeviceMacros.cuh"
+#include "types.cuh"
+#include "macros.cuh"
+#include "matrix.cuh"
 
 using namespace glasshelix;
 
-using SparseMatrix  = devicematrix::SparseCOO<fp16>;
-using DenseFp16  = devicematrix::Dense<fp16>;
-using DenseFp32  = devicematrix::Dense<fp32>;
+using SparseMatrix  = matrix::SparseCOO<fp16>;
+using DenseFp16  = matrix::Dense<fp16>;
+using DenseFp32  = matrix::Dense<fp32>;
 
 namespace glasshelix::glassetch {
     __global__ void scatterKernel(ui32 nnz,
@@ -29,7 +29,7 @@ namespace glasshelix::glassetch {
         atomicAdd(slot, __float2half(value));
     }
 
-    __global__ void scatterDerivativeKernel(ui16 nnz,
+    __global__ void gatherKernel(ui16 nnz,
                                             const IndexT* __restrict__ rowIdx,
                                             const IndexT* __restrict__ colIdx,
                                             const fp32* __restrict__ dX,
@@ -48,28 +48,30 @@ namespace glasshelix::glassetch {
                         cudaStream_t stream = nullptr) {
         const unsigned int THREADS = 256;
         unsigned int blocks = (in.nnz + THREADS - 1) / THREADS;
-        scatterKernel<<<blocks, THREADS, 0, stream>>>(in.nnz,
-                                  in.rowIdx,
-                                  in.colIdx,
-                                  in.val,
-                                  out.val,
-                                  out.ld);
-        GLASSHELIX_CHECK(cudaGetLastError());
+        scatterKernel<<<blocks, THREADS, 0, stream>>>(
+                in.nnz,
+                in.rowIdx,
+                in.colIdx,
+                in.val,
+                out.val,
+                out.ld);
+        check(cudaGetLastError());
     }
 
-    inline void scatterDerivative(SparseMatrix &in,
+    inline void gather(SparseMatrix &in,
                                   DenseFp32 &dX,
                                   fp32* dVal,
                                   cudaStream_t stream = nullptr) {
         const unsigned int THREADS = 256;
         unsigned int blocks = (in.nnz + THREADS - 1) / THREADS;
-        scatterDerivativeKernel<<<blocks, THREADS, 0, stream>>>(in.nnz,
-                                  in.rowIdx,
-                                  in.colIdx,
-                                  dX.val,
-                                  dVal,
-                                  dX.ld);
-        GLASSHELIX_CHECK(cudaGetLastError());
+        gatherKernel<<<blocks, THREADS, 0, stream>>>(
+                in.nnz,
+                in.rowIdx,
+                in.colIdx,
+                dX.val,
+                dVal,
+                dX.ld);
+        check(cudaGetLastError());
     }
 } // namespace glasshelix::glassetch
 

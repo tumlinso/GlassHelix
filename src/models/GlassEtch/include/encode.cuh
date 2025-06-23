@@ -3,7 +3,7 @@
 
 #include <cudnn.h>
 
-#include "include/Types.cuh"
+#include "include/types.cuh"
 #include "include/DeviceMatrix.cuh"
 
 using namespace glasshelix::devicematrix;

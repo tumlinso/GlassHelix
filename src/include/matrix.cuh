@@ -1,18 +1,18 @@
-#ifndef GLASSHELIX_DEVICEMATRIX_CUH
-#define GLASSHELIX_DEVICEMATRIX_CUH
+#ifndef GLASSHELIX_MATRIX_CUH
+#define GLASSHELIX_MATRIX_CUH
 
-#include "Types.cuh"
-#include <cuda_fp16.h>
+#include "macros.cuh"
+#include "types.cuh"
 
-namespace glasshelix::devicematrix {
+namespace glasshelix::matrix {
     template<typename ValueT>
     struct Dense {
         ValueT* val;
         IndexT rows, cols, ld;
 
-        __device__ ValueT& operator()(IndexT r, IndexT c) { return data[r * ld + c]; }
-        __device__ const ValueT& operator()(IndexT r, IndexT c) const { return data[r * ld + c]; }
-        __device__ ValueT* address(IndexT r, IndexT c) { return &data[r * ld + c]; }
+        radical ValueT& operator()(IndexT r, IndexT c) { return val[r * ld + c]; }
+        radical const ValueT& operator()(IndexT r, IndexT c) const { return val[r * ld + c]; }
+        radical ValueT* address(IndexT r, IndexT c) { return &val[r * ld + c]; }
     };
 
     template<typename ValueT>
@@ -30,7 +30,6 @@ namespace glasshelix::devicematrix {
         ValueT* val;    // length = nnz
         IndexT  nnz;
     };
+}
 
-} // namespace glasshelix::devicematrix
-
-#endif // GLASSHELIX_DEVICEMATRIX_CUH
+#endif //GLASSHELIX_MATRIX_CUH

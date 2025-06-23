@@ -18,8 +18,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS     OFF)
 
 # libc++ + embed rpath so the loader finds it at runtime
-set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} -stdlib=libc++")
-set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
+set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS}")
 
 # OpenMP support
 find_package(OpenMP REQUIRED COMPONENTS CXX)
@@ -48,8 +48,7 @@ endif()
 # Global include dirs
 # ─────────────────────────────────────────────────────────────────────────────
 include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}/src
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/models/GlassEtch/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/include
 )
 
 
@@ -73,21 +72,16 @@ add_executable(GlassHelix
         src/memory/SparseMatrix/CoordinateList.hh
         src/incomplete/Layers/SparseReader.cuh
 
-        src/include/DeviceMacros.cuh
+        src/include/deviceMacros.cuh
         src/TranscriptomeEncoder.hh
 
         src/models/GlassEtch/src/GlassEtch.cuh
         src/models/GlassEtch/src/main.cc
-        src/include/DeviceMatrix.cuh
-        src/tests/network/network.hh
-        src/include/sigmoid.hh
-        src/include/macros.h
-        src/tests/network/FeedbackLoop.hh
-        src/tests/network/NetworkLogicAND.hh
-        src/tests/network/ORGate.hh
+        src/include/sigmoid.cuh
+        src/include/macros.cuh
         src/tests/network/NetworkLogic.hh
-        src/tests/network/Netowrl.cc
-        src/tests/network/Network.inl
+        src/tests/network/Network.hh
+        src/include/matrix.cuh
 )
 
 # Ensure any .cc including .cuh is compiled by NVCC
@@ -115,20 +109,14 @@ add_executable(GlassEtch
         src/memory/SparseMatrix/CoordinateList.hh
         src/incomplete/Layers/SparseReader.cuh
 
-        src/include/Types.cuh
+        src/include/types.cuh
         src/models/GlassEtch/include/encode.cuh
-        src/include/DeviceMatrix.cuh
         src/models/GlassEtch/include/scatter.cuh
-        src/tests/network/network.hh
-        src/tests/network/Network.hh
-        src/include/sigmoid.hh
-        src/include/macros.h
-        src/tests/network/FeedbackLoop.hh
-        src/tests/network/NetworkLogicAND.hh
-        src/tests/network/ORGate.hh
+        src/include/sigmoid.cuh
+        src/include/macros.cuh
         src/tests/network/NetworkLogic.hh
-        src/tests/network/Netowrl.cc
-        src/tests/network/Network.inl
+        src/tests/network/Network.hh
+        src/include/matrix.cuh
 )
 
 # Compile those .cc files with NVCC so standard & CUDA headers resolve
