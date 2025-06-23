@@ -82,6 +82,12 @@ add_executable(GlassHelix
         src/tests/network/network.hh
         src/include/sigmoid.hh
         src/include/macros.h
+        src/tests/network/FeedbackLoop.hh
+        src/tests/network/NetworkLogicAND.hh
+        src/tests/network/ORGate.hh
+        src/tests/network/NetworkLogic.hh
+        src/tests/network/Netowrl.cc
+        src/tests/network/Network.inl
 )
 
 # Ensure any .cc including .cuh is compiled by NVCC
@@ -117,6 +123,12 @@ add_executable(GlassEtch
         src/tests/network/Network.hh
         src/include/sigmoid.hh
         src/include/macros.h
+        src/tests/network/FeedbackLoop.hh
+        src/tests/network/NetworkLogicAND.hh
+        src/tests/network/ORGate.hh
+        src/tests/network/NetworkLogic.hh
+        src/tests/network/Netowrl.cc
+        src/tests/network/Network.inl
 )
 
 # Compile those .cc files with NVCC so standard & CUDA headers resolve
