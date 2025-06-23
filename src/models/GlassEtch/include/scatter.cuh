@@ -12,6 +12,7 @@ using DenseFp16  = matrix::Dense<fp16>;
 using DenseFp32  = matrix::Dense<fp32>;
 
 namespace glasshelix::glassetch {
+#ifdef __CUDACC__
     __global__ void scatterKernel(ui32 nnz,
                                   const IndexT* __restrict__ rowIdx,
                                   const IndexT* __restrict__ colIdx,
@@ -42,13 +43,15 @@ namespace glasshelix::glassetch {
         ui16 col = colIdx[idx];
         dVal[idx] = dX[row * ld + col];
     }
+#endif // __CUDACC__
 
     inline void scatter(SparseMatrix &in,
                         DenseFp16 &out,
-                        cudaStream_t stream = nullptr) {
-        const unsigned int THREADS = 256;
-        unsigned int blocks = (in.nnz + THREADS - 1) / THREADS;
-        scatterKernel<<<blocks, THREADS, 0, stream>>>(
+                        const unsigned int threads = 256,
+                        Stream stream = nullptr) {
+        #ifdef __CUDACC__
+        unsigned int blocks = (in.nnz + threads - 1) / threads;
+        scatterKernel<<<blocks, threads, 0, stream>>>(
                 in.nnz,
                 in.rowIdx,
                 in.colIdx,
@@ -56,15 +59,28 @@ namespace glasshelix::glassetch {
                 out.val,
                 out.ld);
         check(cudaGetLastError());
+        #else
+        #pragma omp parallel for
+        for (unsigned int idx = 0; idx < in.nnz; ++idx) {
+            ui16 row = in.rowIdx[idx];
+            ui16 col = in.colIdx[idx];
+            fp32 value = __half2float(in.val[idx]);
+
+            fp16* slot = &out.val[row * out.ld + col];
+            #pragma omp atomic
+            *slot += __float2half(value);
+        }
+        #endif // __CUDACC__
     }
 
     inline void gather(SparseMatrix &in,
-                                  DenseFp32 &dX,
-                                  fp32* dVal,
-                                  cudaStream_t stream = nullptr) {
-        const unsigned int THREADS = 256;
-        unsigned int blocks = (in.nnz + THREADS - 1) / THREADS;
-        gatherKernel<<<blocks, THREADS, 0, stream>>>(
+                       DenseFp32 &dX,
+                       fp32* dVal,
+                       const unsigned int threads = 256,
+                       Stream stream = nullptr) {
+        #ifdef __CUDACC__
+        unsigned int blocks = (in.nnz + threads - 1) / threads;
+        gatherKernel<<<blocks, threads, 0, stream>>>(
                 in.nnz,
                 in.rowIdx,
                 in.colIdx,
@@ -72,7 +88,16 @@ namespace glasshelix::glassetch {
                 dVal,
                 dX.ld);
         check(cudaGetLastError());
+        #else
+        #pragma omp parallel for
+        for (unsigned int idx = 0; idx < in.nnz; ++idx) {
+            ui16 row = in.rowIdx[idx];
+            ui16 col = in.colIdx[idx];
+            dVal[idx] = dX.val[row * dX.ld + col];
+        }
+        #endif // __CUDACC__
     }
+
 } // namespace glasshelix::glassetch
 
 #endif //GLASSHELIX_SCATTER_CUH
