@@ -10,7 +10,7 @@
 *.hdf5
 *.h5ad
 *.csrbin
-
+*.tsv
 # Pickled files
 *.pkl
 
