@@ -41,9 +41,6 @@ namespace glasshelix::network::logic {
         return nandGate;
     }
 
-
-
-
 } // namespace glasshelix::network::logic
 
 #endif //GLASSHELIX_NETWORKLOGIC_HH

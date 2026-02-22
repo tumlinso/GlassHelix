@@ -16,7 +16,7 @@
     #define check(ans) { assert((ans) == 0); }
 #endif
 
-// CUDA Library Error-Checking Macros (no-ops on CPU)
+// CUDA Library Error-Checking Macros (fallback to no-ops on CPU)
 #ifdef __CUDACC__
 #ifdef USE_CUSPARSE
 #include <cusparse.h>

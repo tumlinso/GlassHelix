@@ -5,6 +5,7 @@
 #include "types.cuh"
 
 namespace glasshelix::matrix {
+    // Dense matrix in row-major order
     template<typename ValueT, typename IndexT = int>
     struct dense {
         ValueT* val;
@@ -13,7 +14,9 @@ namespace glasshelix::matrix {
         radical const ValueT *operator()(IndexT r, IndexT c) const { return val + r * ld + c; }
     };
 
+    // all native sparse matrix formats
     namespace sparse {
+        // Compressed Sparse Row
         template<typename ValueT, typename IndexT = int>
         struct csr {
             IndexT* rowPtr; // length = rows+1
@@ -31,6 +34,7 @@ namespace glasshelix::matrix {
             }
         };
 
+        // Compressed Sparse Column
         template<typename ValueT, typename IndexT = int>
         struct csc {
             IndexT* colPtr; // length = cols+1
@@ -48,6 +52,7 @@ namespace glasshelix::matrix {
             }
         };
 
+        // Coordinate List
         template<typename ValueT, typename IndexT = int>
         struct coo {
             IndexT* rowIdx; // length = nnz
@@ -65,6 +70,7 @@ namespace glasshelix::matrix {
             }
         };
 
+        // Diagonal storage
         template<typename ValueT, typename IndexT = int>
         struct dia {
             IndexT* offsets; // length = num_diagonals
@@ -81,6 +87,7 @@ namespace glasshelix::matrix {
             }
         };
 
+        // ELLPACK format
         template<typename ValueT, typename IndexT = int>
         struct ell {
             IndexT* colIdx; // length = rows * max_nnz_per_row
