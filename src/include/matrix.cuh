@@ -11,7 +11,7 @@ namespace glasshelix::matrix {
         ValueT* val;
         IndexT rows, cols, ld; // ld = leading dimension
 
-        radical const ValueT *operator()(IndexT r, IndexT c) const { return val + r * ld + c; }
+        __host__ __device__ __forceinline__ const ValueT *operator() (IndexT r, IndexT c) const { return val + r * ld + c; }
     };
 
     // all native sparse matrix formats
@@ -24,7 +24,7 @@ namespace glasshelix::matrix {
             ValueT* val;    // length = nnz
             IndexT  rows, cols, nnz;
 
-            radical const ValueT *operator()(IndexT r, IndexT c) const {
+            __host__ __device__ __forceinline__ const ValueT *operator()(IndexT r, IndexT c) const {
                 for (IndexT i = rowPtr[r]; i < rowPtr[r + 1]; ++i) {
                     if (colIdx[i] == c) {
                         return val + i;
@@ -42,7 +42,7 @@ namespace glasshelix::matrix {
             ValueT* val;    // length = nnz
             IndexT  rows, cols, nnz;
 
-            radical const ValueT *operator()(IndexT r, IndexT c) const {
+            __host__ __device__ __forceinline__ const ValueT *operator()(IndexT r, IndexT c) const {
                 for (IndexT i = colPtr[c]; i < colPtr[c + 1]; ++i) {
                     if (rowIdx[i] == r) {
                         return val + i;
@@ -60,7 +60,7 @@ namespace glasshelix::matrix {
             ValueT* val;    // length = nnz
             IndexT  nnz;
 
-            radical const ValueT *operator()(IndexT r, IndexT c) const {
+            __host__ __device__ __forceinline__ const ValueT *operator()(IndexT r, IndexT c) const {
                 for (IndexT i = 0; i < nnz; ++i) {
                     if (rowIdx[i] == r && colIdx[i] == c) {
                         return val + i;
@@ -77,7 +77,7 @@ namespace glasshelix::matrix {
             ValueT* val;     // length = nnz
             IndexT  rows, cols, num_diagonals, nnz;
 
-            radical const ValueT *operator()(IndexT r, IndexT c) const {
+            __host__ __device__ __forceinline__ const ValueT *operator()(IndexT r, IndexT c) const {
                 for (IndexT i = 0; i < num_diagonals; ++i) {
                     if (offsets[i] == c - r) {
                         return val + i * rows + r; // Assuming a diagonal structure
@@ -94,7 +94,7 @@ namespace glasshelix::matrix {
             ValueT* val;    // length = rows * max_nnz_per_row
             IndexT  rows, cols, max_nnz_per_row;
 
-            radical const ValueT *operator()(IndexT r, IndexT c) const {
+            __host__ __device__ __forceinline__ const ValueT *operator()(IndexT r, IndexT c) const {
                 IndexT idx = r * max_nnz_per_row + c; // Assuming a fixed structure
                 if (colIdx[idx] == c) {
                     return val + idx;

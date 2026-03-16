@@ -1,23 +1,8 @@
-#ifndef GLASSHELIX_MACROS_CUH
-#define GLASSHELIX_MACROS_CUH
+#pragma once
 
 #include <stdexcept>
 
-#ifdef __CUDACC__
-    #include <cuda_runtime.h>
-    #define radical __host__ __device__ __forceinline__
-
-    inline void gpuAssert(cudaError_t code,const char* file,int line) {
-        if (code!=cudaSuccess) { fprintf(stderr,"CUDA %s %d\n",file,line); exit(code);}}
-    #define check(ans) { gpuAssert((ans), __FILE__, __LINE__); }
-#else
-    #define radical static inline
-    #include <cassert>
-    #define check(ans) { assert((ans) == 0); }
-#endif
-
 // CUDA Library Error-Checking Macros (fallback to no-ops on CPU)
-#ifdef __CUDACC__
 #ifdef USE_CUSPARSE
 #include <cusparse.h>
         #define cusparse_check(expr) \
@@ -48,10 +33,4 @@
             if (_err != cudaSuccess) \
                 throw std::runtime_error(cudaGetErrorString(_err)); \
         } while (0)
-#else
-#define cusparse_check(expr)    ((void)(expr))
-    #define cublaslt_check(expr)    ((void)(expr))
-    #define cuda_check(expr)        ((void)(expr))
-#endif
 
-#endif //GLASSHELIX_MACROS_CUH
