@@ -32,7 +32,7 @@ if (USE_CUDA)
   set(CMAKE_CUDA_FLAGS          "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler")
   set(CMAKE_CUDA_COMPILER       "${CUDA_DIR}/bin/nvcc")
   set(CMAKE_CUDA_HOST_COMPILER  "${CMAKE_CXX_COMPILER}")
-  set(CMAKE_CUDA_ARCHITECTURES  86)   # Ampere/Hopper
+  set(CMAKE_CUDA_ARCHITECTURES  70)   # Volta V100
   set(CMAKE_CUDA_STANDARD       20)
   set(CMAKE_CUDA_STANDARD_REQUIRED ON)
   set(CMAKE_CUDA_EXTENSIONS     OFF)

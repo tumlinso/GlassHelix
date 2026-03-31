@@ -51,9 +51,9 @@
    COMPUTATIONAL SUMMARY (CUDA-centric)
    ──────────────────────────────────────────────────────────────────────────────
    GlassEtch is a CUDA-native, interpretable autoencoder.  All numerics are
-   stored in FP16, accumulated in FP32.  NVIDIA’s 2 : 4 structured sparsity
-   is obeyed throughout so the model can, if desired, run on Sparse Tensor
-   Cores with ~2× throughput.
+   stored in FP16, accumulated in FP32.  The design targets Volta V100-class
+   Tensor Cores where profitable, but does not assume Ampere-only 2 : 4
+   structured sparsity or `mma.sp` support.
 
    1. DATA SHAPES & TYPES ......................................................
       • Input  S          : (B, G)          FP16   – raw counts
@@ -68,7 +68,7 @@
       for i = 0 … L-1 {
           k  = router_gumbel_topk(Mᵢ,  k ∉ used)             // no-repeat, diff.
           if k == EARLY_STOP          break;                 // penalty-free
-          In  = sparse_mm_fp16_tc(Tₖ, Mᵢ)                    // mma.sp
+          In  = sparse_mm_fp16_tc(Tₖ, Mᵢ)                    // Volta-friendly FP16/FP32 sparse update
           Mᵢ₊₁ = cast_fp16(Mᵢ + In)                          // residual update
           used |= (1≪k);
       }
@@ -87,8 +87,8 @@
 
    5. KERNEL TOPOLOGY ...........................................................
       encode  ➜  router_topK  ➜  csp_update (×L)  ➜  decode  ➜  loss/backward
-      Each kernel ≤ 200 LOC; `csp_update` uses
-      `mma.sp.sync.aligned.m8n8k16.row.col.f16.f16`.
+      Each kernel ≤ 200 LOC; `csp_update` should map to Volta-appropriate
+      Tensor Core or custom sparse update paths rather than Ampere `mma.sp`.
 
    6. INTROSPECTION .............................................................
       • Log (Tₖ indices, layer, cell) ⇒ ordered motif list.
