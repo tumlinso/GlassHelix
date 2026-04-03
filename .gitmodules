@@ -1,6 +1,6 @@
-[submodule "extern/CellShard"]
-	path = extern/CellShard
-	url = git@github.com:tumlinso/CellShard.git
 [submodule "extern/Cellerator"]
 	path = extern/Cellerator
 	url = git@github.com:tumlinso/Cellerator.git
+[submodule "extern/VitriNode"]
+	path = extern/VitriNode
+	url = git@github.com:tumlinso/VitriNode.git
