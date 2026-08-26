@@ -1,0 +1,559 @@
+{
+  "generated_at": "2026-08-26T21:53:04Z",
+  "project": {
+    "configuration": {
+      "busy_timeout_ms": 5000,
+      "claim_lease_seconds": 7200,
+      "context_budget_bytes": 12000,
+      "legacy_review_days": {
+        "blocked": 7,
+        "in_progress": 3,
+        "planned": 3,
+        "stale": 3
+      },
+      "resource_lease_seconds": 300
+    },
+    "created_at": "2026-08-26T21:47:14Z",
+    "project_name": "GlassHelix",
+    "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+    "schema_version": 2
+  },
+  "project_revision": 18,
+  "schema_version": 2,
+  "tables": {
+    "barrier_requirements": [],
+    "barriers": [],
+    "checkpoint_gates": [],
+    "checkpoint_interfaces": [],
+    "checkpoints": [],
+    "decisions": [],
+    "events": [
+      {
+        "actor_session_id": null,
+        "entity_id": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+        "entity_type": "project",
+        "event_type": "project.bootstrapped",
+        "payload_json": "{\"project_name\": \"GlassHelix\"}",
+        "revision": 1,
+        "seq": 1,
+        "timestamp": "2026-08-26T21:47:14Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": null,
+        "entity_type": "claim",
+        "event_type": "continue.completed",
+        "payload_json": "{\"requested_task_id\": null}",
+        "revision": 2,
+        "seq": 2,
+        "timestamp": "2026-08-26T21:47:14Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+        "entity_type": "project",
+        "event_type": "plan.applied",
+        "payload_json": "{\"file\": \"/home/tumlinson/GlassHelix/.todo-orchestrator/bootstrap-plan.json\"}",
+        "revision": 3,
+        "seq": 3,
+        "timestamp": "2026-08-26T21:49:04Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP",
+        "entity_type": "claim",
+        "event_type": "continue.completed",
+        "payload_json": "{\"requested_task_id\": \"GH-BOOTSTRAP\"}",
+        "revision": 4,
+        "seq": 4,
+        "timestamp": "2026-08-26T21:49:06Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP",
+        "entity_type": "claim",
+        "event_type": "claim.pulsed",
+        "payload_json": "{}",
+        "revision": 5,
+        "seq": 5,
+        "timestamp": "2026-08-26T21:49:32Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP",
+        "entity_type": "claim",
+        "event_type": "claim.pulsed",
+        "payload_json": "{}",
+        "revision": 6,
+        "seq": 6,
+        "timestamp": "2026-08-26T21:49:33Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP",
+        "entity_type": "claim",
+        "event_type": "claim.pulsed",
+        "payload_json": "{}",
+        "revision": 7,
+        "seq": 7,
+        "timestamp": "2026-08-26T21:52:56Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-BOUNDARY",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-BOOTSTRAP-BOUNDARY\"}",
+        "revision": 8,
+        "seq": 8,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-BOUNDARY",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"086213b9-9fdd-4c38-aed5-e9da5a910bd7\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 9,
+        "seq": 9,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-CLASSIFICATION",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-BOOTSTRAP-CLASSIFICATION\"}",
+        "revision": 10,
+        "seq": 10,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-CLASSIFICATION",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"f90dfd95-3aec-43af-8a8d-8a19aaca05ef\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 11,
+        "seq": 11,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-DIFF",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-BOOTSTRAP-DIFF\"}",
+        "revision": 12,
+        "seq": 12,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-DIFF",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"f6cc7629-71c2-4f7f-96a1-766c3a028882\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 13,
+        "seq": 13,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-IDENTITY",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-BOOTSTRAP-IDENTITY\"}",
+        "revision": 14,
+        "seq": 14,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP-IDENTITY",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"b138d7e1-7065-49d9-b19e-1a39d9d1dfbc\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 15,
+        "seq": 15,
+        "timestamp": "2026-08-26T21:52:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP",
+        "entity_type": "claim",
+        "event_type": "claim.pulsed",
+        "payload_json": "{}",
+        "revision": 16,
+        "seq": 16,
+        "timestamp": "2026-08-26T21:53:04Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP",
+        "entity_type": "claim",
+        "event_type": "claim.pulsed",
+        "payload_json": "{}",
+        "revision": 17,
+        "seq": 17,
+        "timestamp": "2026-08-26T21:53:04Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-BOOTSTRAP",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 18, \"disposition\": \"implemented\", \"reached_checkpoints\": []}",
+        "revision": 18,
+        "seq": 18,
+        "timestamp": "2026-08-26T21:53:04Z"
+      }
+    ],
+    "evidence": [
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-08-26T21:52:57Z",
+        "gate_id": "GH-BOOTSTRAP-BOUNDARY",
+        "id": "086213b9-9fdd-4c38-aed5-e9da5a910bd7",
+        "kind": "pattern",
+        "metadata_json": "{\"found\": true, \"input_fingerprint\": \"2c787bf8ff1801f992b0c84831c61fa72bb2d452182b1cf60b9f5673b92912f5\", \"inputs\": {\"command_contract\": {\"path\": \"README.md\", \"pattern\": \"Baseplane grounds biology in sequence\"}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"path\": \"README.md\", \"resources\": [], \"started_revision\": 8}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/086213b9-9fdd-4c38-aed5-e9da5a910bd7",
+        "revision": 9,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-08-26T21:52:57Z",
+        "gate_id": "GH-BOOTSTRAP-IDENTITY",
+        "id": "b138d7e1-7065-49d9-b19e-1a39d9d1dfbc",
+        "kind": "pattern",
+        "metadata_json": "{\"found\": true, \"input_fingerprint\": \"ba5a0c887c375cae12968e8e5bf233967303f1ca8751ef229d5734977b72df4a\", \"inputs\": {\"command_contract\": {\"path\": \"README.md\", \"pattern\": \"Predictive accuracy is not automatically mechanistic validity\"}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"path\": \"README.md\", \"resources\": [], \"started_revision\": 14}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/b138d7e1-7065-49d9-b19e-1a39d9d1dfbc",
+        "revision": 15,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-08-26T21:52:57Z",
+        "gate_id": "GH-BOOTSTRAP-DIFF",
+        "id": "f6cc7629-71c2-4f7f-96a1-766c3a028882",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"git\", \"diff\", \"--check\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"44a88ece499607bac17008d8bfa654ae346211f6d81659e0c89c143377a4fbe0\", \"inputs\": {\"command_contract\": {\"argv\": [\"git\", \"diff\", \"--check\"]}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"cffc881b98f17307a78f5e5451be0ae70ad2716291f5e251c216e0285ed3282f\"}, {\"path\": \"README.md\", \"sha256\": \"37ec6657011612c6722d20d8f2bbfd18d993b00173863dd6a2c39cb8a629a164\"}, {\"path\": \"docs/repository-map.md\", \"sha256\": \"db099b3fa823f0b85c5c798787c61b84be310940feca9258f6898c6115a2bc75\"}], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 12}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/f6cc7629-71c2-4f7f-96a1-766c3a028882",
+        "revision": 13,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-08-26T21:52:57Z",
+        "gate_id": "GH-BOOTSTRAP-CLASSIFICATION",
+        "id": "f90dfd95-3aec-43af-8a8d-8a19aaca05ef",
+        "kind": "file_exists",
+        "metadata_json": "{\"exists\": true, \"input_fingerprint\": \"11616edef011b3800e6b8840459282c9e25ffffc5e3a8c63e7fe568621498db3\", \"inputs\": {\"command_contract\": {\"path\": \"docs/repository-map.md\"}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"path\": \"docs/repository-map.md\", \"resources\": [], \"started_revision\": 10}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/f90dfd95-3aec-43af-8a8d-8a19aaca05ef",
+        "revision": 11,
+        "status": "passed"
+      }
+    ],
+    "gates": [
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"path\": \"README.md\", \"pattern\": \"Baseplane grounds biology in sequence\"}",
+        "id": "GH-BOOTSTRAP-BOUNDARY",
+        "input_fingerprint": "2c787bf8ff1801f992b0c84831c61fa72bb2d452182b1cf60b9f5673b92912f5",
+        "last_run_at": "2026-08-26T21:52:57Z",
+        "required": 1,
+        "revision": 9,
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "type": "pattern",
+        "valid": 1
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"path\": \"docs/repository-map.md\"}",
+        "id": "GH-BOOTSTRAP-CLASSIFICATION",
+        "input_fingerprint": "11616edef011b3800e6b8840459282c9e25ffffc5e3a8c63e7fe568621498db3",
+        "last_run_at": "2026-08-26T21:52:57Z",
+        "required": 1,
+        "revision": 11,
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "type": "file_exists",
+        "valid": 1
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"git\", \"diff\", \"--check\"], \"input_paths\": [\"README.md\", \"AGENTS.md\", \"docs/repository-map.md\"]}",
+        "id": "GH-BOOTSTRAP-DIFF",
+        "input_fingerprint": "44a88ece499607bac17008d8bfa654ae346211f6d81659e0c89c143377a4fbe0",
+        "last_run_at": "2026-08-26T21:52:57Z",
+        "required": 1,
+        "revision": 13,
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "type": "command",
+        "valid": 1
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"path\": \"README.md\", \"pattern\": \"Predictive accuracy is not automatically mechanistic validity\"}",
+        "id": "GH-BOOTSTRAP-IDENTITY",
+        "input_fingerprint": "ba5a0c887c375cae12968e8e5bf233967303f1ca8751ef229d5734977b72df4a",
+        "last_run_at": "2026-08-26T21:52:57Z",
+        "required": 1,
+        "revision": 15,
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "type": "pattern",
+        "valid": 1
+      }
+    ],
+    "handoffs": [
+      {
+        "claim_id": null,
+        "created_at": "2026-08-26T21:53:04Z",
+        "id": "ecae5115-e3fc-4ab2-b9b0-49890551eb6f",
+        "kind": "complete",
+        "note": "Reconciled main to ce9eb73 after preserving unknown dirty work at c4b8c30; added authoritative scientific identity, four-project boundary, noncommitments, minimal engineering identity, tool routing, legacy classification, and a two-node semantic frontier; project-control resolves the UUID and live todo state.",
+        "payload_json": "{\"changed_owned_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\"], \"checkpoints\": [], \"completion_commit\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\", \"completion_gates\": [{\"evidence_id\": \"086213b9-9fdd-4c38-aed5-e9da5a910bd7\", \"evidence_revision\": 9, \"id\": \"GH-BOOTSTRAP-BOUNDARY\", \"input_fingerprint\": \"2c787bf8ff1801f992b0c84831c61fa72bb2d452182b1cf60b9f5673b92912f5\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, {\"evidence_id\": \"f90dfd95-3aec-43af-8a8d-8a19aaca05ef\", \"evidence_revision\": 11, \"id\": \"GH-BOOTSTRAP-CLASSIFICATION\", \"input_fingerprint\": \"11616edef011b3800e6b8840459282c9e25ffffc5e3a8c63e7fe568621498db3\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, {\"evidence_id\": \"f6cc7629-71c2-4f7f-96a1-766c3a028882\", \"evidence_revision\": 13, \"id\": \"GH-BOOTSTRAP-DIFF\", \"input_fingerprint\": \"44a88ece499607bac17008d8bfa654ae346211f6d81659e0c89c143377a4fbe0\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, {\"evidence_id\": \"b138d7e1-7065-49d9-b19e-1a39d9d1dfbc\", \"evidence_revision\": 15, \"id\": \"GH-BOOTSTRAP-IDENTITY\", \"input_fingerprint\": \"ba5a0c887c375cae12968e8e5bf233967303f1ca8751ef229d5734977b72df4a\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}], \"completion_revision\": 18, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-BOOTSTRAP-IDENTITY\", \"input_fingerprint\": \"ba5a0c887c375cae12968e8e5bf233967303f1ca8751ef229d5734977b72df4a\", \"last_run_at\": \"2026-08-26T21:52:57Z\", \"revision\": 15, \"status\": \"passed\", \"valid\": 1}, {\"id\": \"GH-BOOTSTRAP-BOUNDARY\", \"input_fingerprint\": \"2c787bf8ff1801f992b0c84831c61fa72bb2d452182b1cf60b9f5673b92912f5\", \"last_run_at\": \"2026-08-26T21:52:57Z\", \"revision\": 9, \"status\": \"passed\", \"valid\": 1}, {\"id\": \"GH-BOOTSTRAP-CLASSIFICATION\", \"input_fingerprint\": \"11616edef011b3800e6b8840459282c9e25ffffc5e3a8c63e7fe568621498db3\", \"last_run_at\": \"2026-08-26T21:52:57Z\", \"revision\": 11, \"status\": \"passed\", \"valid\": 1}, {\"id\": \"GH-BOOTSTRAP-DIFF\", \"input_fingerprint\": \"44a88ece499607bac17008d8bfa654ae346211f6d81659e0c89c143377a4fbe0\", \"last_run_at\": \"2026-08-26T21:52:57Z\", \"revision\": 13, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json | 209 +++++++++++++++++++++++++++++----\\n todo-status.md                         |   2 +-\\n todos.md                               |   2 +-\\n 3 files changed, 188 insertions(+), 25 deletions(-)\", \"git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\", \"interfaces\": [], \"note\": \"Reconciled main to ce9eb73 after preserving unknown dirty work at c4b8c30; added authoritative scientific identity, four-project boundary, noncommitments, minimal engineering identity, tool routing, legacy classification, and a two-node semantic frontier; project-control resolves the UUID and live todo state.\", \"resources\": [], \"task_id\": \"GH-BOOTSTRAP\"}",
+        "revision": 18,
+        "task_id": "GH-BOOTSTRAP"
+      }
+    ],
+    "interface_consumers": [],
+    "interfaces": [],
+    "invariants": [
+      {
+        "enforcement": null,
+        "id": "four-project-boundary",
+        "rule": "Keep GlassHelix, Cellerator, CellShard, and Baseplane ownership distinct as recorded in the authoritative project identity.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "preserve-unknown-work",
+        "rule": "Preserve unknown, uncommitted, divergent, historical, and experimental work unless its disposition is explicitly established.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "science-before-architecture",
+        "rule": "Treat foundational scientific questions as open; do not convert them into a model, API, package, CUDA, serialization, dataset, or roadmap commitment.",
+        "scope_json": "{}",
+        "severity": "error"
+      }
+    ],
+    "live_recovery_audit": [],
+    "migration_warnings": [],
+    "named_locks": [],
+    "ownership_scopes": [
+      {
+        "mode": "exclusive",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "AGENTS.md",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "README.md",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "colab.ipynb",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src/include/cuda_helpers.cuh",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src/include/matrixmarket.hh",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src/include/sigmoid.cuh",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "todo-status.md",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "todos.md",
+        "task_id": "GH-BOOTSTRAP"
+      }
+    ],
+    "resource_classes": [],
+    "resource_instances": [],
+    "resource_requests": [],
+    "task_artifacts": [],
+    "task_completion_gates": [
+      {
+        "completion_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f",
+        "completion_revision": 18,
+        "evidence_id": "086213b9-9fdd-4c38-aed5-e9da5a910bd7",
+        "evidence_revision": 9,
+        "gate_id": "GH-BOOTSTRAP-BOUNDARY",
+        "input_fingerprint": "2c787bf8ff1801f992b0c84831c61fa72bb2d452182b1cf60b9f5673b92912f5",
+        "provenance_json": "{\"claim_id\": \"047abf63-a44b-44b8-8201-d28852e1161a\", \"evidence_content_hash\": null, \"evidence_kind\": \"pattern\", \"evidence_metadata\": {\"found\": true, \"input_fingerprint\": \"2c787bf8ff1801f992b0c84831c61fa72bb2d452182b1cf60b9f5673b92912f5\", \"inputs\": {\"command_contract\": {\"path\": \"README.md\", \"pattern\": \"Baseplane grounds biology in sequence\"}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"path\": \"README.md\", \"resources\": [], \"started_revision\": 8}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/086213b9-9fdd-4c38-aed5-e9da5a910bd7\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "valid": 1,
+        "validation_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f"
+      },
+      {
+        "completion_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f",
+        "completion_revision": 18,
+        "evidence_id": "f90dfd95-3aec-43af-8a8d-8a19aaca05ef",
+        "evidence_revision": 11,
+        "gate_id": "GH-BOOTSTRAP-CLASSIFICATION",
+        "input_fingerprint": "11616edef011b3800e6b8840459282c9e25ffffc5e3a8c63e7fe568621498db3",
+        "provenance_json": "{\"claim_id\": \"047abf63-a44b-44b8-8201-d28852e1161a\", \"evidence_content_hash\": null, \"evidence_kind\": \"file_exists\", \"evidence_metadata\": {\"exists\": true, \"input_fingerprint\": \"11616edef011b3800e6b8840459282c9e25ffffc5e3a8c63e7fe568621498db3\", \"inputs\": {\"command_contract\": {\"path\": \"docs/repository-map.md\"}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"path\": \"docs/repository-map.md\", \"resources\": [], \"started_revision\": 10}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/f90dfd95-3aec-43af-8a8d-8a19aaca05ef\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "valid": 1,
+        "validation_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f"
+      },
+      {
+        "completion_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f",
+        "completion_revision": 18,
+        "evidence_id": "f6cc7629-71c2-4f7f-96a1-766c3a028882",
+        "evidence_revision": 13,
+        "gate_id": "GH-BOOTSTRAP-DIFF",
+        "input_fingerprint": "44a88ece499607bac17008d8bfa654ae346211f6d81659e0c89c143377a4fbe0",
+        "provenance_json": "{\"claim_id\": \"047abf63-a44b-44b8-8201-d28852e1161a\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"git\", \"diff\", \"--check\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"44a88ece499607bac17008d8bfa654ae346211f6d81659e0c89c143377a4fbe0\", \"inputs\": {\"command_contract\": {\"argv\": [\"git\", \"diff\", \"--check\"]}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"cffc881b98f17307a78f5e5451be0ae70ad2716291f5e251c216e0285ed3282f\"}, {\"path\": \"README.md\", \"sha256\": \"37ec6657011612c6722d20d8f2bbfd18d993b00173863dd6a2c39cb8a629a164\"}, {\"path\": \"docs/repository-map.md\", \"sha256\": \"db099b3fa823f0b85c5c798787c61b84be310940feca9258f6898c6115a2bc75\"}], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 12}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/f6cc7629-71c2-4f7f-96a1-766c3a028882\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "valid": 1,
+        "validation_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f"
+      },
+      {
+        "completion_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f",
+        "completion_revision": 18,
+        "evidence_id": "b138d7e1-7065-49d9-b19e-1a39d9d1dfbc",
+        "evidence_revision": 15,
+        "gate_id": "GH-BOOTSTRAP-IDENTITY",
+        "input_fingerprint": "ba5a0c887c375cae12968e8e5bf233967303f1ca8751ef229d5734977b72df4a",
+        "provenance_json": "{\"claim_id\": \"047abf63-a44b-44b8-8201-d28852e1161a\", \"evidence_content_hash\": null, \"evidence_kind\": \"pattern\", \"evidence_metadata\": {\"found\": true, \"input_fingerprint\": \"ba5a0c887c375cae12968e8e5bf233967303f1ca8751ef229d5734977b72df4a\", \"inputs\": {\"command_contract\": {\"path\": \"README.md\", \"pattern\": \"Predictive accuracy is not automatically mechanistic validity\"}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"path\": \"README.md\", \"resources\": [], \"started_revision\": 14}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/b138d7e1-7065-49d9-b19e-1a39d9d1dfbc\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-BOOTSTRAP",
+        "valid": 1,
+        "validation_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f"
+      }
+    ],
+    "task_dependencies": [
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{\"dispositions\": [\"implemented\"]}",
+        "decision_id": null,
+        "id": 1,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-BOOTSTRAP",
+        "task_id": "GH-SCIENCE-FOUNDATIONS",
+        "type": "task"
+      }
+    ],
+    "task_invariants": [
+      {
+        "invariant_id": "four-project-boundary",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "invariant_id": "preserve-unknown-work",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "invariant_id": "science-before-architecture",
+        "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "invariant_id": "four-project-boundary",
+        "task_id": "GH-SCIENCE-FOUNDATIONS"
+      },
+      {
+        "invariant_id": "science-before-architecture",
+        "task_id": "GH-SCIENCE-FOUNDATIONS"
+      }
+    ],
+    "task_locks": [],
+    "tasks": [
+      {
+        "attention_reason": null,
+        "completion_commit": "ce9eb73aa039fda2de76c91b61c67953a552755f",
+        "completion_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f",
+        "completion_revision": 18,
+        "created_at": "2026-08-26T21:49:04Z",
+        "id": "GH-BOOTSTRAP",
+        "kind": "workstream",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Preserve unknown dirty work, fast-forward safely, add minimal authoritative documentation and semantic state, validate, commit, and verify through project-control.",
+        "notes": "This task is a bounded bootstrap, not model or implementation design.",
+        "objective": "Reconcile and preserve repository state; establish authoritative scientific identity and four-project boundaries; bootstrap project and tool indexing; classify the archaeological repository without treating experiments as architecture.",
+        "parallel_policy": "project_exclusive",
+        "parent_id": null,
+        "priority": 100,
+        "result": "implemented",
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"failed\"]}",
+        "revision": 18,
+        "status": "done",
+        "tags_json": "[\"repository-reconciliation\", \"scientific-identity\", \"project-boundaries\", \"tool-index\", \"legacy-classification\"]",
+        "title": "Foundational repository and scientific bootstrap",
+        "updated_at": "2026-08-26T21:53:04Z",
+        "version": 3
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-08-26T21:49:04Z",
+        "id": "GH-SCIENCE-FOUNDATIONS",
+        "kind": "workstream",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Frame evidence-bearing scientific questions and literature work before proposing models or machinery.",
+        "notes": "Open scientific questions are intentional, not missing implementation.",
+        "objective": "Investigate sufficient biological state, identifiable hidden dynamics and causal structure, evidence domains for mechanism, uncertainty, and non-identifiability without prematurely selecting an implementation architecture.",
+        "parallel_policy": "serial",
+        "parent_id": null,
+        "priority": 10,
+        "result": null,
+        "result_policy_json": "{}",
+        "revision": 3,
+        "status": "planned",
+        "tags_json": "[\"future-science\", \"foundational-questions\", \"non-identifiability\"]",
+        "title": "Resolve foundational scientific questions",
+        "updated_at": "2026-08-26T21:49:04Z",
+        "version": 1
+      }
+    ]
+  }
+}
