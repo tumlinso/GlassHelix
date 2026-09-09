@@ -1,0 +1,779 @@
+{
+  "schema_version": 3,
+  "project": {
+    "configuration": {
+      "busy_timeout_ms": 5000,
+      "claim_lease_seconds": 7200,
+      "context_budget_bytes": 12000,
+      "legacy_review_days": {
+        "blocked": 7,
+        "in_progress": 3,
+        "planned": 3,
+        "stale": 3
+      },
+      "resource_lease_seconds": 300
+    },
+    "created_at": "2026-08-26T21:47:14Z",
+    "project_name": "GlassHelix",
+    "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+    "schema_version": 2
+  },
+  "tasks": [
+    {
+      "id": "GH-NF1-0000",
+      "parent_id": null,
+      "kind": "epic",
+      "title": "GlassHelix native execution and interrogation foundation",
+      "objective": "",
+      "priority": 100,
+      "parallel_policy": "serial",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-0000.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": []
+    },
+    {
+      "id": "GH-NF1-A01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Adopt the approved toolbox scope without choosing biology",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a01.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a01.json"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-A01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-A02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Map both repositories and agentic authorities",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a02.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a02.json"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A01"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-A02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-A03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Review legacy source and replacement boundaries",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a03.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a03.json"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A02"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-A03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-A04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish autonomy and recovery charter",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a04.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a04.json"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A03"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-A04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Create native library target and remove legacy default entry",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-b01.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "CMakePresets.json",
+          "cmake/GlassHelixFoundation.cmake",
+          "docs/native_foundation_v1/build",
+          "tests/native_foundation/build",
+          "CMakeLists.txt",
+          "include/GlassHelix/core/host_bindings.hh",
+          "src/core/host_bindings.cc"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C07"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X01"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-B01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "b01"
+          ],
+          "cwd": ".",
+          "env": {
+            "NF1_EXECUTION_BINDINGS": "/home/tumlinson/.local/state/nf1-20260908-v1/gh/b01/bindings.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define quantity roles over Cellerator identities",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c01.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c01.json",
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M00"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-C01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define system, mechanism and instance semantics",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c02.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c02.json",
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C01"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-C02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define calculation requests and time interpretation",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c03.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c03.json",
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C02"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-C03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define observation and inferential-state distinction",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c04.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c04.json",
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C03"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-C04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define numerical and interpretation provenance",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c05.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c05.json",
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C04"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-C05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define capability-based extensions",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c06.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c06.json",
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C05"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-C06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C07",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish developmental GlassHelix contracts",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c07.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c07.json",
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C06"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-C07-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C07"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M00",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Scope, control and baseline adopted",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m00.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration",
+          "docs/native_foundation_v1/records/gh-nf1-m00.json"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A04"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M00",
+          "title": "Scope, control and baseline adopted",
+          "metadata": {},
+          "publishes_interfaces": []
+        }
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1-M00-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-M00"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-X01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Import the developmental Cellerator contracts",
+      "objective": "",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "next_action": "",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-x01.md",
+      "tags": [],
+      "result_policy": {},
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/imports"
+        ],
+        "read_paths": [],
+        "forbidden_paths": [],
+        "shared_locks": []
+      },
+      "claim_locks": [],
+      "invariants": [],
+      "produced_artifacts": [],
+      "resource_requests": [],
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M00"
+        }
+      ],
+      "consumes_interfaces": [],
+      "checkpoints": [],
+      "gates": [
+        {
+          "id": "GH-NF1-X01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/verify_receipt.py",
+            "--edge",
+            "NF1-CE-CONTRACTS"
+          ],
+          "cwd": ".",
+          "env": {
+            "NF1_EXECUTION_BINDINGS": "/home/tumlinson/.local/state/nf1-20260908-v1/gh/x01/bindings.json"
+          }
+        }
+      ]
+    }
+  ],
+  "runs": []
+}
