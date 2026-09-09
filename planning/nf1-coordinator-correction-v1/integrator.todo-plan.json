@@ -1,0 +1,117 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "GlassHelix",
+    "workspace": "glasshelix",
+    "repository": "glasshelix",
+    "baseline_commit": "5b9dfeb050448a772db5b4e35dbc14b744588b6e",
+    "objective": "GlassHelix native execution and interrogation foundation",
+    "program_document": "planning/native-foundation-v1/01_SCOPE_AND_DECISIONS.md"
+  },
+  "tasks": [
+    {
+      "id": "GH-NF1-0000",
+      "kind": "epic",
+      "title": "GlassHelix native execution and interrogation foundation",
+      "status": "planned",
+      "priority": 100,
+      "parallel_policy": "serial",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-0000.md",
+      "completion_contract": {
+        "required": [
+          "All NF1 child tasks are authoritatively accepted and integrated; final paired-source receipt and required real execution evidence are present."
+        ]
+      }
+    }
+  ],
+  "runs": [
+    {
+      "id": "GH-NF1-RUN-V1",
+      "root_task_id": "GH-NF1-0000",
+      "charter": {
+        "objective": "GlassHelix native execution and interrogation foundation; execute the approved toolbox program autonomously after user controller launch, not during manual import.",
+        "boundaries": [
+          "One GlassHelix strategic controller coordinates both independent authorities; every substantial worker is first class.",
+          "Read the paired scope and autonomy charter. Adjust scopes/interfaces through authority, preserve work, integrate and push incrementally.",
+          "No biological experiment, full learning model, CellShard program, broad compiler or old CE-AMP activation.",
+          "Import may create active run metadata but no worker dispatch; later user launch authorizes the whole accepted program."
+        ],
+        "acceptance_conditions": [
+          "Every child task accepted and integrated; GH-NF1-CP-M90 reached with real evidence and the exact final source pair."
+        ],
+        "invariants": [
+          "GH-NF1-INV-SCOPE",
+          "GH-NF1-INV-OWNERS",
+          "GH-NF1-INV-IDENTITY",
+          "GH-NF1-INV-OBSERVATION",
+          "GH-NF1-INV-COMBINATORIAL",
+          "GH-NF1-INV-LIFETIME",
+          "GH-NF1-INV-DIFFERENTIAL",
+          "GH-NF1-INV-NUMERIC",
+          "GH-NF1-INV-EVIDENCE",
+          "GH-NF1-INV-AUTONOMY",
+          "GH-NF1-INV-PRESERVE",
+          "GH-NF1-INV-AUTHORITY",
+          "GH-NF1-INV-CROSS",
+          "GH-NF1-INV-PERFORMANCE"
+        ]
+      },
+      "lanes": [
+        {
+          "id": "GH-NF1-L-COORD",
+          "role": "coordinator",
+          "workspace": {
+            "mode": "read_shared"
+          },
+          "tasks": []
+        },
+        {
+          "id": "GH-NF1-L-M",
+          "parent_lane_id": "GH-NF1-L-COORD",
+          "role": "integrator",
+          "workspace": {
+            "mode": "exclusive"
+          },
+          "tasks": []
+        }
+      ],
+      "context_fragments": [
+        {
+          "kind": "lane_brief",
+          "lane_id": "GH-NF1-L-COORD",
+          "content": {
+            "role": "coordinator",
+            "authority": "server_enforced_role_and_task_scope",
+            "ordered_tasks": [
+              "GH-NF1-COORD",
+              "GH-NF1-0000"
+            ],
+            "interfaces": [],
+            "rendezvous": [],
+            "workspace_mode": "read_shared"
+          }
+        },
+        {
+          "kind": "lane_brief",
+          "lane_id": "GH-NF1-L-M",
+          "content": {
+            "role": "integrator",
+            "authority": "server_enforced_role_and_task_scope",
+            "ordered_tasks": [
+              "GH-NF1-M00",
+              "GH-NF1-M10",
+              "GH-NF1-M20",
+              "GH-NF1-M30",
+              "GH-NF1-M40",
+              "GH-NF1-M60",
+              "GH-NF1-M90"
+            ],
+            "interfaces": [],
+            "rendezvous": [],
+            "workspace_mode": "exclusive"
+          }
+        }
+      ]
+    }
+  ]
+}
