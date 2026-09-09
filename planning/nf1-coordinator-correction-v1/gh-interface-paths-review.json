@@ -1,0 +1,85 @@
+{
+  "source_revision": 92,
+  "validation": {
+    "valid": true,
+    "task_count": 13,
+    "checkpoint_count": 1,
+    "gate_count": 12,
+    "barrier_count": 0,
+    "interface_count": 6
+  },
+  "selected_tasks": [
+    "GH-NF1-0000",
+    "GH-NF1-A01",
+    "GH-NF1-A02",
+    "GH-NF1-A03",
+    "GH-NF1-A04",
+    "GH-NF1-C01",
+    "GH-NF1-C02",
+    "GH-NF1-C03",
+    "GH-NF1-C04",
+    "GH-NF1-C05",
+    "GH-NF1-C06",
+    "GH-NF1-C07",
+    "GH-NF1-M00"
+  ],
+  "changed_semantic_tables": [
+    "interfaces"
+  ],
+  "interfaces": [
+    {
+      "id": "GH-NF1-IF-INFERENCE",
+      "owner_task_id": "GH-NF1-C07",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/core/observation.hh",
+        "include/GlassHelix/core/provenance.hh"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-INTERROGATION",
+      "owner_task_id": "GH-NF1-C07",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/core/request.hh",
+        "include/GlassHelix/core/capability.hh",
+        "include/GlassHelix/core/provenance.hh"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-OBSERVATION",
+      "owner_task_id": "GH-NF1-C07",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/core/observation.hh"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-PYTHON-REPLAY",
+      "owner_task_id": "GH-NF1-C07",
+      "version": "1",
+      "contract_paths": [
+        "docs/native_foundation_v1/contracts/python-replay-boundary.md"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-SCIENTIFIC-ROLES",
+      "owner_task_id": "GH-NF1-C07",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/core/quantity.hh"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-SYSTEM-ASSEMBLY",
+      "owner_task_id": "GH-NF1-C07",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/core/system.hh",
+        "include/GlassHelix/core/request.hh"
+      ]
+    }
+  ],
+  "preserved": "all other normalized semantic tables including lifecycle, queues, gates and claims",
+  "applied_revision": 93
+}
