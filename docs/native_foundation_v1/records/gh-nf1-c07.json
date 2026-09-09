@@ -1,0 +1,40 @@
+{
+  "kind": "nf1-governance-receipt-v1",
+  "task_id": "GH-NF1-C07",
+  "reviewed": true,
+  "source_commit": "fd5e9f5e1b3d81993152bc2803ceff221f40bf6b",
+  "reviewer_lane": "GH-NF1-L-C",
+  "topics": [
+    "source-reconciliation",
+    "ownership",
+    "acceptance-review",
+    "C07"
+  ],
+  "artifacts": [
+    {
+      "path": "include/GlassHelix/core/contracts.hh",
+      "sha256": "7ef1690a5de6ce788561f281eab1c5fcfb85f40b2e4d2e77c188c48b9e5221b0"
+    },
+    {
+      "path": "tests/native_foundation/core/system_semantics.cc",
+      "sha256": "043cd88660c02929594e5df4c51233cff9e68a74f4a343451fc45c02f7ce4ce6"
+    },
+    {
+      "path": "tests/native_foundation/core/CMakeLists.txt",
+      "sha256": "30bc1e509fc5c894c94f99ff19d6851f49f258a87cf076e95a47816f27cf3e9f"
+    },
+    {
+      "path": "docs/native_foundation_v1/contracts/developmental-v1.md",
+      "sha256": "c20171ab9b683b814fccd9e9c6d991e8bfcf09890e698639b10c52aaf1ff4109"
+    },
+    {
+      "path": "docs/native_foundation_v1/contracts/python-replay-boundary.md",
+      "sha256": "31a8c5c10b570f161c5355ebaa98f8cae2c5c188fd263d966c79f5364f8c60e8"
+    },
+    {
+      "path": "docs/native_foundation_v1/contracts/c07.md",
+      "sha256": "e1986db5d892681bd9ce71ca0258402de997c48a0ec94ef830f3d71341835b4d"
+    }
+  ],
+  "evidence_level": "governance_review"
+}
