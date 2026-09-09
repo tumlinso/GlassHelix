@@ -1,0 +1,51 @@
+{
+  "source_revision": 68,
+  "validation": {
+    "valid": true,
+    "task_count": 7,
+    "checkpoint_count": 1,
+    "gate_count": 6,
+    "barrier_count": 0,
+    "interface_count": 0
+  },
+  "selected_tasks": [
+    "GH-NF1-0000",
+    "GH-NF1-A01",
+    "GH-NF1-A02",
+    "GH-NF1-A03",
+    "GH-NF1-A04",
+    "GH-NF1-M00",
+    "GH-NF1-T01"
+  ],
+  "changed_semantic_tables": [
+    "gates"
+  ],
+  "changed_gates": [
+    "GH-NF1-T01-ACCEPT"
+  ],
+  "before_gate_config": {
+    "argv": [
+      "python3",
+      "-B",
+      "planning/native-foundation-v1/scripts/run_gate.py",
+      "--group",
+      "t01"
+    ],
+    "cwd": "."
+  },
+  "after_gate_config": {
+    "argv": [
+      "python3",
+      "-B",
+      "planning/native-foundation-v1/scripts/run_gate.py",
+      "--group",
+      "t01"
+    ],
+    "cwd": ".",
+    "env": {
+      "NF1_EXECUTION_BINDINGS": "/home/tumlinson/.local/state/nf1-20260908-v1/gh/t01/bindings.json"
+    }
+  },
+  "preserved": "all other durable semantic rows, lifecycle, completion evidence, scopes, dependency conditions, run contexts, queues and workspaces; ignore revisions/timestamps/task versions and regenerated dependency row IDs",
+  "applied_revision": 85
+}
