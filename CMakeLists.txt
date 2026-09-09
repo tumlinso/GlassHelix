@@ -27,6 +27,13 @@ if(NF1_HOST_VALIDATION)
   return()
 endif()
 
+option(GH_BUILD_LEGACY "Build historical GlassEtch experiments instead of the native library" OFF)
+if(NOT GH_BUILD_LEGACY)
+  include(CTest)
+  include(cmake/GlassHelixFoundation.cmake)
+  return()
+endif()
+
 set(CUDA_DIR "/usr/local/cuda")
 option(USE_CUDA "Enable CUDA support" ON)
 

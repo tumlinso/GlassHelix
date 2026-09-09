@@ -1,0 +1,18 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "native",
+      "displayName": "Native scientific library and host binding tests",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/native",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_TESTING": "ON",
+        "CELLERATOR_SOURCE_ROOT": "$env{CELLERATOR_SOURCE_ROOT}"
+      }
+    }
+  ],
+  "buildPresets": [{"name": "native", "configurePreset": "native", "jobs": 2}],
+  "testPresets": [{"name": "native", "configurePreset": "native", "output": {"outputOnFailure": true}, "execution": {"noTestsAction": "error"}}]
+}
