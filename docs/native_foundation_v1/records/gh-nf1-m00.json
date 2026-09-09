@@ -1,0 +1,24 @@
+{
+  "kind": "nf1-governance-receipt-v1",
+  "task_id": "GH-NF1-M00",
+  "reviewed": true,
+  "source_commit": "d7b85a797f42925906ae6b12bac8a756d885239a",
+  "reviewer_lane": "GH-NF1-L-M",
+  "topics": [
+    "source-reconciliation",
+    "ownership",
+    "acceptance-review",
+    "M00"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/native_foundation_v1/integration/m00-review.md",
+      "sha256": "d154521c048c258501494d5b3f8973e7149f3c3a11810f7641cbf7974c2def6e"
+    }
+  ],
+  "evidence_level": "governance_review",
+  "interface_versions": {},
+  "limitations": [
+    "Governance integration only; no native calculation or GPU qualification."
+  ]
+}

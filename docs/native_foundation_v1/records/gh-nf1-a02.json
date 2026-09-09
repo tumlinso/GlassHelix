@@ -1,0 +1,27 @@
+{
+  "kind": "nf1-governance-receipt-v1",
+  "task_id": "GH-NF1-A02",
+  "reviewed": true,
+  "source_commit": "43ca481ddd47a3696f2bda43cafb2c55a77e0025",
+  "reviewer_lane": "GH-NF1-L-A",
+  "topics": [
+    "source-reconciliation",
+    "ownership",
+    "acceptance-review",
+    "A02"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/native_foundation_v1/controller/authority-map.md",
+      "sha256": "01bd55ecc7d8b852c56eb10a92d550db6df9538e15c621b3263e603ebd00d092"
+    },
+    {
+      "path": "docs/native_foundation_v1/controller/authority-observation.json",
+      "sha256": "a8b5be56799fb3afe0eb948de4a751fb906845598093a1374c61d4f6b9c3a7a7"
+    }
+  ],
+  "evidence_level": "governance_review",
+  "limitations": [
+    "GPU lease details are owned by CE A02; this record does not authorize GPU execution."
+  ]
+}

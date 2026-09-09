@@ -1,0 +1,23 @@
+{
+  "kind": "nf1-governance-receipt-v1",
+  "task_id": "GH-NF1-A01",
+  "reviewed": true,
+  "source_commit": "25e885510e127540ab4498e9f495dc989654c9a1",
+  "reviewer_lane": "GH-NF1-L-A",
+  "topics": [
+    "source-reconciliation",
+    "ownership",
+    "acceptance-review",
+    "A01"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/native_foundation_v1/baseline/adopted-scope.md",
+      "sha256": "103cec942a3e7ca0fb4b673cca357ba19322049d80d174c842b4684510c47ad9"
+    }
+  ],
+  "evidence_level": "governance_review",
+  "limitations": [
+    "No runtime or GPU capability is established by this record."
+  ]
+}
