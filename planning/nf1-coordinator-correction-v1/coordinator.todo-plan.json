@@ -1,0 +1,94 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "GlassHelix",
+    "workspace": "glasshelix",
+    "repository": "glasshelix",
+    "baseline_commit": "5b9dfeb050448a772db5b4e35dbc14b744588b6e",
+    "objective": "GlassHelix native execution and interrogation foundation",
+    "program_document": "planning/native-foundation-v1/01_SCOPE_AND_DECISIONS.md"
+  },
+  "tasks": [
+    {
+      "id": "GH-NF1-0000",
+      "kind": "epic",
+      "title": "GlassHelix native execution and interrogation foundation",
+      "status": "planned",
+      "priority": 100,
+      "parallel_policy": "serial",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-0000.md",
+      "completion_contract": {
+        "required": [
+          "All NF1 child tasks are authoritatively accepted and integrated; final paired-source receipt and required real execution evidence are present."
+        ]
+      }
+    },
+    {
+      "id": "GH-NF1-COORD",
+      "kind": "task",
+      "parent_id": "GH-NF1-0000",
+      "title": "Coordinate NF1 execution and preserve final epic closure",
+      "priority": 101,
+      "parallel_policy": "parallel_safe",
+      "objective": "Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.",
+      "notes": "planning/nf1-coordinator-correction-v1/README.md",
+      "completion_contract": {
+        "required": [
+          "Local NF1 M90 accepted with real evidence; all other original NF1 leaves complete and integrated; pending work and leases reconciled before coordinator completion."
+        ]
+      },
+      "scope": {
+        "shared_locks": [
+          "GH-NF1-COORDINATOR-SEAT"
+        ]
+      }
+    }
+  ],
+  "runs": [
+    {
+      "id": "GH-NF1-RUN-V1",
+      "root_task_id": "GH-NF1-0000",
+      "charter": {
+        "objective": "GlassHelix native execution and interrogation foundation; execute the approved toolbox program autonomously after user controller launch, not during manual import.",
+        "boundaries": [
+          "One GlassHelix strategic controller coordinates both independent authorities; every substantial worker is first class.",
+          "Read the paired scope and autonomy charter. Adjust scopes/interfaces through authority, preserve work, integrate and push incrementally.",
+          "No biological experiment, full learning model, CellShard program, broad compiler or old CE-AMP activation.",
+          "Import may create active run metadata but no worker dispatch; later user launch authorizes the whole accepted program."
+        ],
+        "acceptance_conditions": [
+          "Every child task accepted and integrated; GH-NF1-CP-M90 reached with real evidence and the exact final source pair."
+        ],
+        "invariants": [
+          "GH-NF1-INV-SCOPE",
+          "GH-NF1-INV-OWNERS",
+          "GH-NF1-INV-IDENTITY",
+          "GH-NF1-INV-OBSERVATION",
+          "GH-NF1-INV-COMBINATORIAL",
+          "GH-NF1-INV-LIFETIME",
+          "GH-NF1-INV-DIFFERENTIAL",
+          "GH-NF1-INV-NUMERIC",
+          "GH-NF1-INV-EVIDENCE",
+          "GH-NF1-INV-AUTONOMY",
+          "GH-NF1-INV-PRESERVE",
+          "GH-NF1-INV-AUTHORITY",
+          "GH-NF1-INV-CROSS",
+          "GH-NF1-INV-PERFORMANCE"
+        ]
+      },
+      "lanes": [
+        {
+          "id": "GH-NF1-L-COORD",
+          "role": "coordinator",
+          "workspace": {
+            "mode": "read_shared"
+          },
+          "tasks": [
+            "GH-NF1-COORD",
+            "GH-NF1-0000"
+          ]
+        }
+      ]
+    }
+  ]
+}
