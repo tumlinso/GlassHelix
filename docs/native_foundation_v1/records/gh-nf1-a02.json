@@ -13,7 +13,7 @@
   "artifacts": [
     {
       "path": "docs/native_foundation_v1/controller/authority-map.md",
-      "sha256": "5f2d23a0c312cea4c16d688e9daba9370971a66131b16ec36691f1a3d0aec872"
+      "sha256": "01bd55ecc7d8b852c56eb10a92d550db6df9538e15c621b3263e603ebd00d092"
     },
     {
       "path": "docs/native_foundation_v1/controller/authority-observation.json",

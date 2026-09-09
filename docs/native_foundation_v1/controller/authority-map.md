@@ -44,7 +44,15 @@ Both repositories must serialize GPU evidence using an actual native lease and
 one shared host lock: /tmp/nf1-20260908-v1-device-evidence.lock. This records the
 controller-selected path, not a held lock or lease. CE A02 owns the installed
 lease verification details; GPU qualification remains unavailable until its
-live receipt and external execution bindings are integrated. Governance review
+live receipt and external execution bindings are integrated. Installed acquisition
+is cuda_controller.py run --spec FILE --json; its child receives
+TODO_GPU_LEASE_RECEIPT. CE A02 provides verify_gpu_lease.py with
+--lease-receipt PATH --project-root ROOT --gpu-uuid UUID; the verifier checks
+HostCoordinator(create=False).owner against active foreground state, project,
+owner identity, live PID/start and reserved GPU membership. Its source was
+inspected in the CE A workspace; pin its integrated commit before use. Seven
+adversarial unit tests reported by that lane are synthetic verifier evidence,
+not a held lease or device calculation. Governance review
 needs no device lease. Select ready CPU work under the shared CPU/RAM budget;
 30 declared lanes do not authorize simultaneous launch of all lanes.
 
