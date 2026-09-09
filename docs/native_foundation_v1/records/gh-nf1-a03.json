@@ -1,0 +1,23 @@
+{
+  "kind": "nf1-governance-receipt-v1",
+  "task_id": "GH-NF1-A03",
+  "reviewed": true,
+  "source_commit": "04c9d6af614ca941982fface62cdbf367ddba607",
+  "reviewer_lane": "GH-NF1-L-A",
+  "topics": [
+    "source-reconciliation",
+    "ownership",
+    "acceptance-review",
+    "A03"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/native_foundation_v1/baseline/source-disposition.md",
+      "sha256": "9cbd93cbd3d53e73e4df0d3cc373afee4aabb13f84d19acbe7f5ec0485b92db8"
+    }
+  ],
+  "evidence_level": "governance_review",
+  "limitations": [
+    "No legacy code is claimed tested or reused; default build replacement remains central implementation work."
+  ]
+}
