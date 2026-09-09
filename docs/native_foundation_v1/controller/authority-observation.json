@@ -1,0 +1,1100 @@
+{
+  "kind": "nf1-authority-map-observation-v1",
+  "observations": [
+    {
+      "tool": "coordination_view",
+      "project": "glasshelix",
+      "observed_at": "2026-09-09T10:58:30Z",
+      "revision": 30,
+      "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+      "repository_commits": {
+        "glasshelix": "e82540220117087105f64ddedbfe1f338de683b0"
+      },
+      "runs": [
+        {
+          "id": "GH-NF1-RUN-V1",
+          "root_task_id": "GH-NF1-0000",
+          "status": "active",
+          "active_charter_version": 1,
+          "lanes": [
+            {
+              "id": "GH-NF1-L-COORD",
+              "role": "coordinator",
+              "state": "active",
+              "workspace_mode": "read_shared",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-COORD",
+                  "state": "active"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-0000",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-A",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "active",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-A01",
+                  "state": "completed"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-A02",
+                  "state": "active"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-A03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-A04",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-B",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-B01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-B02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-B03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-B04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-B05",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-C",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-C01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-C02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-C03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-C04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-C05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-C06",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "GH-NF1-C07",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-D",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-D01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-D02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-D03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-D04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-D05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-D06",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "GH-NF1-D07",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-E",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-E01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-E02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-E03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-E04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-E05",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-K",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "specialist",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-K01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-K02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-K03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-K04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-K05",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-M",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "integrator",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-M00",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-M10",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-M20",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-M30",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-M40",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-M60",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "GH-NF1-M90",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-O",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-O01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-O02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-O03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-O04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-O05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-O06",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-P",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-P01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-P02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-P03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-P04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-P05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-P06",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-Q",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-Q01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-Q02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-Q03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-Q04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-Q05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-Q06",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "GH-NF1-Q07",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-R",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-R01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-R02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-R03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-R04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-R05",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-S",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-S01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-S02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-S03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-S04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-S05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-S06",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "GH-NF1-S07",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-T",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "validator",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-T01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-T02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-T03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-T04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-T05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-T06",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-U",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-U01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-U02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-U03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-U04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-U05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-U06",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "GH-NF1-L-X",
+              "parent_lane_id": "GH-NF1-L-COORD",
+              "role": "integrator",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "GH-NF1-X01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "GH-NF1-X02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "GH-NF1-X03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "GH-NF1-X04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "GH-NF1-X05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "GH-NF1-X06",
+                  "state": "queued"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dispatches": [
+        {
+          "dispatch_id": "31f2a61d-f1a5-41b7-9b88-56bfe8c761d0",
+          "task_id": "GH-NF1-COORD",
+          "heartbeat_at": "2026-09-09T10:50:46Z",
+          "heartbeat_fresh": false,
+          "context_version": 2,
+          "observable": false,
+          "run_id": "GH-NF1-RUN-V1",
+          "lane_id": "GH-NF1-L-COORD",
+          "role": "coordinator",
+          "authority": "todo_semantic_workflow"
+        },
+        {
+          "dispatch_id": "47b43e9a-41aa-40eb-a3fa-5f330f98f2b0",
+          "task_id": "GH-NF1-A02",
+          "heartbeat_at": "2026-09-09T10:58:09Z",
+          "heartbeat_fresh": true,
+          "context_version": 1,
+          "observable": true,
+          "run_id": "GH-NF1-RUN-V1",
+          "lane_id": "GH-NF1-L-A",
+          "role": "implementer",
+          "authority": "todo_semantic_workflow"
+        }
+      ],
+      "workspaces": [
+        {
+          "id": "87da49e8-1809-4941-afe2-692aee335a95",
+          "run_id": "GH-NF1-RUN-V1",
+          "lane_id": "GH-NF1-L-A",
+          "base_commit": "e82540220117087105f64ddedbfe1f338de683b0",
+          "branch": "codex/gh-nf1-a-v1",
+          "mode": "isolated_merge",
+          "state": "active",
+          "integration_task_id": "GH-NF1-M00",
+          "cleanup_eligible": 0,
+          "authority": "todo_semantic_workflow"
+        }
+      ],
+      "component_authority": {
+        "todo_workflow": {
+          "status": "available",
+          "operation": "workflow",
+          "revision": 30,
+          "read_authority_fingerprint": "fa31082634ebf2f86c7ecce6aa0981691e73d53928357f19c654dba23e3d3d57",
+          "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+          "observed_at": "2026-09-09T10:58:30Z",
+          "source_identity": "todo-authority-ae47319547fad41f",
+          "error_code": null,
+          "revision_skew": 0
+        },
+        "todo_semantic_state": {
+          "status": "available",
+          "operation": "semantic_state",
+          "revision": 30,
+          "read_authority_fingerprint": "fa31082634ebf2f86c7ecce6aa0981691e73d53928357f19c654dba23e3d3d57",
+          "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+          "observed_at": "2026-09-09T10:58:30Z",
+          "source_identity": "todo-authority-ae47319547fad41f",
+          "error_code": null,
+          "revision_skew": 0
+        },
+        "todo_status": {
+          "status": "available",
+          "operation": "status",
+          "revision": 30,
+          "read_authority_fingerprint": null,
+          "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+          "observed_at": "2026-09-09T10:58:30Z",
+          "source_identity": "todo-authority-ae47319547fad41f",
+          "error_code": null,
+          "revision_skew": 0
+        },
+        "todo_export": {
+          "status": "available",
+          "operation": "export",
+          "revision": 30,
+          "read_authority_fingerprint": null,
+          "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+          "observed_at": "2026-09-09T10:58:30Z",
+          "source_identity": "todo-authority-ae47319547fad41f",
+          "error_code": null,
+          "revision_skew": 0
+        }
+      }
+    },
+    {
+      "tool": "coordination_view",
+      "project": "cellerator",
+      "observed_at": "2026-09-09T10:58:29Z",
+      "revision": 7006,
+      "project_uuid": "0ccaac37-dbbf-448e-a5f8-def197a70aba",
+      "repository_commits": {
+        "cellerator": "25460884334b5c061c2054dee331202c8cca982b"
+      },
+      "runs": [
+        {
+          "id": "CE-NF1-RUN-V1",
+          "root_task_id": "CE-NF1-0000",
+          "status": "active",
+          "active_charter_version": 1,
+          "lanes": [
+            {
+              "id": "CE-NF1-L-COORD",
+              "role": "coordinator",
+              "state": "active",
+              "workspace_mode": "read_shared",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "CE-NF1-COORD",
+                  "state": "active"
+                },
+                {
+                  "position": 1,
+                  "task_id": "CE-NF1-0000",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "CE-NF1-L-A",
+              "parent_lane_id": "CE-NF1-L-COORD",
+              "role": "implementer",
+              "state": "active",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "CE-NF1-A01",
+                  "state": "completed"
+                },
+                {
+                  "position": 1,
+                  "task_id": "CE-NF1-A02",
+                  "state": "active"
+                },
+                {
+                  "position": 2,
+                  "task_id": "CE-NF1-A03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "CE-NF1-A04",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "CE-NF1-L-B",
+              "parent_lane_id": "CE-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "CE-NF1-B01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "CE-NF1-B02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "CE-NF1-B03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "CE-NF1-B04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "CE-NF1-B05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "CE-NF1-B06",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "CE-NF1-L-C",
+              "parent_lane_id": "CE-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "CE-NF1-C01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "CE-NF1-C02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "CE-NF1-C03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "CE-NF1-C04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "CE-NF1-C05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "CE-NF1-C06",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "CE-NF1-L-D",
+              "parent_lane_id": "CE-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "CE-NF1-D01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "CE-NF1-D02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "CE-NF1-D03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "CE-NF1-D04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "CE-NF1-D05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "CE-NF1-D06",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "CE-NF1-D07",
+                  "state": "queued"
+                },
+                {
+                  "position": 7,
+                  "task_id": "CE-NF1-D08",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "CE-NF1-L-H",
+              "parent_lane_id": "CE-NF1-L-COORD",
+              "role": "implementer",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "CE-NF1-H01",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "CE-NF1-H02",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "CE-NF1-H03",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "CE-NF1-H04",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "CE-NF1-H05",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "CE-NF1-H06",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "CE-NF1-H07",
+                  "state": "queued"
+                }
+              ]
+            },
+            {
+              "id": "CE-NF1-L-M",
+              "parent_lane_id": "CE-NF1-L-COORD",
+              "role": "integrator",
+              "state": "ready",
+              "workspace_mode": "isolated_merge",
+              "context_cursor": 0,
+              "serial_queue": [
+                {
+                  "position": 0,
+                  "task_id": "CE-NF1-M00",
+                  "state": "queued"
+                },
+                {
+                  "position": 1,
+                  "task_id": "CE-NF1-M10",
+                  "state": "queued"
+                },
+                {
+                  "position": 2,
+                  "task_id": "CE-NF1-M20",
+                  "state": "queued"
+                },
+                {
+                  "position": 3,
+                  "task_id": "CE-NF1-M30",
+                  "state": "queued"
+                },
+                {
+                  "position": 4,
+                  "task_id": "CE-NF1-M40",
+                  "state": "queued"
+                },
+                {
+                  "position": 5,
+                  "task_id": "CE-NF1-M50",
+                  "state": "queued"
+                },
+                {
+                  "position": 6,
+                  "task_id": "CE-NF1-M90",
+                  "state": "queued"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dispatches": [
+        {
+          "dispatch_id": "825fe8a4-cbc4-4497-b072-b6132d39233f",
+          "task_id": "CE-NF1-COORD",
+          "heartbeat_at": "2026-09-09T10:50:52Z",
+          "heartbeat_fresh": false,
+          "context_version": 2,
+          "observable": false,
+          "run_id": "CE-NF1-RUN-V1",
+          "lane_id": "CE-NF1-L-COORD",
+          "role": "coordinator",
+          "authority": "todo_semantic_workflow"
+        },
+        {
+          "dispatch_id": "10b10956-b81d-4130-9b17-e74578243496",
+          "task_id": "CE-NF1-A02",
+          "heartbeat_at": "2026-09-09T10:55:52Z",
+          "heartbeat_fresh": true,
+          "context_version": 1,
+          "observable": true,
+          "run_id": "CE-NF1-RUN-V1",
+          "lane_id": "CE-NF1-L-A",
+          "role": "implementer",
+          "authority": "todo_semantic_workflow"
+        }
+      ],
+      "workspaces": [
+        {
+          "id": "6539667c-73f5-45ae-b190-dd92b1f0bcf6",
+          "run_id": "CE-NF1-RUN-V1",
+          "lane_id": "CE-NF1-L-A",
+          "base_commit": "25460884334b5c061c2054dee331202c8cca982b",
+          "branch": "codex/ce-nf1-a-v1",
+          "mode": "isolated_merge",
+          "state": "active",
+          "integration_task_id": "CE-NF1-M00",
+          "cleanup_eligible": 0,
+          "authority": "todo_semantic_workflow"
+        }
+      ],
+      "component_authority": {
+        "todo_workflow": {
+          "status": "available",
+          "operation": "workflow",
+          "revision": 7006,
+          "read_authority_fingerprint": "4d9c014a1dfe494a2a390d267a893c3c0bc3a9731a4608f11dd9558c18d3991e",
+          "project_uuid": "0ccaac37-dbbf-448e-a5f8-def197a70aba",
+          "observed_at": "2026-09-09T10:58:26Z",
+          "source_identity": "todo-authority-9d106a3658ad0c00",
+          "error_code": null,
+          "revision_skew": 0
+        },
+        "todo_semantic_state": {
+          "status": "available",
+          "operation": "semantic_state",
+          "revision": 7006,
+          "read_authority_fingerprint": "4d9c014a1dfe494a2a390d267a893c3c0bc3a9731a4608f11dd9558c18d3991e",
+          "project_uuid": "0ccaac37-dbbf-448e-a5f8-def197a70aba",
+          "observed_at": "2026-09-09T10:58:27Z",
+          "source_identity": "todo-authority-9d106a3658ad0c00",
+          "error_code": null,
+          "revision_skew": 0
+        },
+        "todo_status": {
+          "status": "available",
+          "operation": "status",
+          "revision": 7006,
+          "read_authority_fingerprint": null,
+          "project_uuid": "0ccaac37-dbbf-448e-a5f8-def197a70aba",
+          "observed_at": "2026-09-09T10:58:27Z",
+          "source_identity": "todo-authority-9d106a3658ad0c00",
+          "error_code": null,
+          "revision_skew": 0
+        },
+        "todo_export": {
+          "status": "available",
+          "operation": "export",
+          "revision": 7006,
+          "read_authority_fingerprint": null,
+          "project_uuid": "0ccaac37-dbbf-448e-a5f8-def197a70aba",
+          "observed_at": "2026-09-09T10:58:27Z",
+          "source_identity": "todo-authority-9d106a3658ad0c00",
+          "error_code": null,
+          "revision_skew": 0
+        }
+      }
+    }
+  ]
+}
