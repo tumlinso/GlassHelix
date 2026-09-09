@@ -1,0 +1,28 @@
+{
+  "kind": "nf1-governance-receipt-v1",
+  "task_id": "GH-NF1-C04",
+  "reviewed": true,
+  "source_commit": "3cb2e71bbe117d0aaa7d75a0c33422f2b43e0336",
+  "reviewer_lane": "GH-NF1-L-C",
+  "topics": [
+    "source-reconciliation",
+    "ownership",
+    "acceptance-review",
+    "C04"
+  ],
+  "artifacts": [
+    {
+      "path": "include/GlassHelix/core/observation.hh",
+      "sha256": "421bb3b73a8d5a8a5a1a731408409433fe4fd956a8c5e1f8bd884cb5d5fb0603"
+    },
+    {
+      "path": "tests/native_foundation/core/observation.cc",
+      "sha256": "d0472cb264ddfd44228ae8522bec7e9144c58f78abe8a68811a8bbaf26c64f36"
+    },
+    {
+      "path": "docs/native_foundation_v1/contracts/c04.md",
+      "sha256": "dd582ddcd2d9e3973183dba34393b90d5aa3b617ebf16245dd94393fcfa93bfe"
+    }
+  ],
+  "evidence_level": "governance_review"
+}
