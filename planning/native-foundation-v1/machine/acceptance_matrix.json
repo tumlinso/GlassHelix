@@ -1,0 +1,2798 @@
+{
+  "kind": "nf1-acceptance-v1",
+  "task_acceptance": [
+    {
+      "task_id": "GH-NF1-A01",
+      "conditions": [
+        "Record adopted engineering scope and explicitly unresolved science without closing it by fiat.",
+        "Existing GH-SCIENCE-FOUNDATIONS is not silently marked scientifically solved or rewritten during plan import."
+      ],
+      "cases": [
+        "Record adopted engineering scope and explicitly unresolved science without closing it by fiat.",
+        "Existing GH-SCIENCE-FOUNDATIONS is not silently marked scientifically solved or rewritten during plan import."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-A02",
+      "conditions": [
+        "One launched GlassHelix controller has project-qualified control records for both NF1 runs.",
+        "No cross-project parent-lane fiction, nested stale Cellerator gitlink or local worker masquerading as a first-class lane."
+      ],
+      "cases": [
+        "One launched GlassHelix controller has project-qualified control records for both NF1 runs.",
+        "No cross-project parent-lane fiction, nested stale Cellerator gitlink or local worker masquerading as a first-class lane."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-A03",
+      "conditions": [
+        "A source disposition names what is retained, retired from default build or reused after testing.",
+        "No reset/clean of user work or restoration of pairwise masked reconstruction as causal doctrine."
+      ],
+      "cases": [
+        "A source disposition names what is retained, retired from default build or reused after testing.",
+        "No reset/clean of user work or restoration of pairwise masked reconstruction as causal doctrine."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-A04",
+      "conditions": [
+        "The controller can autonomously select ready tasks, revise scopes through the workflow and continue without per-task human prompts.",
+        "Autonomy does not waive unknown-file preservation, scientific correctness, resource leases or the no-fabricated-evidence rule."
+      ],
+      "cases": [
+        "The controller can autonomously select ready tasks, revise scopes through the workflow and continue without per-task human prompts.",
+        "Autonomy does not waive unknown-file preservation, scientific correctness, resource leases or the no-fabricated-evidence rule."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-C01",
+      "conditions": [
+        "Equal shapes with different domain/order/role metadata are not interchangeable.",
+        "A field need not be named as a molecule, and a stable software ID is not evidence of molecular identifiability."
+      ],
+      "cases": [
+        "Equal shapes with different domain/order/role metadata are not interchangeable.",
+        "A field need not be named as a molecule, and a stable software ID is not evidence of molecular identifiability."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-C02",
+      "conditions": [
+        "Shared definitions can produce independent instances with different values.",
+        "Kernel fusion or splitting cannot change the declared biological mechanism boundary."
+      ],
+      "cases": [
+        "Shared definitions can produce independent instances with different values.",
+        "Kernel fusion or splitting cannot change the declared biological mechanism boundary."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-C03",
+      "conditions": [
+        "A discrete map is not silently multiplied by dt; an ODE vector field is not mislabeled a time-step map.",
+        "Arbitrary natural-language question solving and universal sufficient-state discovery are not advertised."
+      ],
+      "cases": [
+        "A discrete map is not silently multiplied by dt; an ODE vector field is not mislabeled a time-step map.",
+        "Arbitrary natural-language question solving and universal sufficient-state discovery are not advertised."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-C04",
+      "conditions": [
+        "Identical physical state can be paired with different evidence states and vice versa.",
+        "Measurement zero cannot mean missing; destructive snapshots cannot be treated as individual consecutive states."
+      ],
+      "cases": [
+        "Identical physical state can be paired with different evidence states and vice versa.",
+        "Measurement zero cannot mean missing; destructive snapshots cannot be treated as individual consecutive states."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-C05",
+      "conditions": [
+        "Result records retain units/scales, numerical policy and source/model generations.",
+        "Approximation, inference uncertainty and mechanism ambiguity cannot collapse into a single unlabeled confidence scalar."
+      ],
+      "cases": [
+        "Result records retain units/scales, numerical policy and source/model generations.",
+        "Approximation, inference uncertainty and mechanism ambiguity cannot collapse into a single unlabeled confidence scalar."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-C06",
+      "conditions": [
+        "Unsupported histories, stochastic execution and derivatives fail explicitly.",
+        "No empty placeholder class is allowed to masquerade as an implemented capability."
+      ],
+      "cases": [
+        "Unsupported histories, stochastic execution and derivatives fail explicitly.",
+        "No empty placeholder class is allowed to masquerade as an implemented capability."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-C07",
+      "conditions": [
+        "Native, observation, inference and diagnostic roles share one coherent specification.",
+        "Demo API sketch can be improved with source/consumer updates; acceptance meaning cannot be weakened."
+      ],
+      "cases": [
+        "Native, observation, inference and diagnostic roles share one coherent specification.",
+        "Demo API sketch can be improved with source/consumer updates; acceptance meaning cannot be weakened."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-B01",
+      "conditions": [
+        "A library consumer builds without running an old executable entry point.",
+        "No hidden legacy sparse runtime or token-state ontology enters the new library."
+      ],
+      "cases": [
+        "A library consumer builds without running an old executable entry point.",
+        "No hidden legacy sparse runtime or token-state ontology enters the new library."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_b01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-B02",
+      "conditions": [
+        "Standalone consumer proves headers and actual library symbols come from the qualified revision.",
+        "Including implementation .cu source or forcing Torch ownership fails the build-boundary check."
+      ],
+      "cases": [
+        "Standalone consumer proves headers and actual library symbols come from the qualified revision.",
+        "Including implementation .cu source or forcing Torch ownership fails the build-boundary check."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_b02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-B03",
+      "conditions": [
+        "Host-only and sm70 build configurations are recorded and reproducible.",
+        "No machine-specific absolute compiler paths, unsupported forced CUDA version or global flags override user toolchains."
+      ],
+      "cases": [
+        "Host-only and sm70 build configurations are recorded and reproducible.",
+        "No machine-specific absolute compiler paths, unsupported forced CUDA version or global flags override user toolchains."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_b03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-B04",
+      "conditions": [
+        "Reference-only demonstration and real linked demonstration are distinct targets.",
+        "Syntax-only declaration headers are never on the normal production include path."
+      ],
+      "cases": [
+        "Reference-only demonstration and real linked demonstration are distinct targets.",
+        "Syntax-only declaration headers are never on the normal production include path."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_b04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-B05",
+      "conditions": [
+        "A minimal external C++ consumer constructs and executes a supported numerical calculation.",
+        "Build success without executed numerical output is not end-to-end execution acceptance."
+      ],
+      "cases": [
+        "A minimal external C++ consumer constructs and executes a supported numerical calculation.",
+        "Build success without executed numerical output is not end-to-end execution acceptance."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_b05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-S01",
+      "conditions": [
+        "The example triad is represented as one joint nonlinear mechanism, not pairwise additive edges.",
+        "Assembly never silently invents a biological actor for an execution grouping."
+      ],
+      "cases": [
+        "The example triad is represented as one joint nonlinear mechanism, not pairwise additive edges.",
+        "Assembly never silently invents a biological actor for an execution grouping."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_s01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-S02",
+      "conditions": [
+        "Invalid axes, repeated ownership and unsupported algebraic loops fail before preparation.",
+        "A cycle is not resolved by whichever kernel happens to execute first."
+      ],
+      "cases": [
+        "Invalid axes, repeated ownership and unsupported algebraic loops fail before preparation.",
+        "A cycle is not resolved by whichever kernel happens to execute first."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_s02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-S03",
+      "conditions": [
+        "Native model composition reaches real Cellerator execution.",
+        "A host callback that computes the entire model while reporting CUDA capability cannot pass."
+      ],
+      "cases": [
+        "Native model composition reaches real Cellerator execution.",
+        "A host callback that computes the entire model while reporting CUDA capability cannot pass."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_s03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-S04",
+      "conditions": [
+        "Two candidates share preparation and retain different values without contamination.",
+        "Shared initial data cannot imply shared mutable parameters or beliefs."
+      ],
+      "cases": [
+        "Two candidates share preparation and retain different values without contamination.",
+        "Shared initial data cannot imply shared mutable parameters or beliefs."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_s04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-S05",
+      "conditions": [
+        "Deliberately modified same-address values invalidate result reuse.",
+        "Similar latent labels or equal output shape do not prove equivalence."
+      ],
+      "cases": [
+        "Deliberately modified same-address values invalidate result reuse.",
+        "Similar latent labels or equal output shape do not prove equivalence."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_s05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-S06",
+      "conditions": [
+        "Execution strategy changes preserve scientific descriptions and result alignment.",
+        "Attention weights, kernel names and layout partitions cannot become molecular mechanism claims."
+      ],
+      "cases": [
+        "Execution strategy changes preserve scientific descriptions and result alignment.",
+        "Attention weights, kernel names and layout partitions cannot become molecular mechanism claims."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_s06"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-S07",
+      "conditions": [
+        "Extending an evaluator does not require rewriting GlassHelix state or observation machinery.",
+        "Undeclared global coupling prevents independent batching rather than silently changing the system."
+      ],
+      "cases": [
+        "Extending an evaluator does not require rewriting GlassHelix state or observation machinery.",
+        "Undeclared global coupling prevents independent batching rather than silently changing the system."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_s07"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-D01",
+      "conditions": [
+        "Repeated map calls match an independent formula.",
+        "In-place scheduling cannot expose partial updates to another mechanism unless explicitly legal."
+      ],
+      "cases": [
+        "Repeated map calls match an independent formula.",
+        "In-place scheduling cannot expose partial updates to another mechanism unless explicitly legal."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_d01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-D02",
+      "conditions": [
+        "Linear and nonlinear truth fixtures exhibit correct one-step output and fourth-order convergence where applicable.",
+        "Stiff/adaptive/event-aware guarantees are not claimed; unsupported requests remain clear."
+      ],
+      "cases": [
+        "Linear and nonlinear truth fixtures exhibit correct one-step output and fourth-order convergence where applicable.",
+        "Stiff/adaptive/event-aware guarantees are not claimed; unsupported requests remain clear."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_d02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-D03",
+      "conditions": [
+        "Piecewise forcing changes happen at declared boundaries and stage times.",
+        "Unknown environmental input cannot silently default to an asserted biological zero."
+      ],
+      "cases": [
+        "Piecewise forcing changes happen at declared boundaries and stage times.",
+        "Unknown environmental input cannot silently default to an asserted biological zero."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_d03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-D04",
+      "conditions": [
+        "Width tails and independent trajectories preserve entity/candidate identity.",
+        "Coupled cells or candidate states cannot be treated as independent to enlarge a matrix dimension."
+      ],
+      "cases": [
+        "Width tails and independent trajectories preserve entity/candidate identity.",
+        "Coupled cells or candidate states cannot be treated as independent to enlarge a matrix dimension."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_d04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-D05",
+      "conditions": [
+        "Changing parameters after rollout invalidates stale response requests.",
+        "Current values cannot be substituted for historical primal values without recorded recomputation."
+      ],
+      "cases": [
+        "Changing parameters after rollout invalidates stale response requests.",
+        "Current values cannot be substituted for historical primal values without recorded recomputation."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_d05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-D06",
+      "conditions": [
+        "Sensitive threshold outcomes can be reported numerically unresolved.",
+        "Precision escalation alone is not advertised as a proof of biological robustness."
+      ],
+      "cases": [
+        "Sensitive threshold outcomes can be reported numerically unresolved.",
+        "Precision escalation alone is not advertised as a proof of biological robustness."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_d06"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-D07",
+      "conditions": [
+        "Initial memoryless deterministic regime works while history/stochastic requirements fail transparently.",
+        "No fake implementation of unsupported DDE/SDE or unrestricted universal simulator is included."
+      ],
+      "cases": [
+        "Initial memoryless deterministic regime works while history/stochastic requirements fail transparently.",
+        "No fake implementation of unsupported DDE/SDE or unrestricted universal simulator is included."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_d07"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-O01",
+      "conditions": [
+        "Selecting a hidden-state subset and a mixed linear readout produce expected values.",
+        "Reverse reconstruction of full state is not presumed from a forward observation map."
+      ],
+      "cases": [
+        "Selecting a hidden-state subset and a mixed linear readout produce expected values.",
+        "Reverse reconstruction of full state is not presumed from a forward observation map."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_o01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-O02",
+      "conditions": [
+        "Nonlinear readout agrees with independent calculations and reports available derivative actions.",
+        "Missing derivatives are not fabricated or replaced silently."
+      ],
+      "cases": [
+        "Nonlinear readout agrees with independent calculations and reports available derivative actions.",
+        "Missing derivatives are not fabricated or replaced silently."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_o02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-O03",
+      "conditions": [
+        "Masking a channel removes its evidence contribution without overwriting its state.",
+        "Population observations are rejected by individual-history-only instruments."
+      ],
+      "cases": [
+        "Masking a channel removes its evidence contribution without overwriting its state.",
+        "Population observations are rejected by individual-history-only instruments."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_o03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-O04",
+      "conditions": [
+        "Likelihood and sampling checks match the specified model.",
+        "Data noise does not silently alter deterministic state dynamics or imply a universal Gaussian observation ontology."
+      ],
+      "cases": [
+        "Likelihood and sampling checks match the specified model.",
+        "Data noise does not silently alter deterministic state dynamics or imply a universal Gaussian observation ontology."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_o04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-O05",
+      "conditions": [
+        "Composed observation JVP/VJP match an independently differentiated fixture.",
+        "Vector-field Jacobian cannot substitute for the observation-history sensitivity."
+      ],
+      "cases": [
+        "Composed observation JVP/VJP match an independently differentiated fixture.",
+        "Vector-field Jacobian cannot substitute for the observation-history sensitivity."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_o05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-O06",
+      "conditions": [
+        "The same state can produce distinct observation regimes without rebuilding its biological identity.",
+        "A residual alone cannot be mislabeled a normalized likelihood or an identified inverse."
+      ],
+      "cases": [
+        "The same state can produce distinct observation regimes without rebuilding its biological identity.",
+        "A residual alone cannot be mislabeled a normalized likelihood or an identified inverse."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_o06"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-E01",
+      "conditions": [
+        "Equal observations can leave multiple candidates alive.",
+        "A finite supplied family is not claimed to enumerate all biological mechanisms."
+      ],
+      "cases": [
+        "Equal observations can leave multiple candidates alive.",
+        "A finite supplied family is not claimed to enumerate all biological mechanisms."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_e01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-E02",
+      "conditions": [
+        "Candidate propagation agrees with individually executed systems and shares only legal preparation.",
+        "Candidate alternatives are not population multiplicity and cannot be pooled as biological samples."
+      ],
+      "cases": [
+        "Candidate propagation agrees with individually executed systems and shares only legal preparation.",
+        "Candidate alternatives are not population multiplicity and cannot be pooled as biological samples."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_e02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-E03",
+      "conditions": [
+        "A discriminating second modality changes weights while the initial identical observation does not.",
+        "Candidate rejection, underflow and absent observations cannot silently produce certainty."
+      ],
+      "cases": [
+        "A discriminating second modality changes weights while the initial identical observation does not.",
+        "Candidate rejection, underflow and absent observations cannot silently produce certainty."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_e03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-E04",
+      "conditions": [
+        "The correlated/anticorrelated two-variable fixture yields different inference after the same reporter measurement.",
+        "Outcome-irrelevant reporter information cannot be pruned solely because it is not a causal ancestor."
+      ],
+      "cases": [
+        "The correlated/anticorrelated two-variable fixture yields different inference after the same reporter measurement.",
+        "Outcome-irrelevant reporter information cannot be pruned solely because it is not a causal ancestor."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_e04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-E05",
+      "conditions": [
+        "No optimizer, learned encoder, resampling policy or mechanism search is necessary to run the fixture.",
+        "Inferential success is not misreported as de novo hidden mechanism discovery."
+      ],
+      "cases": [
+        "No optimizer, learned encoder, resampling policy or mechanism search is necessary to run the fixture.",
+        "Inferential success is not misreported as de novo hidden mechanism discovery."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_e05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-Q01",
+      "conditions": [
+        "Diagnostics identify which mathematical object was differentiated.",
+        "A derivative of the implemented step is not advertised as the exact continuous flow derivative."
+      ],
+      "cases": [
+        "Diagnostics identify which mathematical object was differentiated.",
+        "A derivative of the implemented step is not advertised as the exact continuous flow derivative."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_q01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-Q02",
+      "conditions": [
+        "Adjoint consistency holds for selected outputs and parameter directions.",
+        "Parameter changes, activity changes and unsupported custom blocks invalidate or reject the response."
+      ],
+      "cases": [
+        "Adjoint consistency holds for selected outputs and parameter directions.",
+        "Parameter changes, activity changes and unsupported custom blocks invalidate or reject the response."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_q02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-Q03",
+      "conditions": [
+        "Unit changes under an equivalent scaling convention preserve the diagnostic meaning.",
+        "Unscaled heterogeneous parameters cannot yield an unlabeled rank conclusion."
+      ],
+      "cases": [
+        "Unit changes under an equivalent scaling convention preserve the diagnostic meaning.",
+        "Unscaled heterogeneous parameters cannot yield an unlabeled rank conclusion."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_q03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-Q04",
+      "conditions": [
+        "The a+b fixture detects its unresolved contrast and an added readout can remove that local ambiguity.",
+        "Local near-null singular values are not a global structural-identifiability theorem."
+      ],
+      "cases": [
+        "The a+b fixture detects its unresolved contrast and an added readout can remove that local ambiguity.",
+        "Local near-null singular values are not a global structural-identifiability theorem."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_q04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-Q05",
+      "conditions": [
+        "Two supplied alternatives retain joint identity while common submechanism roles remain inspectable.",
+        "Counting parameterizations is not a probability over mechanisms."
+      ],
+      "cases": [
+        "Two supplied alternatives retain joint identity while common submechanism roles remain inspectable.",
+        "Counting parameterizations is not a probability over mechanisms."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_q05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-Q06",
+      "conditions": [
+        "A smooth polynomial fixture agrees with independent analytic second response.",
+        "Differentiating a fitted function repeatedly is not new experimental evidence."
+      ],
+      "cases": [
+        "A smooth polynomial fixture agrees with independent analytic second response.",
+        "Differentiating a fitted function repeatedly is not new experimental evidence."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_q06"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-Q07",
+      "conditions": [
+        "A stale parameter or structure generation cannot be interrogated as a current result.",
+        "Numerical nulls cannot automatically prune mechanisms from a different future question."
+      ],
+      "cases": [
+        "A stale parameter or structure generation cannot be interrogated as a current result.",
+        "Numerical nulls cannot automatically prune mechanisms from a different future question."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_q07"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-R01",
+      "conditions": [
+        "Known equal-decay aggregation preserves selected outputs under the admitted regime.",
+        "Answer sufficiency alone cannot be claimed as closed state evolution."
+      ],
+      "cases": [
+        "Known equal-decay aggregation preserves selected outputs under the admitted regime.",
+        "Answer sufficiency alone cannot be claimed as closed state evolution."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_r01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-R02",
+      "conditions": [
+        "An intentionally nonclosed reduction is detected even if it predicts one present output.",
+        "Sampled closure residual is not labeled a global proof without additional assumptions."
+      ],
+      "cases": [
+        "An intentionally nonclosed reduction is detected even if it predicts one present output.",
+        "Sampled closure residual is not labeled a global proof without additional assumptions."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_r02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-R03",
+      "conditions": [
+        "Different error sources remain distinguishable in a result record.",
+        "Near-zero fitting coefficients are not scientific evidence of absent interactions."
+      ],
+      "cases": [
+        "Different error sources remain distinguishable in a result record.",
+        "Near-zero fitting coefficients are not scientific evidence of absent interactions."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_r03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-R04",
+      "conditions": [
+        "A known bounded linear fixture satisfies its propagated bound and a threshold case can be unresolved.",
+        "Empirical Jacobian norms are not silently promoted to global bounds."
+      ],
+      "cases": [
+        "A known bounded linear fixture satisfies its propagated bound and a threshold case can be unresolved.",
+        "Empirical Jacobian norms are not silently promoted to global bounds."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_r04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-R05",
+      "conditions": [
+        "Reporter information needed for later inference survives physical output reduction.",
+        "Compression must not delete lineage/entity multiplicity or evidence distinguishing mechanisms."
+      ],
+      "cases": [
+        "Reporter information needed for later inference survives physical output reduction.",
+        "Compression must not delete lineage/entity multiplicity or evidence distinguishing mechanisms."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_r05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-P01",
+      "conditions": [
+        "Python and C++ requests reach identical native semantics.",
+        "No Python numerical reimplementation or Torch-owned runtime becomes required."
+      ],
+      "cases": [
+        "Python and C++ requests reach identical native semantics.",
+        "No Python numerical reimplementation or Torch-owned runtime becomes required."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_p01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-P02",
+      "conditions": [
+        "Noncontiguous and wrong-dtype arrays either fail clearly or use an explicitly requested copy.",
+        "No hidden normalization or preprocessing policy enters the native toolbox."
+      ],
+      "cases": [
+        "Noncontiguous and wrong-dtype arrays either fail clearly or use an explicitly requested copy.",
+        "No hidden normalization or preprocessing policy enters the native toolbox."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_p02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-P03",
+      "conditions": [
+        "Dropping a Python reference cannot free a still-consumed buffer.",
+        "Interpreter callback errors and device failure cannot produce valid completion tickets."
+      ],
+      "cases": [
+        "Dropping a Python reference cannot free a still-consumed buffer.",
+        "Interpreter callback errors and device failure cannot produce valid completion tickets."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_p03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-P04",
+      "conditions": [
+        "Python can distinguish missing capabilities from empty numerical results.",
+        "Capability names cannot stand in for an implemented device route."
+      ],
+      "cases": [
+        "Python can distinguish missing capabilities from empty numerical results.",
+        "Capability names cannot stand in for an implemented device route."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_p04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-P05",
+      "conditions": [
+        "Advertised device borrowing is tested for stream and lifetime correctness.",
+        "A raw device pointer with no readiness contract is not sufficient for zero-copy support."
+      ],
+      "cases": [
+        "Advertised device borrowing is tested for stream and lifetime correctness.",
+        "A raw device pointer with no readiness contract is not sufficient for zero-copy support."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_p05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-P06",
+      "conditions": [
+        "Missing extensions and mismatched dependency revisions fail clearly.",
+        "Python success via a separate reference implementation cannot satisfy native parity."
+      ],
+      "cases": [
+        "Missing extensions and mismatched dependency revisions fail clearly.",
+        "Python success via a separate reference implementation cannot satisfy native parity."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_p06"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-U01",
+      "conditions": [
+        "Requested unsupported capabilities produce actionable explicit diagnostics.",
+        "Operation schemas and planner proposals cannot be reported as linked execution support."
+      ],
+      "cases": [
+        "Requested unsupported capabilities produce actionable explicit diagnostics.",
+        "Operation schemas and planner proposals cannot be reported as linked execution support."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_u01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-U02",
+      "conditions": [
+        "Failed or incomplete execution remains distinguishable from empty but valid output.",
+        "Enqueue counters cannot certify numerical completion."
+      ],
+      "cases": [
+        "Failed or incomplete execution remains distinguishable from empty but valid output.",
+        "Enqueue counters cannot certify numerical completion."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_u02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-U03",
+      "conditions": [
+        "A fresh process reconstructs the same declared calculation.",
+        "Replays reject missing operation definitions or incompatible versions rather than guessing."
+      ],
+      "cases": [
+        "A fresh process reconstructs the same declared calculation.",
+        "Replays reject missing operation definitions or incompatible versions rather than guessing."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_u03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-U04",
+      "conditions": [
+        "Replay can report whether a changed build is equivalent, revalidated or incompatible.",
+        "A newer Cellerator checkout is not automatically substituted for the qualified dependency."
+      ],
+      "cases": [
+        "Replay can report whether a changed build is equivalent, revalidated or incompatible.",
+        "A newer Cellerator checkout is not automatically substituted for the qualified dependency."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_u04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-U05",
+      "conditions": [
+        "A user can inspect, run and interrogate a supplied system after NF1.",
+        "Fixture names and controls are not presented as a chosen biological experiment."
+      ],
+      "cases": [
+        "A user can inspect, run and interrogate a supplied system after NF1.",
+        "Fixture names and controls are not presented as a chosen biological experiment."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_u05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-U06",
+      "conditions": [
+        "Corruption and stale artifacts fail before consumption with no silent fallback.",
+        "A saved pointer or generation number alone cannot reconstruct a physical execution object."
+      ],
+      "cases": [
+        "Corruption and stale artifacts fail before consumption with no silent fallback.",
+        "A saved pointer or generation number alone cannot reconstruct a physical execution object."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_u06"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-T01",
+      "conditions": [
+        "Deliberately incorrect production variants are detectable.",
+        "Shared optimized kernels cannot serve as their own only oracle."
+      ],
+      "cases": [
+        "Deliberately incorrect production variants are detectable.",
+        "Shared optimized kernels cannot serve as their own only oracle."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_t01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-T02",
+      "conditions": [
+        "Each counterexample fails under the prohibited conflation.",
+        "A visually plausible latent space is not accepted as the test result."
+      ],
+      "cases": [
+        "Each counterexample fails under the prohibited conflation.",
+        "A visually plausible latent space is not accepted as the test result."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_t02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-T03",
+      "conditions": [
+        "Correct outputs and correct refusal modes are specified before implementation.",
+        "Numerical nulls, trainable zeros and masked NaNs cannot be conflated."
+      ],
+      "cases": [
+        "Correct outputs and correct refusal modes are specified before implementation.",
+        "Numerical nulls, trainable zeros and masked NaNs cannot be conflated."
+      ],
+      "validation_kind": "executed_host_test",
+      "ctest_names": [
+        "gh_nf1_t03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-T04",
+      "conditions": [
+        "Real device required for GPU cases; CPU f64 truth remains independent.",
+        "No skipped GPU tests, mocked backend or contract-only headers can satisfy integrated acceptance."
+      ],
+      "cases": [
+        "Real device required for GPU cases; CPU f64 truth remains independent.",
+        "No skipped GPU tests, mocked backend or contract-only headers can satisfy integrated acceptance."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_t04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-T05",
+      "conditions": [
+        "Tests report exact completion and validated tolerance rather than only process exit.",
+        "Missing tests, broad regex selecting none, disabled tests and skipped results fail."
+      ],
+      "cases": [
+        "Tests report exact completion and validated tolerance rather than only process exit.",
+        "Missing tests, broad regex selecting none, disabled tests and skipped results fail."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_t05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-T06",
+      "conditions": [
+        "No fixture claims novel biology or general identifiability unsupported by its scope.",
+        "Remaining limitations are published, not hidden by a completion checkpoint."
+      ],
+      "cases": [
+        "No fixture claims novel biology or general identifiability unsupported by its scope.",
+        "Remaining limitations are published, not hidden by a completion checkpoint."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_t06"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-K01",
+      "conditions": [
+        "Each timed computation names the same mathematical and numeric semantics as its reference.",
+        "A kernel microbenchmark alone cannot represent full GlassHelix use cost."
+      ],
+      "cases": [
+        "Each timed computation names the same mathematical and numeric semantics as its reference.",
+        "A kernel microbenchmark alone cannot represent full GlassHelix use cost."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_k01"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-K02",
+      "conditions": [
+        "Reuse benefits and cold penalties remain independently visible.",
+        "Excluded phases cannot be hidden inside a claimed universal speedup."
+      ],
+      "cases": [
+        "Reuse benefits and cold penalties remain independently visible.",
+        "Excluded phases cannot be hidden inside a claimed universal speedup."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_k02"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-K03",
+      "conditions": [
+        "Common support is prepared once where valid and measured compaction wins only in admitted regimes.",
+        "Candidate state or parameter contamination invalidates performance results regardless of speed."
+      ],
+      "cases": [
+        "Common support is prepared once where valid and measured compaction wins only in admitted regimes.",
+        "Candidate state or parameter contamination invalidates performance results regardless of speed."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_k03"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-K04",
+      "conditions": [
+        "Negative results remain visible and new primitive requests state reusable biological structure.",
+        "GlassHelix does not create duplicate low-level kernels to avoid an owner change."
+      ],
+      "cases": [
+        "Negative results remain visible and new primitive requests state reusable biological structure.",
+        "GlassHelix does not create duplicate low-level kernels to avoid an owner change."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_k04"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-K05",
+      "conditions": [
+        "Final evidence separates speed, error, statistical uncertainty and mechanism ambiguity.",
+        "Precision-sensitive branch outcomes cannot be dismissed as mere throughput noise."
+      ],
+      "cases": [
+        "Final evidence separates speed, error, statistical uncertainty and mechanism ambiguity.",
+        "Precision-sensitive branch outcomes cannot be dismissed as mere throughput noise."
+      ],
+      "validation_kind": "executed_cuda_test",
+      "ctest_names": [
+        "gh_nf1_k05"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-X01",
+      "conditions": [
+        "Receipt distinguishes an agreed interface from an executed implementation.",
+        "A draft or changed contract does not unlock an execution claim."
+      ],
+      "cases": [
+        "Receipt distinguishes an agreed interface from an executed implementation.",
+        "A draft or changed contract does not unlock an execution claim."
+      ],
+      "validation_kind": "peer_receipt_verification",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-X02",
+      "conditions": [
+        "Consumer pins an integrated compatible Cellerator source revision.",
+        "N1/N16 declarations or f16-only old path cannot satisfy general execution capability."
+      ],
+      "cases": [
+        "Consumer pins an integrated compatible Cellerator source revision.",
+        "N1/N16 declarations or f16-only old path cannot satisfy general execution capability."
+      ],
+      "validation_kind": "peer_receipt_verification",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-X03",
+      "conditions": [
+        "Missing or changed capability keeps dependent work blocked.",
+        "Pairwise-only approximation and CPU surrogate do not qualify as n-ary GPU execution."
+      ],
+      "cases": [
+        "Missing or changed capability keeps dependent work blocked.",
+        "Pairwise-only approximation and CPU surrogate do not qualify as n-ary GPU execution."
+      ],
+      "validation_kind": "peer_receipt_verification",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-X04",
+      "conditions": [
+        "Primal generations and response support contracts agree with the GlassHelix composition.",
+        "A stale derivative ABI cannot unlock diagnostics."
+      ],
+      "cases": [
+        "Primal generations and response support contracts agree with the GlassHelix composition.",
+        "A stale derivative ABI cannot unlock diagnostics."
+      ],
+      "validation_kind": "peer_receipt_verification",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-X05",
+      "conditions": [
+        "All prior imported contracts are still compatible with the consumed revision.",
+        "A future Cellerator final closure is not required here, avoiding cross-project deadlock."
+      ],
+      "cases": [
+        "All prior imported contracts are still compatible with the consumed revision.",
+        "A future Cellerator final closure is not required here, avoiding cross-project deadlock."
+      ],
+      "validation_kind": "peer_receipt_verification",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-X06",
+      "conditions": [
+        "GlassHelix final closure is bound to the qualified final pair.",
+        "Merely reaching Cellerator's old RU1 checkpoint or a different NF1 build cannot close this dependency."
+      ],
+      "cases": [
+        "GlassHelix final closure is bound to the qualified final pair.",
+        "Merely reaching Cellerator's old RU1 checkpoint or a different NF1 build cannot close this dependency."
+      ],
+      "validation_kind": "peer_receipt_verification",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-M00",
+      "conditions": [
+        "Accept toolbox-only scope, autonomy charter, source disposition and both project identities.",
+        "Publish exact source, interface and evidence hashes; never reach a checkpoint on a declaration-only, skipped, stale or mock result."
+      ],
+      "cases": [
+        "Accept toolbox-only scope, autonomy charter, source disposition and both project identities.",
+        "Rebuild a separately linked consumer and preserve existing relevant regressions."
+      ],
+      "validation_kind": "governance_review",
+      "ctest_names": []
+    },
+    {
+      "task_id": "GH-NF1-M10",
+      "conditions": [
+        "A separately linked GlassHelix library executes a simple real Cellerator-backed calculation.",
+        "Publish exact source, interface and evidence hashes; never reach a checkpoint on a declaration-only, skipped, stale or mock result."
+      ],
+      "cases": [
+        "A separately linked GlassHelix library executes a simple real Cellerator-backed calculation.",
+        "Rebuild a separately linked consumer and preserve existing relevant regressions."
+      ],
+      "validation_kind": "integrated_executed_tests",
+      "ctest_names": [
+        "gh_nf1_external_consumer_cpu",
+        "gh_nf1_external_consumer_cuda"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-M20",
+      "conditions": [
+        "Deterministic maps and forced RK4 run n-ary systems with shared definitions and independent instances.",
+        "Publish exact source, interface and evidence hashes; never reach a checkpoint on a declaration-only, skipped, stale or mock result."
+      ],
+      "cases": [
+        "Deterministic maps and forced RK4 run n-ary systems with shared definitions and independent instances.",
+        "Rebuild a separately linked consumer and preserve existing relevant regressions."
+      ],
+      "validation_kind": "integrated_executed_tests",
+      "ctest_names": [
+        "gh_nf1_shared_transition_cuda"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-M30",
+      "conditions": [
+        "Explicit observation/inference distinction, response and local null instruments work with correct provenance.",
+        "Publish exact source, interface and evidence hashes; never reach a checkpoint on a declaration-only, skipped, stale or mock result."
+      ],
+      "cases": [
+        "Explicit observation/inference distinction, response and local null instruments work with correct provenance.",
+        "Rebuild a separately linked consumer and preserve existing relevant regressions."
+      ],
+      "validation_kind": "integrated_executed_tests",
+      "ctest_names": [
+        "gh_nf1_ambiguity_refinement_cuda"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-M40",
+      "conditions": [
+        "Complete native demo, Python parity and replay work without a separate numerical model implementation.",
+        "Publish exact source, interface and evidence hashes; never reach a checkpoint on a declaration-only, skipped, stale or mock result."
+      ],
+      "cases": [
+        "Complete native demo, Python parity and replay work without a separate numerical model implementation.",
+        "Rebuild a separately linked consumer and preserve existing relevant regressions."
+      ],
+      "validation_kind": "integrated_executed_tests",
+      "ctest_names": [
+        "gh_nf1_demo_cpu",
+        "gh_nf1_demo_cuda",
+        "gh_nf1_python_parity"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-M60",
+      "conditions": [
+        "Publish the real-consumer receipt required by CE-NF1-X01, without waiting for Cellerator final closure.",
+        "Publish exact source, interface and evidence hashes; never reach a checkpoint on a declaration-only, skipped, stale or mock result."
+      ],
+      "cases": [
+        "Publish the real-consumer receipt required by CE-NF1-X01, without waiting for Cellerator final closure.",
+        "Rebuild a separately linked consumer and preserve existing relevant regressions."
+      ],
+      "validation_kind": "integrated_executed_tests",
+      "ctest_names": [
+        "gh_nf1_full_consumer_acceptance",
+        "gh_nf1_complete_cost_receipt"
+      ]
+    },
+    {
+      "task_id": "GH-NF1-M90",
+      "conditions": [
+        "All NF1 work is integrated, current evidence is bound to both revisions and remaining science stays open.",
+        "Publish exact source, interface and evidence hashes; never reach a checkpoint on a declaration-only, skipped, stale or mock result."
+      ],
+      "cases": [
+        "All NF1 work is integrated, current evidence is bound to both revisions and remaining science stays open.",
+        "Rebuild a separately linked consumer and preserve existing relevant regressions."
+      ],
+      "validation_kind": "integrated_executed_tests",
+      "ctest_names": [
+        "gh_nf1_final_source_pair"
+      ]
+    }
+  ],
+  "gate_groups": {
+    "b01": {
+      "ctest_names": [
+        "gh_nf1_b01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-B01",
+      "scope": "task-specific-executed-test"
+    },
+    "b02": {
+      "ctest_names": [
+        "gh_nf1_b02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-B02",
+      "scope": "task-specific-executed-test"
+    },
+    "b03": {
+      "ctest_names": [
+        "gh_nf1_b03"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-B03",
+      "scope": "task-specific-executed-test"
+    },
+    "b04": {
+      "ctest_names": [
+        "gh_nf1_b04"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-B04",
+      "scope": "task-specific-executed-test"
+    },
+    "b05": {
+      "ctest_names": [
+        "gh_nf1_b05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-B05",
+      "scope": "task-specific-executed-test"
+    },
+    "s01": {
+      "ctest_names": [
+        "gh_nf1_s01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-S01",
+      "scope": "task-specific-executed-test"
+    },
+    "s02": {
+      "ctest_names": [
+        "gh_nf1_s02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-S02",
+      "scope": "task-specific-executed-test"
+    },
+    "s03": {
+      "ctest_names": [
+        "gh_nf1_s03"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-S03",
+      "scope": "task-specific-executed-test"
+    },
+    "s04": {
+      "ctest_names": [
+        "gh_nf1_s04"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-S04",
+      "scope": "task-specific-executed-test"
+    },
+    "s05": {
+      "ctest_names": [
+        "gh_nf1_s05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-S05",
+      "scope": "task-specific-executed-test"
+    },
+    "s06": {
+      "ctest_names": [
+        "gh_nf1_s06"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-S06",
+      "scope": "task-specific-executed-test"
+    },
+    "s07": {
+      "ctest_names": [
+        "gh_nf1_s07"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-S07",
+      "scope": "task-specific-executed-test"
+    },
+    "d01": {
+      "ctest_names": [
+        "gh_nf1_d01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-D01",
+      "scope": "task-specific-executed-test"
+    },
+    "d02": {
+      "ctest_names": [
+        "gh_nf1_d02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-D02",
+      "scope": "task-specific-executed-test"
+    },
+    "d03": {
+      "ctest_names": [
+        "gh_nf1_d03"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-D03",
+      "scope": "task-specific-executed-test"
+    },
+    "d04": {
+      "ctest_names": [
+        "gh_nf1_d04"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-D04",
+      "scope": "task-specific-executed-test"
+    },
+    "d05": {
+      "ctest_names": [
+        "gh_nf1_d05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-D05",
+      "scope": "task-specific-executed-test"
+    },
+    "d06": {
+      "ctest_names": [
+        "gh_nf1_d06"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-D06",
+      "scope": "task-specific-executed-test"
+    },
+    "d07": {
+      "ctest_names": [
+        "gh_nf1_d07"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-D07",
+      "scope": "task-specific-executed-test"
+    },
+    "o01": {
+      "ctest_names": [
+        "gh_nf1_o01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-O01",
+      "scope": "task-specific-executed-test"
+    },
+    "o02": {
+      "ctest_names": [
+        "gh_nf1_o02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-O02",
+      "scope": "task-specific-executed-test"
+    },
+    "o03": {
+      "ctest_names": [
+        "gh_nf1_o03"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-O03",
+      "scope": "task-specific-executed-test"
+    },
+    "o04": {
+      "ctest_names": [
+        "gh_nf1_o04"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-O04",
+      "scope": "task-specific-executed-test"
+    },
+    "o05": {
+      "ctest_names": [
+        "gh_nf1_o05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-O05",
+      "scope": "task-specific-executed-test"
+    },
+    "o06": {
+      "ctest_names": [
+        "gh_nf1_o06"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-O06",
+      "scope": "task-specific-executed-test"
+    },
+    "e01": {
+      "ctest_names": [
+        "gh_nf1_e01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-E01",
+      "scope": "task-specific-executed-test"
+    },
+    "e02": {
+      "ctest_names": [
+        "gh_nf1_e02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-E02",
+      "scope": "task-specific-executed-test"
+    },
+    "e03": {
+      "ctest_names": [
+        "gh_nf1_e03"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-E03",
+      "scope": "task-specific-executed-test"
+    },
+    "e04": {
+      "ctest_names": [
+        "gh_nf1_e04"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-E04",
+      "scope": "task-specific-executed-test"
+    },
+    "e05": {
+      "ctest_names": [
+        "gh_nf1_e05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-E05",
+      "scope": "task-specific-executed-test"
+    },
+    "q01": {
+      "ctest_names": [
+        "gh_nf1_q01"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-Q01",
+      "scope": "task-specific-executed-test"
+    },
+    "q02": {
+      "ctest_names": [
+        "gh_nf1_q02"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-Q02",
+      "scope": "task-specific-executed-test"
+    },
+    "q03": {
+      "ctest_names": [
+        "gh_nf1_q03"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-Q03",
+      "scope": "task-specific-executed-test"
+    },
+    "q04": {
+      "ctest_names": [
+        "gh_nf1_q04"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-Q04",
+      "scope": "task-specific-executed-test"
+    },
+    "q05": {
+      "ctest_names": [
+        "gh_nf1_q05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-Q05",
+      "scope": "task-specific-executed-test"
+    },
+    "q06": {
+      "ctest_names": [
+        "gh_nf1_q06"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-Q06",
+      "scope": "task-specific-executed-test"
+    },
+    "q07": {
+      "ctest_names": [
+        "gh_nf1_q07"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-Q07",
+      "scope": "task-specific-executed-test"
+    },
+    "r01": {
+      "ctest_names": [
+        "gh_nf1_r01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-R01",
+      "scope": "task-specific-executed-test"
+    },
+    "r02": {
+      "ctest_names": [
+        "gh_nf1_r02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-R02",
+      "scope": "task-specific-executed-test"
+    },
+    "r03": {
+      "ctest_names": [
+        "gh_nf1_r03"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-R03",
+      "scope": "task-specific-executed-test"
+    },
+    "r04": {
+      "ctest_names": [
+        "gh_nf1_r04"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-R04",
+      "scope": "task-specific-executed-test"
+    },
+    "r05": {
+      "ctest_names": [
+        "gh_nf1_r05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-R05",
+      "scope": "task-specific-executed-test"
+    },
+    "p01": {
+      "ctest_names": [
+        "gh_nf1_p01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-P01",
+      "scope": "task-specific-executed-test"
+    },
+    "p02": {
+      "ctest_names": [
+        "gh_nf1_p02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-P02",
+      "scope": "task-specific-executed-test"
+    },
+    "p03": {
+      "ctest_names": [
+        "gh_nf1_p03"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-P03",
+      "scope": "task-specific-executed-test"
+    },
+    "p04": {
+      "ctest_names": [
+        "gh_nf1_p04"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-P04",
+      "scope": "task-specific-executed-test"
+    },
+    "p05": {
+      "ctest_names": [
+        "gh_nf1_p05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-P05",
+      "scope": "task-specific-executed-test"
+    },
+    "p06": {
+      "ctest_names": [
+        "gh_nf1_p06"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-P06",
+      "scope": "task-specific-executed-test"
+    },
+    "u01": {
+      "ctest_names": [
+        "gh_nf1_u01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-U01",
+      "scope": "task-specific-executed-test"
+    },
+    "u02": {
+      "ctest_names": [
+        "gh_nf1_u02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-U02",
+      "scope": "task-specific-executed-test"
+    },
+    "u03": {
+      "ctest_names": [
+        "gh_nf1_u03"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-U03",
+      "scope": "task-specific-executed-test"
+    },
+    "u04": {
+      "ctest_names": [
+        "gh_nf1_u04"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-U04",
+      "scope": "task-specific-executed-test"
+    },
+    "u05": {
+      "ctest_names": [
+        "gh_nf1_u05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-U05",
+      "scope": "task-specific-executed-test"
+    },
+    "u06": {
+      "ctest_names": [
+        "gh_nf1_u06"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-U06",
+      "scope": "task-specific-executed-test"
+    },
+    "t01": {
+      "ctest_names": [
+        "gh_nf1_t01"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-T01",
+      "scope": "task-specific-executed-test"
+    },
+    "t02": {
+      "ctest_names": [
+        "gh_nf1_t02"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-T02",
+      "scope": "task-specific-executed-test"
+    },
+    "t03": {
+      "ctest_names": [
+        "gh_nf1_t03"
+      ],
+      "requires_gpu": false,
+      "owner_task_id": "GH-NF1-T03",
+      "scope": "task-specific-executed-test"
+    },
+    "t04": {
+      "ctest_names": [
+        "gh_nf1_t04"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-T04",
+      "scope": "task-specific-executed-test"
+    },
+    "t05": {
+      "ctest_names": [
+        "gh_nf1_t05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-T05",
+      "scope": "task-specific-executed-test"
+    },
+    "t06": {
+      "ctest_names": [
+        "gh_nf1_t06"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-T06",
+      "scope": "task-specific-executed-test"
+    },
+    "k01": {
+      "ctest_names": [
+        "gh_nf1_k01"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-K01",
+      "scope": "task-specific-executed-test"
+    },
+    "k02": {
+      "ctest_names": [
+        "gh_nf1_k02"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-K02",
+      "scope": "task-specific-executed-test"
+    },
+    "k03": {
+      "ctest_names": [
+        "gh_nf1_k03"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-K03",
+      "scope": "task-specific-executed-test"
+    },
+    "k04": {
+      "ctest_names": [
+        "gh_nf1_k04"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-K04",
+      "scope": "task-specific-executed-test"
+    },
+    "k05": {
+      "ctest_names": [
+        "gh_nf1_k05"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-K05",
+      "scope": "task-specific-executed-test"
+    },
+    "m10": {
+      "ctest_names": [
+        "gh_nf1_b01",
+        "gh_nf1_b02",
+        "gh_nf1_b03",
+        "gh_nf1_b04",
+        "gh_nf1_b05",
+        "gh_nf1_s01",
+        "gh_nf1_s02",
+        "gh_nf1_s03",
+        "gh_nf1_external_consumer_cpu",
+        "gh_nf1_external_consumer_cuda"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-M10",
+      "scope": "integrated-current-source"
+    },
+    "m20": {
+      "ctest_names": [
+        "gh_nf1_b01",
+        "gh_nf1_b02",
+        "gh_nf1_b03",
+        "gh_nf1_b04",
+        "gh_nf1_b05",
+        "gh_nf1_s01",
+        "gh_nf1_s02",
+        "gh_nf1_s03",
+        "gh_nf1_s04",
+        "gh_nf1_s05",
+        "gh_nf1_s06",
+        "gh_nf1_s07",
+        "gh_nf1_d01",
+        "gh_nf1_d02",
+        "gh_nf1_d03",
+        "gh_nf1_d04",
+        "gh_nf1_d05",
+        "gh_nf1_d06",
+        "gh_nf1_d07",
+        "gh_nf1_external_consumer_cpu",
+        "gh_nf1_external_consumer_cuda",
+        "gh_nf1_shared_transition_cuda"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-M20",
+      "scope": "integrated-current-source"
+    },
+    "m30": {
+      "ctest_names": [
+        "gh_nf1_b01",
+        "gh_nf1_b02",
+        "gh_nf1_b03",
+        "gh_nf1_b04",
+        "gh_nf1_b05",
+        "gh_nf1_s01",
+        "gh_nf1_s02",
+        "gh_nf1_s03",
+        "gh_nf1_s04",
+        "gh_nf1_s05",
+        "gh_nf1_s06",
+        "gh_nf1_s07",
+        "gh_nf1_d01",
+        "gh_nf1_d02",
+        "gh_nf1_d03",
+        "gh_nf1_d04",
+        "gh_nf1_d05",
+        "gh_nf1_d06",
+        "gh_nf1_d07",
+        "gh_nf1_o01",
+        "gh_nf1_o02",
+        "gh_nf1_o03",
+        "gh_nf1_o04",
+        "gh_nf1_o05",
+        "gh_nf1_o06",
+        "gh_nf1_e01",
+        "gh_nf1_e02",
+        "gh_nf1_e03",
+        "gh_nf1_e04",
+        "gh_nf1_e05",
+        "gh_nf1_q01",
+        "gh_nf1_q02",
+        "gh_nf1_q03",
+        "gh_nf1_q04",
+        "gh_nf1_q05",
+        "gh_nf1_q06",
+        "gh_nf1_q07",
+        "gh_nf1_r01",
+        "gh_nf1_r02",
+        "gh_nf1_r03",
+        "gh_nf1_r04",
+        "gh_nf1_r05",
+        "gh_nf1_external_consumer_cpu",
+        "gh_nf1_external_consumer_cuda",
+        "gh_nf1_shared_transition_cuda",
+        "gh_nf1_ambiguity_refinement_cuda"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-M30",
+      "scope": "integrated-current-source"
+    },
+    "m40": {
+      "ctest_names": [
+        "gh_nf1_b01",
+        "gh_nf1_b02",
+        "gh_nf1_b03",
+        "gh_nf1_b04",
+        "gh_nf1_b05",
+        "gh_nf1_s01",
+        "gh_nf1_s02",
+        "gh_nf1_s03",
+        "gh_nf1_s04",
+        "gh_nf1_s05",
+        "gh_nf1_s06",
+        "gh_nf1_s07",
+        "gh_nf1_d01",
+        "gh_nf1_d02",
+        "gh_nf1_d03",
+        "gh_nf1_d04",
+        "gh_nf1_d05",
+        "gh_nf1_d06",
+        "gh_nf1_d07",
+        "gh_nf1_o01",
+        "gh_nf1_o02",
+        "gh_nf1_o03",
+        "gh_nf1_o04",
+        "gh_nf1_o05",
+        "gh_nf1_o06",
+        "gh_nf1_e01",
+        "gh_nf1_e02",
+        "gh_nf1_e03",
+        "gh_nf1_e04",
+        "gh_nf1_e05",
+        "gh_nf1_q01",
+        "gh_nf1_q02",
+        "gh_nf1_q03",
+        "gh_nf1_q04",
+        "gh_nf1_q05",
+        "gh_nf1_q06",
+        "gh_nf1_q07",
+        "gh_nf1_r01",
+        "gh_nf1_r02",
+        "gh_nf1_r03",
+        "gh_nf1_r04",
+        "gh_nf1_r05",
+        "gh_nf1_p01",
+        "gh_nf1_p02",
+        "gh_nf1_p03",
+        "gh_nf1_p04",
+        "gh_nf1_p05",
+        "gh_nf1_p06",
+        "gh_nf1_u01",
+        "gh_nf1_u02",
+        "gh_nf1_u03",
+        "gh_nf1_u04",
+        "gh_nf1_u05",
+        "gh_nf1_u06",
+        "gh_nf1_external_consumer_cpu",
+        "gh_nf1_external_consumer_cuda",
+        "gh_nf1_shared_transition_cuda",
+        "gh_nf1_ambiguity_refinement_cuda",
+        "gh_nf1_demo_cpu",
+        "gh_nf1_demo_cuda",
+        "gh_nf1_python_parity"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-M40",
+      "scope": "integrated-current-source"
+    },
+    "m60": {
+      "ctest_names": [
+        "gh_nf1_b01",
+        "gh_nf1_b02",
+        "gh_nf1_b03",
+        "gh_nf1_b04",
+        "gh_nf1_b05",
+        "gh_nf1_s01",
+        "gh_nf1_s02",
+        "gh_nf1_s03",
+        "gh_nf1_s04",
+        "gh_nf1_s05",
+        "gh_nf1_s06",
+        "gh_nf1_s07",
+        "gh_nf1_d01",
+        "gh_nf1_d02",
+        "gh_nf1_d03",
+        "gh_nf1_d04",
+        "gh_nf1_d05",
+        "gh_nf1_d06",
+        "gh_nf1_d07",
+        "gh_nf1_o01",
+        "gh_nf1_o02",
+        "gh_nf1_o03",
+        "gh_nf1_o04",
+        "gh_nf1_o05",
+        "gh_nf1_o06",
+        "gh_nf1_e01",
+        "gh_nf1_e02",
+        "gh_nf1_e03",
+        "gh_nf1_e04",
+        "gh_nf1_e05",
+        "gh_nf1_q01",
+        "gh_nf1_q02",
+        "gh_nf1_q03",
+        "gh_nf1_q04",
+        "gh_nf1_q05",
+        "gh_nf1_q06",
+        "gh_nf1_q07",
+        "gh_nf1_r01",
+        "gh_nf1_r02",
+        "gh_nf1_r03",
+        "gh_nf1_r04",
+        "gh_nf1_r05",
+        "gh_nf1_p01",
+        "gh_nf1_p02",
+        "gh_nf1_p03",
+        "gh_nf1_p04",
+        "gh_nf1_p05",
+        "gh_nf1_p06",
+        "gh_nf1_u01",
+        "gh_nf1_u02",
+        "gh_nf1_u03",
+        "gh_nf1_u04",
+        "gh_nf1_u05",
+        "gh_nf1_u06",
+        "gh_nf1_t01",
+        "gh_nf1_t02",
+        "gh_nf1_t03",
+        "gh_nf1_t04",
+        "gh_nf1_t05",
+        "gh_nf1_t06",
+        "gh_nf1_k01",
+        "gh_nf1_k02",
+        "gh_nf1_k03",
+        "gh_nf1_k04",
+        "gh_nf1_k05",
+        "gh_nf1_external_consumer_cpu",
+        "gh_nf1_external_consumer_cuda",
+        "gh_nf1_shared_transition_cuda",
+        "gh_nf1_ambiguity_refinement_cuda",
+        "gh_nf1_demo_cpu",
+        "gh_nf1_demo_cuda",
+        "gh_nf1_python_parity",
+        "gh_nf1_full_consumer_acceptance",
+        "gh_nf1_complete_cost_receipt"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-M60",
+      "scope": "integrated-current-source"
+    },
+    "m90": {
+      "ctest_names": [
+        "gh_nf1_b01",
+        "gh_nf1_b02",
+        "gh_nf1_b03",
+        "gh_nf1_b04",
+        "gh_nf1_b05",
+        "gh_nf1_s01",
+        "gh_nf1_s02",
+        "gh_nf1_s03",
+        "gh_nf1_s04",
+        "gh_nf1_s05",
+        "gh_nf1_s06",
+        "gh_nf1_s07",
+        "gh_nf1_d01",
+        "gh_nf1_d02",
+        "gh_nf1_d03",
+        "gh_nf1_d04",
+        "gh_nf1_d05",
+        "gh_nf1_d06",
+        "gh_nf1_d07",
+        "gh_nf1_o01",
+        "gh_nf1_o02",
+        "gh_nf1_o03",
+        "gh_nf1_o04",
+        "gh_nf1_o05",
+        "gh_nf1_o06",
+        "gh_nf1_e01",
+        "gh_nf1_e02",
+        "gh_nf1_e03",
+        "gh_nf1_e04",
+        "gh_nf1_e05",
+        "gh_nf1_q01",
+        "gh_nf1_q02",
+        "gh_nf1_q03",
+        "gh_nf1_q04",
+        "gh_nf1_q05",
+        "gh_nf1_q06",
+        "gh_nf1_q07",
+        "gh_nf1_r01",
+        "gh_nf1_r02",
+        "gh_nf1_r03",
+        "gh_nf1_r04",
+        "gh_nf1_r05",
+        "gh_nf1_p01",
+        "gh_nf1_p02",
+        "gh_nf1_p03",
+        "gh_nf1_p04",
+        "gh_nf1_p05",
+        "gh_nf1_p06",
+        "gh_nf1_u01",
+        "gh_nf1_u02",
+        "gh_nf1_u03",
+        "gh_nf1_u04",
+        "gh_nf1_u05",
+        "gh_nf1_u06",
+        "gh_nf1_t01",
+        "gh_nf1_t02",
+        "gh_nf1_t03",
+        "gh_nf1_t04",
+        "gh_nf1_t05",
+        "gh_nf1_t06",
+        "gh_nf1_k01",
+        "gh_nf1_k02",
+        "gh_nf1_k03",
+        "gh_nf1_k04",
+        "gh_nf1_k05",
+        "gh_nf1_external_consumer_cpu",
+        "gh_nf1_external_consumer_cuda",
+        "gh_nf1_shared_transition_cuda",
+        "gh_nf1_ambiguity_refinement_cuda",
+        "gh_nf1_demo_cpu",
+        "gh_nf1_demo_cuda",
+        "gh_nf1_python_parity",
+        "gh_nf1_full_consumer_acceptance",
+        "gh_nf1_complete_cost_receipt",
+        "gh_nf1_final_source_pair"
+      ],
+      "requires_gpu": true,
+      "owner_task_id": "GH-NF1-M90",
+      "scope": "integrated-current-source"
+    }
+  },
+  "governance_records": {
+    "GH-NF1-A01": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-a01.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "A01"
+      ]
+    },
+    "GH-NF1-A02": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-a02.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "A02"
+      ]
+    },
+    "GH-NF1-A03": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-a03.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "A03"
+      ]
+    },
+    "GH-NF1-A04": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-a04.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "A04"
+      ]
+    },
+    "GH-NF1-C01": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-c01.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "C01"
+      ]
+    },
+    "GH-NF1-C02": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-c02.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "C02"
+      ]
+    },
+    "GH-NF1-C03": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-c03.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "C03"
+      ]
+    },
+    "GH-NF1-C04": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-c04.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "C04"
+      ]
+    },
+    "GH-NF1-C05": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-c05.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "C05"
+      ]
+    },
+    "GH-NF1-C06": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-c06.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "C06"
+      ]
+    },
+    "GH-NF1-C07": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-c07.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "C07"
+      ]
+    },
+    "GH-NF1-M00": {
+      "record_path": "docs/native_foundation_v1/records/gh-nf1-m00.json",
+      "required_topics": [
+        "source-reconciliation",
+        "ownership",
+        "acceptance-review",
+        "M00"
+      ]
+    }
+  },
+  "tests": [
+    {
+      "ctest_name": "gh_nf1_b01",
+      "qualification_group": "b01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_b02",
+      "qualification_group": "b02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_b03",
+      "qualification_group": "b03",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_b04",
+      "qualification_group": "b04",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_b05",
+      "qualification_group": "b05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_s01",
+      "qualification_group": "s01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_s02",
+      "qualification_group": "s02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_s03",
+      "qualification_group": "s03",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_s04",
+      "qualification_group": "s04",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_s05",
+      "qualification_group": "s05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_s06",
+      "qualification_group": "s06",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_s07",
+      "qualification_group": "s07",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_d01",
+      "qualification_group": "d01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_d02",
+      "qualification_group": "d02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_d03",
+      "qualification_group": "d03",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_d04",
+      "qualification_group": "d04",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_d05",
+      "qualification_group": "d05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_d06",
+      "qualification_group": "d06",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_d07",
+      "qualification_group": "d07",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_o01",
+      "qualification_group": "o01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_o02",
+      "qualification_group": "o02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_o03",
+      "qualification_group": "o03",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_o04",
+      "qualification_group": "o04",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_o05",
+      "qualification_group": "o05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_o06",
+      "qualification_group": "o06",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_e01",
+      "qualification_group": "e01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_e02",
+      "qualification_group": "e02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_e03",
+      "qualification_group": "e03",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_e04",
+      "qualification_group": "e04",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_e05",
+      "qualification_group": "e05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_q01",
+      "qualification_group": "q01",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_q02",
+      "qualification_group": "q02",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_q03",
+      "qualification_group": "q03",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_q04",
+      "qualification_group": "q04",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_q05",
+      "qualification_group": "q05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_q06",
+      "qualification_group": "q06",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_q07",
+      "qualification_group": "q07",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_r01",
+      "qualification_group": "r01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_r02",
+      "qualification_group": "r02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_r03",
+      "qualification_group": "r03",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_r04",
+      "qualification_group": "r04",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_r05",
+      "qualification_group": "r05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_p01",
+      "qualification_group": "p01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_p02",
+      "qualification_group": "p02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_p03",
+      "qualification_group": "p03",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_p04",
+      "qualification_group": "p04",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_p05",
+      "qualification_group": "p05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_p06",
+      "qualification_group": "p06",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_u01",
+      "qualification_group": "u01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_u02",
+      "qualification_group": "u02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_u03",
+      "qualification_group": "u03",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_u04",
+      "qualification_group": "u04",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_u05",
+      "qualification_group": "u05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_u06",
+      "qualification_group": "u06",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_t01",
+      "qualification_group": "t01",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_t02",
+      "qualification_group": "t02",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_t03",
+      "qualification_group": "t03",
+      "requires_real_execution": true,
+      "requires_gpu": false,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_t04",
+      "qualification_group": "t04",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_t05",
+      "qualification_group": "t05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_t06",
+      "qualification_group": "t06",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_k01",
+      "qualification_group": "k01",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_k02",
+      "qualification_group": "k02",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_k03",
+      "qualification_group": "k03",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_k04",
+      "qualification_group": "k04",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_k05",
+      "qualification_group": "k05",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_external_consumer_cpu",
+      "qualification_group": "m10",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_external_consumer_cuda",
+      "qualification_group": "m10",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_shared_transition_cuda",
+      "qualification_group": "m20",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_ambiguity_refinement_cuda",
+      "qualification_group": "m30",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_demo_cpu",
+      "qualification_group": "m40",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_demo_cuda",
+      "qualification_group": "m40",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_python_parity",
+      "qualification_group": "m40",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_full_consumer_acceptance",
+      "qualification_group": "m60",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_complete_cost_receipt",
+      "qualification_group": "m60",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    },
+    {
+      "ctest_name": "gh_nf1_final_source_pair",
+      "qualification_group": "m90",
+      "requires_real_execution": true,
+      "requires_gpu": true,
+      "implementation_status": "required_after_epic_not_delivered"
+    }
+  ],
+  "evidence_policy": "No skips, missing tests, mock backend, declaration or reference-only success may satisfy a real execution gate."
+}

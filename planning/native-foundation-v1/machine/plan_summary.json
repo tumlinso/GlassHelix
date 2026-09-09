@@ -1,0 +1,17 @@
+{
+  "pair_id": "NF1-20260908-v1",
+  "workspace": "glasshelix",
+  "todo_record_count": 90,
+  "leaf_task_count": 89,
+  "lane_count": 16,
+  "explicit_edges": 123,
+  "checkpoint_count": 7,
+  "barrier_count": 7,
+  "interface_count": 6,
+  "cross_import_count": 6,
+  "native_schema": 3,
+  "native_plan_file": "glasshelix-native-foundation-v1.todo-plan.json",
+  "native_plan_canonical_sha256": "a365896aa554d98468fe28ebde18b6540ea8510772a6ad0f89c4cd92e9955952",
+  "applied": false,
+  "workers_started": false
+}

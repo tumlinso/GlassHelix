@@ -1,0 +1,94 @@
+{
+  "kind": "nf1-proposed-rendezvous-v1",
+  "native_apply_input": false,
+  "rendezvous": [
+    {
+      "id": "GH-NF1-RV-M00",
+      "join_task_id": "GH-NF1-M00",
+      "mode": "all",
+      "producer_tasks": [
+        "GH-NF1-A04"
+      ],
+      "checkpoint_id": "GH-NF1-CP-M00",
+      "state": "proposed"
+    },
+    {
+      "id": "GH-NF1-RV-M10",
+      "join_task_id": "GH-NF1-M10",
+      "mode": "all",
+      "producer_tasks": [
+        "GH-NF1-M00",
+        "GH-NF1-C07",
+        "GH-NF1-B05",
+        "GH-NF1-S03",
+        "GH-NF1-X02"
+      ],
+      "checkpoint_id": "GH-NF1-CP-M10",
+      "state": "proposed"
+    },
+    {
+      "id": "GH-NF1-RV-M20",
+      "join_task_id": "GH-NF1-M20",
+      "mode": "all",
+      "producer_tasks": [
+        "GH-NF1-M10",
+        "GH-NF1-S07",
+        "GH-NF1-D07",
+        "GH-NF1-X03"
+      ],
+      "checkpoint_id": "GH-NF1-CP-M20",
+      "state": "proposed"
+    },
+    {
+      "id": "GH-NF1-RV-M30",
+      "join_task_id": "GH-NF1-M30",
+      "mode": "all",
+      "producer_tasks": [
+        "GH-NF1-M20",
+        "GH-NF1-O06",
+        "GH-NF1-E05",
+        "GH-NF1-Q07",
+        "GH-NF1-R05"
+      ],
+      "checkpoint_id": "GH-NF1-CP-M30",
+      "state": "proposed"
+    },
+    {
+      "id": "GH-NF1-RV-M40",
+      "join_task_id": "GH-NF1-M40",
+      "mode": "all",
+      "producer_tasks": [
+        "GH-NF1-M30",
+        "GH-NF1-P06",
+        "GH-NF1-U06"
+      ],
+      "checkpoint_id": "GH-NF1-CP-M40",
+      "state": "proposed"
+    },
+    {
+      "id": "GH-NF1-RV-M60",
+      "join_task_id": "GH-NF1-M60",
+      "mode": "all",
+      "producer_tasks": [
+        "GH-NF1-M40",
+        "GH-NF1-T06",
+        "GH-NF1-K05",
+        "GH-NF1-X05"
+      ],
+      "checkpoint_id": "GH-NF1-CP-M60",
+      "state": "proposed"
+    },
+    {
+      "id": "GH-NF1-RV-M90",
+      "join_task_id": "GH-NF1-M90",
+      "mode": "all",
+      "producer_tasks": [
+        "GH-NF1-M60",
+        "GH-NF1-X06"
+      ],
+      "checkpoint_id": "GH-NF1-CP-M90",
+      "state": "proposed"
+    }
+  ],
+  "semantics": "Native task prerequisites and ordered queues already enforce readiness; instantiate richer rendezvous with current workflow contracts if useful."
+}

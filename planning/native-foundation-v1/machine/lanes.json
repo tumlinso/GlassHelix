@@ -1,0 +1,253 @@
+{
+  "lanes": [
+    {
+      "id": "GH-NF1-L-COORD",
+      "role": "coordinator",
+      "tasks": [
+        "GH-NF1-0000"
+      ],
+      "workspace": {
+        "mode": "read_shared"
+      }
+    },
+    {
+      "id": "GH-NF1-L-A",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-A01",
+        "GH-NF1-A02",
+        "GH-NF1-A03",
+        "GH-NF1-A04"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-C",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-C01",
+        "GH-NF1-C02",
+        "GH-NF1-C03",
+        "GH-NF1-C04",
+        "GH-NF1-C05",
+        "GH-NF1-C06",
+        "GH-NF1-C07"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-B",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-B01",
+        "GH-NF1-B02",
+        "GH-NF1-B03",
+        "GH-NF1-B04",
+        "GH-NF1-B05"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-S",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-S01",
+        "GH-NF1-S02",
+        "GH-NF1-S03",
+        "GH-NF1-S04",
+        "GH-NF1-S05",
+        "GH-NF1-S06",
+        "GH-NF1-S07"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-D",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-D01",
+        "GH-NF1-D02",
+        "GH-NF1-D03",
+        "GH-NF1-D04",
+        "GH-NF1-D05",
+        "GH-NF1-D06",
+        "GH-NF1-D07"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-O",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-O01",
+        "GH-NF1-O02",
+        "GH-NF1-O03",
+        "GH-NF1-O04",
+        "GH-NF1-O05",
+        "GH-NF1-O06"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-E",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-E01",
+        "GH-NF1-E02",
+        "GH-NF1-E03",
+        "GH-NF1-E04",
+        "GH-NF1-E05"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-Q",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-Q01",
+        "GH-NF1-Q02",
+        "GH-NF1-Q03",
+        "GH-NF1-Q04",
+        "GH-NF1-Q05",
+        "GH-NF1-Q06",
+        "GH-NF1-Q07"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-R",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-R01",
+        "GH-NF1-R02",
+        "GH-NF1-R03",
+        "GH-NF1-R04",
+        "GH-NF1-R05"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-P",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-P01",
+        "GH-NF1-P02",
+        "GH-NF1-P03",
+        "GH-NF1-P04",
+        "GH-NF1-P05",
+        "GH-NF1-P06"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-U",
+      "role": "implementer",
+      "tasks": [
+        "GH-NF1-U01",
+        "GH-NF1-U02",
+        "GH-NF1-U03",
+        "GH-NF1-U04",
+        "GH-NF1-U05",
+        "GH-NF1-U06"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-T",
+      "role": "validator",
+      "tasks": [
+        "GH-NF1-T01",
+        "GH-NF1-T02",
+        "GH-NF1-T03",
+        "GH-NF1-T04",
+        "GH-NF1-T05",
+        "GH-NF1-T06"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-K",
+      "role": "specialist",
+      "tasks": [
+        "GH-NF1-K01",
+        "GH-NF1-K02",
+        "GH-NF1-K03",
+        "GH-NF1-K04",
+        "GH-NF1-K05"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-X",
+      "role": "integrator",
+      "tasks": [
+        "GH-NF1-X01",
+        "GH-NF1-X02",
+        "GH-NF1-X03",
+        "GH-NF1-X04",
+        "GH-NF1-X05",
+        "GH-NF1-X06"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    },
+    {
+      "id": "GH-NF1-L-M",
+      "role": "integrator",
+      "tasks": [
+        "GH-NF1-M00",
+        "GH-NF1-M10",
+        "GH-NF1-M20",
+        "GH-NF1-M30",
+        "GH-NF1-M40",
+        "GH-NF1-M60",
+        "GH-NF1-M90"
+      ],
+      "workspace": {
+        "mode": "isolated_merge"
+      },
+      "parent_lane_id": "GH-NF1-L-COORD"
+    }
+  ]
+}

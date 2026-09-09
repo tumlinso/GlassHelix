@@ -1,0 +1,31 @@
+{
+  "roots": [
+    "examples/native_foundation_v1"
+  ],
+  "files": [
+    {
+      "path": "examples/native_foundation_v1/CMakeLists.txt",
+      "sha256": "2ba959a42f978c6cf91e6ba32117a80f7b32a4ea6824b628d9404c069e0737bb"
+    },
+    {
+      "path": "examples/native_foundation_v1/README.md",
+      "sha256": "1da9a0adc493ac08f60650f9166f78564cb6ae9102ab07de66662539c94beeda"
+    },
+    {
+      "path": "examples/native_foundation_v1/fixture.hh",
+      "sha256": "98c01e6f6af99a09032e84c159bc76f8d5a5057603968ded8c3bc3daa5f66f3b"
+    },
+    {
+      "path": "examples/native_foundation_v1/mechanistic_toolbox.cc",
+      "sha256": "b768b2c57256c1bb3e4964f11525dfeb5f564818252c8c42c0364d1d3bbfb199"
+    },
+    {
+      "path": "examples/native_foundation_v1/reference_main.cc",
+      "sha256": "0db924a5fa365eae663ee4798b510c098587ca92e2018c564955a58c17a70459"
+    },
+    {
+      "path": "examples/native_foundation_v1/toolbox.py",
+      "sha256": "7c8428faa2c8f0812dbcd59415743146c07e2d3dc4548ceda74b6fae43e12b97"
+    }
+  ]
+}

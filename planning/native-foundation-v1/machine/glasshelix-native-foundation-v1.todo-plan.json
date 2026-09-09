@@ -1,0 +1,4459 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "GlassHelix",
+    "workspace": "glasshelix",
+    "repository": "glasshelix",
+    "baseline_commit": "5b9dfeb050448a772db5b4e35dbc14b744588b6e",
+    "objective": "GlassHelix native execution and interrogation foundation",
+    "program_document": "planning/native-foundation-v1/01_SCOPE_AND_DECISIONS.md"
+  },
+  "tasks": [
+    {
+      "id": "GH-NF1-0000",
+      "kind": "epic",
+      "title": "GlassHelix native execution and interrogation foundation",
+      "status": "planned",
+      "priority": 100,
+      "parallel_policy": "serial",
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-0000.md",
+      "completion_contract": {
+        "required": [
+          "All NF1 child tasks are authoritatively accepted and integrated; final paired-source receipt and required real execution evidence are present."
+        ]
+      }
+    },
+    {
+      "id": "GH-NF1-A01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Adopt the approved toolbox scope without choosing biology",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a01.json"
+        ]
+      },
+      "depends_on": [],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-A01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-A02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Map both repositories and agentic authorities",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a02.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-A02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-A03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Review legacy source and replacement boundaries",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a03.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-A03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-A04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish autonomy and recovery charter",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/baseline",
+          "docs/native_foundation_v1/controller",
+          "docs/native_foundation_v1/records/gh-nf1-a04.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-a04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-A04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-A04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define quantity roles over Cellerator identities",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core",
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c01.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M00"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-C01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define system, mechanism and instance semantics",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core",
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c02.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-C02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define calculation requests and time interpretation",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core",
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c03.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-C03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define observation and inferential-state distinction",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core",
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c04.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-C04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define numerical and interpretation provenance",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core",
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c05.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-C05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define capability-based extensions",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core",
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c06.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-C06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-C07",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish developmental GlassHelix contracts",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/core",
+          "src/core",
+          "tests/native_foundation/core",
+          "docs/native_foundation_v1/contracts",
+          "docs/native_foundation_v1/records/gh-nf1-c07.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C06"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-c07.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-C07-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-C07"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Create native library target and remove legacy default entry",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "cmake/GlassHelixFoundation.cmake",
+          "CMakePresets.json",
+          "tests/native_foundation/build",
+          "docs/native_foundation_v1/build"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C07"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-b01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-B01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "b01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Bind the peer source revision and consumer targets",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "cmake/GlassHelixFoundation.cmake",
+          "CMakePresets.json",
+          "tests/native_foundation/build",
+          "docs/native_foundation_v1/build"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-B01"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-b02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-B02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "b02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify C++20 and CUDA boundary choices",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "cmake/GlassHelixFoundation.cmake",
+          "CMakePresets.json",
+          "tests/native_foundation/build",
+          "docs/native_foundation_v1/build"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-B02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-b03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-B03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "b03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Wire tests, examples and package metadata",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "cmake/GlassHelixFoundation.cmake",
+          "CMakePresets.json",
+          "tests/native_foundation/build",
+          "docs/native_foundation_v1/build"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-B03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-b04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-B04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "b04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish usable native consumer build",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "cmake/GlassHelixFoundation.cmake",
+          "CMakePresets.json",
+          "tests/native_foundation/build",
+          "docs/native_foundation_v1/build"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-B04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-b05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-B05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "b05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-S01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement system and mechanism assembly",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/system",
+          "src/system",
+          "tests/native_foundation/system"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C07"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-s01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-S01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "s01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-S02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Validate domain, role, effect and algebraic closure",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/system",
+          "src/system",
+          "tests/native_foundation/system"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-s02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-S02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "s02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-S03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Lower to Cellerator numerical programs",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/system",
+          "src/system",
+          "tests/native_foundation/system"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S02"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-s03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-S03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "s03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-S04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Bind independent dynamical and parameter instances",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/system",
+          "src/system",
+          "tests/native_foundation/system"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-s04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-S04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "s04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-S05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement correct shared-result eligibility",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/system",
+          "src/system",
+          "tests/native_foundation/system"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-s05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-S05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "s05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-S06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Preserve mechanism provenance under specialization",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/system",
+          "src/system",
+          "tests/native_foundation/system"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-s06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-S06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "s06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-S07",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify shared and custom systems",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/system",
+          "src/system",
+          "tests/native_foundation/system"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S06"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-s07.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-S07-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "s07"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-D01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement discrete transition semantics",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/dynamics"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S03"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X02"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-d01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-D01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "d01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-D02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement vector-field evaluation and RK4",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/dynamics"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-d02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-D02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "d02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-D03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Represent zero and scheduled forcing",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/dynamics"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-d03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-D03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "d03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-D04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement batched rollout and observation-time selection",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/dynamics"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-d04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-D04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "d04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-D05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Retain checkpointable primal generations",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/dynamics"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-d05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-D05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "d05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-D06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Add guarded numerical validation paths",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/dynamics"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-d06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-D06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "d06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-D07",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify transition library and extension boundaries",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/dynamics"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D06"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-d07.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-D07-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "d07"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-O01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement partial and linear observation",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/observation",
+          "src/observation",
+          "tests/native_foundation/observation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S03"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-o01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-O01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "o01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-O02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement nonlinear observation with capabilities",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/observation",
+          "src/observation",
+          "tests/native_foundation/observation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-O01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-o02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-O02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "o02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-O03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement missingness and observation provenance",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/observation",
+          "src/observation",
+          "tests/native_foundation/observation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-O02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-o03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-O03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "o03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-O04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement elementary noise and likelihood instruments",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/observation",
+          "src/observation",
+          "tests/native_foundation/observation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-O03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-o04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-O04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "o04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-O05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Compose observation response with dynamics",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/observation",
+          "src/observation",
+          "tests/native_foundation/observation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-O04"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X04"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D07"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-o05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-O05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "o05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-O06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify observation contract",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/observation",
+          "src/observation",
+          "tests/native_foundation/observation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-O05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-o06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-O06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "o06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-E01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement explicit finite candidate state with weights",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/inference",
+          "src/inference",
+          "tests/native_foundation/inference"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M20"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-O04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-e01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-E01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "e01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-E02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Propagate candidates through the same execution path",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/inference",
+          "src/inference",
+          "tests/native_foundation/inference"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-E01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-e02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-E02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "e02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-E03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Update weights from recorded observation likelihood",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/inference",
+          "src/inference",
+          "tests/native_foundation/inference"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-E02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-e03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-E03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "e03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-E04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Preserve inferential correlations and evidence history",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/inference",
+          "src/inference",
+          "tests/native_foundation/inference"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-E03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-e04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-E04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "e04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-E05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify inference as an instrument not a learner",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/inference",
+          "src/inference",
+          "tests/native_foundation/inference"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-E04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-e05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-E05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "e05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-Q01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Expose the derivative of the requested calculation",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "tests/native_foundation/interrogation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M20"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-q01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-Q01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "q01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-Q02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Compose matrix-free observation-history sensitivity",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "tests/native_foundation/interrogation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-Q01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-q02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-Q02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "q02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-Q03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Materialize bounded scaled sensitivity for small diagnostics",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "tests/native_foundation/interrogation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-Q02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-q03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-Q03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "q03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-Q04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Compute local null directions with established linear algebra",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "tests/native_foundation/interrogation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-Q03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-q04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-Q04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "q04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-Q05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Compare aligned candidate mechanisms and joint alternatives",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "tests/native_foundation/interrogation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-Q04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-q05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-Q05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "q05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-Q06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Expose selected higher-order response and status",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "tests/native_foundation/interrogation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-Q05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-q06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-Q06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "q06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-Q07",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify diagnostic readout and provenance",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "tests/native_foundation/interrogation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-Q06"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-q07.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-Q07-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "q07"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-R01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Represent supplied exact and approximate reductions",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/reduction",
+          "src/reduction",
+          "tests/native_foundation/reduction"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M20"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-r01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-R01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "r01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-R02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Evaluate closure and response residuals",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/reduction",
+          "src/reduction",
+          "tests/native_foundation/reduction"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-R01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-r02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-R02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "r02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-R03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Track support-specific approximation claims",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/reduction",
+          "src/reduction",
+          "tests/native_foundation/reduction"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-R02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-r03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-R03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "r03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-R04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement limited bound propagation and decision guards",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/reduction",
+          "src/reduction",
+          "tests/native_foundation/reduction"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-R03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-r04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-R04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "r04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-R05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify reduction/inference separation",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/reduction",
+          "src/reduction",
+          "tests/native_foundation/reduction"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-R04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-r05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-R05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "r05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-P01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement thin native bindings over the common library",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bindings/python",
+          "python/glasshelix",
+          "tests/native_foundation/python",
+          "docs/native_foundation_v1/python"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M30"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-p01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-P01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "p01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-P02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Define explicit host array ingress and conversion",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bindings/python",
+          "python/glasshelix",
+          "tests/native_foundation/python",
+          "docs/native_foundation_v1/python"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-P01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-p02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-P02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "p02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-P03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Handle asynchronous buffer and exception lifetime",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bindings/python",
+          "python/glasshelix",
+          "tests/native_foundation/python",
+          "docs/native_foundation_v1/python"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-P02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-p03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-P03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "p03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-P04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Add capability and plan introspection",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bindings/python",
+          "python/glasshelix",
+          "tests/native_foundation/python",
+          "docs/native_foundation_v1/python"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-P03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-p04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-P04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "p04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-P05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify optional device interchange or reject it honestly",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bindings/python",
+          "python/glasshelix",
+          "tests/native_foundation/python",
+          "docs/native_foundation_v1/python"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-P04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-p05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-P05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "p05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-P06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish native/Python parity and packaging evidence",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bindings/python",
+          "python/glasshelix",
+          "tests/native_foundation/python",
+          "docs/native_foundation_v1/python"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-P05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-p06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-P06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "p06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-U01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement capability and plan explanation",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tools/native_foundation",
+          "include/GlassHelix/artifacts",
+          "src/artifacts",
+          "tests/native_foundation/artifacts"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M20"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-u01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-U01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "u01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-U02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Implement run and failure inspection",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tools/native_foundation",
+          "include/GlassHelix/artifacts",
+          "src/artifacts",
+          "tests/native_foundation/artifacts"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-U01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-u02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-U02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "u02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-U03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Serialize portable synthetic replay inputs",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tools/native_foundation",
+          "include/GlassHelix/artifacts",
+          "src/artifacts",
+          "tests/native_foundation/artifacts"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-U02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-u03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-U03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "u03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-U04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Bind evidence and peer revision in artifacts",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tools/native_foundation",
+          "include/GlassHelix/artifacts",
+          "src/artifacts",
+          "tests/native_foundation/artifacts"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-U03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-u04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-U04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "u04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-U05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Provide code-level and Python usage examples",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tools/native_foundation",
+          "include/GlassHelix/artifacts",
+          "src/artifacts",
+          "tests/native_foundation/artifacts"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-U04"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M30"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-u05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-U05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "u05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-U06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify replay and artifact corruption handling",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tools/native_foundation",
+          "include/GlassHelix/artifacts",
+          "src/artifacts",
+          "tests/native_foundation/artifacts"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-U05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-u06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-U06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "u06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-T01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Author truth-known systems independent of production lowering",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tests/native_foundation/fixtures",
+          "tests/native_foundation/independent",
+          "docs/native_foundation_v1/validation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M00"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-t01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-T01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "t01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-T02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Author role and observation counterexamples",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tests/native_foundation/fixtures",
+          "tests/native_foundation/independent",
+          "docs/native_foundation_v1/validation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-T01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-t02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-T02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "t02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-T03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Author response, null and support counterexamples",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tests/native_foundation/fixtures",
+          "tests/native_foundation/independent",
+          "docs/native_foundation_v1/validation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-T02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-t03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-T03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "t03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-T04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify integrated real CPU/CUDA path",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tests/native_foundation/fixtures",
+          "tests/native_foundation/independent",
+          "docs/native_foundation_v1/validation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-T03"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M30"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-t04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-T04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "t04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-T05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify Python, replay, numerics and failure behavior",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tests/native_foundation/fixtures",
+          "tests/native_foundation/independent",
+          "docs/native_foundation_v1/validation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-T04"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M40"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-t05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-T05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "t05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-T06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish independent qualification bundle",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tests/native_foundation/fixtures",
+          "tests/native_foundation/independent",
+          "docs/native_foundation_v1/validation"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-T05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-t06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-T06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "t06"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-K01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Build complete toolbox workload matrix",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bench/native_foundation",
+          "docs/native_foundation_v1/performance"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M30"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-k01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-K01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "k01"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-K02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Measure setup, resident and result-observation cost",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bench/native_foundation",
+          "docs/native_foundation_v1/performance"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-K01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-k02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-K02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "k02"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-K03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Test sharing and compact-support profitability",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bench/native_foundation",
+          "docs/native_foundation_v1/performance"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-K02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-k03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-K03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "k03"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-K04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Publish numerical-performance tradeoffs and requests",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bench/native_foundation",
+          "docs/native_foundation_v1/performance"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-K03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-k04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-K04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "k04"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-K05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Qualify sensitivity-aware performance and final report",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bench/native_foundation",
+          "docs/native_foundation_v1/performance"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-K04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-k05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-K05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "k05"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-X01",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Import the developmental Cellerator contracts",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/imports"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M00"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-x01.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-X01-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/verify_receipt.py",
+            "--edge",
+            "NF1-CE-CONTRACTS"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-X02",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Import linked core execution capability",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/imports"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X01"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-x02.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-X02-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/verify_receipt.py",
+            "--edge",
+            "NF1-CE-CORE"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-X03",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Import n-ary and support execution capability",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/imports"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-x03.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-X03-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/verify_receipt.py",
+            "--edge",
+            "NF1-CE-NARY"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-X04",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Import differential execution capability",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/imports"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-x04.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-X04-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/verify_receipt.py",
+            "--edge",
+            "NF1-CE-DIFFERENTIAL"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-X05",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Import qualified consumer-ready bundle",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/imports"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-x05.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-X05-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/verify_receipt.py",
+            "--edge",
+            "NF1-CE-READY"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-X06",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Import final Cellerator closure receipt",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/native_foundation_v1/imports"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-x06.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-X06-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/verify_receipt.py",
+            "--edge",
+            "NF1-CE-FINAL"
+          ],
+          "cwd": "."
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M00",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Scope, control and baseline adopted",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration",
+          "docs/native_foundation_v1/records/gh-nf1-m00.json"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-A04"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m00.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-M00-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/check_record.py",
+            "--milestone",
+            "GH-NF1-M00"
+          ],
+          "cwd": "."
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M00",
+          "title": "Scope, control and baseline adopted"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M10",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Native contracts and first external consumer integrated",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M00"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-C07"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-B05"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S03"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X02"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m10.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-M10-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "m10"
+          ],
+          "cwd": "."
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M10",
+          "title": "Native contracts and first external consumer integrated"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M20",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Shared nonlinear transition toolbox integrated",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M10"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-S07"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-D07"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X03"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m20.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-M20-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "m20"
+          ],
+          "cwd": "."
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M20",
+          "title": "Shared nonlinear transition toolbox integrated"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M30",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Observation, inference and interrogation integrated",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M20"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-O06"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-E05"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-Q07"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-R05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m30.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-M30-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "m30"
+          ],
+          "cwd": "."
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M30",
+          "title": "Observation, inference and interrogation integrated"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M40",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Python, artifacts and post-epic demonstration integrated",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M30"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-P06"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-U06"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m40.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-M40-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "m40"
+          ],
+          "cwd": "."
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M40",
+          "title": "Python, artifacts and post-epic demonstration integrated"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M60",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Real GlassHelix consumer acceptance published",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M40"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-T06"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-K05"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X05"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m60.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-M60-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "m60"
+          ],
+          "cwd": "."
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M60",
+          "title": "Real GlassHelix consumer acceptance published"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-M90",
+      "parent_id": "GH-NF1-0000",
+      "kind": "task",
+      "title": "Joint foundation closed with final peer receipt",
+      "status": "planned",
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "docs/native_foundation_v1/integration"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1-M60"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-NF1-X06"
+        }
+      ],
+      "notes": "planning/native-foundation-v1/proposed-todos/gh-nf1-m90.md",
+      "completion_contract": {
+        "required": [
+          "Meet every acceptance condition and failure control in the referenced task sheet; provide actual evidence at its stated level."
+        ]
+      },
+      "gates": [
+        {
+          "id": "GH-NF1-M90-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/native-foundation-v1/scripts/run_gate.py",
+            "--group",
+            "m90"
+          ],
+          "cwd": "."
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1-CP-M90",
+          "title": "Joint foundation closed with final peer receipt"
+        }
+      ]
+    }
+  ],
+  "invariants": [
+    {
+      "id": "GH-NF1-INV-SCOPE",
+      "rule": "Execution toolbox only; no biological experiment, final learner, full compiler/JIT, distributed engine or sequence inference is implicitly activated.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-OWNERS",
+      "rule": "GlassHelix owns scientific roles/composition/interpretation; Cellerator owns reusable numerical and execution machinery. Improve current owners instead of duplicating engines.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-IDENTITY",
+      "rule": "Domain/order/structure/epoch/value identity is explicit. Scientific mechanism identity is not a kernel boundary; stable ids do not establish biological identifiability.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-OBSERVATION",
+      "rule": "Dynamical state, observations and inferential state are distinct. Missing values and zeros differ. Population snapshots are not fabricated individual trajectories.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-COMBINATORIAL",
+      "rule": "Mechanisms admit true n-ary nonlinear dependence and role-ordered arguments; pairwise execution specializations do not constrain scientific ontology.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-LIFETIME",
+      "rule": "Independent mutable bindings over shared structure; complete preflight; readiness differs from submission; stale and poisoned state cannot publish valid results.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-DIFFERENTIAL",
+      "rule": "Derivative capabilities are optional and explicit. Missing derivative is not zero. Preserve primal generations and distinct primal/parameter-response support.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-NUMERIC",
+      "rule": "Real f32 path and independent f64 oracle; qualify precision, pruning, fusion and error. Local null diagnostics are not global identifiability claims.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-EVIDENCE",
+      "rule": "No mock, syntax-only program, skipped/missing test, header declaration or CPU fallback satisfies real native/GPU acceptance.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-AUTONOMY",
+      "rule": "After controller launch, complete the accepted program autonomously using first-class project-qualified claims; revise scopes/contracts through authority when necessary, without repeated ordinary-choice confirmation.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-PRESERVE",
+      "rule": "Preserve unrelated dirty work, branches, runs, pending patches and consumers. No reset/clean/force rewrite or CE-AMP activation. Clean only owned verified-merged worktrees.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-AUTHORITY",
+      "rule": "Two independent additive schema-3 imports. Never write SQLite/generated authority directly. Import may create active run metadata but never dispatches through package scripts.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-CROSS",
+      "rule": "Cross-project work is gated by source/interface/test receipts and fresh authoritative producer completion. No fictitious foreign native dependency or cross-project parent lane.",
+      "severity": "error"
+    },
+    {
+      "id": "GH-NF1-INV-PERFORMANCE",
+      "rule": "Whole-lifetime cost governs promotion. Preserve correct alternatives and negative results. One real GPU lease plus shared host lock across both authorities.",
+      "severity": "error"
+    }
+  ],
+  "locks": [
+    {
+      "name": "gh-nf1-evidence",
+      "capacity": 1,
+      "metadata": {
+        "purpose": "Local evidence serialization; additionally use actual GPU lease and ONE shared external lock across both projects."
+      }
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "GH-NF1-IF-SCIENTIFIC-ROLES",
+      "owner_task_id": "GH-NF1-C07",
+      "state": "draft",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/foundation.hh"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-SYSTEM-ASSEMBLY",
+      "owner_task_id": "GH-NF1-C07",
+      "state": "draft",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/system"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-OBSERVATION",
+      "owner_task_id": "GH-NF1-C07",
+      "state": "draft",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/observation"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-INFERENCE",
+      "owner_task_id": "GH-NF1-C07",
+      "state": "draft",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/inference"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-INTERROGATION",
+      "owner_task_id": "GH-NF1-C07",
+      "state": "draft",
+      "version": "1",
+      "contract_paths": [
+        "include/GlassHelix/interrogation"
+      ]
+    },
+    {
+      "id": "GH-NF1-IF-PYTHON-REPLAY",
+      "owner_task_id": "GH-NF1-C07",
+      "state": "draft",
+      "version": "1",
+      "contract_paths": [
+        "python/glasshelix"
+      ]
+    }
+  ],
+  "barriers": [
+    {
+      "id": "GH-NF1-B-M00",
+      "title": "Scope, control and baseline adopted",
+      "mode": "all",
+      "requirements": [
+        {
+          "type": "checkpoint",
+          "id": "GH-NF1-CP-M00",
+          "state": "reached"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B-M10",
+      "title": "Native contracts and first external consumer integrated",
+      "mode": "all",
+      "requirements": [
+        {
+          "type": "checkpoint",
+          "id": "GH-NF1-CP-M10",
+          "state": "reached"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B-M20",
+      "title": "Shared nonlinear transition toolbox integrated",
+      "mode": "all",
+      "requirements": [
+        {
+          "type": "checkpoint",
+          "id": "GH-NF1-CP-M20",
+          "state": "reached"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B-M30",
+      "title": "Observation, inference and interrogation integrated",
+      "mode": "all",
+      "requirements": [
+        {
+          "type": "checkpoint",
+          "id": "GH-NF1-CP-M30",
+          "state": "reached"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B-M40",
+      "title": "Python, artifacts and post-epic demonstration integrated",
+      "mode": "all",
+      "requirements": [
+        {
+          "type": "checkpoint",
+          "id": "GH-NF1-CP-M40",
+          "state": "reached"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B-M60",
+      "title": "Real GlassHelix consumer acceptance published",
+      "mode": "all",
+      "requirements": [
+        {
+          "type": "checkpoint",
+          "id": "GH-NF1-CP-M60",
+          "state": "reached"
+        }
+      ]
+    },
+    {
+      "id": "GH-NF1-B-M90",
+      "title": "Joint foundation closed with final peer receipt",
+      "mode": "all",
+      "requirements": [
+        {
+          "type": "checkpoint",
+          "id": "GH-NF1-CP-M90",
+          "state": "reached"
+        }
+      ]
+    }
+  ],
+  "resource_classes": [],
+  "runs": [
+    {
+      "id": "GH-NF1-RUN-V1",
+      "root_task_id": "GH-NF1-0000",
+      "charter": {
+        "objective": "GlassHelix native execution and interrogation foundation; execute the approved toolbox program autonomously after user controller launch, not during manual import.",
+        "boundaries": [
+          "One GlassHelix strategic controller coordinates both independent authorities; every substantial worker is first class.",
+          "Read the paired scope and autonomy charter. Adjust scopes/interfaces through authority, preserve work, integrate and push incrementally.",
+          "No biological experiment, full learning model, CellShard program, broad compiler or old CE-AMP activation.",
+          "Import may create active run metadata but no worker dispatch; later user launch authorizes the whole accepted program."
+        ],
+        "acceptance_conditions": [
+          "Every child task accepted and integrated; GH-NF1-CP-M90 reached with real evidence and the exact final source pair."
+        ],
+        "invariants": [
+          "GH-NF1-INV-SCOPE",
+          "GH-NF1-INV-OWNERS",
+          "GH-NF1-INV-IDENTITY",
+          "GH-NF1-INV-OBSERVATION",
+          "GH-NF1-INV-COMBINATORIAL",
+          "GH-NF1-INV-LIFETIME",
+          "GH-NF1-INV-DIFFERENTIAL",
+          "GH-NF1-INV-NUMERIC",
+          "GH-NF1-INV-EVIDENCE",
+          "GH-NF1-INV-AUTONOMY",
+          "GH-NF1-INV-PRESERVE",
+          "GH-NF1-INV-AUTHORITY",
+          "GH-NF1-INV-CROSS",
+          "GH-NF1-INV-PERFORMANCE"
+        ]
+      },
+      "lanes": [
+        {
+          "id": "GH-NF1-L-COORD",
+          "role": "coordinator",
+          "tasks": [
+            "GH-NF1-0000"
+          ],
+          "workspace": {
+            "mode": "read_shared"
+          }
+        },
+        {
+          "id": "GH-NF1-L-A",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-A01",
+            "GH-NF1-A02",
+            "GH-NF1-A03",
+            "GH-NF1-A04"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-C",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-C01",
+            "GH-NF1-C02",
+            "GH-NF1-C03",
+            "GH-NF1-C04",
+            "GH-NF1-C05",
+            "GH-NF1-C06",
+            "GH-NF1-C07"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-B",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-B01",
+            "GH-NF1-B02",
+            "GH-NF1-B03",
+            "GH-NF1-B04",
+            "GH-NF1-B05"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-S",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-S01",
+            "GH-NF1-S02",
+            "GH-NF1-S03",
+            "GH-NF1-S04",
+            "GH-NF1-S05",
+            "GH-NF1-S06",
+            "GH-NF1-S07"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-D",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-D01",
+            "GH-NF1-D02",
+            "GH-NF1-D03",
+            "GH-NF1-D04",
+            "GH-NF1-D05",
+            "GH-NF1-D06",
+            "GH-NF1-D07"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-O",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-O01",
+            "GH-NF1-O02",
+            "GH-NF1-O03",
+            "GH-NF1-O04",
+            "GH-NF1-O05",
+            "GH-NF1-O06"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-E",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-E01",
+            "GH-NF1-E02",
+            "GH-NF1-E03",
+            "GH-NF1-E04",
+            "GH-NF1-E05"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-Q",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-Q01",
+            "GH-NF1-Q02",
+            "GH-NF1-Q03",
+            "GH-NF1-Q04",
+            "GH-NF1-Q05",
+            "GH-NF1-Q06",
+            "GH-NF1-Q07"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-R",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-R01",
+            "GH-NF1-R02",
+            "GH-NF1-R03",
+            "GH-NF1-R04",
+            "GH-NF1-R05"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-P",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-P01",
+            "GH-NF1-P02",
+            "GH-NF1-P03",
+            "GH-NF1-P04",
+            "GH-NF1-P05",
+            "GH-NF1-P06"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-U",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1-U01",
+            "GH-NF1-U02",
+            "GH-NF1-U03",
+            "GH-NF1-U04",
+            "GH-NF1-U05",
+            "GH-NF1-U06"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-T",
+          "role": "validator",
+          "tasks": [
+            "GH-NF1-T01",
+            "GH-NF1-T02",
+            "GH-NF1-T03",
+            "GH-NF1-T04",
+            "GH-NF1-T05",
+            "GH-NF1-T06"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-K",
+          "role": "specialist",
+          "tasks": [
+            "GH-NF1-K01",
+            "GH-NF1-K02",
+            "GH-NF1-K03",
+            "GH-NF1-K04",
+            "GH-NF1-K05"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-X",
+          "role": "integrator",
+          "tasks": [
+            "GH-NF1-X01",
+            "GH-NF1-X02",
+            "GH-NF1-X03",
+            "GH-NF1-X04",
+            "GH-NF1-X05",
+            "GH-NF1-X06"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        },
+        {
+          "id": "GH-NF1-L-M",
+          "role": "integrator",
+          "tasks": [
+            "GH-NF1-M00",
+            "GH-NF1-M10",
+            "GH-NF1-M20",
+            "GH-NF1-M30",
+            "GH-NF1-M40",
+            "GH-NF1-M60",
+            "GH-NF1-M90"
+          ],
+          "workspace": {
+            "mode": "isolated_merge"
+          },
+          "parent_lane_id": "GH-NF1-L-COORD"
+        }
+      ]
+    }
+  ]
+}

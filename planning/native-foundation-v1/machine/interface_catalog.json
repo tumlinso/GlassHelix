@@ -1,0 +1,56 @@
+[
+  {
+    "id": "GH-NF1-IF-SCIENTIFIC-ROLES",
+    "owner_task_id": "GH-NF1-C07",
+    "state": "draft",
+    "version": "1",
+    "contract_paths": [
+      "include/GlassHelix/foundation.hh"
+    ]
+  },
+  {
+    "id": "GH-NF1-IF-SYSTEM-ASSEMBLY",
+    "owner_task_id": "GH-NF1-C07",
+    "state": "draft",
+    "version": "1",
+    "contract_paths": [
+      "include/GlassHelix/system"
+    ]
+  },
+  {
+    "id": "GH-NF1-IF-OBSERVATION",
+    "owner_task_id": "GH-NF1-C07",
+    "state": "draft",
+    "version": "1",
+    "contract_paths": [
+      "include/GlassHelix/observation"
+    ]
+  },
+  {
+    "id": "GH-NF1-IF-INFERENCE",
+    "owner_task_id": "GH-NF1-C07",
+    "state": "draft",
+    "version": "1",
+    "contract_paths": [
+      "include/GlassHelix/inference"
+    ]
+  },
+  {
+    "id": "GH-NF1-IF-INTERROGATION",
+    "owner_task_id": "GH-NF1-C07",
+    "state": "draft",
+    "version": "1",
+    "contract_paths": [
+      "include/GlassHelix/interrogation"
+    ]
+  },
+  {
+    "id": "GH-NF1-IF-PYTHON-REPLAY",
+    "owner_task_id": "GH-NF1-C07",
+    "state": "draft",
+    "version": "1",
+    "contract_paths": [
+      "python/glasshelix"
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "GH-NF1-B-M00",
+    "title": "Scope, control and baseline adopted",
+    "mode": "all",
+    "requirements": [
+      {
+        "type": "checkpoint",
+        "id": "GH-NF1-CP-M00",
+        "state": "reached"
+      }
+    ]
+  },
+  {
+    "id": "GH-NF1-B-M10",
+    "title": "Native contracts and first external consumer integrated",
+    "mode": "all",
+    "requirements": [
+      {
+        "type": "checkpoint",
+        "id": "GH-NF1-CP-M10",
+        "state": "reached"
+      }
+    ]
+  },
+  {
+    "id": "GH-NF1-B-M20",
+    "title": "Shared nonlinear transition toolbox integrated",
+    "mode": "all",
+    "requirements": [
+      {
+        "type": "checkpoint",
+        "id": "GH-NF1-CP-M20",
+        "state": "reached"
+      }
+    ]
+  },
+  {
+    "id": "GH-NF1-B-M30",
+    "title": "Observation, inference and interrogation integrated",
+    "mode": "all",
+    "requirements": [
+      {
+        "type": "checkpoint",
+        "id": "GH-NF1-CP-M30",
+        "state": "reached"
+      }
+    ]
+  },
+  {
+    "id": "GH-NF1-B-M40",
+    "title": "Python, artifacts and post-epic demonstration integrated",
+    "mode": "all",
+    "requirements": [
+      {
+        "type": "checkpoint",
+        "id": "GH-NF1-CP-M40",
+        "state": "reached"
+      }
+    ]
+  },
+  {
+    "id": "GH-NF1-B-M60",
+    "title": "Real GlassHelix consumer acceptance published",
+    "mode": "all",
+    "requirements": [
+      {
+        "type": "checkpoint",
+        "id": "GH-NF1-CP-M60",
+        "state": "reached"
+      }
+    ]
+  },
+  {
+    "id": "GH-NF1-B-M90",
+    "title": "Joint foundation closed with final peer receipt",
+    "mode": "all",
+    "requirements": [
+      {
+        "type": "checkpoint",
+        "id": "GH-NF1-CP-M90",
+        "state": "reached"
+      }
+    ]
+  }
+]

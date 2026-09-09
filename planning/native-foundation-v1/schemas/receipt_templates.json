@@ -1,0 +1,40 @@
+{
+  "status": "UNQUALIFIED_TEMPLATES_ONLY",
+  "capability": {
+    "kind": "nf1-capability-receipt-v1",
+    "status": "pending",
+    "edge_id": "",
+    "capability": "",
+    "producer_project": "glasshelix",
+    "producer_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+    "producer_run": "GH-NF1-RUN-V1",
+    "producer_task": "",
+    "source_commit": "",
+    "source_files": [],
+    "interfaces": [],
+    "test_receipts": [],
+    "numerical_policy": {},
+    "limitations": []
+  },
+  "authority": {
+    "kind": "nf1-authority-observation-v1",
+    "workspace": "glasshelix",
+    "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+    "task_id": "",
+    "effective_state": "pending",
+    "checkpoint_id": "",
+    "checkpoint_state": "pending",
+    "observed_at": "",
+    "revision": null,
+    "raw_observations": []
+  },
+  "governance": {
+    "kind": "nf1-governance-receipt-v1",
+    "task_id": "",
+    "reviewed": false,
+    "source_commit": "",
+    "reviewer_lane": "",
+    "topics": [],
+    "artifacts": []
+  }
+}

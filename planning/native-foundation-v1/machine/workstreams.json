@@ -1,0 +1,319 @@
+[
+  {
+    "id": "A",
+    "title": "Live baseline and joint control setup",
+    "scope": [
+      "docs/native_foundation_v1/baseline",
+      "docs/native_foundation_v1/controller"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [
+      "README.md",
+      "AGENTS.md",
+      "docs/repository-map.md",
+      "CMakeLists.txt"
+    ],
+    "task_ids": [
+      "GH-NF1-A01",
+      "GH-NF1-A02",
+      "GH-NF1-A03",
+      "GH-NF1-A04"
+    ],
+    "lane_id": "GH-NF1-L-A"
+  },
+  {
+    "id": "C",
+    "title": "Scientific role contracts and calculation semantics",
+    "scope": [
+      "include/GlassHelix/core",
+      "src/core",
+      "tests/native_foundation/core",
+      "docs/native_foundation_v1/contracts"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-C01",
+      "GH-NF1-C02",
+      "GH-NF1-C03",
+      "GH-NF1-C04",
+      "GH-NF1-C05",
+      "GH-NF1-C06",
+      "GH-NF1-C07"
+    ],
+    "lane_id": "GH-NF1-L-C"
+  },
+  {
+    "id": "B",
+    "title": "Native library and build toolchain",
+    "scope": [
+      "cmake/GlassHelixFoundation.cmake",
+      "CMakePresets.json",
+      "tests/native_foundation/build",
+      "docs/native_foundation_v1/build"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-B01",
+      "GH-NF1-B02",
+      "GH-NF1-B03",
+      "GH-NF1-B04",
+      "GH-NF1-B05"
+    ],
+    "lane_id": "GH-NF1-L-B"
+  },
+  {
+    "id": "S",
+    "title": "System assembly and shared mechanism graph",
+    "scope": [
+      "include/GlassHelix/system",
+      "src/system",
+      "tests/native_foundation/system"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-S01",
+      "GH-NF1-S02",
+      "GH-NF1-S03",
+      "GH-NF1-S04",
+      "GH-NF1-S05",
+      "GH-NF1-S06",
+      "GH-NF1-S07"
+    ],
+    "lane_id": "GH-NF1-L-S"
+  },
+  {
+    "id": "D",
+    "title": "Deterministic transitions, forcing and numerical evolution",
+    "scope": [
+      "include/GlassHelix/dynamics",
+      "src/dynamics",
+      "tests/native_foundation/dynamics"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-D01",
+      "GH-NF1-D02",
+      "GH-NF1-D03",
+      "GH-NF1-D04",
+      "GH-NF1-D05",
+      "GH-NF1-D06",
+      "GH-NF1-D07"
+    ],
+    "lane_id": "GH-NF1-L-D"
+  },
+  {
+    "id": "O",
+    "title": "Observation operators and measurement records",
+    "scope": [
+      "include/GlassHelix/observation",
+      "src/observation",
+      "tests/native_foundation/observation"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-O01",
+      "GH-NF1-O02",
+      "GH-NF1-O03",
+      "GH-NF1-O04",
+      "GH-NF1-O05",
+      "GH-NF1-O06"
+    ],
+    "lane_id": "GH-NF1-L-O"
+  },
+  {
+    "id": "E",
+    "title": "Finite-candidate inferential state",
+    "scope": [
+      "include/GlassHelix/inference",
+      "src/inference",
+      "tests/native_foundation/inference"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-E01",
+      "GH-NF1-E02",
+      "GH-NF1-E03",
+      "GH-NF1-E04",
+      "GH-NF1-E05"
+    ],
+    "lane_id": "GH-NF1-L-E"
+  },
+  {
+    "id": "Q",
+    "title": "Differential and null-direction interrogation",
+    "scope": [
+      "include/GlassHelix/interrogation",
+      "src/interrogation",
+      "tests/native_foundation/interrogation"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-Q01",
+      "GH-NF1-Q02",
+      "GH-NF1-Q03",
+      "GH-NF1-Q04",
+      "GH-NF1-Q05",
+      "GH-NF1-Q06",
+      "GH-NF1-Q07"
+    ],
+    "lane_id": "GH-NF1-L-Q"
+  },
+  {
+    "id": "R",
+    "title": "Reduction, support and accuracy accounting",
+    "scope": [
+      "include/GlassHelix/reduction",
+      "src/reduction",
+      "tests/native_foundation/reduction"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-R01",
+      "GH-NF1-R02",
+      "GH-NF1-R03",
+      "GH-NF1-R04",
+      "GH-NF1-R05"
+    ],
+    "lane_id": "GH-NF1-L-R"
+  },
+  {
+    "id": "P",
+    "title": "Thin Python binding and ownership",
+    "scope": [
+      "bindings/python",
+      "python/glasshelix",
+      "tests/native_foundation/python",
+      "docs/native_foundation_v1/python"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [
+      "README.md"
+    ],
+    "task_ids": [
+      "GH-NF1-P01",
+      "GH-NF1-P02",
+      "GH-NF1-P03",
+      "GH-NF1-P04",
+      "GH-NF1-P05",
+      "GH-NF1-P06"
+    ],
+    "lane_id": "GH-NF1-L-P"
+  },
+  {
+    "id": "U",
+    "title": "Inspection, artifacts and replay tools",
+    "scope": [
+      "tools/native_foundation",
+      "include/GlassHelix/artifacts",
+      "src/artifacts",
+      "tests/native_foundation/artifacts"
+    ],
+    "role": "implementer",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-U01",
+      "GH-NF1-U02",
+      "GH-NF1-U03",
+      "GH-NF1-U04",
+      "GH-NF1-U05",
+      "GH-NF1-U06"
+    ],
+    "lane_id": "GH-NF1-L-U"
+  },
+  {
+    "id": "T",
+    "title": "Independent synthetic science and implementation tests",
+    "scope": [
+      "tests/native_foundation/fixtures",
+      "tests/native_foundation/independent",
+      "docs/native_foundation_v1/validation"
+    ],
+    "role": "validator",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-T01",
+      "GH-NF1-T02",
+      "GH-NF1-T03",
+      "GH-NF1-T04",
+      "GH-NF1-T05",
+      "GH-NF1-T06"
+    ],
+    "lane_id": "GH-NF1-L-T"
+  },
+  {
+    "id": "K",
+    "title": "Performance workload and dependency feedback",
+    "scope": [
+      "bench/native_foundation",
+      "docs/native_foundation_v1/performance"
+    ],
+    "role": "specialist",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-K01",
+      "GH-NF1-K02",
+      "GH-NF1-K03",
+      "GH-NF1-K04",
+      "GH-NF1-K05"
+    ],
+    "lane_id": "GH-NF1-L-K"
+  },
+  {
+    "id": "X",
+    "title": "Cellerator receipt import and compatibility checks",
+    "scope": [
+      "docs/native_foundation_v1/imports"
+    ],
+    "role": "integrator",
+    "focus": "",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-X01",
+      "GH-NF1-X02",
+      "GH-NF1-X03",
+      "GH-NF1-X04",
+      "GH-NF1-X05",
+      "GH-NF1-X06"
+    ],
+    "lane_id": "GH-NF1-L-X"
+  },
+  {
+    "id": "M",
+    "title": "Central integration and release",
+    "scope": [],
+    "role": "integrator",
+    "focus": "Own central registration, exports and build fan-in. Integrate source, not unbuilt declarations.",
+    "inputs": [],
+    "task_ids": [
+      "GH-NF1-M00",
+      "GH-NF1-M10",
+      "GH-NF1-M20",
+      "GH-NF1-M30",
+      "GH-NF1-M40",
+      "GH-NF1-M60",
+      "GH-NF1-M90"
+    ],
+    "lane_id": "GH-NF1-L-M"
+  }
+]
