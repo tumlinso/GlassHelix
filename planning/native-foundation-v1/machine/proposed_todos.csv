@@ -1,0 +1,91 @@
+id,kind,title,lane,depends_on,specification
+GH-NF1-0000,epic,GlassHelix native execution and interrogation foundation,GH-NF1-L-COORD,,planning/native-foundation-v1/proposed-todos/gh-nf1-0000.md
+GH-NF1-A01,task,Adopt the approved toolbox scope without choosing biology,GH-NF1-L-A,,planning/native-foundation-v1/proposed-todos/gh-nf1-a01.md
+GH-NF1-A02,task,Map both repositories and agentic authorities,GH-NF1-L-A,GH-NF1-A01,planning/native-foundation-v1/proposed-todos/gh-nf1-a02.md
+GH-NF1-A03,task,Review legacy source and replacement boundaries,GH-NF1-L-A,GH-NF1-A02,planning/native-foundation-v1/proposed-todos/gh-nf1-a03.md
+GH-NF1-A04,task,Publish autonomy and recovery charter,GH-NF1-L-A,GH-NF1-A03,planning/native-foundation-v1/proposed-todos/gh-nf1-a04.md
+GH-NF1-C01,task,Define quantity roles over Cellerator identities,GH-NF1-L-C,GH-NF1-M00,planning/native-foundation-v1/proposed-todos/gh-nf1-c01.md
+GH-NF1-C02,task,"Define system, mechanism and instance semantics",GH-NF1-L-C,GH-NF1-C01,planning/native-foundation-v1/proposed-todos/gh-nf1-c02.md
+GH-NF1-C03,task,Define calculation requests and time interpretation,GH-NF1-L-C,GH-NF1-C02,planning/native-foundation-v1/proposed-todos/gh-nf1-c03.md
+GH-NF1-C04,task,Define observation and inferential-state distinction,GH-NF1-L-C,GH-NF1-C03,planning/native-foundation-v1/proposed-todos/gh-nf1-c04.md
+GH-NF1-C05,task,Define numerical and interpretation provenance,GH-NF1-L-C,GH-NF1-C04,planning/native-foundation-v1/proposed-todos/gh-nf1-c05.md
+GH-NF1-C06,task,Define capability-based extensions,GH-NF1-L-C,GH-NF1-C05,planning/native-foundation-v1/proposed-todos/gh-nf1-c06.md
+GH-NF1-C07,task,Publish developmental GlassHelix contracts,GH-NF1-L-C,GH-NF1-C06,planning/native-foundation-v1/proposed-todos/gh-nf1-c07.md
+GH-NF1-B01,task,Create native library target and remove legacy default entry,GH-NF1-L-B,GH-NF1-C07;GH-NF1-X01,planning/native-foundation-v1/proposed-todos/gh-nf1-b01.md
+GH-NF1-B02,task,Bind the peer source revision and consumer targets,GH-NF1-L-B,GH-NF1-B01;GH-NF1-X02,planning/native-foundation-v1/proposed-todos/gh-nf1-b02.md
+GH-NF1-B03,task,Qualify C++20 and CUDA boundary choices,GH-NF1-L-B,GH-NF1-B02,planning/native-foundation-v1/proposed-todos/gh-nf1-b03.md
+GH-NF1-B04,task,"Wire tests, examples and package metadata",GH-NF1-L-B,GH-NF1-B03,planning/native-foundation-v1/proposed-todos/gh-nf1-b04.md
+GH-NF1-B05,task,Publish usable native consumer build,GH-NF1-L-B,GH-NF1-B04,planning/native-foundation-v1/proposed-todos/gh-nf1-b05.md
+GH-NF1-S01,task,Implement system and mechanism assembly,GH-NF1-L-S,GH-NF1-C07;GH-NF1-X01,planning/native-foundation-v1/proposed-todos/gh-nf1-s01.md
+GH-NF1-S02,task,"Validate domain, role, effect and algebraic closure",GH-NF1-L-S,GH-NF1-S01,planning/native-foundation-v1/proposed-todos/gh-nf1-s02.md
+GH-NF1-S03,task,Lower to Cellerator numerical programs,GH-NF1-L-S,GH-NF1-S02;GH-NF1-X02,planning/native-foundation-v1/proposed-todos/gh-nf1-s03.md
+GH-NF1-S04,task,Bind independent dynamical and parameter instances,GH-NF1-L-S,GH-NF1-S03,planning/native-foundation-v1/proposed-todos/gh-nf1-s04.md
+GH-NF1-S05,task,Implement correct shared-result eligibility,GH-NF1-L-S,GH-NF1-S04,planning/native-foundation-v1/proposed-todos/gh-nf1-s05.md
+GH-NF1-S06,task,Preserve mechanism provenance under specialization,GH-NF1-L-S,GH-NF1-S05,planning/native-foundation-v1/proposed-todos/gh-nf1-s06.md
+GH-NF1-S07,task,Qualify shared and custom systems,GH-NF1-L-S,GH-NF1-S06;GH-NF1-X03,planning/native-foundation-v1/proposed-todos/gh-nf1-s07.md
+GH-NF1-D01,task,Implement discrete transition semantics,GH-NF1-L-D,GH-NF1-S03;GH-NF1-X02;GH-NF1-X03,planning/native-foundation-v1/proposed-todos/gh-nf1-d01.md
+GH-NF1-D02,task,Implement vector-field evaluation and RK4,GH-NF1-L-D,GH-NF1-D01,planning/native-foundation-v1/proposed-todos/gh-nf1-d02.md
+GH-NF1-D03,task,Represent zero and scheduled forcing,GH-NF1-L-D,GH-NF1-D02,planning/native-foundation-v1/proposed-todos/gh-nf1-d03.md
+GH-NF1-D04,task,Implement batched rollout and observation-time selection,GH-NF1-L-D,GH-NF1-D03,planning/native-foundation-v1/proposed-todos/gh-nf1-d04.md
+GH-NF1-D05,task,Retain checkpointable primal generations,GH-NF1-L-D,GH-NF1-D04,planning/native-foundation-v1/proposed-todos/gh-nf1-d05.md
+GH-NF1-D06,task,Add guarded numerical validation paths,GH-NF1-L-D,GH-NF1-D05,planning/native-foundation-v1/proposed-todos/gh-nf1-d06.md
+GH-NF1-D07,task,Qualify transition library and extension boundaries,GH-NF1-L-D,GH-NF1-D06,planning/native-foundation-v1/proposed-todos/gh-nf1-d07.md
+GH-NF1-O01,task,Implement partial and linear observation,GH-NF1-L-O,GH-NF1-S03;GH-NF1-X02,planning/native-foundation-v1/proposed-todos/gh-nf1-o01.md
+GH-NF1-O02,task,Implement nonlinear observation with capabilities,GH-NF1-L-O,GH-NF1-O01,planning/native-foundation-v1/proposed-todos/gh-nf1-o02.md
+GH-NF1-O03,task,Implement missingness and observation provenance,GH-NF1-L-O,GH-NF1-O02,planning/native-foundation-v1/proposed-todos/gh-nf1-o03.md
+GH-NF1-O04,task,Implement elementary noise and likelihood instruments,GH-NF1-L-O,GH-NF1-O03,planning/native-foundation-v1/proposed-todos/gh-nf1-o04.md
+GH-NF1-O05,task,Compose observation response with dynamics,GH-NF1-L-O,GH-NF1-O04;GH-NF1-X04;GH-NF1-D07,planning/native-foundation-v1/proposed-todos/gh-nf1-o05.md
+GH-NF1-O06,task,Qualify observation contract,GH-NF1-L-O,GH-NF1-O05,planning/native-foundation-v1/proposed-todos/gh-nf1-o06.md
+GH-NF1-E01,task,Implement explicit finite candidate state with weights,GH-NF1-L-E,GH-NF1-M20;GH-NF1-O04,planning/native-foundation-v1/proposed-todos/gh-nf1-e01.md
+GH-NF1-E02,task,Propagate candidates through the same execution path,GH-NF1-L-E,GH-NF1-E01,planning/native-foundation-v1/proposed-todos/gh-nf1-e02.md
+GH-NF1-E03,task,Update weights from recorded observation likelihood,GH-NF1-L-E,GH-NF1-E02,planning/native-foundation-v1/proposed-todos/gh-nf1-e03.md
+GH-NF1-E04,task,Preserve inferential correlations and evidence history,GH-NF1-L-E,GH-NF1-E03,planning/native-foundation-v1/proposed-todos/gh-nf1-e04.md
+GH-NF1-E05,task,Qualify inference as an instrument not a learner,GH-NF1-L-E,GH-NF1-E04,planning/native-foundation-v1/proposed-todos/gh-nf1-e05.md
+GH-NF1-Q01,task,Expose the derivative of the requested calculation,GH-NF1-L-Q,GH-NF1-M20;GH-NF1-X04,planning/native-foundation-v1/proposed-todos/gh-nf1-q01.md
+GH-NF1-Q02,task,Compose matrix-free observation-history sensitivity,GH-NF1-L-Q,GH-NF1-Q01,planning/native-foundation-v1/proposed-todos/gh-nf1-q02.md
+GH-NF1-Q03,task,Materialize bounded scaled sensitivity for small diagnostics,GH-NF1-L-Q,GH-NF1-Q02,planning/native-foundation-v1/proposed-todos/gh-nf1-q03.md
+GH-NF1-Q04,task,Compute local null directions with established linear algebra,GH-NF1-L-Q,GH-NF1-Q03,planning/native-foundation-v1/proposed-todos/gh-nf1-q04.md
+GH-NF1-Q05,task,Compare aligned candidate mechanisms and joint alternatives,GH-NF1-L-Q,GH-NF1-Q04,planning/native-foundation-v1/proposed-todos/gh-nf1-q05.md
+GH-NF1-Q06,task,Expose selected higher-order response and status,GH-NF1-L-Q,GH-NF1-Q05,planning/native-foundation-v1/proposed-todos/gh-nf1-q06.md
+GH-NF1-Q07,task,Qualify diagnostic readout and provenance,GH-NF1-L-Q,GH-NF1-Q06,planning/native-foundation-v1/proposed-todos/gh-nf1-q07.md
+GH-NF1-R01,task,Represent supplied exact and approximate reductions,GH-NF1-L-R,GH-NF1-M20;GH-NF1-X04,planning/native-foundation-v1/proposed-todos/gh-nf1-r01.md
+GH-NF1-R02,task,Evaluate closure and response residuals,GH-NF1-L-R,GH-NF1-R01,planning/native-foundation-v1/proposed-todos/gh-nf1-r02.md
+GH-NF1-R03,task,Track support-specific approximation claims,GH-NF1-L-R,GH-NF1-R02,planning/native-foundation-v1/proposed-todos/gh-nf1-r03.md
+GH-NF1-R04,task,Implement limited bound propagation and decision guards,GH-NF1-L-R,GH-NF1-R03,planning/native-foundation-v1/proposed-todos/gh-nf1-r04.md
+GH-NF1-R05,task,Qualify reduction/inference separation,GH-NF1-L-R,GH-NF1-R04,planning/native-foundation-v1/proposed-todos/gh-nf1-r05.md
+GH-NF1-P01,task,Implement thin native bindings over the common library,GH-NF1-L-P,GH-NF1-M30,planning/native-foundation-v1/proposed-todos/gh-nf1-p01.md
+GH-NF1-P02,task,Define explicit host array ingress and conversion,GH-NF1-L-P,GH-NF1-P01,planning/native-foundation-v1/proposed-todos/gh-nf1-p02.md
+GH-NF1-P03,task,Handle asynchronous buffer and exception lifetime,GH-NF1-L-P,GH-NF1-P02,planning/native-foundation-v1/proposed-todos/gh-nf1-p03.md
+GH-NF1-P04,task,Add capability and plan introspection,GH-NF1-L-P,GH-NF1-P03,planning/native-foundation-v1/proposed-todos/gh-nf1-p04.md
+GH-NF1-P05,task,Qualify optional device interchange or reject it honestly,GH-NF1-L-P,GH-NF1-P04,planning/native-foundation-v1/proposed-todos/gh-nf1-p05.md
+GH-NF1-P06,task,Publish native/Python parity and packaging evidence,GH-NF1-L-P,GH-NF1-P05,planning/native-foundation-v1/proposed-todos/gh-nf1-p06.md
+GH-NF1-U01,task,Implement capability and plan explanation,GH-NF1-L-U,GH-NF1-M20,planning/native-foundation-v1/proposed-todos/gh-nf1-u01.md
+GH-NF1-U02,task,Implement run and failure inspection,GH-NF1-L-U,GH-NF1-U01,planning/native-foundation-v1/proposed-todos/gh-nf1-u02.md
+GH-NF1-U03,task,Serialize portable synthetic replay inputs,GH-NF1-L-U,GH-NF1-U02,planning/native-foundation-v1/proposed-todos/gh-nf1-u03.md
+GH-NF1-U04,task,Bind evidence and peer revision in artifacts,GH-NF1-L-U,GH-NF1-U03,planning/native-foundation-v1/proposed-todos/gh-nf1-u04.md
+GH-NF1-U05,task,Provide code-level and Python usage examples,GH-NF1-L-U,GH-NF1-U04;GH-NF1-M30,planning/native-foundation-v1/proposed-todos/gh-nf1-u05.md
+GH-NF1-U06,task,Qualify replay and artifact corruption handling,GH-NF1-L-U,GH-NF1-U05,planning/native-foundation-v1/proposed-todos/gh-nf1-u06.md
+GH-NF1-T01,task,Author truth-known systems independent of production lowering,GH-NF1-L-T,GH-NF1-M00,planning/native-foundation-v1/proposed-todos/gh-nf1-t01.md
+GH-NF1-T02,task,Author role and observation counterexamples,GH-NF1-L-T,GH-NF1-T01,planning/native-foundation-v1/proposed-todos/gh-nf1-t02.md
+GH-NF1-T03,task,"Author response, null and support counterexamples",GH-NF1-L-T,GH-NF1-T02,planning/native-foundation-v1/proposed-todos/gh-nf1-t03.md
+GH-NF1-T04,task,Qualify integrated real CPU/CUDA path,GH-NF1-L-T,GH-NF1-T03;GH-NF1-M30;GH-NF1-X05,planning/native-foundation-v1/proposed-todos/gh-nf1-t04.md
+GH-NF1-T05,task,"Qualify Python, replay, numerics and failure behavior",GH-NF1-L-T,GH-NF1-T04;GH-NF1-M40,planning/native-foundation-v1/proposed-todos/gh-nf1-t05.md
+GH-NF1-T06,task,Publish independent qualification bundle,GH-NF1-L-T,GH-NF1-T05,planning/native-foundation-v1/proposed-todos/gh-nf1-t06.md
+GH-NF1-K01,task,Build complete toolbox workload matrix,GH-NF1-L-K,GH-NF1-M30;GH-NF1-X05,planning/native-foundation-v1/proposed-todos/gh-nf1-k01.md
+GH-NF1-K02,task,"Measure setup, resident and result-observation cost",GH-NF1-L-K,GH-NF1-K01,planning/native-foundation-v1/proposed-todos/gh-nf1-k02.md
+GH-NF1-K03,task,Test sharing and compact-support profitability,GH-NF1-L-K,GH-NF1-K02,planning/native-foundation-v1/proposed-todos/gh-nf1-k03.md
+GH-NF1-K04,task,Publish numerical-performance tradeoffs and requests,GH-NF1-L-K,GH-NF1-K03,planning/native-foundation-v1/proposed-todos/gh-nf1-k04.md
+GH-NF1-K05,task,Qualify sensitivity-aware performance and final report,GH-NF1-L-K,GH-NF1-K04,planning/native-foundation-v1/proposed-todos/gh-nf1-k05.md
+GH-NF1-X01,task,Import the developmental Cellerator contracts,GH-NF1-L-X,GH-NF1-M00,planning/native-foundation-v1/proposed-todos/gh-nf1-x01.md
+GH-NF1-X02,task,Import linked core execution capability,GH-NF1-L-X,GH-NF1-X01,planning/native-foundation-v1/proposed-todos/gh-nf1-x02.md
+GH-NF1-X03,task,Import n-ary and support execution capability,GH-NF1-L-X,GH-NF1-X02,planning/native-foundation-v1/proposed-todos/gh-nf1-x03.md
+GH-NF1-X04,task,Import differential execution capability,GH-NF1-L-X,GH-NF1-X03,planning/native-foundation-v1/proposed-todos/gh-nf1-x04.md
+GH-NF1-X05,task,Import qualified consumer-ready bundle,GH-NF1-L-X,GH-NF1-X04,planning/native-foundation-v1/proposed-todos/gh-nf1-x05.md
+GH-NF1-X06,task,Import final Cellerator closure receipt,GH-NF1-L-X,GH-NF1-X05,planning/native-foundation-v1/proposed-todos/gh-nf1-x06.md
+GH-NF1-M00,task,"Scope, control and baseline adopted",GH-NF1-L-M,GH-NF1-A04,planning/native-foundation-v1/proposed-todos/gh-nf1-m00.md
+GH-NF1-M10,task,Native contracts and first external consumer integrated,GH-NF1-L-M,GH-NF1-M00;GH-NF1-C07;GH-NF1-B05;GH-NF1-S03;GH-NF1-X02,planning/native-foundation-v1/proposed-todos/gh-nf1-m10.md
+GH-NF1-M20,task,Shared nonlinear transition toolbox integrated,GH-NF1-L-M,GH-NF1-M10;GH-NF1-S07;GH-NF1-D07;GH-NF1-X03,planning/native-foundation-v1/proposed-todos/gh-nf1-m20.md
+GH-NF1-M30,task,"Observation, inference and interrogation integrated",GH-NF1-L-M,GH-NF1-M20;GH-NF1-O06;GH-NF1-E05;GH-NF1-Q07;GH-NF1-R05,planning/native-foundation-v1/proposed-todos/gh-nf1-m30.md
+GH-NF1-M40,task,"Python, artifacts and post-epic demonstration integrated",GH-NF1-L-M,GH-NF1-M30;GH-NF1-P06;GH-NF1-U06,planning/native-foundation-v1/proposed-todos/gh-nf1-m40.md
+GH-NF1-M60,task,Real GlassHelix consumer acceptance published,GH-NF1-L-M,GH-NF1-M40;GH-NF1-T06;GH-NF1-K05;GH-NF1-X05,planning/native-foundation-v1/proposed-todos/gh-nf1-m60.md
+GH-NF1-M90,task,Joint foundation closed with final peer receipt,GH-NF1-L-M,GH-NF1-M60;GH-NF1-X06,planning/native-foundation-v1/proposed-todos/gh-nf1-m90.md

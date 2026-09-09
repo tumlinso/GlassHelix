@@ -1,0 +1,8 @@
+id,owner_task_id,title
+GH-NF1-CP-M00,GH-NF1-M00,"Scope, control and baseline adopted"
+GH-NF1-CP-M10,GH-NF1-M10,Native contracts and first external consumer integrated
+GH-NF1-CP-M20,GH-NF1-M20,Shared nonlinear transition toolbox integrated
+GH-NF1-CP-M30,GH-NF1-M30,"Observation, inference and interrogation integrated"
+GH-NF1-CP-M40,GH-NF1-M40,"Python, artifacts and post-epic demonstration integrated"
+GH-NF1-CP-M60,GH-NF1-M60,Real GlassHelix consumer acceptance published
+GH-NF1-CP-M90,GH-NF1-M90,Joint foundation closed with final peer receipt

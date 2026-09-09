@@ -1,0 +1,101 @@
+{
+  "kind": "nf1-integration-schedule-v1",
+  "milestones": [
+    {
+      "task": "GH-NF1-M00",
+      "prerequisites": [
+        "GH-NF1-A04"
+      ],
+      "checkpoint": "GH-NF1-CP-M00",
+      "gate_group": "baseline",
+      "incoming_external": []
+    },
+    {
+      "task": "GH-NF1-M10",
+      "prerequisites": [
+        "GH-NF1-M00",
+        "GH-NF1-C07",
+        "GH-NF1-B05",
+        "GH-NF1-S03",
+        "GH-NF1-X02"
+      ],
+      "checkpoint": "GH-NF1-CP-M10",
+      "gate_group": "native",
+      "incoming_external": [
+        "NF1-CE-CORE"
+      ]
+    },
+    {
+      "task": "GH-NF1-M20",
+      "prerequisites": [
+        "GH-NF1-M10",
+        "GH-NF1-S07",
+        "GH-NF1-D07",
+        "GH-NF1-X03"
+      ],
+      "checkpoint": "GH-NF1-CP-M20",
+      "gate_group": "transition",
+      "incoming_external": [
+        "NF1-CE-NARY"
+      ]
+    },
+    {
+      "task": "GH-NF1-M30",
+      "prerequisites": [
+        "GH-NF1-M20",
+        "GH-NF1-O06",
+        "GH-NF1-E05",
+        "GH-NF1-Q07",
+        "GH-NF1-R05"
+      ],
+      "checkpoint": "GH-NF1-CP-M30",
+      "gate_group": "interrogation",
+      "incoming_external": []
+    },
+    {
+      "task": "GH-NF1-M40",
+      "prerequisites": [
+        "GH-NF1-M30",
+        "GH-NF1-P06",
+        "GH-NF1-U06"
+      ],
+      "checkpoint": "GH-NF1-CP-M40",
+      "gate_group": "tools",
+      "incoming_external": []
+    },
+    {
+      "task": "GH-NF1-M60",
+      "prerequisites": [
+        "GH-NF1-M40",
+        "GH-NF1-T06",
+        "GH-NF1-K05",
+        "GH-NF1-X05"
+      ],
+      "checkpoint": "GH-NF1-CP-M60",
+      "gate_group": "consumer",
+      "incoming_external": [
+        "NF1-CE-READY"
+      ]
+    },
+    {
+      "task": "GH-NF1-M90",
+      "prerequisites": [
+        "GH-NF1-M60",
+        "GH-NF1-X06"
+      ],
+      "checkpoint": "GH-NF1-CP-M90",
+      "gate_group": "final",
+      "incoming_external": [
+        "NF1-CE-FINAL"
+      ]
+    }
+  ],
+  "central_owner_lane": "GH-NF1-L-M",
+  "source_commit_then_external_evidence": true,
+  "closure_order": [
+    "CE-NF1-M50",
+    "GH-NF1-M60",
+    "CE-NF1-M90",
+    "GH-NF1-M90"
+  ]
+}

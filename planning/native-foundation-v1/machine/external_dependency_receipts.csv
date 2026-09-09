@@ -1,0 +1,7 @@
+id,producer_project,producer_task,consumer_project,consumer_task,capability,status,producer_checkpoint,receipt_path,verification_script
+NF1-CE-CONTRACTS,cellerator,CE-NF1-M10,glasshelix,GH-NF1-X01,developmental-contracts,planned,CE-NF1-CP-M10,,planning/native-foundation-v1/scripts/verify_receipt.py
+NF1-CE-CORE,cellerator,CE-NF1-M20,glasshelix,GH-NF1-X02,linked-core,planned,CE-NF1-CP-M20,,planning/native-foundation-v1/scripts/verify_receipt.py
+NF1-CE-NARY,cellerator,CE-NF1-M30,glasshelix,GH-NF1-X03,nary-and-support,planned,CE-NF1-CP-M30,,planning/native-foundation-v1/scripts/verify_receipt.py
+NF1-CE-DIFFERENTIAL,cellerator,CE-NF1-M40,glasshelix,GH-NF1-X04,differential,planned,CE-NF1-CP-M40,,planning/native-foundation-v1/scripts/verify_receipt.py
+NF1-CE-READY,cellerator,CE-NF1-M50,glasshelix,GH-NF1-X05,consumer-ready,planned,CE-NF1-CP-M50,,planning/native-foundation-v1/scripts/verify_receipt.py
+NF1-CE-FINAL,cellerator,CE-NF1-M90,glasshelix,GH-NF1-X06,cellerator-final,planned,CE-NF1-CP-M90,,planning/native-foundation-v1/scripts/verify_receipt.py
