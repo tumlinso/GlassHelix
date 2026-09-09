@@ -1,0 +1,179 @@
+{
+  "kind": "nf1-consumer-import-v1",
+  "task_id": "GH-NF1-X01",
+  "edge_id": "NF1-CE-CONTRACTS",
+  "producer_uuid": "0ccaac37-dbbf-448e-a5f8-def197a70aba",
+  "producer_run": "CE-NF1-RUN-V1",
+  "producer_task": "CE-NF1-M10",
+  "qualified_source": "c4fa52fae85d80fad13644a4b368525666a90944",
+  "consumed_checkout": "9280efd91f47851846ace3edda705a21bb4e4e43",
+  "source_files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "117294d14de95caf4165c8880e53d4914e2265c2610842ca633eab670b3e7077"
+    },
+    {
+      "path": "docs/glasshelix_execution_foundation_v1/contracts/developmental_seam.md",
+      "sha256": "6d997c4815a8f8b47ac8901d7e8434491c7d212ffeaf90ea35dc7596a0cbdc01"
+    },
+    {
+      "path": "include/Cellerator/compute/operation/native_foundation_contract.hh",
+      "sha256": "0c9c4a3a4f2a1afda5101813993685b7e03c8f9ac2041961033798e395255509"
+    },
+    {
+      "path": "include/Cellerator/compute/operation/operation_core_v2/schema.hh",
+      "sha256": "8cb0eac80df4318c3c9e9e477097e222df630d505aaa377ccfad68d527a425c2"
+    },
+    {
+      "path": "include/Cellerator/execution/biological_abi.hh",
+      "sha256": "b64e98995524b32ca55ad1dd14f454f650b0359a542a7f80f6224cd19b73267c"
+    },
+    {
+      "path": "include/Cellerator/execution/execution_order.hh",
+      "sha256": "5ce60c6d1f51885b0337b4c9ba3349d0bc541c7a7e0b173c83857a53633eedf7"
+    },
+    {
+      "path": "include/Cellerator/execution/identity.hh",
+      "sha256": "ac3e3e2c46a7b1928ea49317c82a94b0663f5739946fe9ad3aba12772c0e58b0"
+    },
+    {
+      "path": "include/Cellerator/execution/launch_bindings.hh",
+      "sha256": "3e97b60066c8c1bcb01933a49015c5180c0e24632ec6de86d9409aadb2bf8b61"
+    },
+    {
+      "path": "include/Cellerator/execution/lifetimes.hh",
+      "sha256": "5680593018778d61630d01d7b095a6f3dd746dc41dcffff05821b9d2e1c637a0"
+    },
+    {
+      "path": "include/Cellerator/execution/operands.hh",
+      "sha256": "4514b949c2c082eaa2f8fefe9540bc4614c14d87746edb63964ade3ada8e8aba"
+    },
+    {
+      "path": "include/Cellerator/execution/program/program_v2.h",
+      "sha256": "1fbe5bf1f2f26b0e43dce54f43f256f7d2b5eabfe9547317777def6ce57c8fbb"
+    },
+    {
+      "path": "include/Cellerator/execution/validation.hh",
+      "sha256": "bd4b93acb6fefea15dc6cbdd82ee2867e21aab28a62eb9a753b71642256772b8"
+    },
+    {
+      "path": "src/compute/operation/operation_core_v2/schema.cc",
+      "sha256": "6b3cbbf138755db04ab8ca56ec50e1d669ed31a78ba14ef954beeedc158e11e9"
+    },
+    {
+      "path": "src/execution/program/program_v2.cc",
+      "sha256": "b51ef149a8ba688ee52681a908af23fd2ec85a9a41bcdc244e5035e23135f7a3"
+    },
+    {
+      "path": "tests/native_foundation/reference/CMakeLists.txt",
+      "sha256": "8e042db32d4abfb3905905bfaa0ccfffbe5f1f711e8b72910602752cb39ffeca"
+    },
+    {
+      "path": "tests/native_foundation/reference/formulas.hh",
+      "sha256": "d6bf288598e0ba35a8887e27376e3f6845386cfb40ed8069dab32d43c4afe45d"
+    },
+    {
+      "path": "tests/native_foundation/reference/t01.cc",
+      "sha256": "daf696b17c497030c2a37889d39e9d8f816d0d79245d1a85ca411b4d2683379d"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "CE-NF1-IF-CONSUMER-BUILD",
+      "version": "1",
+      "files": [
+        {
+          "path": "CMakeLists.txt",
+          "sha256": "117294d14de95caf4165c8880e53d4914e2265c2610842ca633eab670b3e7077"
+        },
+        {
+          "path": "docs/glasshelix_execution_foundation_v1/contracts/developmental_seam.md",
+          "sha256": "6d997c4815a8f8b47ac8901d7e8434491c7d212ffeaf90ea35dc7596a0cbdc01"
+        }
+      ],
+      "content_hash": "6b75d0370ad63191ad1d6cc83090015d01bfc343212666cca99749412a86a869"
+    },
+    {
+      "id": "CE-NF1-IF-DIFFERENTIAL",
+      "version": "1",
+      "files": [
+        {
+          "path": "include/Cellerator/compute/operation/native_foundation_contract.hh",
+          "sha256": "0c9c4a3a4f2a1afda5101813993685b7e03c8f9ac2041961033798e395255509"
+        }
+      ],
+      "content_hash": "3aa179a3bbf60f6fc27571b7a4cea2a5bd7da0539a320dbd4bd206db382ec419"
+    },
+    {
+      "id": "CE-NF1-IF-LIFETIME-VALUES",
+      "version": "1",
+      "files": [
+        {
+          "path": "include/Cellerator/compute/operation/native_foundation_contract.hh",
+          "sha256": "0c9c4a3a4f2a1afda5101813993685b7e03c8f9ac2041961033798e395255509"
+        },
+        {
+          "path": "include/Cellerator/execution/launch_bindings.hh",
+          "sha256": "3e97b60066c8c1bcb01933a49015c5180c0e24632ec6de86d9409aadb2bf8b61"
+        }
+      ],
+      "content_hash": "94839d854d70cc58f382fe0319ecd592861df48659eafd2223fad82ac2b7e4f2"
+    },
+    {
+      "id": "CE-NF1-IF-NARY",
+      "version": "1",
+      "files": [
+        {
+          "path": "include/Cellerator/compute/operation/native_foundation_contract.hh",
+          "sha256": "0c9c4a3a4f2a1afda5101813993685b7e03c8f9ac2041961033798e395255509"
+        }
+      ],
+      "content_hash": "3aa179a3bbf60f6fc27571b7a4cea2a5bd7da0539a320dbd4bd206db382ec419"
+    },
+    {
+      "id": "CE-NF1-IF-NATIVE-OPERANDS",
+      "version": "1",
+      "files": [
+        {
+          "path": "include/Cellerator/compute/operation/native_foundation_contract.hh",
+          "sha256": "0c9c4a3a4f2a1afda5101813993685b7e03c8f9ac2041961033798e395255509"
+        }
+      ],
+      "content_hash": "3aa179a3bbf60f6fc27571b7a4cea2a5bd7da0539a320dbd4bd206db382ec419"
+    },
+    {
+      "id": "CE-NF1-IF-SUPPORT",
+      "version": "1",
+      "files": [
+        {
+          "path": "include/Cellerator/compute/operation/native_foundation_contract.hh",
+          "sha256": "0c9c4a3a4f2a1afda5101813993685b7e03c8f9ac2041961033798e395255509"
+        }
+      ],
+      "content_hash": "3aa179a3bbf60f6fc27571b7a4cea2a5bd7da0539a320dbd4bd206db382ec419"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/home/tumlinson/.local/state/nf1-20260908-v1/ce/m10/evidence/capability.json",
+      "sha256": "ea0e7f1e3e3638de18131fb205dbf3f6935fe6f876d5fa81890927b4f90256c6"
+    },
+    {
+      "path": "/home/tumlinson/.local/state/nf1-20260908-v1/ce/m10/evidence/final-t01.json",
+      "sha256": "114f8acdcf8165d2fa53d4c01085639d58d847a70ae707fbb25b186959edad53"
+    },
+    {
+      "path": "/home/tumlinson/.local/state/nf1-20260908-v1/gh/x01/authority.json",
+      "sha256": "0a5c5e3858fe62244b3f82d1868643f346f31b5f773669a243d0c75206f89c2f"
+    }
+  ],
+  "authority_revision": 7109,
+  "evidence_level": "developmental_contracts_and_independent_host_oracle",
+  "tests_verified": [
+    "ce_nf1_t01"
+  ],
+  "limitations": [
+    "Developmental contracts and independent host oracle only. No complete production NF1 provider/runtime or CUDA execution claimed.",
+    "Future interface revisions require native publication and consumer revalidation."
+  ]
+}
