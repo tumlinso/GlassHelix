@@ -1,0 +1,7 @@
+add_executable(gh_nf1_t01 t01.cc)
+target_compile_features(gh_nf1_t01 PRIVATE cxx_std_20)
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  target_compile_options(gh_nf1_t01 PRIVATE -Wall -Wextra -Wpedantic -Werror -fno-fast-math)
+endif()
+add_test(NAME gh_nf1_t01 COMMAND gh_nf1_t01)
+set_tests_properties(gh_nf1_t01 PROPERTIES LABELS "nf1;host;independent;fp64" TIMEOUT 30)
