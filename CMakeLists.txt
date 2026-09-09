@@ -1,9 +1,31 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.28)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Project-wide configuration
 # ─────────────────────────────────────────────────────────────────────────────
 project(GlassHelix LANGUAGES CXX)
+
+# Independent FP64 qualification has no accelerator or legacy-model dependency.
+# The default consumer path remains CUDA; this explicit option selects tests only.
+option(NF1_HOST_VALIDATION "Build independent NF1 host qualification only" OFF)
+if(NF1_HOST_VALIDATION)
+  set(CMAKE_CXX_STANDARD 20)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_EXTENSIONS OFF)
+  include(CTest)
+  if(NOT BUILD_TESTING)
+    message(FATAL_ERROR "NF1_HOST_VALIDATION requires BUILD_TESTING=ON")
+  endif()
+  if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/native_foundation/independent/CMakeLists.txt")
+    message(FATAL_ERROR "NF1 independent test owner has not been integrated (GH-NF1-T01)")
+  endif()
+  add_subdirectory(tests/native_foundation/independent)
+  get_property(nf1_independent_tests DIRECTORY tests/native_foundation/independent PROPERTY TESTS)
+  if(NOT "gh_nf1_t01" IN_LIST nf1_independent_tests)
+    message(FATAL_ERROR "Independent qualification must register the real gh_nf1_t01 test")
+  endif()
+  return()
+endif()
 
 set(CUDA_DIR "/usr/local/cuda")
 option(USE_CUDA "Enable CUDA support" ON)

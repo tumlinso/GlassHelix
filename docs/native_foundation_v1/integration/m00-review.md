@@ -31,3 +31,19 @@ therefore establishes governance readiness only and does not claim a native
 calculation, numerical correctness, performance, or real-consumer acceptance.
 Later runtime milestones must rebuild and qualify the real linked path with
 actual nonempty executable test inventory and CUDA where required.
+
+## Early host-test registration
+
+The controller additionally authorized a scoped root CMake entry for T01's
+independent FP64 executable. Explicit NF1_HOST_VALIDATION=ON selects only the
+independent test owner before legacy compiler/OpenMP/CUDA setup, requires testing
+and a real gh_nf1_t01 registration, and fails if that owner is absent. Default
+selection is unchanged; the eventual demo must require real CUDA. CMake minimum
+is 3.28, matching installed 3.28.3; the reviewed existing configuration uses no
+3.29-only feature. No biological or accelerator source is introduced here.
+
+The missing-owner negative control was executed with CMake 3.28.3 and GNU13.3:
+configuration failed at the explicit missing GH-NF1-T01 diagnostic before CUDA
+setup. Positive execution awaits the real T01 fragment; no empty CTest pass or
+synthetic fixture is claimed. After T01 integration, build this option and require
+its real executable test inventory before dependent acceptance.

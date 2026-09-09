@@ -13,7 +13,11 @@
   "artifacts": [
     {
       "path": "docs/native_foundation_v1/integration/m00-review.md",
-      "sha256": "d154521c048c258501494d5b3f8973e7149f3c3a11810f7641cbf7974c2def6e"
+      "sha256": "5a2cca80a577d600b876dec7c4105b21aca48c12bd73c58c92517f3e114d1f1c"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "c1b06e4cf7974ed0d0d2e25d30da9b3a9ddcd888024c973dd8da8f558e18a12e"
     }
   ],
   "evidence_level": "governance_review",
