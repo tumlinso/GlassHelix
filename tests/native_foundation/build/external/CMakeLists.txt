@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.28)
+project(GlassHelixExternalSystemConsumer LANGUAGES CXX)
+find_package(GlassHelix CONFIG REQUIRED)
+add_executable(gh_nf1_external_width33 consumer.cc)
+target_compile_features(gh_nf1_external_width33 PRIVATE cxx_std_20)
+target_link_libraries(gh_nf1_external_width33 PRIVATE GlassHelix::foundation)
