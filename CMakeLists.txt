@@ -9,9 +9,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # GlassHelix consumes a published Cellerator library. It never compiles
 # Cellerator sources or provides an accelerator substitute.
-find_package(Cellerator CONFIG REQUIRED COMPONENTS native_foundation)
-if(NOT TARGET Cellerator::native_foundation)
-  message(FATAL_ERROR "Cellerator package lacks Cellerator::native_foundation")
+find_package(Cellerator CONFIG REQUIRED COMPONENTS native_foundation indexed_mechanism)
+if(NOT TARGET Cellerator::native_foundation OR NOT TARGET Cellerator::indexed_mechanism)
+  message(FATAL_ERROR "Cellerator package lacks the native foundation or indexed mechanism target")
 endif()
 add_library(glasshelix_core INTERFACE)
 add_library(GlassHelix::core ALIAS glasshelix_core)
@@ -19,7 +19,8 @@ target_compile_features(glasshelix_core INTERFACE cxx_std_20)
 target_include_directories(glasshelix_core INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-target_link_libraries(glasshelix_core INTERFACE Cellerator::native_foundation)
+target_link_libraries(glasshelix_core INTERFACE
+  Cellerator::native_foundation Cellerator::indexed_mechanism)
 
 add_library(glasshelix_foundation STATIC src/system/assembly.cc)
 add_library(GlassHelix::foundation ALIAS glasshelix_foundation)
