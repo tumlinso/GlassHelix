@@ -1,0 +1,4 @@
+add_executable(gh_nf1_dynamics_contract dynamics_contract.cc)
+target_link_libraries(gh_nf1_dynamics_contract PRIVATE GlassHelix::foundation Cellerator::native_foundation)
+target_compile_features(gh_nf1_dynamics_contract PRIVATE cxx_std_20)
+add_test(NAME gh_nf1_dynamics_contract COMMAND gh_nf1_dynamics_contract)
