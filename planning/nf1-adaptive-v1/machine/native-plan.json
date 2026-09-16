@@ -1,0 +1,887 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "GlassHelix"
+  },
+  "invariants": [
+    {
+      "id": "GH-NF1A-INV-SCOPE",
+      "rule": "Deliver the accepted supplied-system execution toolbox, not a biological experiment, new learner, universal identifiability theorem or new execution framework.",
+      "severity": "error",
+      "scope": {}
+    },
+    {
+      "id": "GH-NF1A-INV-PRESERVE",
+      "rule": "Preserve unknown/uncommitted/unmerged work, all successful legacy records and unrelated programs. Selective evidence-backed pruning is allowed; mass deletion, reset/clean and force-push are not.",
+      "severity": "error",
+      "scope": {}
+    },
+    {
+      "id": "GH-NF1A-INV-TRUTH",
+      "rule": "Real capabilities require source-bound executed evidence. A descriptor, reference-only oracle, fake provider, skipped test, enqueue counter or unselected optimization does not establish a native capability.",
+      "severity": "error",
+      "scope": {}
+    },
+    {
+      "id": "GH-NF1A-INV-OWNERS",
+      "rule": "Use the existing numerical, identity, preparation and lifetime owners. Project-local claims govern writes; source scopes are coordination boundaries, amendable with conflict checks, not reasons to duplicate implementation.",
+      "severity": "error",
+      "scope": {}
+    },
+    {
+      "id": "GH-NF1A-INV-AGENCY",
+      "rule": "The root chooses decomposition, ordinary APIs, tests, algorithms, scope transfers and delegation. Explain consequential choices; do not generate procedural microtasks or request routine user direction.",
+      "severity": "error",
+      "scope": {}
+    }
+  ],
+  "decisions": [],
+  "locks": [],
+  "interfaces": [],
+  "barriers": [],
+  "resource_classes": [],
+  "tasks": [
+    {
+      "id": "GH-NF1A-ADOPT",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "task",
+      "title": "Adopt preserved NF1 work and switch the execution frontier",
+      "objective": "Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.",
+      "priority": 200,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "docs/nf1_adaptive/adoption",
+          "planning/nf1-adaptive-v1"
+        ],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-ADOPT-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-ADOPT"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ]
+        }
+      ],
+      "checkpoints": [],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "This changes execution guidance, not scientific scope or the history of successful work.",
+      "desired_end_state": "Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.",
+      "rationale": "This changes execution guidance, not scientific scope or the history of successful work.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/ADOPT.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-CONTROL",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "task",
+      "title": "Coordinate and close the accepted local program",
+      "objective": "Serve as the strategic root and ordinary GlassHelix coordinator, delegate bounded work intelligently, coordinate the Cellerator seat and finish only after local RELEASE.",
+      "priority": 190,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1A-ADOPT"
+        }
+      ],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-CONTROL-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-CONTROL"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ]
+        }
+      ],
+      "checkpoints": [],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/CONTROL.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "Preserve global reasoning at the root without turning it into an expensive scheduler of procedural microtasks.",
+      "desired_end_state": "Serve as the strategic root and ordinary GlassHelix coordinator, delegate bounded work intelligently, coordinate the Cellerator seat and finish only after local RELEASE.",
+      "rationale": "Preserve global reasoning at the root without turning it into an expensive scheduler of procedural microtasks.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/CONTROL.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-SYSTEM",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "task",
+      "title": "Deliver usable native systems and deterministic evolution",
+      "objective": "Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.",
+      "priority": 160,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "CMakePresets.json",
+          "cmake/GlassHelixFoundation.cmake",
+          "include/GlassHelix/core",
+          "src/core",
+          "include/GlassHelix/system",
+          "src/system",
+          "include/GlassHelix/dynamics",
+          "src/dynamics",
+          "tests/native_foundation/core",
+          "tests/native_foundation/build",
+          "tests/native_foundation/system",
+          "tests/native_foundation/dynamics",
+          "docs/nf1_adaptive/system"
+        ],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1A-ADOPT"
+        }
+      ],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-SYSTEM-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-SYSTEM"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ],
+          "cuda": {
+            "gpus": 1,
+            "cpu_threads": 2
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1A-SYSTEM-DONE",
+          "title": "Deliver usable native systems and deterministic evolution"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/SYSTEM.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "This is the first usable consumer, not a final learner. Preserve scientific meaning above the existing numerical engine; eliminate test-only dependency recompilation in production.",
+      "desired_end_state": "Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.",
+      "rationale": "This is the first usable consumer, not a final learner. Preserve scientific meaning above the existing numerical engine; eliminate test-only dependency recompilation in production.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/SYSTEM.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-OBSERVE",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "task",
+      "title": "Deliver observation and finite-candidate evidence updates",
+      "objective": "Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.",
+      "priority": 120,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/observation",
+          "src/observation",
+          "include/GlassHelix/inference",
+          "src/inference",
+          "tests/native_foundation/observation",
+          "tests/native_foundation/inference",
+          "docs/nf1_adaptive/observation"
+        ],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1A-ADOPT"
+        }
+      ],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-OBSERVE-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-OBSERVE"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ],
+          "cuda": {
+            "gpus": 1,
+            "cpu_threads": 2
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1A-OBSERVE-DONE",
+          "title": "Deliver observation and finite-candidate evidence updates"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "What determines the answer and what helps infer that determining state need not be the same information. This must remain executable, not merely documented.",
+      "desired_end_state": "Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.",
+      "rationale": "What determines the answer and what helps infer that determining state need not be the same information. This must remain executable, not merely documented.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/OBSERVE.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-ANALYZE",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "task",
+      "title": "Deliver response, local ambiguity and supplied-reduction instruments",
+      "objective": "Compose requested observation/rollout derivatives, scaled local sensitivity/null diagnostics, aligned alternative comparison and supplied-reduction/error checks.",
+      "priority": 120,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix/interrogation",
+          "src/interrogation",
+          "include/GlassHelix/reduction",
+          "src/reduction",
+          "tests/native_foundation/interrogation",
+          "tests/native_foundation/reduction",
+          "docs/nf1_adaptive/analysis"
+        ],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1A-SYSTEM"
+        }
+      ],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-ANALYZE-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-ANALYZE"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ],
+          "cuda": {
+            "gpus": 1,
+            "cpu_threads": 2
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1A-ANALYZE-DONE",
+          "title": "Deliver response, local ambiguity and supplied-reduction instruments"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/ANALYZE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "These are instruments over supplied models: local numerical evidence is not global identification, molecular discovery or universal minimal-state inference.",
+      "desired_end_state": "Compose requested observation/rollout derivatives, scaled local sensitivity/null diagnostics, aligned alternative comparison and supplied-reduction/error checks.",
+      "rationale": "These are instruments over supplied models: local numerical evidence is not global identification, molecular discovery or universal minimal-state inference.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/ANALYZE.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-ACCESS",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "task",
+      "title": "Deliver thin Python access, inspection and portable replay",
+      "objective": "Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.",
+      "priority": 120,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "bindings/python",
+          "python/glasshelix",
+          "include/GlassHelix/artifacts",
+          "src/artifacts",
+          "tools/native_foundation",
+          "tests/native_foundation/python",
+          "tests/native_foundation/artifacts",
+          "docs/nf1_adaptive/access"
+        ],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1A-SYSTEM"
+        }
+      ],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-ACCESS-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-ACCESS"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ],
+          "cuda": {
+            "gpus": 1,
+            "cpu_threads": 2
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1A-ACCESS-DONE",
+          "title": "Deliver thin Python access, inspection and portable replay"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/ACCESS.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "Bind one library rather than duplicate its mathematics; replay logical inputs, not ephemeral pointers or opaque generations.",
+      "desired_end_state": "Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.",
+      "rationale": "Bind one library rather than duplicate its mathematics; replay logical inputs, not ephemeral pointers or opaque generations.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/ACCESS.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-ACCEPT",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "integration_task",
+      "title": "Integrate continuously and qualify the real consumer",
+      "objective": "Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.",
+      "priority": 90,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "CMakeLists.txt",
+          "CMakePresets.json",
+          "cmake/GlassHelixFoundation.cmake",
+          "examples/native_foundation_v1",
+          "tests/native_foundation/fixtures",
+          "tests/native_foundation/independent",
+          "tests/native_foundation/integration",
+          "bench/native_foundation",
+          "docs/nf1_adaptive/qualification",
+          "docs/nf1_adaptive/performance",
+          "docs/nf1_adaptive/developmental"
+        ],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1A-SYSTEM"
+        }
+      ],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-ACCEPT-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-ACCEPT"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ],
+          "cuda": {
+            "gpus": 1,
+            "cpu_threads": 2
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "GH-NF1A-ACCEPT-DONE",
+          "title": "Integrate continuously and qualify the real consumer"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/ACCEPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "The integrator may work before CE final readiness; only this final consumer acceptance waits for CE QUALIFY. Do not block early development on final receipts.",
+      "desired_end_state": "Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.",
+      "rationale": "The integrator may work before CE final readiness; only this final consumer acceptance waits for CE QUALIFY. Do not block early development on final receipts.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/ACCEPT.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-RELEASE",
+      "parent_id": "GH-NF1A-0000",
+      "kind": "integration_task",
+      "title": "Verify the final source pair and close GlassHelix",
+      "objective": "Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.",
+      "priority": 90,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [],
+        "read_paths": [],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-NF1A-ACCEPT"
+        }
+      ],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "gates": [
+        {
+          "id": "GH-NF1A-RELEASE-ACCEPT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-B",
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "--task",
+            "GH-NF1A-RELEASE"
+          ],
+          "cwd": ".",
+          "expected_exit_code": 0,
+          "input_paths": [
+            "planning/nf1-adaptive-v1/scripts/run_gate.py",
+            "planning/nf1-adaptive-v1/machine/outcomes.json"
+          ]
+        }
+      ],
+      "checkpoints": [],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "next_action": "Read planning/nf1-adaptive-v1/outcomes/RELEASE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.",
+      "notes": "planning/nf1-adaptive-v1/CHARTER.md is the accepted NF1A execution amendment. Legacy obligations are mapped in machine/legacy-disposition.json.",
+      "motivation": "This is a source/evidence reconciliation, not another unconditional test campaign or the start of a biological experiment.",
+      "desired_end_state": "Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.",
+      "rationale": "This is a source/evidence reconciliation, not another unconditional test campaign or the start of a biological experiment.",
+      "delegated_choices": [
+        "Ordinary implementation and test decomposition",
+        "Concrete APIs, module organization and sensible algorithms",
+        "Bounded child routing and local retries",
+        "Evidence-backed narrow scope/interface amendments within NF1"
+      ],
+      "references": [
+        "planning/nf1-adaptive-v1/outcomes/RELEASE.md",
+        "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+        "planning/nf1-adaptive-v1/machine/requirements.json"
+      ]
+    },
+    {
+      "id": "GH-NF1A-0000",
+      "kind": "epic",
+      "title": "GlassHelix adaptive NF1 completion",
+      "objective": "Aggregate the local successful outcomes after CONTROL and RELEASE. Do not use this aggregate as the coordinator seat or make a child depend on it.",
+      "priority": 0,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [],
+        "read_paths": []
+      },
+      "depends_on": [],
+      "invariants": [
+        "GH-NF1A-INV-SCOPE",
+        "GH-NF1A-INV-PRESERVE",
+        "GH-NF1A-INV-TRUTH",
+        "GH-NF1A-INV-OWNERS",
+        "GH-NF1A-INV-AGENCY"
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      }
+    }
+  ],
+  "runs": [
+    {
+      "id": "GH-NF1A-RUN-V1",
+      "root_task_id": "GH-NF1A-0000",
+      "charter": {
+        "objective": "Retain the NF1 experimental execution toolbox; change execution decomposition and conditional optimization policy, not scientific meaning.",
+        "execution_policy": "Outcome-directed, root-owned adaptive execution; be precise where needed and concise where possible. No default parallel heads. Selective pruning is authorized; unrelated work is protected.",
+        "authority": "Local Todo UUID unchanged. Both imports and old-work preservation precede successor implementation dispatch.",
+        "success": "Real native/GPU qualified toolkit and published paired source, not just terminal task records.",
+        "references": [
+          "planning/nf1-adaptive-v1/CHARTER.md",
+          "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+          "planning/nf1-adaptive-v1/RUNTIME_AND_BOOTSTRAP.md"
+        ]
+      },
+      "lanes": [
+        {
+          "id": "GH-NF1A-L-ROOT",
+          "role": "coordinator",
+          "tasks": [
+            "GH-NF1A-ADOPT",
+            "GH-NF1A-CONTROL",
+            "GH-NF1A-0000"
+          ],
+          "workspace": {
+            "mode": "read_shared"
+          },
+          "motivation": "One local authority seat under the joint strategic controller.",
+          "delegated_choices": [
+            "Scheduling and ordinary replanning"
+          ],
+          "references": [
+            "planning/nf1-adaptive-v1/CHARTER.md"
+          ]
+        },
+        {
+          "id": "GH-NF1A-L-SYSTEM",
+          "parent_lane_id": "GH-NF1A-L-ROOT",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1A-SYSTEM"
+          ],
+          "workspace": {
+            "mode": "isolated_merge",
+            "integration_task_id": "GH-NF1A-ACCEPT"
+          },
+          "desired_end_state": "Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.",
+          "rationale": "This is the first usable consumer, not a final learner. Preserve scientific meaning above the existing numerical engine; eliminate test-only dependency recompilation in production.",
+          "delegated_choices": [
+            "Internal decomposition and test sequence",
+            "Return compact source/evidence references; do not duplicate full program context"
+          ],
+          "references": [
+            "planning/nf1-adaptive-v1/outcomes/SYSTEM.md"
+          ]
+        },
+        {
+          "id": "GH-NF1A-L-OBSERVE",
+          "parent_lane_id": "GH-NF1A-L-ROOT",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1A-OBSERVE"
+          ],
+          "workspace": {
+            "mode": "isolated_merge",
+            "integration_task_id": "GH-NF1A-ACCEPT"
+          },
+          "desired_end_state": "Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.",
+          "rationale": "What determines the answer and what helps infer that determining state need not be the same information. This must remain executable, not merely documented.",
+          "delegated_choices": [
+            "Internal decomposition and test sequence",
+            "Return compact source/evidence references; do not duplicate full program context"
+          ],
+          "references": [
+            "planning/nf1-adaptive-v1/outcomes/OBSERVE.md"
+          ]
+        },
+        {
+          "id": "GH-NF1A-L-ANALYZE",
+          "parent_lane_id": "GH-NF1A-L-ROOT",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1A-ANALYZE"
+          ],
+          "workspace": {
+            "mode": "isolated_merge",
+            "integration_task_id": "GH-NF1A-ACCEPT"
+          },
+          "desired_end_state": "Compose requested observation/rollout derivatives, scaled local sensitivity/null diagnostics, aligned alternative comparison and supplied-reduction/error checks.",
+          "rationale": "These are instruments over supplied models: local numerical evidence is not global identification, molecular discovery or universal minimal-state inference.",
+          "delegated_choices": [
+            "Internal decomposition and test sequence",
+            "Return compact source/evidence references; do not duplicate full program context"
+          ],
+          "references": [
+            "planning/nf1-adaptive-v1/outcomes/ANALYZE.md"
+          ]
+        },
+        {
+          "id": "GH-NF1A-L-ACCESS",
+          "parent_lane_id": "GH-NF1A-L-ROOT",
+          "role": "implementer",
+          "tasks": [
+            "GH-NF1A-ACCESS"
+          ],
+          "workspace": {
+            "mode": "isolated_merge",
+            "integration_task_id": "GH-NF1A-ACCEPT"
+          },
+          "desired_end_state": "Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.",
+          "rationale": "Bind one library rather than duplicate its mathematics; replay logical inputs, not ephemeral pointers or opaque generations.",
+          "delegated_choices": [
+            "Internal decomposition and test sequence",
+            "Return compact source/evidence references; do not duplicate full program context"
+          ],
+          "references": [
+            "planning/nf1-adaptive-v1/outcomes/ACCESS.md"
+          ]
+        },
+        {
+          "id": "GH-NF1A-L-ACCEPT",
+          "parent_lane_id": "GH-NF1A-L-ROOT",
+          "role": "integrator",
+          "tasks": [
+            "GH-NF1A-ACCEPT"
+          ],
+          "workspace": {
+            "mode": "exclusive"
+          },
+          "desired_end_state": "Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.",
+          "rationale": "The integrator may work before CE final readiness; only this final consumer acceptance waits for CE QUALIFY. Do not block early development on final receipts.",
+          "delegated_choices": [
+            "Internal decomposition and test sequence",
+            "Return compact source/evidence references; do not duplicate full program context"
+          ],
+          "references": [
+            "planning/nf1-adaptive-v1/outcomes/ACCEPT.md"
+          ]
+        },
+        {
+          "id": "GH-NF1A-L-RELEASE",
+          "parent_lane_id": "GH-NF1A-L-ROOT",
+          "role": "integrator",
+          "tasks": [
+            "GH-NF1A-RELEASE"
+          ],
+          "workspace": {
+            "mode": "read_shared"
+          },
+          "desired_end_state": "Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.",
+          "rationale": "This is a source/evidence reconciliation, not another unconditional test campaign or the start of a biological experiment.",
+          "delegated_choices": [
+            "Internal decomposition and test sequence",
+            "Return compact source/evidence references; do not duplicate full program context"
+          ],
+          "references": [
+            "planning/nf1-adaptive-v1/outcomes/RELEASE.md"
+          ]
+        }
+      ]
+    }
+  ]
+}

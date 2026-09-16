@@ -1,0 +1,22 @@
+{
+  "format": "nf1a-package-v1",
+  "pair_id": "NF1A-20260916-v1",
+  "project": "glasshelix",
+  "peer_project": "cellerator",
+  "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+  "install_path": "planning/nf1-adaptive-v1",
+  "new_run_id": "GH-NF1A-RUN-V1",
+  "old_run_id": "GH-NF1-RUN-V1",
+  "old_package_path": "planning/native-foundation-v1",
+  "baseline": {
+    "label": "GlassHelix",
+    "prefix": "GH-NF1A",
+    "old": "GH-NF1",
+    "uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+    "revision": 141,
+    "commit": "139609465801a0407be056b27255c21d273df09e",
+    "old_package": "planning/native-foundation-v1"
+  },
+  "native_plan": "machine/native-plan.json",
+  "runtime_evidence": "external only; never store generated evidence in the sealed planning package"
+}

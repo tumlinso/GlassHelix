@@ -1,0 +1,1104 @@
+[
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-0000",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-0000",
+    "source_obligations": "planning/native-foundation-v1/README.md",
+    "requirements": [
+      "PAIR-PRESERVE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-A01",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-a01.md",
+    "requirements": [
+      "PAIR-SCOPE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-A02",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-a02.md",
+    "requirements": [
+      "PAIR-SCOPE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-A03",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-a03.md",
+    "requirements": [
+      "PAIR-SCOPE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-A04",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-a04.md",
+    "requirements": [
+      "PAIR-SCOPE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-B01",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-b01.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-B02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-b02.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-B03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-b03.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-B04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-b04.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-B05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-b05.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-C01",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-c01.md",
+    "requirements": [
+      "GH-ROLES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-C02",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-c02.md",
+    "requirements": [
+      "GH-ROLES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-C03",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-c03.md",
+    "requirements": [
+      "GH-ROLES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-C04",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-c04.md",
+    "requirements": [
+      "GH-ROLES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-C05",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-c05.md",
+    "requirements": [
+      "GH-ROLES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-C06",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-c06.md",
+    "requirements": [
+      "GH-ROLES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-C07",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-c07.md",
+    "requirements": [
+      "GH-ROLES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-COORD",
+    "observed_status": "stale_claim",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-CONTROL",
+    "source_obligations": "planning/nf1-coordinator-correction-v1/README.md",
+    "requirements": [
+      "PAIR-PRESERVE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-D01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-d01.md",
+    "requirements": [
+      "GH-DYNAMICS"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-D02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-d02.md",
+    "requirements": [
+      "GH-DYNAMICS"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-D03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-d03.md",
+    "requirements": [
+      "GH-DYNAMICS"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-D04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-d04.md",
+    "requirements": [
+      "GH-DYNAMICS"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-D05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-d05.md",
+    "requirements": [
+      "GH-DYNAMICS"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-D06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-d06.md",
+    "requirements": [
+      "GH-DYNAMICS",
+      "GH-ERROR"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-D07",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-d07.md",
+    "requirements": [
+      "GH-DYNAMICS"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-E01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-e01.md",
+    "requirements": [
+      "GH-INFERENCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-E02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-e02.md",
+    "requirements": [
+      "GH-INFERENCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-E03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-e03.md",
+    "requirements": [
+      "GH-INFERENCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-E04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-e04.md",
+    "requirements": [
+      "GH-INFERENCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-E05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-e05.md",
+    "requirements": [
+      "GH-INFERENCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-K01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-k01.md",
+    "requirements": [
+      "GH-PERFORMANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-K02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-k02.md",
+    "requirements": [
+      "GH-PERFORMANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-K03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-k03.md",
+    "requirements": [
+      "GH-PERFORMANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-K04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-k04.md",
+    "requirements": [
+      "GH-PERFORMANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-K05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-k05.md",
+    "requirements": [
+      "GH-PERFORMANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-M00",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-m00.md",
+    "requirements": [
+      "PAIR-SCOPE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-M10",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-m10.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-M20",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-m20.md",
+    "requirements": [
+      "GH-DYNAMICS"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-M30",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-m30.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-M40",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-m40.md",
+    "requirements": [
+      "GH-REPLAY"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-M60",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-m60.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-M90",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-RELEASE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-m90.md",
+    "requirements": [
+      "GH-FINAL"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-O01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-o01.md",
+    "requirements": [
+      "GH-OBSERVATION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-O02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-o02.md",
+    "requirements": [
+      "GH-OBSERVATION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-O03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-o03.md",
+    "requirements": [
+      "GH-OBSERVATION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-O04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-o04.md",
+    "requirements": [
+      "GH-OBSERVATION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-O05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-o05.md",
+    "requirements": [
+      "GH-DIFFERENTIATE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-O06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-OBSERVE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-o06.md",
+    "requirements": [
+      "GH-OBSERVATION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-P01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-p01.md",
+    "requirements": [
+      "GH-PYTHON"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-P02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-p02.md",
+    "requirements": [
+      "GH-PYTHON"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-P03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-p03.md",
+    "requirements": [
+      "GH-PYTHON"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-P04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-p04.md",
+    "requirements": [
+      "GH-PYTHON"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-P05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-p05.md",
+    "requirements": [
+      "GH-INTERCHANGE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-P06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-p06.md",
+    "requirements": [
+      "GH-PYTHON"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-Q01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-q01.md",
+    "requirements": [
+      "GH-DIFFERENTIATE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-Q02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-q02.md",
+    "requirements": [
+      "GH-DIFFERENTIATE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-Q03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-q03.md",
+    "requirements": [
+      "GH-NULL"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-Q04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-q04.md",
+    "requirements": [
+      "GH-NULL"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-Q05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-q05.md",
+    "requirements": [
+      "GH-ALTERNATIVES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-Q06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-q06.md",
+    "requirements": [
+      "GH-DIFFERENTIATE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-Q07",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-q07.md",
+    "requirements": [
+      "GH-DIFFERENTIATE",
+      "GH-NULL",
+      "GH-ALTERNATIVES"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-R01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-r01.md",
+    "requirements": [
+      "GH-REDUCTION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-R02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-r02.md",
+    "requirements": [
+      "GH-REDUCTION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-R03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-r03.md",
+    "requirements": [
+      "GH-ERROR"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-R04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-r04.md",
+    "requirements": [
+      "GH-ERROR"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-R05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-r05.md",
+    "requirements": [
+      "GH-REDUCTION"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-S01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-s01.md",
+    "requirements": [
+      "GH-ROLES",
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-S02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-s02.md",
+    "requirements": [
+      "GH-ROLES",
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-S03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-s03.md",
+    "requirements": [
+      "GH-ROLES",
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-S04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-s04.md",
+    "requirements": [
+      "GH-ROLES",
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-S05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-s05.md",
+    "requirements": [
+      "GH-ROLES",
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-S06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-s06.md",
+    "requirements": [
+      "GH-ROLES",
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-S07",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-s07.md",
+    "requirements": [
+      "GH-ROLES",
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-T01",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-t01.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-T02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-t02.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-T03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-t03.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-T04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-t04.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-T05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-t05.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-T06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-t06.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-U01",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-u01.md",
+    "requirements": [
+      "GH-REPLAY"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-U02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-u02.md",
+    "requirements": [
+      "GH-REPLAY"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-U03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-u03.md",
+    "requirements": [
+      "GH-REPLAY"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-U04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-u04.md",
+    "requirements": [
+      "GH-REPLAY"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-U05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-u05.md",
+    "requirements": [
+      "GH-REPLAY"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-U06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCESS",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-u06.md",
+    "requirements": [
+      "GH-REPLAY"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-X01",
+    "observed_status": "done",
+    "disposition": "preserve_completed_record",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-x01.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-X02",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-x02.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-X03",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-SYSTEM",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-x03.md",
+    "requirements": [
+      "GH-SYSTEM"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-X04",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ANALYZE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-x04.md",
+    "requirements": [
+      "GH-DIFFERENTIATE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-X05",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-ACCEPT",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-x05.md",
+    "requirements": [
+      "GH-ACCEPTANCE"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  },
+  {
+    "project": "glasshelix",
+    "legacy_task_id": "GH-NF1-X06",
+    "observed_status": "unfinished",
+    "disposition": "supersede_only_if_still_nonterminal",
+    "successor": "GH-NF1A-RELEASE",
+    "source_obligations": "planning/native-foundation-v1/proposed-todos/gh-nf1-x06.md",
+    "requirements": [
+      "GH-FINAL"
+    ],
+    "note": "Reuse surviving source and evidence; validate integration separately. Old procedural sequence is not inherited."
+  }
+]

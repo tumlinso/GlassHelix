@@ -1,0 +1,15 @@
+{
+  "format": "nf1a-integration-schedule-v1",
+  "phases": [
+    {
+      "integration_task": "GH-NF1A-ACCEPT",
+      "required_tasks": [
+        "GH-NF1A-SYSTEM",
+        "GH-NF1A-OBSERVE",
+        "GH-NF1A-ANALYZE",
+        "GH-NF1A-ACCESS"
+      ]
+    }
+  ],
+  "policy": "Stage the first core/system producer immediately, then integrate available producers continuously. Sealing a batch does not complete final qualification."
+}
