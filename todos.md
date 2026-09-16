@@ -3,9 +3,109 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `18`
+Project revision: `156`
 
 ## Workstreams
+- `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
+- `GH-NF1A-CONTROL` | kind: task | status: in_progress | parent: GH-NF1A-0000 | objective: Serve as the strategic root and ordinary GlassHelix coordinator, delegate bounded work intelligently, coordinate the Cellerator seat and finish only after local RELEASE.
+- `GH-NF1A-SYSTEM` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.
+- `GH-NF1A-ACCESS` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.
+- `GH-NF1A-ANALYZE` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Compose requested observation/rollout derivatives, scaled local sensitivity/null diagnostics, aligned alternative comparison and supplied-reduction/error checks.
+- `GH-NF1A-OBSERVE` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
+- `GH-NF1-COORD` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | kind: workstream | status: done | parent: - | objective: Reconcile and preserve repository state; establish authoritative scientific identity and four-project boundaries; bootstrap project and tool indexing; classify the archaeological repository without treating experiments as architecture.
+- `GH-NF1-0000` | kind: epic | status: superseded | parent: - | objective: 
+- `GH-NF1A-ACCEPT` | kind: integration_task | status: planned | parent: GH-NF1A-0000 | objective: Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.
+- `GH-NF1A-RELEASE` | kind: integration_task | status: planned | parent: GH-NF1A-0000 | objective: Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.
 - `GH-SCIENCE-FOUNDATIONS` | kind: workstream | status: planned | parent: - | objective: Investigate sufficient biological state, identifiable hidden dynamics and causal structure, evidence domains for mechanism, uncertainty, and non-identifiability without prematurely selecting an implementation architecture.
+- `GH-NF1-A01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-A02` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-A03` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-A04` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-B01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-B02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-B03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-B04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-B05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-C01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-C02` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-C03` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-C04` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-C05` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-C06` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-C07` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-D01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-D02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-D03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-D04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-D05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-D06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-D07` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-E01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-E02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-E03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-E04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-E05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-K01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-K02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-K03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-K04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-K05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-M00` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-M10` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-M20` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-M30` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-M40` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-M60` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-M90` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-O01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-O02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-O03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-O04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-O05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-O06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-P01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-P02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-P03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-P04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-P05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-P06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-Q01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-Q02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-Q03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-Q04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-Q05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-Q06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-Q07` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-R01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-R02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-R03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-R04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-R05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-S01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-S02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-S03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-S04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-S05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-S06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-S07` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-T01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-T02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-T03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-T04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-T05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-T06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-U01` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-U02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-U03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-U04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-U05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-U06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-X01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-X02` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-X03` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-X04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-X05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1-X06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
+- `GH-NF1A-0000` | kind: epic | status: planned | parent: - | objective: Aggregate the local successful outcomes after CONTROL and RELEASE. Do not use this aggregate as the coordinator seat or make a child depend on it.
 <!-- todo-orchestrator:v2-managed:end -->

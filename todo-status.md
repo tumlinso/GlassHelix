@@ -3,9 +3,109 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `18`
+Project revision: `156`
 
 ## Workstreams
+- `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-CONTROL` | status: in_progress | execution: claimed | next: Read planning/nf1-adaptive-v1/outcomes/CONTROL.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-SYSTEM` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/SYSTEM.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-ACCESS` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ACCESS.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-ANALYZE` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ANALYZE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-OBSERVE` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1-COORD` | status: superseded | execution: closed | next: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | status: done | execution: closed | next: Preserve unknown dirty work, fast-forward safely, add minimal authoritative documentation and semantic state, validate, commit, and verify through project-control.
+- `GH-NF1-0000` | status: superseded | execution: closed | next: 
+- `GH-NF1A-ACCEPT` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ACCEPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-RELEASE` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/RELEASE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-SCIENCE-FOUNDATIONS` | status: planned | execution: ready | next: Frame evidence-bearing scientific questions and literature work before proposing models or machinery.
+- `GH-NF1-A01` | status: done | execution: closed | next: 
+- `GH-NF1-A02` | status: done | execution: closed | next: 
+- `GH-NF1-A03` | status: done | execution: closed | next: 
+- `GH-NF1-A04` | status: done | execution: closed | next: 
+- `GH-NF1-B01` | status: done | execution: closed | next: 
+- `GH-NF1-B02` | status: superseded | execution: closed | next: 
+- `GH-NF1-B03` | status: superseded | execution: closed | next: 
+- `GH-NF1-B04` | status: superseded | execution: closed | next: 
+- `GH-NF1-B05` | status: superseded | execution: closed | next: 
+- `GH-NF1-C01` | status: done | execution: closed | next: 
+- `GH-NF1-C02` | status: done | execution: closed | next: 
+- `GH-NF1-C03` | status: done | execution: closed | next: 
+- `GH-NF1-C04` | status: done | execution: closed | next: 
+- `GH-NF1-C05` | status: done | execution: closed | next: 
+- `GH-NF1-C06` | status: done | execution: closed | next: 
+- `GH-NF1-C07` | status: done | execution: closed | next: 
+- `GH-NF1-D01` | status: superseded | execution: closed | next: 
+- `GH-NF1-D02` | status: superseded | execution: closed | next: 
+- `GH-NF1-D03` | status: superseded | execution: closed | next: 
+- `GH-NF1-D04` | status: superseded | execution: closed | next: 
+- `GH-NF1-D05` | status: superseded | execution: closed | next: 
+- `GH-NF1-D06` | status: superseded | execution: closed | next: 
+- `GH-NF1-D07` | status: superseded | execution: closed | next: 
+- `GH-NF1-E01` | status: superseded | execution: closed | next: 
+- `GH-NF1-E02` | status: superseded | execution: closed | next: 
+- `GH-NF1-E03` | status: superseded | execution: closed | next: 
+- `GH-NF1-E04` | status: superseded | execution: closed | next: 
+- `GH-NF1-E05` | status: superseded | execution: closed | next: 
+- `GH-NF1-K01` | status: superseded | execution: closed | next: 
+- `GH-NF1-K02` | status: superseded | execution: closed | next: 
+- `GH-NF1-K03` | status: superseded | execution: closed | next: 
+- `GH-NF1-K04` | status: superseded | execution: closed | next: 
+- `GH-NF1-K05` | status: superseded | execution: closed | next: 
+- `GH-NF1-M00` | status: done | execution: closed | next: 
+- `GH-NF1-M10` | status: superseded | execution: closed | next: 
+- `GH-NF1-M20` | status: superseded | execution: closed | next: 
+- `GH-NF1-M30` | status: superseded | execution: closed | next: 
+- `GH-NF1-M40` | status: superseded | execution: closed | next: 
+- `GH-NF1-M60` | status: superseded | execution: closed | next: 
+- `GH-NF1-M90` | status: superseded | execution: closed | next: 
+- `GH-NF1-O01` | status: superseded | execution: closed | next: 
+- `GH-NF1-O02` | status: superseded | execution: closed | next: 
+- `GH-NF1-O03` | status: superseded | execution: closed | next: 
+- `GH-NF1-O04` | status: superseded | execution: closed | next: 
+- `GH-NF1-O05` | status: superseded | execution: closed | next: 
+- `GH-NF1-O06` | status: superseded | execution: closed | next: 
+- `GH-NF1-P01` | status: superseded | execution: closed | next: 
+- `GH-NF1-P02` | status: superseded | execution: closed | next: 
+- `GH-NF1-P03` | status: superseded | execution: closed | next: 
+- `GH-NF1-P04` | status: superseded | execution: closed | next: 
+- `GH-NF1-P05` | status: superseded | execution: closed | next: 
+- `GH-NF1-P06` | status: superseded | execution: closed | next: 
+- `GH-NF1-Q01` | status: superseded | execution: closed | next: 
+- `GH-NF1-Q02` | status: superseded | execution: closed | next: 
+- `GH-NF1-Q03` | status: superseded | execution: closed | next: 
+- `GH-NF1-Q04` | status: superseded | execution: closed | next: 
+- `GH-NF1-Q05` | status: superseded | execution: closed | next: 
+- `GH-NF1-Q06` | status: superseded | execution: closed | next: 
+- `GH-NF1-Q07` | status: superseded | execution: closed | next: 
+- `GH-NF1-R01` | status: superseded | execution: closed | next: 
+- `GH-NF1-R02` | status: superseded | execution: closed | next: 
+- `GH-NF1-R03` | status: superseded | execution: closed | next: 
+- `GH-NF1-R04` | status: superseded | execution: closed | next: 
+- `GH-NF1-R05` | status: superseded | execution: closed | next: 
+- `GH-NF1-S01` | status: superseded | execution: closed | next: 
+- `GH-NF1-S02` | status: superseded | execution: closed | next: 
+- `GH-NF1-S03` | status: superseded | execution: closed | next: 
+- `GH-NF1-S04` | status: superseded | execution: closed | next: 
+- `GH-NF1-S05` | status: superseded | execution: closed | next: 
+- `GH-NF1-S06` | status: superseded | execution: closed | next: 
+- `GH-NF1-S07` | status: superseded | execution: closed | next: 
+- `GH-NF1-T01` | status: done | execution: closed | next: 
+- `GH-NF1-T02` | status: superseded | execution: closed | next: 
+- `GH-NF1-T03` | status: superseded | execution: closed | next: 
+- `GH-NF1-T04` | status: superseded | execution: closed | next: 
+- `GH-NF1-T05` | status: superseded | execution: closed | next: 
+- `GH-NF1-T06` | status: superseded | execution: closed | next: 
+- `GH-NF1-U01` | status: superseded | execution: closed | next: 
+- `GH-NF1-U02` | status: superseded | execution: closed | next: 
+- `GH-NF1-U03` | status: superseded | execution: closed | next: 
+- `GH-NF1-U04` | status: superseded | execution: closed | next: 
+- `GH-NF1-U05` | status: superseded | execution: closed | next: 
+- `GH-NF1-U06` | status: superseded | execution: closed | next: 
+- `GH-NF1-X01` | status: done | execution: closed | next: 
+- `GH-NF1-X02` | status: superseded | execution: closed | next: 
+- `GH-NF1-X03` | status: superseded | execution: closed | next: 
+- `GH-NF1-X04` | status: superseded | execution: closed | next: 
+- `GH-NF1-X05` | status: superseded | execution: closed | next: 
+- `GH-NF1-X06` | status: superseded | execution: closed | next: 
+- `GH-NF1A-0000` | status: planned | execution: inactive | next: Aggregate the local successful outcomes after CONTROL and RELEASE. Do not use this aggregate as the coordinator seat or make a child depend on it.
 <!-- todo-orchestrator:v2-managed:end -->
