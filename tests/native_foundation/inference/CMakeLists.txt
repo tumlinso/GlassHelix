@@ -1,0 +1,4 @@
+add_executable(gh_nf1a_inference inference.cc)
+target_compile_features(gh_nf1a_inference PRIVATE cxx_std_20)
+target_link_libraries(gh_nf1a_inference PRIVATE GlassHelix::core)
+add_test(NAME gh_nf1a_inference COMMAND gh_nf1a_inference)
