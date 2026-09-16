@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T17:51:23Z",
+  "generated_at": "2026-09-16T17:57:00Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 156,
+  "project_revision": 160,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -1837,6 +1837,46 @@
         "revision": 156,
         "seq": 156,
         "timestamp": "2026-09-16T17:51:23Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "f7c674ef-f8f5-4d3c-949c-5b460c47ccd6",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_reserved",
+        "payload_json": "{\"base_commit\": \"c503b78aa935ed114c6c95423264436fb484abc7\", \"lane_id\": \"GH-NF1A-L-SYSTEM\", \"mode\": \"isolated_merge\", \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 157,
+        "seq": 157,
+        "timestamp": "2026-09-16T17:53:05Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "f7c674ef-f8f5-4d3c-949c-5b460c47ccd6",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_created",
+        "payload_json": "{\"base_commit\": \"c503b78aa935ed114c6c95423264436fb484abc7\", \"lane_id\": \"GH-NF1A-L-SYSTEM\", \"mode\": \"isolated_merge\", \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 158,
+        "seq": 158,
+        "timestamp": "2026-09-16T17:53:05Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-SYSTEM",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-SYSTEM\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-SYSTEM\"}",
+        "revision": 159,
+        "seq": 159,
+        "timestamp": "2026-09-16T17:54:40Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "1af7d130-0f0f-4382-bdd4-efe978977254",
+        "entity_type": "workflow_context_fragment",
+        "event_type": "workflow_context_fragment_published",
+        "payload_json": "{\"content_hash\": \"89ac60671c7c468d88634627df352872aea39e4d08980888a833c2ae9eaf9632\", \"invalidated_fragment_ids\": [], \"kind\": \"context_note\", \"series_key\": \"nf1a-controller-status\", \"version\": 1}",
+        "revision": 160,
+        "seq": 160,
+        "timestamp": "2026-09-16T17:57:00Z"
       }
     ],
     "evidence": [
@@ -10010,12 +10050,12 @@
         "priority": 160,
         "result": null,
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
-        "revision": 155,
-        "status": "planned",
+        "revision": 159,
+        "status": "in_progress",
         "tags_json": "[]",
         "title": "Deliver usable native systems and deterministic evolution",
-        "updated_at": "2026-09-16T17:50:39Z",
-        "version": 3
+        "updated_at": "2026-09-16T17:54:40Z",
+        "version": 4
       },
       {
         "attention_reason": null,
@@ -10044,6 +10084,23 @@
       }
     ],
     "workflow_context_fragments": [
+      {
+        "content_hash": "89ac60671c7c468d88634627df352872aea39e4d08980888a833c2ae9eaf9632",
+        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-CONTROL\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"Implementation authorized by owner. ADOPT completed and legacy preserved/retired. Root holds CONTROL. SYSTEM claimed in registered isolated workspace f7c674ef-f8f5-4d3c-949c-5b460c47ccd6; preserved S01 applied as 3ceda6a. Preparing OBSERVE. SYSTEM must consume actual Cellerator production target and retain encoding-independent scientific identity.\"}}",
+        "created_at": "2026-09-16T17:57:00Z",
+        "creation_revision": 160,
+        "id": "1af7d130-0f0f-4382-bdd4-efe978977254",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "context_note",
+        "lane_id": "GH-NF1A-L-ROOT",
+        "owner_scope_json": "{\"lane_id\":\"GH-NF1A-L-ROOT\",\"run_id\":\"GH-NF1A-RUN-V1\",\"task_id\":\"GH-NF1A-CONTROL\"}",
+        "run_id": "GH-NF1A-RUN-V1",
+        "series_key": "nf1a-controller-status",
+        "superseded_by": null,
+        "task_id": "GH-NF1A-CONTROL",
+        "version": 1
+      },
       {
         "content_hash": "39ba1fe513c65f1f3c632cec1d1794e6d9bdd744de22df51aa40617a29bc019a",
         "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-ADOPT\"}],\"authority\":\"non_authoritative\",\"content\":{\"gpu_authorization\":\"User permits evicting currently running Project Control observer investigator GPU tasks if necessary. No eviction needed or performed in ADOPT.\",\"next_action\":\"Operator runs five exact interactive recovery commands in GlassHelix docs/nf1_adaptive/adoption/OWNER_RECOVERY.md. Then root revalidates and canonically retires exact old allowlists, binds ADOPT evidence, passes both gates, continues existing authorized implementation objective. No new implementation approval needed.\",\"preservation\":\"External nf1a-bootstrap-20260916/preservation-adopt-20260916T1659Z/preservation.json SHA256 8cb421345e1267e28b2a9992bf783d1ceb2ae90d645fd8200ed39087058e44ca; dirty-source.tar SHA256 c26cccb514f426e8927f9508a93282bf73683b4fefac113bac502726156626ea\",\"summary\":\"ADOPT preservation complete; owner recovery remains blocking. Capture covered 11 CE + 7 GH legacy worktrees including H02 dirty source, N ancestry, GH S01 partial source, and rejected X01 artifact. Historical successful rows independently hash-identical: CE37/37 and GH15/15. Original bootstrap verify rejects changed old coordinator rows (now planned, version4, updated 2026-09-16T16:57:56Z); do not replay imports. ADOPT gate has not passed; no retirement/implementation dispatch.\"}}",
@@ -13386,13 +13443,13 @@
         "task_id": "GH-NF1A-0000"
       },
       {
-        "activated_at": null,
+        "activated_at": "2026-09-16T17:54:40Z",
         "completed_at": null,
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-SYSTEM",
         "position": 0,
-        "revision": 155,
-        "state": "queued",
+        "revision": 159,
+        "state": "active",
         "task_id": "GH-NF1A-SYSTEM"
       }
     ],
@@ -13666,11 +13723,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-SYSTEM",
         "parent_lane_id": "GH-NF1A-L-ROOT",
-        "revision": 155,
+        "revision": 159,
         "role": "implementer",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-09-16T17:50:39Z",
+        "state": "active",
+        "updated_at": "2026-09-16T17:54:40Z",
         "workspace_mode": "isolated_merge"
       }
     ],
@@ -13958,6 +14015,25 @@
         "state": "active",
         "updated_at": "2026-09-09T11:43:19Z",
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-b-v1"
+      },
+      {
+        "artifact_kind": null,
+        "artifact_ref": null,
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "branch": "codex/gh-nf1a-l-system",
+        "cleanup_eligible": 0,
+        "created_at": "2026-09-16T17:53:05Z",
+        "diff_hash": null,
+        "id": "f7c674ef-f8f5-4d3c-949c-5b460c47ccd6",
+        "integration_task_id": "GH-NF1A-ACCEPT",
+        "lane_id": "GH-NF1A-L-SYSTEM",
+        "merge_result_json": "{}",
+        "mode": "isolated_merge",
+        "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
+        "run_id": "GH-NF1A-RUN-V1",
+        "state": "active",
+        "updated_at": "2026-09-16T17:53:05Z",
+        "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-system"
       }
     ]
   },

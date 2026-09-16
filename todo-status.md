@@ -3,12 +3,12 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `156`
+Project revision: `160`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1A-CONTROL` | status: in_progress | execution: claimed | next: Read planning/nf1-adaptive-v1/outcomes/CONTROL.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
-- `GH-NF1A-SYSTEM` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/SYSTEM.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-SYSTEM` | status: in_progress | execution: claimed | next: Read planning/nf1-adaptive-v1/outcomes/SYSTEM.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1A-ACCESS` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ACCESS.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1A-ANALYZE` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ANALYZE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1A-OBSERVE` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.

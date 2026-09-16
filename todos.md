@@ -3,12 +3,12 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `156`
+Project revision: `160`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
 - `GH-NF1A-CONTROL` | kind: task | status: in_progress | parent: GH-NF1A-0000 | objective: Serve as the strategic root and ordinary GlassHelix coordinator, delegate bounded work intelligently, coordinate the Cellerator seat and finish only after local RELEASE.
-- `GH-NF1A-SYSTEM` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.
+- `GH-NF1A-SYSTEM` | kind: task | status: in_progress | parent: GH-NF1A-0000 | objective: Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.
 - `GH-NF1A-ACCESS` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.
 - `GH-NF1A-ANALYZE` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Compose requested observation/rollout derivatives, scaled local sensitivity/null diagnostics, aligned alternative comparison and supplied-reduction/error checks.
 - `GH-NF1A-OBSERVE` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
