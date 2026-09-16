@@ -1,6 +1,7 @@
 #pragma once
 #include <GlassHelix/core/request.hh>
 #include <Cellerator/compute/operation/operation_core_v2/schema.hh>
+#include <Cellerator/compute/operation/native_numeric/device_linear.hh>
 #include <Cellerator/execution/program/program_v2.h>
 #include <algorithm>
 #include <array>
@@ -97,6 +98,25 @@ inline program::program_status submit(const prepared_stage_bundle& bundle,
 
 struct direct_map_plan { prepared_stage_bundle stage; };
 struct rk4_plan { std::array<prepared_stage_bundle, 5> stages; };
+
+// The final RK4 combination is a CE-owned resident-vector stage.  Its backing
+// descriptor stays with this object because program_v2 intentionally borrows
+// prepared state.  `workspace` must contain {base,k1,k2,k3,k4}, each with the
+// same number of FP32 elements; CE validates that contract before launch.
+struct rk4_combine_stage {
+  cellerator::compute::native_numeric::linear_stage descriptor{
+    cellerator::compute::native_numeric::linear_kind::weighted_sum4, 0,
+    cellerator::compute::native_numeric::device_representation::f32, 0.0f, 0.0f};
+  program::prepared_stage_v2 stage{};
+  rk4_combine_stage(std::uint64_t stage_id, std::uint64_t candidate_id,
+                    std::uint64_t elements, float step_size)
+      : descriptor{cellerator::compute::native_numeric::linear_kind::weighted_sum4,
+                   elements,
+                   cellerator::compute::native_numeric::device_representation::f32,
+                   step_size, 0.0f},
+        stage(cellerator::compute::native_numeric::make_linear_stage(
+            stage_id, candidate_id, &descriptor)) {}
+};
 
 inline program::program_status execute_direct_map(const direct_map_plan& plan,
                                                    void* caller_stream) noexcept {

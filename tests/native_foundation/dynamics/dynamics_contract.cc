@@ -11,6 +11,9 @@ int main() {
   history.record({instance.identity,instance.state_generation,instance.parameter_generation,.75,75,reinterpret_cast<void*>(1)});
   if(!dynamics::valid_checkpoint(history.require_current(instance,75),instance)) return 2;
   instance.parameter_generation.value++;
-  try { history.require_current(instance,75); } catch(const std::invalid_argument&) { return 0; }
-  return 3;
+  bool rejected=false;
+  try { history.require_current(instance,75); } catch(const std::invalid_argument&) { rejected=true; }
+  if(!rejected) return 3;
+  dynamics::rk4_combine_stage combine(4,2,33,.01f);
+  return combine.stage.launch && combine.stage.prepared_state==&combine.descriptor ? 0 : 4;
 }
