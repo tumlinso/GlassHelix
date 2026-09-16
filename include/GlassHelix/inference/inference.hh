@@ -28,7 +28,6 @@ struct candidate {
 class finite_candidates {
  public:
   using propagate_with_common_engine = std::function<observation::engine_output(const candidate&)>;
-  using predict_observation = std::function<std::vector<double>(const observation::engine_output&)>;
 
   explicit finite_candidates(std::vector<candidate> supplied) : candidates_(std::move(supplied)) {
     normalize_or_throw();
@@ -52,9 +51,15 @@ class finite_candidates {
 
   void assimilate(const core::observation_record& observation,
                   const observation::gaussian_noise& likelihood,
-                  const predict_observation& predictor, std::string evidence_id) {
-    if (!observation.valid() || !likelihood.valid() || !predictor || evidence_id.empty()) {
+                  const observation::observation_map& map, std::string evidence_id) {
+    if (!observation.valid() || !likelihood.valid() || evidence_id.empty()) {
       throw std::invalid_argument("invalid inference evidence");
+    }
+    if (!core::interchangeable(observation.measured, map.output())) {
+      throw std::invalid_argument("prediction observation identity mismatch");
+    }
+    if (std::find(evidence_history_.begin(), evidence_history_.end(), evidence_id) != evidence_history_.end()) {
+      throw std::invalid_argument("duplicate evidence id");
     }
     if (propagated_.size() != candidates_.size()) {
       throw std::logic_error("each candidate must propagate through the common engine before assimilation");
@@ -63,7 +68,7 @@ class finite_candidates {
     log_weights.reserve(candidates_.size());
     double maximum = -std::numeric_limits<double>::infinity();
     for (std::size_t index = 0; index != candidates_.size(); ++index) {
-      const auto prediction = predictor(propagated_[index]);
+      const auto prediction = map.evaluate(propagated_[index]);
       const auto prior = candidates_[index].weight;
       const auto log_weight = std::log(prior) + likelihood.log_likelihood(observation, prediction);
       log_weights.push_back(log_weight);
@@ -88,6 +93,9 @@ class finite_candidates {
           candidate_value.joint_state.empty() || !std::isfinite(candidate_value.weight) ||
           candidate_value.weight < 0) {
         throw std::invalid_argument("invalid supplied candidate");
+      }
+      for (const auto coordinate : candidate_value.joint_state) {
+        if (!std::isfinite(coordinate)) throw std::invalid_argument("nonfinite candidate joint state");
       }
       total += candidate_value.weight;
     }
