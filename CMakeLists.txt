@@ -38,10 +38,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixFoundationConfig.cmake
   ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixFoundationConfigVersion.cmake
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
 if(BUILD_TESTING)
-  set(NF1_CELLERATOR_INCLUDE_DIR "" CACHE PATH "Cellerator public include directory")
-  if(NOT NF1_CELLERATOR_INCLUDE_DIR)
-    get_target_property(NF1_CELLERATOR_INCLUDE_DIR Cellerator::native_foundation INTERFACE_INCLUDE_DIRECTORIES)
-  endif()
   add_subdirectory(tests/native_foundation/core)
   add_subdirectory(tests/native_foundation/system)
   add_subdirectory(tests/native_foundation/dynamics)
