@@ -12,7 +12,11 @@ assembled_mechanism::assembled_mechanism(std::shared_ptr<const core::system_defi
  for(auto i:m.outputs)axes_.push_back(scientific_->quantities()[i].axis);
  for(std::size_t i=0;i<m.arguments.size();++i)inputs_.push_back({implementation_.input_roles[i],{&axes_[i],1},scientific_->quantities()[m.arguments[i]].extent,implementation_.numeric.state_storage});
  for(std::size_t i=0;i<m.outputs.size();++i)outputs_.push_back({{implementation_.output_roles[i],{&axes_[m.arguments.size()+i],1},scientific_->quantities()[m.outputs[i]].extent,implementation_.numeric.output_storage},implementation_.assembly_owner,implementation_.output_effects[i]});
- if(nf::validate_compiled_block(numerical_block())!=nf::status::success)throw std::invalid_argument("invalid Cellerator compiled block");
+ // Registered Cellerator evaluators own their executable state.  A callback
+ // is mandatory only for callback-backed lowering, so indexed lowering never
+ // needs a hidden GlassHelix scalar implementation.
+ if (implementation_.forward && nf::validate_compiled_block(numerical_block())!=nf::status::success)
+   throw std::invalid_argument("invalid Cellerator compiled block");
 }
 const core::mechanism& assembled_mechanism::scientific_mechanism()const{return scientific_->mechanisms()[index_];}
 nf::compiled_block assembled_mechanism::numerical_block()const{

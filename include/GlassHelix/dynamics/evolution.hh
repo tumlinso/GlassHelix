@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <array>
 #include <deque>
+#include <limits>
 #include <stdexcept>
 #include <utility>
 #include <vector>
@@ -70,6 +71,11 @@ public:
 
 struct forcing_interval { double begin, end; std::size_t knot_index; };
 
+struct rk4_interval {
+  forcing_interval forcing;
+  std::size_t steps = 0;
+};
+
 inline std::vector<forcing_interval> split_forcing_intervals(
     const core::rk4_request& request) {
   if (!core::valid(request)) throw std::invalid_argument("invalid RK4 request");
@@ -88,6 +94,26 @@ inline std::vector<forcing_interval> split_forcing_intervals(
     result.push_back({boundaries[i], boundaries[i + 1], index});
   }
   return result;
+}
+
+// A supplied discontinuity is part of the executed discrete calculation.  It
+// must therefore lie on a fixed-step boundary: silently taking an RK stage on
+// both sides of a knot would describe neither declared forcing convention.
+inline std::vector<rk4_interval> make_rk4_schedule(
+    const core::rk4_request& request) {
+  const auto intervals = split_forcing_intervals(request);
+  std::vector<rk4_interval> schedule;
+  schedule.reserve(intervals.size());
+  for (const auto& interval : intervals) {
+    const double raw_steps = (interval.end - interval.begin) / request.dt;
+    const auto steps = static_cast<std::size_t>(std::llround(raw_steps));
+    const double tolerance = 32.0 * std::numeric_limits<double>::epsilon()
+      * std::max({1.0, std::abs(interval.begin), std::abs(interval.end), std::abs(request.dt)});
+    if (!steps || std::abs(raw_steps - static_cast<double>(steps)) > tolerance)
+      throw std::invalid_argument("RK4 forcing discontinuity is not on a fixed-step boundary");
+    schedule.push_back({interval, steps});
+  }
+  return schedule;
 }
 
 inline program::program_status submit(const prepared_stage_bundle& bundle,
@@ -121,6 +147,25 @@ struct rk4_combine_stage {
 inline program::program_status execute_direct_map(const direct_map_plan& plan,
                                                    void* caller_stream) noexcept {
   return submit(plan.stage, caller_stream);
+}
+
+// The two bindings are caller-owned CE resident buffers.  This routine only
+// schedules the prepared Cellerator program and swaps those buffers; it never
+// downloads state or supplies a GlassHelix numerical fallback.
+inline program::program_status execute_resident_direct_rollout(
+    const direct_map_plan& plan, program::launch_binding_v2 first,
+    program::launch_binding_v2 second, std::size_t steps,
+    void* caller_stream) noexcept {
+  if (!steps || !first.input || !first.output || !second.input || !second.output
+      || first.input != second.output || first.output != second.input)
+    return program::program_status::invalid_argument;
+  for (std::size_t step = 0; step < steps; ++step) {
+    auto bundle = plan.stage;
+    bundle.bindings.assign(1, step % 2 == 0 ? first : second);
+    const auto status = submit(bundle, caller_stream);
+    if (status != program::program_status::success) return status;
+  }
+  return program::program_status::success;
 }
 
 inline program::program_status execute_rk4_step(const rk4_plan& plan,
