@@ -15,7 +15,9 @@ int main() {
   if(!rejected_discontinuity) return 6;
   dynamics::resident_instance instance{{1,0},{4},{7},"cellerator-policy"};
   dynamics::bounded_primal_history history(1);
-  history.record({instance.identity,instance.state_generation,instance.parameter_generation,.75,75,reinterpret_cast<void*>(1)});
+  auto retained = std::make_shared<cellerator::compute::native_numeric::resident_vector>();
+  retained->data = reinterpret_cast<void*>(1);
+  history.record({instance.identity,instance.state_generation,instance.parameter_generation,.75,75,retained});
   if(!dynamics::valid_checkpoint(history.require_current(instance,75),instance)) return 2;
   instance.parameter_generation.value++;
   bool rejected=false;

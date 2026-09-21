@@ -8,6 +8,7 @@
 #include <deque>
 #include <cstddef>
 #include <limits>
+#include <memory>
 #include <stdexcept>
 #include <utility>
 #include <vector>
@@ -36,8 +37,9 @@ struct primal_checkpoint {
   cellerator::execution::value_generation parameter_generation{};
   double time = 0;
   std::size_t completed_steps = 0;
-  // A CE-owned retained state handle is intentionally opaque to GlassHelix.
-  const void* retained_primal = nullptr;
+  // CE allocates and copies this owned resident snapshot; no ping-pong state
+  // pointer is treated as a retained primal.
+  std::shared_ptr<cellerator::compute::native_numeric::resident_vector> retained_primal;
 };
 
 inline bool valid_checkpoint(const primal_checkpoint& checkpoint,
@@ -45,7 +47,7 @@ inline bool valid_checkpoint(const primal_checkpoint& checkpoint,
   return operation::same_stable_id(checkpoint.instance, instance.identity)
     && checkpoint.state_generation.value == instance.state_generation.value
     && checkpoint.parameter_generation.value == instance.parameter_generation.value
-    && checkpoint.retained_primal != nullptr;
+    && checkpoint.retained_primal && checkpoint.retained_primal->data;
 }
 
 class bounded_primal_history {
@@ -56,7 +58,7 @@ public:
     if (!capacity_) throw std::invalid_argument("checkpoint capacity required");
   }
   void record(primal_checkpoint checkpoint) {
-    if (!std::isfinite(checkpoint.time) || !checkpoint.retained_primal)
+    if (!std::isfinite(checkpoint.time) || !checkpoint.retained_primal || !checkpoint.retained_primal->data)
       throw std::invalid_argument("invalid primal checkpoint");
     if (checkpoints_.size() == capacity_) checkpoints_.pop_front();
     checkpoints_.push_back(checkpoint);
@@ -140,9 +142,14 @@ struct rk4_stage_binding {
 
 inline std::array<rk4_stage_binding, 4> make_rk4_stage_bindings(
     double begin, double step,
+    const std::array<const cellerator::compute::native_numeric::resident_vector*, 4>& forcing) {
+  return {{{begin, forcing[0]}, {begin + .5 * step, forcing[1]},
+           {begin + .5 * step, forcing[2]}, {begin + step, forcing[3]}}};
+}
+inline std::array<rk4_stage_binding, 4> make_rk4_stage_bindings(
+    double begin, double step,
     const cellerator::compute::native_numeric::resident_vector& forcing) {
-  return {{{begin, &forcing}, {begin + .5 * step, &forcing},
-           {begin + .5 * step, &forcing}, {begin + step, &forcing}}};
+  return make_rk4_stage_bindings(begin, step, {{&forcing, &forcing, &forcing, &forcing}});
 }
 
 // Every vector is CE resident. `packed` has five contiguous vector-width
@@ -186,17 +193,19 @@ class rk4_step_plan {
   rk4_combine_stage combine_;
   std::uint64_t elements_ = 0;
   float step_ = 0.f;
+  void* stream_ = nullptr;
   program::prepared_stage_v2 copy_stage_{};
   program::prepared_stage_v2 half_accumulate_stage_{};
   program::prepared_stage_v2 full_accumulate_stage_{};
   rk4_vector_field field_;
 public:
   rk4_step_plan(rk4_vector_field field, std::uint64_t stage_id,
-                std::uint64_t candidate_id, std::uint64_t elements, float step)
+                std::uint64_t candidate_id, std::uint64_t elements, float step,
+                void* stream = nullptr)
       : copy_descriptor_{linear_kind::copy, elements, device_representation::f32, 1.f, 0.f},
         half_accumulate_descriptor_{linear_kind::axpby, elements, device_representation::f32, 1.f, .5f * step},
         full_accumulate_descriptor_{linear_kind::axpby, elements, device_representation::f32, 1.f, step},
-        combine_(stage_id + 3, candidate_id, elements, step), elements_(elements), step_(step), field_(std::move(field)) {
+        combine_(stage_id + 3, candidate_id, elements, step), elements_(elements), step_(step), stream_(stream), field_(std::move(field)) {
     copy_stage_ = cellerator::compute::native_numeric::make_linear_stage(stage_id, candidate_id, &copy_descriptor_);
     half_accumulate_stage_ = cellerator::compute::native_numeric::make_linear_stage(stage_id + 1, candidate_id, &half_accumulate_descriptor_);
     full_accumulate_stage_ = cellerator::compute::native_numeric::make_linear_stage(stage_id + 2, candidate_id, &full_accumulate_descriptor_);
@@ -210,6 +219,7 @@ public:
   const rk4_combine_stage& combine() const noexcept { return combine_; }
   std::uint64_t elements() const noexcept { return elements_; }
   float step() const noexcept { return step_; }
+  void* stream() const noexcept { return stream_; }
 };
 
 inline program::program_status execute_direct_map(const direct_map_plan& plan,
@@ -243,6 +253,29 @@ inline program::program_status submit_one(const program::prepared_stage_v2& stag
   return program::execute_prepared_program_v2(program, &binding, 1, caller_stream);
 }
 
+// Retention is an explicit CE resident copy. The caller supplies the same
+// stream bound to the plan, so uploads/readiness on that stream are a caller
+// prerequisite; this API never invents cross-stream event synchronization.
+inline program::program_status capture_primal_checkpoint(
+    primal_checkpoint* checkpoint,
+    const cellerator::compute::native_numeric::resident_vector& source,
+    void* caller_stream) noexcept {
+  using namespace cellerator::compute::native_numeric;
+  if (!checkpoint || !source.data || !source.elements
+      || source.representation != device_representation::f32) return program::program_status::invalid_argument;
+  auto retained = std::shared_ptr<resident_vector>(new resident_vector{}, [](resident_vector* value) {
+    (void)release(value); delete value;
+  });
+  if (allocate(retained.get(), source.elements, source.representation, source.device_ordinal) != cudaSuccess)
+    return program::program_status::launch_failed;
+  linear_stage descriptor{linear_kind::copy, source.elements, source.representation, 1.f, 0.f};
+  const auto stage = make_linear_stage(9001, 9001, &descriptor);
+  if (const auto status = submit_one(stage, {source.data, retained->data}, caller_stream);
+      status != program::program_status::success) return status;
+  checkpoint->retained_primal = std::move(retained);
+  return program::program_status::success;
+}
+
 inline program::program_status execute_rk4_step(
     const rk4_step_plan& plan,
     const cellerator::compute::native_numeric::resident_vector& state,
@@ -268,6 +301,7 @@ inline program::program_status execute_rk4_step(
       || !valid(scratch.k2) || !valid(scratch.k3) || !valid(scratch.k4)
       || !state.elements || state.elements > std::numeric_limits<std::uint64_t>::max() / 5
       || state.elements != plan.elements() || !std::isfinite(plan.step()) || plan.step() <= 0.f
+      || caller_stream != plan.stream() || output.generation.value == std::numeric_limits<std::uint64_t>::max()
       || !scratch.packed.data || scratch.packed.elements != 5 * state.elements
       || scratch.packed.representation != device_representation::f32
       || scratch.packed.device_ordinal != state.device_ordinal || aliases()
@@ -278,9 +312,12 @@ inline program::program_status execute_rk4_step(
       || std::abs((stages[3].time - stages[0].time) - plan.step()) > 1e-6 * plan.step())
     return program::program_status::invalid_argument;
   auto vector_field = [&](const auto& input, const rk4_stage_binding& stage, auto& derivative) {
-    // The CE vector-field provider owns forcing extent and representation;
-    // GH only requires a materialized resident forcing binding for this time.
-    if (!stage.forcing || !stage.forcing->data) return program::program_status::invalid_argument;
+    // The declared field contract is FP32 state-width forcing on this device.
+    if (!stage.forcing || !valid(*stage.forcing)
+        || stage.forcing->data == output.data || stage.forcing->data == scratch.trial.data
+        || stage.forcing->data == scratch.k1.data || stage.forcing->data == scratch.k2.data
+        || stage.forcing->data == scratch.k3.data || stage.forcing->data == scratch.k4.data
+        || stage.forcing->data == scratch.packed.data) return program::program_status::invalid_argument;
     auto binding = plan.field().program.bindings.front();
     binding.input = input.data;
     binding.values = stage.forcing->data;
@@ -305,7 +342,9 @@ inline program::program_status execute_rk4_step(
   for (std::size_t i = 0; i < values.size(); ++i)
     if (auto status = submit_one(plan.copy_stage(), {values[i]->data, packed + i * stride}, caller_stream);
         status != program::program_status::success) return status;
-  return submit_one(plan.combine().stage,
+  const auto status = submit_one(plan.combine().stage,
       {scratch.packed.data, output.data, nullptr, scratch.packed.data, 5 * stride}, caller_stream);
+  if (status == program::program_status::success) ++output.generation.value;
+  return status;
 }
 } // namespace glasshelix::dynamics

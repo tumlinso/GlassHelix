@@ -31,12 +31,13 @@ struct device_vector {
 void upload(device_vector& target, const std::array<float, width>& values, std::uint64_t generation = 1) {
   check(ce::upload(target.value, values.data(), values.size(), {generation}, nullptr), "device upload failed");
 }
-std::array<float, width> download(const device_vector& source) {
+std::array<float, width> download(const ce::resident_vector& source) {
   std::array<float, width> values{};
-  check(ce::download(source.value, values.data(), values.size(), nullptr), "device download failed");
+  check(ce::download(source, values.data(), values.size(), nullptr), "device download failed");
   check(cudaDeviceSynchronize(), "device synchronization failed");
   return values;
 }
+std::array<float, width> download(const device_vector& source) { return download(source.value); }
 struct rk4_vectors {
   device_vector trial{width}, k1{width}, k2{width}, k3{width}, k4{width}, packed{5 * width};
   gh::rk4_resident_scratch scratch() { return {trial.value, k1.value, k2.value, k3.value, k4.value, packed.value}; }
@@ -131,10 +132,15 @@ int main() try {
   rk4_steps(plan, other, other_next, forcing, other_vectors, 0.f, h, 1);
   require(std::abs(download(other)[0] - download(current)[0]) > .1f, "resident trajectories were coupled");
   gh::resident_instance instance{{1, 0}, current.value.generation, {7}, "f32"};
+  gh::primal_checkpoint checkpoint{instance.identity, instance.state_generation, instance.parameter_generation, 1., 20};
+  require(gh::capture_primal_checkpoint(&checkpoint, current.value, nullptr) == program::program_status::success,
+          "CE retained primal copy failed");
   gh::bounded_primal_history history(1);
-  history.record({instance.identity, instance.state_generation, instance.parameter_generation,
-                  1., 20, current.value.data});
+  history.record(checkpoint);
   (void)history.require_current(instance, 20);
+  upload(current, other_base, 2); // overwrite the ping-pong source after retention.
+  require(std::abs(download(*checkpoint.retained_primal)[0] - result[0]) < 2e-5f,
+          "retained CE primal snapshot changed after source overwrite");
   ++instance.parameter_generation.value;
   bool stale = false; try { (void)history.require_current(instance, 20); } catch (const std::invalid_argument&) { stale = true; }
   require(stale, "stale parameter checkpoint was accepted");
