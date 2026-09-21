@@ -29,7 +29,7 @@ int main() try {
  std::vector<pg::prepared_stage_v2> stages;std::vector<pg::launch_binding_v2> bindings;stages.reserve(width);bindings.reserve(width);
  std::array<float,width*3> input{};
  for(std::size_t i=0;i<width;++i){input[3*i]=.01f*float(i);input[3*i+1]=.2f+.03f*float(i);input[3*i+2]=i<16?.5f:0.f;values[i].value_generation=7;stages.push_back(mechanism.bind_indexed_stage(evaluator,100+i,1,unsigned(i)));}
- float* device_input=nullptr;float* device_output=nullptr;cuda_check(cudaMalloc(&device_input,sizeof(input)),"input allocation failed");cuda_check(cudaMalloc(&device_output,width*sizeof(float)),"output allocation failed");cuda_check(cudaMemcpy(device_input,input.data(),sizeof(input),cudaMemcpyHostToDevice),"input upload failed");
+ float* device_input=nullptr;float* device_output=nullptr;cuda_check(cudaMalloc(reinterpret_cast<void**>(&device_input),sizeof(input)),"input allocation failed");cuda_check(cudaMalloc(reinterpret_cast<void**>(&device_output),width*sizeof(float)),"output allocation failed");cuda_check(cudaMemcpy(device_input,input.data(),sizeof(input),cudaMemcpyHostToDevice),"input upload failed");
  for(std::size_t i=0;i<width;++i)bindings.push_back({device_input+3*i,device_output+i,&values[i]});
  const pg::prepared_program_v2 program{2,0,stages.data(),stages.size(),nullptr,0};check(pg::execute_prepared_program_v2(program,bindings.data(),bindings.size(),nullptr)==pg::program_status::success,"registered evaluator launch failed");cuda_check(cudaDeviceSynchronize(),"registered evaluator synchronization failed");
  std::array<float,width> output{};cuda_check(cudaMemcpy(output.data(),device_output,sizeof(output),cudaMemcpyDeviceToHost),"output download failed");cudaFree(device_output);cudaFree(device_input);

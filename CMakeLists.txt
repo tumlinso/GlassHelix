@@ -16,6 +16,7 @@ if(NOT TARGET Cellerator::native_foundation OR NOT TARGET Cellerator::indexed_me
 endif()
 add_library(glasshelix_core INTERFACE)
 add_library(GlassHelix::core ALIAS glasshelix_core)
+set_target_properties(glasshelix_core PROPERTIES EXPORT_NAME core)
 target_compile_features(glasshelix_core INTERFACE cxx_std_20)
 target_include_directories(glasshelix_core INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -25,6 +26,7 @@ target_link_libraries(glasshelix_core INTERFACE
 
 add_library(glasshelix_foundation STATIC src/system/assembly.cc)
 add_library(GlassHelix::foundation ALIAS glasshelix_foundation)
+set_target_properties(glasshelix_foundation PROPERTIES EXPORT_NAME foundation)
 target_compile_features(glasshelix_foundation PUBLIC cxx_std_20)
 target_link_libraries(glasshelix_foundation PUBLIC GlassHelix::core)
 install(TARGETS glasshelix_core glasshelix_foundation EXPORT GlassHelixFoundationTargets)
@@ -32,12 +34,12 @@ install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 install(EXPORT GlassHelixFoundationTargets FILE GlassHelixFoundationTargets.cmake
   NAMESPACE GlassHelix:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
 configure_package_config_file(cmake/GlassHelixFoundationConfig.cmake.in
-  ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixFoundationConfig.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfig.cmake
   INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
-write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/GlassHelixFoundationConfigVersion.cmake
+write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfigVersion.cmake
   VERSION ${PROJECT_VERSION} COMPATIBILITY SameMajorVersion)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixFoundationConfig.cmake
-  ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixFoundationConfigVersion.cmake
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfig.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfigVersion.cmake
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
 if(BUILD_TESTING)
   add_subdirectory(tests/native_foundation/core)
