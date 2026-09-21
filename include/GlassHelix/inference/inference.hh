@@ -2,6 +2,7 @@
 
 #include <GlassHelix/core/observation.hh>
 #include <GlassHelix/observation/observation.hh>
+#include <Cellerator/execution/program/program_v2.h>
 
 #include <algorithm>
 #include <cmath>
@@ -46,6 +47,28 @@ class finite_candidates {
       const auto result = common_engine(candidate_value);
       if (!result.provenance.valid()) throw std::invalid_argument("common-engine propagation lacks provenance");
       propagated_.push_back(result);
+    }
+  }
+
+  // CE owns execution. The binding provider owns candidate-resident state and
+  // parameters; the collector is the explicit synchronized host egress.
+  using ce_binding_provider = std::function<std::vector<cellerator::execution::program::launch_binding_v2>(const candidate&)>;
+  using ce_result_collector = std::function<observation::engine_output(const candidate&)>;
+  void propagate_ce(const cellerator::execution::program::prepared_program_v2& program,
+                    const ce_binding_provider& bindings, const ce_result_collector& collect,
+                    void* caller_stream) {
+    if (!program.stages || !program.stage_count || !bindings || !collect)
+      throw std::invalid_argument("CE propagation contract required");
+    propagated_.clear(); propagated_.reserve(candidates_.size());
+    for (const auto& candidate_value : candidates_) {
+      auto candidate_bindings = bindings(candidate_value);
+      const auto status = cellerator::execution::program::execute_prepared_program_v2(
+          program, candidate_bindings.data(), candidate_bindings.size(), caller_stream);
+      if (status != cellerator::execution::program::program_status::success)
+        throw std::runtime_error("CE candidate propagation failed");
+      auto result = collect(candidate_value);
+      if (!result.provenance.valid()) throw std::invalid_argument("CE propagation lacks provenance");
+      propagated_.push_back(std::move(result));
     }
   }
 

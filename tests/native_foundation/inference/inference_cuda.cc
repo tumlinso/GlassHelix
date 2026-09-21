@@ -1,0 +1,12 @@
+#include <GlassHelix/inference/inference.hh>
+#include <Cellerator/compute/operation/native_numeric/device_linear.hh>
+#include <cuda_runtime_api.h>
+#include <array>
+#include <cmath>
+#include <stdexcept>
+namespace ce=cellerator::compute::native_numeric; namespace pg=cellerator::execution::program; namespace gh=glasshelix;
+void ok(cudaError_t e){if(e!=cudaSuccess)throw std::runtime_error("cuda");} void need(bool x){if(!x)throw std::runtime_error("check");}
+struct vec { ce::resident_vector v{}; vec(){ok(ce::allocate(&v,1,ce::device_representation::f32,0));} ~vec(){ce::release(&v);} };
+gh::core::quantity q(){ gh::core::quantity x; x.axis={{gh::core::identity::biological_abi_version,gh::core::identity::serialized_record_kind::persistent_axis_identity,sizeof(gh::core::identity::persistent_axis_identity)},{1,0},{2,0},{3,0},{4,0}};x.structure={5,0};x.units="r";x.role=gh::core::quantity_role::observation;x.extent=1;return x;}
+gh::core::result_provenance prov(){gh::core::result_provenance p; p.scientific_model_id="system";p.model_revision="r1";p.gh_source_commit="gh";p.ce_source_commit="ce";p.numerical_policy="fp32";return p;}
+int main()try { vec a,b,oa,ob; float av=0,bv=1; ok(ce::upload(a.v,&av,1,{1},nullptr));ok(ce::upload(b.v,&bv,1,{1},nullptr)); ce::linear_stage d{ce::linear_kind::axpby,1,ce::device_representation::f32,2.f,0.f};auto st=ce::make_linear_stage(9,1,&d);pg::prepared_program_v2 program{2,0,&st,1,nullptr,0}; gh::inference::finite_candidates belief{{{"left","m1",{0},.5},{"right","m2",{1},.5}}}; auto bind=[&](const gh::inference::candidate& c){return std::vector<pg::launch_binding_v2>{{c.hypothesis_id=="left"?a.v.data:b.v.data,c.hypothesis_id=="left"?oa.v.data:ob.v.data}};};auto collect=[&](const gh::inference::candidate& c){float x=0;auto& out=c.hypothesis_id=="left"?oa:ob;ok(ce::download(out.v,&x,1,nullptr));ok(cudaDeviceSynchronize());return gh::observation::engine_output{{x},prov()};};belief.propagate_ce(program,bind,collect,nullptr);auto observed=q();auto map=gh::observation::observation_map::partial(observed,1,{0});gh::core::observation_record e{observed,{0},{true},"r","h","s","g",1,gh::core::sampling_unit::population_snapshot,true};belief.assimilate(e,gh::observation::gaussian_noise{.1,1},map,"e1");need(belief.values()[0].weight>.999&&belief.values()[1].weight<.001&&belief.values()[0].mechanism_id=="m1"&&belief.evidence_history().size()==1);return 0;}catch(...){return 1;}
