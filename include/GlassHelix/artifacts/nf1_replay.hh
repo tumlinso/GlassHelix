@@ -26,5 +26,8 @@ bool read_nf1_replay(const std::string& path, nf1_replay_record*, std::string* e
 // A portable logical replay probe for examples and validation. Pending/failed
 // records refuse; succeeded_empty intentionally returns an empty result.
 bool replay_defined_operation(const nf1_replay_record&, std::vector<float>* result, std::string* error = nullptr) noexcept;
+bool replay_matches_runtime(const nf1_replay_record&, const std::string& glasshelix_source,
+                            const std::string& cellerator_source,
+                            std::string* error = nullptr) noexcept;
 const char* status_name(nf1_run_status) noexcept;
 }
