@@ -1,3 +1,4 @@
+#include <GlassHelix/dynamics/response_plan.hh>
 #include <GlassHelix/interrogation/differentiation.hh>
 #include <cuda_runtime_api.h>
 #include <array>
