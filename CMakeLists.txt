@@ -15,6 +15,22 @@ find_package(LAPACK REQUIRED)
 if(NOT TARGET Cellerator::native_foundation OR NOT TARGET Cellerator::indexed_mechanism)
   message(FATAL_ERROR "Cellerator package lacks the native foundation or indexed mechanism target")
 endif()
+execute_process(COMMAND git rev-parse HEAD
+  WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+  OUTPUT_VARIABLE GlassHelix_BUILD_SOURCE_REVISION
+  OUTPUT_STRIP_TRAILING_WHITESPACE RESULT_VARIABLE _glasshelix_git_result)
+string(LENGTH "${GlassHelix_BUILD_SOURCE_REVISION}" _glasshelix_revision_length)
+if(NOT _glasshelix_git_result EQUAL 0 OR
+   NOT _glasshelix_revision_length EQUAL 40 OR
+   NOT GlassHelix_BUILD_SOURCE_REVISION MATCHES "^[0-9a-f]+$")
+  message(FATAL_ERROR "GlassHelix source identity requires the configured Git HEAD")
+endif()
+string(LENGTH "${Cellerator_BUILD_SOURCE_REVISION}" _cellerator_revision_length)
+if(NOT DEFINED Cellerator_BUILD_SOURCE_REVISION OR
+   NOT _cellerator_revision_length EQUAL 40 OR
+   NOT Cellerator_BUILD_SOURCE_REVISION MATCHES "^[0-9a-f]+$")
+  message(FATAL_ERROR "Cellerator package lacks a valid build source identity")
+endif()
 add_library(glasshelix_core INTERFACE)
 add_library(GlassHelix::core ALIAS glasshelix_core)
 set_target_properties(glasshelix_core PROPERTIES EXPORT_NAME core)
@@ -39,8 +55,15 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/artifacts/nf1_replay.cc" AND
   add_library(GlassHelix::nf1_replay ALIAS glasshelix_nf1_replay)
   set_target_properties(glasshelix_nf1_replay PROPERTIES EXPORT_NAME nf1_replay)
   target_compile_features(glasshelix_nf1_replay PUBLIC cxx_std_20)
+  target_compile_definitions(glasshelix_nf1_replay PRIVATE
+    GLASSHELIX_NF1_SOURCE_REVISION="${GlassHelix_BUILD_SOURCE_REVISION}"
+    CELLERATOR_NF1_SOURCE_REVISION="${Cellerator_BUILD_SOURCE_REVISION}")
   target_link_libraries(glasshelix_nf1_replay PUBLIC GlassHelix::core Cellerator::local_differential)
   list(APPEND _glasshelix_install_targets glasshelix_nf1_replay)
+
+  add_executable(gh_nf1a_replay_cli tools/native_foundation/nf1_replay_cli.cc)
+  target_link_libraries(gh_nf1a_replay_cli PRIVATE GlassHelix::nf1_replay)
+  install(TARGETS gh_nf1a_replay_cli RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
   add_library(glasshelix_nf1 MODULE bindings/python/nf1_module.cc)
   set_target_properties(glasshelix_nf1 PROPERTIES PREFIX "")
@@ -81,8 +104,6 @@ if(BUILD_TESTING)
     add_subdirectory(tests/native_foundation/reduction)
   endif()
   if(TARGET glasshelix_nf1_replay)
-    add_executable(gh_nf1a_replay_cli tools/native_foundation/nf1_replay_cli.cc)
-    target_link_libraries(gh_nf1a_replay_cli PRIVATE GlassHelix::nf1_replay)
     add_executable(gh_nf1a_replay_test tests/native_foundation/artifacts/nf1_replay_test.cc)
     target_link_libraries(gh_nf1a_replay_test PRIVATE GlassHelix::nf1_replay)
     add_test(NAME gh_nf1a_replay
