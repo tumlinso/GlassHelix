@@ -1,0 +1,9 @@
+# NF1A analysis contracts
+
+`vector_field`, `discrete_step`, `observation`, and `implemented_rollout` are explicit differentiated-object labels. Response execution uses only typed Cellerator factories; generic compiled-stage binding is not an admissible response path.
+
+A response attachment borrows its CE differential block and resident primal owners. Those objects must outlive the forward plan and every submitted response. A retained primal is accepted only under the saved policy while its state, parameter, forcing, and activity stamps match. Recomputed primals are rejected because this plan does not implement a recomputation contract. Legacy forward plans without an attachment remain forward-capable but reject response requests.
+
+Local SVD diagnostics report scales, threshold, nullspace, residual, and local domain. A local degeneracy does not establish global identification or posterior mass. Alternative optimization counts are diagnostics, not weights. Reduction closure is demonstrated only for supplied regimes; unequal-rate nonclosure remains explicit. Error reports preserve conversion, integration, dropped-support, empirical, certified, and scientific components with source/domain provenance. Empirical or Jacobian magnitudes never certify a bound.
+
+Evidence mapping: `gh_nf1a_diagnostics` covers LAPACK nullspace controls; `gh_nf1a_alternatives` covers atomic aligned alternatives; `gh_nf1a_reduction` covers supplied closure and error provenance; `gh_nf1a_differentiate` covers typed CE JVP/VJP composition for direct maps, RK4 steps, observations and rollouts, plus stale refusal. Its retained-stage RK4 control uses a primal-dependent multiply field and checks the actual forward calculation by finite differences and the reverse action by an adjoint identity. The controller-leased V100 run of the current frozen differentiation binary is evidence `29077dae-0534-4bc6-a5a9-c4a11bb3e0d2`.
