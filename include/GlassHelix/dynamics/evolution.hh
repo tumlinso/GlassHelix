@@ -2,6 +2,7 @@
 #include <GlassHelix/core/request.hh>
 #include <Cellerator/compute/operation/operation_core_v2/schema.hh>
 #include <Cellerator/compute/operation/native_numeric/device_linear.hh>
+#include <Cellerator/compute/operation/differential/local_arithmetic.hh>
 #include <Cellerator/execution/program/program_v2.h>
 #include <algorithm>
 #include <array>
@@ -125,11 +126,15 @@ inline program::program_status submit(const prepared_stage_bundle& bundle,
                                                bundle.bindings.size(), caller_stream);
 }
 
-struct direct_map_plan { prepared_stage_bundle stage; };
-
 // Stable semantic attachment supplied by the owner of the actual forward plan.
 // Response code borrows these CE stages and never reconstructs its own map.
 struct forward_plan_identity { std::uint64_t stage_id = 0, candidate_id = 0; };
+struct response_attachment {
+  forward_plan_identity forward{};
+  // Borrowed CE block and resident owners outlive this plan and every response launch.
+  const cellerator::compute::differential::local_block* block = nullptr;
+};
+struct direct_map_plan { prepared_stage_bundle stage; response_attachment response{}; };
 inline forward_plan_identity identity_of(const direct_map_plan& plan) noexcept {
   if (!plan.stage.program.stages || !plan.stage.program.stage_count) return {};
   const auto& stage = plan.stage.program.stages[0];
@@ -142,6 +147,7 @@ inline forward_plan_identity identity_of(const direct_map_plan& plan) noexcept {
 // provider-owned.
 struct rk4_vector_field {
   prepared_stage_bundle program;
+  response_attachment response{};
 };
 
 struct rk4_stage_binding {
