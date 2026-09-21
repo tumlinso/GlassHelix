@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <array>
 #include <deque>
+#include <cstddef>
 #include <limits>
 #include <stdexcept>
 #include <utility>
@@ -123,7 +124,37 @@ inline program::program_status submit(const prepared_stage_bundle& bundle,
 }
 
 struct direct_map_plan { prepared_stage_bundle stage; };
-struct rk4_plan { std::array<prepared_stage_bundle, 5> stages; };
+
+// The supplied CE program is a vector field with one binding. GlassHelix only
+// patches the state (`input`), forcing (`values`), and derivative (`output`)
+// slots for each mathematical RK4 stage; all other CE binding fields remain
+// provider-owned.
+struct rk4_vector_field {
+  prepared_stage_bundle program;
+};
+
+struct rk4_stage_binding {
+  double time = 0;
+  const cellerator::compute::native_numeric::resident_vector* forcing = nullptr;
+};
+
+inline std::array<rk4_stage_binding, 4> make_rk4_stage_bindings(
+    double begin, double step,
+    const cellerator::compute::native_numeric::resident_vector& forcing) {
+  return {{{begin, &forcing}, {begin + .5 * step, &forcing},
+           {begin + .5 * step, &forcing}, {begin + step, &forcing}}};
+}
+
+// Every vector is CE resident. `packed` has five contiguous vector-width
+// regions, used solely as the documented CE weighted_sum4 workspace.
+struct rk4_resident_scratch {
+  cellerator::compute::native_numeric::resident_vector& trial;
+  cellerator::compute::native_numeric::resident_vector& k1;
+  cellerator::compute::native_numeric::resident_vector& k2;
+  cellerator::compute::native_numeric::resident_vector& k3;
+  cellerator::compute::native_numeric::resident_vector& k4;
+  cellerator::compute::native_numeric::resident_vector& packed;
+};
 
 // The final RK4 combination is a CE-owned resident-vector stage.  Its backing
 // descriptor stays with this object because program_v2 intentionally borrows
@@ -142,6 +173,43 @@ struct rk4_combine_stage {
                    step_size, 0.0f},
         stage(cellerator::compute::native_numeric::make_linear_stage(
             stage_id, candidate_id, &descriptor)) {}
+};
+
+
+class rk4_step_plan {
+  using linear_stage = cellerator::compute::native_numeric::linear_stage;
+  using linear_kind = cellerator::compute::native_numeric::linear_kind;
+  using device_representation = cellerator::compute::native_numeric::device_representation;
+  linear_stage copy_descriptor_{linear_kind::copy, 0, device_representation::f32, 1.f, 0.f};
+  linear_stage half_accumulate_descriptor_{linear_kind::axpby, 0, device_representation::f32, 1.f, 0.f};
+  linear_stage full_accumulate_descriptor_{linear_kind::axpby, 0, device_representation::f32, 1.f, 0.f};
+  rk4_combine_stage combine_;
+  std::uint64_t elements_ = 0;
+  float step_ = 0.f;
+  program::prepared_stage_v2 copy_stage_{};
+  program::prepared_stage_v2 half_accumulate_stage_{};
+  program::prepared_stage_v2 full_accumulate_stage_{};
+  rk4_vector_field field_;
+public:
+  rk4_step_plan(rk4_vector_field field, std::uint64_t stage_id,
+                std::uint64_t candidate_id, std::uint64_t elements, float step)
+      : copy_descriptor_{linear_kind::copy, elements, device_representation::f32, 1.f, 0.f},
+        half_accumulate_descriptor_{linear_kind::axpby, elements, device_representation::f32, 1.f, .5f * step},
+        full_accumulate_descriptor_{linear_kind::axpby, elements, device_representation::f32, 1.f, step},
+        combine_(stage_id + 3, candidate_id, elements, step), elements_(elements), step_(step), field_(std::move(field)) {
+    copy_stage_ = cellerator::compute::native_numeric::make_linear_stage(stage_id, candidate_id, &copy_descriptor_);
+    half_accumulate_stage_ = cellerator::compute::native_numeric::make_linear_stage(stage_id + 1, candidate_id, &half_accumulate_descriptor_);
+    full_accumulate_stage_ = cellerator::compute::native_numeric::make_linear_stage(stage_id + 2, candidate_id, &full_accumulate_descriptor_);
+  }
+  rk4_step_plan(const rk4_step_plan&) = delete;
+  rk4_step_plan& operator=(const rk4_step_plan&) = delete;
+  const rk4_vector_field& field() const noexcept { return field_; }
+  const program::prepared_stage_v2& copy_stage() const noexcept { return copy_stage_; }
+  const program::prepared_stage_v2& half_accumulate_stage() const noexcept { return half_accumulate_stage_; }
+  const program::prepared_stage_v2& full_accumulate_stage() const noexcept { return full_accumulate_stage_; }
+  const rk4_combine_stage& combine() const noexcept { return combine_; }
+  std::uint64_t elements() const noexcept { return elements_; }
+  float step() const noexcept { return step_; }
 };
 
 inline program::program_status execute_direct_map(const direct_map_plan& plan,
@@ -168,11 +236,76 @@ inline program::program_status execute_resident_direct_rollout(
   return program::program_status::success;
 }
 
-inline program::program_status execute_rk4_step(const rk4_plan& plan,
-                                                 void* caller_stream) noexcept {
-  for (const auto& stage : plan.stages)
-    if (const auto status = submit(stage, caller_stream); status != program::program_status::success)
-      return status;
-  return program::program_status::success;
+inline program::program_status submit_one(const program::prepared_stage_v2& stage,
+                                          program::launch_binding_v2 binding,
+                                          void* caller_stream) noexcept {
+  const program::prepared_program_v2 program{2, 0, &stage, 1, nullptr, 0};
+  return program::execute_prepared_program_v2(program, &binding, 1, caller_stream);
+}
+
+inline program::program_status execute_rk4_step(
+    const rk4_step_plan& plan,
+    const cellerator::compute::native_numeric::resident_vector& state,
+    const std::array<rk4_stage_binding, 4>& stages,
+    rk4_resident_scratch scratch,
+    cellerator::compute::native_numeric::resident_vector& output,
+    void* caller_stream) noexcept {
+  using cellerator::compute::native_numeric::device_representation;
+  const auto valid = [&state](const auto& value) {
+    return value.data && value.elements == state.elements
+      && value.representation == device_representation::f32
+      && value.device_ordinal == state.device_ordinal;
+  };
+  const std::array<const void*, 8> addresses{state.data, output.data, scratch.trial.data,
+      scratch.k1.data, scratch.k2.data, scratch.k3.data, scratch.k4.data, scratch.packed.data};
+  const auto aliases = [&addresses] {
+    for (std::size_t i = 0; i < addresses.size(); ++i)
+      for (std::size_t j = i + 1; j < addresses.size(); ++j)
+        if (addresses[i] == addresses[j]) return true;
+    return false;
+  };
+  if (!valid(state) || !valid(output) || !valid(scratch.trial) || !valid(scratch.k1)
+      || !valid(scratch.k2) || !valid(scratch.k3) || !valid(scratch.k4)
+      || !state.elements || state.elements > std::numeric_limits<std::uint64_t>::max() / 5
+      || state.elements != plan.elements() || !std::isfinite(plan.step()) || plan.step() <= 0.f
+      || !scratch.packed.data || scratch.packed.elements != 5 * state.elements
+      || scratch.packed.representation != device_representation::f32
+      || scratch.packed.device_ordinal != state.device_ordinal || aliases()
+      || plan.field().program.bindings.size() != 1
+      || !std::isfinite(stages[0].time)
+      || std::abs((stages[1].time - stages[0].time) - .5 * plan.step()) > 1e-6 * plan.step()
+      || std::abs((stages[2].time - stages[1].time)) > 1e-6 * plan.step()
+      || std::abs((stages[3].time - stages[0].time) - plan.step()) > 1e-6 * plan.step())
+    return program::program_status::invalid_argument;
+  auto vector_field = [&](const auto& input, const rk4_stage_binding& stage, auto& derivative) {
+    // The CE vector-field provider owns forcing extent and representation;
+    // GH only requires a materialized resident forcing binding for this time.
+    if (!stage.forcing || !stage.forcing->data) return program::program_status::invalid_argument;
+    auto binding = plan.field().program.bindings.front();
+    binding.input = input.data;
+    binding.values = stage.forcing->data;
+    binding.output = derivative.data;
+    return program::execute_prepared_program_v2(plan.field().program.program, &binding, 1, caller_stream);
+  };
+  auto accumulate = [&](const auto& stage, const auto& derivative) {
+    return submit_one(stage, {state.data, scratch.trial.data, derivative.data}, caller_stream);
+  };
+  if (auto status = vector_field(state, stages[0], scratch.k1); status != program::program_status::success) return status;
+  if (auto status = accumulate(plan.half_accumulate_stage(), scratch.k1); status != program::program_status::success) return status;
+  if (auto status = vector_field(scratch.trial, stages[1], scratch.k2); status != program::program_status::success) return status;
+  if (auto status = accumulate(plan.half_accumulate_stage(), scratch.k2); status != program::program_status::success) return status;
+  if (auto status = vector_field(scratch.trial, stages[2], scratch.k3); status != program::program_status::success) return status;
+  if (auto status = accumulate(plan.full_accumulate_stage(), scratch.k3); status != program::program_status::success) return status;
+  if (auto status = vector_field(scratch.trial, stages[3], scratch.k4); status != program::program_status::success) return status;
+
+  auto* packed = static_cast<std::byte*>(scratch.packed.data);
+  const auto stride = state.elements * sizeof(float);
+  const std::array<const cellerator::compute::native_numeric::resident_vector*, 5> values{
+      &state, &scratch.k1, &scratch.k2, &scratch.k3, &scratch.k4};
+  for (std::size_t i = 0; i < values.size(); ++i)
+    if (auto status = submit_one(plan.copy_stage(), {values[i]->data, packed + i * stride}, caller_stream);
+        status != program::program_status::success) return status;
+  return submit_one(plan.combine().stage,
+      {scratch.packed.data, output.data, nullptr, scratch.packed.data, 5 * stride}, caller_stream);
 }
 } // namespace glasshelix::dynamics
