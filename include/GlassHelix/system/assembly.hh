@@ -1,6 +1,7 @@
 #pragma once
 #include <GlassHelix/core/system.hh>
 #include <Cellerator/compute/operation/native_foundation_contract.hh>
+#include <Cellerator/compute/operation/indexed_mechanism/evaluators.hh>
 namespace glasshelix::system {
 namespace nf = cellerator::compute::operation::nf1;
 namespace program = cellerator::execution::program;
@@ -27,6 +28,11 @@ public:
  const core::mechanism& scientific_mechanism()const;
  nf::compiled_block numerical_block()const;
  nf::status bind_stage(nf::capability,const void*,std::uint64_t,std::uint64_t,std::uint32_t,program::prepared_stage_v2&)const;
+ // Registered Cellerator blocks are the custom/composed escape hatch.  The
+ // Cellerator-owned state must outlive the returned prepared stage.
+ program::prepared_stage_v2 bind_indexed_stage(
+   const cellerator::compute::operation::indexed::prepared_evaluator_stage&,
+   std::uint64_t,std::uint64_t,std::uint32_t,std::uint64_t=0,std::uint32_t=0)const;
 };
 using immutable_mechanism=std::shared_ptr<const assembled_mechanism>;
 }

@@ -1,4 +1,4 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
-find_dependency(Cellerator CONFIG COMPONENTS native_foundation)
+find_dependency(Cellerator CONFIG COMPONENTS native_foundation indexed_mechanism)
 include("${CMAKE_CURRENT_LIST_DIR}/GlassHelixFoundationTargets.cmake")
