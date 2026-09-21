@@ -3,14 +3,14 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-NF1A-SYSTEM: Deliver usable native systems and deterministic evolution
 
-Task revision: `155`; current project revision is in `todo-status.md`.
+Task revision: `159`; current project revision is in `todo-status.md`.
 
 ## Objective
 Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `in_progress`
+- Execution: `claimed`
 - Parallel policy: `parallel_safe`
 - Result: `-`
 
