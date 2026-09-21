@@ -147,29 +147,32 @@ int main() {
   constexpr std::size_t count = 33;
   constexpr std::uint64_t stage_id = 77, candidate_id = 9;
 
-  vector state(count, stream, 2.f, 7), forcing(count, stream, .5f, 11);
+  vector state(count, stream, 2.f, 7), forcing(count, stream, .5f, 13);
+  vector parameters(count, stream, 1.f, 11);
+  ex::value_generation activity_generation{17};
   vector state_direction(count, stream, .2f), zero_direction(count, stream, 0.f);
   vector one_direction(count, stream, 1.f);
   vector forcing_direction(count, stream, .1f);
   vector direct_output(count, stream, 0.f), direct_left_adjoint(count, stream, 0.f);
   vector direct_right_adjoint(count, stream, 0.f), cotangent(count, stream, .3f);
   primitive direct_primitive(100, count, stream, state.value, forcing.value,
-                             state.value, forcing.value);
+                             state.value, parameters.value);
   nn::linear_stage direct_descriptor{};
   pg::prepared_stage_v2 direct_stage{};
   auto direct_bundle = forward_add_bundle(direct_descriptor, direct_stage, stage_id,
                                           candidate_id, count);
   gh::dynamics::response_attachment direct_attachment{
-      {stage_id, candidate_id}, &direct_primitive.block, {}};
+      {stage_id, candidate_id}, &direct_primitive.block, {}, {&forcing.value},
+      &activity_generation};
   gh::dynamics::direct_map_plan direct_plan{
       direct_bundle, gh::core::differentiated_object::vector_field, direct_attachment};
-  rsp::saved_primal stamp{{7}, {11}, 13, 17, rsp::primal_policy::saved};
+  rsp::saved_primal stamp = rsp::retain_primal(direct_attachment);
 
   auto direct_jvp = direct_primitive.binding(
       nf::jvp, &state_direction.value, &zero_direction.value, nullptr,
       &direct_output.value, nullptr, nullptr);
   require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
-                                      direct_plan, stamp, stamp, direct_jvp, stream)
+                                      direct_plan, stamp, direct_jvp, stream)
               == pg::program_status::success,
           "direct map JVP");
   for (float value : download(direct_output, stream))
@@ -177,8 +180,7 @@ int main() {
   auto recomputed = stamp;
   recomputed.policy = rsp::primal_policy::explicitly_recomputed;
   require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
-                                      direct_plan, recomputed, recomputed,
-                                      direct_jvp, stream)
+                                      direct_plan, recomputed, direct_jvp, stream)
               == pg::program_status::launch_failed,
           "unsupported recomputed primal accepted");
 
@@ -187,7 +189,7 @@ int main() {
       nf::jvp, &one_direction.value, &zero_direction.value, nullptr,
       &direct_output.value, nullptr, nullptr);
   require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
-                                      direct_plan, stamp, stamp,
+                                      direct_plan, stamp,
                                       state_column, stream) == pg::program_status::success,
           "state sensitivity");
   const float state_sensitivity = download(direct_output, stream).front();
@@ -195,7 +197,7 @@ int main() {
       nf::jvp, &zero_direction.value, &one_direction.value, nullptr,
       &direct_output.value, nullptr, nullptr);
   require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
-                                      direct_plan, stamp, stamp,
+                                      direct_plan, stamp,
                                       forcing_column, stream) == pg::program_status::success,
           "forcing sensitivity");
   const float forcing_sensitivity = download(direct_output, stream).front();
@@ -211,19 +213,37 @@ int main() {
       nf::vjp, nullptr, nullptr, &cotangent.value, nullptr,
       &direct_left_adjoint.value, &direct_right_adjoint.value);
   require(rsp::execute_direct_map_vjp(gh::core::differentiated_object::vector_field,
-                                      direct_plan, stamp, stamp, direct_vjp, stream)
+                                      direct_plan, stamp, direct_vjp, stream)
               == pg::program_status::success,
           "direct map VJP");
   const auto direct_adj = download(direct_left_adjoint, stream);
   require(std::abs(count * .2f * .3f -
                    count * .2f * direct_adj.front()) < 2e-5f,
           "direct adjoint identity");
-  auto stale = stamp;
-  ++stale.activity;
+  ++activity_generation.value;
   require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
-                                      direct_plan, stamp, stale, direct_jvp, stream)
+                                      direct_plan, stamp, direct_jvp, stream)
               == pg::program_status::launch_failed,
           "stale activity accepted");
+  --activity_generation.value;
+  ++state.value.generation.value;
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, direct_jvp, stream)
+              == pg::program_status::launch_failed,
+          "stale state accepted");
+  --state.value.generation.value;
+  ++parameters.value.generation.value;
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, direct_jvp, stream)
+              == pg::program_status::launch_failed,
+          "stale parameters accepted");
+  --parameters.value.generation.value;
+  ++forcing.value.generation.value;
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, direct_jvp, stream)
+              == pg::program_status::launch_failed,
+          "stale forcing accepted");
+  --forcing.value.generation.value;
 
   multiply_forward_state field_descriptor{};
   pg::prepared_stage_v2 field_stage{};
@@ -237,19 +257,22 @@ int main() {
   vector stage2(count, stream, stage_state_value[2], 7);
   vector stage3(count, stream, stage_state_value[3], 7);
   std::array<primitive, 4> fields{
-      primitive(201, count, stream, stage0.value, forcing.value, state.value, forcing.value,
+      primitive(201, count, stream, stage0.value, forcing.value, state.value, parameters.value,
                 nn::local_operation::multiply),
-      primitive(202, count, stream, stage1.value, forcing.value, state.value, forcing.value,
+      primitive(202, count, stream, stage1.value, forcing.value, state.value, parameters.value,
                 nn::local_operation::multiply),
-      primitive(203, count, stream, stage2.value, forcing.value, state.value, forcing.value,
+      primitive(203, count, stream, stage2.value, forcing.value, state.value, parameters.value,
                 nn::local_operation::multiply),
-      primitive(204, count, stream, stage3.value, forcing.value, state.value, forcing.value,
+      primitive(204, count, stream, stage3.value, forcing.value, state.value, parameters.value,
                 nn::local_operation::multiply)};
   gh::dynamics::response_attachment rk4_attachment{
       {stage_id, candidate_id}, &fields[0].block,
-      {&fields[0].block, &fields[1].block, &fields[2].block, &fields[3].block}};
+      {&fields[0].block, &fields[1].block, &fields[2].block, &fields[3].block},
+      {&forcing.value, &forcing.value, &forcing.value, &forcing.value},
+      &activity_generation};
   gh::dynamics::rk4_vector_field field{field_bundle, rk4_attachment};
   gh::dynamics::rk4_step_plan rk4(std::move(field), 800, candidate_id, count, h, stream);
+  const auto rk4_stamp = rsp::retain_primal(rk4_attachment);
 
   vector trial_direction(count, stream, 0.f);
   vector dk1(count, stream, 0.f), dk2(count, stream, 0.f);
@@ -266,7 +289,7 @@ int main() {
        &forcing_direction.value, &forcing_direction.value},
       trial_direction.value, {&dk1.value, &dk2.value, &dk3.value, &dk4.value},
       tangent_packed.value, tangent_output.value};
-  require(rsp::execute_rk4_jvp(rk4, stamp, stamp, jvp_bindings, jvp_buffers, stream)
+  require(rsp::execute_rk4_jvp(rk4, rk4_stamp, jvp_bindings, jvp_buffers, stream)
               == pg::program_status::success,
           "RK4 JVP");
   const auto tangent = download(tangent_output, stream);
@@ -312,7 +335,7 @@ int main() {
       cotangent.value, zero_direction.value, adjoint_state.value, adjoint_temp.value,
       stage_adjoint.value, {&ak1.value, &ak2.value, &ak3.value, &ak4.value},
       {&au1.value, &au2.value, &au3.value, &au4.value}};
-  require(rsp::execute_rk4_vjp(rk4, stamp, stamp, vjp_bindings, vjp_buffers, stream)
+  require(rsp::execute_rk4_vjp(rk4, rk4_stamp, vjp_bindings, vjp_buffers, stream)
               == pg::program_status::success,
           "RK4 VJP");
   const auto state_adjoint = download(adjoint_state, stream);
@@ -322,24 +345,23 @@ int main() {
                    count*(.2f*state_adjoint.front() + .1f*forcing_adjoint)) < 3e-4f,
           "RK4 adjoint identity");
 
-  auto stale_forcing = stamp;
-  ++stale_forcing.forcing;
-  require(rsp::execute_rk4_jvp(rk4, stamp, stale_forcing, jvp_bindings,
-                               jvp_buffers, stream)
+  ++forcing.value.generation.value;
+  require(rsp::execute_rk4_jvp(rk4, rk4_stamp, jvp_bindings, jvp_buffers, stream)
               == pg::program_status::launch_failed,
           "stale forcing accepted");
+  --forcing.value.generation.value;
 
   gh::dynamics::direct_map_plan observation_plan{
       direct_bundle, gh::core::differentiated_object::observation, direct_attachment};
   auto observation_jvp = direct_primitive.binding(
       nf::jvp, &state_direction.value, &forcing_direction.value, nullptr,
       &direct_output.value, nullptr, nullptr);
-  require(rsp::execute_observation_jvp(observation_plan, stamp, stamp,
+  require(rsp::execute_observation_jvp(observation_plan, stamp,
                                       observation_jvp, stream)
               == pg::program_status::success,
           "observation response");
   const auto observation_tangent = download(direct_output, stream).front();
-  require(rsp::execute_observation_vjp(observation_plan, stamp, stamp,
+  require(rsp::execute_observation_vjp(observation_plan, stamp,
                                       direct_vjp, stream)
               == pg::program_status::success,
           "observation adjoint response");
@@ -365,19 +387,20 @@ int main() {
   require(std::abs(.3f*.3f-(.2f*observation_left+.1f*observation_right)) < 2e-5f,
           "observation adjoint identity");
   require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
-                                      observation_plan, stamp, stamp, direct_jvp, stream)
+                                      observation_plan, stamp, direct_jvp, stream)
               == pg::program_status::launch_failed,
           "observation relabeled as vector field");
 
   vector rollout_primal(count, stream, 2.5f, 7);
   primitive rollout_second_primitive(101, count, stream, rollout_primal.value,
-                                     forcing.value, rollout_primal.value, forcing.value);
+                                     forcing.value, rollout_primal.value, parameters.value);
   nn::linear_stage rollout_second_descriptor{};
   pg::prepared_stage_v2 rollout_second_stage{};
   auto rollout_second_bundle = forward_add_bundle(
       rollout_second_descriptor, rollout_second_stage, stage_id + 1, candidate_id, count);
   gh::dynamics::response_attachment rollout_second_attachment{
-      {stage_id + 1, candidate_id}, &rollout_second_primitive.block, {}};
+      {stage_id + 1, candidate_id}, &rollout_second_primitive.block, {}, {&forcing.value},
+      &activity_generation};
   std::array<gh::dynamics::direct_map_plan, 2> rollout{
       gh::dynamics::direct_map_plan{direct_bundle,
           gh::core::differentiated_object::implemented_rollout, direct_attachment},
@@ -400,9 +423,9 @@ int main() {
                                nullptr, &rollout_mid.value, nullptr, nullptr),
       rollout_second_primitive.binding(nf::jvp, &rollout_mid.value, &zero_direction.value,
                                        nullptr, &rollout_out.value, nullptr, nullptr)};
-  std::array<rsp::saved_primal, 2> rollout_stamps{stamp, stamp};
-  require(rsp::execute_rollout_jvp(rollout, rollout_stamps, rollout_stamps,
-                                  rollout_bindings, stream)
+  std::array<rsp::saved_primal, 2> rollout_stamps{
+      stamp, rsp::retain_primal(rollout_second_attachment)};
+  require(rsp::execute_rollout_jvp(rollout, rollout_stamps, rollout_bindings, stream)
               == pg::program_status::success,
           "rollout response");
   for (float value : download(rollout_out, stream))
@@ -418,7 +441,7 @@ int main() {
   std::array<nn::resident_vector*, 2> rollout_aux_adjoints{
       &rollout_aux0.value, &rollout_aux1.value};
   require(rsp::execute_rollout_vjp(
-              rollout, rollout_stamps, rollout_stamps, rollout_vjp_bindings,
+              rollout, rollout_stamps, rollout_vjp_bindings,
               {cotangent.value, rollout_state_adjoints, rollout_aux_adjoints}, stream)
               == pg::program_status::success,
           "rollout adjoint response");

@@ -11,12 +11,32 @@ namespace nf = df::nf1;
 enum class primal_policy { saved, explicitly_recomputed };
 
 struct saved_primal {
+  const cellerator::compute::native_numeric::resident_vector* state_owner = nullptr;
+  const cellerator::compute::native_numeric::resident_vector* parameter_owner = nullptr;
+  std::array<const cellerator::compute::native_numeric::resident_vector*, 4> forcing_owners{};
+  const cellerator::execution::value_generation* activity_owner = nullptr;
   cellerator::execution::value_generation state{};
   cellerator::execution::value_generation parameters{};
-  std::uint64_t forcing = 0;
-  std::uint64_t activity = 0;
+  std::array<cellerator::execution::value_generation, 4> forcing{};
+  cellerator::execution::value_generation activity{};
   primal_policy policy = primal_policy::saved;
 };
+
+inline saved_primal retain_primal(const response_attachment& attachment) noexcept {
+  saved_primal saved{};
+  if (!attachment.block) return saved;
+  const auto& owners = attachment.block->device_primal;
+  saved.state_owner = owners.state;
+  saved.parameter_owner = owners.parameters;
+  saved.forcing_owners = attachment.forcing_owners;
+  saved.activity_owner = attachment.activity_owner;
+  if (saved.state_owner) saved.state = saved.state_owner->generation;
+  if (saved.parameter_owner) saved.parameters = saved.parameter_owner->generation;
+  for (std::size_t i = 0; i < saved.forcing.size(); ++i)
+    if (saved.forcing_owners[i]) saved.forcing[i] = saved.forcing_owners[i]->generation;
+  if (saved.activity_owner) saved.activity = *saved.activity_owner;
+  return saved;
+}
 
 inline bool valid_attachment(const response_attachment& attachment,
                              forward_plan_identity actual,
@@ -30,11 +50,23 @@ inline bool valid_attachment(const response_attachment& attachment,
       cellerator::compute::operation::v2::same_stable_id(block->block.contract.definition, owners.identity.instance.prepared.definition);
 }
 
-inline bool current(const saved_primal& saved, const saved_primal& live) noexcept {
-  return saved.policy == primal_policy::saved && live.policy == primal_policy::saved &&
-      saved.state.value == live.state.value &&
-      saved.parameters.value == live.parameters.value &&
-      saved.forcing == live.forcing && saved.activity == live.activity;
+inline bool current(const saved_primal& saved,
+                    const response_attachment& attachment) noexcept {
+  if (saved.policy != primal_policy::saved || !attachment.block ||
+      saved.state_owner != attachment.block->device_primal.state ||
+      saved.parameter_owner != attachment.block->device_primal.parameters ||
+      saved.forcing_owners != attachment.forcing_owners ||
+      saved.activity_owner != attachment.activity_owner || !saved.state_owner ||
+      !saved.parameter_owner || !saved.forcing_owners[0] || !saved.activity_owner ||
+      saved.state.value != saved.state_owner->generation.value ||
+      saved.parameters.value != saved.parameter_owner->generation.value ||
+      saved.activity.value != saved.activity_owner->value)
+    return false;
+  for (std::size_t i = 0; i < saved.forcing.size(); ++i)
+    if (saved.forcing_owners[i] &&
+        saved.forcing[i].value != saved.forcing_owners[i]->generation.value)
+      return false;
+  return true;
 }
 
 inline bool valid_block(const df::local_block* block, void* stream) noexcept {
@@ -72,10 +104,10 @@ inline program::program_status linear_axpby(
 
 inline program::program_status execute_direct_map_jvp(
     core::differentiated_object requested, const direct_map_plan& plan,
-    const saved_primal& saved, const saved_primal& live,
+    const saved_primal& saved,
     df::response_binding<float>& binding, void* stream) noexcept {
   if (requested != plan.object ||
-      !valid_attachment(plan.response, identity_of(plan), stream) || !current(saved, live))
+      !valid_attachment(plan.response, identity_of(plan), stream) || !current(saved, plan.response))
     return program::program_status::launch_failed;
   return submit_response(*plan.response.block, nf::jvp, plan.response.forward,
                          binding, stream);
@@ -83,10 +115,10 @@ inline program::program_status execute_direct_map_jvp(
 
 inline program::program_status execute_direct_map_vjp(
     core::differentiated_object requested, const direct_map_plan& plan,
-    const saved_primal& saved, const saved_primal& live,
+    const saved_primal& saved,
     df::response_binding<float>& binding, void* stream) noexcept {
   if (requested != plan.object ||
-      !valid_attachment(plan.response, identity_of(plan), stream) || !current(saved, live))
+      !valid_attachment(plan.response, identity_of(plan), stream) || !current(saved, plan.response))
     return program::program_status::launch_failed;
   return submit_response(*plan.response.block, nf::vjp, plan.response.forward,
                          binding, stream);
@@ -102,10 +134,10 @@ struct rk4_jvp_buffers {
 };
 
 inline program::program_status execute_rk4_jvp(
-    const rk4_step_plan& plan, const saved_primal& saved, const saved_primal& live,
+    const rk4_step_plan& plan, const saved_primal& saved,
     std::array<df::response_binding<float>, 4>& bindings,
     rk4_jvp_buffers buffers, void* stream) noexcept {
-  if (!current(saved, live) || stream != plan.stream() || !plan.identity().stage_id ||
+  if (!current(saved, plan.field().response) || stream != plan.stream() || !plan.identity().stage_id ||
       plan.field().response.forward.stage_id != plan.identity().stage_id ||
       plan.field().response.forward.candidate_id != plan.identity().candidate_id)
     return program::program_status::launch_failed;
@@ -151,10 +183,10 @@ struct rk4_vjp_buffers {
 };
 
 inline program::program_status execute_rk4_vjp(
-    const rk4_step_plan& plan, const saved_primal& saved, const saved_primal& live,
+    const rk4_step_plan& plan, const saved_primal& saved,
     std::array<df::response_binding<float>, 4>& bindings,
     rk4_vjp_buffers buffers, void* stream) noexcept {
-  if (!current(saved, live) || stream != plan.stream() || !plan.identity().stage_id ||
+  if (!current(saved, plan.field().response) || stream != plan.stream() || !plan.identity().stage_id ||
       plan.field().response.forward.stage_id != plan.identity().stage_id ||
       plan.field().response.forward.candidate_id != plan.identity().candidate_id)
     return program::program_status::launch_failed;
@@ -200,34 +232,32 @@ inline program::program_status execute_rk4_vjp(
 }
 
 inline program::program_status execute_observation_jvp(
-    const direct_map_plan& plan, const saved_primal& saved, const saved_primal& live,
+    const direct_map_plan& plan, const saved_primal& saved,
     df::response_binding<float>& binding, void* stream) noexcept {
   if (plan.object != core::differentiated_object::observation)
     return program::program_status::invalid_argument;
   return execute_direct_map_jvp(core::differentiated_object::observation,
-                                plan, saved, live, binding, stream);
+                                plan, saved, binding, stream);
 }
 
 inline program::program_status execute_observation_vjp(
-    const direct_map_plan& plan, const saved_primal& saved, const saved_primal& live,
+    const direct_map_plan& plan, const saved_primal& saved,
     df::response_binding<float>& binding, void* stream) noexcept {
   return execute_direct_map_vjp(core::differentiated_object::observation,
-                                plan, saved, live, binding, stream);
+                                plan, saved, binding, stream);
 }
 
 inline program::program_status execute_rollout_jvp(
     std::span<const direct_map_plan> plans, std::span<const saved_primal> saved,
-    std::span<const saved_primal> live,
     std::span<df::response_binding<float>> bindings, void* stream) noexcept {
-  if (plans.size() != saved.size() || saved.size() != live.size() ||
-      saved.size() != bindings.size() || saved.empty())
+  if (plans.size() != saved.size() || saved.size() != bindings.size() || saved.empty())
     return program::program_status::invalid_argument;
   for (std::size_t i = 0; i < saved.size(); ++i) {
     if (plans[i].object != core::differentiated_object::implemented_rollout)
       return program::program_status::invalid_argument;
     if (auto status = execute_direct_map_jvp(
             core::differentiated_object::implemented_rollout,
-            plans[i], saved[i], live[i], bindings[i], stream);
+            plans[i], saved[i], bindings[i], stream);
         status != program::program_status::success) return status;
   }
   return program::program_status::success;
@@ -241,11 +271,10 @@ struct rollout_vjp_buffers {
 
 inline program::program_status execute_rollout_vjp(
     std::span<const direct_map_plan> plans, std::span<const saved_primal> saved,
-    std::span<const saved_primal> live,
     std::span<df::response_binding<float>> bindings,
     rollout_vjp_buffers buffers, void* stream) noexcept {
-  if (plans.size() != saved.size() || saved.size() != live.size() ||
-      saved.size() != bindings.size() || saved.size() != buffers.state_adjoint.size() ||
+  if (plans.size() != saved.size() || saved.size() != bindings.size() ||
+      saved.size() != buffers.state_adjoint.size() ||
       saved.size() != buffers.auxiliary_adjoint.size() || saved.empty())
     return program::program_status::invalid_argument;
   for (std::size_t reverse = plans.size(); reverse-- > 0;) {
@@ -258,7 +287,7 @@ inline program::program_status execute_rollout_vjp(
     bindings[reverse].right_adjoint = buffers.auxiliary_adjoint[reverse];
     if (auto status = execute_direct_map_vjp(
             core::differentiated_object::implemented_rollout, plans[reverse],
-            saved[reverse], live[reverse], bindings[reverse], stream);
+            saved[reverse], bindings[reverse], stream);
         status != program::program_status::success) return status;
   }
   return program::program_status::success;
