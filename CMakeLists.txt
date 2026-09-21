@@ -1,155 +1,55 @@
 cmake_minimum_required(VERSION 3.28)
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Project-wide configuration
-# ─────────────────────────────────────────────────────────────────────────────
-project(GlassHelix LANGUAGES CXX)
-
-# Independent FP64 qualification has no accelerator or legacy-model dependency.
-# The default consumer path remains CUDA; this explicit option selects tests only.
-option(NF1_HOST_VALIDATION "Build independent NF1 host qualification only" OFF)
-if(NF1_HOST_VALIDATION)
-  set(CMAKE_CXX_STANDARD 20)
-  set(CMAKE_CXX_STANDARD_REQUIRED ON)
-  set(CMAKE_CXX_EXTENSIONS OFF)
-  include(CTest)
-  if(NOT BUILD_TESTING)
-    message(FATAL_ERROR "NF1_HOST_VALIDATION requires BUILD_TESTING=ON")
-  endif()
-  if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/native_foundation/independent/CMakeLists.txt")
-    message(FATAL_ERROR "NF1 independent test owner has not been integrated (GH-NF1-T01)")
-  endif()
-  add_subdirectory(tests/native_foundation/independent)
-  get_property(nf1_independent_tests DIRECTORY tests/native_foundation/independent PROPERTY TESTS)
-  if(NOT "gh_nf1_t01" IN_LIST nf1_independent_tests)
-    message(FATAL_ERROR "Independent qualification must register the real gh_nf1_t01 test")
-  endif()
-  return()
-endif()
-
-set(CUDA_DIR "/usr/local/cuda")
-option(USE_CUDA "Enable CUDA support" ON)
-
-# Export compile_commands.json for IDEs
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-# Use clang++ and C++23
-set(CMAKE_CXX_COMPILER       "clang++")
-set(CMAKE_CXX_STANDARD       20)
+project(GlassHelix VERSION 0.1 LANGUAGES CXX)
+include(GNUInstallDirs)
+include(CMakePackageConfigHelpers)
+include(CTest)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS     OFF)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-# libc++ + embed rpath so the loader finds it at runtime
-set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS}")
-set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS}")
-
-# OpenMP support
-find_package(OpenMP REQUIRED COMPONENTS CXX)
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# CUDA configuration
-# ─────────────────────────────────────────────────────────────────────────────
-if (USE_CUDA)
-  set(CMAKE_CUDA_FLAGS          "${CMAKE_CUDA_FLAGS} -allow-unsupported-compiler")
-  set(CMAKE_CUDA_COMPILER       "${CUDA_DIR}/bin/nvcc")
-  set(CMAKE_CUDA_HOST_COMPILER  "${CMAKE_CXX_COMPILER}")
-  set(CMAKE_CUDA_ARCHITECTURES  70)   # Volta V100
-  set(CMAKE_CUDA_STANDARD       20)
-  set(CMAKE_CUDA_STANDARD_REQUIRED ON)
-  set(CMAKE_CUDA_EXTENSIONS     OFF)
-  enable_language(CUDA)
-
-  find_package(CUDAToolkit REQUIRED)
-else()
-  message(STATUS "Building without CUDA support")
+# GlassHelix consumes a published Cellerator library. It never compiles
+# Cellerator sources or provides an accelerator substitute.
+find_package(Cellerator CONFIG REQUIRED COMPONENTS native_foundation indexed_mechanism)
+find_package(CUDAToolkit REQUIRED)
+if(NOT TARGET Cellerator::native_foundation OR NOT TARGET Cellerator::indexed_mechanism)
+  message(FATAL_ERROR "Cellerator package lacks the native foundation or indexed mechanism target")
 endif()
+add_library(glasshelix_core INTERFACE)
+add_library(GlassHelix::core ALIAS glasshelix_core)
+set_target_properties(glasshelix_core PROPERTIES EXPORT_NAME core)
+target_compile_features(glasshelix_core INTERFACE cxx_std_20)
+target_include_directories(glasshelix_core INTERFACE
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
+target_link_libraries(glasshelix_core INTERFACE
+  Cellerator::native_foundation Cellerator::indexed_mechanism)
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Global include dirs
-# ─────────────────────────────────────────────────────────────────────────────
-include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/include
-)
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# GlassHelix (main) executable
-# ─────────────────────────────────────────────────────────────────────────────
-add_executable(GlassHelix
-        src/Cell.hh
-        src/memory/Feature.hh
-        src/Sequence.hh
-        src/memory/Dataset.hh
-        src/memory/AsynchronousArray.hh
-        src/incomplete/Genome.hh
-
-        src/models/GlassEtch/BinaryAutoencoder.hh
-        src/models/GlassEtch/Binarizer.hh
-        src/models/GlassEtch/Binarizer.cuh
-
-        src/memory/SparseMatrix/CompressedSparseRow.hh
-        src/memory/SparseMatrix/IRandomAccess.hh
-        src/memory/SparseMatrix/CoordinateList.hh
-        src/incomplete/Layers/SparseReader.cuh
-
-        src/TranscriptomeEncoder.hh
-
-        src/models/GlassEtch/src/GlassEtch.cuh
-        src/models/GlassEtch/src/main.cc
-        src/include/sigmoid.cuh
-        src/include/macros.cuh
-        src/tests/network/NetworkLogic.hh
-        src/tests/network/Network.hh
-        src/include/matrix.cuh
-)
-
-# Ensure any .cc including .cuh is compiled by NVCC
-set_source_files_properties(
-        src/models/GlassEtch/src/main.cc
-        PROPERTIES LANGUAGE CUDA
-)
-
-target_link_libraries(GlassHelix
-        PRIVATE
-        $<$<BOOL:${USE_CUDA}>:${CUDAToolkit_LIBRARIES}>
-        OpenMP::OpenMP_CXX
-)
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# GlassEtch (minimal prototype) executable
-# ─────────────────────────────────────────────────────────────────────────────
-add_executable(GlassEtch
-        src/models/GlassEtch/src/main.cc
-
-        src/memory/AsynchronousArray.hh
-        src/memory/SparseMatrix/CompressedSparseRow.hh
-        src/memory/SparseMatrix/IRandomAccess.hh
-        src/memory/SparseMatrix/CoordinateList.hh
-        src/incomplete/Layers/SparseReader.cuh
-
-        src/include/types.cuh
-        src/models/GlassEtch/include/encode.cuh
-        src/include/scatter.cuh
-        src/include/sigmoid.cuh
-        src/include/macros.cuh
-        src/tests/network/NetworkLogic.hh
-        src/tests/network/Network.hh
-        src/include/matrix.cuh
-)
-
-# Compile those .cc files with NVCC so standard & CUDA headers resolve
-set_source_files_properties(
-        src/models/GlassEtch/src/main.cc
-        PROPERTIES LANGUAGE CUDA
-)
-
-target_compile_options(GlassEtch PRIVATE -O3)
-
-target_link_libraries(GlassEtch
-        PRIVATE
-        $<$<BOOL:${USE_CUDA}>:${CUDAToolkit_LIBRARIES}>
-        OpenMP::OpenMP_CXX
-)
+add_library(glasshelix_foundation STATIC src/system/assembly.cc)
+add_library(GlassHelix::foundation ALIAS glasshelix_foundation)
+set_target_properties(glasshelix_foundation PROPERTIES EXPORT_NAME foundation)
+target_compile_features(glasshelix_foundation PUBLIC cxx_std_20)
+target_link_libraries(glasshelix_foundation PUBLIC GlassHelix::core)
+install(TARGETS glasshelix_core glasshelix_foundation EXPORT GlassHelixFoundationTargets)
+install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(EXPORT GlassHelixFoundationTargets FILE GlassHelixFoundationTargets.cmake
+  NAMESPACE GlassHelix:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
+configure_package_config_file(cmake/GlassHelixFoundationConfig.cmake.in
+  ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfig.cmake
+  INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
+write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfigVersion.cmake
+  VERSION ${PROJECT_VERSION} COMPATIBILITY SameMajorVersion)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfig.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/GlassHelixConfigVersion.cmake
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
+if(BUILD_TESTING)
+  add_subdirectory(tests/native_foundation/core)
+  add_subdirectory(tests/native_foundation/system)
+  add_subdirectory(tests/native_foundation/dynamics)
+  add_subdirectory(tests/native_foundation/build)
+  if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/native_foundation/observation/CMakeLists.txt")
+    add_subdirectory(tests/native_foundation/observation)
+  endif()
+  if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/native_foundation/inference/CMakeLists.txt")
+    add_subdirectory(tests/native_foundation/inference)
+  endif()
+endif()

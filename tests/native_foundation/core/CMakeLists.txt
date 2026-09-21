@@ -1,0 +1,6 @@
+foreach(case IN ITEMS quantity system request system_semantics)
+  add_executable(gh_nf1_contract_${case} ${case}.cc)
+  target_compile_features(gh_nf1_contract_${case} PRIVATE cxx_std_20)
+  target_link_libraries(gh_nf1_contract_${case} PRIVATE GlassHelix::core)
+  add_test(NAME gh_nf1_contract_${case} COMMAND gh_nf1_contract_${case})
+endforeach()

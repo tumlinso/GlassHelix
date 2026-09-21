@@ -1,0 +1,27 @@
+set(gh_build "@CMAKE_BINARY_DIR@")
+set(gh_source "@CMAKE_SOURCE_DIR@")
+set(external_source "@CMAKE_CURRENT_SOURCE_DIR@/external")
+set(prefix "${gh_build}/external-consumer-prefix")
+set(external_build "${gh_build}/external-width33-build")
+set(cellerator_prefix "@CMAKE_PREFIX_PATH@")
+
+execute_process(COMMAND "@CMAKE_COMMAND@" --install "${gh_build}" --prefix "${prefix}"
+  RESULT_VARIABLE install_result)
+if(NOT install_result EQUAL 0)
+  message(FATAL_ERROR "GlassHelix install for external consumer failed")
+endif()
+execute_process(COMMAND "@CMAKE_COMMAND@" -S "${external_source}" -B "${external_build}"
+  "-DCMAKE_PREFIX_PATH=${prefix};${cellerator_prefix}"
+  RESULT_VARIABLE configure_result)
+if(NOT configure_result EQUAL 0)
+  message(FATAL_ERROR "External width33 consumer configuration failed")
+endif()
+execute_process(COMMAND "@CMAKE_COMMAND@" --build "${external_build}" --target gh_nf1_external_width33
+  RESULT_VARIABLE build_result)
+if(NOT build_result EQUAL 0)
+  message(FATAL_ERROR "External width33 consumer build failed")
+endif()
+execute_process(COMMAND "${external_build}/gh_nf1_external_width33" RESULT_VARIABLE consumer_result)
+if(NOT consumer_result EQUAL 0)
+  message(FATAL_ERROR "External width33 consumer execution failed")
+endif()
