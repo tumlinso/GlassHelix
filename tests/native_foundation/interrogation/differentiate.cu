@@ -256,19 +256,24 @@ int main() {
   vector stage1(count, stream, stage_state_value[1], 7);
   vector stage2(count, stream, stage_state_value[2], 7);
   vector stage3(count, stream, stage_state_value[3], 7);
+  vector stage_forcing0(count, stream, .5f, 13);
+  vector stage_forcing1(count, stream, .5f, 13);
+  vector stage_forcing2(count, stream, .5f, 13);
+  vector stage_forcing3(count, stream, .5f, 13);
   std::array<primitive, 4> fields{
-      primitive(201, count, stream, stage0.value, forcing.value, state.value, parameters.value,
+      primitive(201, count, stream, stage0.value, stage_forcing0.value, state.value, parameters.value,
                 nn::local_operation::multiply),
-      primitive(202, count, stream, stage1.value, forcing.value, state.value, parameters.value,
+      primitive(202, count, stream, stage1.value, stage_forcing1.value, state.value, parameters.value,
                 nn::local_operation::multiply),
-      primitive(203, count, stream, stage2.value, forcing.value, state.value, parameters.value,
+      primitive(203, count, stream, stage2.value, stage_forcing2.value, state.value, parameters.value,
                 nn::local_operation::multiply),
-      primitive(204, count, stream, stage3.value, forcing.value, state.value, parameters.value,
+      primitive(204, count, stream, stage3.value, stage_forcing3.value, state.value, parameters.value,
                 nn::local_operation::multiply)};
   gh::dynamics::response_attachment rk4_attachment{
       {stage_id, candidate_id}, &fields[0].block,
       {&fields[0].block, &fields[1].block, &fields[2].block, &fields[3].block},
-      {&forcing.value, &forcing.value, &forcing.value, &forcing.value},
+      {&stage_forcing0.value, &stage_forcing1.value,
+       &stage_forcing2.value, &stage_forcing3.value},
       &activity_generation};
   gh::dynamics::rk4_vector_field field{field_bundle, rk4_attachment};
   gh::dynamics::rk4_step_plan rk4(std::move(field), 800, candidate_id, count, h, stream);
@@ -345,11 +350,15 @@ int main() {
                    count*(.2f*state_adjoint.front() + .1f*forcing_adjoint)) < 3e-4f,
           "RK4 adjoint identity");
 
-  ++forcing.value.generation.value;
+  ++stage_forcing3.value.generation.value;
   require(rsp::execute_rk4_jvp(rk4, rk4_stamp, jvp_bindings, jvp_buffers, stream)
               == pg::program_status::launch_failed,
-          "stale forcing accepted");
-  --forcing.value.generation.value;
+          "stale stage-3 forcing accepted");
+  --stage_forcing3.value.generation.value;
+  auto decoy_attachment = rk4_attachment;
+  decoy_attachment.forcing_owners[3] = &forcing.value;
+  require(rsp::retain_primal(decoy_attachment).state_owner == nullptr,
+          "decoy stage-3 forcing owner retained");
 
   gh::dynamics::direct_map_plan observation_plan{
       direct_bundle, gh::core::differentiated_object::observation, direct_attachment};

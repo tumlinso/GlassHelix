@@ -22,9 +22,34 @@ struct saved_primal {
   primal_policy policy = primal_policy::saved;
 };
 
+inline bool forcing_owner_matches(
+    const df::local_block* block,
+    const cellerator::compute::native_numeric::resident_vector* owner) noexcept {
+  if (!block) return false;
+  const auto arity = cellerator::compute::native_numeric::local_arity(block->operation);
+  return arity == 1 ? owner == nullptr
+                    : arity == 2 && owner && owner == block->device_primal.right;
+}
+
+inline bool valid_retained_owners(const response_attachment& attachment) noexcept {
+  if (!forcing_owner_matches(attachment.block, attachment.forcing_owners[0]) ||
+      !attachment.activity_owner)
+    return false;
+  const bool rk4 = attachment.rk4_blocks[0] != nullptr;
+  for (std::size_t i = 0; i < attachment.rk4_blocks.size(); ++i) {
+    if (rk4) {
+      if (!forcing_owner_matches(attachment.rk4_blocks[i], attachment.forcing_owners[i]))
+        return false;
+    } else if (i && (attachment.rk4_blocks[i] || attachment.forcing_owners[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
 inline saved_primal retain_primal(const response_attachment& attachment) noexcept {
   saved_primal saved{};
-  if (!attachment.block) return saved;
+  if (!valid_retained_owners(attachment)) return saved;
   const auto& owners = attachment.block->device_primal;
   saved.state_owner = owners.state;
   saved.parameter_owner = owners.parameters;
@@ -52,7 +77,7 @@ inline bool valid_attachment(const response_attachment& attachment,
 
 inline bool current(const saved_primal& saved,
                     const response_attachment& attachment) noexcept {
-  if (saved.policy != primal_policy::saved || !attachment.block ||
+  if (saved.policy != primal_policy::saved || !valid_retained_owners(attachment) ||
       saved.state_owner != attachment.block->device_primal.state ||
       saved.parameter_owner != attachment.block->device_primal.parameters ||
       saved.forcing_owners != attachment.forcing_owners ||
