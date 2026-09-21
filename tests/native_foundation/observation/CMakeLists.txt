@@ -1,0 +1,4 @@
+add_executable(gh_nf1a_observation observation.cc)
+target_compile_features(gh_nf1a_observation PRIVATE cxx_std_20)
+target_link_libraries(gh_nf1a_observation PRIVATE GlassHelix::core)
+add_test(NAME gh_nf1a_observation COMMAND gh_nf1a_observation)

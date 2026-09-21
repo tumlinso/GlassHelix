@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.28)
+project(GlassHelixNF1InstalledConsumer LANGUAGES CXX)
+find_package(GlassHelix CONFIG REQUIRED)
+add_executable(nf1_installed_consumer consumer.cc)
+target_compile_features(nf1_installed_consumer PRIVATE cxx_std_20)
+target_link_libraries(nf1_installed_consumer PRIVATE GlassHelix::nf1_replay)

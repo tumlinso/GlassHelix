@@ -1,0 +1,36 @@
+{
+  "source_roots": [
+    {
+      "path": "/home/tumlinson/Cellerator",
+      "head": "c4911dc8efb69c39b2edf081cf1a428abb55dc69"
+    },
+    {
+      "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1",
+      "head": "37d06cfe56f980046560450fd5f3298fc2242fff"
+    }
+  ],
+  "files": [
+    {
+      "path": "/home/tumlinson/Cellerator/include/Cellerator/compute/operation/native_foundation_contract.hh",
+      "sha256": "0c9c4a3a4f2a1afda5101813993685b7e03c8f9ac2041961033798e395255509"
+    },
+    {
+      "path": "/home/tumlinson/Cellerator/src/compute/operation/operation_core_v2/schema.cc",
+      "sha256": "6b3cbbf138755db04ab8ca56ec50e1d669ed31a78ba14ef954beeedc158e11e9"
+    },
+    {
+      "path": "/home/tumlinson/Cellerator/src/execution/program/program_v2.cc",
+      "sha256": "b51ef149a8ba688ee52681a908af23fd2ec85a9a41bcdc244e5035e23135f7a3"
+    },
+    {
+      "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1/include/GlassHelix/core/system.hh",
+      "sha256": "22eecb70accb9bb1197e7ca661bbe24a2409f6c093a43043c1a480b32d30381b"
+    },
+    {
+      "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1/include/GlassHelix/core/quantity.hh",
+      "sha256": "7d02671a6760de3c3af0b0c9a627f4ef14f59fb3ea4ba431c7140fe885d0ac64"
+    }
+  ],
+  "complete": false,
+  "missing": "CE N04 inspectable arithmetic route"
+}
