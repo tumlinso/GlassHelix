@@ -44,14 +44,14 @@ struct rk4_vectors {
 };
 
 // Test-only CPU oracle. Production arithmetic remains entirely in CE stages.
-float cpu_rk4_affine(float y, float forcing, float h) {
-  const auto f = [forcing](float x) { return x + forcing; };
-  const auto k1 = f(y);
-  const auto k2 = f(y + .5f * h * k1);
-  const auto k3 = f(y + .5f * h * k2);
-  const auto k4 = f(y + h * k3);
+float cpu_rk4_affine(float y, const std::array<float, 4>& forcing, float h) {
+  const auto k1 = y + forcing[0];
+  const auto k2 = y + .5f * h * k1 + forcing[1];
+  const auto k3 = y + .5f * h * k2 + forcing[2];
+  const auto k4 = y + h * k3 + forcing[3];
   return y + h * (k1 + 2.f * k2 + 2.f * k3 + k4) / 6.f;
 }
+float cpu_rk4_affine(float y, float forcing, float h) { return cpu_rk4_affine(y, {{forcing, forcing, forcing, forcing}}, h); }
 
 void rk4_steps(const gh::rk4_step_plan& plan, device_vector& state, device_vector& next,
                const device_vector& forcing, rk4_vectors& vectors, float begin,
@@ -87,6 +87,20 @@ int main() try {
   device_vector current(width), next(width), forcing(width), zero(width);
   rk4_vectors vectors;
   upload(current, base); upload(forcing, forcing_values); upload(zero, forcing_zero);
+  device_vector wrong_extent(1);
+  const auto ordinary_stages = gh::make_rk4_stage_bindings(0., h, forcing.value);
+  const auto generation_before_rejection = next.value.generation.value;
+  auto wrong_size = ordinary_stages; wrong_size[2].forcing = &wrong_extent.value;
+  require(gh::execute_rk4_step(plan, current.value, wrong_size, vectors.scratch(), next.value, nullptr)
+              == program::program_status::invalid_argument && next.value.generation.value == generation_before_rejection,
+          "wrong forcing extent was not rejected before output mutation");
+  auto alias = ordinary_stages; alias[1].forcing = &vectors.k1.value;
+  require(gh::execute_rk4_step(plan, current.value, alias, vectors.scratch(), next.value, nullptr)
+              == program::program_status::invalid_argument && next.value.generation.value == generation_before_rejection,
+          "forcing alias with derivative scratch was not rejected");
+  require(gh::execute_rk4_step(plan, current.value, ordinary_stages, vectors.scratch(), next.value, reinterpret_cast<void*>(1))
+              == program::program_status::invalid_argument && next.value.generation.value == generation_before_rejection,
+          "wrong execution stream was not rejected");
   rk4_steps(plan, current, next, forcing, vectors, 0.f, h, 20);
   const auto result = download(current);
   for (std::size_t i = 0; i < width; ++i) {
@@ -99,15 +113,38 @@ int main() try {
   device_vector coarse(width), coarse_next(width), fine(width), fine_next(width);
   rk4_vectors coarse_vectors, fine_vectors;
   upload(coarse, base); upload(fine, base);
-  gh::rk4_step_plan coarse_plan({{field_program, {program::launch_binding_v2{}}}}, 60, 9, width, .2f);
-  gh::rk4_step_plan fine_plan({{field_program, {program::launch_binding_v2{}}}}, 70, 9, width, .1f);
-  rk4_steps(coarse_plan, coarse, coarse_next, zero, coarse_vectors, 0.f, .2f, 5);
-  rk4_steps(fine_plan, fine, fine_next, zero, fine_vectors, 0.f, .1f, 10);
+  gh::rk4_step_plan coarse_plan({{field_program, {program::launch_binding_v2{}}}}, 60, 9, width, .25f);
+  gh::rk4_step_plan fine_plan({{field_program, {program::launch_binding_v2{}}}}, 70, 9, width, .125f);
+  rk4_steps(coarse_plan, coarse, coarse_next, zero, coarse_vectors, 0.f, .25f, 4);
+  rk4_steps(fine_plan, fine, fine_next, zero, fine_vectors, 0.f, .125f, 8);
   const auto coarse_result = download(coarse), fine_result = download(fine);
   for (std::size_t i = 1; i < width; ++i) {
     const auto exact = base[i] * std::exp(1.f);
-    require(std::abs(fine_result[i] - exact) < std::abs(coarse_result[i] - exact), "RK4 refinement did not converge");
+    const auto coarse_error = std::abs(coarse_result[i] - exact), fine_error = std::abs(fine_result[i] - exact);
+    require(fine_error > 0.f && coarse_error / fine_error > 10.f, "RK4 halving did not approach fourth-order refinement");
   }
+
+  // Four separately materialized stage forcings are consumed by the CE field.
+  device_vector u1(width), u2(width), u3(width), u4(width), varying_state(width), varying_next(width); rk4_vectors varying_vectors;
+  std::array<float, width> a{}, b{}, c{}, d{}, one{}; a.fill(.1f); b.fill(.2f); c.fill(.4f); d.fill(.8f); one.fill(1.f);
+  upload(u1, a); upload(u2, b); upload(u3, c); upload(u4, d); upload(varying_state, one);
+  const auto varying_stages = gh::make_rk4_stage_bindings(2., h, {{&u1.value, &u2.value, &u3.value, &u4.value}});
+  require(gh::execute_rk4_step(plan, varying_state.value, varying_stages, varying_vectors.scratch(), varying_next.value, nullptr)
+              == program::program_status::success, "distinct stage forcing launch failed");
+  require(std::abs(download(varying_next)[0] - cpu_rk4_affine(1.f, {{.1f,.2f,.4f,.8f}}, h)) < 2e-5f,
+          "distinct stage-time forcing values were not consumed");
+
+  // Equal-duration trajectories are interleaved but match separate CPU RK4 oracles.
+  device_vector trajectory_a(width), trajectory_anext(width), trajectory_b(width), trajectory_bnext(width); rk4_vectors ta_vectors, tb_vectors;
+  std::array<float, width> ta0{}, tb0{}; ta0.fill(.1f); tb0.fill(2.f); upload(trajectory_a, ta0); upload(trajectory_b, tb0);
+  for (int i = 0; i < 20; ++i) {
+    const auto t = h * i; const auto stage = gh::make_rk4_stage_bindings(t, h, forcing.value);
+    require(gh::execute_rk4_step(plan, trajectory_a.value, stage, ta_vectors.scratch(), trajectory_anext.value, nullptr) == program::program_status::success, "interleaved trajectory A failed"); std::swap(trajectory_a.value.data, trajectory_anext.value.data);
+    require(gh::execute_rk4_step(plan, trajectory_b.value, stage, tb_vectors.scratch(), trajectory_bnext.value, nullptr) == program::program_status::success, "interleaved trajectory B failed"); std::swap(trajectory_b.value.data, trajectory_bnext.value.data);
+  }
+  float expected_a=.1f, expected_b=2.f; for (int i=0;i<20;++i) { expected_a=cpu_rk4_affine(expected_a,.25f,h); expected_b=cpu_rk4_affine(expected_b,.25f,h); }
+  require(std::abs(download(trajectory_a)[0]-expected_a)<2e-5f && std::abs(download(trajectory_b)[0]-expected_b)<2e-5f,
+          "interleaved equal-duration trajectories diverged from independent oracle");
 
   // A declared forcing discontinuity is on a step boundary: all four stage
   // bindings for each step use that interval's supplied CE resident forcing.
