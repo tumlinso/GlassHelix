@@ -257,11 +257,11 @@ inline program::program_status submit_one(const program::prepared_stage_v2& stag
 // stream bound to the plan, so uploads/readiness on that stream are a caller
 // prerequisite; this API never invents cross-stream event synchronization.
 inline program::program_status capture_primal_checkpoint(
-    primal_checkpoint* checkpoint,
+    const rk4_step_plan& plan, primal_checkpoint* checkpoint,
     const cellerator::compute::native_numeric::resident_vector& source,
     void* caller_stream) noexcept {
   using namespace cellerator::compute::native_numeric;
-  if (!checkpoint || !source.data || !source.elements
+  if (!checkpoint || caller_stream != plan.stream() || !source.data || !source.elements
       || source.representation != device_representation::f32) return program::program_status::invalid_argument;
   auto retained = std::shared_ptr<resident_vector>(new resident_vector{}, [](resident_vector* value) {
     (void)release(value); delete value;
@@ -301,7 +301,7 @@ inline program::program_status execute_rk4_step(
       || !valid(scratch.k2) || !valid(scratch.k3) || !valid(scratch.k4)
       || !state.elements || state.elements > std::numeric_limits<std::uint64_t>::max() / 5
       || state.elements != plan.elements() || !std::isfinite(plan.step()) || plan.step() <= 0.f
-      || caller_stream != plan.stream() || output.generation.value == std::numeric_limits<std::uint64_t>::max()
+      || caller_stream != plan.stream() || state.generation.value == std::numeric_limits<std::uint64_t>::max()
       || !scratch.packed.data || scratch.packed.elements != 5 * state.elements
       || scratch.packed.representation != device_representation::f32
       || scratch.packed.device_ordinal != state.device_ordinal || aliases()
@@ -344,7 +344,7 @@ inline program::program_status execute_rk4_step(
         status != program::program_status::success) return status;
   const auto status = submit_one(plan.combine().stage,
       {scratch.packed.data, output.data, nullptr, scratch.packed.data, 5 * stride}, caller_stream);
-  if (status == program::program_status::success) ++output.generation.value;
+  if (status == program::program_status::success) output.generation.value = state.generation.value + 1;
   return status;
 }
 } // namespace glasshelix::dynamics

@@ -64,7 +64,7 @@ void rk4_steps(const gh::rk4_step_plan& plan, device_vector& state, device_vecto
             && std::abs(stages[3].time - (time + h)) < 1e-6, "incorrect RK4 stage times");
     require(gh::execute_rk4_step(plan, state.value, stages, vectors.scratch(), next.value, nullptr)
                 == program::program_status::success, "four-stage CE RK4 launch failed");
-    std::swap(state.value.data, next.value.data);
+    std::swap(state.value, next.value);
   }
 }
 } // namespace
@@ -136,15 +136,17 @@ int main() try {
 
   // Equal-duration trajectories are interleaved but match separate CPU RK4 oracles.
   device_vector trajectory_a(width), trajectory_anext(width), trajectory_b(width), trajectory_bnext(width); rk4_vectors ta_vectors, tb_vectors;
-  std::array<float, width> ta0{}, tb0{}; ta0.fill(.1f); tb0.fill(2.f); upload(trajectory_a, ta0); upload(trajectory_b, tb0);
+  std::array<float, width> ta0{}, tb0{}; ta0.fill(.1f); tb0.fill(2.f); upload(trajectory_a, ta0, 3); upload(trajectory_b, tb0, 10);
   for (int i = 0; i < 20; ++i) {
     const auto t = h * i; const auto stage = gh::make_rk4_stage_bindings(t, h, forcing.value);
-    require(gh::execute_rk4_step(plan, trajectory_a.value, stage, ta_vectors.scratch(), trajectory_anext.value, nullptr) == program::program_status::success, "interleaved trajectory A failed"); std::swap(trajectory_a.value.data, trajectory_anext.value.data);
-    require(gh::execute_rk4_step(plan, trajectory_b.value, stage, tb_vectors.scratch(), trajectory_bnext.value, nullptr) == program::program_status::success, "interleaved trajectory B failed"); std::swap(trajectory_b.value.data, trajectory_bnext.value.data);
+    require(gh::execute_rk4_step(plan, trajectory_a.value, stage, ta_vectors.scratch(), trajectory_anext.value, nullptr) == program::program_status::success, "interleaved trajectory A failed"); std::swap(trajectory_a.value, trajectory_anext.value);
+    require(gh::execute_rk4_step(plan, trajectory_b.value, stage, tb_vectors.scratch(), trajectory_bnext.value, nullptr) == program::program_status::success, "interleaved trajectory B failed"); std::swap(trajectory_b.value, trajectory_bnext.value);
   }
   float expected_a=.1f, expected_b=2.f; for (int i=0;i<20;++i) { expected_a=cpu_rk4_affine(expected_a,.25f,h); expected_b=cpu_rk4_affine(expected_b,.25f,h); }
   require(std::abs(download(trajectory_a)[0]-expected_a)<2e-5f && std::abs(download(trajectory_b)[0]-expected_b)<2e-5f,
           "interleaved equal-duration trajectories diverged from independent oracle");
+  require(trajectory_a.value.generation.value == 23 && trajectory_b.value.generation.value == 30,
+          "logical generation followed a physical ping-pong buffer");
 
   // A declared forcing discontinuity is on a step boundary: all four stage
   // bindings for each step use that interval's supplied CE resident forcing.
@@ -170,7 +172,7 @@ int main() try {
   require(std::abs(download(other)[0] - download(current)[0]) > .1f, "resident trajectories were coupled");
   gh::resident_instance instance{{1, 0}, current.value.generation, {7}, "f32"};
   gh::primal_checkpoint checkpoint{instance.identity, instance.state_generation, instance.parameter_generation, 1., 20};
-  require(gh::capture_primal_checkpoint(&checkpoint, current.value, nullptr) == program::program_status::success,
+  require(gh::capture_primal_checkpoint(plan, &checkpoint, current.value, nullptr) == program::program_status::success,
           "CE retained primal copy failed");
   gh::bounded_primal_history history(1);
   history.record(checkpoint);
@@ -178,6 +180,12 @@ int main() try {
   upload(current, other_base, 2); // overwrite the ping-pong source after retention.
   require(std::abs(download(*checkpoint.retained_primal)[0] - result[0]) < 2e-5f,
           "retained CE primal snapshot changed after source overwrite");
+  const auto post_checkpoint_stages = gh::make_rk4_stage_bindings(1., h, forcing.value);
+  require(gh::execute_rk4_step(plan, current.value, post_checkpoint_stages, vectors.scratch(), next.value, nullptr)
+              == program::program_status::success, "post-checkpoint resident step failed");
+  std::swap(current.value, next.value); instance.state_generation = current.value.generation;
+  bool stale_state = false; try { (void)history.require_current(instance, 20); } catch (const std::invalid_argument&) { stale_state = true; }
+  require(stale_state, "checkpoint survived an actual later state generation");
   ++instance.parameter_generation.value;
   bool stale = false; try { (void)history.require_current(instance, 20); } catch (const std::invalid_argument&) { stale = true; }
   require(stale, "stale parameter checkpoint was accepted");
