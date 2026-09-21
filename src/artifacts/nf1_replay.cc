@@ -1,0 +1,17 @@
+#include <GlassHelix/artifacts/nf1_replay.hh>
+#include <cmath>
+#include <fstream>
+#include <limits>
+#include <sstream>
+namespace glasshelix::artifacts { namespace {
+bool fail(std::string* e,const char* m) noexcept {if(e)*e=m;return false;}
+bool atom(const std::string& s) noexcept {return !s.empty()&&s.find_first_of("\n\r|,")==std::string::npos;}
+bool split(const std::string&s,char c,std::vector<std::string>*o){std::stringstream in(s);std::string x;while(std::getline(in,x,c))o->push_back(x);return !o->empty();}
+bool parse_status(const std::string&s,nf1_run_status*o){if(s=="pending")*o=nf1_run_status::pending;else if(s=="failed")*o=nf1_run_status::failed;else if(s=="succeeded_empty")*o=nf1_run_status::succeeded_empty;else return false;return true;}
+}
+const char* status_name(nf1_run_status s) noexcept {switch(s){case nf1_run_status::pending:return "pending";case nf1_run_status::failed:return "failed";case nf1_run_status::succeeded_empty:return "succeeded_empty";}return "invalid";}
+bool validate(const nf1_replay_record&r,std::string*e) noexcept {if(r.schema!=nf1_replay_record::schema_version)return fail(e,"incompatible schema");if(!atom(r.numerical_policy)||!atom(r.glasshelix_source)||!atom(r.cellerator_source))return fail(e,"invalid logical metadata");for(const auto&b:r.registered_blocks)if(!atom(b)||b.find('@')==std::string::npos)return fail(e,"invalid registered block");for(float x:r.logical_inputs)if(!std::isfinite(x))return fail(e,"nonfinite logical input");if(r.status==nf1_run_status::failed&&!atom(r.failure))return fail(e,"failed record needs failure");if(r.status!=nf1_run_status::failed&&!r.failure.empty())return fail(e,"unexpected failure");return true;}
+bool write_nf1_replay(const std::string&p,const nf1_replay_record&r,std::string*e) noexcept {if(!validate(r,e))return false;std::ofstream o(p,std::ios::trunc);if(!o)return fail(e,"cannot open artifact");o<<"GH_NF1_REPLAY|"<<r.schema<<'|'<<status_name(r.status)<<'|'<<r.numerical_policy<<'|'<<r.glasshelix_source<<'|'<<r.cellerator_source<<'|'<<r.failure<<'|';for(std::size_t i=0;i<r.registered_blocks.size();++i)o<<(i?",":"")<<r.registered_blocks[i];o<<'|';for(std::size_t i=0;i<r.logical_inputs.size();++i)o<<(i?",":"")<<r.logical_inputs[i];o<<'\n';return o.good()?true:fail(e,"artifact write failed");}
+bool read_nf1_replay(const std::string&p,nf1_replay_record*r,std::string*e) noexcept {if(!r)return fail(e,"null output");std::ifstream in(p);std::string line,extra;if(!in||!std::getline(in,line)||std::getline(in,extra))return fail(e,"missing or malformed artifact");std::vector<std::string>f;split(line,'|',&f);if(f.size()!=9||f[0]!="GH_NF1_REPLAY")return fail(e,"incompatible artifact");nf1_replay_record x{};try{x.schema=static_cast<std::uint32_t>(std::stoul(f[1]));}catch(...){return fail(e,"invalid schema");}if(!parse_status(f[2],&x.status))return fail(e,"invalid status");x.numerical_policy=f[3];x.glasshelix_source=f[4];x.cellerator_source=f[5];x.failure=f[6];if(!f[7].empty())split(f[7],',',&x.registered_blocks);if(!f[8].empty()){std::vector<std::string>v;split(f[8],',',&v);try{for(const auto&s:v)x.logical_inputs.push_back(std::stof(s));}catch(...){return fail(e,"invalid inputs");}}if(!validate(x,e))return false;*r=std::move(x);return true;}
+bool replay_logical_sum(const nf1_replay_record&r,float*result,std::string*e) noexcept {if(!result||!validate(r,e))return false;if(r.status!=nf1_run_status::succeeded_empty)return fail(e,"record has no replayable successful result");float sum{};for(float x:r.logical_inputs)sum+=x;*result=sum;return true;}
+}

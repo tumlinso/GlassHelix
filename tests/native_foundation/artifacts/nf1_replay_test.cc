@@ -1,0 +1,6 @@
+#include <GlassHelix/artifacts/nf1_replay.hh>
+#include <cassert>
+#include <fstream>
+#include <iostream>
+using namespace glasshelix::artifacts;
+int main(int argc,char**argv){const std::string path=argc>1?argv[1]:"nf1-replay.artifact";nf1_replay_record r{};r.status=nf1_run_status::succeeded_empty;r.logical_inputs={.25f,.5f};r.registered_blocks={"local-add@1","joint-triad@7"};r.numerical_policy="f32-rne-propagate";r.glasshelix_source="gh-test";r.cellerator_source="ce-test";std::string error;assert(write_nf1_replay(path,r,&error));if(argc>2)assert(std::system((std::string(argv[2])+" "+path).c_str())==0);nf1_replay_record loaded{};assert(read_nf1_replay(path,&loaded,&error));float result{};assert(replay_logical_sum(loaded,&result,&error)&&result==.75f);loaded.logical_inputs[0]=1.25f;assert(replay_logical_sum(loaded,&result,&error)&&result==1.75f);loaded.status=nf1_run_status::pending;assert(!replay_logical_sum(loaded,&result,&error));loaded.status=nf1_run_status::failed;loaded.failure="native failure";assert(!replay_logical_sum(loaded,&result,&error));{std::ofstream bad(path,std::ios::trunc);bad<<"broken\n";}assert(!read_nf1_replay(path,&loaded,&error));{std::ofstream old(path,std::ios::trunc);old<<"GH_NF1_REPLAY|99|pending|f32|gh|ce|||\n";}assert(!read_nf1_replay(path,&loaded,&error));std::cout<<"artifact tests passed\n";}
