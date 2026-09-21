@@ -136,6 +136,10 @@ struct response_attachment {
   // RK4 retains the four actual vector-field primals used by the forward step.
   // Legacy forward-only plans leave these null and explicitly lack RK4 response.
   std::array<const cellerator::compute::differential::local_block*, 4> rk4_blocks{};
+  // These borrowed owners are the live provenance for the retained forcing
+  // primals and the GlassHelix activity selection.
+  std::array<const cellerator::compute::native_numeric::resident_vector*, 4> forcing_owners{};
+  const cellerator::execution::value_generation* activity_owner = nullptr;
 };
 struct direct_map_plan {
   prepared_stage_bundle stage;
