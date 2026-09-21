@@ -20,11 +20,10 @@ struct saved_primal {
 
 inline bool valid_attachment(const response_attachment& attachment,
                              forward_plan_identity actual,
-                             core::differentiated_object expected,
                              void* stream) noexcept {
   const auto* block = attachment.block;
   const auto& owners = block ? block->device_primal : df::local_primal_owners{};
-  return block && attachment.object == expected && attachment.forward.stage_id && attachment.forward.candidate_id &&
+  return block && attachment.forward.stage_id && attachment.forward.candidate_id &&
       attachment.forward.stage_id == actual.stage_id &&
       attachment.forward.candidate_id == actual.candidate_id &&
       owners.left && owners.state && owners.parameters && owners.stream == stream &&
@@ -32,10 +31,10 @@ inline bool valid_attachment(const response_attachment& attachment,
 }
 
 inline bool current(const saved_primal& saved, const saved_primal& live) noexcept {
-  return saved.state.value == live.state.value &&
+  return saved.policy == primal_policy::saved && live.policy == primal_policy::saved &&
+      saved.state.value == live.state.value &&
       saved.parameters.value == live.parameters.value &&
-      saved.forcing == live.forcing && saved.activity == live.activity &&
-      saved.policy == live.policy;
+      saved.forcing == live.forcing && saved.activity == live.activity;
 }
 
 inline bool valid_block(const df::local_block* block, void* stream) noexcept {
@@ -75,7 +74,8 @@ inline program::program_status execute_direct_map_jvp(
     core::differentiated_object requested, const direct_map_plan& plan,
     const saved_primal& saved, const saved_primal& live,
     df::response_binding<float>& binding, void* stream) noexcept {
-  if (!valid_attachment(plan.response, identity_of(plan), requested, stream) || !current(saved, live))
+  if (requested != plan.object ||
+      !valid_attachment(plan.response, identity_of(plan), stream) || !current(saved, live))
     return program::program_status::launch_failed;
   return submit_response(*plan.response.block, nf::jvp, plan.response.forward,
                          binding, stream);
@@ -85,7 +85,8 @@ inline program::program_status execute_direct_map_vjp(
     core::differentiated_object requested, const direct_map_plan& plan,
     const saved_primal& saved, const saved_primal& live,
     df::response_binding<float>& binding, void* stream) noexcept {
-  if (!valid_attachment(plan.response, identity_of(plan), requested, stream) || !current(saved, live))
+  if (requested != plan.object ||
+      !valid_attachment(plan.response, identity_of(plan), stream) || !current(saved, live))
     return program::program_status::launch_failed;
   return submit_response(*plan.response.block, nf::vjp, plan.response.forward,
                          binding, stream);
@@ -105,7 +106,6 @@ inline program::program_status execute_rk4_jvp(
     std::array<df::response_binding<float>, 4>& bindings,
     rk4_jvp_buffers buffers, void* stream) noexcept {
   if (!current(saved, live) || stream != plan.stream() || !plan.identity().stage_id ||
-      plan.field().response.object != core::differentiated_object::discrete_step ||
       plan.field().response.forward.stage_id != plan.identity().stage_id ||
       plan.field().response.forward.candidate_id != plan.identity().candidate_id)
     return program::program_status::launch_failed;
@@ -155,7 +155,6 @@ inline program::program_status execute_rk4_vjp(
     std::array<df::response_binding<float>, 4>& bindings,
     rk4_vjp_buffers buffers, void* stream) noexcept {
   if (!current(saved, live) || stream != plan.stream() || !plan.identity().stage_id ||
-      plan.field().response.object != core::differentiated_object::discrete_step ||
       plan.field().response.forward.stage_id != plan.identity().stage_id ||
       plan.field().response.forward.candidate_id != plan.identity().candidate_id)
     return program::program_status::launch_failed;
@@ -203,7 +202,7 @@ inline program::program_status execute_rk4_vjp(
 inline program::program_status execute_observation_jvp(
     const direct_map_plan& plan, const saved_primal& saved, const saved_primal& live,
     df::response_binding<float>& binding, void* stream) noexcept {
-  if (plan.response.object != core::differentiated_object::observation)
+  if (plan.object != core::differentiated_object::observation)
     return program::program_status::invalid_argument;
   return execute_direct_map_jvp(core::differentiated_object::observation,
                                 plan, saved, live, binding, stream);
@@ -224,7 +223,7 @@ inline program::program_status execute_rollout_jvp(
       saved.size() != bindings.size() || saved.empty())
     return program::program_status::invalid_argument;
   for (std::size_t i = 0; i < saved.size(); ++i) {
-    if (plans[i].response.object != core::differentiated_object::implemented_rollout)
+    if (plans[i].object != core::differentiated_object::implemented_rollout)
       return program::program_status::invalid_argument;
     if (auto status = execute_direct_map_jvp(
             core::differentiated_object::implemented_rollout,
@@ -250,7 +249,7 @@ inline program::program_status execute_rollout_vjp(
       saved.size() != buffers.auxiliary_adjoint.size() || saved.empty())
     return program::program_status::invalid_argument;
   for (std::size_t reverse = plans.size(); reverse-- > 0;) {
-    if (plans[reverse].response.object != core::differentiated_object::implemented_rollout ||
+    if (plans[reverse].object != core::differentiated_object::implemented_rollout ||
         !buffers.state_adjoint[reverse] || !buffers.auxiliary_adjoint[reverse])
       return program::program_status::invalid_argument;
     bindings[reverse].cotangent = reverse + 1 == plans.size()

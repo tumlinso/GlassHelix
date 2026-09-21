@@ -2,7 +2,7 @@
 
 `vector_field`, `discrete_step`, `observation`, and `implemented_rollout` are explicit differentiated-object labels. Response execution uses only typed Cellerator factories; generic compiled-stage binding is not an admissible response path.
 
-A response attachment borrows its CE differential block and resident primal owners. Those objects must outlive the forward plan and every submitted response. A saved primal is accepted only while its state, parameter, forcing, and activity stamps match; exact recomputation is declared explicitly. Legacy forward plans without an attachment remain forward-capable but reject response requests.
+A response attachment borrows its CE differential block and resident primal owners. Those objects must outlive the forward plan and every submitted response. A retained primal is accepted only under the saved policy while its state, parameter, forcing, and activity stamps match. Recomputed primals are rejected because this plan does not implement a recomputation contract. Legacy forward plans without an attachment remain forward-capable but reject response requests.
 
 Local SVD diagnostics report scales, threshold, nullspace, residual, and local domain. A local degeneracy does not establish global identification or posterior mass. Alternative optimization counts are diagnostics, not weights. Reduction closure is demonstrated only for supplied regimes; unequal-rate nonclosure remains explicit. Error reports preserve conversion, integration, dropped-support, empirical, certified, and scientific components with source/domain provenance. Empirical or Jacobian magnitudes never certify a bound.
 
