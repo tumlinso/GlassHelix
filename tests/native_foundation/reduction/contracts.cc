@@ -1,2 +1,2 @@
 #include <GlassHelix/reduction/contracts.hh>
-int main(){using namespace glasshelix::reduction;validate({.1,.2,.3,true},.3);return equal_decay_closed(1,2,.5)&&preserves_reporter_correlation(1,1)&&!preserves_reporter_correlation(1,2)?0:1;}
+using namespace glasshelix::reduction;int main(){auto p=evaluate(1,2,.5,.5,7);auto n=evaluate(1,2,.5,1.,7);if(!p.closed||p.derivative!=1.5||n.closed||n.derivative==p.derivative||p.reporter_correlation!=7)return 1;if(assess({.1,.1,.1,99,.2,1,true},.2)!=threshold_result::pass)return 2;if(assess({0,0,0,9,.2,0,false},.2)!=threshold_result::unresolved)return 3;bool bad=false;try{(void)assess({0,0,0,0,-1,0,true},1);}catch(...){bad=true;}return bad?0:4;}
