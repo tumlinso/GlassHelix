@@ -131,8 +131,12 @@ inline program::program_status submit(const prepared_stage_bundle& bundle,
 struct forward_plan_identity { std::uint64_t stage_id = 0, candidate_id = 0; };
 struct response_attachment {
   forward_plan_identity forward{};
+  core::differentiated_object object = core::differentiated_object::vector_field;
   // Borrowed CE block and resident owners outlive this plan and every response launch.
   const cellerator::compute::differential::local_block* block = nullptr;
+  // RK4 retains the four actual vector-field primals used by the forward step.
+  // Legacy forward-only plans leave these null and explicitly lack RK4 response.
+  std::array<const cellerator::compute::differential::local_block*, 4> rk4_blocks{};
 };
 struct direct_map_plan { prepared_stage_bundle stage; response_attachment response{}; };
 inline forward_plan_identity identity_of(const direct_map_plan& plan) noexcept {
