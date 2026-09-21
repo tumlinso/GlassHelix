@@ -143,6 +143,37 @@ gh::dynamics::prepared_stage_bundle forward_multiply_bundle(
   return {{2, 0, &stage, 1, nullptr, 0}, {pg::launch_binding_v2{}}};
 }
 
+__global__ void tanh_forward_kernel(const float* state, float* output,
+                                    std::uint64_t count) {
+  const auto index = std::uint64_t(blockIdx.x)*blockDim.x + threadIdx.x;
+  if (index < count) output[index] = tanhf(state[index]);
+}
+pg::program_status admit_tanh_forward(
+    const void* prepared, const pg::launch_binding_v2& binding, void* stream) noexcept {
+  const auto* state = static_cast<const multiply_forward_state*>(prepared);
+  return state && state->count && binding.input && binding.output && stream
+      ? pg::program_status::success : pg::program_status::invalid_argument;
+}
+pg::program_status launch_tanh_forward(
+    const void* prepared, const pg::launch_binding_v2& binding, void* stream) noexcept {
+  if (admit_tanh_forward(prepared, binding, stream) != pg::program_status::success)
+    return pg::program_status::invalid_argument;
+  const auto count = static_cast<const multiply_forward_state*>(prepared)->count;
+  tanh_forward_kernel<<<static_cast<unsigned>((count+255)/256), 256, 0,
+                        static_cast<cudaStream_t>(stream)>>>(
+      static_cast<const float*>(binding.input), static_cast<float*>(binding.output), count);
+  return cudaGetLastError() == cudaSuccess ? pg::program_status::success
+                                           : pg::program_status::launch_failed;
+}
+gh::dynamics::prepared_stage_bundle forward_tanh_bundle(
+    multiply_forward_state& descriptor, pg::prepared_stage_v2& stage,
+    std::uint64_t stage_id, std::uint64_t candidate_id, std::size_t count) {
+  descriptor.count = count;
+  stage = {stage_id, candidate_id, &descriptor, launch_tanh_forward,
+           0, 0, 0, 0, admit_tanh_forward};
+  return {{2, 0, &stage, 1, nullptr, 0}, {pg::launch_binding_v2{}}};
+}
+
 int main() {
   cudaStream_t stream{};
   cuda_require(cudaStreamCreateWithFlags(&stream, cudaStreamNonBlocking), "stream");
@@ -188,16 +219,13 @@ int main() {
 
   primitive unary_primitive(102, count, stream, state.value, forcing.value,
                             state.value, parameters.value, nn::local_operation::tanh);
+  multiply_forward_state unary_descriptor{};
   pg::prepared_stage_v2 unary_stage{};
-  require(df::make_local_device_stage(unary_primitive.block, nf::forward,
-                                      stage_id + 2, candidate_id, 0, unary_stage)
-              == nf::status::success,
-          "prepare unary forward stage");
   vector unary_forward_output(count, stream, 0.f), unary_tangent_output(count, stream, 0.f);
-  auto unary_forward_binding = unary_primitive.binding(
-      nf::forward, nullptr, nullptr, nullptr, &unary_forward_output.value, nullptr, nullptr);
-  gh::dynamics::prepared_stage_bundle unary_bundle{
-      {2, 0, &unary_stage, 1, nullptr, 0}, {pg::launch_binding_v2{&unary_forward_binding}}};
+  auto unary_bundle = forward_tanh_bundle(
+      unary_descriptor, unary_stage, stage_id + 2, candidate_id, count);
+  unary_bundle.bindings.front() = {
+      state.value.data, unary_forward_output.value.data, nullptr};
   gh::dynamics::response_attachment unary_attachment{
       {stage_id + 2, candidate_id}, &unary_primitive.block, {}, {}, &activity_generation};
   gh::dynamics::direct_map_plan unary_plan{
@@ -205,6 +233,8 @@ int main() {
   const auto unary_stamp = rsp::retain_primal(unary_attachment);
   require(gh::dynamics::execute_direct_map(unary_plan, stream) == pg::program_status::success,
           "unary forward");
+  require(std::abs(download(unary_forward_output, stream).front() - std::tanh(2.f)) < 2e-6f,
+          "unary forward value");
   auto unary_jvp = unary_primitive.binding(
       nf::jvp, &state_direction.value, nullptr, nullptr,
       &unary_tangent_output.value, nullptr, nullptr);
