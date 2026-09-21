@@ -30,7 +30,28 @@ add_library(GlassHelix::foundation ALIAS glasshelix_foundation)
 set_target_properties(glasshelix_foundation PROPERTIES EXPORT_NAME foundation)
 target_compile_features(glasshelix_foundation PUBLIC cxx_std_20)
 target_link_libraries(glasshelix_foundation PUBLIC GlassHelix::core)
-install(TARGETS glasshelix_core glasshelix_foundation EXPORT GlassHelixFoundationTargets)
+
+set(_glasshelix_install_targets glasshelix_core glasshelix_foundation)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/artifacts/nf1_replay.cc" AND
+   EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/bindings/python/nf1_module.cc")
+  find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
+  add_library(glasshelix_nf1_replay STATIC src/artifacts/nf1_replay.cc)
+  add_library(GlassHelix::nf1_replay ALIAS glasshelix_nf1_replay)
+  set_target_properties(glasshelix_nf1_replay PROPERTIES EXPORT_NAME nf1_replay)
+  target_compile_features(glasshelix_nf1_replay PUBLIC cxx_std_20)
+  target_link_libraries(glasshelix_nf1_replay PUBLIC GlassHelix::core Cellerator::local_differential)
+  list(APPEND _glasshelix_install_targets glasshelix_nf1_replay)
+
+  add_library(glasshelix_nf1 MODULE bindings/python/nf1_module.cc)
+  set_target_properties(glasshelix_nf1 PROPERTIES PREFIX "")
+  target_compile_features(glasshelix_nf1 PRIVATE cxx_std_20)
+  target_link_libraries(glasshelix_nf1 PRIVATE Python3::Module Cellerator::local_differential)
+  install(TARGETS glasshelix_nf1 LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+  install(DIRECTORY python/glasshelix DESTINATION ${CMAKE_INSTALL_LIBDIR}
+          FILES_MATCHING PATTERN "*.py")
+endif()
+
+install(TARGETS ${_glasshelix_install_targets} EXPORT GlassHelixFoundationTargets)
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 install(EXPORT GlassHelixFoundationTargets FILE GlassHelixFoundationTargets.cmake
   NAMESPACE GlassHelix:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/GlassHelix)
@@ -58,5 +79,19 @@ if(BUILD_TESTING)
   endif()
   if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/native_foundation/reduction/CMakeLists.txt")
     add_subdirectory(tests/native_foundation/reduction)
+  endif()
+  if(TARGET glasshelix_nf1_replay)
+    add_executable(gh_nf1a_replay_cli tools/native_foundation/nf1_replay_cli.cc)
+    target_link_libraries(gh_nf1a_replay_cli PRIVATE GlassHelix::nf1_replay)
+    add_executable(gh_nf1a_replay_test tests/native_foundation/artifacts/nf1_replay_test.cc)
+    target_link_libraries(gh_nf1a_replay_test PRIVATE GlassHelix::nf1_replay)
+    add_test(NAME gh_nf1a_replay
+      COMMAND gh_nf1a_replay_test
+        "${CMAKE_CURRENT_BINARY_DIR}/nf1-replay.artifact"
+        "$<TARGET_FILE:gh_nf1a_replay_cli>")
+    add_test(NAME gh_nf1a_python
+      COMMAND ${Python3_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/tests/native_foundation/python/test_nf1.py")
+    set_tests_properties(gh_nf1a_python PROPERTIES
+      ENVIRONMENT "PYTHONPATH=$<TARGET_FILE_DIR:glasshelix_nf1>")
   endif()
 endif()
