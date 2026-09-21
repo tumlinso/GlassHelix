@@ -82,7 +82,7 @@ inline bool current(const saved_primal& saved,
       saved.parameter_owner != attachment.block->device_primal.parameters ||
       saved.forcing_owners != attachment.forcing_owners ||
       saved.activity_owner != attachment.activity_owner || !saved.state_owner ||
-      !saved.parameter_owner || !saved.forcing_owners[0] || !saved.activity_owner ||
+      !saved.parameter_owner || !saved.activity_owner ||
       saved.state.value != saved.state_owner->generation.value ||
       saved.parameters.value != saved.parameter_owner->generation.value ||
       saved.activity.value != saved.activity_owner->value)
