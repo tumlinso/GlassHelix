@@ -127,6 +127,15 @@ inline program::program_status submit(const prepared_stage_bundle& bundle,
 
 struct direct_map_plan { prepared_stage_bundle stage; };
 
+// Stable semantic attachment supplied by the owner of the actual forward plan.
+// Response code borrows these CE stages and never reconstructs its own map.
+struct forward_plan_identity { std::uint64_t stage_id = 0, candidate_id = 0; };
+inline forward_plan_identity identity_of(const direct_map_plan& plan) noexcept {
+  if (!plan.stage.program.stages || !plan.stage.program.stage_count) return {};
+  const auto& stage = plan.stage.program.stages[0];
+  return {stage.stable_stage_id, stage.candidate_id};
+}
+
 // The supplied CE program is a vector field with one binding. GlassHelix only
 // patches the state (`input`), forcing (`values`), and derivative (`output`)
 // slots for each mathematical RK4 stage; all other CE binding fields remain
@@ -220,6 +229,12 @@ public:
   std::uint64_t elements() const noexcept { return elements_; }
   float step() const noexcept { return step_; }
   void* stream() const noexcept { return stream_; }
+  forward_plan_identity identity() const noexcept {
+    return {field_.program.program.stages && field_.program.program.stage_count
+                ? field_.program.program.stages[0].stable_stage_id : 0,
+            field_.program.program.stages && field_.program.program.stage_count
+                ? field_.program.program.stages[0].candidate_id : 0};
+  }
 };
 
 inline program::program_status execute_direct_map(const direct_map_plan& plan,
