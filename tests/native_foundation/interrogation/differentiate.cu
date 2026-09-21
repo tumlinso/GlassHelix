@@ -63,14 +63,16 @@ struct primitive {
     output = {{{12, definition}, {}, count, ex::numeric_type::f32}, {13, definition}};
     nf::operation_contract contract{};
     contract.definition = {definition, 1};
-    contract.arguments = {inputs.data(), 2};
+    const bool unary = operation == nn::local_operation::tanh;
+    contract.arguments = {inputs.data(), unary ? 1u : 2u};
     contract.outputs = {&output, 1};
     contract.numeric = {ex::numeric_type::f32, ex::numeric_type::f32,
                         ex::numeric_type::f32, ex::numeric_type::f32,
                         ex::numeric_type::f32, ex::numeric_type::f32};
     contract.capabilities = nf::forward | nf::jvp | nf::vjp | nf::second_direction;
     saved = primal(contract.definition, state.generation.value, parameters.generation.value);
-    df::local_primal_owners owners{&left, &right, &state, &parameters, stream, saved};
+    df::local_primal_owners owners{&left, unary ? nullptr : &right,
+                                   &state, &parameters, stream, saved};
     require(df::make_local_device_block(operation, contract, owners, block)
                 == nf::status::success,
             "prepare response block");
@@ -183,6 +185,33 @@ int main() {
                                       direct_plan, recomputed, direct_jvp, stream)
               == pg::program_status::launch_failed,
           "unsupported recomputed primal accepted");
+
+  primitive unary_primitive(102, count, stream, state.value, forcing.value,
+                            state.value, parameters.value, nn::local_operation::tanh);
+  pg::prepared_stage_v2 unary_stage{};
+  require(df::make_local_device_stage(unary_primitive.block, nf::forward,
+                                      stage_id + 2, candidate_id, 0, unary_stage)
+              == nf::status::success,
+          "prepare unary forward stage");
+  vector unary_forward_output(count, stream, 0.f), unary_tangent_output(count, stream, 0.f);
+  auto unary_forward_binding = unary_primitive.binding(
+      nf::forward, nullptr, nullptr, nullptr, &unary_forward_output.value, nullptr, nullptr);
+  gh::dynamics::prepared_stage_bundle unary_bundle{
+      {2, 0, &unary_stage, 1, nullptr, 0}, {pg::launch_binding_v2{&unary_forward_binding}}};
+  gh::dynamics::response_attachment unary_attachment{
+      {stage_id + 2, candidate_id}, &unary_primitive.block, {}, {}, &activity_generation};
+  gh::dynamics::direct_map_plan unary_plan{
+      unary_bundle, gh::core::differentiated_object::vector_field, unary_attachment};
+  const auto unary_stamp = rsp::retain_primal(unary_attachment);
+  require(gh::dynamics::execute_direct_map(unary_plan, stream) == pg::program_status::success,
+          "unary forward");
+  auto unary_jvp = unary_primitive.binding(
+      nf::jvp, &state_direction.value, nullptr, nullptr,
+      &unary_tangent_output.value, nullptr, nullptr);
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      unary_plan, unary_stamp, unary_jvp, stream)
+              == pg::program_status::success,
+          "unary saved-primal response");
 
   // Feed sensitivities produced by the actual CE action into the local SVD.
   auto state_column = direct_primitive.binding(
