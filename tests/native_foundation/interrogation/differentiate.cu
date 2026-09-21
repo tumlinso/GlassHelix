@@ -56,7 +56,8 @@ struct primitive {
 
   primitive(std::uint64_t definition, std::size_t count, cudaStream_t stream,
             const nn::resident_vector& left, const nn::resident_vector& right,
-            const nn::resident_vector& state, const nn::resident_vector& parameters) {
+            const nn::resident_vector& state, const nn::resident_vector& parameters,
+            nn::local_operation operation = nn::local_operation::add) {
     inputs = {{{{10, definition}, {}, count, ex::numeric_type::f32},
                {{11, definition}, {}, count, ex::numeric_type::f32}}};
     output = {{{12, definition}, {}, count, ex::numeric_type::f32}, {13, definition}};
@@ -70,7 +71,7 @@ struct primitive {
     contract.capabilities = nf::forward | nf::jvp | nf::vjp | nf::second_direction;
     saved = primal(contract.definition, state.generation.value, parameters.generation.value);
     df::local_primal_owners owners{&left, &right, &state, &parameters, stream, saved};
-    require(df::make_local_device_block(nn::local_operation::add, contract, owners, block)
+    require(df::make_local_device_block(operation, contract, owners, block)
                 == nf::status::success,
             "prepare response block");
   }
@@ -106,6 +107,40 @@ gh::dynamics::prepared_stage_bundle forward_add_bundle(
   return {{2, 0, &stage, 1, nullptr, 0}, {pg::launch_binding_v2{}}};
 }
 
+struct multiply_forward_state { std::uint64_t count = 0; };
+__global__ void multiply_forward_kernel(const float* state, const float* forcing,
+                                        float* output, std::uint64_t count) {
+  const auto index = std::uint64_t(blockIdx.x)*blockDim.x + threadIdx.x;
+  if (index < count) output[index] = state[index]*forcing[index];
+}
+pg::program_status admit_multiply_forward(
+    const void* prepared, const pg::launch_binding_v2& binding, void* stream) noexcept {
+  const auto* state = static_cast<const multiply_forward_state*>(prepared);
+  return state && state->count && binding.input && binding.values && binding.output && stream
+      ? pg::program_status::success : pg::program_status::invalid_argument;
+}
+pg::program_status launch_multiply_forward(
+    const void* prepared, const pg::launch_binding_v2& binding, void* stream) noexcept {
+  if (admit_multiply_forward(prepared, binding, stream) != pg::program_status::success)
+    return pg::program_status::invalid_argument;
+  const auto count = static_cast<const multiply_forward_state*>(prepared)->count;
+  multiply_forward_kernel<<<static_cast<unsigned>((count+255)/256), 256, 0,
+                            static_cast<cudaStream_t>(stream)>>>(
+      static_cast<const float*>(binding.input), static_cast<const float*>(binding.values),
+      static_cast<float*>(binding.output), count);
+  return cudaGetLastError() == cudaSuccess ? pg::program_status::success
+                                           : pg::program_status::launch_failed;
+}
+
+gh::dynamics::prepared_stage_bundle forward_multiply_bundle(
+    multiply_forward_state& descriptor, pg::prepared_stage_v2& stage,
+    std::uint64_t stage_id, std::uint64_t candidate_id, std::size_t count) {
+  descriptor.count = count;
+  stage = {stage_id, candidate_id, &descriptor, launch_multiply_forward,
+           0, 0, 0, 0, admit_multiply_forward};
+  return {{2, 0, &stage, 1, nullptr, 0}, {pg::launch_binding_v2{}}};
+}
+
 int main() {
   cudaStream_t stream{};
   cuda_require(cudaStreamCreateWithFlags(&stream, cudaStreamNonBlocking), "stream");
@@ -115,6 +150,7 @@ int main() {
   vector state(count, stream, 2.f, 7), forcing(count, stream, .5f, 11);
   vector state_direction(count, stream, .2f), zero_direction(count, stream, 0.f);
   vector one_direction(count, stream, 1.f);
+  vector forcing_direction(count, stream, .1f);
   vector direct_output(count, stream, 0.f), direct_left_adjoint(count, stream, 0.f);
   vector direct_right_adjoint(count, stream, 0.f), cotangent(count, stream, .3f);
   primitive direct_primitive(100, count, stream, state.value, forcing.value,
@@ -132,14 +168,16 @@ int main() {
   auto direct_jvp = direct_primitive.binding(
       nf::jvp, &state_direction.value, &zero_direction.value, nullptr,
       &direct_output.value, nullptr, nullptr);
-  require(rsp::execute_direct_map_jvp(direct_plan, stamp, stamp, direct_jvp, stream)
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, stamp, direct_jvp, stream)
               == pg::program_status::success,
           "direct map JVP");
   for (float value : download(direct_output, stream))
     require(std::abs(value - .2f) < 2e-6f, "direct analytic JVP");
   auto recomputed = stamp;
   recomputed.policy = rsp::primal_policy::explicitly_recomputed;
-  require(rsp::execute_direct_map_jvp(direct_plan, recomputed, recomputed,
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, recomputed, recomputed,
                                       direct_jvp, stream)
               == pg::program_status::success,
           "explicitly recomputed primal rejected");
@@ -148,14 +186,16 @@ int main() {
   auto state_column = direct_primitive.binding(
       nf::jvp, &one_direction.value, &zero_direction.value, nullptr,
       &direct_output.value, nullptr, nullptr);
-  require(rsp::execute_direct_map_jvp(direct_plan, stamp, stamp,
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, stamp,
                                       state_column, stream) == pg::program_status::success,
           "state sensitivity");
   const float state_sensitivity = download(direct_output, stream).front();
   auto forcing_column = direct_primitive.binding(
       nf::jvp, &zero_direction.value, &one_direction.value, nullptr,
       &direct_output.value, nullptr, nullptr);
-  require(rsp::execute_direct_map_jvp(direct_plan, stamp, stamp,
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, stamp,
                                       forcing_column, stream) == pg::program_status::success,
           "forcing sensitivity");
   const float forcing_sensitivity = download(direct_output, stream).front();
@@ -170,7 +210,8 @@ int main() {
   auto direct_vjp = direct_primitive.binding(
       nf::vjp, nullptr, nullptr, &cotangent.value, nullptr,
       &direct_left_adjoint.value, &direct_right_adjoint.value);
-  require(rsp::execute_direct_map_vjp(direct_plan, stamp, stamp, direct_vjp, stream)
+  require(rsp::execute_direct_map_vjp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, stamp, direct_vjp, stream)
               == pg::program_status::success,
           "direct map VJP");
   const auto direct_adj = download(direct_left_adjoint, stream);
@@ -179,26 +220,31 @@ int main() {
           "direct adjoint identity");
   auto stale = stamp;
   ++stale.activity;
-  require(rsp::execute_direct_map_jvp(direct_plan, stamp, stale, direct_jvp, stream)
+  require(rsp::execute_direct_map_jvp(gh::core::differentiated_object::vector_field,
+                                      direct_plan, stamp, stale, direct_jvp, stream)
               == pg::program_status::launch_failed,
           "stale activity accepted");
 
-  nn::linear_stage field_descriptor{};
+  multiply_forward_state field_descriptor{};
   pg::prepared_stage_v2 field_stage{};
-  auto field_bundle = forward_add_bundle(field_descriptor, field_stage, stage_id,
-                                         candidate_id, count);
+  auto field_bundle = forward_multiply_bundle(field_descriptor, field_stage, stage_id,
+                                              candidate_id, count);
   const float h = .1f;
   const std::array<float, 4> stage_state_value{
-      2.f, 2.f + .5f*h*2.5f, 2.f + .5f*h*2.625f, 2.f + h*2.63125f};
+      2.f, 2.f + .5f*h*1.f, 2.f + .5f*h*1.025f, 2.f + h*1.025625f};
   vector stage0(count, stream, stage_state_value[0], 7);
   vector stage1(count, stream, stage_state_value[1], 7);
   vector stage2(count, stream, stage_state_value[2], 7);
   vector stage3(count, stream, stage_state_value[3], 7);
   std::array<primitive, 4> fields{
-      primitive(201, count, stream, stage0.value, forcing.value, state.value, forcing.value),
-      primitive(202, count, stream, stage1.value, forcing.value, state.value, forcing.value),
-      primitive(203, count, stream, stage2.value, forcing.value, state.value, forcing.value),
-      primitive(204, count, stream, stage3.value, forcing.value, state.value, forcing.value)};
+      primitive(201, count, stream, stage0.value, forcing.value, state.value, forcing.value,
+                nn::local_operation::multiply),
+      primitive(202, count, stream, stage1.value, forcing.value, state.value, forcing.value,
+                nn::local_operation::multiply),
+      primitive(203, count, stream, stage2.value, forcing.value, state.value, forcing.value,
+                nn::local_operation::multiply),
+      primitive(204, count, stream, stage3.value, forcing.value, state.value, forcing.value,
+                nn::local_operation::multiply)};
   gh::dynamics::response_attachment rk4_attachment{
       {stage_id, candidate_id}, gh::core::differentiated_object::discrete_step,
       &fields[0].block,
@@ -217,7 +263,8 @@ int main() {
       fields[3].binding(nf::jvp, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr)};
   rsp::rk4_jvp_buffers jvp_buffers{
       state_direction.value,
-      {&zero_direction.value, &zero_direction.value, &zero_direction.value, &zero_direction.value},
+      {&forcing_direction.value, &forcing_direction.value,
+       &forcing_direction.value, &forcing_direction.value},
       trial_direction.value, {&dk1.value, &dk2.value, &dk3.value, &dk4.value},
       tangent_packed.value, tangent_output.value};
   require(rsp::execute_rk4_jvp(rk4, stamp, stamp, jvp_bindings, jvp_buffers, stream)
@@ -228,18 +275,21 @@ int main() {
   const float epsilon = 1e-3f;
   vector plus(count, stream, 2.f + epsilon*.2f, 7);
   vector minus(count, stream, 2.f - epsilon*.2f, 7);
+  vector plus_forcing(count, stream, .5f + epsilon*.1f, 11);
+  vector minus_forcing(count, stream, .5f - epsilon*.1f, 11);
   vector trial(count, stream, 0.f), k1(count, stream, 0.f), k2(count, stream, 0.f);
   vector k3(count, stream, 0.f), k4(count, stream, 0.f), packed(5*count, stream, 0.f);
   vector forward_output(count, stream, 0.f);
   gh::dynamics::rk4_resident_scratch forward_scratch{
       trial.value, k1.value, k2.value, k3.value, k4.value, packed.value};
-  const auto stages = gh::dynamics::make_rk4_stage_bindings(0., h, forcing.value);
-  require(gh::dynamics::execute_rk4_step(rk4, plus.value, stages, forward_scratch,
+  const auto plus_stages = gh::dynamics::make_rk4_stage_bindings(0., h, plus_forcing.value);
+  const auto minus_stages = gh::dynamics::make_rk4_stage_bindings(0., h, minus_forcing.value);
+  require(gh::dynamics::execute_rk4_step(rk4, plus.value, plus_stages, forward_scratch,
                                         forward_output.value, stream)
               == pg::program_status::success,
           "plus RK4");
   const auto plus_result = download(forward_output, stream);
-  require(gh::dynamics::execute_rk4_step(rk4, minus.value, stages, forward_scratch,
+  require(gh::dynamics::execute_rk4_step(rk4, minus.value, minus_stages, forward_scratch,
                                         forward_output.value, stream)
               == pg::program_status::success,
           "minus RK4");
@@ -267,8 +317,10 @@ int main() {
               == pg::program_status::success,
           "RK4 VJP");
   const auto state_adjoint = download(adjoint_state, stream);
+  const float forcing_adjoint = download(au1, stream).front() + download(au2, stream).front()
+      + download(au3, stream).front() + download(au4, stream).front();
   require(std::abs(count*tangent.front()*.3f -
-                   count*.2f*state_adjoint.front()) < 3e-4f,
+                   count*(.2f*state_adjoint.front() + .1f*forcing_adjoint)) < 3e-4f,
           "RK4 adjoint identity");
 
   auto stale_forcing = stamp;
@@ -284,6 +336,10 @@ int main() {
                                       direct_jvp, stream)
               == pg::program_status::success,
           "observation response");
+  require(rsp::execute_observation_vjp(observation_plan, stamp, stamp,
+                                      direct_vjp, stream)
+              == pg::program_status::success,
+          "observation adjoint response");
   std::array<gh::dynamics::direct_map_plan, 2> rollout{direct_plan, direct_plan};
   rollout[0].response.object = gh::core::differentiated_object::implemented_rollout;
   rollout[1].response.object = gh::core::differentiated_object::implemented_rollout;
@@ -300,6 +356,24 @@ int main() {
           "rollout response");
   for (float value : download(rollout_out, stream))
     require(std::abs(value - .2f) < 2e-6f, "rollout analytic response");
+
+  vector rollout_state0(count, stream, 0.f), rollout_state1(count, stream, 0.f);
+  vector rollout_aux0(count, stream, 0.f), rollout_aux1(count, stream, 0.f);
+  std::array<df::response_binding<float>, 2> rollout_vjp_bindings{
+      direct_primitive.binding(nf::vjp, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr),
+      direct_primitive.binding(nf::vjp, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr)};
+  std::array<nn::resident_vector*, 2> rollout_state_adjoints{
+      &rollout_state0.value, &rollout_state1.value};
+  std::array<nn::resident_vector*, 2> rollout_aux_adjoints{
+      &rollout_aux0.value, &rollout_aux1.value};
+  require(rsp::execute_rollout_vjp(
+              rollout, rollout_stamps, rollout_stamps, rollout_vjp_bindings,
+              {cotangent.value, rollout_state_adjoints, rollout_aux_adjoints}, stream)
+              == pg::program_status::success,
+          "rollout adjoint response");
+  const auto rollout_input_adjoint = download(rollout_state0, stream);
+  require(std::abs(count*.2f*.3f - count*.2f*rollout_input_adjoint.front()) < 2e-5f,
+          "rollout adjoint identity");
 
   cuda_require(cudaStreamDestroy(stream), "destroy stream");
 }

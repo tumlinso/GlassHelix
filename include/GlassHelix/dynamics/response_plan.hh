@@ -72,18 +72,20 @@ inline program::program_status linear_axpby(
 }
 
 inline program::program_status execute_direct_map_jvp(
-    const direct_map_plan& plan, const saved_primal& saved, const saved_primal& live,
+    core::differentiated_object requested, const direct_map_plan& plan,
+    const saved_primal& saved, const saved_primal& live,
     df::response_binding<float>& binding, void* stream) noexcept {
-  if (!valid_attachment(plan.response, identity_of(plan), plan.response.object, stream) || !current(saved, live))
+  if (!valid_attachment(plan.response, identity_of(plan), requested, stream) || !current(saved, live))
     return program::program_status::launch_failed;
   return submit_response(*plan.response.block, nf::jvp, plan.response.forward,
                          binding, stream);
 }
 
 inline program::program_status execute_direct_map_vjp(
-    const direct_map_plan& plan, const saved_primal& saved, const saved_primal& live,
+    core::differentiated_object requested, const direct_map_plan& plan,
+    const saved_primal& saved, const saved_primal& live,
     df::response_binding<float>& binding, void* stream) noexcept {
-  if (!valid_attachment(plan.response, identity_of(plan), plan.response.object, stream) || !current(saved, live))
+  if (!valid_attachment(plan.response, identity_of(plan), requested, stream) || !current(saved, live))
     return program::program_status::launch_failed;
   return submit_response(*plan.response.block, nf::vjp, plan.response.forward,
                          binding, stream);
@@ -203,7 +205,15 @@ inline program::program_status execute_observation_jvp(
     df::response_binding<float>& binding, void* stream) noexcept {
   if (plan.response.object != core::differentiated_object::observation)
     return program::program_status::invalid_argument;
-  return execute_direct_map_jvp(plan, saved, live, binding, stream);
+  return execute_direct_map_jvp(core::differentiated_object::observation,
+                                plan, saved, live, binding, stream);
+}
+
+inline program::program_status execute_observation_vjp(
+    const direct_map_plan& plan, const saved_primal& saved, const saved_primal& live,
+    df::response_binding<float>& binding, void* stream) noexcept {
+  return execute_direct_map_vjp(core::differentiated_object::observation,
+                                plan, saved, live, binding, stream);
 }
 
 inline program::program_status execute_rollout_jvp(
@@ -216,7 +226,40 @@ inline program::program_status execute_rollout_jvp(
   for (std::size_t i = 0; i < saved.size(); ++i) {
     if (plans[i].response.object != core::differentiated_object::implemented_rollout)
       return program::program_status::invalid_argument;
-    if (auto status = execute_direct_map_jvp(plans[i], saved[i], live[i], bindings[i], stream);
+    if (auto status = execute_direct_map_jvp(
+            core::differentiated_object::implemented_rollout,
+            plans[i], saved[i], live[i], bindings[i], stream);
+        status != program::program_status::success) return status;
+  }
+  return program::program_status::success;
+}
+
+struct rollout_vjp_buffers {
+  const cellerator::compute::native_numeric::resident_vector& output_cotangent;
+  std::span<cellerator::compute::native_numeric::resident_vector* const> state_adjoint;
+  std::span<cellerator::compute::native_numeric::resident_vector* const> auxiliary_adjoint;
+};
+
+inline program::program_status execute_rollout_vjp(
+    std::span<const direct_map_plan> plans, std::span<const saved_primal> saved,
+    std::span<const saved_primal> live,
+    std::span<df::response_binding<float>> bindings,
+    rollout_vjp_buffers buffers, void* stream) noexcept {
+  if (plans.size() != saved.size() || saved.size() != live.size() ||
+      saved.size() != bindings.size() || saved.size() != buffers.state_adjoint.size() ||
+      saved.size() != buffers.auxiliary_adjoint.size() || saved.empty())
+    return program::program_status::invalid_argument;
+  for (std::size_t reverse = plans.size(); reverse-- > 0;) {
+    if (plans[reverse].response.object != core::differentiated_object::implemented_rollout ||
+        !buffers.state_adjoint[reverse] || !buffers.auxiliary_adjoint[reverse])
+      return program::program_status::invalid_argument;
+    bindings[reverse].cotangent = reverse + 1 == plans.size()
+        ? &buffers.output_cotangent : buffers.state_adjoint[reverse + 1];
+    bindings[reverse].left_adjoint = buffers.state_adjoint[reverse];
+    bindings[reverse].right_adjoint = buffers.auxiliary_adjoint[reverse];
+    if (auto status = execute_direct_map_vjp(
+            core::differentiated_object::implemented_rollout, plans[reverse],
+            saved[reverse], live[reverse], bindings[reverse], stream);
         status != program::program_status::success) return status;
   }
   return program::program_status::success;
