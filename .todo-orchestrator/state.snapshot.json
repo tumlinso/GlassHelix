@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T17:58:58Z",
+  "generated_at": "2026-09-21T19:07:16Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 165,
+  "project_revision": 237,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -228,50 +228,50 @@
       {
         "id": "GH-NF1A-ACCEPT-DONE",
         "metadata_json": "{}",
-        "reached_at": null,
-        "revision": 155,
+        "reached_at": "2026-09-21T19:01:19Z",
+        "revision": 227,
         "revoked_at": null,
-        "state": "pending",
+        "state": "reached",
         "task_id": "GH-NF1A-ACCEPT",
         "title": "Integrate continuously and qualify the real consumer"
       },
       {
         "id": "GH-NF1A-ACCESS-DONE",
         "metadata_json": "{}",
-        "reached_at": null,
-        "revision": 155,
+        "reached_at": "2026-09-21T18:38:26Z",
+        "revision": 214,
         "revoked_at": null,
-        "state": "pending",
+        "state": "reached",
         "task_id": "GH-NF1A-ACCESS",
         "title": "Deliver thin Python access, inspection and portable replay"
       },
       {
         "id": "GH-NF1A-ANALYZE-DONE",
         "metadata_json": "{}",
-        "reached_at": null,
-        "revision": 155,
+        "reached_at": "2026-09-21T18:34:34Z",
+        "revision": 205,
         "revoked_at": null,
-        "state": "pending",
+        "state": "reached",
         "task_id": "GH-NF1A-ANALYZE",
         "title": "Deliver response, local ambiguity and supplied-reduction instruments"
       },
       {
         "id": "GH-NF1A-OBSERVE-DONE",
         "metadata_json": "{}",
-        "reached_at": null,
-        "revision": 155,
+        "reached_at": "2026-09-21T16:42:55Z",
+        "revision": 185,
         "revoked_at": null,
-        "state": "pending",
+        "state": "reached",
         "task_id": "GH-NF1A-OBSERVE",
         "title": "Deliver observation and finite-candidate evidence updates"
       },
       {
         "id": "GH-NF1A-SYSTEM-DONE",
         "metadata_json": "{}",
-        "reached_at": null,
-        "revision": 155,
+        "reached_at": "2026-09-21T16:34:53Z",
+        "revision": 176,
         "revoked_at": null,
-        "state": "pending",
+        "state": "reached",
         "task_id": "GH-NF1A-SYSTEM",
         "title": "Deliver usable native systems and deterministic evolution"
       }
@@ -1927,6 +1927,726 @@
         "revision": 165,
         "seq": 165,
         "timestamp": "2026-09-16T17:58:58Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "0cd89add-3ddb-4f42-8afe-48fd39d896e0",
+        "entity_type": "workflow_context_fragment",
+        "event_type": "workflow_context_fragment_published",
+        "payload_json": "{\"content_hash\": \"4e775e1fa362013159e00d9faa5969ef301e8276feabf35068ef135635323ebf\", \"invalidated_fragment_ids\": [], \"kind\": \"context_note\", \"series_key\": \"nf1a-controller-status\", \"version\": 2}",
+        "revision": 166,
+        "seq": 166,
+        "timestamp": "2026-09-16T18:06:02Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-RUN-V1",
+        "entity_type": "migration",
+        "event_type": "migration.nf1a_paused_execution_reconciled",
+        "payload_json": "{\"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/20260921T153417Z-GH-NF1A-RUN-V1-pre-reconcile.sqlite3\", \"completed_untouched\": [\"GH-NF1A-ADOPT\"], \"planned_task_ids\": [\"GH-NF1A-0000\", \"GH-NF1A-ACCEPT\", \"GH-NF1A-ACCESS\", \"GH-NF1A-ANALYZE\", \"GH-NF1A-CONTROL\", \"GH-NF1A-OBSERVE\", \"GH-NF1A-RELEASE\", \"GH-NF1A-SYSTEM\"], \"reactivated_workspace_ids\": [], \"ready_lane_ids\": [\"GH-NF1A-L-ACCEPT\", \"GH-NF1A-L-ACCESS\", \"GH-NF1A-L-ANALYZE\", \"GH-NF1A-L-OBSERVE\", \"GH-NF1A-L-RELEASE\", \"GH-NF1A-L-ROOT\", \"GH-NF1A-L-SYSTEM\"], \"released_claim_ids\": [\"cda2b9c7-8613-4d58-809d-2c364ef723d0\", \"d97bc3c9-521b-4c0f-be85-a0f55c786714\", \"e6f9c0f3-865e-42cb-8d2b-b007b7e1ed38\"], \"requeued_task_ids\": [\"GH-NF1A-CONTROL\", \"GH-NF1A-OBSERVE\", \"GH-NF1A-SYSTEM\"], \"retired_capability_ids\": [\"22638cf3-d374-41e7-99ae-396759d41cc9\", \"3f33a0ca-6df1-47d6-9272-c62bbb137ba2\", \"b5250d14-cfd9-4360-bf17-ef1d0b9f011a\"], \"retired_dispatch_ids\": [\"1e661c8c-3969-4b64-a848-8c748ad1a7eb\", \"2425af6e-93ec-42fe-959f-d2bf1800fdf5\", \"2ebe2ea2-25ea-4529-b2f6-5396a88a9c61\"], \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 167,
+        "seq": 167,
+        "timestamp": "2026-09-21T15:34:18Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-ROOT",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-ROOT\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-CONTROL\"}",
+        "revision": 168,
+        "seq": 168,
+        "timestamp": "2026-09-21T15:35:30Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "d758c41c-96f2-47e5-ab69-cfe5b30e1359",
+        "entity_type": "workflow_context_fragment",
+        "event_type": "workflow_context_fragment_published",
+        "payload_json": "{\"content_hash\": \"dc537fdcbaeee1b169cf88d7aaeca0963cac33013c855bb40d760ea99db70914\", \"invalidated_fragment_ids\": [], \"kind\": \"context_note\", \"series_key\": \"nf1a-controller-status\", \"version\": 3}",
+        "revision": 169,
+        "seq": 169,
+        "timestamp": "2026-09-21T15:36:06Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-SYSTEM",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-SYSTEM\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-SYSTEM\"}",
+        "revision": 170,
+        "seq": 170,
+        "timestamp": "2026-09-21T15:36:48Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-RUN-V1",
+        "entity_type": "migration",
+        "event_type": "migration.nf1a_gate_runtime_rebound",
+        "payload_json": "{\"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/20260921T154036Z-GH-NF1A-RUN-V1-pre-gate-runtime-rebind.sqlite3\", \"completed_tasks_untouched\": true, \"gates\": [{\"gate_id\": \"GH-NF1A-ACCEPT-ACCEPT\", \"new_argv0\": \"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"old_argv0\": \"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\"}, {\"gate_id\": \"GH-NF1A-ACCESS-ACCEPT\", \"new_argv0\": \"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"old_argv0\": \"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\"}, {\"gate_id\": \"GH-NF1A-ANALYZE-ACCEPT\", \"new_argv0\": \"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"old_argv0\": \"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\"}, {\"gate_id\": \"GH-NF1A-CONTROL-ACCEPT\", \"new_argv0\": \"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"old_argv0\": \"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\"}, {\"gate_id\": \"GH-NF1A-OBSERVE-ACCEPT\", \"new_argv0\": \"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"old_argv0\": \"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\"}, {\"gate_id\": \"GH-NF1A-RELEASE-ACCEPT\", \"new_argv0\": \"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"old_argv0\": \"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\"}, {\"gate_id\": \"GH-NF1A-SYSTEM-ACCEPT\", \"new_argv0\": \"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"old_argv0\": \"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\"}], \"other_gate_fields_preserved\": true, \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 171,
+        "seq": 171,
+        "timestamp": "2026-09-21T15:40:36Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-SYSTEM-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-SYSTEM-ACCEPT\"}",
+        "revision": 172,
+        "seq": 172,
+        "timestamp": "2026-09-21T16:34:30Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-SYSTEM-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"5f3c7280-86cc-4fbe-97c5-b5e65358d64d\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 173,
+        "seq": 173,
+        "timestamp": "2026-09-21T16:34:53Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "0b033f61-1c8f-4915-b680-a84e9fd940fd",
+        "entity_type": "workflow_patch_artifact",
+        "event_type": "workflow_patch_artifact_published",
+        "payload_json": "{\"content_hash\": \"36a9f648319ae0b3944256afe7676a60f891c93296206987f13c0d4f0350eef2\", \"kind\": \"commit\", \"task_id\": \"GH-NF1A-SYSTEM\", \"workspace_id\": \"f7c674ef-f8f5-4d3c-949c-5b460c47ccd6\"}",
+        "revision": 174,
+        "seq": 174,
+        "timestamp": "2026-09-21T16:34:53Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "6958784b-4185-4802-87fb-f63fb612a674",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_artifact_queued",
+        "payload_json": "{\"artifact_id\": \"0b033f61-1c8f-4915-b680-a84e9fd940fd\", \"integration_task_id\": \"GH-NF1A-ACCEPT\", \"integrator_lane_id\": \"GH-NF1A-L-ACCEPT\"}",
+        "revision": 175,
+        "seq": 175,
+        "timestamp": "2026-09-21T16:34:53Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-SYSTEM",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 176, \"disposition\": \"implemented\", \"reached_checkpoints\": [\"GH-NF1A-SYSTEM-DONE\"]}",
+        "revision": 176,
+        "seq": 176,
+        "timestamp": "2026-09-21T16:34:53Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-OBSERVE",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-OBSERVE\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-OBSERVE\"}",
+        "revision": 177,
+        "seq": 177,
+        "timestamp": "2026-09-21T16:35:23Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "b5d2893c-9aa7-43af-a6a5-7bc20b0f2e4c",
+        "entity_type": "workflow_context_fragment",
+        "event_type": "workflow_context_fragment_published",
+        "payload_json": "{\"content_hash\": \"a4ab602e494696993bf7e1a1db7a93e1657754bcaccde1aea96e8a38fced09d3\", \"invalidated_fragment_ids\": [], \"kind\": \"context_note\", \"series_key\": \"nf1a-controller-status\", \"version\": 4}",
+        "revision": 178,
+        "seq": 178,
+        "timestamp": "2026-09-21T16:35:43Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-OBSERVE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-OBSERVE-ACCEPT\"}",
+        "revision": 179,
+        "seq": 179,
+        "timestamp": "2026-09-21T16:41:37Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-OBSERVE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"c10e00e0-615d-4b55-b839-da55d02f8e4c\", \"status\": \"failed\", \"valid\": false}",
+        "revision": 180,
+        "seq": 180,
+        "timestamp": "2026-09-21T16:41:40Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-OBSERVE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-OBSERVE-ACCEPT\"}",
+        "revision": 181,
+        "seq": 181,
+        "timestamp": "2026-09-21T16:42:32Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-OBSERVE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"9625fad0-7d8c-4aa1-af11-e4eaf6fa7593\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 182,
+        "seq": 182,
+        "timestamp": "2026-09-21T16:42:55Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "3b91d5cc-7266-4111-98de-48f20b1ab773",
+        "entity_type": "workflow_patch_artifact",
+        "event_type": "workflow_patch_artifact_published",
+        "payload_json": "{\"content_hash\": \"7e07335e5b767202672152966c2464095981d63e4b6e963d0519dbe4eee5ba2d\", \"kind\": \"commit\", \"task_id\": \"GH-NF1A-OBSERVE\", \"workspace_id\": \"684e6f4d-0a8a-44a3-ac59-8c7a229b8c88\"}",
+        "revision": 183,
+        "seq": 183,
+        "timestamp": "2026-09-21T16:42:55Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "5209b46c-cf15-41da-b786-815a2722c663",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_artifact_queued",
+        "payload_json": "{\"artifact_id\": \"3b91d5cc-7266-4111-98de-48f20b1ab773\", \"integration_task_id\": \"GH-NF1A-ACCEPT\", \"integrator_lane_id\": \"GH-NF1A-L-ACCEPT\"}",
+        "revision": 184,
+        "seq": 184,
+        "timestamp": "2026-09-21T16:42:55Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-OBSERVE",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 185, \"disposition\": \"implemented\", \"reached_checkpoints\": [\"GH-NF1A-OBSERVE-DONE\"]}",
+        "revision": 185,
+        "seq": 185,
+        "timestamp": "2026-09-21T16:42:55Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "e5f285d6-44c7-48ec-b1e9-2916a5de51b8",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_reserved",
+        "payload_json": "{\"base_commit\": \"c503b78aa935ed114c6c95423264436fb484abc7\", \"lane_id\": \"GH-NF1A-L-ANALYZE\", \"mode\": \"isolated_merge\", \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 186,
+        "seq": 186,
+        "timestamp": "2026-09-21T16:45:55Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "e5f285d6-44c7-48ec-b1e9-2916a5de51b8",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_created",
+        "payload_json": "{\"base_commit\": \"c503b78aa935ed114c6c95423264436fb484abc7\", \"lane_id\": \"GH-NF1A-L-ANALYZE\", \"mode\": \"isolated_merge\", \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 187,
+        "seq": 187,
+        "timestamp": "2026-09-21T16:45:55Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-ANALYZE",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-ANALYZE\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-ANALYZE\"}",
+        "revision": 188,
+        "seq": 188,
+        "timestamp": "2026-09-21T16:46:18Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "59fc6158-8f18-4e4c-8b89-3a4c99fe3f53",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_reserved",
+        "payload_json": "{\"base_commit\": \"c503b78aa935ed114c6c95423264436fb484abc7\", \"lane_id\": \"GH-NF1A-L-ACCESS\", \"mode\": \"isolated_merge\", \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 189,
+        "seq": 189,
+        "timestamp": "2026-09-21T16:46:21Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "59fc6158-8f18-4e4c-8b89-3a4c99fe3f53",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_created",
+        "payload_json": "{\"base_commit\": \"c503b78aa935ed114c6c95423264436fb484abc7\", \"lane_id\": \"GH-NF1A-L-ACCESS\", \"mode\": \"isolated_merge\", \"run_id\": \"GH-NF1A-RUN-V1\"}",
+        "revision": 190,
+        "seq": 190,
+        "timestamp": "2026-09-21T16:46:21Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ANALYZE",
+        "entity_type": "task",
+        "event_type": "migration.nf1a_analyze_build_scope_extended",
+        "payload_json": "{\"authorization\": \"Explicit user-directed migration editing; rootowner\", \"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/20260921T164753Z-GH-NF1A-ANALYZE-pre-build-scope.sqlite3\", \"path\": \"CMakeLists.txt\", \"reason\": \"Build/install required nativeanalysis layer and LAPACK dependency; SYSTEM/OBSERVE completed\"}",
+        "revision": 191,
+        "seq": 191,
+        "timestamp": "2026-09-21T16:47:53Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+        "entity_type": "project",
+        "event_type": "plan.applied",
+        "payload_json": "{\"file\": \"/tmp/glasshelix-preprint-metadata.todo-plan.json\"}",
+        "revision": 192,
+        "seq": 192,
+        "timestamp": "2026-09-21T16:53:37Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "68296ffa-e4c1-42b7-99fb-b1a7eabf4b0e",
+        "entity_type": "workflow_context_fragment",
+        "event_type": "workflow_context_fragment_published",
+        "payload_json": "{\"content_hash\": \"071ff726f2abd1db5eb775c32cbbf94854bb16f4162da35690a4ff18cdf520d3\", \"invalidated_fragment_ids\": [], \"kind\": \"context_note\", \"series_key\": \"nf1a-controller-status\", \"version\": 5}",
+        "revision": 193,
+        "seq": 193,
+        "timestamp": "2026-09-21T16:59:15Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-RUN-V1",
+        "entity_type": "run",
+        "event_type": "migration.nf1a_bounded_gate_timing_and_response_attachment",
+        "payload_json": "{\"authorization\": \"User explicitly authorizes directed owner register edits during NF1A migration\", \"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/20260921T170933Z-nf1a-bounded-gate-timing.sqlite3\", \"reason\": \"Observed idle GPU cannot complete three samples within default timeout; preserve three samples and extend only timing. GH adds two typed derivative attachment files as root architecture decision.\"}",
+        "revision": 194,
+        "seq": 194,
+        "timestamp": "2026-09-21T17:09:33Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ANALYZE",
+        "entity_type": "task",
+        "event_type": "migration.nf1a_response_identity_scope",
+        "payload_json": "{\"authorization\": \"User directed migration register authority; root approved same-object derivative attachment\", \"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/response-evolution-20260921T171111Z.sqlite3\", \"path\": \"include/GlassHelix/dynamics/evolution.hh\"}",
+        "revision": 195,
+        "seq": 195,
+        "timestamp": "2026-09-21T17:11:11Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-ACCESS",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-ACCESS\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-ACCESS\"}",
+        "revision": 196,
+        "seq": 196,
+        "timestamp": "2026-09-21T17:11:45Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-RUN-V1",
+        "entity_type": "run",
+        "event_type": "migration.nf1a_owner_renews_active_claims",
+        "payload_json": "{\"authorization\": \"User grants root owner directed forceful migration state edits and continuing NF1A implementation\", \"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/20260921T181414Z-owned-claim-renewal.sqlite3\", \"expiry\": \"2026-09-21T22:14:14Z\", \"reason\": \"Renew only existing active sole-owner claims during authorized long-running task, no takeover/successor/lease invalidation/source mutation\"}",
+        "revision": 197,
+        "seq": 197,
+        "timestamp": "2026-09-21T18:14:15Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ANALYZE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-ANALYZE-ACCEPT\"}",
+        "revision": 198,
+        "seq": 198,
+        "timestamp": "2026-09-21T18:23:34Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ANALYZE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"fa4536e6-07eb-4e8b-92c6-2f8c9456c194\", \"status\": \"failed\", \"valid\": false}",
+        "revision": 199,
+        "seq": 199,
+        "timestamp": "2026-09-21T18:24:46Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "6d3135e4-b3ce-45d9-8ab8-0df2a5c92a01",
+        "entity_type": "workflow_patch_artifact",
+        "event_type": "workflow_patch_artifact_published",
+        "payload_json": "{\"content_hash\": \"2914a34dff1fd5ed0afa737d9e012bab9628ca669504a2af812f17a21dbded6b\", \"kind\": \"commit\", \"task_id\": \"GH-NF1A-ANALYZE\", \"workspace_id\": \"e5f285d6-44c7-48ec-b1e9-2916a5de51b8\"}",
+        "revision": 200,
+        "seq": 200,
+        "timestamp": "2026-09-21T18:24:46Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "cb71f27b-1a5b-458f-8e2c-249ea2e18258",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_artifact_queued",
+        "payload_json": "{\"artifact_id\": \"6d3135e4-b3ce-45d9-8ab8-0df2a5c92a01\", \"integration_task_id\": \"GH-NF1A-ACCEPT\", \"integrator_lane_id\": \"GH-NF1A-L-ACCEPT\"}",
+        "revision": 201,
+        "seq": 201,
+        "timestamp": "2026-09-21T18:24:46Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ANALYZE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-ANALYZE-ACCEPT\"}",
+        "revision": 202,
+        "seq": 202,
+        "timestamp": "2026-09-21T18:33:13Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ANALYZE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"20029ce4-8d7a-4f1f-8b4c-ceade93267f7\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 203,
+        "seq": 203,
+        "timestamp": "2026-09-21T18:34:34Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "5e8c8634-faa2-4bf4-b497-116af3e42686",
+        "entity_type": "workflow_patch_artifact",
+        "event_type": "workflow.patch_artifact.refreshed",
+        "payload_json": "{\"queue_id\": \"cb71f27b-1a5b-458f-8e2c-249ea2e18258\", \"supersedes\": \"6d3135e4-b3ce-45d9-8ab8-0df2a5c92a01\"}",
+        "revision": 204,
+        "seq": 204,
+        "timestamp": "2026-09-21T18:34:34Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ANALYZE",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 205, \"disposition\": \"validated\", \"reached_checkpoints\": [\"GH-NF1A-ANALYZE-DONE\"]}",
+        "revision": 205,
+        "seq": 205,
+        "timestamp": "2026-09-21T18:34:34Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCESS-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-ACCESS-ACCEPT\"}",
+        "revision": 206,
+        "seq": 206,
+        "timestamp": "2026-09-21T18:34:59Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-ACCEPT",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-ACCEPT\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-ACCEPT\"}",
+        "revision": 207,
+        "seq": 207,
+        "timestamp": "2026-09-21T18:35:08Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCESS-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"c8d29164-8c30-4160-b954-a3b159a867c7\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 208,
+        "seq": 208,
+        "timestamp": "2026-09-21T18:36:17Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "bd4f703e-13da-4398-b899-b234acdc8ca2",
+        "entity_type": "workflow_patch_artifact",
+        "event_type": "workflow_patch_artifact_published",
+        "payload_json": "{\"content_hash\": \"faf87e1a7bc1be7efcd4a25a8d5f9c5b2e5c226a0faaa19a3d601c5a742a007a\", \"kind\": \"commit\", \"task_id\": \"GH-NF1A-ACCESS\", \"workspace_id\": \"59fc6158-8f18-4e4c-8b89-3a4c99fe3f53\"}",
+        "revision": 209,
+        "seq": 209,
+        "timestamp": "2026-09-21T18:36:18Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT",
+        "entity_type": "task",
+        "event_type": "workflow.task.release",
+        "payload_json": "{\"reason\": \"Allow final producer enqueue: infrastructure requires integrator lane task queued, despite early integrator claim support. No integration performed; root immediately resumes after ACCESS closes.\"}",
+        "revision": 210,
+        "seq": 210,
+        "timestamp": "2026-09-21T18:37:00Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCESS-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-ACCESS-ACCEPT\"}",
+        "revision": 211,
+        "seq": 211,
+        "timestamp": "2026-09-21T18:37:07Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCESS-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"60bd5996-7161-443f-97f5-f8bf0fba0ac2\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 212,
+        "seq": 212,
+        "timestamp": "2026-09-21T18:38:26Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_artifact_queued",
+        "payload_json": "{\"artifact_id\": \"bd4f703e-13da-4398-b899-b234acdc8ca2\", \"integration_task_id\": \"GH-NF1A-ACCEPT\", \"integrator_lane_id\": \"GH-NF1A-L-ACCEPT\"}",
+        "revision": 213,
+        "seq": 213,
+        "timestamp": "2026-09-21T18:38:26Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCESS",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 214, \"disposition\": \"validated\", \"reached_checkpoints\": [\"GH-NF1A-ACCESS-DONE\"]}",
+        "revision": 214,
+        "seq": 214,
+        "timestamp": "2026-09-21T18:38:26Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-ACCEPT",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-ACCEPT\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-ACCEPT\"}",
+        "revision": 215,
+        "seq": 215,
+        "timestamp": "2026-09-21T18:38:45Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1",
+        "entity_type": "workflow_integration_wave",
+        "event_type": "workflow_integration_wave_declared_and_adopted",
+        "payload_json": "{\"legacy_provenance_adoption_reason\": null, \"queue_ids\": [\"6958784b-4185-4802-87fb-f63fb612a674\", \"5209b46c-cf15-41da-b786-815a2722c663\", \"cb71f27b-1a5b-458f-8e2c-249ea2e18258\", \"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
+        "revision": 216,
+        "seq": 216,
+        "timestamp": "2026-09-21T18:39:20Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1",
+        "entity_type": "workflow_integration_wave",
+        "event_type": "migration.owner_native_merge_recorded",
+        "payload_json": "{\"authorization\": \"User expressly authorizes direct forceful migration edits; root owner\", \"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/gh-wave-native-merge-20260921.sqlite3\", \"reason\": \"Latest ACCESS Git ancestry contains all four qualified producers; actual no-ff Git merge preserves complete history. Avoid known cumulative full-base patch conflicts observed in CE. No gates/completion fabricated. Benchmark remains unqualified.\"}",
+        "revision": 217,
+        "seq": 217,
+        "timestamp": "2026-09-21T18:40:43Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "c040bb7a-6957-431b-902c-21910ab73283",
+        "entity_type": "workflow_context_fragment",
+        "event_type": "workflow_context_fragment_published",
+        "payload_json": "{\"content_hash\": \"3781956c8464d20a77fb947f67fd6b6e85005f5eb26ae770d64cfe5f979eb992\", \"invalidated_fragment_ids\": [], \"kind\": \"context_note\", \"series_key\": \"nf1a-controller-status\", \"version\": 6}",
+        "revision": 218,
+        "seq": 218,
+        "timestamp": "2026-09-21T18:48:59Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-ACCEPT-ACCEPT\"}",
+        "revision": 219,
+        "seq": 219,
+        "timestamp": "2026-09-21T18:52:34Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"e73de145-8762-4b53-9323-c3da1efe5168\", \"status\": \"failed\", \"valid\": false}",
+        "revision": 220,
+        "seq": 220,
+        "timestamp": "2026-09-21T18:53:57Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-ACCEPT-ACCEPT\"}",
+        "revision": 221,
+        "seq": 221,
+        "timestamp": "2026-09-21T18:56:42Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"57835725-4e95-4b3f-9019-a7b355012d5b\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 222,
+        "seq": 222,
+        "timestamp": "2026-09-21T18:58:14Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1",
+        "entity_type": "workflow_integration_wave",
+        "event_type": "workflow_integration_wave_finalization_reserved",
+        "payload_json": "{\"gate_count\": 1, \"last_apply_revision\": 217, \"source_identity\": \"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\"}",
+        "revision": 223,
+        "seq": 223,
+        "timestamp": "2026-09-21T18:58:14Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1",
+        "entity_type": "workflow_integration_wave",
+        "event_type": "workflow_integration_wave_gates_recorded",
+        "payload_json": "{\"gate_count\": 1, \"source_identity\": \"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\"}",
+        "revision": 224,
+        "seq": 224,
+        "timestamp": "2026-09-21T18:58:14Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-ACCEPT-ACCEPT\"}",
+        "revision": 225,
+        "seq": 225,
+        "timestamp": "2026-09-21T18:59:48Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"79966c83-80bc-436b-b957-56cb00c40d45\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 226,
+        "seq": 226,
+        "timestamp": "2026-09-21T19:01:19Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-ACCEPT",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 227, \"disposition\": \"validated\", \"reached_checkpoints\": [\"GH-NF1A-ACCEPT-DONE\"]}",
+        "revision": 227,
+        "seq": 227,
+        "timestamp": "2026-09-21T19:01:19Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-RELEASE",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-RELEASE\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-RELEASE\"}",
+        "revision": 228,
+        "seq": 228,
+        "timestamp": "2026-09-21T19:04:07Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-RELEASE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-RELEASE-ACCEPT\"}",
+        "revision": 229,
+        "seq": 229,
+        "timestamp": "2026-09-21T19:04:33Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-RELEASE-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"ba4332cf-2b0d-4075-a473-f2dda594aacf\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 230,
+        "seq": 230,
+        "timestamp": "2026-09-21T19:04:56Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-RELEASE",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 231, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 231,
+        "seq": 231,
+        "timestamp": "2026-09-21T19:04:56Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-CONTROL-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-NF1A-CONTROL-ACCEPT\"}",
+        "revision": 232,
+        "seq": 232,
+        "timestamp": "2026-09-21T19:05:12Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-CONTROL-ACCEPT",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"922d276c-5bf7-4f4b-8848-cee48b03faa0\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 233,
+        "seq": 233,
+        "timestamp": "2026-09-21T19:05:31Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-CONTROL",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 234, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 234,
+        "seq": 234,
+        "timestamp": "2026-09-21T19:05:31Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-0000",
+        "entity_type": "task",
+        "event_type": "migration.aggregate_closure_scope_bound",
+        "payload_json": "{\"authorization\": \"Express user owner migration permission for directed Todo edits\", \"backup\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/migration-backups/aggregate-scope-20260921.sqlite3\", \"reason\": \"Both aggregates cannot dispatch due missing_scope despite all outcomes complete; bind former completed coordinator closure-document scope only\"}",
+        "revision": 235,
+        "seq": 235,
+        "timestamp": "2026-09-21T19:07:04Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-L-ROOT",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-NF1A-L-ROOT\", \"run_id\": \"GH-NF1A-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-NF1A-0000\"}",
+        "revision": 236,
+        "seq": 236,
+        "timestamp": "2026-09-21T19:07:05Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-NF1A-0000",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 237, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 237,
+        "seq": 237,
+        "timestamp": "2026-09-21T19:07:16Z"
       }
     ],
     "evidence": [
@@ -1954,6 +2674,19 @@
         "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/run_gate.py\", \"--group\", \"t01\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"c2e3cfa34cc246878dba849e15405827dbad3187ee312b894bcf2f94616fb787\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/run_gate.py\", \"--group\", \"t01\"], \"cwd\": \".\", \"env\": {\"NF1_EXECUTION_BINDINGS\": \"/home/tumlinson/.local/state/nf1-20260908-v1/gh/t01/bindings.json\"}}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"93988ed2fc7e179fa47fe71736935718e0d90538\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"8a98c4410182ff4a1f27e39d3c0c34c905b2db995efc9f2c82eed0ab4bafde77\", \"started_revision\": 105, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-t-v1\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/1995d116-c72f-4319-b6fc-99343038a004",
         "revision": 106,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T18:34:34Z",
+        "gate_id": "GH-NF1A-ANALYZE-ACCEPT",
+        "id": "20029ce4-8d7a-4f1f-8b4c-ceade93267f7",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"3d51eb053676b3b95c544d85cf7593f13d1aa9afa6805b6cd55101ff5e4b5ee1\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"3be5501800695d732b18d8e8aecd5bd3e3d518101c286335ae137cf2515c4c8f\", \"started_revision\": 202, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-analyze\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/20029ce4-8d7a-4f1f-8b4c-ceade93267f7",
+        "revision": 203,
         "status": "passed"
       },
       {
@@ -2012,6 +2745,19 @@
         "checkpoint_id": null,
         "claim_id": null,
         "content_hash": null,
+        "created_at": "2026-09-21T18:58:14Z",
+        "gate_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "id": "57835725-4e95-4b3f-9019-a7b355012d5b",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"48907805dc5bf7c3a38c3f69bfd7713cec63d7e0186cb77e93ac2c9604e68a78\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-0000.md\", \"todos/gh-nf1a-accept.md\", \"todos/gh-nf1a-access.md\", \"todos/gh-nf1a-analyze.md\", \"todos/gh-nf1a-control.md\", \"todos/gh-nf1a-observe.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-nf1a-system.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"d9bc2d3e5516cad43e1a9f49232f9780c6f96120\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\", \"started_revision\": 221, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-accept\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/57835725-4e95-4b3f-9019-a7b355012d5b",
+        "revision": 222,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
         "created_at": "2026-09-09T11:01:52Z",
         "gate_id": "GH-NF1-A04-ACCEPT",
         "id": "57feea55-8959-473b-84b0-d864a58cd65a",
@@ -2038,6 +2784,32 @@
         "checkpoint_id": null,
         "claim_id": null,
         "content_hash": null,
+        "created_at": "2026-09-21T16:34:53Z",
+        "gate_id": "GH-NF1A-SYSTEM-ACCEPT",
+        "id": "5f3c7280-86cc-4fbe-97c5-b5e65358d64d",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-SYSTEM\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"2be3a1c30063ccc2606ec79579e3af7eab5b52c92689aac5de2cfa458ca4829b\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-SYSTEM\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"d402a2716a42f94bb7361e89d34513af77c0c26d\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"36a9f648319ae0b3944256afe7676a60f891c93296206987f13c0d4f0350eef2\", \"started_revision\": 172, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-system\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/5f3c7280-86cc-4fbe-97c5-b5e65358d64d",
+        "revision": 173,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T18:38:26Z",
+        "gate_id": "GH-NF1A-ACCESS-ACCEPT",
+        "id": "60bd5996-7161-443f-97f5-f8bf0fba0ac2",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"d9977a5166ef335d2335843261ed6c50acc4ed1c599c52461273adf080563e7d\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"46ba20712404a856a2bd5ceab649d83ff8d99957\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"8b6352c91d1991dba86450a2931542a08ea71e7a2722115d8881e6bc6f2381be\", \"started_revision\": 211, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-access\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/60bd5996-7161-443f-97f5-f8bf0fba0ac2",
+        "revision": 212,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
         "created_at": "2026-09-09T11:05:23Z",
         "gate_id": "GH-NF1-M00-ACCEPT",
         "id": "68f407fc-a5c9-4e11-8b17-39c5f13a1fb4",
@@ -2045,6 +2817,45 @@
         "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-M00\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"08da2a1ed427badb7976284492752c0746f54c4898825872b19ec8dc849679f6\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-M00\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ec06f0028d31cbd32e3270f7760e83914ef94517\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"c03575fbd56363e044752f0ba6eca5616f62d2151ecc9c6d972801dc4aa273de\", \"started_revision\": 58, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-m-v1\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/68f407fc-a5c9-4e11-8b17-39c5f13a1fb4",
         "revision": 59,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T19:01:19Z",
+        "gate_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "id": "79966c83-80bc-436b-b957-56cb00c40d45",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"48907805dc5bf7c3a38c3f69bfd7713cec63d7e0186cb77e93ac2c9604e68a78\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-0000.md\", \"todos/gh-nf1a-accept.md\", \"todos/gh-nf1a-access.md\", \"todos/gh-nf1a-analyze.md\", \"todos/gh-nf1a-control.md\", \"todos/gh-nf1a-observe.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-nf1a-system.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"69ae7528dff71374279b6f37b5503c43157cf578bf45167f1799bd04dc845b9c\", \"started_revision\": 225, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-accept\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/79966c83-80bc-436b-b957-56cb00c40d45",
+        "revision": 226,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T19:05:31Z",
+        "gate_id": "GH-NF1A-CONTROL-ACCEPT",
+        "id": "922d276c-5bf7-4f4b-8848-cee48b03faa0",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-CONTROL\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"93c74a1a95e4ea704daabf6bd1f355244eed7cefe30a7c0d009f64a8aed25390\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-CONTROL\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"a2fac2aa9b962a4e8fcf69f673d6628ec7501509d6000880b49836b84330b746\", \"dirty_paths\": [\".gitignore\", \".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 232}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/922d276c-5bf7-4f4b-8848-cee48b03faa0",
+        "revision": 233,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T16:42:55Z",
+        "gate_id": "GH-NF1A-OBSERVE-ACCEPT",
+        "id": "9625fad0-7d8c-4aa1-af11-e4eaf6fa7593",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"e3fd58dc4e4a932d4e489950a4dc3b18f98a5759\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"9dc0c750444b7800291d02f7a9f522e8ef6f026fedaf4b833d06e9fde239e9ad\", \"started_revision\": 181, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-observe\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/9625fad0-7d8c-4aa1-af11-e4eaf6fa7593",
+        "revision": 182,
         "status": "passed"
       },
       {
@@ -2103,6 +2914,32 @@
         "checkpoint_id": null,
         "claim_id": null,
         "content_hash": null,
+        "created_at": "2026-09-21T19:04:56Z",
+        "gate_id": "GH-NF1A-RELEASE-ACCEPT",
+        "id": "ba4332cf-2b0d-4075-a473-f2dda594aacf",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-RELEASE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"4b1eba661dd7fe50474cd9d8bea59b5af28b1635ea7d407ca089f5bde697c6b4\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-RELEASE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"a2fac2aa9b962a4e8fcf69f673d6628ec7501509d6000880b49836b84330b746\", \"dirty_paths\": [\".gitignore\", \".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 229}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/ba4332cf-2b0d-4075-a473-f2dda594aacf",
+        "revision": 230,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T16:41:40Z",
+        "gate_id": "GH-NF1A-OBSERVE-ACCEPT",
+        "id": "c10e00e0-615d-4b55-b839-da55d02f8e4c",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"c320e394a4176ef8bfcc2d3af796386eae661f33a87e01d9468a3867e6ab1473\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"planning/nf1-adaptive-v1/scripts/__pycache__/common.cpython-312.pyc\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-observe.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"c45cee634dbc9849b1e8d3edaa68a260383bb694\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 1, \"source_identity\": \"9dc0c750444b7800291d02f7a9f522e8ef6f026fedaf4b833d06e9fde239e9ad\", \"started_revision\": 179, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-observe\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/c10e00e0-615d-4b55-b839-da55d02f8e4c",
+        "revision": 180,
+        "status": "failed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
         "created_at": "2026-09-09T11:15:15Z",
         "gate_id": "GH-NF1-C01-ACCEPT",
         "id": "c27cc997-da37-46b6-88a1-98041c3a2990",
@@ -2123,6 +2960,19 @@
         "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ADOPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"20a4d346c1dd02e3bed7c9da37332e859fb1c6baac132717785d0b4920dfd08d\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ADOPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"34ab72532cbf4b711f76118eee48f350e6f3114513d9488a93aadd39d9dc3c75\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1-0000.md\", \"todos/gh-nf1-a01.md\", \"todos/gh-nf1-a02.md\", \"todos/gh-nf1-a03.md\", \"todos/gh-nf1-a04.md\", \"todos/gh-nf1-b01.md\", \"todos/gh-nf1-b02.md\", \"todos/gh-nf1-b03.md\", \"todos/gh-nf1-b04.md\", \"todos/gh-nf1-b05.md\", \"todos/gh-nf1-c01.md\", \"todos/gh-nf1-c02.md\", \"todos/gh-nf1-c03.md\", \"todos/gh-nf1-c04.md\", \"todos/gh-nf1-c05.md\", \"todos/gh-nf1-c06.md\", \"todos/gh-nf1-c07.md\", \"todos/gh-nf1-coord.md\", \"todos/gh-nf1-d01.md\", \"todos/gh-nf1-d02.md\", \"todos/gh-nf1-d03.md\", \"todos/gh-nf1-d04.md\", \"todos/gh-nf1-d05.md\", \"todos/gh-nf1-d06.md\", \"todos/gh-nf1-d07.md\", \"todos/gh-nf1-e01.md\", \"todos/gh-nf1-e02.md\", \"todos/gh-nf1-e03.md\", \"todos/gh-nf1-e04.md\", \"todos/gh-nf1-e05.md\", \"todos/gh-nf1-k01.md\", \"todos/gh-nf1-k02.md\", \"todos/gh-nf1-k03.md\", \"todos/gh-nf1-k04.md\", \"todos/gh-nf1-k05.md\", \"todos/gh-nf1-m00.md\", \"todos/gh-nf1-m10.md\", \"todos/gh-nf1-m20.md\", \"todos/gh-nf1-m30.md\", \"todos/gh-nf1-m40.md\", \"todos/gh-nf1-m60.md\", \"todos/gh-nf1-m90.md\", \"todos/gh-nf1-o01.md\", \"todos/gh-nf1-o02.md\", \"todos/gh-nf1-o03.md\", \"todos/gh-nf1-o04.md\", \"todos/gh-nf1-o05.md\", \"todos/gh-nf1-o06.md\", \"todos/gh-nf1-p01.md\", \"todos/gh-nf1-p02.md\", \"todos/gh-nf1-p03.md\", \"todos/gh-nf1-p04.md\", \"todos/gh-nf1-p05.md\", \"todos/gh-nf1-p06.md\", \"todos/gh-nf1-q01.md\", \"todos/gh-nf1-q02.md\", \"todos/gh-nf1-q03.md\", \"todos/gh-nf1-q04.md\", \"todos/gh-nf1-q05.md\", \"todos/gh-nf1-q06.md\", \"todos/gh-nf1-q07.md\", \"todos/gh-nf1-r01.md\", \"todos/gh-nf1-r02.md\", \"todos/gh-nf1-r03.md\", \"todos/gh-nf1-r04.md\", \"todos/gh-nf1-r05.md\", \"todos/gh-nf1-s01.md\", \"todos/gh-nf1-s02.md\", \"todos/gh-nf1-s03.md\", \"todos/gh-nf1-s04.md\", \"todos/gh-nf1-s05.md\", \"todos/gh-nf1-s06.md\", \"todos/gh-nf1-s07.md\", \"todos/gh-nf1-t01.md\", \"todos/gh-nf1-t02.md\", \"todos/gh-nf1-t03.md\", \"todos/gh-nf1-t04.md\", \"todos/gh-nf1-t05.md\", \"todos/gh-nf1-t06.md\", \"todos/gh-nf1-u01.md\", \"todos/gh-nf1-u02.md\", \"todos/gh-nf1-u03.md\", \"todos/gh-nf1-u04.md\", \"todos/gh-nf1-u05.md\", \"todos/gh-nf1-u06.md\", \"todos/gh-nf1-x01.md\", \"todos/gh-nf1-x02.md\", \"todos/gh-nf1-x03.md\", \"todos/gh-nf1-x04.md\", \"todos/gh-nf1-x05.md\", \"todos/gh-nf1-x06.md\", \"todos/gh-nf1a-0000.md\", \"todos/gh-nf1a-accept.md\", \"todos/gh-nf1a-access.md\", \"todos/gh-nf1a-adopt.md\", \"todos/gh-nf1a-analyze.md\", \"todos/gh-nf1a-control.md\", \"todos/gh-nf1a-observe.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-nf1a-system.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"b5115383a0ceacd28669ee00a98b9a7ec1ea04d7\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 150}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/c73fddcd-a324-43fb-9d61-f7f527dede3c",
         "revision": 151,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T18:36:17Z",
+        "gate_id": "GH-NF1A-ACCESS-ACCEPT",
+        "id": "c8d29164-8c30-4160-b954-a3b159a867c7",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"d9977a5166ef335d2335843261ed6c50acc4ed1c599c52461273adf080563e7d\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"46ba20712404a856a2bd5ceab649d83ff8d99957\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"8b6352c91d1991dba86450a2931542a08ea71e7a2722115d8881e6bc6f2381be\", \"started_revision\": 206, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-access\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/c8d29164-8c30-4160-b954-a3b159a867c7",
+        "revision": 208,
         "status": "passed"
       },
       {
@@ -2163,6 +3013,19 @@
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/e5491364-7622-4fdf-bb2d-423a1116fdd5",
         "revision": 87,
         "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T18:53:57Z",
+        "gate_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "id": "e73de145-8762-4b53-9323-c3da1efe5168",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"48907805dc5bf7c3a38c3f69bfd7713cec63d7e0186cb77e93ac2c9604e68a78\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-0000.md\", \"todos/gh-nf1a-accept.md\", \"todos/gh-nf1a-access.md\", \"todos/gh-nf1a-analyze.md\", \"todos/gh-nf1a-control.md\", \"todos/gh-nf1a-observe.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-nf1a-system.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"aca0d1167d800857c06df644034f30356534b147\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 1, \"source_identity\": \"9d7d5bbdb48e3a8e6edc5a424da8603384b7f44a6b81442291b7f8a1e0cff045\", \"started_revision\": 219, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-accept\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/e73de145-8762-4b53-9323-c3da1efe5168",
+        "revision": 220,
+        "status": "failed"
       },
       {
         "checkpoint_id": null,
@@ -2215,6 +3078,19 @@
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/f90dfd95-3aec-43af-8a8d-8a19aaca05ef",
         "revision": 11,
         "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-21T18:24:46Z",
+        "gate_id": "GH-NF1A-ANALYZE-ACCEPT",
+        "id": "fa4536e6-07eb-4e8b-92c6-2f8c9456c194",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"3d51eb053676b3b95c544d85cf7593f13d1aa9afa6805b6cd55101ff5e4b5ee1\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"f2e19a26d3359960d3308ec1397242dac4296c4f\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 1, \"source_identity\": \"082b7b8ae9d4380cfe1300a07731e3fd646d4a46d9a3fde8ec90f02ba728cb11\", \"started_revision\": 198, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-analyze\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/fa4536e6-07eb-4e8b-92c6-2f8c9456c194",
+        "revision": 199,
+        "status": "failed"
       },
       {
         "checkpoint_id": null,
@@ -3442,29 +4318,29 @@
       },
       {
         "checkpoint_id": null,
-        "config_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
+        "config_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
         "id": "GH-NF1A-ACCEPT-ACCEPT",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8",
+        "last_run_at": "2026-09-21T19:01:19Z",
         "required": 1,
-        "revision": 155,
-        "status": "pending",
+        "revision": 226,
+        "status": "passed",
         "task_id": "GH-NF1A-ACCEPT",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
-        "config_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
+        "config_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
         "id": "GH-NF1A-ACCESS-ACCEPT",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "d9977a5166ef335d2335843261ed6c50acc4ed1c599c52461273adf080563e7d",
+        "last_run_at": "2026-09-21T18:38:26Z",
         "required": 1,
-        "revision": 155,
-        "status": "pending",
+        "revision": 212,
+        "status": "passed",
         "task_id": "GH-NF1A-ACCESS",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
@@ -3481,68 +4357,68 @@
       },
       {
         "checkpoint_id": null,
-        "config_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
+        "config_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
         "id": "GH-NF1A-ANALYZE-ACCEPT",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "3d51eb053676b3b95c544d85cf7593f13d1aa9afa6805b6cd55101ff5e4b5ee1",
+        "last_run_at": "2026-09-21T18:34:34Z",
         "required": 1,
-        "revision": 155,
-        "status": "pending",
+        "revision": 203,
+        "status": "passed",
         "task_id": "GH-NF1A-ANALYZE",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
-        "config_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-CONTROL\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
+        "config_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-CONTROL\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
         "id": "GH-NF1A-CONTROL-ACCEPT",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "93c74a1a95e4ea704daabf6bd1f355244eed7cefe30a7c0d009f64a8aed25390",
+        "last_run_at": "2026-09-21T19:05:31Z",
         "required": 1,
-        "revision": 155,
-        "status": "pending",
+        "revision": 233,
+        "status": "passed",
         "task_id": "GH-NF1A-CONTROL",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
-        "config_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
+        "config_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
         "id": "GH-NF1A-OBSERVE-ACCEPT",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5",
+        "last_run_at": "2026-09-21T16:42:55Z",
         "required": 1,
-        "revision": 155,
-        "status": "pending",
+        "revision": 182,
+        "status": "passed",
         "task_id": "GH-NF1A-OBSERVE",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
-        "config_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-RELEASE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
+        "config_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-RELEASE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
         "id": "GH-NF1A-RELEASE-ACCEPT",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "4b1eba661dd7fe50474cd9d8bea59b5af28b1635ea7d407ca089f5bde697c6b4",
+        "last_run_at": "2026-09-21T19:04:56Z",
         "required": 1,
-        "revision": 155,
-        "status": "pending",
+        "revision": 230,
+        "status": "passed",
         "task_id": "GH-NF1A-RELEASE",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
-        "config_json": "{\"argv\": [\"/home/tumlinson/.local/state/project-control/venvs/investigator-f894427-688dcc2/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-SYSTEM\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
+        "config_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-SYSTEM\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"planning/nf1-adaptive-v1/machine/outcomes.json\"]}",
         "id": "GH-NF1A-SYSTEM-ACCEPT",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "2be3a1c30063ccc2606ec79579e3af7eab5b52c92689aac5de2cfa458ca4829b",
+        "last_run_at": "2026-09-21T16:34:53Z",
         "required": 1,
-        "revision": 155,
-        "status": "pending",
+        "revision": 173,
+        "status": "passed",
         "task_id": "GH-NF1A-SYSTEM",
         "type": "command",
-        "valid": 0
+        "valid": 1
       }
     ],
     "handoffs": [
@@ -3555,6 +4431,26 @@
         "payload_json": "{\"authority_commit\": \"c46d3b9da7596b8d85383831b2e3443543ac36a0\", \"changed_owned_paths\": [], \"checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1-S01-ACCEPT\", \"input_fingerprint\": null, \"last_run_at\": null, \"revision\": 120, \"status\": \"pending\", \"valid\": 0}], \"git_diffstat\": \"\", \"git_head\": \"9d6ac741a175bb284b8f0b28a9b4788f175ceb36\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Partial compiled-block assembly committed9d6ac74; real gh_nf1_s01 width33 joint nonlinear callback executes through existing CE program and passes shape/identity/output/unsupported-derivative checks. Missing full inspectable arithmetic assembly route from CE N04; no GH evaluator engine or full S01 acceptance. Preserve clean workspace and resume after authoritative CE arithmetic source/interface availability.\", \"producer_commit\": \"9d6ac741a175bb284b8f0b28a9b4788f175ceb36\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-s-v1\", \"resources\": [], \"task_id\": \"GH-NF1-S01\"}",
         "revision": 134,
         "task_id": "GH-NF1-S01"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-21T18:34:34Z",
+        "id": "082e2789-86e6-4d63-b50b-6c2827fbd825",
+        "kind": "complete",
+        "note": "Final CE-backed response composition and retained-owner admission, supplied diagnostics/alternatives/reduction; focused unary fixture corrected and leased check passed. Final required gate bound to 149bc6c.",
+        "payload_json": "{\"authority_commit\": \"398e3adcf2e2bccac30707fa7a538788ac6dc4a8\", \"changed_owned_paths\": [], \"checkpoints\": [{\"id\": \"GH-NF1A-ANALYZE-DONE\", \"reached_at\": \"2026-09-21T18:34:34Z\", \"state\": \"reached\"}], \"completion_commit\": \"149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88\", \"completion_gates\": [{\"evidence_id\": \"20029ce4-8d7a-4f1f-8b4c-ceade93267f7\", \"evidence_revision\": 203, \"id\": \"GH-NF1A-ANALYZE-ACCEPT\", \"input_fingerprint\": \"3d51eb053676b3b95c544d85cf7593f13d1aa9afa6805b6cd55101ff5e4b5ee1\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88\"}], \"completion_revision\": 205, \"finalized_checkpoints\": [\"GH-NF1A-ANALYZE-DONE\"], \"gates\": [{\"id\": \"GH-NF1A-ANALYZE-ACCEPT\", \"input_fingerprint\": \"3d51eb053676b3b95c544d85cf7593f13d1aa9afa6805b6cd55101ff5e4b5ee1\", \"last_run_at\": \"2026-09-21T18:34:34Z\", \"revision\": 203, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Final CE-backed response composition and retained-owner admission, supplied diagnostics/alternatives/reduction; focused unary fixture corrected and leased check passed. Final required gate bound to 149bc6c.\", \"producer_commit\": \"149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-analyze\", \"resources\": [], \"task_id\": \"GH-NF1A-ANALYZE\"}",
+        "revision": 205,
+        "task_id": "GH-NF1A-ANALYZE"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-21T19:07:16Z",
+        "id": "147b5dc5-0759-43f0-83cc-c72bb620660e",
+        "kind": "complete",
+        "note": "All local NF1A outcomes, integration/qualification, RELEASE and CONTROL are complete. Exact accepted pairCE2c3b094/GHda97825 published on both origin/main; actual CPU/CUDA, installed consumer, replay/Python and performance evidence retained. Aggregate closed last. No biology selected.",
+        "payload_json": "{\"authority_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"completion_gates\": [], \"completion_revision\": 237, \"finalized_checkpoints\": [], \"gates\": [], \"git_diffstat\": \".gitignore                             |    3 +\\n .todo-orchestrator/state.snapshot.json | 1740 ++++++++++++++++++++++++++++----\\n todo-status.md                         |   19 +-\\n todos.md                               |   19 +-\\n todos/gh-nf1a-0000.md                  |    6 +-\\n todos/gh-nf1a-accept.md                |    8 +-\\n todos/gh-nf1a-access.md                |    8 +-\\n todos/gh-nf1a-analyze.md               |   12 +-\\n todos/gh-nf1a-control.md               |    8 +-\\n todos/gh-nf1a-observe.md               |    8 +-\\n todos/gh-nf1a-release.md               |    8 +-\\n todos/gh-nf1a-system.md                |    8 +-\\n 12 files changed, 1584 insertions(+), 263 deletions(-)\", \"git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"All local NF1A outcomes, integration/qualification, RELEASE and CONTROL are complete. Exact accepted pairCE2c3b094/GHda97825 published on both origin/main; actual CPU/CUDA, installed consumer, replay/Python and performance evidence retained. Aggregate closed last. No biology selected.\", \"producer_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-NF1A-0000\"}",
+        "revision": 237,
+        "task_id": "GH-NF1A-0000"
       },
       {
         "claim_id": null,
@@ -3598,6 +4494,36 @@
       },
       {
         "claim_id": null,
+        "created_at": "2026-09-21T19:05:31Z",
+        "id": "370a3743-37d3-4764-9597-137fa7e5eed1",
+        "kind": "complete",
+        "note": "Paired NF1A implementation, integration, exact-source qualification and both releases complete; both origin/main match acceptedpairCE2c3b094/GHda97825. Preserve unrelated preprint work. No biology selected. Close root coordinator before final aggregates; publish closure evidence note without changing accepted code identities.",
+        "payload_json": "{\"authority_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"completion_gates\": [{\"evidence_id\": \"922d276c-5bf7-4f4b-8848-cee48b03faa0\", \"evidence_revision\": 233, \"id\": \"GH-NF1A-CONTROL-ACCEPT\", \"input_fingerprint\": \"93c74a1a95e4ea704daabf6bd1f355244eed7cefe30a7c0d009f64a8aed25390\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\"}], \"completion_revision\": 234, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1A-CONTROL-ACCEPT\", \"input_fingerprint\": \"93c74a1a95e4ea704daabf6bd1f355244eed7cefe30a7c0d009f64a8aed25390\", \"last_run_at\": \"2026-09-21T19:05:31Z\", \"revision\": 233, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".gitignore                             |    3 +\\n .todo-orchestrator/state.snapshot.json | 1601 ++++++++++++++++++++++++++++----\\n todo-status.md                         |   15 +-\\n todos.md                               |   15 +-\\n todos/gh-nf1a-release.md               |    8 +-\\n 5 files changed, 1434 insertions(+), 208 deletions(-)\", \"git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Paired NF1A implementation, integration, exact-source qualification and both releases complete; both origin/main match acceptedpairCE2c3b094/GHda97825. Preserve unrelated preprint work. No biology selected. Close root coordinator before final aggregates; publish closure evidence note without changing accepted code identities.\", \"producer_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-NF1A-CONTROL\"}",
+        "revision": 234,
+        "task_id": "GH-NF1A-CONTROL"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-21T16:34:53Z",
+        "id": "37a2629e-3842-4155-9ea1-405c578fbfde",
+        "kind": "complete",
+        "note": "Root acceptance after independent RK4 review/fixes: GH d402a2716a42f94bb7361e89d34513af77c0c26d, CE dc3cb25011d21a895dbb57b10f15d393a9296e96. Actual four-stage CE resident RK4, stage forcing, alias/stream guards, retained snapshots and input-derived generations; external installed width33 consumer rebuilt and all eight tests bound. Run native required gate.",
+        "payload_json": "{\"authority_commit\": \"398e3adcf2e2bccac30707fa7a538788ac6dc4a8\", \"changed_owned_paths\": [], \"checkpoints\": [{\"id\": \"GH-NF1A-SYSTEM-DONE\", \"reached_at\": \"2026-09-21T16:34:53Z\", \"state\": \"reached\"}], \"completion_commit\": \"d402a2716a42f94bb7361e89d34513af77c0c26d\", \"completion_gates\": [{\"evidence_id\": \"5f3c7280-86cc-4fbe-97c5-b5e65358d64d\", \"evidence_revision\": 173, \"id\": \"GH-NF1A-SYSTEM-ACCEPT\", \"input_fingerprint\": \"2be3a1c30063ccc2606ec79579e3af7eab5b52c92689aac5de2cfa458ca4829b\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"d402a2716a42f94bb7361e89d34513af77c0c26d\"}], \"completion_revision\": 176, \"finalized_checkpoints\": [\"GH-NF1A-SYSTEM-DONE\"], \"gates\": [{\"id\": \"GH-NF1A-SYSTEM-ACCEPT\", \"input_fingerprint\": \"2be3a1c30063ccc2606ec79579e3af7eab5b52c92689aac5de2cfa458ca4829b\", \"last_run_at\": \"2026-09-21T16:34:53Z\", \"revision\": 173, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"d402a2716a42f94bb7361e89d34513af77c0c26d\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Root acceptance after independent RK4 review/fixes: GH d402a2716a42f94bb7361e89d34513af77c0c26d, CE dc3cb25011d21a895dbb57b10f15d393a9296e96. Actual four-stage CE resident RK4, stage forcing, alias/stream guards, retained snapshots and input-derived generations; external installed width33 consumer rebuilt and all eight tests bound. Run native required gate.\", \"producer_commit\": \"d402a2716a42f94bb7361e89d34513af77c0c26d\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-system\", \"resources\": [], \"task_id\": \"GH-NF1A-SYSTEM\"}",
+        "revision": 176,
+        "task_id": "GH-NF1A-SYSTEM"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-21T19:04:56Z",
+        "id": "45a76e0a-18f1-4262-ab59-873a44369f8a",
+        "kind": "complete",
+        "note": "Exact GHda97825/CE2c3b094 pair accepted and pushed to both origin/main; GH ACCEPT and CE RELEASE passed receipts bound with final source disposition and explicit capability/performance limits. Source-bound evidence note publication follows closure.",
+        "payload_json": "{\"authority_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"completion_gates\": [{\"evidence_id\": \"ba4332cf-2b0d-4075-a473-f2dda594aacf\", \"evidence_revision\": 230, \"id\": \"GH-NF1A-RELEASE-ACCEPT\", \"input_fingerprint\": \"4b1eba661dd7fe50474cd9d8bea59b5af28b1635ea7d407ca089f5bde697c6b4\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\"}], \"completion_revision\": 231, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1A-RELEASE-ACCEPT\", \"input_fingerprint\": \"4b1eba661dd7fe50474cd9d8bea59b5af28b1635ea7d407ca089f5bde697c6b4\", \"last_run_at\": \"2026-09-21T19:04:56Z\", \"revision\": 230, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".gitignore                             |    3 +\\n .todo-orchestrator/state.snapshot.json | 1571 +++++++++++++++++++++++++++-----\\n todo-status.md                         |   15 +-\\n todos.md                               |   15 +-\\n todos/gh-nf1a-release.md               |    6 +-\\n 5 files changed, 1385 insertions(+), 225 deletions(-)\", \"git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Exact GHda97825/CE2c3b094 pair accepted and pushed to both origin/main; GH ACCEPT and CE RELEASE passed receipts bound with final source disposition and explicit capability/performance limits. Source-bound evidence note publication follows closure.\", \"producer_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-NF1A-RELEASE\"}",
+        "revision": 231,
+        "task_id": "GH-NF1A-RELEASE"
+      },
+      {
+        "claim_id": null,
         "created_at": "2026-09-09T11:01:02Z",
         "id": "475f24e0-7166-4281-bf8c-3bbf8ea01379",
         "kind": "complete",
@@ -3625,6 +4551,26 @@
         "payload_json": "{\"authority_commit\": \"534ee13bcb68da43727985805ac2cd937714ca4c\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"93988ed2fc7e179fa47fe71736935718e0d90538\", \"completion_gates\": [{\"evidence_id\": \"1995d116-c72f-4319-b6fc-99343038a004\", \"evidence_revision\": 106, \"id\": \"GH-NF1-T01-ACCEPT\", \"input_fingerprint\": \"c2e3cfa34cc246878dba849e15405827dbad3187ee312b894bcf2f94616fb787\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"93988ed2fc7e179fa47fe71736935718e0d90538\"}], \"completion_revision\": 107, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1-T01-ACCEPT\", \"input_fingerprint\": \"c2e3cfa34cc246878dba849e15405827dbad3187ee312b894bcf2f94616fb787\", \"last_run_at\": \"2026-09-09T11:23:31Z\", \"revision\": 106, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"93988ed2fc7e179fa47fe71736935718e0d90538\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"GH T01 independent FP64 host referee suite committed 93988ed2fc7e179fa47fe71736935718e0d90538. Real gh_nf1_t01 C++ executable; linear exact-solution/refinement, nonlinear triad, independent identity maps across all 24 permutations and widths 0/1/16/33, hidden future distinctions, supplied reduction closure, eight deliberate wrong variants. No production/CUDA capability claim. Clean committed worktree rebuilt with verified CMAKE_HOME_DIRECTORY; build/source/cache/bindings evidence /home/tumlinson/.local/state/nf1-20260908-v1/gh/t01/evidence/build-93988ed2fc7e179fa47fe71736935718e0d90538.json. Native gate env configured authoritative external bindings. Stop after T01.\", \"producer_commit\": \"93988ed2fc7e179fa47fe71736935718e0d90538\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-t-v1\", \"resources\": [], \"task_id\": \"GH-NF1-T01\"}",
         "revision": 107,
         "task_id": "GH-NF1-T01"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-21T18:38:26Z",
+        "id": "5e99494d-b7b4-434c-925f-91e9c3e01145",
+        "kind": "complete",
+        "note": "Final ACCESS reviewed at 46ba207; actual compiled CE2c3b094 source identity, installed native replay/Python and strict parsing/lifetime checks. Resumed after releasing prematurely claimed integrator so final artifact can enqueue.",
+        "payload_json": "{\"authority_commit\": \"398e3adcf2e2bccac30707fa7a538788ac6dc4a8\", \"changed_owned_paths\": [], \"checkpoints\": [{\"id\": \"GH-NF1A-ACCESS-DONE\", \"reached_at\": \"2026-09-21T18:38:26Z\", \"state\": \"reached\"}], \"completion_commit\": \"46ba20712404a856a2bd5ceab649d83ff8d99957\", \"completion_gates\": [{\"evidence_id\": \"60bd5996-7161-443f-97f5-f8bf0fba0ac2\", \"evidence_revision\": 212, \"id\": \"GH-NF1A-ACCESS-ACCEPT\", \"input_fingerprint\": \"d9977a5166ef335d2335843261ed6c50acc4ed1c599c52461273adf080563e7d\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"46ba20712404a856a2bd5ceab649d83ff8d99957\"}], \"completion_revision\": 214, \"finalized_checkpoints\": [\"GH-NF1A-ACCESS-DONE\"], \"gates\": [{\"id\": \"GH-NF1A-ACCESS-ACCEPT\", \"input_fingerprint\": \"d9977a5166ef335d2335843261ed6c50acc4ed1c599c52461273adf080563e7d\", \"last_run_at\": \"2026-09-21T18:38:26Z\", \"revision\": 212, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"46ba20712404a856a2bd5ceab649d83ff8d99957\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Final ACCESS reviewed at 46ba207; actual compiled CE2c3b094 source identity, installed native replay/Python and strict parsing/lifetime checks. Resumed after releasing prematurely claimed integrator so final artifact can enqueue.\", \"producer_commit\": \"46ba20712404a856a2bd5ceab649d83ff8d99957\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-access\", \"resources\": [], \"task_id\": \"GH-NF1A-ACCESS\"}",
+        "revision": 214,
+        "task_id": "GH-NF1A-ACCESS"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-21T16:42:55Z",
+        "id": "635e706f-4957-49ac-9fa1-1876541da900",
+        "kind": "complete",
+        "note": "Root source-bound OBSERVE acceptance at e3fd58dc4e4a932d4e489950a4dc3b18f98a5759 (c45cee6 implementation plus immutable registered-claim projections), CE dc3cb250. Actual CE candidate propagation and observation/inference controls; run required native gate.",
+        "payload_json": "{\"authority_commit\": \"398e3adcf2e2bccac30707fa7a538788ac6dc4a8\", \"changed_owned_paths\": [], \"checkpoints\": [{\"id\": \"GH-NF1A-OBSERVE-DONE\", \"reached_at\": \"2026-09-21T16:42:55Z\", \"state\": \"reached\"}], \"completion_commit\": \"e3fd58dc4e4a932d4e489950a4dc3b18f98a5759\", \"completion_gates\": [{\"evidence_id\": \"9625fad0-7d8c-4aa1-af11-e4eaf6fa7593\", \"evidence_revision\": 182, \"id\": \"GH-NF1A-OBSERVE-ACCEPT\", \"input_fingerprint\": \"644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"e3fd58dc4e4a932d4e489950a4dc3b18f98a5759\"}], \"completion_revision\": 185, \"finalized_checkpoints\": [\"GH-NF1A-OBSERVE-DONE\"], \"gates\": [{\"id\": \"GH-NF1A-OBSERVE-ACCEPT\", \"input_fingerprint\": \"644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5\", \"last_run_at\": \"2026-09-21T16:42:55Z\", \"revision\": 182, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"e3fd58dc4e4a932d4e489950a4dc3b18f98a5759\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Root source-bound OBSERVE acceptance at e3fd58dc4e4a932d4e489950a4dc3b18f98a5759 (c45cee6 implementation plus immutable registered-claim projections), CE dc3cb250. Actual CE candidate propagation and observation/inference controls; run required native gate.\", \"producer_commit\": \"e3fd58dc4e4a932d4e489950a4dc3b18f98a5759\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-observe\", \"resources\": [], \"task_id\": \"GH-NF1A-OBSERVE\"}",
+        "revision": 185,
+        "task_id": "GH-NF1A-OBSERVE"
       },
       {
         "claim_id": null,
@@ -3695,6 +4641,16 @@
         "payload_json": "{\"authority_commit\": \"9f27c15b9d0d4817c2f840774f3b3b8e3d227607\", \"changed_owned_paths\": [], \"checkpoints\": [{\"id\": \"GH-NF1-CP-M00\", \"reached_at\": \"2026-09-09T11:05:23Z\", \"state\": \"reached\"}], \"completion_commit\": \"ec06f0028d31cbd32e3270f7760e83914ef94517\", \"completion_gates\": [{\"evidence_id\": \"68f407fc-a5c9-4e11-8b17-39c5f13a1fb4\", \"evidence_revision\": 59, \"id\": \"GH-NF1-M00-ACCEPT\", \"input_fingerprint\": \"08da2a1ed427badb7976284492752c0746f54c4898825872b19ec8dc849679f6\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"ec06f0028d31cbd32e3270f7760e83914ef94517\"}], \"completion_revision\": 60, \"finalized_checkpoints\": [\"GH-NF1-CP-M00\"], \"gates\": [{\"id\": \"GH-NF1-M00-ACCEPT\", \"input_fingerprint\": \"08da2a1ed427badb7976284492752c0746f54c4898825872b19ec8dc849679f6\", \"last_run_at\": \"2026-09-09T11:05:23Z\", \"revision\": 59, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"ec06f0028d31cbd32e3270f7760e83914ef94517\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Native A queue integrated at b750a5c; all four A governance records rechecked against integrated files. Seeded explicit fail-closed NF1_HOST_VALIDATION registration for real T01 owner in scoped root CMake, verified missing-owner rejection before CUDA setup. Current M00 governance record includes source hashes. No positive runtime/GPU result claimed; T01 supplies actual host executable next.\", \"producer_commit\": \"ec06f0028d31cbd32e3270f7760e83914ef94517\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-m-v1\", \"resources\": [], \"task_id\": \"GH-NF1-M00\"}",
         "revision": 60,
         "task_id": "GH-NF1-M00"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-21T19:01:19Z",
+        "id": "e21f8008-1296-42ee-b431-b77d594a6efd",
+        "kind": "complete",
+        "note": "All four producer outcomes integrated in finalized wave2275edb9 (18/18 gate passed). Final main-history merge da97825 preserves existing source history; rebuilt/reinstalled compiled runtime identities against qualified CE2c3b094, installed native/Python replay checks passed. Actual bounded full-workload timing and independent review accepted. Required exact-source final gate bound; saved-only response and optional route limits explicit.",
+        "payload_json": "{\"authority_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"changed_owned_paths\": [], \"checkpoints\": [{\"id\": \"GH-NF1A-ACCEPT-DONE\", \"reached_at\": \"2026-09-21T19:01:19Z\", \"state\": \"reached\"}], \"completion_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"completion_gates\": [{\"evidence_id\": \"79966c83-80bc-436b-b957-56cb00c40d45\", \"evidence_revision\": 226, \"id\": \"GH-NF1A-ACCEPT-ACCEPT\", \"input_fingerprint\": \"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\"}], \"completion_revision\": 227, \"finalized_checkpoints\": [\"GH-NF1A-ACCEPT-DONE\"], \"gates\": [{\"id\": \"GH-NF1A-ACCEPT-ACCEPT\", \"input_fingerprint\": \"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\", \"last_run_at\": \"2026-09-21T19:01:19Z\", \"revision\": 226, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json | 1389 ++++++++++++++++++++++++++++----\\n todo-status.md                         |   13 +-\\n todos.md                               |   13 +-\\n todos/gh-nf1a-0000.md                  |    2 +-\\n todos/gh-nf1a-accept.md                |    6 +-\\n todos/gh-nf1a-access.md                |    8 +-\\n todos/gh-nf1a-analyze.md               |   12 +-\\n todos/gh-nf1a-control.md               |    2 +-\\n todos/gh-nf1a-observe.md               |    8 +-\\n todos/gh-nf1a-release.md               |    2 +-\\n todos/gh-nf1a-system.md                |    8 +-\\n 11 files changed, 1274 insertions(+), 189 deletions(-)\", \"git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"All four producer outcomes integrated in finalized wave2275edb9 (18/18 gate passed). Final main-history merge da97825 preserves existing source history; rebuilt/reinstalled compiled runtime identities against qualified CE2c3b094, installed native/Python replay checks passed. Actual bounded full-workload timing and independent review accepted. Required exact-source final gate bound; saved-only response and optional route limits explicit.\", \"producer_commit\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-accept\", \"resources\": [], \"task_id\": \"GH-NF1A-ACCEPT\"}",
+        "revision": 227,
+        "task_id": "GH-NF1A-ACCEPT"
       },
       {
         "claim_id": null,
@@ -5409,6 +6365,11 @@
       },
       {
         "mode": "exclusive",
+        "path": "docs/nf1_adaptive/control",
+        "task_id": "GH-NF1A-0000"
+      },
+      {
+        "mode": "exclusive",
         "path": "CMakeLists.txt",
         "task_id": "GH-NF1A-ACCEPT"
       },
@@ -5514,7 +6475,22 @@
       },
       {
         "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-NF1A-ANALYZE"
+      },
+      {
+        "mode": "exclusive",
         "path": "docs/nf1_adaptive/analysis",
+        "task_id": "GH-NF1A-ANALYZE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix/dynamics/evolution.hh",
+        "task_id": "GH-NF1A-ANALYZE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix/dynamics/response_plan.hh",
         "task_id": "GH-NF1A-ANALYZE"
       },
       {
@@ -5525,6 +6501,11 @@
       {
         "mode": "exclusive",
         "path": "include/GlassHelix/reduction",
+        "task_id": "GH-NF1A-ANALYZE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src/dynamics/response_plan.cc",
         "task_id": "GH-NF1A-ANALYZE"
       },
       {
@@ -5661,6 +6642,11 @@
         "mode": "exclusive",
         "path": "tests/native_foundation/system",
         "task_id": "GH-NF1A-SYSTEM"
+      },
+      {
+        "mode": "exclusive",
+        "path": "preprint",
+        "task_id": "GH-PREPRINT"
       }
     ],
     "resource_classes": [],
@@ -5916,6 +6902,32 @@
         "validation_git_head": "e84091bcbedbff04c6f7207d16c205d35729cfd4"
       },
       {
+        "completion_git_head": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_revision": 227,
+        "evidence_id": "79966c83-80bc-436b-b957-56cb00c40d45",
+        "evidence_revision": 226,
+        "gate_id": "GH-NF1A-ACCEPT-ACCEPT",
+        "input_fingerprint": "22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8",
+        "provenance_json": "{\"claim_id\": \"80941e13-f694-4c29-9fb5-dfb84d3c042e\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"48907805dc5bf7c3a38c3f69bfd7713cec63d7e0186cb77e93ac2c9604e68a78\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-0000.md\", \"todos/gh-nf1a-accept.md\", \"todos/gh-nf1a-access.md\", \"todos/gh-nf1a-analyze.md\", \"todos/gh-nf1a-control.md\", \"todos/gh-nf1a-observe.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-nf1a-system.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"69ae7528dff71374279b6f37b5503c43157cf578bf45167f1799bd04dc845b9c\", \"started_revision\": 225, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-accept\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/79966c83-80bc-436b-b957-56cb00c40d45\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-NF1A-ACCEPT",
+        "valid": 1,
+        "validation_git_head": "da97825a18206f1ec727ea59439ca694995d7b94"
+      },
+      {
+        "completion_git_head": "46ba20712404a856a2bd5ceab649d83ff8d99957",
+        "completion_revision": 214,
+        "evidence_id": "60bd5996-7161-443f-97f5-f8bf0fba0ac2",
+        "evidence_revision": 212,
+        "gate_id": "GH-NF1A-ACCESS-ACCEPT",
+        "input_fingerprint": "d9977a5166ef335d2335843261ed6c50acc4ed1c599c52461273adf080563e7d",
+        "provenance_json": "{\"claim_id\": \"7bb7b21c-5645-41ac-87e0-6b097fe81a28\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"d9977a5166ef335d2335843261ed6c50acc4ed1c599c52461273adf080563e7d\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCESS\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"46ba20712404a856a2bd5ceab649d83ff8d99957\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"8b6352c91d1991dba86450a2931542a08ea71e7a2722115d8881e6bc6f2381be\", \"started_revision\": 211, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-access\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/60bd5996-7161-443f-97f5-f8bf0fba0ac2\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-NF1A-ACCESS",
+        "valid": 1,
+        "validation_git_head": "46ba20712404a856a2bd5ceab649d83ff8d99957"
+      },
+      {
         "completion_git_head": "b5115383a0ceacd28669ee00a98b9a7ec1ea04d7",
         "completion_revision": 154,
         "evidence_id": "f5e44cda-710d-49d3-8bef-7d9995bfaa0b",
@@ -5927,6 +6939,71 @@
         "task_id": "GH-NF1A-ADOPT",
         "valid": 1,
         "validation_git_head": "b5115383a0ceacd28669ee00a98b9a7ec1ea04d7"
+      },
+      {
+        "completion_git_head": "149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88",
+        "completion_revision": 205,
+        "evidence_id": "20029ce4-8d7a-4f1f-8b4c-ceade93267f7",
+        "evidence_revision": 203,
+        "gate_id": "GH-NF1A-ANALYZE-ACCEPT",
+        "input_fingerprint": "3d51eb053676b3b95c544d85cf7593f13d1aa9afa6805b6cd55101ff5e4b5ee1",
+        "provenance_json": "{\"claim_id\": \"b24ebb5a-5a4a-4897-adbc-5c0445b84d06\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"3d51eb053676b3b95c544d85cf7593f13d1aa9afa6805b6cd55101ff5e4b5ee1\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ANALYZE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"3be5501800695d732b18d8e8aecd5bd3e3d518101c286335ae137cf2515c4c8f\", \"started_revision\": 202, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-analyze\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/20029ce4-8d7a-4f1f-8b4c-ceade93267f7\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-NF1A-ANALYZE",
+        "valid": 1,
+        "validation_git_head": "149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88"
+      },
+      {
+        "completion_git_head": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_revision": 234,
+        "evidence_id": "922d276c-5bf7-4f4b-8848-cee48b03faa0",
+        "evidence_revision": 233,
+        "gate_id": "GH-NF1A-CONTROL-ACCEPT",
+        "input_fingerprint": "93c74a1a95e4ea704daabf6bd1f355244eed7cefe30a7c0d009f64a8aed25390",
+        "provenance_json": "{\"claim_id\": \"9ff2d2a8-bc75-4cb7-a338-37785fafb1a2\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-CONTROL\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"93c74a1a95e4ea704daabf6bd1f355244eed7cefe30a7c0d009f64a8aed25390\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-CONTROL\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"a2fac2aa9b962a4e8fcf69f673d6628ec7501509d6000880b49836b84330b746\", \"dirty_paths\": [\".gitignore\", \".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 232}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/922d276c-5bf7-4f4b-8848-cee48b03faa0\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-NF1A-CONTROL",
+        "valid": 1,
+        "validation_git_head": "da97825a18206f1ec727ea59439ca694995d7b94"
+      },
+      {
+        "completion_git_head": "e3fd58dc4e4a932d4e489950a4dc3b18f98a5759",
+        "completion_revision": 185,
+        "evidence_id": "9625fad0-7d8c-4aa1-af11-e4eaf6fa7593",
+        "evidence_revision": 182,
+        "gate_id": "GH-NF1A-OBSERVE-ACCEPT",
+        "input_fingerprint": "644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5",
+        "provenance_json": "{\"claim_id\": \"bddd6a0f-f1ef-456f-9ab2-2daa253591c9\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"e3fd58dc4e4a932d4e489950a4dc3b18f98a5759\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"9dc0c750444b7800291d02f7a9f522e8ef6f026fedaf4b833d06e9fde239e9ad\", \"started_revision\": 181, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-observe\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/9625fad0-7d8c-4aa1-af11-e4eaf6fa7593\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-NF1A-OBSERVE",
+        "valid": 1,
+        "validation_git_head": "e3fd58dc4e4a932d4e489950a4dc3b18f98a5759"
+      },
+      {
+        "completion_git_head": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_revision": 231,
+        "evidence_id": "ba4332cf-2b0d-4075-a473-f2dda594aacf",
+        "evidence_revision": 230,
+        "gate_id": "GH-NF1A-RELEASE-ACCEPT",
+        "input_fingerprint": "4b1eba661dd7fe50474cd9d8bea59b5af28b1635ea7d407ca089f5bde697c6b4",
+        "provenance_json": "{\"claim_id\": \"dfc4a953-1ee6-4ee3-bc0e-25e3a13b5292\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-RELEASE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"4b1eba661dd7fe50474cd9d8bea59b5af28b1635ea7d407ca089f5bde697c6b4\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-RELEASE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"a2fac2aa9b962a4e8fcf69f673d6628ec7501509d6000880b49836b84330b746\", \"dirty_paths\": [\".gitignore\", \".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 229}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/ba4332cf-2b0d-4075-a473-f2dda594aacf\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-NF1A-RELEASE",
+        "valid": 1,
+        "validation_git_head": "da97825a18206f1ec727ea59439ca694995d7b94"
+      },
+      {
+        "completion_git_head": "d402a2716a42f94bb7361e89d34513af77c0c26d",
+        "completion_revision": 176,
+        "evidence_id": "5f3c7280-86cc-4fbe-97c5-b5e65358d64d",
+        "evidence_revision": 173,
+        "gate_id": "GH-NF1A-SYSTEM-ACCEPT",
+        "input_fingerprint": "2be3a1c30063ccc2606ec79579e3af7eab5b52c92689aac5de2cfa458ca4829b",
+        "provenance_json": "{\"claim_id\": \"965a7b48-a61a-458a-9eba-6d223d91982f\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-SYSTEM\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"2be3a1c30063ccc2606ec79579e3af7eab5b52c92689aac5de2cfa458ca4829b\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-SYSTEM\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"d402a2716a42f94bb7361e89d34513af77c0c26d\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"36a9f648319ae0b3944256afe7676a60f891c93296206987f13c0d4f0350eef2\", \"started_revision\": 172, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-system\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/5f3c7280-86cc-4fbe-97c5-b5e65358d64d\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-NF1A-SYSTEM",
+        "valid": 1,
+        "validation_git_head": "d402a2716a42f94bb7361e89d34513af77c0c26d"
       }
     ],
     "task_dependencies": [
@@ -9884,9 +10961,9 @@
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_git_head": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_revision": 237,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-0000",
         "kind": "epic",
@@ -9898,20 +10975,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": null,
         "priority": 0,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"validated\"]}",
-        "revision": 155,
-        "status": "planned",
+        "revision": 237,
+        "status": "done",
         "tags_json": "[]",
         "title": "GlassHelix adaptive NF1 completion",
-        "updated_at": "2026-09-16T17:50:39Z",
-        "version": 3
+        "updated_at": "2026-09-21T19:07:16Z",
+        "version": 6
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_git_head": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_revision": 227,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-ACCEPT",
         "kind": "integration_task",
@@ -9923,20 +11000,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-NF1A-0000",
         "priority": 90,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"validated\"]}",
-        "revision": 155,
-        "status": "planned",
+        "revision": 227,
+        "status": "done",
         "tags_json": "[]",
         "title": "Integrate continuously and qualify the real consumer",
-        "updated_at": "2026-09-16T17:50:39Z",
-        "version": 3
+        "updated_at": "2026-09-21T19:01:19Z",
+        "version": 8
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "46ba20712404a856a2bd5ceab649d83ff8d99957",
+        "completion_git_head": "46ba20712404a856a2bd5ceab649d83ff8d99957",
+        "completion_revision": 214,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-ACCESS",
         "kind": "task",
@@ -9948,14 +11025,14 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-NF1A-0000",
         "priority": 120,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
-        "revision": 155,
-        "status": "planned",
+        "revision": 214,
+        "status": "done",
         "tags_json": "[]",
         "title": "Deliver thin Python access, inspection and portable replay",
-        "updated_at": "2026-09-16T17:50:39Z",
-        "version": 3
+        "updated_at": "2026-09-21T18:38:26Z",
+        "version": 6
       },
       {
         "attention_reason": null,
@@ -9984,9 +11061,9 @@
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88",
+        "completion_git_head": "149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88",
+        "completion_revision": 205,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-ANALYZE",
         "kind": "task",
@@ -9998,20 +11075,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-NF1A-0000",
         "priority": 120,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
-        "revision": 155,
-        "status": "planned",
+        "revision": 205,
+        "status": "done",
         "tags_json": "[]",
         "title": "Deliver response, local ambiguity and supplied-reduction instruments",
-        "updated_at": "2026-09-16T17:50:39Z",
-        "version": 3
+        "updated_at": "2026-09-21T18:34:34Z",
+        "version": 6
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_git_head": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_revision": 234,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-CONTROL",
         "kind": "task",
@@ -10023,20 +11100,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-NF1A-0000",
         "priority": 190,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"validated\"]}",
-        "revision": 156,
-        "status": "in_progress",
+        "revision": 234,
+        "status": "done",
         "tags_json": "[]",
         "title": "Coordinate and close the accepted local program",
-        "updated_at": "2026-09-16T17:51:23Z",
-        "version": 4
+        "updated_at": "2026-09-21T19:05:31Z",
+        "version": 7
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "e3fd58dc4e4a932d4e489950a4dc3b18f98a5759",
+        "completion_git_head": "e3fd58dc4e4a932d4e489950a4dc3b18f98a5759",
+        "completion_revision": 185,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-OBSERVE",
         "kind": "task",
@@ -10048,20 +11125,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-NF1A-0000",
         "priority": 120,
-        "result": null,
+        "result": "implemented",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
-        "revision": 165,
-        "status": "in_progress",
+        "revision": 185,
+        "status": "done",
         "tags_json": "[]",
         "title": "Deliver observation and finite-candidate evidence updates",
-        "updated_at": "2026-09-16T17:58:58Z",
-        "version": 4
+        "updated_at": "2026-09-21T16:42:55Z",
+        "version": 7
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_git_head": "da97825a18206f1ec727ea59439ca694995d7b94",
+        "completion_revision": 231,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-RELEASE",
         "kind": "integration_task",
@@ -10073,20 +11150,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-NF1A-0000",
         "priority": 90,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"validated\"]}",
-        "revision": 155,
-        "status": "planned",
+        "revision": 231,
+        "status": "done",
         "tags_json": "[]",
         "title": "Verify the final source pair and close GlassHelix",
-        "updated_at": "2026-09-16T17:50:39Z",
-        "version": 3
+        "updated_at": "2026-09-21T19:04:56Z",
+        "version": 6
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "d402a2716a42f94bb7361e89d34513af77c0c26d",
+        "completion_git_head": "d402a2716a42f94bb7361e89d34513af77c0c26d",
+        "completion_revision": 176,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-SYSTEM",
         "kind": "task",
@@ -10098,14 +11175,39 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-NF1A-0000",
         "priority": 160,
-        "result": null,
+        "result": "implemented",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
-        "revision": 159,
-        "status": "in_progress",
+        "revision": 176,
+        "status": "done",
         "tags_json": "[]",
         "title": "Deliver usable native systems and deterministic evolution",
-        "updated_at": "2026-09-16T17:54:40Z",
-        "version": 4
+        "updated_at": "2026-09-21T16:34:53Z",
+        "version": 7
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-21T16:53:37Z",
+        "id": "GH-PREPRINT",
+        "kind": "workstream",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Treat preprint/ as the paper workspace and do not promote any content from preliminary to settled or validated without evidence.",
+        "notes": "preprint/README.md",
+        "objective": "Develop the GlassHelix paper in preprint/ while keeping every draft, claim, analysis, experiment, and conclusion explicitly preliminary until supported by evidence.",
+        "parallel_policy": "serial",
+        "parent_id": null,
+        "priority": 10,
+        "result": null,
+        "result_policy_json": "{}",
+        "revision": 192,
+        "status": "planned",
+        "tags_json": "[\"paper\", \"preprint\", \"preliminary\", \"evidence-required\"]",
+        "title": "Develop the GlassHelix paper",
+        "updated_at": "2026-09-21T16:53:37Z",
+        "version": 1
       },
       {
         "attention_reason": null,
@@ -10135,19 +11237,36 @@
     ],
     "workflow_context_fragments": [
       {
-        "content_hash": "89ac60671c7c468d88634627df352872aea39e4d08980888a833c2ae9eaf9632",
-        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-CONTROL\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"Implementation authorized by owner. ADOPT completed and legacy preserved/retired. Root holds CONTROL. SYSTEM claimed in registered isolated workspace f7c674ef-f8f5-4d3c-949c-5b460c47ccd6; preserved S01 applied as 3ceda6a. Preparing OBSERVE. SYSTEM must consume actual Cellerator production target and retain encoding-independent scientific identity.\"}}",
-        "created_at": "2026-09-16T17:57:00Z",
-        "creation_revision": 160,
-        "id": "1af7d130-0f0f-4382-bdd4-efe978977254",
-        "invalidated_at": null,
-        "invalidation_revision": null,
+        "content_hash": "4e775e1fa362013159e00d9faa5969ef301e8276feabf35068ef135635323ebf",
+        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-CONTROL\"},{\"kind\":\"task\",\"value\":\"GH-NF1A-OBSERVE\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"Owner-authorized committed dependency import for OBSERVE: SYSTEM32f7ea253aa9cc393e98a863e0c90748002fbe4e merged into OBSERVE0f38c8ea9439afffe00dd5b1aa4e7f16ec0b421d; original c503b78 base ancestry preserved. Required core/CMake dependency; no source duplication, native completion/integration still pending. Focused host checks pass. Build config currently awaits CE real target export. Five producer lanes active. Ordinary integrator run_gates serial path selected; no sealed batch declaration.\"}}",
+        "created_at": "2026-09-16T18:06:02Z",
+        "creation_revision": 166,
+        "id": "0cd89add-3ddb-4f42-8afe-48fd39d896e0",
+        "invalidated_at": "2026-09-21T15:36:06Z",
+        "invalidation_revision": 169,
         "kind": "context_note",
         "lane_id": "GH-NF1A-L-ROOT",
         "owner_scope_json": "{\"lane_id\":\"GH-NF1A-L-ROOT\",\"run_id\":\"GH-NF1A-RUN-V1\",\"task_id\":\"GH-NF1A-CONTROL\"}",
         "run_id": "GH-NF1A-RUN-V1",
         "series_key": "nf1a-controller-status",
-        "superseded_by": null,
+        "superseded_by": "d758c41c-96f2-47e5-ab69-cfe5b30e1359",
+        "task_id": "GH-NF1A-CONTROL",
+        "version": 2
+      },
+      {
+        "content_hash": "89ac60671c7c468d88634627df352872aea39e4d08980888a833c2ae9eaf9632",
+        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-CONTROL\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"Implementation authorized by owner. ADOPT completed and legacy preserved/retired. Root holds CONTROL. SYSTEM claimed in registered isolated workspace f7c674ef-f8f5-4d3c-949c-5b460c47ccd6; preserved S01 applied as 3ceda6a. Preparing OBSERVE. SYSTEM must consume actual Cellerator production target and retain encoding-independent scientific identity.\"}}",
+        "created_at": "2026-09-16T17:57:00Z",
+        "creation_revision": 160,
+        "id": "1af7d130-0f0f-4382-bdd4-efe978977254",
+        "invalidated_at": "2026-09-16T18:06:02Z",
+        "invalidation_revision": 166,
+        "kind": "context_note",
+        "lane_id": "GH-NF1A-L-ROOT",
+        "owner_scope_json": "{\"lane_id\":\"GH-NF1A-L-ROOT\",\"run_id\":\"GH-NF1A-RUN-V1\",\"task_id\":\"GH-NF1A-CONTROL\"}",
+        "run_id": "GH-NF1A-RUN-V1",
+        "series_key": "nf1a-controller-status",
+        "superseded_by": "0cd89add-3ddb-4f42-8afe-48fd39d896e0",
         "task_id": "GH-NF1A-CONTROL",
         "version": 1
       },
@@ -10184,6 +11303,23 @@
         "superseded_by": null,
         "task_id": "GH-NF1-B01",
         "version": 3
+      },
+      {
+        "content_hash": "071ff726f2abd1db5eb775c32cbbf94854bb16f4162da35690a4ff18cdf520d3",
+        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-CONTROL\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"2026-09-21 GH SYSTEMd402a27 and OBSERVEe3fd58d completed native gates; CE CORE/MECH/SUPPORT also completed. ANALYZE active in registered gh-nf1a-l-analyze; ACCESS registered/prepared but unclaimed. Root created temporary wf2-parallel-head /root/gh_finish_head (requested/actual configured Sol medium) under explicit user AGENTS optional-head guidance: substantial ANALYZE+ACCESS decomposition and repeated component coordination justify reducing root coordination. Existing migration_register remains scoped implementer; core_finish may move to ACCESS after CE RESPONSE complete; no additional implementationworkers or recursiveheads. Root keeps crossprojectcontract/integration/finalacceptance. RESPONSE fixes typed whole-program admission/live-owner/alias contracts before finalgate. Installed COREprefix remains frozen; separate RESPONSEinstall will be built from exact finalsource. Unrelated root docs/preprint/glasshelix.qmd preserved untouched; ANALYZE/ACCESS prepared using clean registered SYSTEM workspace. No GPU leases invalidated.\"}}",
+        "created_at": "2026-09-21T16:59:15Z",
+        "creation_revision": 193,
+        "id": "68296ffa-e4c1-42b7-99fb-b1a7eabf4b0e",
+        "invalidated_at": "2026-09-21T18:48:59Z",
+        "invalidation_revision": 218,
+        "kind": "context_note",
+        "lane_id": "GH-NF1A-L-ROOT",
+        "owner_scope_json": "{\"lane_id\":\"GH-NF1A-L-ROOT\",\"run_id\":\"GH-NF1A-RUN-V1\",\"task_id\":\"GH-NF1A-CONTROL\"}",
+        "run_id": "GH-NF1A-RUN-V1",
+        "series_key": "nf1a-controller-status",
+        "superseded_by": "c040bb7a-6957-431b-902c-21910ab73283",
+        "task_id": "GH-NF1A-CONTROL",
+        "version": 5
       },
       {
         "content_hash": "f249222f6128b98d4950252f8a251b86d1b97e6da4ca4e088ee15e249bcc0972",
@@ -12413,6 +13549,40 @@
         "version": 1
       },
       {
+        "content_hash": "a4ab602e494696993bf7e1a1db7a93e1657754bcaccde1aea96e8a38fced09d3",
+        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-CONTROL\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"2026-09-21 GH SYSTEMd402a2716a42f94bb7361e89d34513af77c0c26d completed required 8-test native leased gate at rev176 against CE dc3cb250. Independent review corrected forcing extent/aliases, actual retained CE snapshots, plan-bound same stream, input-derived logical generations; four distinct stage forcing, RK4 convergence and interleaved trajectory tests pass. CE CORE/MECHANISMS/SUPPORT completed. OBSERVE next; ANALYZE/ACCESS and integrated acceptance/releases remain incomplete. Root owns architecture and finalacceptance; two implementationworkers.\"}}",
+        "created_at": "2026-09-21T16:35:43Z",
+        "creation_revision": 178,
+        "id": "b5d2893c-9aa7-43af-a6a5-7bc20b0f2e4c",
+        "invalidated_at": "2026-09-21T16:59:15Z",
+        "invalidation_revision": 193,
+        "kind": "context_note",
+        "lane_id": "GH-NF1A-L-ROOT",
+        "owner_scope_json": "{\"lane_id\":\"GH-NF1A-L-ROOT\",\"run_id\":\"GH-NF1A-RUN-V1\",\"task_id\":\"GH-NF1A-CONTROL\"}",
+        "run_id": "GH-NF1A-RUN-V1",
+        "series_key": "nf1a-controller-status",
+        "superseded_by": "68296ffa-e4c1-42b7-99fb-b1a7eabf4b0e",
+        "task_id": "GH-NF1A-CONTROL",
+        "version": 4
+      },
+      {
+        "content_hash": "3781956c8464d20a77fb947f67fd6b6e85005f5eb26ae770d64cfe5f979eb992",
+        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-ACCEPT\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"Eight producers complete; CE QUALIFY completed at2c3b094. GH sealed wave2275edb9 integrated via history-preserving native merge under explicit migration authority, rev217 pending real gates. Final GH performance repair1c22d320 built; leased evaluation and focused independent review active. Root owns acceptance/publication/releases/control/aggregates. No biology or GPU lease invalidation.\"}}",
+        "created_at": "2026-09-21T18:48:59Z",
+        "creation_revision": 218,
+        "id": "c040bb7a-6957-431b-902c-21910ab73283",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "context_note",
+        "lane_id": "GH-NF1A-L-ROOT",
+        "owner_scope_json": "{\"lane_id\":\"GH-NF1A-L-ROOT\",\"run_id\":\"GH-NF1A-RUN-V1\",\"task_id\":\"GH-NF1A-CONTROL\"}",
+        "run_id": "GH-NF1A-RUN-V1",
+        "series_key": "nf1a-controller-status",
+        "superseded_by": null,
+        "task_id": "GH-NF1A-CONTROL",
+        "version": 6
+      },
+      {
         "content_hash": "0fb805acf856e1bdc699469629cf50d91ef6afb34cf9e3716730381f6ab7c083",
         "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-ADOPT\"}],\"authority\":\"non_authoritative\",\"content\":{\"authorization\":\"Full NF1A implementation authorization persists; root acts as owner by explicit user instruction. Observer investigator GPU eviction allowed if necessary.\",\"blocker\":\"Installed recovery.py retire_dispatch updates dispatch state without associated workflow_lane_tasks active state. Orphan active lane-task rows CE-NF1-H02,CE-NF1-N02,CE-NF1-S01 block retirement.py132-145. Repeating recovery returns already_recovered. Not live GPU contention or lack of owner permission. Requires narrow canonical Project Control/Todo recovery repair; never manually edit SQLite, skip quiescence, or resume old frontier.\",\"evidence\":\"GH canonical receipt external nf1a-bootstrap-20260916/gh-retirement-receipt-post-recovery.json; prepared CE exact44 request ce-retirement-request-post-recovery.json. Historical success hash checks CE37/37,GH15/15 unchanged; all18 worktrees archived. Adoption gates/implementation remain pending CE retirement.\",\"summary\":\"Owner boundary resolved: user explicitly authorized root as owner; all five canonical TTY recoveries succeeded, files_mutated=false, and reinspect already_recovered. CE revision7297/GH recovery146. GH76 exact old allowlist canonically retired at147. CE44 retirement rejected retirement_not_quiescent, no CE retirement applied.\"}}",
         "created_at": "2026-09-16T17:13:25Z",
@@ -12445,6 +13615,23 @@
         "superseded_by": "6775ecb2-df87-4743-9ae9-b9ca3e98ea97",
         "task_id": "GH-NF1-B01",
         "version": 2
+      },
+      {
+        "content_hash": "dc537fdcbaeee1b169cf88d7aaeca0963cac33013c855bb40d760ea99db70914",
+        "content_json": "{\"anchors\":[{\"kind\":\"task\",\"value\":\"GH-NF1A-CONTROL\"}],\"authority\":\"non_authoritative\",\"content\":{\"summary\":\"2026-09-21 user explicitly authorized direct migration reconciliation. Backup-first kernel transactions reconciled only stopped NF1A execution rows: CE7327/GH167, migration.nf1a_paused_execution_reconciled. ADOPT completion/evidence preserved; worktree source/base unchanged. Root now successfully claimed both CONTROL seats with ordinary next_task. Bounded CORE/SYSTEM implementation/actual GPU validation resumes, maximum two implementation workers. No framework repair or full-plan replay. Producer gates/qualification/releases remain incomplete.\"}}",
+        "created_at": "2026-09-21T15:36:06Z",
+        "creation_revision": 169,
+        "id": "d758c41c-96f2-47e5-ab69-cfe5b30e1359",
+        "invalidated_at": "2026-09-21T16:35:43Z",
+        "invalidation_revision": 178,
+        "kind": "context_note",
+        "lane_id": "GH-NF1A-L-ROOT",
+        "owner_scope_json": "{\"lane_id\":\"GH-NF1A-L-ROOT\",\"run_id\":\"GH-NF1A-RUN-V1\",\"task_id\":\"GH-NF1A-CONTROL\"}",
+        "run_id": "GH-NF1A-RUN-V1",
+        "series_key": "nf1a-controller-status",
+        "superseded_by": "b5d2893c-9aa7-43af-a6a5-7bc20b0f2e4c",
+        "task_id": "GH-NF1A-CONTROL",
+        "version": 3
       }
     ],
     "workflow_integration_queue": [
@@ -12463,6 +13650,32 @@
       },
       {
         "conflict_json": "{}",
+        "created_at": "2026-09-21T16:42:55Z",
+        "id": "5209b46c-cf15-41da-b786-815a2722c663",
+        "integration_task_id": "GH-NF1A-ACCEPT",
+        "integrator_lane_id": "GH-NF1A-L-ACCEPT",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
+        "patch_artifact_id": "3b91d5cc-7266-4111-98de-48f20b1ab773",
+        "position": 1,
+        "run_id": "GH-NF1A-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z"
+      },
+      {
+        "conflict_json": "{}",
+        "created_at": "2026-09-21T18:38:26Z",
+        "id": "563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb",
+        "integration_task_id": "GH-NF1A-ACCEPT",
+        "integrator_lane_id": "GH-NF1A-L-ACCEPT",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
+        "patch_artifact_id": "bd4f703e-13da-4398-b899-b234acdc8ca2",
+        "position": 3,
+        "run_id": "GH-NF1A-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z"
+      },
+      {
+        "conflict_json": "{}",
         "created_at": "2026-09-09T11:01:52Z",
         "id": "613a9114-6c46-426a-8439-6c0cc030760d",
         "integration_task_id": "GH-NF1-M00",
@@ -12473,6 +13686,32 @@
         "run_id": "GH-NF1-RUN-V1",
         "state": "integrated",
         "updated_at": "2026-09-09T11:03:58Z"
+      },
+      {
+        "conflict_json": "{}",
+        "created_at": "2026-09-21T16:34:53Z",
+        "id": "6958784b-4185-4802-87fb-f63fb612a674",
+        "integration_task_id": "GH-NF1A-ACCEPT",
+        "integrator_lane_id": "GH-NF1A-L-ACCEPT",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
+        "patch_artifact_id": "0b033f61-1c8f-4915-b680-a84e9fd940fd",
+        "position": 0,
+        "run_id": "GH-NF1A-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z"
+      },
+      {
+        "conflict_json": "{}",
+        "created_at": "2026-09-21T18:24:46Z",
+        "id": "cb71f27b-1a5b-458f-8e2c-249ea2e18258",
+        "integration_task_id": "GH-NF1A-ACCEPT",
+        "integrator_lane_id": "GH-NF1A-L-ACCEPT",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
+        "patch_artifact_id": "5e8c8634-faa2-4bf4-b497-116af3e42686",
+        "position": 2,
+        "run_id": "GH-NF1A-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z"
       },
       {
         "conflict_json": "{}",
@@ -13413,53 +14652,53 @@
         "task_id": "GH-NF1-X06"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-09-21T18:38:45Z",
+        "completed_at": "2026-09-21T19:01:19Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-ACCEPT",
         "position": 0,
-        "revision": 155,
-        "state": "queued",
+        "revision": 227,
+        "state": "completed",
         "task_id": "GH-NF1A-ACCEPT"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-09-21T17:11:45Z",
+        "completed_at": "2026-09-21T18:38:26Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-ACCESS",
         "position": 0,
-        "revision": 155,
-        "state": "queued",
+        "revision": 214,
+        "state": "completed",
         "task_id": "GH-NF1A-ACCESS"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-09-21T16:46:18Z",
+        "completed_at": "2026-09-21T18:34:34Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-ANALYZE",
         "position": 0,
-        "revision": 155,
-        "state": "queued",
+        "revision": 205,
+        "state": "completed",
         "task_id": "GH-NF1A-ANALYZE"
       },
       {
-        "activated_at": "2026-09-16T17:58:58Z",
-        "completed_at": null,
+        "activated_at": "2026-09-21T16:35:23Z",
+        "completed_at": "2026-09-21T16:42:55Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-OBSERVE",
         "position": 0,
-        "revision": 165,
-        "state": "active",
+        "revision": 185,
+        "state": "completed",
         "task_id": "GH-NF1A-OBSERVE"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-09-21T19:04:07Z",
+        "completed_at": "2026-09-21T19:04:56Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-RELEASE",
         "position": 0,
-        "revision": 155,
-        "state": "queued",
+        "revision": 231,
+        "state": "completed",
         "task_id": "GH-NF1A-RELEASE"
       },
       {
@@ -13473,33 +14712,33 @@
         "task_id": "GH-NF1A-ADOPT"
       },
       {
-        "activated_at": "2026-09-16T17:51:23Z",
-        "completed_at": null,
+        "activated_at": "2026-09-21T15:35:30Z",
+        "completed_at": "2026-09-21T19:05:31Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-ROOT",
         "position": 1,
-        "revision": 156,
-        "state": "active",
+        "revision": 234,
+        "state": "completed",
         "task_id": "GH-NF1A-CONTROL"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-09-21T19:07:05Z",
+        "completed_at": "2026-09-21T19:07:16Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-ROOT",
         "position": 2,
-        "revision": 155,
-        "state": "queued",
+        "revision": 237,
+        "state": "completed",
         "task_id": "GH-NF1A-0000"
       },
       {
-        "activated_at": "2026-09-16T17:54:40Z",
-        "completed_at": null,
+        "activated_at": "2026-09-21T15:36:48Z",
+        "completed_at": "2026-09-21T16:34:53Z",
         "enqueued_at": "2026-09-16T16:53:58Z",
         "lane_id": "GH-NF1A-L-SYSTEM",
         "position": 0,
-        "revision": 159,
-        "state": "active",
+        "revision": 176,
+        "state": "completed",
         "task_id": "GH-NF1A-SYSTEM"
       }
     ],
@@ -13701,11 +14940,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-ACCEPT",
         "parent_lane_id": "GH-NF1A-L-ROOT",
-        "revision": 155,
+        "revision": 227,
         "role": "integrator",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-09-16T17:50:39Z",
+        "state": "closed",
+        "updated_at": "2026-09-21T19:01:19Z",
         "workspace_mode": "exclusive"
       },
       {
@@ -13713,11 +14952,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-ACCESS",
         "parent_lane_id": "GH-NF1A-L-ROOT",
-        "revision": 155,
+        "revision": 214,
         "role": "implementer",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-09-16T17:50:39Z",
+        "state": "closed",
+        "updated_at": "2026-09-21T18:38:26Z",
         "workspace_mode": "isolated_merge"
       },
       {
@@ -13725,11 +14964,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-ANALYZE",
         "parent_lane_id": "GH-NF1A-L-ROOT",
-        "revision": 155,
+        "revision": 205,
         "role": "implementer",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-09-16T17:50:39Z",
+        "state": "closed",
+        "updated_at": "2026-09-21T18:34:34Z",
         "workspace_mode": "isolated_merge"
       },
       {
@@ -13737,11 +14976,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-OBSERVE",
         "parent_lane_id": "GH-NF1A-L-ROOT",
-        "revision": 165,
+        "revision": 185,
         "role": "implementer",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-09-16T17:58:58Z",
+        "state": "closed",
+        "updated_at": "2026-09-21T16:42:55Z",
         "workspace_mode": "isolated_merge"
       },
       {
@@ -13749,11 +14988,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-RELEASE",
         "parent_lane_id": "GH-NF1A-L-ROOT",
-        "revision": 155,
+        "revision": 231,
         "role": "integrator",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-09-16T17:50:39Z",
+        "state": "closed",
+        "updated_at": "2026-09-21T19:04:56Z",
         "workspace_mode": "read_shared"
       },
       {
@@ -13761,11 +15000,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-ROOT",
         "parent_lane_id": null,
-        "revision": 156,
+        "revision": 237,
         "role": "coordinator",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-09-16T17:51:23Z",
+        "state": "closed",
+        "updated_at": "2026-09-21T19:07:16Z",
         "workspace_mode": "read_shared"
       },
       {
@@ -13773,11 +15012,11 @@
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-L-SYSTEM",
         "parent_lane_id": "GH-NF1A-L-ROOT",
-        "revision": 159,
+        "revision": 176,
         "role": "implementer",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-09-16T17:54:40Z",
+        "state": "closed",
+        "updated_at": "2026-09-21T16:34:53Z",
         "workspace_mode": "isolated_merge"
       }
     ],
@@ -13785,6 +15024,17 @@
     "workflow_message_recipients": [],
     "workflow_messages": [],
     "workflow_patch_artifacts": [
+      {
+        "artifact_ref": "d402a2716a42f94bb7361e89d34513af77c0c26d",
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "content_hash": "36a9f648319ae0b3944256afe7676a60f891c93296206987f13c0d4f0350eef2",
+        "created_at": "2026-09-21T16:34:53Z",
+        "id": "0b033f61-1c8f-4915-b680-a84e9fd940fd",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-NF1A-SYSTEM",
+        "workspace_id": "f7c674ef-f8f5-4d3c-949c-5b460c47ccd6"
+      },
       {
         "artifact_ref": "b750a5c9100bce930bb9c48f935699e9ef036279",
         "base_commit": "e82540220117087105f64ddedbfe1f338de683b0",
@@ -13795,6 +15045,39 @@
         "state": "integrated",
         "task_id": "GH-NF1-M00",
         "workspace_id": "37fb00fb-255c-4bbd-ac01-b4a0b00f9982"
+      },
+      {
+        "artifact_ref": "e3fd58dc4e4a932d4e489950a4dc3b18f98a5759",
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "content_hash": "7e07335e5b767202672152966c2464095981d63e4b6e963d0519dbe4eee5ba2d",
+        "created_at": "2026-09-21T16:42:55Z",
+        "id": "3b91d5cc-7266-4111-98de-48f20b1ab773",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-NF1A-OBSERVE",
+        "workspace_id": "684e6f4d-0a8a-44a3-ac59-8c7a229b8c88"
+      },
+      {
+        "artifact_ref": "149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88",
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "content_hash": "761a095e112fbdfa37ad956b80dbde29d34f11ba83c579638cb9e950a64f720b",
+        "created_at": "2026-09-21T18:34:34Z",
+        "id": "5e8c8634-faa2-4bf4-b497-116af3e42686",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-NF1A-ANALYZE",
+        "workspace_id": "e5f285d6-44c7-48ec-b1e9-2916a5de51b8"
+      },
+      {
+        "artifact_ref": "f2e19a26d3359960d3308ec1397242dac4296c4f",
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "content_hash": "2914a34dff1fd5ed0afa737d9e012bab9628ca669504a2af812f17a21dbded6b",
+        "created_at": "2026-09-21T18:24:46Z",
+        "id": "6d3135e4-b3ce-45d9-8ab8-0df2a5c92a01",
+        "kind": "commit",
+        "state": "superseded",
+        "task_id": "GH-NF1A-ANALYZE",
+        "workspace_id": "e5f285d6-44c7-48ec-b1e9-2916a5de51b8"
       },
       {
         "artifact_ref": "93988ed2fc7e179fa47fe71736935718e0d90538",
@@ -13817,6 +15100,17 @@
         "state": "rejected",
         "task_id": "GH-NF1-X01",
         "workspace_id": "1bb3307b-aee1-43c1-93d6-1ddc452bc32c"
+      },
+      {
+        "artifact_ref": "46ba20712404a856a2bd5ceab649d83ff8d99957",
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "content_hash": "faf87e1a7bc1be7efcd4a25a8d5f9c5b2e5c226a0faaa19a3d601c5a742a007a",
+        "created_at": "2026-09-21T18:36:18Z",
+        "id": "bd4f703e-13da-4398-b899-b234acdc8ca2",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-NF1A-ACCESS",
+        "workspace_id": "59fc6158-8f18-4e4c-8b89-3a4c99fe3f53"
       },
       {
         "artifact_ref": "37d06cfe56f980046560450fd5f3298fc2242fff",
@@ -13926,10 +15220,10 @@
         "completed_at": null,
         "created_at": "2026-09-16T16:53:58Z",
         "id": "GH-NF1A-RUN-V1",
-        "revision": 142,
+        "revision": 237,
         "root_task_id": "GH-NF1A-0000",
-        "status": "active",
-        "updated_at": "2026-09-16T16:53:58Z"
+        "status": "completed",
+        "updated_at": "2026-09-21T19:07:16Z"
       }
     ],
     "workflow_workspaces": [
@@ -13972,41 +15266,60 @@
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-m-v1"
       },
       {
-        "artifact_kind": null,
-        "artifact_ref": null,
+        "artifact_kind": "commit",
+        "artifact_ref": "46ba20712404a856a2bd5ceab649d83ff8d99957",
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "branch": "codex/gh-nf1a-l-access",
+        "cleanup_eligible": 0,
+        "created_at": "2026-09-21T16:46:21Z",
+        "diff_hash": "faf87e1a7bc1be7efcd4a25a8d5f9c5b2e5c226a0faaa19a3d601c5a742a007a",
+        "id": "59fc6158-8f18-4e4c-8b89-3a4c99fe3f53",
+        "integration_task_id": "GH-NF1A-ACCEPT",
+        "lane_id": "GH-NF1A-L-ACCESS",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
+        "mode": "isolated_merge",
+        "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
+        "run_id": "GH-NF1A-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z",
+        "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-access"
+      },
+      {
+        "artifact_kind": "commit",
+        "artifact_ref": "d9d432b5b55f07b73aae3896abdc963df511e8ee",
         "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
         "branch": "codex/gh-nf1a-l-accept",
         "cleanup_eligible": 0,
         "created_at": "2026-09-16T17:57:53Z",
-        "diff_hash": null,
+        "diff_hash": "0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5",
         "id": "60daf797-33b1-4423-b29b-51fc9fd0fbde",
         "integration_task_id": "GH-NF1A-ACCEPT",
         "lane_id": "GH-NF1A-L-ACCEPT",
-        "merge_result_json": "{}",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
         "mode": "exclusive",
         "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-09-16T17:57:53Z",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z",
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-accept"
       },
       {
-        "artifact_kind": null,
-        "artifact_ref": null,
+        "artifact_kind": "commit",
+        "artifact_ref": "e3fd58dc4e4a932d4e489950a4dc3b18f98a5759",
         "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
         "branch": "codex/gh-nf1a-l-observe",
         "cleanup_eligible": 0,
         "created_at": "2026-09-16T17:57:53Z",
-        "diff_hash": null,
+        "diff_hash": "7e07335e5b767202672152966c2464095981d63e4b6e963d0519dbe4eee5ba2d",
         "id": "684e6f4d-0a8a-44a3-ac59-8c7a229b8c88",
         "integration_task_id": "GH-NF1A-ACCEPT",
         "lane_id": "GH-NF1A-L-OBSERVE",
-        "merge_result_json": "{}",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
         "mode": "isolated_merge",
         "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-09-16T17:57:53Z",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z",
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-observe"
       },
       {
@@ -14105,22 +15418,41 @@
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-b-v1"
       },
       {
-        "artifact_kind": null,
-        "artifact_ref": null,
+        "artifact_kind": "commit",
+        "artifact_ref": "149bc6cb6d60cd7c0ec34907f77d20a0a3b36f88",
+        "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
+        "branch": "codex/gh-nf1a-l-analyze",
+        "cleanup_eligible": 0,
+        "created_at": "2026-09-21T16:45:55Z",
+        "diff_hash": "761a095e112fbdfa37ad956b80dbde29d34f11ba83c579638cb9e950a64f720b",
+        "id": "e5f285d6-44c7-48ec-b1e9-2916a5de51b8",
+        "integration_task_id": "GH-NF1A-ACCEPT",
+        "lane_id": "GH-NF1A-L-ANALYZE",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
+        "mode": "isolated_merge",
+        "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
+        "run_id": "GH-NF1A-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z",
+        "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-analyze"
+      },
+      {
+        "artifact_kind": "commit",
+        "artifact_ref": "d402a2716a42f94bb7361e89d34513af77c0c26d",
         "base_commit": "c503b78aa935ed114c6c95423264436fb484abc7",
         "branch": "codex/gh-nf1a-l-system",
         "cleanup_eligible": 0,
         "created_at": "2026-09-16T17:53:05Z",
-        "diff_hash": null,
+        "diff_hash": "36a9f648319ae0b3944256afe7676a60f891c93296206987f13c0d4f0350eef2",
         "id": "f7c674ef-f8f5-4d3c-949c-5b460c47ccd6",
         "integration_task_id": "GH-NF1A-ACCEPT",
         "lane_id": "GH-NF1A-L-SYSTEM",
-        "merge_result_json": "{}",
+        "merge_result_json": "{\"gates\":[{\"evidence_id\":\"57835725-4e95-4b3f-9019-a7b355012d5b\",\"evidence_revision\":222,\"gate_id\":\"GH-NF1A-ACCEPT-ACCEPT\",\"input_fingerprint\":\"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\",\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5.patch\",\"ref\":\"d9d432b5b55f07b73aae3896abdc963df511e8ee\"},\"source_identity\":\"0796c70e0cf04bc52f308c05d1e3d420ed2fa1fb0807ee88a09c85065735b7c5\",\"state\":\"integrated\",\"wave_id\":\"2275edb9-8f3e-4a10-a2c6-ceacfdfb40c1\",\"wave_members\":[\"6958784b-4185-4802-87fb-f63fb612a674\",\"5209b46c-cf15-41da-b786-815a2722c663\",\"cb71f27b-1a5b-458f-8e2c-249ea2e18258\",\"563ac3c2-cb9a-4700-b510-bf4c5cd7b0fb\"]}",
         "mode": "isolated_merge",
         "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
         "run_id": "GH-NF1A-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-09-16T17:53:05Z",
+        "state": "integrated",
+        "updated_at": "2026-09-21T18:58:14Z",
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-system"
       }
     ]

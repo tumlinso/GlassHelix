@@ -3,20 +3,21 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `165`
+Project revision: `237`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
-- `GH-NF1A-CONTROL` | kind: task | status: in_progress | parent: GH-NF1A-0000 | objective: Serve as the strategic root and ordinary GlassHelix coordinator, delegate bounded work intelligently, coordinate the Cellerator seat and finish only after local RELEASE.
-- `GH-NF1A-SYSTEM` | kind: task | status: in_progress | parent: GH-NF1A-0000 | objective: Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.
-- `GH-NF1A-ACCESS` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.
-- `GH-NF1A-ANALYZE` | kind: task | status: planned | parent: GH-NF1A-0000 | objective: Compose requested observation/rollout derivatives, scaled local sensitivity/null diagnostics, aligned alternative comparison and supplied-reduction/error checks.
-- `GH-NF1A-OBSERVE` | kind: task | status: in_progress | parent: GH-NF1A-0000 | objective: Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
+- `GH-NF1A-CONTROL` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Serve as the strategic root and ordinary GlassHelix coordinator, delegate bounded work intelligently, coordinate the Cellerator seat and finish only after local RELEASE.
+- `GH-NF1A-SYSTEM` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.
+- `GH-NF1A-ACCESS` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.
+- `GH-NF1A-ANALYZE` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Compose requested observation/rollout derivatives, scaled local sensitivity/null diagnostics, aligned alternative comparison and supplied-reduction/error checks.
+- `GH-NF1A-OBSERVE` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
 - `GH-NF1-COORD` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | kind: workstream | status: done | parent: - | objective: Reconcile and preserve repository state; establish authoritative scientific identity and four-project boundaries; bootstrap project and tool indexing; classify the archaeological repository without treating experiments as architecture.
 - `GH-NF1-0000` | kind: epic | status: superseded | parent: - | objective: 
-- `GH-NF1A-ACCEPT` | kind: integration_task | status: planned | parent: GH-NF1A-0000 | objective: Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.
-- `GH-NF1A-RELEASE` | kind: integration_task | status: planned | parent: GH-NF1A-0000 | objective: Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.
+- `GH-NF1A-ACCEPT` | kind: integration_task | status: done | parent: GH-NF1A-0000 | objective: Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.
+- `GH-NF1A-RELEASE` | kind: integration_task | status: done | parent: GH-NF1A-0000 | objective: Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.
+- `GH-PREPRINT` | kind: workstream | status: planned | parent: - | objective: Develop the GlassHelix paper in preprint/ while keeping every draft, claim, analysis, experiment, and conclusion explicitly preliminary until supported by evidence.
 - `GH-SCIENCE-FOUNDATIONS` | kind: workstream | status: planned | parent: - | objective: Investigate sufficient biological state, identifiable hidden dynamics and causal structure, evidence domains for mechanism, uncertainty, and non-identifiability without prematurely selecting an implementation architecture.
 - `GH-NF1-A01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-A02` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
@@ -107,5 +108,5 @@ Project revision: `165`
 - `GH-NF1-X04` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-X05` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-X06` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: 
-- `GH-NF1A-0000` | kind: epic | status: planned | parent: - | objective: Aggregate the local successful outcomes after CONTROL and RELEASE. Do not use this aggregate as the coordinator seat or make a child depend on it.
+- `GH-NF1A-0000` | kind: epic | status: done | parent: - | objective: Aggregate the local successful outcomes after CONTROL and RELEASE. Do not use this aggregate as the coordinator seat or make a child depend on it.
 <!-- todo-orchestrator:v2-managed:end -->

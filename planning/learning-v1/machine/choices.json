@@ -1,0 +1,68 @@
+{
+  "format": "glasshelix-learning-bootstrap-choices",
+  "version": 1,
+  "semantics": "Planning guidance, not an executable native workflow schema or authority. Select with evidence; materialize only needed work through supported current plan actions.",
+  "choices": [
+    {
+      "id": "numerical_route",
+      "owner": "GH-L1-LEARN",
+      "default": "reuse_if_proven",
+      "domain": [
+        "reuse_verified",
+        "extend_cellerator"
+      ],
+      "evidence": "Native connected objective/parameter-gradient probe for the chosen family and installed CE capabilities.",
+      "branches": {
+        "reuse_verified": "Do not import the CE plan. Record exact CE identity and the executed proof.",
+        "extend_cellerator": "Import only machine/cellerator.optional.todo-plan.json into CE; supply demand, receive producer evidence, validate installed consumption."
+      },
+      "join": "GH acceptance waits for the chosen numerical route, not both branches."
+    },
+    {
+      "id": "initial_family",
+      "owner": "GH-L1-LEARN",
+      "default": "fixed_structure_short_horizon",
+      "domain": [
+        "finite_horizon_map",
+        "small_augmented_state_map",
+        "short_rk4_if_needed"
+      ],
+      "evidence": "Simplest genuinely learnable partial-observation family exercising shared/local unknowns and native gradients.",
+      "join": "One primary family plus a small meaningful alternative/control, not three separate implementation projects."
+    },
+    {
+      "id": "biological_protocol",
+      "owner": "GH-L1-DATA",
+      "default": "coverage_driven",
+      "domain": [
+        "blind_population_law",
+        "retrospective_reconstruction",
+        "prospective_family_history"
+      ],
+      "evidence": "Actual clone/time/modality/replicate coverage and the exact inference cutoff.",
+      "join": "Implement one selected arm; other arms remain future configurations, not blocked tasks."
+    },
+    {
+      "id": "data_availability",
+      "owner": "GH-L1-PILOT",
+      "default": "bounded_processed_inputs",
+      "domain": [
+        "bounded_real_pilot",
+        "fixtures_and_explicit_missing_input_manifest"
+      ],
+      "evidence": "Verified public input availability and feasible reconstruction of required metadata.",
+      "join": "Toolkit and client qualification continue independently; absence of biology is explicitly reported, not passed as biological validation."
+    },
+    {
+      "id": "agent_topology",
+      "owner": "main_thread",
+      "default": "serial_with_bounded_children",
+      "domain": [
+        "serial_with_bounded_children",
+        "authorized_disjoint_first_class_lanes"
+      ],
+      "evidence": "A real independent work/ownership boundary with expected net benefit; current role/action capabilities.",
+      "join": "No fixed delegate count, expensive parallel heads or repeated mandatory observer archaeology."
+    }
+  ]
+}

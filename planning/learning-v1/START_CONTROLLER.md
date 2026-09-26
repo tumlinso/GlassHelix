@@ -1,0 +1,21 @@
+# Start GlassHelix L1
+
+Implement the L1 package in `planning/learning-v1`. Deliver a small general learning toolkit over the existing NF1A/Cellerator foundation and use `experiments/celltag_reprogramming` as its first independent consumer. Optimize for validated useful progress with low coordination and implementation cost, not for completing a large architecture before anything learns.
+
+If the plan is not imported, verify package integrity and current target-specific preview, then apply the GH schema-v3 plan through the installed `project-control plan` front door. This launch authorizes the scoped implementation and necessary additive plan adoption; it does not authorize NF1A retirement, deletion of old work, runtime replacement, or unrelated cleanup. Use current source instead of enforcing stale review hashes. Preserve unrelated dirty files; do not require a globally clean checkout merely to start.
+
+Start/resume with `next_task` focused on `GH-L1-RUN-V1`; follow returned context/handles and action permissions. One serial **implementer** lane is intentional: the main thread can edit, delegate bounded children and bind gates without an idle coordinator task. The epic is last, not a coordinator seat. Do not call coordinator-only fork/decision actions from an implementer claim; add a real first-class lane only through an authorized supported plan change when an independent stream is worth it.
+
+Read `DESIGN.md` once, then work from the current outcome brief. Reuse exact relevant source and tests. API spelling, classes versus functions, fitting algorithm, temporary internal decomposition, bounded configured delegates and local test sequence are your choices. Keep the main thread responsible for scientific assumptions, scope and final acceptance. Do not automatically upgrade models or create expensive parallel heads. Use cheaper bounded investigations only when they cost less than direct inspection.
+
+Build the observation-to-fitted-system loop early. Supply a family, not hand-picked fitted answers. Start with fixed structure, a small horizon, training-only features, actual shared/local unknowns, saved primals and a simple update. Keep inferred/physical state distinct. Do not add an empty framework for every future inference method. Do not let data availability prevent the controlled native learning slice.
+
+Activate `CE-L1-RUN-V1` only when a connected native probe identifies a real CE gap. That requires its own CE claim/session or first-class agent; a GH child cannot write CE. Exchange a compact capability demand and exact producer/install evidence, not fake cross-authority task dependencies. Once the chosen route is usable, continue GH without waiting for an unrelated CE campaign.
+
+For each outcome, bind the actual executable conformance tests as required gates before `finish_task(complete)`. Completion runs required gates; a separate run is needed only when earlier feedback is useful. Adapt existing affected tests rather than rerunning all historical suites after every change. Use the existing scheduler for CUDA work, and report unavailable GPU qualification as a real blocker. Package checks and standalone review probes do not certify repaired or implemented GH code.
+
+Stop at a qualified installed learner and independent client with one bounded protocol. Run a real feasibility pilot when verified processed inputs permit; otherwise deliver a fixture-tested real-run client and exact missing-input manifest with biology explicitly not run. Do not claim molecular discovery, uniqueness, a win over baselines or full experimental completion merely to close engineering work.
+
+Final handoff: what was implemented/reused, exact tested source pair, actual gate results, complete-iteration costs, selected branches, example invocation, remaining limits, and separate toolkit/client/biological-run status. Preserve a useful checkpoint and report an honest blocker rather than creating private workflow/runtime workarounds.
+
+Planning-folder runtime receipts and decisions are ordinary evidence under the active task, not a second ledger. Forbidden `.todo-orchestrator`/projection paths prohibit direct edits; the canonical workflow service still owns its normal generated updates. Required gates must not consist solely of checking these planning receipts.

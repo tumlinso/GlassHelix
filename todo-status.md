@@ -3,20 +3,21 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `165`
+Project revision: `237`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
-- `GH-NF1A-CONTROL` | status: in_progress | execution: claimed | next: Read planning/nf1-adaptive-v1/outcomes/CONTROL.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
-- `GH-NF1A-SYSTEM` | status: in_progress | execution: claimed | next: Read planning/nf1-adaptive-v1/outcomes/SYSTEM.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
-- `GH-NF1A-ACCESS` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ACCESS.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
-- `GH-NF1A-ANALYZE` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ANALYZE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
-- `GH-NF1A-OBSERVE` | status: in_progress | execution: claimed | next: Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-CONTROL` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/CONTROL.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-SYSTEM` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/SYSTEM.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-ACCESS` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ACCESS.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-ANALYZE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ANALYZE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-OBSERVE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1-COORD` | status: superseded | execution: closed | next: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | status: done | execution: closed | next: Preserve unknown dirty work, fast-forward safely, add minimal authoritative documentation and semantic state, validate, commit, and verify through project-control.
 - `GH-NF1-0000` | status: superseded | execution: closed | next: 
-- `GH-NF1A-ACCEPT` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/ACCEPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
-- `GH-NF1A-RELEASE` | status: planned | execution: ready | next: Read planning/nf1-adaptive-v1/outcomes/RELEASE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-ACCEPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ACCEPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-NF1A-RELEASE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/RELEASE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
+- `GH-PREPRINT` | status: planned | execution: ready | next: Treat preprint/ as the paper workspace and do not promote any content from preliminary to settled or validated without evidence.
 - `GH-SCIENCE-FOUNDATIONS` | status: planned | execution: ready | next: Frame evidence-bearing scientific questions and literature work before proposing models or machinery.
 - `GH-NF1-A01` | status: done | execution: closed | next: 
 - `GH-NF1-A02` | status: done | execution: closed | next: 
@@ -107,5 +108,5 @@ Project revision: `165`
 - `GH-NF1-X04` | status: superseded | execution: closed | next: 
 - `GH-NF1-X05` | status: superseded | execution: closed | next: 
 - `GH-NF1-X06` | status: superseded | execution: closed | next: 
-- `GH-NF1A-0000` | status: planned | execution: inactive | next: Aggregate the local successful outcomes after CONTROL and RELEASE. Do not use this aggregate as the coordinator seat or make a child depend on it.
+- `GH-NF1A-0000` | status: done | execution: closed | next: Aggregate the local successful outcomes after CONTROL and RELEASE. Do not use this aggregate as the coordinator seat or make a child depend on it.
 <!-- todo-orchestrator:v2-managed:end -->

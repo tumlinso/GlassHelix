@@ -1,0 +1,170 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "Cellerator"
+  },
+  "invariants": [
+    {
+      "id": "CE-L1-INV-BOUNDARY",
+      "severity": "error",
+      "rule": "GlassHelix owns scientific evidence, hypotheses and inference policy; Cellerator owns reusable numerical execution, derivatives and residency. The experiment is an independent installed client, not core biology."
+    },
+    {
+      "id": "CE-L1-INV-EVIDENCE",
+      "severity": "error",
+      "rule": "Population snapshots are not individual histories; clone membership is shared ancestry, not row pairing. Withheld targets and ATAC-derived features cannot enter unauthorized fitting or conditioning."
+    },
+    {
+      "id": "CE-L1-INV-HONESTY",
+      "severity": "error",
+      "rule": "Numerical failure, failed optimization, unresolved explanations and biological uncertainty are distinct. Candidate agreement is not a uniqueness proof; no observation or result is fabricated."
+    },
+    {
+      "id": "CE-L1-INV-PRESERVE",
+      "severity": "error",
+      "rule": "Preserve NF1A source and successful evidence, unrelated work, preprint content and separate Todo authorities. No historical retirement, runtime replacement or broad cleanup is authorized."
+    },
+    {
+      "id": "CE-L1-INV-LEAN",
+      "severity": "error",
+      "rule": "Build one real end-to-end learning slice before broadening capabilities. Reuse native execution and qualification; create durable tasks only for durable outcomes or ownership boundaries."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "CE-L1-0000",
+      "kind": "epic",
+      "title": "Conditional numerical support for GH learning",
+      "objective": "Close only the selected minimal native extension. Aggregate, not coordinator seat or prerequisite.",
+      "priority": 0,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [],
+        "read_paths": [
+          "planning/learning-v1"
+        ]
+      },
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "completion_contract": {
+        "required": [
+          "CE-L1-ENABLE has executed evidence, producer/install identity and a consumer receipt. No unrelated numerical expansion."
+        ]
+      },
+      "references": [
+        "planning/learning-v1/CROSS_AUTHORITY.md"
+      ],
+      "next_action": "Close after CE-L1-ENABLE. Do not import this optional plan before a concrete numerical capability gap is selected."
+    },
+    {
+      "id": "CE-L1-ENABLE",
+      "parent_id": "CE-L1-0000",
+      "kind": "task",
+      "title": "Supply the exact numerical path the learner needs",
+      "objective": "Extend or connect existing CE owners for the selected GH learning workload: actual forward/response composition, shared-parameter accumulation, needed evidence reductions and generation-safe value updates.",
+      "priority": 100,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "include/Cellerator",
+          "src/compute",
+          "src/execution",
+          "cmake",
+          "CMakeLists.txt",
+          "tests",
+          "examples",
+          "bench",
+          "docs/learning",
+          "planning/learning-v1"
+        ],
+        "read_paths": [
+          "README.md",
+          "AGENTS.md",
+          "docs/nf1_adaptive",
+          "planning/nf1-adaptive-v1"
+        ],
+        "forbidden_paths": [
+          ".todo-orchestrator",
+          "todos",
+          "todos.md",
+          "todo-status.md"
+        ]
+      },
+      "depends_on": [],
+      "invariants": [
+        "CE-L1-INV-BOUNDARY",
+        "CE-L1-INV-EVIDENCE",
+        "CE-L1-INV-HONESTY",
+        "CE-L1-INV-PRESERVE",
+        "CE-L1-INV-LEAN"
+      ],
+      "completion_contract": {
+        "required": [
+          "Accept a compact demand record identifying the chosen model operations, derivatives, dimensions and the demonstrated missing native route.",
+          "Reuse existing contracts, parameter/relation storage, programs and derivatives. Implement only capabilities needed by the slice; no parallel evaluator, AD engine, broad optimizer library, speculative encoding or universal compiler.",
+          "Native tests cover actual connected parameter gradients, repeated/shared operands, admissibility, missing/masked evidence behavior where relevant, and stale generations; execute required CUDA tests through the existing authorized scheduler.",
+          "Publish an installed candidate and exact source/build/test receipt consumable by GH. Do not require GH-L1-LEARN to be complete before delivering it.",
+          "no_change_required is allowed only with executed proof that the demanded route already works; then publish that proof."
+        ]
+      },
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "motivation": "CE fills a demonstrated computational gap; the scientific model is not distorted to fit a convenient legacy operation.",
+      "delegated_choices": [
+        "Choose existing owners and minimal new operations. Use simple updates first; expose sufficient numerical actions without imposing an optimizer policy."
+      ],
+      "references": [
+        "planning/learning-v1/CROSS_AUTHORITY.md",
+        "planning/learning-v1/DESIGN.md",
+        "include/Cellerator/compute/operation/differential/local_arithmetic.hh",
+        "include/Cellerator/compute/operation/relation_update.hh",
+        "include/Cellerator/execution/program/program_v2.h"
+      ],
+      "next_action": "Read the selected demand from GH, inspect exact relevant CE owners, implement or prove reuse, then bind actual required native gates and finish.",
+      "notes": "Independent CE claim required. GH dependency evidence is a producer demand, not a foreign local task dependency. Keep successful NF1A and unrelated active work intact."
+    }
+  ],
+  "runs": [
+    {
+      "id": "CE-L1-RUN-V1",
+      "root_task_id": "CE-L1-0000",
+      "charter": {
+        "objective": "Meet one demonstrated learning workload through existing Cellerator numerical owners.",
+        "boundaries": [
+          "Optional plan: import only after the GH owner selects native extension over verified reuse.",
+          "Separate CE Todo/Git authority; no GH writes under this claim.",
+          "No dependency on completed GH learner; deliver a tested native capability for it."
+        ],
+        "acceptance_conditions": [
+          "Exact installed producer candidate with current native and relevant CUDA evidence."
+        ],
+        "delegated_judgment": "Choose narrow implementation and cheap configured delegates; no pre-created speculative numerical branches.",
+        "references": [
+          "planning/learning-v1/CROSS_AUTHORITY.md",
+          "planning/learning-v1/DESIGN.md"
+        ]
+      },
+      "lanes": [
+        {
+          "id": "CE-L1-L-EXEC",
+          "role": "implementer",
+          "workspace": {
+            "mode": "exclusive"
+          },
+          "tasks": [
+            "CE-L1-ENABLE",
+            "CE-L1-0000"
+          ]
+        }
+      ]
+    }
+  ]
+}

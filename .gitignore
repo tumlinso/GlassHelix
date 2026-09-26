@@ -53,3 +53,6 @@
 *.out
 *.app
 /cmake-build-debug/
+
+# Local-only GlassHelix paper workspace; not ready for publication.
+/preprint/

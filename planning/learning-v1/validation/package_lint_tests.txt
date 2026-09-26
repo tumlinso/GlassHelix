@@ -1,0 +1,15 @@
+test_bad_queue (__main__.PackageTests.test_bad_queue) ... ok
+test_coordinator_cannot_replace_writable_lane (__main__.PackageTests.test_coordinator_cannot_replace_writable_lane) ... ok
+test_cycle (__main__.PackageTests.test_cycle) ... ok
+test_duplicate_id (__main__.PackageTests.test_duplicate_id) ... ok
+test_epic_dependency (__main__.PackageTests.test_epic_dependency) ... ok
+test_foreign_dependency (__main__.PackageTests.test_foreign_dependency) ... ok
+test_path_escape (__main__.PackageTests.test_path_escape) ... ok
+test_placeholder_gate (__main__.PackageTests.test_placeholder_gate) ... ok
+test_pretend_completion (__main__.PackageTests.test_pretend_completion) ... ok
+test_valid_plan (__main__.PackageTests.test_valid_plan) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.003s
+
+OK

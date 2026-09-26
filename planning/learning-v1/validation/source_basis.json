@@ -1,0 +1,48 @@
+{
+  "prepared_on": "2026-09-26",
+  "purpose": "Source identity and authority observations for bootstrap design, not immutable execution preconditions.",
+  "review_basis": {
+    "file": "references/REVIEW_AND_DESIGN.md",
+    "scope": "User-supplied prior architectural review; source-derived findings and proposed interfaces distinguished in the review."
+  },
+  "observed": {
+    "glasshelix": {
+      "commit": "da97825a18206f1ec727ea59439ca694995d7b94",
+      "todo_revision": 237,
+      "dirty": true
+    },
+    "cellerator": {
+      "commit": "2c3b094aadcf024d04bb29213ee2dde6aa01fc00",
+      "todo_revision": 7417,
+      "dirty": false
+    },
+    "project-control": {
+      "commit": "366e85e88d1585e511c12bb856f7fd64e77ff3d5",
+      "todo_revision": 801,
+      "dirty": true
+    },
+    "skills": {
+      "commit": "fc9d083afd614b43f16bdd1557243015a6ecc899",
+      "todo_revision": 887,
+      "dirty": false
+    }
+  },
+  "modern_schema_evidence": [
+    "project-control plan_preview reports accepted_plan_schema_versions [2,3]",
+    "skills/todo-orchestrator/todo_orchestrator/__init__.py PLAN_SCHEMA_VERSION=3",
+    "skills/todo-orchestrator/todo_orchestrator/plan.py validates and imports v3 runs/lanes and derives task/lane/run briefs"
+  ],
+  "philosophy_sources": [
+    "project-control/docs/ADAPTIVE_EPICS.md",
+    "project-control/docs/CODEX_SETUP.md",
+    "skills/todo-orchestrator/references/workflow-v3-operations.md",
+    "skills/todo-orchestrator/todo_orchestrator/workflow/roles.py"
+  ],
+  "design_choices": [
+    "One implementer root lane per authority, allowing edit/delegate/bind-gates without pretending to grant coordinator-only actions.",
+    "Five GH outcomes and one optional CE outcome; native context briefs are derived from plans, not duplicated as a separate todo database.",
+    "Independent co-located experiment package avoids a new authority; no core dependency on it."
+  ],
+  "mutation": "No repository, database, claim, task status or source changes made while preparing this package.",
+  "revalidation": "Recheck live target previews before apply. Reconcile relevant source drift; preserve unrelated dirty work. Do not blindly reapply original plans after execution has added gates or changed decisions."
+}

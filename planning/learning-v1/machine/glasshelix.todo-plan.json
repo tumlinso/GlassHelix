@@ -1,0 +1,504 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "GlassHelix"
+  },
+  "invariants": [
+    {
+      "id": "GH-L1-INV-BOUNDARY",
+      "severity": "error",
+      "rule": "GlassHelix owns scientific evidence, hypotheses and inference policy; Cellerator owns reusable numerical execution, derivatives and residency. The experiment is an independent installed client, not core biology."
+    },
+    {
+      "id": "GH-L1-INV-EVIDENCE",
+      "severity": "error",
+      "rule": "Population snapshots are not individual histories; clone membership is shared ancestry, not row pairing. Withheld targets and ATAC-derived features cannot enter unauthorized fitting or conditioning."
+    },
+    {
+      "id": "GH-L1-INV-HONESTY",
+      "severity": "error",
+      "rule": "Numerical failure, failed optimization, unresolved explanations and biological uncertainty are distinct. Candidate agreement is not a uniqueness proof; no observation or result is fabricated."
+    },
+    {
+      "id": "GH-L1-INV-PRESERVE",
+      "severity": "error",
+      "rule": "Preserve NF1A source and successful evidence, unrelated work, preprint content and separate Todo authorities. No historical retirement, runtime replacement or broad cleanup is authorized."
+    },
+    {
+      "id": "GH-L1-INV-LEAN",
+      "severity": "error",
+      "rule": "Build one real end-to-end learning slice before broadening capabilities. Reuse native execution and qualification; create durable tasks only for durable outcomes or ownership boundaries."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "GH-L1-0000",
+      "kind": "epic",
+      "title": "First evidence-to-hypothesis learning slice",
+      "objective": "Aggregate the five verified local outcomes. This is a closure record, not a coordinator seat or a prerequisite of its children.",
+      "priority": 0,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [],
+        "read_paths": [
+          "planning/learning-v1",
+          "docs/learning",
+          "experiments/celltag_reprogramming"
+        ]
+      },
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "completion_contract": {
+        "required": [
+          "All five local outcomes meet their executed engineering acceptance; any used Cellerator change has producer and installed-consumer evidence.",
+          "Close with separate toolkit, experiment-client and biological-run status. Missing biological inputs never become a claimed biological success."
+        ]
+      },
+      "references": [
+        "planning/learning-v1/START_CONTROLLER.md",
+        "planning/learning-v1/ACCEPTANCE.md"
+      ],
+      "next_action": "Close last after GH-L1-ACCEPT. Do not claim this epic to obtain implementation ownership."
+    },
+    {
+      "id": "GH-L1-REPAIR",
+      "parent_id": "GH-L1-0000",
+      "kind": "task",
+      "title": "Repair the two inference correctness defects",
+      "objective": "Recheck and repair right-nullspace extraction and persistent log-weight handling; preserve the existing native interfaces where possible.",
+      "priority": 120,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix",
+          "src",
+          "tests",
+          "bindings",
+          "python",
+          "tools",
+          "examples",
+          "cmake",
+          "CMakeLists.txt",
+          ".gitignore",
+          "docs/learning",
+          "planning/learning-v1"
+        ],
+        "read_paths": [
+          "README.md",
+          "AGENTS.md",
+          "docs/nf1_adaptive",
+          "planning/nf1-adaptive-v1"
+        ],
+        "forbidden_paths": [
+          "preprint",
+          ".todo-orchestrator",
+          "todos",
+          "todos.md",
+          "todo-status.md",
+          "archive"
+        ]
+      },
+      "depends_on": [],
+      "invariants": [
+        "GH-L1-INV-BOUNDARY",
+        "GH-L1-INV-EVIDENCE",
+        "GH-L1-INV-HONESTY",
+        "GH-L1-INV-PRESERVE",
+        "GH-L1-INV-LEAN"
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "completion_contract": {
+        "required": [
+          "Native tests exercise nontrivial rectangular DGESVD right-nullspaces, multiple null directions and the existing scale convention; do not rely only on 2x2 controls.",
+          "Finite likelihood evidence never irreversibly prunes a candidate through weight underflow. Native tests distinguish explicit zero priors and deliberate pruning, and test evidence-order/batch equivalence for fixed conditionally independent evidence.",
+          "Current tests call the actual repaired library. Include affected existing regressions; source-derived review probes are evidence seeds only."
+        ]
+      },
+      "motivation": "The next learner will rely on these diagnostics and candidate updates. Two focused repairs are cheaper than propagating incorrect confidence.",
+      "delegated_choices": [
+        "Choose concrete APIs, implementation sequence and narrow delegation; names in DESIGN.md are concepts, not mandatory classes."
+      ],
+      "references": [
+        "planning/learning-v1/DESIGN.md",
+        "planning/learning-v1/ACCEPTANCE.md",
+        "planning/learning-v1/references/review_probes.py",
+        "include/GlassHelix/interrogation/diagnostics.hh",
+        "include/GlassHelix/inference/inference.hh"
+      ],
+      "next_action": "Use this outcome brief and its exact source references. Bind real executable acceptance gates before completion; finish_task runs them. No separate inspect/build/retry tasks.",
+      "notes": "no_change_required needs current executed native proof. Do not use package checks or standalone review probes as product acceptance. Preserve the paired authority boundary."
+    },
+    {
+      "id": "GH-L1-DATA",
+      "parent_id": "GH-L1-0000",
+      "kind": "task",
+      "title": "Audit and adapt the first biological evidence",
+      "objective": "Create an independent experiment client and a bounded, provenance-preserving CellTag data adapter. Determine which protocol is actually supported.",
+      "priority": 110,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "experiments/celltag_reprogramming",
+          "planning/learning-v1"
+        ],
+        "read_paths": [
+          "include/GlassHelix",
+          "docs/learning",
+          "README.md",
+          "AGENTS.md"
+        ],
+        "forbidden_paths": [
+          "preprint",
+          ".todo-orchestrator",
+          "todos",
+          "todos.md",
+          "todo-status.md"
+        ]
+      },
+      "depends_on": [],
+      "invariants": [
+        "GH-L1-INV-BOUNDARY",
+        "GH-L1-INV-EVIDENCE",
+        "GH-L1-INV-HONESTY",
+        "GH-L1-INV-PRESERVE",
+        "GH-L1-INV-LEAN"
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "completion_contract": {
+        "required": [
+          "Produce clone-by-time-by-modality-by-replicate coverage and deterministic identifier joins for available public inputs, preserving source labels, exclusions, missingness and measured zeros.",
+          "Keep RNA-only features free of ATAC-derived embeddings and labels; retain original timing labels including any day-11/day-12 conflict until metadata resolves it.",
+          "Use independently buildable experiments/celltag_reprogramming with installed GH/CE dependencies and no core default-build or import dependency on the experiment.",
+          "Tests cover joins, clone isolation and authorized evidence views. If real inputs are unavailable, finish the adapter/fixture audit with an exact missing-input manifest; do not block unrelated toolkit development or fabricate coverage."
+        ]
+      },
+      "motivation": "Use real sampling semantics as early pressure, without making a large raw-data reconstruction a prerequisite.",
+      "delegated_choices": [
+        "Choose processed-input adapter and a bounded download. Reconstruct missing metadata only when tractable from released inputs.",
+        "Choose a supported initial protocol after coverage audit; retain the other arms as configuration ideas, not extra mandatory work."
+      ],
+      "references": [
+        "planning/learning-v1/DESIGN.md",
+        "planning/learning-v1/ACCEPTANCE.md",
+        "planning/learning-v1/EXPERIMENT.md",
+        "planning/learning-v1/references/REVIEW_AND_DESIGN.md"
+      ],
+      "next_action": "Use this outcome brief and its exact source references. Bind real executable acceptance gates before completion; finish_task runs them. No separate inspect/build/retry tasks.",
+      "notes": "no_change_required needs current executed native proof. Do not use package checks or standalone review probes as product acceptance. Preserve the paired authority boundary."
+    },
+    {
+      "id": "GH-L1-LEARN",
+      "parent_id": "GH-L1-0000",
+      "kind": "task",
+      "title": "Learn executable candidate systems from observations",
+      "objective": "Deliver one reusable learning path over NF1A: evidence and unknowns, native evaluation, full selected gradients, fitting, authorized conditioning and fitted candidate persistence.",
+      "priority": 100,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix",
+          "src",
+          "tests",
+          "bindings",
+          "python",
+          "tools",
+          "examples",
+          "cmake",
+          "CMakeLists.txt",
+          ".gitignore",
+          "docs/learning",
+          "planning/learning-v1"
+        ],
+        "read_paths": [
+          "README.md",
+          "AGENTS.md",
+          "docs/nf1_adaptive",
+          "planning/nf1-adaptive-v1"
+        ],
+        "forbidden_paths": [
+          "preprint",
+          ".todo-orchestrator",
+          "todos",
+          "todos.md",
+          "todo-status.md",
+          "archive"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-L1-REPAIR"
+        }
+      ],
+      "invariants": [
+        "GH-L1-INV-BOUNDARY",
+        "GH-L1-INV-EVIDENCE",
+        "GH-L1-INV-HONESTY",
+        "GH-L1-INV-PRESERVE",
+        "GH-L1-INV-LEAN"
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "completion_contract": {
+        "required": [
+          "A truth-known partial-observation client genuinely fits at least one shared law coefficient and one local initial/hidden quantity from unknown values; it is not only reweighting pre-supplied answers.",
+          "Differentiate the complete executed objective through model, observation and evidence terms; accumulate shared-parameter contributions across repeated uses and instances using CE numerical owners.",
+          "Use actual retained forward operands, reject stale or mismatched response traces, distinguish structure changes from value generations, and demonstrate reuse across value updates.",
+          "Keep five concerns separable: evidence views, hypothesis families, learning problem/unknowns, inference strategy and fitted explanations. Do not require five abstract base classes or a new universal graph.",
+          "Freeze shared learned quantities during held-out conditioning; infer local unknowns only from permitted inputs. Retain explicit whole alternatives and search coverage limits.",
+          "Save and reload logical fitted quantities and scientific/evidence identity; a fresh process reproduces predictions. Expose a useful native client or high-level binding without requiring full framework GPU interchange."
+        ]
+      },
+      "motivation": "This is the missing observations-to-systems loop. Implement it as one coherent slice rather than freezing disconnected interfaces.",
+      "delegated_choices": [
+        "Default to a small fixed-structure family, training-only feature map, short horizon, saved primals and a simple optimizer. A horizon map is a legitimate first realization.",
+        "Audit the required CE operations once. Reuse existing verified primitives; activate the separate CE plan only for a demonstrated numerical gap.",
+        "Add bounded unknown forcing when needed to exercise the selected family; unrestricted inputs cannot explain away every residual.",
+        "DATA provides pressure but is not a hard predecessor: proceed using the generic controlled client when public data is delayed."
+      ],
+      "references": [
+        "planning/learning-v1/DESIGN.md",
+        "planning/learning-v1/ACCEPTANCE.md",
+        "planning/learning-v1/machine/choices.json",
+        "planning/learning-v1/CROSS_AUTHORITY.md",
+        "include/GlassHelix/dynamics/response_plan.hh",
+        "include/GlassHelix/observation/observation.hh"
+      ],
+      "next_action": "Use this outcome brief and its exact source references. Bind real executable acceptance gates before completion; finish_task runs them. No separate inspect/build/retry tasks.",
+      "notes": "no_change_required needs current executed native proof. Do not use package checks or standalone review probes as product acceptance. Preserve the paired authority boundary."
+    },
+    {
+      "id": "GH-L1-PILOT",
+      "parent_id": "GH-L1-0000",
+      "kind": "task",
+      "title": "Run the isolated experiment client",
+      "objective": "Connect the audited CellTag adapter to the learning toolkit and implement one explicit experimental protocol with fair baselines and separate biological status.",
+      "priority": 100,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "experiments/celltag_reprogramming",
+          "planning/learning-v1"
+        ],
+        "read_paths": [
+          "include/GlassHelix",
+          "docs/learning",
+          "README.md",
+          "AGENTS.md"
+        ],
+        "forbidden_paths": [
+          "preprint",
+          ".todo-orchestrator",
+          "todos",
+          "todos.md",
+          "todo-status.md"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-L1-DATA"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-L1-LEARN"
+        }
+      ],
+      "invariants": [
+        "GH-L1-INV-BOUNDARY",
+        "GH-L1-INV-EVIDENCE",
+        "GH-L1-INV-HONESTY",
+        "GH-L1-INV-PRESERVE",
+        "GH-L1-INV-LEAN"
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "completion_contract": {
+        "required": [
+          "The client uses installed public/developmental package interfaces, never private CE source inclusion or a parallel production solver/AD implementation.",
+          "Implement one coverage-supported arm: blind population-law learning, retrospective reconstruction, or prospective family-history prediction. Enforce its evidence cutoff and state its claim accurately.",
+          "Exercise one small horizon model and one modest alternative when data supports their comparison, with same-authorized-information non-dynamical control; no universal latent model is required.",
+          "For available bounded real data, execute and record at least a feasibility fit/evaluation. If inputs are unavailable, run the installed client on explicitly synthetic format fixtures, ship the real-run configuration and mark biology not_run_inputs_unavailable.",
+          "Keep ATAC grounding separate, use clone-held-out partitions, preserve mixed-clone observations, and avoid interpreting observed cell fractions as intrinsic fate probabilities. No performance victory is required."
+        ]
+      },
+      "motivation": "The first concrete consumer should reveal reusable missing capabilities without turning the core into a CellTag application.",
+      "delegated_choices": [
+        "Choose modest features, summaries or representative sets; retain raw identities and describe the resolution limit.",
+        "Use separate calibration groups for any fitted latent-to-ATAC map. Do not require a biological discovery to qualify the client."
+      ],
+      "references": [
+        "planning/learning-v1/DESIGN.md",
+        "planning/learning-v1/ACCEPTANCE.md",
+        "planning/learning-v1/EXPERIMENT.md"
+      ],
+      "next_action": "Use this outcome brief and its exact source references. Bind real executable acceptance gates before completion; finish_task runs them. No separate inspect/build/retry tasks.",
+      "notes": "no_change_required needs current executed native proof. Do not use package checks or standalone review probes as product acceptance. Preserve the paired authority boundary."
+    },
+    {
+      "id": "GH-L1-ACCEPT",
+      "parent_id": "GH-L1-0000",
+      "kind": "validation_task",
+      "title": "Qualify the reusable installed slice",
+      "objective": "Qualify the integrated source pair, external consumer and scientific access boundaries; publish concise usage and remaining capability gaps.",
+      "priority": 80,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "include/GlassHelix",
+          "src",
+          "tests",
+          "bindings",
+          "python",
+          "tools",
+          "examples",
+          "cmake",
+          "CMakeLists.txt",
+          ".gitignore",
+          "docs/learning",
+          "planning/learning-v1",
+          "experiments/celltag_reprogramming"
+        ],
+        "read_paths": [
+          "README.md",
+          "AGENTS.md",
+          "docs/nf1_adaptive",
+          "planning/nf1-adaptive-v1"
+        ],
+        "forbidden_paths": [
+          "preprint",
+          ".todo-orchestrator",
+          "todos",
+          "todos.md",
+          "todo-status.md",
+          "archive"
+        ]
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "GH-L1-REPAIR"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-L1-DATA"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-L1-LEARN"
+        },
+        {
+          "type": "task",
+          "task_id": "GH-L1-PILOT"
+        }
+      ],
+      "invariants": [
+        "GH-L1-INV-BOUNDARY",
+        "GH-L1-INV-EVIDENCE",
+        "GH-L1-INV-HONESTY",
+        "GH-L1-INV-PRESERVE",
+        "GH-L1-INV-LEAN"
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "implemented",
+          "validated",
+          "no_change_required"
+        ]
+      },
+      "completion_contract": {
+        "required": [
+          "Run native end-to-end controlled learning and ambiguity controls, held-out conditioning, save/reload, complete-objective gradient checks and affected regressions against the final integrated code.",
+          "Build the experiment client independently against the installed packages; verify the library does not depend on experiment modules, biological constants or source trees.",
+          "Verify the chosen CE route and exact tested producer/install identity; if CE was unchanged, record the native capability proof rather than creating needless CE tasks.",
+          "Measure one bounded complete fitting iteration/lifecycle using the permitted GPU scheduler when using CUDA. Record preparation, repeated evaluation and transfer behavior; no speedup target or full benchmark campaign.",
+          "Bind actual required gates before completion and retain exact commands, results, source/build identities, selected branches, capability limitations and toolkit/client/biology status separately. Do not promote incomplete or skipped GPU validation."
+        ]
+      },
+      "motivation": "One integrated acceptance closes the loop. Do not repeatedly rerun unrelated historical campaigns.",
+      "delegated_choices": [
+        "Choose actual test commands and one risk-focused independent review when it adds value. Repair in scope; add work only for a genuinely new outcome/ownership boundary."
+      ],
+      "references": [
+        "planning/learning-v1/DESIGN.md",
+        "planning/learning-v1/ACCEPTANCE.md",
+        "planning/learning-v1/CROSS_AUTHORITY.md"
+      ],
+      "next_action": "Use this outcome brief and its exact source references. Bind real executable acceptance gates before completion; finish_task runs them. No separate inspect/build/retry tasks.",
+      "notes": "no_change_required needs current executed native proof. Do not use package checks or standalone review probes as product acceptance. Preserve the paired authority boundary."
+    }
+  ],
+  "runs": [
+    {
+      "id": "GH-L1-RUN-V1",
+      "root_task_id": "GH-L1-0000",
+      "charter": {
+        "objective": "Turn incomplete observations into fitted executable candidate explanations through the existing GH/CE foundation.",
+        "motivation": "Fast scientifically meaningful progress: one useful reusable slice and one separate experiment consumer, not another foundation rewrite.",
+        "desired_end_state": "Installed learn/condition/predict/persist path, explicit alternatives and evidence access; independently runnable CellTag client with honest biological status.",
+        "boundaries": [
+          "No historical NF1/NF1A retirement, new ledger authority or unrelated source cleanup.",
+          "No GH numerical or AD framework duplicating CE; no CellTag biology in core.",
+          "Experimental defaults are provisional. No universal Markov/neural/deterministic/uniquely identifiable model is imposed."
+        ],
+        "acceptance_conditions": [
+          "Five GH outcomes pass their actual required gates; final report separates engineering and biological results."
+        ],
+        "delegated_judgment": "One responsible main thread chooses APIs, solver, sequence, model simplification and bounded children. Serial lane is a cheap default, not an instruction to waste independent work. New first-class lanes require an authorized supported plan amendment.",
+        "references": [
+          "planning/learning-v1/START_CONTROLLER.md",
+          "planning/learning-v1/DESIGN.md",
+          "planning/learning-v1/machine/choices.json",
+          "planning/learning-v1/CROSS_AUTHORITY.md"
+        ]
+      },
+      "lanes": [
+        {
+          "id": "GH-L1-L-EXEC",
+          "role": "implementer",
+          "workspace": {
+            "mode": "exclusive"
+          },
+          "tasks": [
+            "GH-L1-REPAIR",
+            "GH-L1-DATA",
+            "GH-L1-LEARN",
+            "GH-L1-PILOT",
+            "GH-L1-ACCEPT",
+            "GH-L1-0000"
+          ],
+          "motivation": "Main thread owns implementation judgment and can delegate bounded children without a separate coordinator bureaucracy.",
+          "delegated_choices": [
+            "Create required test gates once commands exist; use finish_task for their execution.",
+            "Serial writable ownership by default; children have narrower existing targets and no cross-authority write privilege."
+          ]
+        }
+      ]
+    }
+  ]
+}

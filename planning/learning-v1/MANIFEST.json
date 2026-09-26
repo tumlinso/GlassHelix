@@ -1,0 +1,30 @@
+{
+  "format": "glasshelix-learning-bootstrap",
+  "version": 1,
+  "prepared_on": "2026-09-26",
+  "native_plan_schema_version": 3,
+  "default_target": "glasshelix",
+  "optional_target": "cellerator",
+  "gh_outcomes": 5,
+  "ce_optional_outcomes": 1,
+  "no_automatic_apply": true,
+  "files": {
+    "ACCEPTANCE.md": "894ec5853bee72df23d0fbee33c29b0209e4ea42614e2743c961060d16f57e75",
+    "CROSS_AUTHORITY.md": "b617ca0431c38a4dc3febf1408d1bcc70cf017abb266bdf451a25fdcf6aa1542",
+    "DESIGN.md": "9e6891f2355d1c6e1c47c5c62feb2e0278cff1f0881ab44a19dfdd0f94cb4d58",
+    "EXPERIMENT.md": "3fb67193f9e1b87f3f8037a5e3c037d0d32635c1bbd525bd1c11a7a75a975acc",
+    "README.md": "d0380c7f4924c13cc5b6f4405e33000333d7dbb0521a4a68e85106712d116d0d",
+    "START_CONTROLLER.md": "894ddea8b983057b26b7365ff07c20e5fa93871bf8c8940ebe32374c7ab70de4",
+    "machine/cellerator.optional.todo-plan.json": "e5d0fae4df968fac2c33035db1da412d32e040da98dfc5d439f35be0a2bd5431",
+    "machine/choices.json": "d43d65075ba0723cc4549d871756ce947a2dc250282949fc524272e4c625040e",
+    "machine/glasshelix.todo-plan.json": "bae5c34cd4c037bdcbef3a87347849c2edc120c56e0f2d88e22542d33a22b175",
+    "references/REVIEW_AND_DESIGN.md": "5aacad677303c5cf2011a1ad73c7543fee611016cb220950a8766a703aa92bdd",
+    "references/review_probes.py": "3714d9c8d8c2d6d605188780fb221d3c1f57b66b5bb1f4a503a03d00bdedcd94",
+    "scripts/check_package.py": "ae99fe3f5e06222d14432094f2a349541025bf222aea0cb2c5791e56fc9e1820",
+    "scripts/test_package.py": "762aefdb3647e8f4e50207b6dbfe89a4435d605464a726ded4ac6b01789f0b76",
+    "validation/README.md": "d15985eb4133e175757cb271e5bc8dbdfa515721d81f0364cbbe4de15ee4b7d8",
+    "validation/native_preview.json": "162505b5c0b16a7576e6e7a956452c5fa0df1337fed32e9f946755c805c4af57",
+    "validation/package_lint_tests.txt": "89e876d70f28a0c5474965d8044fca6833a8316a4a56596677cb5164958db2ae",
+    "validation/source_basis.json": "4946cf01529066671cf0a4e7527015430c16e575b6cac4067786e0cdf94b047f"
+  }
+}

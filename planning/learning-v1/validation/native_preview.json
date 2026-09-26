@@ -1,0 +1,71 @@
+{
+  "record_type": "Selected exact fields from project-control.plan_preview responses; commentary history contains the complete envelopes.",
+  "prepared_on": "2026-09-26",
+  "no_plan_applied": true,
+  "plans": {
+    "glasshelix.todo-plan.json": {
+      "target": "glasshelix",
+      "validation_scope": "actual_target_preview",
+      "valid": true,
+      "plan_schema_version_observed": 3,
+      "accepted_plan_schema_versions": [
+        2,
+        3
+      ],
+      "plan_digest": "a5d8061261ada1ff836910909b0e28202a649f469ba66d3089e47840135bf58d",
+      "observed_at": "2026-09-26T12:31:30Z",
+      "base_revision": 237,
+      "base_commits": {
+        "glasshelix": "da97825a18206f1ec727ea59439ca694995d7b94"
+      },
+      "would_add": [
+        "GH-L1-0000",
+        "GH-L1-ACCEPT",
+        "GH-L1-DATA",
+        "GH-L1-LEARN",
+        "GH-L1-PILOT",
+        "GH-L1-REPAIR"
+      ],
+      "would_modify": [],
+      "dependency_errors": [],
+      "scope_conflicts": [],
+      "interface_errors": [],
+      "warnings": [],
+      "mutation_guard": "unchanged"
+    },
+    "cellerator.optional.todo-plan.json": {
+      "target": "cellerator",
+      "validation_scope": "canonical_payload_valid_but_actual_target_preview_unavailable",
+      "valid_schema": true,
+      "valid_target": null,
+      "plan_schema_version_observed": 3,
+      "plan_digest": "633808e02c4e16cb591e7711c8bb75d44f92f460f2ce4c0169929a57c1c92ed8",
+      "actual_target_attempts": [
+        {
+          "observed_at": "2026-09-26T12:32:07Z",
+          "status": "internal_error",
+          "warnings": [
+            "bounded_read_failed"
+          ]
+        },
+        {
+          "observed_at": "2026-09-26T12:33:35Z",
+          "status": "internal_error",
+          "warnings": [
+            "bounded_read_failed"
+          ]
+        }
+      ],
+      "shared_validator_check": {
+        "validation_workspace": "glasshelix",
+        "observed_at": "2026-09-26T12:34:21Z",
+        "valid": true,
+        "base_revision": 237,
+        "plan_digest": "633808e02c4e16cb591e7711c8bb75d44f92f460f2ce4c0169929a57c1c92ed8",
+        "mutation_guard": "unchanged",
+        "scope": "Schema/payload validation only. This workspace is not the CE authority and this plan must never be applied there."
+      },
+      "required_before_apply": "Validate this exact plan on the actual cellerator authority and review its current conflicts/diff. Never treat the shared-validator check as CE readiness."
+    }
+  }
+}

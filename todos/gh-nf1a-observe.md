@@ -3,16 +3,16 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-NF1A-OBSERVE: Deliver observation and finite-candidate evidence updates
 
-Task revision: `165`; current project revision is in `todo-status.md`.
+Task revision: `185`; current project revision is in `todo-status.md`.
 
 ## Objective
 Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
 
 ## State
-- Lifecycle: `in_progress`
-- Execution: `claimed`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `parallel_safe`
-- Result: `-`
+- Result: `implemented`
 
 ## Next Action
 Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
