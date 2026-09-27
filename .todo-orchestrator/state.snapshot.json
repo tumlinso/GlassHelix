@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T19:07:16Z",
+  "generated_at": "2026-09-27T12:53:37Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 237,
+  "project_revision": 238,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -2647,6 +2647,16 @@
         "revision": 237,
         "seq": 237,
         "timestamp": "2026-09-21T19:07:16Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+        "entity_type": "project",
+        "event_type": "plan.applied",
+        "payload_json": "{\"plan_digest\": \"ddb18c98903f057169fbdb8247c9c2b13034f6d132fd262f1fd17a26fd0a7173\", \"source\": \"project-control\"}",
+        "revision": 238,
+        "seq": 238,
+        "timestamp": "2026-09-27T12:53:37Z"
       }
     ],
     "evidence": [
@@ -4755,6 +4765,55 @@
     "invariants": [
       {
         "enforcement": null,
+        "id": "GH-ML2-BIOLOGY",
+        "rule": "A biology-purpose learning operation needs an explicit model assumption, semantic contract, exact reference and identified computational advantage to test. Biological labels or a generic ML kernel alone do not establish this. Model restrictions are hypotheses, not truths or hardware requirements.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-ML2-EVIDENCE",
+        "rule": "Preserve actual measurement relationships and allowed information. Population snapshots and sibling cells are not individual trajectories; nominal common forcing is not identical intracellular input. No held-out ATAC, future targets or target-derived preprocessing in unauthorized inference.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-ML2-HONEST",
+        "rule": "Separate engineering correctness, scientific adequacy, numerical policy and performance. Searched candidates are not an exhaustive compatible set; no fabricated biology, derivative support, compiler coverage or speedup.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-ML2-IDENTITY",
+        "rule": "Keep biological/structure identity independent of physical layout and encoding. Preserve ordered and repeated arguments, actual saved-primal generations, lawful contribution assembly and canonical parameter ownership. Never hide mutation inside the new composable backward.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-ML2-LEAN",
+        "rule": "Use coarse outcomes and evidence-selected alternatives. Reuse ordinary Torch and existing Cellerator compositions before new kernels. Easy work may proceed immediately. A costly design needs an explicit rationale, not a universal framework or mandatory survey.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-ML2-OWNERSHIP",
+        "rule": "GlassHelix owns scientific models, evidence and inference meaning; Torch supplies ordinary ML. CelleraTorch owns framework integration; native Cellerator owns reusable biological math, differentiation, parameter/value contracts, geometry, planning and compiler/runtime. No parallel GH ML runtime or CT kernel home.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-ML2-PRESERVE",
+        "rule": "Preserve successful NF1A, compiler, relation, geometry and CelleraTorch work and separate Todo authorities. No retirement, runtime replacement, old-plan reapply, unrelated cleanup, preprint edits or Ampere-epic activation is authorized.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
         "id": "GH-NF1-INV-AUTHORITY",
         "rule": "Two independent additive schema-3 imports. Never write SQLite/generated authority directly. Import may create active run metadata but never dispatches through package scripts.",
         "scope_json": "{}",
@@ -4972,6 +5031,541 @@
         "mode": "exclusive",
         "path": "todos.md",
         "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "read",
+        "path": "docs/learning",
+        "task_id": "GH-ML2-0000"
+      },
+      {
+        "mode": "read",
+        "path": "planning/learning-v2",
+        "task_id": "GH-ML2-0000"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs/learning",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments/celltag_reprogramming",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/learning-v2",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "pyproject.toml",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "setup.cfg",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "setup.py",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "read",
+        "path": "docs/nf1_adaptive",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "read",
+        "path": "planning/NF1A_NUMERICAL_POLICY_CLARIFICATION.md",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs/learning",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments/celltag_reprogramming",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/learning-v2",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "include/GlassHelix",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "python/glasshelix",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs/learning",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments/celltag_reprogramming",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/learning-v2",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "read",
+        "path": "docs/nf1_adaptive",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "read",
+        "path": "include/GlassHelix",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "read",
+        "path": "python/glasshelix",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs/learning",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/learning-v2",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "pyproject.toml",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "setup.cfg",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "setup.py",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "read",
+        "path": "docs/nf1_adaptive",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "read",
+        "path": "planning/NF1A_NUMERICAL_POLICY_CLARIFICATION.md",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs/learning",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments/celltag_reprogramming",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/learning-v2",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "read",
+        "path": "include/GlassHelix",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "read",
+        "path": "python/glasshelix",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs/learning",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/learning-v2",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "pyproject.toml",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "setup.cfg",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "setup.py",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "read",
+        "path": "docs/nf1_adaptive",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "mode": "read",
+        "path": "planning/NF1A_NUMERICAL_POLICY_CLARIFICATION.md",
+        "task_id": "GH-ML2-REPAIR"
       },
       {
         "mode": "exclusive",
@@ -8447,6 +9041,94 @@
         "prerequisite_task_id": "GH-NF1A-ADOPT",
         "task_id": "GH-NF1A-SYSTEM",
         "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 318,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-REPAIR",
+        "task_id": "GH-ML2-ACCEPT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 319,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-DESIGN",
+        "task_id": "GH-ML2-ACCEPT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 320,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-DATA",
+        "task_id": "GH-ML2-ACCEPT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 321,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-LEARN",
+        "task_id": "GH-ML2-ACCEPT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 322,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-PILOT",
+        "task_id": "GH-ML2-ACCEPT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 323,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-DESIGN",
+        "task_id": "GH-ML2-LEARN",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 324,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-DATA",
+        "task_id": "GH-ML2-PILOT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 325,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-LEARN",
+        "task_id": "GH-ML2-PILOT",
+        "type": "task"
       }
     ],
     "task_invariants": [
@@ -8461,6 +9143,174 @@
       {
         "invariant_id": "science-before-architecture",
         "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "invariant_id": "GH-ML2-BIOLOGY",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "invariant_id": "GH-ML2-EVIDENCE",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "invariant_id": "GH-ML2-HONEST",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "invariant_id": "GH-ML2-IDENTITY",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "invariant_id": "GH-ML2-LEAN",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "invariant_id": "GH-ML2-OWNERSHIP",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "invariant_id": "GH-ML2-PRESERVE",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "invariant_id": "GH-ML2-BIOLOGY",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "invariant_id": "GH-ML2-EVIDENCE",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "invariant_id": "GH-ML2-HONEST",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "invariant_id": "GH-ML2-IDENTITY",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "invariant_id": "GH-ML2-LEAN",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "invariant_id": "GH-ML2-OWNERSHIP",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "invariant_id": "GH-ML2-PRESERVE",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "invariant_id": "GH-ML2-BIOLOGY",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "invariant_id": "GH-ML2-EVIDENCE",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "invariant_id": "GH-ML2-HONEST",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "invariant_id": "GH-ML2-IDENTITY",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "invariant_id": "GH-ML2-LEAN",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "invariant_id": "GH-ML2-OWNERSHIP",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "invariant_id": "GH-ML2-PRESERVE",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "invariant_id": "GH-ML2-BIOLOGY",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "invariant_id": "GH-ML2-EVIDENCE",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "invariant_id": "GH-ML2-HONEST",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "invariant_id": "GH-ML2-IDENTITY",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "invariant_id": "GH-ML2-LEAN",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "invariant_id": "GH-ML2-OWNERSHIP",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "invariant_id": "GH-ML2-PRESERVE",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "invariant_id": "GH-ML2-BIOLOGY",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "invariant_id": "GH-ML2-EVIDENCE",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "invariant_id": "GH-ML2-HONEST",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "invariant_id": "GH-ML2-IDENTITY",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "invariant_id": "GH-ML2-LEAN",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "invariant_id": "GH-ML2-OWNERSHIP",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "invariant_id": "GH-ML2-PRESERVE",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "invariant_id": "GH-ML2-BIOLOGY",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "invariant_id": "GH-ML2-EVIDENCE",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "invariant_id": "GH-ML2-HONEST",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "invariant_id": "GH-ML2-IDENTITY",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "invariant_id": "GH-ML2-LEAN",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "invariant_id": "GH-ML2-OWNERSHIP",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "invariant_id": "GH-ML2-PRESERVE",
+        "task_id": "GH-ML2-REPAIR"
       },
       {
         "invariant_id": "GH-NF1A-INV-AGENCY",
@@ -8683,6 +9533,181 @@
         "title": "Foundational repository and scientific bootstrap",
         "updated_at": "2026-08-26T21:53:04Z",
         "version": 3
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-0000",
+        "kind": "epic",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "",
+        "notes": "",
+        "objective": "Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.",
+        "parallel_policy": "serial",
+        "parent_id": null,
+        "priority": 0,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"validated\"]}",
+        "revision": 238,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "GlassHelix ML2 integration",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-ACCEPT",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.",
+        "notes": "Same-repository ordinary decisions stay with this owner. A task label does not grant cross-authority writes. Source drift can justify reusing an already-correct route with executed evidence.",
+        "objective": "Accept the installed scientific client, selected CT/CE implementation, native-foundation connection and evidence boundaries as one useful slice.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-ML2-0000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
+        "revision": 238,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Qualify the composed toolkit and publish the handoff",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-DATA",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.",
+        "notes": "Same-repository ordinary decisions stay with this owner. A task label does not grant cross-authority writes. Source drift can justify reusing an already-correct route with executed evidence.",
+        "objective": "Build the CellTag experiment adapter/client boundary and audit the actual cohort without inventing trajectories or paired modalities.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-ML2-0000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
+        "revision": 238,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Make the independent experiment evidence usable",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-DESIGN",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.",
+        "notes": "Same-repository ordinary decisions stay with this owner. A task label does not grant cross-authority writes. Source drift can justify reusing an already-correct route with executed evidence.",
+        "objective": "Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-ML2-0000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
+        "revision": 238,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Choose and make executable one biology-purpose learning formulation",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-LEARN",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.",
+        "notes": "Same-repository ordinary decisions stay with this owner. A task label does not grant cross-authority writes. Source drift can justify reusing an already-correct route with executed evidence.",
+        "objective": "Implement the smallest reusable GH evidence/hypothesis/conditioning/result layer and one fitted scientific model using ordinary Torch plus the qualified CT/CE path.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-ML2-0000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
+        "revision": 238,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Express scientific inference over Torch and CelleraTorch",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-PILOT",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.",
+        "notes": "Same-repository ordinary decisions stay with this owner. A task label does not grant cross-authority writes. Source drift can justify reusing an already-correct route with executed evidence.",
+        "objective": "Run one supported CellTag protocol and appropriate controls through the independent experiment package, evaluating the selected biology-purpose computation without requiring a scientific victory.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-ML2-0000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
+        "revision": 238,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Exercise the first scientific consumer",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-REPAIR",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.",
+        "notes": "Same-repository ordinary decisions stay with this owner. A task label does not grant cross-authority writes. Source drift can justify reusing an already-correct route with executed evidence.",
+        "objective": "Recheck and repair the live nullspace extraction and candidate log-weight defects without changing GH scientific ontology.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-ML2-0000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 238,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Repair the retained inference diagnostics",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "version": 1
       },
       {
         "attention_reason": null,
@@ -11339,6 +12364,159 @@
         "version": 1
       },
       {
+        "content_hash": "cf6cad48cafef92a6fed43649e9f4462cb3ed083a2a277ed766c463b10d9afc2",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"One writable main lane avoids an idle coordinator. Bounded delegates can handle independent files; genuine new lanes require an authorized plan amendment.\",\"ordered_tasks\":[\"GH-ML2-DESIGN\",\"GH-ML2-DATA\",\"GH-ML2-REPAIR\",\"GH-ML2-LEARN\",\"GH-ML2-PILOT\",\"GH-ML2-ACCEPT\",\"GH-ML2-0000\"],\"references\":[\"planning/learning-v2/START_CONTROLLER.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"exclusive\"}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:lane_brief:GH-ML2-L-EXEC:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "4aa16baa91d0236f48843440e9503161c18e094ff294b1190361532fea03ee37",
+        "content_json": "{\"boundaries\":[\"GlassHelix owns scientific models, evidence and inference meaning; Torch supplies ordinary ML. CelleraTorch owns framework integration; native Cellerator owns reusable biological math, differentiation, parameter/value contracts, geometry, planning and compiler/runtime. No parallel GH ML runtime or CT kernel home.\",\"Preserve successful NF1A, compiler, relation, geometry and CelleraTorch work and separate Todo authorities. No retirement, runtime replacement, old-plan reapply, unrelated cleanup, preprint edits or Ampere-epic activation is authorized.\",\"Use coarse outcomes and evidence-selected alternatives. Reuse ordinary Torch and existing Cellerator compositions before new kernels. Easy work may proceed immediately. A costly design needs an explicit rationale, not a universal framework or mandatory survey.\"],\"delegated_judgment\":\"Main thread owns consequential design and cross-project acceptance. Use one writable implementer lane per authority and bounded children by default. Routine coding may be quick; do not turn the deeper design into repeated approval ceremonies.\",\"desired_end_state\":\"One useful fitted/conditioned scientific consumer, a real composable CT/CE training path, and one carefully reasoned structured-learning construction with honest qualification.\",\"objective\":\"Deliver biology-purpose scientific learning through GlassHelix, Torch/CelleraTorch and Cellerator without duplicating an ML runtime.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/BIOLOGICAL_ML.md\",\"planning/learning-v2/CROSS_PROJECT.md\"]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:run_charter:-:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "run_charter",
+        "lane_id": null,
+        "owner_scope_json": "{\"run_id\":\"GH-ML2-RUN-V1\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "f961e2253358920d16416cb1c1ec04fda5c15c0858ba7c31f4bca336d05dfa4e",
+        "content_json": "{\"completion_contract\":{\"required\":[\"All local outcomes have executed acceptance and selected-branch evidence. Close last; preserve separate engineering, biological and performance claims.\"]},\"forbidden_mutations\":[],\"gates\":[],\"next_action\":\"Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.\",\"objective\":\"Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.\",\"references\":[\"planning/learning-v2/START_CONTROLLER.md\",\"planning/learning-v2/CROSS_PROJECT.md\"],\"scope\":{\"exclusive_paths\":[],\"read_paths\":[\"planning/learning-v2\",\"docs/learning\"]},\"tests\":[]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:task_brief:GH-ML2-L-EXEC:GH-ML2-0000:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\",\"task_id\":\"GH-ML2-0000\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-ML2-0000",
+        "version": 1
+      },
+      {
+        "content_hash": "52f40e4821d7707acb72449ac4966fa4264ebc28d4429fb2540e5762989f767f",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Run real integrated model/conditioning/serialization tests plus both repaired native diagnostics against the final source pair. Reuse producer tests rather than rerunning every historical suite.\",\"Build/import the external client against installed or explicitly pinned developmental public packages; no CE private source inclusion or new GH numerical runtime.\",\"Verify CE-ML2-TRAIN and the selected CE-ML2-BIO disposition with exact source/build/test receipts and actual installed-consumer evidence. Native changes may be unnecessary; composable integration is not optional.\",\"Report supported dtypes/widths/derivative actions, complete fitting costs and explicit limits. CUDA claims require actual authorized GPU qualification; package lint or CPU reference tests cannot substitute.\",\"Give a minimal invocation, reusable API outline, selected assumptions, next genuine gaps, and separate toolkit/client/biological-run status. Close the aggregate last; do not edit the preprint or old plans.\"]},\"delegated_choices\":[\"Choose API spelling, concrete implementation, test sequence and bounded children. Create extra durable work only for a real scope, ownership or risk boundary.\"],\"forbidden_mutations\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"gates\":[],\"next_action\":\"Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.\",\"objective\":\"Accept the installed scientific client, selected CT/CE implementation, native-foundation connection and evidence boundaries as one useful slice.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/ACCEPTANCE.md\",\"planning/learning-v2/CROSS_PROJECT.md\"],\"scope\":{\"exclusive_paths\":[\"python/glasshelix\",\"bindings\",\"include/GlassHelix\",\"src\",\"tests\",\"cmake\",\"CMakeLists.txt\",\"pyproject.toml\",\"setup.py\",\"setup.cfg\",\"docs/learning\",\"planning/learning-v2\",\"experiments/celltag_reprogramming\"],\"forbidden_paths\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"read_paths\":[\"README.md\",\"AGENTS.md\",\"docs/nf1_adaptive\",\"planning/NF1A_NUMERICAL_POLICY_CLARIFICATION.md\"]},\"tests\":[]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:task_brief:GH-ML2-L-EXEC:GH-ML2-ACCEPT:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\",\"task_id\":\"GH-ML2-ACCEPT\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-ML2-ACCEPT",
+        "version": 1
+      },
+      {
+        "content_hash": "c84e8212a1b8a1eb72b96431553d4b39a57d06caa9e2042185b45d38a93f18d2",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Construct clone-by-original-time-by-modality-by-replicate coverage and deterministic source-ID joins for available inputs; retain missingness, QC decisions and the original day labels.\",\"Default to an independently packaged experiments/celltag_reprogramming consumer. Core GH must not import its dataset constants, preprocessing recipe, labels or plots. Reuse existing data tools rather than building BioPrep or CellShard replacements.\",\"Freeze authorized features/splits and document how clone metadata was produced. Exclude the separate Zfp281 perturbation arms from the nominal-common-forcing cohort unless declared as a separate later test.\",\"Obtain bounded real processed inputs when feasible. If indispensable inputs cannot be obtained, deliver tested format fixtures plus an exact missing-input manifest and real-run configuration; biology remains not_run, not a synthetic success.\"]},\"delegated_choices\":[\"Choose API spelling, concrete implementation, test sequence and bounded children. Create extra durable work only for a real scope, ownership or risk boundary.\"],\"forbidden_mutations\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"gates\":[],\"next_action\":\"Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.\",\"objective\":\"Build the CellTag experiment adapter/client boundary and audit the actual cohort without inventing trajectories or paired modalities.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/ACCEPTANCE.md\",\"planning/learning-v2/EXPERIMENT.md\",\"planning/learning-v2/SOURCES.md\"],\"scope\":{\"exclusive_paths\":[\"experiments/celltag_reprogramming\",\"docs/learning\",\"planning/learning-v2\"],\"forbidden_paths\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"read_paths\":[\"python/glasshelix\",\"include/GlassHelix\",\"tests\",\"README.md\",\"AGENTS.md\"]},\"tests\":[]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:task_brief:GH-ML2-L-EXEC:GH-ML2-DATA:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\",\"task_id\":\"GH-ML2-DATA\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-ML2-DATA",
+        "version": 1
+      },
+      {
+        "content_hash": "96800370a833f8162df4fc9debe5c783bbefd78bec32956e95a2aab2b63d5740",
+        "content_json": "{\"completion_contract\":{\"required\":[\"State the question, allowed observations, model level, latent/state/forcing roles, principal non-identifiabilities and the chosen primary experiment arm. A conditional choice may remain provisional until the data coverage audit.\",\"Use BIOLOGICAL_ML.md to select/refine one justified learning construction or reject it in favor of a better-supported one. Record the biology assumption, exact expression, trainable unknowns, derivative/contribution meaning, exploitable structure and a counterexample/control. No new kernel is required merely to finish design.\",\"Provide a small executable Torch mathematical reference or reuse an existing equivalent. Compare the same model under straightforward and structure-preserving computation; do not confuse changing the model with accelerating it.\",\"Publish one concise consumer demand and decision record separating ordinary Torch, CT exposure/lifecycle, CE reusable math and optional compiler work. Ordinary wiring and data work need not await a universal design review.\"]},\"delegated_choices\":[\"The worked shared-support/activity candidate is preferred for low initial cost, not compulsory. A measured scientific reason may select n-ary or another formulation.\",\"The supplied algebra witness saves derivation work; inspect its limits and adapt it rather than rerunning an open-ended literature survey.\",\"A few pages and executable evidence can settle this outcome. Do not manufacture unresolved questions to delay obvious implementation.\"],\"forbidden_mutations\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"gates\":[],\"next_action\":\"Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.\",\"objective\":\"Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/ACCEPTANCE.md\",\"planning/learning-v2/BIOLOGICAL_ML.md\",\"planning/learning-v2/EXPERIMENT.md\",\"planning/learning-v2/references/shared_support_witness.py\"],\"scope\":{\"exclusive_paths\":[\"docs/learning\",\"planning/learning-v2\",\"experiments/celltag_reprogramming\"],\"forbidden_paths\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"read_paths\":[\"python/glasshelix\",\"include/GlassHelix\",\"src\",\"tests\",\"README.md\",\"AGENTS.md\",\"docs/nf1_adaptive\"]},\"tests\":[]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:task_brief:GH-ML2-L-EXEC:GH-ML2-DESIGN:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\",\"task_id\":\"GH-ML2-DESIGN\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-ML2-DESIGN",
+        "version": 1
+      },
+      {
+        "content_hash": "40bb6d2db83d39f5b9b4889fee0b4a7b93c900f87af697632ad37f46e0b03455",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Fit genuinely unknown shared law quantities and local hidden/initial quantities. Reuse Torch modules, parameter registration, autograd, optimizers and state dictionaries; GH adds scientific roles, evidence permissions, hypotheses, conditioning and interpretation, not a parallel ML engine.\",\"Separate global fitting, retrospective reconstruction and prospective held-out conditioning. Freeze global quantities for conditioning, prohibit target access and preserve unresolved forcing/state and whole alternative explanations.\",\"Connect at least one fitted component to the existing NF1A typed system/evolution/interrogation boundary, comparing the same frozen values and declared observable or selected response. Do not translate arbitrary Torch models into a new GH IR or force every model to be Markovian.\",\"Use the CE-ML2-TRAIN producer path as an actual composed trainable operation; a pure-Torch prototype can proceed while it is developed but is not the final integrated-substrate acceptance. Capability flags, not mere class names, control supported responses.\",\"Save underlying model state through its actual owner plus a GH scientific manifest. Reload in a fresh process with stable logical identity and reproduce predictions; do not serialize pointers, streams or stale prepared caches.\"]},\"delegated_choices\":[\"Keep evidence views, families, problems, strategies and explanations conceptually separable without mandating five class hierarchies.\",\"Use a small horizon model first where adequate; a neural component, memory model or mechanistic component can be chosen explicitly.\",\"Use native GH bindings only for genuinely GH scientific facilities; they must not wrap CE generic ML a second time.\"],\"forbidden_mutations\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"gates\":[],\"next_action\":\"Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.\",\"objective\":\"Implement the smallest reusable GH evidence/hypothesis/conditioning/result layer and one fitted scientific model using ordinary Torch plus the qualified CT/CE path.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/ACCEPTANCE.md\",\"planning/learning-v2/CROSS_PROJECT.md\",\"planning/learning-v2/EXPERIMENT.md\"],\"scope\":{\"exclusive_paths\":[\"python/glasshelix\",\"bindings\",\"include/GlassHelix\",\"src\",\"tests\",\"cmake\",\"CMakeLists.txt\",\"pyproject.toml\",\"setup.py\",\"setup.cfg\",\"docs/learning\",\"planning/learning-v2\"],\"forbidden_paths\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"read_paths\":[\"README.md\",\"AGENTS.md\",\"docs/nf1_adaptive\",\"planning/NF1A_NUMERICAL_POLICY_CLARIFICATION.md\"]},\"tests\":[]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:task_brief:GH-ML2-L-EXEC:GH-ML2-LEARN:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\",\"task_id\":\"GH-ML2-LEARN\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-ML2-LEARN",
+        "version": 1
+      },
+      {
+        "content_hash": "47d0243676bb6b2cbfd1ffd614772b4a861545dd11b18416fcf31fc36a3ab7ae",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Implement one coverage-supported primary arm with explicit evidence cutoff: blind population law, retrospective early-state reconstruction, or prospective family history. Lineage may be inference evidence in the latter arms but cannot simultaneously be called wholly withheld.\",\"Compare snapshot-only and same-authorized-information non-dynamical controls as applicable. Preserve mixed clones, uncertainty and the distinction between sampled abundance and fate/transition probability.\",\"Evaluate a CT/CE biology-aware realization against the same model in straightforward Torch; record correctness, full-iteration cost and memory. Use CE-ML2-BIO evidence; lack of speedup permits non-promotion, not deletion of unfavorable evidence.\",\"Use withheld ATAC only for the declared grounding/validation role and a separately fitted probe where required. Report molecular correlation separately from identified mechanism.\",\"Run a bounded real feasibility pilot when verified data permits; otherwise run explicitly synthetic format fixtures and document the exact biological blocker. No model-performance win, unique hidden state or complete paper result is required.\"]},\"delegated_choices\":[\"Choose API spelling, concrete implementation, test sequence and bounded children. Create extra durable work only for a real scope, ownership or risk boundary.\"],\"forbidden_mutations\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"gates\":[],\"next_action\":\"Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.\",\"objective\":\"Run one supported CellTag protocol and appropriate controls through the independent experiment package, evaluating the selected biology-purpose computation without requiring a scientific victory.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/ACCEPTANCE.md\",\"planning/learning-v2/EXPERIMENT.md\",\"planning/learning-v2/BIOLOGICAL_ML.md\",\"planning/learning-v2/CROSS_PROJECT.md\"],\"scope\":{\"exclusive_paths\":[\"experiments/celltag_reprogramming\",\"docs/learning\",\"planning/learning-v2\"],\"forbidden_paths\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"read_paths\":[\"python/glasshelix\",\"include/GlassHelix\",\"tests\",\"README.md\",\"AGENTS.md\"]},\"tests\":[]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:task_brief:GH-ML2-L-EXEC:GH-ML2-PILOT:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\",\"task_id\":\"GH-ML2-PILOT\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-ML2-PILOT",
+        "version": 1
+      },
+      {
+        "content_hash": "4834b831417ef0527acbb42d68c24660194bf4dced239bf0b2a47f9b00bf5ac8",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Test the actual native rank/nullspace code on nontrivial rectangular matrices, multiple null directions and documented scaling; fix column-major VT row extraction if still present.\",\"Preserve authoritative log weights in the existing probabilistic candidate strategy; finite evidence underflow must not become permanent pruning. Test explicit zero prior separately and same conditionally independent evidence in different orders/batches.\",\"Run affected native regressions. These repairs do not make all future uncertainty probabilistic, and they are not a prerequisite for unrelated Torch/data prototyping.\"]},\"delegated_choices\":[\"Choose API spelling, concrete implementation, test sequence and bounded children. Create extra durable work only for a real scope, ownership or risk boundary.\"],\"forbidden_mutations\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"gates\":[],\"next_action\":\"Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.\",\"objective\":\"Recheck and repair the live nullspace extraction and candidate log-weight defects without changing GH scientific ontology.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/ACCEPTANCE.md\",\"planning/learning-v2/SOURCE_REVIEW.md\"],\"scope\":{\"exclusive_paths\":[\"python/glasshelix\",\"bindings\",\"include/GlassHelix\",\"src\",\"tests\",\"cmake\",\"CMakeLists.txt\",\"pyproject.toml\",\"setup.py\",\"setup.cfg\",\"docs/learning\",\"planning/learning-v2\"],\"forbidden_paths\":[\"preprint\",\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\"],\"read_paths\":[\"README.md\",\"AGENTS.md\",\"docs/nf1_adaptive\",\"planning/NF1A_NUMERICAL_POLICY_CLARIFICATION.md\"]},\"tests\":[]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "id": "GH-ML2-RUN-V1:task_brief:GH-ML2-L-EXEC:GH-ML2-REPAIR:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-ML2-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-ML2-L-EXEC\",\"run_id\":\"GH-ML2-RUN-V1\",\"task_id\":\"GH-ML2-REPAIR\"}",
+        "run_id": "GH-ML2-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-ML2-REPAIR",
+        "version": 1
+      },
+      {
         "content_hash": "594e88059acf6843731b717a45faa7d477c82885a2888d88c20d8ed83bb684a3",
         "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"ordered_tasks\":[\"GH-NF1-A01\",\"GH-NF1-A02\",\"GH-NF1-A03\",\"GH-NF1-A04\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
         "created_at": "2026-09-08T20:20:50Z",
@@ -13742,6 +14920,76 @@
     ],
     "workflow_lane_tasks": [
       {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-09-27T12:53:37Z",
+        "lane_id": "GH-ML2-L-EXEC",
+        "position": 0,
+        "revision": 238,
+        "state": "queued",
+        "task_id": "GH-ML2-DESIGN"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-09-27T12:53:37Z",
+        "lane_id": "GH-ML2-L-EXEC",
+        "position": 1,
+        "revision": 238,
+        "state": "queued",
+        "task_id": "GH-ML2-DATA"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-09-27T12:53:37Z",
+        "lane_id": "GH-ML2-L-EXEC",
+        "position": 2,
+        "revision": 238,
+        "state": "queued",
+        "task_id": "GH-ML2-REPAIR"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-09-27T12:53:37Z",
+        "lane_id": "GH-ML2-L-EXEC",
+        "position": 3,
+        "revision": 238,
+        "state": "queued",
+        "task_id": "GH-ML2-LEARN"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-09-27T12:53:37Z",
+        "lane_id": "GH-ML2-L-EXEC",
+        "position": 4,
+        "revision": 238,
+        "state": "queued",
+        "task_id": "GH-ML2-PILOT"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-09-27T12:53:37Z",
+        "lane_id": "GH-ML2-L-EXEC",
+        "position": 5,
+        "revision": 238,
+        "state": "queued",
+        "task_id": "GH-ML2-ACCEPT"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-09-27T12:53:37Z",
+        "lane_id": "GH-ML2-L-EXEC",
+        "position": 6,
+        "revision": 238,
+        "state": "queued",
+        "task_id": "GH-ML2-0000"
+      },
+      {
         "activated_at": "2026-09-09T10:53:59Z",
         "completed_at": "2026-09-09T10:58:04Z",
         "enqueued_at": "2026-09-08T20:20:50Z",
@@ -14745,6 +15993,18 @@
     "workflow_lanes": [
       {
         "context_cursor": 0,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-L-EXEC",
+        "parent_lane_id": null,
+        "revision": 238,
+        "role": "implementer",
+        "run_id": "GH-ML2-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-09-27T12:53:37Z",
+        "workspace_mode": "exclusive"
+      },
+      {
+        "context_cursor": 0,
         "created_at": "2026-09-08T20:20:50Z",
         "id": "GH-NF1-L-A",
         "parent_lane_id": "GH-NF1-L-COORD",
@@ -15184,6 +16444,16 @@
     "workflow_rendezvous_participants": [],
     "workflow_run_charters": [
       {
+        "content_hash": "4aa16baa91d0236f48843440e9503161c18e094ff294b1190361532fea03ee37",
+        "content_json": "{\"boundaries\":[\"GlassHelix owns scientific models, evidence and inference meaning; Torch supplies ordinary ML. CelleraTorch owns framework integration; native Cellerator owns reusable biological math, differentiation, parameter/value contracts, geometry, planning and compiler/runtime. No parallel GH ML runtime or CT kernel home.\",\"Preserve successful NF1A, compiler, relation, geometry and CelleraTorch work and separate Todo authorities. No retirement, runtime replacement, old-plan reapply, unrelated cleanup, preprint edits or Ampere-epic activation is authorized.\",\"Use coarse outcomes and evidence-selected alternatives. Reuse ordinary Torch and existing Cellerator compositions before new kernels. Easy work may proceed immediately. A costly design needs an explicit rationale, not a universal framework or mandatory survey.\"],\"delegated_judgment\":\"Main thread owns consequential design and cross-project acceptance. Use one writable implementer lane per authority and bounded children by default. Routine coding may be quick; do not turn the deeper design into repeated approval ceremonies.\",\"desired_end_state\":\"One useful fitted/conditioned scientific consumer, a real composable CT/CE training path, and one carefully reasoned structured-learning construction with honest qualification.\",\"objective\":\"Deliver biology-purpose scientific learning through GlassHelix, Torch/CelleraTorch and Cellerator without duplicating an ML runtime.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/BIOLOGICAL_ML.md\",\"planning/learning-v2/CROSS_PROJECT.md\"]}",
+        "created_at": "2026-09-27T12:53:37Z",
+        "creation_revision": 238,
+        "run_id": "GH-ML2-RUN-V1",
+        "superseded_at": null,
+        "superseded_revision": null,
+        "version": 1
+      },
+      {
         "content_hash": "5b8faecf4d905ac627edbfdfaf1964b3cff2ec4646a529cadb10b066b4bbbdec",
         "content_json": "{\"acceptance_conditions\":[\"Every child task accepted and integrated; GH-NF1-CP-M90 reached with real evidence and the exact final source pair.\"],\"boundaries\":[\"One GlassHelix strategic controller coordinates both independent authorities; every substantial worker is first class.\",\"Read the paired scope and autonomy charter. Adjust scopes/interfaces through authority, preserve work, integrate and push incrementally.\",\"No biological experiment, full learning model, CellShard program, broad compiler or old CE-AMP activation.\",\"Import may create active run metadata but no worker dispatch; later user launch authorizes the whole accepted program.\"],\"invariants\":[\"GH-NF1-INV-SCOPE\",\"GH-NF1-INV-OWNERS\",\"GH-NF1-INV-IDENTITY\",\"GH-NF1-INV-OBSERVATION\",\"GH-NF1-INV-COMBINATORIAL\",\"GH-NF1-INV-LIFETIME\",\"GH-NF1-INV-DIFFERENTIAL\",\"GH-NF1-INV-NUMERIC\",\"GH-NF1-INV-EVIDENCE\",\"GH-NF1-INV-AUTONOMY\",\"GH-NF1-INV-PRESERVE\",\"GH-NF1-INV-AUTHORITY\",\"GH-NF1-INV-CROSS\",\"GH-NF1-INV-PERFORMANCE\"],\"objective\":\"GlassHelix native execution and interrogation foundation; execute the approved toolbox program autonomously after user controller launch, not during manual import.\"}",
         "created_at": "2026-09-08T20:20:50Z",
@@ -15205,6 +16475,16 @@
       }
     ],
     "workflow_runs": [
+      {
+        "active_charter_version": 1,
+        "completed_at": null,
+        "created_at": "2026-09-27T12:53:37Z",
+        "id": "GH-ML2-RUN-V1",
+        "revision": 238,
+        "root_task_id": "GH-ML2-0000",
+        "status": "active",
+        "updated_at": "2026-09-27T12:53:37Z"
+      },
       {
         "active_charter_version": 1,
         "completed_at": "2026-09-16T17:09:53Z",
