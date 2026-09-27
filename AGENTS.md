@@ -5,6 +5,11 @@ repository is archaeological; file presence is not an architectural decision.
 
 ## Tool routing
 
+- Use configured Codex subagents for bounded research, implementation, tests and
+  review under the root's task authority. Local workers are reserved for Project
+  Control observers for now; do not use `delegate_task` or `local-coding-worker`
+  for implementation delegation. The root retains task lifecycle and acceptance.
+
 - Use **project-control** first for read-only inspection of current project
   identity, architecture, decisions, evidence, and frontier.
 - Use **coding-workflow** as the authoritative front door for substantial code
