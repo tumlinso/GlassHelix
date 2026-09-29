@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T12:53:37Z",
+  "generated_at": "2026-09-29T11:59:51Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 238,
+  "project_revision": 239,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -2657,6 +2657,16 @@
         "revision": 238,
         "seq": 238,
         "timestamp": "2026-09-27T12:53:37Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+        "entity_type": "project",
+        "event_type": "plan.applied",
+        "payload_json": "{\"plan_digest\": \"f7a32c1f1f67234fb0ace843484c7057c7f34b9a9f740ef5b590cee42642b018\", \"source\": \"project-control\"}",
+        "revision": 239,
+        "seq": 239,
+        "timestamp": "2026-09-29T11:59:51Z"
       }
     ],
     "evidence": [
@@ -3168,6 +3178,58 @@
         "task_id": "GH-BOOTSTRAP",
         "type": "pattern",
         "valid": 1
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
+        "id": "GH-DOCS-10-CHECK",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 239,
+        "status": "pending",
+        "task_id": "GH-DOCS-10",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
+        "id": "GH-DOCS-20-CHECK",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 239,
+        "status": "pending",
+        "task_id": "GH-DOCS-20",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
+        "id": "GH-DOCS-30-CHECK",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 239,
+        "status": "pending",
+        "task_id": "GH-DOCS-30",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--final\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
+        "id": "GH-DOCS-90-CHECK",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 239,
+        "status": "pending",
+        "task_id": "GH-DOCS-90",
+        "type": "command",
+        "valid": 0
       },
       {
         "checkpoint_id": null,
@@ -4765,6 +4827,20 @@
     "invariants": [
       {
         "enforcement": null,
+        "id": "GH-DOCS-EVIDENCE",
+        "rule": "Public results are source-linked and scoped. No invented data, timing-phase substitution, hidden selection of only winning points, or historical summary presented as a new run. Existing GPU resource control remains required.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-DOCS-SCOPE",
+        "rule": "Documentation-first, at most one coherent mechanical source cluster by default. Preserve numerical/scientific semantics, live ownership, generated authority state and immutable evidence. Final source paths and status must be checked after intervening packages.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
         "id": "GH-ML2-BIOLOGY",
         "rule": "A biology-purpose learning operation needs an explicit model assumption, semantic contract, exact reference and identified computational advantage to test. Biological labels or a generic ML kernel alone do not establish this. Model restrictions are hypotheses, not truths or hardware requirements.",
         "scope_json": "{}",
@@ -5031,6 +5107,566 @@
         "mode": "exclusive",
         "path": "todos.md",
         "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "mode": "exclusive",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CONTRIBUTING.md",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "exclusive",
+        "path": "README.md",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/doc-refresh",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "forbidden",
+        "path": "extern",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "bench",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "examples",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "mode": "exclusive",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CONTRIBUTING.md",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "Classifier",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "README.md",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "archive",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bench",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "examples",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/doc-refresh",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tools",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "forbidden",
+        "path": "extern",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "bench",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "examples",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "mode": "exclusive",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CONTRIBUTING.md",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "Classifier",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "README.md",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "archive",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bench",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "examples",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/doc-refresh",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tools",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "forbidden",
+        "path": "extern",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "bench",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "examples",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "mode": "exclusive",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CONTRIBUTING.md",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "Classifier",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "README.md",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "archive",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bench",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "examples",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/doc-refresh",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tools",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "forbidden",
+        "path": "extern",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "bench",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "examples",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-DOCS-90"
       },
       {
         "mode": "read",
@@ -9129,6 +9765,39 @@
         "prerequisite_task_id": "GH-ML2-LEARN",
         "task_id": "GH-ML2-PILOT",
         "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 326,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-DOCS-10",
+        "task_id": "GH-DOCS-20",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 327,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-DOCS-20",
+        "task_id": "GH-DOCS-30",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 328,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-DOCS-30",
+        "task_id": "GH-DOCS-90",
+        "type": "task"
       }
     ],
     "task_invariants": [
@@ -9533,6 +10202,131 @@
         "title": "Foundational repository and scientific bootstrap",
         "updated_at": "2026-08-26T21:53:04Z",
         "version": 3
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-29T11:59:51Z",
+        "id": "GH-DOCS-000",
+        "kind": "epic",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "",
+        "notes": "Read planning/doc-refresh/START_LOCAL.md and shared/TASKS.md. Local authority only; preserve current claims and source.",
+        "objective": "Apply the prewritten public/agent/developer/status hierarchy, perform only useful small moves, and qualify selected result displays. Part of DOCS-REFRESH-2026-09; authority remains local.",
+        "parallel_policy": "serial",
+        "parent_id": null,
+        "priority": 0,
+        "result": null,
+        "result_policy_json": "{}",
+        "revision": 239,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "GlassHelix documentation-first cleanup and selected evidence",
+        "updated_at": "2026-09-29T11:59:51Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-29T11:59:51Z",
+        "id": "GH-DOCS-10",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "",
+        "notes": "Use the prepared shared/TASKS.md outcome and migration map. Preserve dirty work, managed agent instructions and old evidence. Bound source changes and measurements; final paths are local decisions.",
+        "objective": "Refresh source/claims after prior packages; classify important documents; stage the already-written README, design, status, source-map and agent pages without rederiving intent.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-DOCS-000",
+        "priority": 0,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
+        "revision": 239,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Reconcile the current tree and apply the prewritten documentation",
+        "updated_at": "2026-09-29T11:59:51Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-29T11:59:51Z",
+        "id": "GH-DOCS-20",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "",
+        "notes": "Use the prepared shared/TASKS.md outcome and migration map. Preserve dirty work, managed agent instructions and old evidence. Bound source changes and measurements; final paths are local decisions.",
+        "objective": "Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-DOCS-000",
+        "priority": 0,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
+        "revision": 239,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Perform bounded moves and bind final source/build paths",
+        "updated_at": "2026-09-29T11:59:51Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-29T11:59:51Z",
+        "id": "GH-DOCS-30",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "",
+        "notes": "Use the prepared shared/TASKS.md outcome and migration map. Preserve dirty work, managed agent instructions and old evidence. Bound source changes and measurements; final paths are local decisions.",
+        "objective": "Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-DOCS-000",
+        "priority": 0,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
+        "revision": 239,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Qualify and curate the selected result displays",
+        "updated_at": "2026-09-29T11:59:51Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-09-29T11:59:51Z",
+        "id": "GH-DOCS-90",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "",
+        "notes": "Use the prepared shared/TASKS.md outcome and migration map. Preserve dirty work, managed agent instructions and old evidence. Bound source changes and measurements; final paths are local decisions.",
+        "objective": "Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.",
+        "parallel_policy": "serial",
+        "parent_id": "GH-DOCS-000",
+        "priority": 0,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
+        "revision": 239,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Validate the human/agent reading paths and publish the local handoff",
+        "updated_at": "2026-09-29T11:59:51Z",
+        "version": 1
       },
       {
         "attention_reason": null,

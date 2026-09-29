@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "id": "gh-lifecycle",
+  "project": "glasshelix",
+  "title": "A supplied-system lifecycle, not a kernel-only claim",
+  "question": "What does the existing execution → response → observation → inference path actually cost?",
+  "evidence_state": "recorded_summary",
+  "source": {
+    "path": "docs/nf1_adaptive/performance/GH_ACCEPT_COMPLETE_PROGRAM.md",
+    "observed_at": "2026-09-29",
+    "repository_head_when_read": "d523e4e1e775ac435996d8b9d08d3edffc685a00",
+    "file_identity": "98cba775ed230170cb7480e5681340991d10dfdf071159e418bcbc6ba48d238b",
+    "measurement_revision": "1c22d320fd65b21976f159792e2e93b2c4af7120",
+    "raw_paths": [],
+    "basis": "Transcribed from an inspected repository summary; not a new run.",
+    "raw_sha256": "0f35c9168a4f201ddfaae4578f302325c21810f3ca80c85af03eb19049748257"
+  },
+  "metric": {
+    "unit": "us",
+    "timing_scope": "reported finite lifecycle including setup share, output/response downloads and GH work",
+    "statistic": "median",
+    "uncertainty": "min–max of five raw rows per case/regime; not a confidence interval"
+  },
+  "hardware": "Tesla V100-SXM2-16GB / sm_70 (reported)",
+  "environment": {
+    "cuda": "12.9 (reported)",
+    "precision": "Selected direct-map/JVP path; FP16 response not supported by this benchmark",
+    "warmups": null,
+    "repeats": 5
+  },
+  "series": [
+    {
+      "key": "cold",
+      "label": "Cold lifecycle"
+    },
+    {
+      "key": "resident",
+      "label": "Finite-resident lifecycle"
+    }
+  ],
+  "rows": [
+    {
+      "case": "Width 16 · multiply · 1 candidate · 1 step",
+      "x": 0,
+      "values": {
+        "cold": 391.864,
+        "resident": 176.766
+      },
+      "bounds": {
+        "cold": [
+          383.657,
+          755.364
+        ],
+        "resident": [
+          175.478,
+          193.553
+        ]
+      },
+      "activity": "all",
+      "response_directions": 2
+    },
+    {
+      "case": "Width 33 · tanh · 1 candidate · 1 step",
+      "x": 1,
+      "values": {
+        "cold": 319.61,
+        "resident": 115.706
+      },
+      "bounds": {
+        "cold": [
+          313.033,
+          350.651
+        ],
+        "resident": [
+          113.436,
+          126.477
+        ]
+      },
+      "activity": "half",
+      "response_directions": 1
+    },
+    {
+      "case": "Width 33 · multiply · 4 candidates · 4 steps",
+      "x": 2,
+      "values": {
+        "cold": 2487.87,
+        "resident": 2121.425
+      },
+      "bounds": {
+        "cold": [
+          2457.764,
+          2538.335
+        ],
+        "resident": [
+          2116.426,
+          2151.994
+        ]
+      },
+      "activity": "half",
+      "response_directions": 2
+    },
+    {
+      "case": "Width 65 · tanh · 4 candidates · 4 steps",
+      "x": 3,
+      "values": {
+        "cold": 1487.143,
+        "resident": 1136.661
+      },
+      "bounds": {
+        "cold": [
+          1463.542,
+          1527.603
+        ],
+        "resident": [
+          1110.585,
+          1141.176
+        ]
+      },
+      "activity": "churn",
+      "response_directions": 1
+    },
+    {
+      "case": "Width 65 · multiply · 4 candidates · 4 steps",
+      "x": 4,
+      "values": {
+        "cold": 2526.272,
+        "resident": 2153.613
+      },
+      "bounds": {
+        "cold": [
+          2518.457,
+          2561.548
+        ],
+        "resident": [
+          2139.353,
+          2198.871
+        ]
+      },
+      "activity": "churn",
+      "response_directions": 2
+    }
+  ],
+  "chart": "interval",
+  "claim": "Five supplied-system cases completed forward/JVP analytic checks and observation/inference. These lifecycle regimes are not an algorithm-versus-baseline speedup comparison.",
+  "limitations": [
+    "Five raw measurements per regime; shown ranges are min–max, not confidence intervals.",
+    "One fifth of setup and teardown is assigned to each resident reuse. Full per-use downloads remain.",
+    "Activity labels describe input-map updates, not compact active execution.",
+    "Widths/operations/candidate counts differ between rows, so do not rank them as competing implementations.",
+    "The raw CSV is under a private Todo runtime path: export a small verified portable copy before public display."
+  ],
+  "reproduce": "Resolve the current benchmark driver and source-specific command from the original record; run under the existing assigned resources only if a refresh is justified.",
+  "selection": {
+    "recommended": true,
+    "selected": false,
+    "rationale": "Prepared candidate; final editor must verify evidence and select for explanatory value, not maximum speedup."
+  },
+  "review": {
+    "reviewer": null,
+    "verified_at_head": null,
+    "source_verified": false,
+    "method_verified": false,
+    "public_evidence_paths": []
+  },
+  "figure_context": "V100-SXM2-16GB · five samples per scenario · full forward/response lifecycle"
+}

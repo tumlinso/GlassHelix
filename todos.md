@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `238`
+Project revision: `239`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -25,6 +25,11 @@ Project revision: `238`
 - `GH-NF1A-RELEASE` | kind: integration_task | status: done | parent: GH-NF1A-0000 | objective: Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.
 - `GH-PREPRINT` | kind: workstream | status: planned | parent: - | objective: Develop the GlassHelix paper in preprint/ while keeping every draft, claim, analysis, experiment, and conclusion explicitly preliminary until supported by evidence.
 - `GH-SCIENCE-FOUNDATIONS` | kind: workstream | status: planned | parent: - | objective: Investigate sufficient biological state, identifiable hidden dynamics and causal structure, evidence domains for mechanism, uncertainty, and non-identifiability without prematurely selecting an implementation architecture.
+- `GH-DOCS-000` | kind: epic | status: planned | parent: - | objective: Apply the prewritten public/agent/developer/status hierarchy, perform only useful small moves, and qualify selected result displays. Part of DOCS-REFRESH-2026-09; authority remains local.
+- `GH-DOCS-10` | kind: task | status: planned | parent: GH-DOCS-000 | objective: Refresh source/claims after prior packages; classify important documents; stage the already-written README, design, status, source-map and agent pages without rederiving intent.
+- `GH-DOCS-20` | kind: task | status: planned | parent: GH-DOCS-000 | objective: Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.
+- `GH-DOCS-30` | kind: task | status: planned | parent: GH-DOCS-000 | objective: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
+- `GH-DOCS-90` | kind: task | status: planned | parent: GH-DOCS-000 | objective: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
 - `GH-ML2-0000` | kind: epic | status: planned | parent: - | objective: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
 - `GH-NF1-A01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-A02` | kind: task | status: done | parent: GH-NF1-0000 | objective: 

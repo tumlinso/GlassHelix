@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "gh-discrimination",
+  "project": "glasshelix",
+  "title": "When an intervention separates otherwise compatible alternatives",
+  "question": "Which evidence changes support for whole alternatives?",
+  "evidence_state": "pending",
+  "source": {
+    "path": null,
+    "basis": "New, bounded capability specification; not executed against GlassHelix."
+  },
+  "metric": {
+    "unit": "probability",
+    "statistic": "whole-candidate normalized support",
+    "timing_scope": "not a performance metric",
+    "uncertainty": "not applicable to exact synthetic oracle"
+  },
+  "hardware": "unmeasured",
+  "environment": {},
+  "series": [
+    {
+      "key": "positive",
+      "label": "Positive response candidate"
+    },
+    {
+      "key": "negative",
+      "label": "Negative response candidate"
+    }
+  ],
+  "rows": [],
+  "chart": "bar",
+  "claim": "No result yet. Execute actual library calls and compare with the separate oracle.",
+  "limitations": [
+    "Synthetic supplied alternatives only; not general discovery or biological validation."
+  ],
+  "reproduce": "Follow benchmarks/GH_CAPABILITY.md; no trainer, dataset download or new runtime.",
+  "selection": {
+    "recommended": false,
+    "selected": false,
+    "rationale": "Activate only if existing capability evidence is not clear enough for a visitor."
+  },
+  "review": {
+    "reviewer": null,
+    "verified_at_head": null,
+    "source_verified": false,
+    "method_verified": false,
+    "public_evidence_paths": []
+  },
+  "figure_context": "Optional synthetic example · no GlassHelix execution yet"
+}

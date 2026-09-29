@@ -1,0 +1,9 @@
+{
+  "id": "glasshelix",
+  "name": "GlassHelix",
+  "snapshot_head": "d523e4e1e775ac435996d8b9d08d3edffc685a00",
+  "snapshot_todo_revision": 238,
+  "snapshot_dirty": false,
+  "observed_at": "2026-09-29",
+  "package_version": 1
+}
