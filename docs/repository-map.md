@@ -1,3 +1,5 @@
+> **Historical map (2026-08-26).** This bootstrap-era classification records the prior tree and reconciliation. It is not current source navigation. Use the [current source map](development/source-map.md) for entry points and the [current implementation snapshot](status/current.md) for present capabilities.
+
 # Repository map
 
 This map prevents historical and experimental material from being mistaken for

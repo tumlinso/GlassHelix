@@ -6,7 +6,7 @@ Read the [design](docs/design/overview.md) for intent, [current snapshot](docs/s
 
 ## Operate within the current authority
 
-Use the installed Project Control/Codex front door and this repository's Todo authority. Take one bounded outcome, inspect only what it needs, preserve other claims/dirty work, and finish with actual evidence. Use configured subagents only for useful bounded work; the owner retains acceptance. Never edit SQLite, generated Todo views, recovery snapshots or generated context indexes by hand. Keep managed workflow blocks intact.
+Use the installed Project Control/Codex front door and this repository's Todo authority. Take one bounded outcome, inspect only what it needs, preserve other claims/dirty work, and finish with actual evidence. Use configured Codex subagents for bounded research, implementation, tests and review; the owner retains workflow lifecycle and final acceptance. Do not use Project Control `delegate_task` or the `local-coding-worker` service for ordinary delegated implementation; local workers are reserved for Project Control observers. Never edit SQLite, generated Todo views, recovery snapshots or generated context indexes by hand. Keep managed workflow blocks intact.
 
 ## Preserve the architecture while changing the implementation
 

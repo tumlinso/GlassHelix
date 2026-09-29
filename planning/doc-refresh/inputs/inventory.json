@@ -1,0 +1,3592 @@
+{
+  "repository": "/home/tumlinson/GlassHelix",
+  "head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+  "status": " M .todo-orchestrator/state.snapshot.json\n M todo-status.md\n M todos.md\n M todos/gh-docs-000.md\n M todos/gh-docs-10.md\n M todos/gh-docs-20.md\n M todos/gh-docs-30.md\n M todos/gh-docs-90.md\n M todos/gh-ml2-design.md\n",
+  "tracked_count": 597,
+  "untracked_count": 0,
+  "files": [
+    {
+      "path": ".DS_Store",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": ".gitignore",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": ".gitmodules",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": ".idea/.gitignore",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": ".idea/GlassHelix.iml",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": ".idea/misc.xml",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": ".idea/modules.xml",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": ".todo-orchestrator/project.json",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": ".todo-orchestrator/state.snapshot.json",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "AGENTS.md",
+      "tracked": true,
+      "category": "agent-guidance",
+      "decision": "review"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "Classifier/preprocess.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "README.md",
+      "tracked": true,
+      "category": "public-entry",
+      "decision": "review"
+    },
+    {
+      "path": "archive/1_SAE_GC30M/Prototype.py",
+      "tracked": true,
+      "category": "historical-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "archive/1_SAE_GC30M/Transformer.py",
+      "tracked": true,
+      "category": "historical-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "archive/BidirectionalMap.hh",
+      "tracked": true,
+      "category": "historical-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "archive/CMakeListsbackup.txt",
+      "tracked": true,
+      "category": "historical-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "bench/native_foundation/nf1_complete_program.cu",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "bindings/python/nf1_module.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "cmake/GlassHelixFoundationConfig.cmake.in",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "colab.ipynb",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "data/preprocess/classifier.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "data/preprocess/dumpArrow.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "data/preprocess/dumpTokenDict.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "data/preprocess/extractCounts.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "data/preprocess/preprocessMultiomeFB.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/baseline/adopted-scope.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/baseline/source-disposition.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/controller/authority-map.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/controller/authority-observation.json",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/controller/autonomy-and-recovery.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/integration/m00-review.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/records/gh-nf1-a01.json",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/records/gh-nf1-a02.json",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/records/gh-nf1-a03.json",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/records/gh-nf1-a04.json",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "docs/native_foundation_v1/records/gh-nf1-m00.json",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/access/NF1_ACCESS.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/adoption/ADOPTION_PRESERVATION_20260916.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/adoption/OWNER_RECOVERY.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/analysis/ANALYZE.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/control/CONTINUATION_20260919.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/observation/README.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/performance/GH_ACCEPT_COMPLETE_PROGRAM.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/nf1_adaptive/qualification/INTEGRATED_TOOLBOX.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "docs/repository-map.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "examples/native_foundation_v1/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "examples/native_foundation_v1/README.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "examples/native_foundation_v1/fixture.hh",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "examples/native_foundation_v1/mechanistic_toolbox.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "examples/native_foundation_v1/reference_main.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "examples/native_foundation_v1/toolbox.py",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "extern/Cellerator",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "extern/VitriNode",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/artifacts/nf1_replay.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/core/capability.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/core/contracts.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/core/observation.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/core/provenance.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/core/quantity.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/core/request.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/core/system.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/dynamics/evolution.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/dynamics/response_plan.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/inference/inference.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/interrogation/alternatives.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/interrogation/diagnostics.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/interrogation/differentiation.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/observation/observation.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/reduction/contracts.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "include/GlassHelix/system/assembly.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "planning/1-glasshelix-ML2-bootstrap.zip",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/NF1A_BOOTSTRAP_STATUS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/NF1A_NUMERICAL_POLICY_CLARIFICATION.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/START_LOCAL.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/benchmarks/GH_CAPABILITY.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/benchmarks/RESULT_RECORDS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/benchmarks/SHORTLIST.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/benchmarks/gh_reference.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/adoption.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/bindings.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/handoff.template.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/moves.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/results/gh-discrimination.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/results/gh-lifecycle.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/review.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/inputs/selection-notes.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/migration-map.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/plan.v2.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/project.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/shared/ACCEPTANCE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/shared/DOCTRINE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/shared/INFORMATION_ARCHITECTURE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/shared/REORGANIZATION.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/shared/RESULTS_POLICY.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/shared/TASKS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/AGENTS.md",
+      "tracked": true,
+      "category": "agent-guidance",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/CONTRIBUTING.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/README.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/archive/README.md",
+      "tracked": true,
+      "category": "historical-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/design/overview.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/design/program.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/development/source-map.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/development/start.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/index.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/results/index.md",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/templates/docs/status/current.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/__pycache__/common.cpython-313.pyc",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/check.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/common.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/figures.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/install.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/inventory.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/program_check.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/doc-refresh/tools/render.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/ACCEPTANCE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/CROSS_AUTHORITY.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/DESIGN.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/EXPERIMENT.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/MANIFEST.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/README.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/START_CONTROLLER.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/machine/cellerator.optional.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/machine/choices.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/machine/glasshelix.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/references/REVIEW_AND_DESIGN.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/references/review_probes.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/scripts/check_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/scripts/test_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/validation/README.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/validation/native_preview.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/validation/package_lint_tests.txt",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v1/validation/source_basis.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/ACCEPTANCE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/BIOLOGICAL_ML.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/CROSS_PROJECT.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/DESIGN.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/EXPERIMENT.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/MANIFEST.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/README.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/SOURCES.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/SOURCE_REVIEW.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/START_CONTROLLER.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/TORCH_BRIDGE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/machine/cellerator.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/machine/decision-guide.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/machine/glasshelix.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/references/shared_support_witness.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/scripts/check_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/scripts/test_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/validation/STATUS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/validation/algebra_witness.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/validation/algebra_witness.log",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/validation/native_preview.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/validation/package_tests.log",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/learning-v2/validation/source_basis.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/01_SCOPE_AND_DECISIONS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/02_SCIENTIFIC_AND_NUMERICAL_CONTRACTS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/03_CELLERATOR_REUSE_AND_EXTENSION.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/04_SINGLE_CONTROLLER_AND_PARALLELISM.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/05_CROSS_REPOSITORY_RECEIPTS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/06_VALIDATION_AND_PERFORMANCE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/07_SOURCE_LEDGER.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/08_AUTONOMY_AND_INTEGRATION.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/09_MANUAL_BOOTSTRAP.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/10_DEMONSTRATION_AND_CAPABILITY_CLAIMS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/11_DEFERRED_WORK_AND_STOP_LINE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/12_PRECEDENT_RECONCILIATION.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/13_COMPLETE_TASK_CATALOG.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/14_LANES_AND_MILESTONES.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/MANIFEST.sha256",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/PACKAGE_CONTENTS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/README.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/basis/accepted_architecture.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/contracts/include/GlassHelix/foundation.hh",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/evidence/local_validation.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/evidence/native_plan_validation.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/evidence/predecessor_inventory.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/evidence/schema_probe.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/evidence/source_observations.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/evidence/source_snapshot.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/evidence/tooling_contract.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/START_CONTROLLER.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-a.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-b.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-c.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-coord.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-d.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-e.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-k.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-m.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-o.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-p.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-q.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-r.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-s.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-t.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-u.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/handoff/gh-nf1-l-x.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/index.html",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/acceptance_matrix.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/barriers.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/checkpoints.csv",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/context_fragments.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/controller_launch.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/cross_repository_contracts.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/delivery_files.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/demo_witnesses.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/dependency_edges.csv",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/design_decisions.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/execution_bindings.example.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/external_dependency_receipts.csv",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/glasshelix-native-foundation-v1.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/integration_schedule.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/interface_catalog.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/joint_program.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/joint_topology.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/lanes.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/performance_case_matrix.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/plan_summary.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/proposed_todos.csv",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/proposed_todos.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/rendezvous_plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/requirements_traceability.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/resource_policy.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/risk_register.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/scope_ownership.csv",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/machine/workstreams.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-0000.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-a01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-a02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-a03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-a04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-b01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-b02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-b03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-b04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-b05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-c01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-c02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-c03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-c04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-c05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-c06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-c07.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-d01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-d02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-d03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-d04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-d05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-d06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-d07.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-e01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-e02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-e03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-e04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-e05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-k01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-k02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-k03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-k04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-k05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-m00.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-m10.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-m20.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-m30.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-m40.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-m60.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-m90.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-o01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-o02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-o03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-o04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-o05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-o06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-p01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-p02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-p03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-p04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-p05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-p06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-q01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-q02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-q03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-q04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-q05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-q06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-q07.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-r01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-r02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-r03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-r04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-r05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-s01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-s02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-s03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-s04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-s05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-s06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-s07.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-t01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-t02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-t03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-t04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-t05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-t06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-u01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-u02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-u03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-u04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-u05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-u06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-x01.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-x02.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-x03.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-x04.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-x05.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/proposed-todos/gh-nf1-x06.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/schemas/authority_observation.schema.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/schemas/capability_receipt.schema.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/schemas/governance_receipt.schema.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/schemas/receipt_templates.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/check_record.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/compile_plan.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/native_bridge.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/refresh_projections.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/run_gate.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/seal_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/test_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/todo_bootstrap.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/validate_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/native-foundation-v1/scripts/verify_receipt.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/ARCHITECTURAL_INTENT.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/CHARTER.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/EXECUTION_STRATEGY.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/GATE_BINDINGS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/MANIFEST.sha256",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/PACKAGE_CONTENTS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/README.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/RUNTIME_AND_BOOTSTRAP.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/SOURCE_REVIEW.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/evidence/local-validation.json",
+      "tracked": true,
+      "category": "evidence-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/handoff/START_CONTROLLER.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/conditional-choices.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/integration_schedule.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/legacy-disposition.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/native-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/outcomes.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/package.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/program.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/references.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/requirements.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/retirement-intent.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/source-assets.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/machine/work-profiles.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/ACCEPT.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/ACCESS.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/ADOPT.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/ANALYZE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/CONTROL.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/OBSERVE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/RELEASE.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/outcomes/SYSTEM.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/scripts/bootstrap.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/scripts/capture_worktrees.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/scripts/common.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/scripts/run_gate.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/scripts/test_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-adaptive-v1/scripts/validate_package.py",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/README.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/build-registration-fragment.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/build-registration-review.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/build-registration.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/coordinator-lease-recovery.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/coordinator.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/gh-interface-paths-review.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/gh-interface-paths.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/gh-x01-bindings-review.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/gh-x01-bindings.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/host-bindings-fragment.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/host-bindings.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/integrator.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/producer-waves.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/remaining-gates-review.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/remaining-gates.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/t01-gate-review.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/t01-gate.todo-plan.json",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "planning/nf1-coordinator-correction-v1/validation.md",
+      "tracked": true,
+      "category": "planning-not-architecture",
+      "decision": "review"
+    },
+    {
+      "path": "python/glasshelix/nf1.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/Cell.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/Sequence.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/TranscriptomeEncoder.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/artifacts/nf1_replay.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/dynamics/response_plan.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/include/cuda_helpers.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/include/macros.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/include/matrix.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/include/scatter.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/include/sigmoid.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/include/types.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/GeneTokenizer.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/Genome.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/Graph/Graph.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/Graph/python/GraphBindings.cpp",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/Layers/SparseReader.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/main.cpp",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/primitives/Attention.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/primitives/Attention.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/primitives/Linear.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/primitives/Perceptron.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/primitives/torch/TorchAttention.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/TorchTransformer.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/TorchTransformer.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/torch/Attention.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/torch/Tokenizer.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/torch/TorchEmbedder.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/torch/Transformer.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/virtual/Embedder.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/virtual/Tokenizer.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/nn/transformer/virtual/Transformer.cppm",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/prototype/SparseAutoencoder.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/incomplete/prototype/dumpTokenDict.py",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/main.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/AsynchronousArray.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/Dataset.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/Dictionary.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/Feature.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/SparseMatrix/CompressedSparseRow.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/SparseMatrix/CoordinateList.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/SparseMatrix/DictionaryOfKeys.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/SparseMatrix/IRandomAccess.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/tests/BlockPerformanceTest.cpp",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/tests/BlockTest.cpp",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/tests/DictionaryTest.cpp",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/tests/LoadDSTest.cpp",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "src/memory/tests/SequenceTest.cpp",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassEtch/Binarizer.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassEtch/Binarizer.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassEtch/BinaryAutoencoder.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassEtch/TranscriptomeEncoder.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassEtch/include/encode.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassEtch/src/GlassEtch.cuh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassEtch/src/main.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/models/GlassHelix/GlassHelix.hh",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/system/assembly.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    },
+    {
+      "path": "src/tests/network/Network.hh",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "src/tests/network/NetworkLogic.hh",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/artifacts/installed_consumer/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/artifacts/installed_consumer/consumer.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/artifacts/nf1_replay_test.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/build/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/build/external/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/build/external/consumer.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/build/external_consumer.cmake.in",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/core/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/core/quantity.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/core/request.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/core/system.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/core/system_semantics.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/dynamics/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/dynamics/dynamics_contract.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/dynamics/dynamics_cuda.cu",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/inference/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/inference/inference.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/inference/inference_cuda.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/interrogation/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/interrogation/alternatives.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/interrogation/diagnostics.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/interrogation/differentiate.cu",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/observation/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/observation/observation.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/python/test_nf1.py",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/reduction/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/reduction/contracts.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/system/CMakeLists.txt",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/system/S01_STATUS.md",
+      "tracked": true,
+      "category": "documentation-review-needed",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/system/s01.cc",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "tests/native_foundation/system/source-inputs.json",
+      "tracked": true,
+      "category": "experiment-test-or-example",
+      "decision": "review"
+    },
+    {
+      "path": "todo-status.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-bootstrap.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-docs-000.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-docs-10.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-docs-20.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-docs-30.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-docs-90.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-ml2-0000.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-ml2-accept.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-ml2-data.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-ml2-design.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-ml2-learn.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-ml2-pilot.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-ml2-repair.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-0000.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-a01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-a02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-a03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-a04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-b01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-b02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-b03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-b04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-b05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-c01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-c02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-c03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-c04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-c05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-c06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-c07.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-coord.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-d01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-d02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-d03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-d04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-d05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-d06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-d07.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-e01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-e02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-e03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-e04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-e05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-k01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-k02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-k03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-k04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-k05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-m00.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-m10.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-m20.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-m30.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-m40.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-m60.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-m90.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-o01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-o02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-o03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-o04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-o05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-o06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-p01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-p02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-p03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-p04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-p05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-p06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-q01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-q02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-q03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-q04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-q05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-q06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-q07.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-r01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-r02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-r03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-r04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-r05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-s01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-s02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-s03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-s04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-s05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-s06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-s07.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-t01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-t02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-t03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-t04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-t05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-t06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-u01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-u02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-u03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-u04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-u05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-u06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-x01.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-x02.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-x03.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-x04.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-x05.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1-x06.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-0000.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-accept.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-access.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-adopt.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-analyze.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-control.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-observe.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-release.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-nf1a-system.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-preprint.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "todos/gh-science-foundations.md",
+      "tracked": true,
+      "category": "generated-operational-state",
+      "decision": "review"
+    },
+    {
+      "path": "tools/native_foundation/build_access_tests.sh",
+      "tracked": true,
+      "category": "other",
+      "decision": "review"
+    },
+    {
+      "path": "tools/native_foundation/nf1_replay_cli.cc",
+      "tracked": true,
+      "category": "source-build-or-tool",
+      "decision": "review"
+    }
+  ],
+  "note": "Complete Git listing at invocation, not proof every file was semantically read. No moves/deletions performed."
+}

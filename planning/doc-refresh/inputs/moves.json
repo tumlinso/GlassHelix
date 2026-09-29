@@ -2,5 +2,12 @@
   "project": "glasshelix",
   "approved_moves": [],
   "deletions": [],
-  "policy": "One coherent mechanical source cluster maximum by default. Use migration-map.md to choose; no automatic moves are authorized by a suggested path."
+  "policy": "One coherent mechanical source cluster maximum by default. Use migration-map.md to choose; no automatic moves are authorized by a suggested path.",
+  "no_move_rationale": {
+    "decision": "no_source_move",
+    "reviewed_at": "2026-09-29",
+    "source_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+    "rationale": "The current native foundation already groups public contracts under include/GlassHelix, Cellerator-backed assembly under src/system, replay under src/artifacts, and focused checks under tests/native_foundation. The benchmark, Python package, and binding are each referenced directly by CMake and have useful existing boundaries. No source cluster showed a navigation benefit sufficient to justify path churn. ML2 remains an active queued integration; keeping source paths stable preserves its existing continuation routes.",
+    "continuity": "No source, build, import, export, include, evidence, or Todo paths were moved; the active/scheduled ML2 work remains continuable."
+  }
 }

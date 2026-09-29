@@ -3,14 +3,14 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-ML2-DESIGN: Choose and make executable one biology-purpose learning formulation
 
-Task revision: `238`; current project revision is in `todo-status.md`.
+Task revision: `240`; current project revision is in `todo-status.md`.
 
 ## Objective
 Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `in_progress`
+- Execution: `idle`
 - Parallel policy: `serial`
 - Result: `-`
 

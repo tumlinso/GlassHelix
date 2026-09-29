@@ -22,7 +22,6 @@ A longer-term goal is for scientific learning to change the executable represent
 
 {{README_RESULTS}}
 
-The [results pages](docs/results/index.md) distinguish synthetic execution/capability checks from fitted biological results. They show what was compared, what remained ambiguous and which parts of the computation were actually exercised.
 
 ## Find your way in
 

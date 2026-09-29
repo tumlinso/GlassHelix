@@ -1,0 +1,131 @@
+{
+  "project": "glasshelix",
+  "program_id": "DOCS-REFRESH-2026-09",
+  "status": "completed",
+  "qualified_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+  "reviewer": "Codex GH-DOCS-90",
+  "managed_workflow_preserved": true,
+  "source_moves": [],
+  "commands": [
+    {
+      "argv": [
+        "cmake",
+        "-S",
+        "/home/tumlinson/GlassHelix",
+        "-B",
+        "/tmp/glasshelix-gh-docs90-1ygg2jus",
+        "-DCellerator_DIR=/home/tumlinson/Cellerator/build-ml2-cpp",
+        "-DBUILD_TESTING=OFF"
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/build-route.json"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--build",
+        "/tmp/glasshelix-gh-docs90-1ygg2jus",
+        "--target",
+        "glasshelix_foundation",
+        "-j",
+        "2"
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/build-route.json"
+    },
+    {
+      "argv": [
+        "python",
+        "planning/doc-refresh/tools/render.py",
+        "--project",
+        "glasshelix",
+        "--repo",
+        ".",
+        "--out",
+        "planning/doc-refresh/staged-final",
+        "--final"
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/validation.json"
+    },
+    {
+      "argv": [
+        "python",
+        "planning/doc-refresh/tools/check.py",
+        "--local",
+        "--evidence",
+        "--project",
+        "glasshelix",
+        "--repo",
+        "."
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/validation.json"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/validation.json"
+    },
+    {
+      "argv": [
+        "lowdown",
+        "-t",
+        "term",
+        "--term-columns=40",
+        "--term-no-ansi",
+        "README.md"
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/rendered-review.json"
+    },
+    {
+      "argv": [
+        "project_control_coordination_view",
+        "project=glasshelix",
+        "run_id=GH-ML2-RUN-V1",
+        "detail=standard",
+        "max_items=10"
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/ml2-continuity.json"
+    },
+    {
+      "argv": [
+        "python",
+        "planning/doc-refresh/tools/check.py",
+        "--final",
+        "--project",
+        "glasshelix",
+        "--repo",
+        "."
+      ],
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "basis": "executed",
+      "evidence_path": "planning/doc-refresh/evidence/gh-docs-90/final-check.json"
+    }
+  ],
+  "result_ids": [],
+  "reader_walkthrough": true,
+  "pending": [],
+  "notes": "Public docs reviewed at 80 and 40 columns; path checked README to design to results to source map. No source moves; active/scheduled GH-ML2 run remains continuable (active run, ready lane, seven queued tasks, no dispatches at 2026-09-29T12:57:02Z). Current working tree remains dirty with documentation, Todo projections and evidence edits; no commit was created. Cellerator build-tree package was built at ancestor 8eaaaf595562ca5769400edcad69aac0aa22d187; current Cellerator HEAD e4135674446ab9e32717f8b5ade04c1c3648326a differs in relevant CMake/indexed mechanism paths and imported local_differential archive is absent. Configure and static library compile passed, but no full link/runtime/test/GPU qualification. No quantitative result promoted because portable raw benchmark evidence and lease receipt remain unavailable."
+}

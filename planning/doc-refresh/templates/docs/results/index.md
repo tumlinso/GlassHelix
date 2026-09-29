@@ -4,6 +4,8 @@ These pages connect the scientific/computational question to actual evidence. Th
 
 {{RESULTS_INDEX}}
 
+No quantitative candidate currently qualifies for public display. The retained GH-ACCEPT report names a historical run, but its raw CSV, lease receipt, and temporary result JSON are missing from this checkout, so the reported sample digest cannot be verified. The optional synthetic ambiguity fixture has not been run against GlassHelix.
+
 ## Reading a result
 
 Check the source version, input construction, numerical policy and timed phase before comparing numbers. A prepared device pipeline excludes costs that an end-to-end application still pays. A synthetic workload may establish numerical or systems behavior without validating biology. Historical measurements remain historical even when drawn in a new chart.

@@ -1,0 +1,50 @@
+Current implementation snapshot
+
+    Inspected: 2026-09-29 · Source: 2e6d78a5be482e1e8741466706746741f1bad71c
+
+    This is a human-readable source snapshot, not a second task ledger.
+    Revalidate it after a meaningful implementation change; the live project
+    workflow holds task/claim state.
+
+## Implemented facilities
+
+    The current CMake graph builds a C++20 GlassHelix foundation against the
+    published Cellerator native_foundation and indexed_mechanism components; it
+    does not compile sibling Cellerator sources. Source and native tests cover
+    typed scientific contracts, assembled mechanisms, dynamics, observations,
+    finite whole-candidate propagation/updates, interrogation and responses.
+    Replay/Python targets are conditional on their source files. Supplied
+    candidates remain joint state–mechanism alternatives with provenance and
+    evidence history.
+
+## Experimental or deliberately bounded
+
+    The complete-program CUDA fixture exercises bounded supplied-system
+    forward/JVP, response, observation and inference paths. Its activity labels
+    reflect input-map changes, not compact active-only execution. The
+    measurements are not a comparison against an equivalent alternative
+    implementation. Earlier GlassEtch, incomplete-model, classifier, direct
+    sequence and low-level execution material remains experimental or
+    unclassified; current classification is recorded in the historical repository
+    map.
+
+## Future intent and outstanding work
+
+    The ML2 integration remains open in the project workflow; this snapshot does
+    not record a completed general learning layer. A composable scientific
+    learning path and evidence-scoped promotion of supported mechanisms into
+    executable structure remain goals, not current universal functionality.
+
+## Important qualifications
+
+    A finite supplied candidate set is not general mechanism discovery, and
+    synthetic checks are not biological validation. Candidate inference currently
+    uses ordinary normalized weights; robustness claims must respect the
+    learning-review findings until qualified repairs land. Historical lifecycle
+    measurements are bounded, with portable raw evidence still awaiting
+    qualification; they do not demonstrate general learning throughput or compact
+    activity execution.
+
+    See the source map ../development/source-map.md for current code paths, 
+    results ../results/index.md for measured evidence, and design 
+    ../design/overview.md for the scientific purpose that these facilities serve.

@@ -1,0 +1,56 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "planning/doc-refresh/tools/render.py",
+        "--project",
+        "glasshelix",
+        "--repo",
+        ".",
+        "--out",
+        "planning/doc-refresh/staged-final",
+        "--final"
+      ],
+      "cwd": "/home/tumlinson/GlassHelix",
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "stdout": "[\n  {\n    \"project\": \"glasshelix\",\n    \"out\": \"planning/doc-refresh/staged-final\",\n    \"documents\": 11,\n    \"results\": 0,\n    \"mode\": \"final\"\n  }\n]\n",
+      "stderr": "",
+      "basis": "executed"
+    },
+    {
+      "argv": [
+        "python",
+        "planning/doc-refresh/tools/check.py",
+        "--local",
+        "--evidence",
+        "--project",
+        "glasshelix",
+        "--repo",
+        "."
+      ],
+      "cwd": "/home/tumlinson/GlassHelix",
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"checks\": [\n    {\n      \"project\": \"glasshelix\",\n      \"templates\": 11,\n      \"result_records\": [\n        \"gh-discrimination\",\n        \"gh-lifecycle\"\n      ],\n      \"plan\": {\n        \"tasks\": 5,\n        \"outcomes\": 4,\n        \"structural_check\": \"passed; native validation is separate\"\n      },\n      \"selected_results\": []\n    }\n  ]\n}\n",
+      "stderr": "",
+      "basis": "executed"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/tumlinson/GlassHelix",
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "basis": "executed"
+    }
+  ],
+  "managed_block_sha256_current": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "managed_block_sha256_adoption": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

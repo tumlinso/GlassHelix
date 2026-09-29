@@ -1,0 +1,43 @@
+{
+  "build_dir": "/tmp/glasshelix-gh-docs90-1ygg2jus",
+  "cellerator_config": "/home/tumlinson/Cellerator/build-ml2-cpp/CelleratorConfig.cmake",
+  "cellerator_config_revision": "8eaaaf595562ca5769400edcad69aac0aa22d187",
+  "cellerator_current_head": "e4135674446ab9e32717f8b5ade04c1c3648326a",
+  "identity_limit": "Package was built from an ancestor; relevant indexed mechanism/CMake paths changed and imported libcellerator_local_differential.a is absent. This verifies configure plus static foundation compilation only, not full link/runtime/tests/GPU.",
+  "commands": [
+    {
+      "argv": [
+        "cmake",
+        "-S",
+        "/home/tumlinson/GlassHelix",
+        "-B",
+        "/tmp/glasshelix-gh-docs90-1ygg2jus",
+        "-DCellerator_DIR=/home/tumlinson/Cellerator/build-ml2-cpp",
+        "-DBUILD_TESTING=OFF"
+      ],
+      "cwd": "/home/tumlinson/GlassHelix",
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "stdout": "-- The CXX compiler identification is GNU 13.3.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Found CUDAToolkit: /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/targets/x86_64-linux/include;/usr/include (found version \"12.9.86\") \n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n-- Found Threads: TRUE  \n-- Looking for sgemm_\n-- Looking for sgemm_ - not found\n-- Looking for sgemm_\n-- Looking for sgemm_ - found\n-- Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  \n-- Looking for cheev_\n-- Looking for cheev_ - found\n-- Found LAPACK: /usr/lib/x86_64-linux-gnu/libopenblas.so;-lm;-ldl  \n-- Found Python3: /home/tumlinson/Software/miniconda3/bin/python3 (found version \"3.13.11\") found components: Interpreter Development.Module \n-- Configuring done (1.4s)\n-- Generating done (0.0s)\n-- Build files have been written to: /tmp/glasshelix-gh-docs90-1ygg2jus\n",
+      "stderr": "",
+      "basis": "executed"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--build",
+        "/tmp/glasshelix-gh-docs90-1ygg2jus",
+        "--target",
+        "glasshelix_foundation",
+        "-j",
+        "2"
+      ],
+      "cwd": "/home/tumlinson/GlassHelix",
+      "returncode": 0,
+      "expected_exit_code": 0,
+      "stdout": "[ 50%] Building CXX object CMakeFiles/glasshelix_foundation.dir/src/system/assembly.cc.o\n[100%] Linking CXX static library libglasshelix_foundation.a\n[100%] Built target glasshelix_foundation\n",
+      "stderr": "",
+      "basis": "executed"
+    }
+  ]
+}

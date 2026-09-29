@@ -1,18 +1,15 @@
 {
   "project": "glasshelix",
-  "qualified_head": null,
-  "reviewer": null,
-  "paths_finalized": false,
-  "status_reconciled": false,
-  "build_instructions_verified": false,
-  "managed_workflow_preserved": false,
-  "source_moves_reviewed": false,
-  "rendered_pages_reviewed": false,
-  "evidence_selection_reviewed": false,
-  "pending": [
-    "Reinspect after intervening source work.",
-    "Finalize bindings after moves.",
-    "Verify selected historical/raw evidence or record a bounded fresh replay."
-  ],
-  "notes": "Flags record actual implementing-agent review, not user reconfirmation of already-settled intent."
+  "qualified_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+  "reviewer": "Codex GH-DOCS-90",
+  "paths_finalized": true,
+  "status_reconciled": true,
+  "build_instructions_verified": true,
+  "managed_workflow_preserved": true,
+  "source_moves_reviewed": true,
+  "rendered_pages_reviewed": true,
+  "evidence_selection_reviewed": true,
+  "pending": [],
+  "notes": "Build route qualified for configuration and static library compilation only using Cellerator build-ml2-cpp package built at ancestor 8eaaaf595562ca5769400edcad69aac0aa22d187. Current Cellerator HEAD e4135674446ab9e32717f8b5ade04c1c3648326a changes relevant CMake/indexed-mechanism paths; the imported local_differential archive is missing. No full link, runtime test, or GPU execution. ML2 run GH-ML2-RUN-V1 was active, execution lane ready, seven scheduled tasks queued and no dispatches at 2026-09-29T12:44:42Z.",
+  "no_public_result_reason": "No quantitative result is qualified for public display. GH-ACCEPT has only a report summary in this checkout: its referenced CSV and lease receipt under .todo-orchestrator/runtime are missing, /tmp/nf1a-gh-benchmark-result.json is missing, and the reported raw SHA-256 cannot be recomputed. Project Control returns no matching CUDA evidence for controller ID 824295c5-ff13-4ff6-96fb-3822a02788dc. The source commit and benchmark source are present (the benchmark source SHA-256 matches at that commit and current HEAD), but source-code identity does not authenticate the measured samples or lease. The prepared source-file identity has no specified referent. The optional discrimination fixture is unrun and its oracle is not product evidence."
 }

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python",
+    "planning/doc-refresh/tools/check.py",
+    "--final",
+    "--project",
+    "glasshelix",
+    "--repo",
+    "."
+  ],
+  "cwd": "/home/tumlinson/GlassHelix",
+  "returncode": 0,
+  "expected_exit_code": 0,
+  "stdout": "{\n  \"status\": \"passed\",\n  \"checks\": [\n    {\n      \"project\": \"glasshelix\",\n      \"templates\": 11,\n      \"result_records\": [\n        \"gh-discrimination\",\n        \"gh-lifecycle\"\n      ],\n      \"plan\": {\n        \"tasks\": 5,\n        \"outcomes\": 4,\n        \"structural_check\": \"passed; native validation is separate\"\n      },\n      \"selected_results\": [],\n      \"final_public_docs_checked\": 11\n    }\n  ]\n}\n",
+  "stderr": "",
+  "basis": "executed"
+}

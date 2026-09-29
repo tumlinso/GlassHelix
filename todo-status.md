@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `239`
+Project revision: `260`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -16,7 +16,7 @@ Project revision: `239`
 - `GH-BOOTSTRAP` | status: done | execution: closed | next: Preserve unknown dirty work, fast-forward safely, add minimal authoritative documentation and semantic state, validate, commit, and verify through project-control.
 - `GH-ML2-ACCEPT` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-DATA` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
-- `GH-ML2-DESIGN` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-ML2-DESIGN` | status: in_progress | execution: idle | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-LEARN` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-PILOT` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-REPAIR` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
@@ -25,11 +25,11 @@ Project revision: `239`
 - `GH-NF1A-RELEASE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/RELEASE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-PREPRINT` | status: planned | execution: ready | next: Treat preprint/ as the paper workspace and do not promote any content from preliminary to settled or validated without evidence.
 - `GH-SCIENCE-FOUNDATIONS` | status: planned | execution: ready | next: Frame evidence-bearing scientific questions and literature work before proposing models or machinery.
-- `GH-DOCS-000` | status: planned | execution: inactive | next: Apply the prewritten public/agent/developer/status hierarchy, perform only useful small moves, and qualify selected result displays. Part of DOCS-REFRESH-2026-09; authority remains local.
-- `GH-DOCS-10` | status: planned | execution: ready | next: Refresh source/claims after prior packages; classify important documents; stage the already-written README, design, status, source-map and agent pages without rederiving intent.
-- `GH-DOCS-20` | status: planned | execution: ready | next: Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.
-- `GH-DOCS-30` | status: planned | execution: ready | next: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
-- `GH-DOCS-90` | status: planned | execution: ready | next: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
+- `GH-DOCS-000` | status: done | execution: closed | next: Apply the prewritten public/agent/developer/status hierarchy, perform only useful small moves, and qualify selected result displays. Part of DOCS-REFRESH-2026-09; authority remains local.
+- `GH-DOCS-10` | status: done | execution: closed | next: Refresh source/claims after prior packages; classify important documents; stage the already-written README, design, status, source-map and agent pages without rederiving intent.
+- `GH-DOCS-20` | status: done | execution: closed | next: Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.
+- `GH-DOCS-30` | status: done | execution: closed | next: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
+- `GH-DOCS-90` | status: done | execution: closed | next: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
 - `GH-ML2-0000` | status: planned | execution: inactive | next: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
 - `GH-NF1-A01` | status: done | execution: closed | next: 
 - `GH-NF1-A02` | status: done | execution: closed | next: 

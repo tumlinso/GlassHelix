@@ -1,0 +1,68 @@
+Source map: scientific objects to
+executable tests
+
+## Scientific objects and supplied
+## alternatives
+
+      · Which scientific objects are
+        distinguished? Start at core
+        contracts 
+        ../../include/GlassHelix/core for
+        quantities, observations,
+        identity/provenance, and state
+        roles. 
+      · How are supplied alternatives
+        updated? Read finite candidates 
+        ../../include/GlassHelix/inference/inference.hh
+        for whole joint state–mechanism
+        alternatives and evidence
+        history. 
+      · Where does a system become
+        executable? See assembly 
+        ../../src/system/assembly.cc,
+        which delegates numerical
+        execution to Cellerator. 
+
+## Build and evidence paths
+
+      · Where are supported capabilities
+        checked? Start at native
+        foundation tests 
+        ../../tests/native_foundation for
+        contract and numerical/semantic
+        checks. 
+      · Where is the complete-program
+        measurement? The benchmark source
+        ../../bench/native_foundation/nf1_complete_program.cu
+        and recorded methodology 
+        ../../docs/nf1_adaptive/performance/GH_ACCEPT_COMPLETE_PROGRAM.md
+        describe bounded lifecycle checks
+        and the limits of activity
+        semantics. 
+      · How are replay and Python
+        connected? Follow replay 
+        ../../src/artifacts/nf1_replay.cc,
+        the binding 
+        ../../bindings/python/nf1_module.cc,
+        and the Python layer 
+        ../../python/glasshelix. These
+        are the configured paths, not a
+        commitment to a universal package
+        layout. 
+
+    The build graph ../../CMakeLists.txt
+    defines glasshelix_foundation from 
+    src/system/assembly.cc, linking
+    Cellerator’s native_foundation and 
+    indexed_mechanism components through
+    the core interface. BUILD_TESTING
+    enables CUDA and native checks;
+    replay and Python targets are
+    conditional on their source files.
+    See the build guide start.md for the
+    minimal library command. No source
+    move was made: these semantic
+    boundaries already provide a useful
+    map, while legacy material needs a
+    separate consumer review before any
+    relocation.

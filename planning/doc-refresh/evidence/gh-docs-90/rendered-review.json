@@ -1,0 +1,314 @@
+[
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "README.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/README.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "AGENTS.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/AGENTS.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "CONTRIBUTING.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/CONTRIBUTING.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/index.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__index.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/repository-map.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__repository-map.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/design/overview.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__overview.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/design/program.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__program.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/development/source-map.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__source-map.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/development/start.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__start.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/status/current.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__status__current.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/archive/README.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__archive__README.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=80",
+      "--term-no-ansi",
+      "docs/results/index.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/normal/docs__results__index.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "README.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/README.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "AGENTS.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/AGENTS.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "CONTRIBUTING.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/CONTRIBUTING.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/index.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__index.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/repository-map.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__repository-map.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/design/overview.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__overview.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/design/program.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__program.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/development/source-map.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__source-map.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/development/start.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__start.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/status/current.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__status__current.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/archive/README.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__archive__README.txt"
+  },
+  {
+    "argv": [
+      "lowdown",
+      "-t",
+      "term",
+      "--term-columns=40",
+      "--term-no-ansi",
+      "docs/results/index.md"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "output_path": "planning/doc-refresh/evidence/gh-docs-90/narrow/docs__results__index.txt"
+  }
+]

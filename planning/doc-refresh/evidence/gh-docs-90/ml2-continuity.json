@@ -1,0 +1,52 @@
+{
+  "tool": "project_control_coordination_view",
+  "args": {
+    "project": "glasshelix",
+    "run_id": "GH-ML2-RUN-V1",
+    "detail": "standard",
+    "max_items": 10
+  },
+  "observed_at": "2026-09-29T12:57:13Z",
+  "revision": 255,
+  "status": "active",
+  "lane": "GH-ML2-L-EXEC",
+  "lane_state": "ready",
+  "queue": [
+    {
+      "position": 0,
+      "task_id": "GH-ML2-DESIGN",
+      "state": "queued"
+    },
+    {
+      "position": 1,
+      "task_id": "GH-ML2-DATA",
+      "state": "queued"
+    },
+    {
+      "position": 2,
+      "task_id": "GH-ML2-REPAIR",
+      "state": "queued"
+    },
+    {
+      "position": 3,
+      "task_id": "GH-ML2-LEARN",
+      "state": "queued"
+    },
+    {
+      "position": 4,
+      "task_id": "GH-ML2-PILOT",
+      "state": "queued"
+    },
+    {
+      "position": 5,
+      "task_id": "GH-ML2-ACCEPT",
+      "state": "queued"
+    },
+    {
+      "position": 6,
+      "task_id": "GH-ML2-0000",
+      "state": "queued"
+    }
+  ],
+  "dispatches": []
+}

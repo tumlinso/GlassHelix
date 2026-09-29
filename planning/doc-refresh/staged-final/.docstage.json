@@ -1,0 +1,17 @@
+{
+  "project": "glasshelix",
+  "mode": "final",
+  "files": {
+    "README.md": "f3e6ce4d4221c340cb81eacf701c98d9dae6ac7afbde1dd31ac0d20187fb4099",
+    "CONTRIBUTING.md": "1e45b4f8a6deef3457d11bec6be661d61156fec2b1f1ca89cb0fbfd372b0a463",
+    "AGENTS.md": "9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b",
+    "docs/index.md": "9f0b5136d176d7a4638e120f172e0caca11764eef2fe2398cb77d8eb028afe5e",
+    "docs/results/index.md": "957fed50e764f281f1214b4a0dc304d1f0be70b9c444d173714edd28b858daa2",
+    "docs/status/current.md": "c75bcdaca050ed6a29175ec0362986f7e256504eb2834f98fd5b319127b3f712",
+    "docs/archive/README.md": "9f8e723b50f085cb9c8bf631ffe11f02e6bac1450331218deb35e6fdbc3927af",
+    "docs/development/start.md": "df235daffc3bcb508cabb6eb88783a2a9d68b79cd0d51ad2906b7c40d069127b",
+    "docs/development/source-map.md": "a5b65cf36cf52f9c4fbe5e951e12a88ca0b80d6032fc9d5024c49182414cf1bc",
+    "docs/design/program.md": "ca5cc05410a6454a2a6baefd29f3896566c49b6100239a9e776581381bd1ed3d",
+    "docs/design/overview.md": "61010bbf25f0a2d426208b25fb72db6eeb75f1562189db583edf062aa6deef1a"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T11:59:51Z",
+  "generated_at": "2026-09-29T12:59:15Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 239,
+  "project_revision": 260,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -2667,9 +2667,232 @@
         "revision": 239,
         "seq": 239,
         "timestamp": "2026-09-29T11:59:51Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-ML2-L-EXEC",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-ML2-L-EXEC\", \"run_id\": \"GH-ML2-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-ML2-DESIGN\"}",
+        "revision": 240,
+        "seq": 240,
+        "timestamp": "2026-09-29T12:22:15Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-ML2-DESIGN",
+        "entity_type": "task",
+        "event_type": "workflow.task.release",
+        "payload_json": "{\"reason\": \"Incidental claim while selecting newly bootstrapped documentation epic; no ML2 work performed.\"}",
+        "revision": 241,
+        "seq": 241,
+        "timestamp": "2026-09-29T12:22:31Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+        "entity_type": "project",
+        "event_type": "plan.applied",
+        "payload_json": "{\"plan_digest\": \"94501c629741606b7759be58ba4648f889d939b9dd40f7aa1718cc1f9c9cad5b\", \"source\": \"project-control\"}",
+        "revision": 242,
+        "seq": 242,
+        "timestamp": "2026-09-29T12:27:21Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-L-EXEC",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-DOCS-L-EXEC\", \"run_id\": \"GH-DOCS-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-DOCS-10\"}",
+        "revision": 243,
+        "seq": 243,
+        "timestamp": "2026-09-29T12:28:12Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-10-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-DOCS-10-CHECK\"}",
+        "revision": 244,
+        "seq": 244,
+        "timestamp": "2026-09-29T12:33:44Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-10-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"dc95c68a-210b-4e72-87a6-0ae90502f5a8\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 245,
+        "seq": 245,
+        "timestamp": "2026-09-29T12:33:44Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-10",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 246, \"disposition\": \"implemented\", \"reached_checkpoints\": []}",
+        "revision": 246,
+        "seq": 246,
+        "timestamp": "2026-09-29T12:33:44Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-L-EXEC",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-DOCS-L-EXEC\", \"run_id\": \"GH-DOCS-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-DOCS-20\"}",
+        "revision": 247,
+        "seq": 247,
+        "timestamp": "2026-09-29T12:33:44Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-20-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-DOCS-20-CHECK\"}",
+        "revision": 248,
+        "seq": 248,
+        "timestamp": "2026-09-29T12:38:40Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-20-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"c1b18198-01cb-4b4a-83d6-812fa4dc9653\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 249,
+        "seq": 249,
+        "timestamp": "2026-09-29T12:38:40Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-20",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 250, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 250,
+        "seq": 250,
+        "timestamp": "2026-09-29T12:38:41Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-L-EXEC",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-DOCS-L-EXEC\", \"run_id\": \"GH-DOCS-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-DOCS-30\"}",
+        "revision": 251,
+        "seq": 251,
+        "timestamp": "2026-09-29T12:38:41Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-30-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-DOCS-30-CHECK\"}",
+        "revision": 252,
+        "seq": 252,
+        "timestamp": "2026-09-29T12:44:07Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-30-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"0099df4b-a81d-44bb-803f-bf2eb8e3b659\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 253,
+        "seq": 253,
+        "timestamp": "2026-09-29T12:44:07Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-30",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 254, \"disposition\": \"evaluated_not_promoted\", \"reached_checkpoints\": []}",
+        "revision": 254,
+        "seq": 254,
+        "timestamp": "2026-09-29T12:44:07Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-L-EXEC",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-DOCS-L-EXEC\", \"run_id\": \"GH-DOCS-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-DOCS-90\"}",
+        "revision": 255,
+        "seq": 255,
+        "timestamp": "2026-09-29T12:44:07Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-90-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-DOCS-90-CHECK\"}",
+        "revision": 256,
+        "seq": 256,
+        "timestamp": "2026-09-29T12:59:02Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-90-CHECK",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"ffac689d-2213-4849-a884-51d71b448cc0\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 257,
+        "seq": 257,
+        "timestamp": "2026-09-29T12:59:02Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-90",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 258, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 258,
+        "seq": 258,
+        "timestamp": "2026-09-29T12:59:03Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-L-EXEC",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-DOCS-L-EXEC\", \"run_id\": \"GH-DOCS-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-DOCS-000\"}",
+        "revision": 259,
+        "seq": 259,
+        "timestamp": "2026-09-29T12:59:03Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-DOCS-000",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 260, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 260,
+        "seq": 260,
+        "timestamp": "2026-09-29T12:59:15Z"
       }
     ],
     "evidence": [
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-29T12:44:07Z",
+        "gate_id": "GH-DOCS-30-CHECK",
+        "id": "0099df4b-a81d-44bb-803f-bf2eb8e3b659",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"cfcf0177ddadfc64643ba279ea045197f533d3d70b44766e7272f405be6494d2\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"383ddfd5c28963356f9f6afa06b0cdbbf1ff0548e1b92ecf7e1e3fee5e048c3a\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/inputs/results/gh-discrimination.json\", \"planning/doc-refresh/inputs/results/gh-lifecycle.json\", \"planning/doc-refresh/inputs/review.json\", \"planning/doc-refresh/inputs/selection-notes.md\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"planning/doc-refresh/templates/docs/results/index.md\", \"planning/doc-refresh/tools/__pycache__/check.cpython-313.pyc\", \"planning/doc-refresh/tools/__pycache__/figures.cpython-313.pyc\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b\"}, {\"path\": \"README.md\", \"sha256\": \"f3e6ce4d4221c340cb81eacf701c98d9dae6ac7afbde1dd31ac0d20187fb4099\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 252}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/0099df4b-a81d-44bb-803f-bf2eb8e3b659",
+        "revision": 253,
+        "status": "passed"
+      },
       {
         "checkpoint_id": null,
         "claim_id": null,
@@ -2960,6 +3183,19 @@
         "checkpoint_id": null,
         "claim_id": null,
         "content_hash": null,
+        "created_at": "2026-09-29T12:38:40Z",
+        "gate_id": "GH-DOCS-20-CHECK",
+        "id": "c1b18198-01cb-4b4a-83d6-812fa4dc9653",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"a2d7a0c16d46257c943623494992e1f9792eafca708a97897f153e41f7eb8edd\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b\"}, {\"path\": \"README.md\", \"sha256\": \"a42bc08e2871585dd73f2bd90d78da49fe6db509d50482bd1dfa0905c39d46a8\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 248}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/c1b18198-01cb-4b4a-83d6-812fa4dc9653",
+        "revision": 249,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
         "created_at": "2026-09-09T11:15:15Z",
         "gate_id": "GH-NF1-C01-ACCEPT",
         "id": "c27cc997-da37-46b6-88a1-98041c3a2990",
@@ -3006,6 +3242,19 @@
         "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-C07\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"3ee6a910aff57b93be56d0939b34593d4c8d66ad29fd2d2e7a28c4049a66b376\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-C07\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"37d06cfe56f980046560450fd5f3298fc2242fff\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"5c65dffdf4d9ef325aa367ded77857b9b3073d373b6757ec29bdcac3af5a5769\", \"started_revision\": 100, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/cf7f7044-bf84-4abd-8c43-67aa562e5fe2",
         "revision": 101,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-29T12:33:44Z",
+        "gate_id": "GH-DOCS-10-CHECK",
+        "id": "dc95c68a-210b-4e72-87a6-0ae90502f5a8",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"1c90911c8494274b748622dedaa49da87327fddd1261698f4e66831f99521887\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"f5763be287ca55f0ad8edc4a08630d3af55b19563b0e59d4104bd8aca0d7002c\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/repository-map.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/tools/__pycache__/check.cpython-313.pyc\", \"planning/doc-refresh/tools/__pycache__/figures.cpython-313.pyc\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"77291d155fef3b79a12aae7e9433df78ff1bbfbd0680cb6ebaca15d7f210dd94\"}, {\"path\": \"README.md\", \"sha256\": \"a42bc08e2871585dd73f2bd90d78da49fe6db509d50482bd1dfa0905c39d46a8\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 244}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/dc95c68a-210b-4e72-87a6-0ae90502f5a8",
+        "revision": 245,
         "status": "passed"
       },
       {
@@ -3124,6 +3373,19 @@
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/fcb0eb8c-c13d-4ae8-b720-491f1ec7fb57",
         "revision": 82,
         "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-09-29T12:59:02Z",
+        "gate_id": "GH-DOCS-90-CHECK",
+        "id": "ffac689d-2213-4849-a884-51d71b448cc0",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--final\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"dd43047a14c68675bd7bef00e66df435da11f505ad00d4157b68e6a908efcf7d\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--final\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"ae04f5b27308631a8e385fc3c577fe40c31f94a3a46039fe0dae1c582c57e32e\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/AGENTS.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/CONTRIBUTING.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__archive__README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__overview.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__program.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__source-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__start.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__repository-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__results__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__status__current.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/AGENTS.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/CONTRIBUTING.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__archive__README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__overview.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__program.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__source-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__start.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__repository-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__results__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__status__current.txt\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/inputs/results/gh-discrimination.json\", \"planning/doc-refresh/inputs/results/gh-lifecycle.json\", \"planning/doc-refresh/inputs/review.json\", \"planning/doc-refresh/inputs/selection-notes.md\", \"planning/doc-refresh/staged-final/AGENTS.md\", \"planning/doc-refresh/staged-final/CONTRIBUTING.md\", \"planning/doc-refresh/staged-final/README.md\", \"planning/doc-refresh/staged-final/docs/archive/README.md\", \"planning/doc-refresh/staged-final/docs/design/overview.md\", \"planning/doc-refresh/staged-final/docs/design/program.md\", \"planning/doc-refresh/staged-final/docs/development/source-map.md\", \"planning/doc-refresh/staged-final/docs/development/start.md\", \"planning/doc-refresh/staged-final/docs/index.md\", \"planning/doc-refresh/staged-final/docs/results/index.md\", \"planning/doc-refresh/staged-final/docs/status/current.md\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"planning/doc-refresh/templates/docs/results/index.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b\"}, {\"path\": \"README.md\", \"sha256\": \"f3e6ce4d4221c340cb81eacf701c98d9dae6ac7afbde1dd31ac0d20187fb4099\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 256}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/ffac689d-2213-4849-a884-51d71b448cc0",
+        "revision": 257,
+        "status": "passed"
       }
     ],
     "gates": [
@@ -3183,53 +3445,53 @@
         "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
         "id": "GH-DOCS-10-CHECK",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "1c90911c8494274b748622dedaa49da87327fddd1261698f4e66831f99521887",
+        "last_run_at": "2026-09-29T12:33:44Z",
         "required": 1,
-        "revision": 239,
-        "status": "pending",
+        "revision": 245,
+        "status": "passed",
         "task_id": "GH-DOCS-10",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
         "id": "GH-DOCS-20-CHECK",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041",
+        "last_run_at": "2026-09-29T12:38:40Z",
         "required": 1,
-        "revision": 239,
-        "status": "pending",
+        "revision": 249,
+        "status": "passed",
         "task_id": "GH-DOCS-20",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
         "id": "GH-DOCS-30-CHECK",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "cfcf0177ddadfc64643ba279ea045197f533d3d70b44766e7272f405be6494d2",
+        "last_run_at": "2026-09-29T12:44:07Z",
         "required": 1,
-        "revision": 239,
-        "status": "pending",
+        "revision": 253,
+        "status": "passed",
         "task_id": "GH-DOCS-30",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--final\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0, \"input_paths\": [\"planning/doc-refresh\", \"README.md\", \"AGENTS.md\", \"docs\"]}",
         "id": "GH-DOCS-90-CHECK",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "dd43047a14c68675bd7bef00e66df435da11f505ad00d4157b68e6a908efcf7d",
+        "last_run_at": "2026-09-29T12:59:02Z",
         "required": 1,
-        "revision": 239,
-        "status": "pending",
+        "revision": 257,
+        "status": "passed",
         "task_id": "GH-DOCS-90",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
@@ -4516,6 +4778,16 @@
       },
       {
         "claim_id": null,
+        "created_at": "2026-09-29T12:44:07Z",
+        "id": "0fded209-d869-48a3-9383-60d0250c87da",
+        "kind": "complete",
+        "note": "Audited GH lifecycle report and unavailable raw CSV/lease/result; source identity alone cannot validate measurements. No public quantitative result selected; omission reason and unrun fixture boundary recorded. Local evidence and link checks pass.",
+        "payload_json": "{\"authority_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"changed_owned_paths\": [\"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/inputs/results/gh-discrimination.json\", \"planning/doc-refresh/inputs/results/gh-lifecycle.json\", \"planning/doc-refresh/inputs/review.json\", \"planning/doc-refresh/inputs/selection-notes.md\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"planning/doc-refresh/templates/docs/results/index.md\", \"planning/doc-refresh/tools/__pycache__/check.cpython-313.pyc\", \"planning/doc-refresh/tools/__pycache__/figures.cpython-313.pyc\"], \"checkpoints\": [], \"completion_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"completion_gates\": [{\"evidence_id\": \"0099df4b-a81d-44bb-803f-bf2eb8e3b659\", \"evidence_revision\": 253, \"id\": \"GH-DOCS-30-CHECK\", \"input_fingerprint\": \"cfcf0177ddadfc64643ba279ea045197f533d3d70b44766e7272f405be6494d2\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\"}], \"completion_revision\": 254, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-DOCS-30-CHECK\", \"input_fingerprint\": \"cfcf0177ddadfc64643ba279ea045197f533d3d70b44766e7272f405be6494d2\", \"last_run_at\": \"2026-09-29T12:44:07Z\", \"revision\": 253, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json             | 495 ++++++++++++++++++---\\n AGENTS.md                                          |  62 ++-\\n README.md                                          | 137 ++----\\n docs/repository-map.md                             |   2 +\\n planning/doc-refresh/inputs/bindings.json          |  18 +-\\n planning/doc-refresh/inputs/moves.json             |   9 +-\\n .../inputs/results/gh-discrimination.json          |   2 +-\\n .../doc-refresh/inputs/results/gh-lifecycle.json   |  13 +-\\n planning/doc-refresh/inputs/review.json            |   3 +-\\n planning/doc-refresh/inputs/selection-notes.md     |  11 +-\\n planning/doc-refresh/templates/AGENTS.md           |   2 +-\\n planning/doc-refresh/templates/README.md           |   1 -\\n .../templates/docs/development/source-map.md       |   2 +-\\n .../doc-refresh/templates/docs/results/index.md    |   2 +\\n todo-status.md                                     |  10 +-\\n todos.md                                           |  10 +-\\n todos/gh-docs-000.md                               |   4 +-\\n todos/gh-docs-10.md                                |  10 +-\\n todos/gh-docs-20.md                                |  10 +-\\n todos/gh-docs-30.md                                |   8 +-\\n todos/gh-docs-90.md                                |   4 +-\\n todos/gh-ml2-design.md                             |   6 +-\\n 22 files changed, 574 insertions(+), 247 deletions(-)\", \"git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Audited GH lifecycle report and unavailable raw CSV/lease/result; source identity alone cannot validate measurements. No public quantitative result selected; omission reason and unrun fixture boundary recorded. Local evidence and link checks pass.\", \"producer_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-DOCS-30\"}",
+        "revision": 254,
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "claim_id": null,
         "created_at": "2026-09-21T19:07:16Z",
         "id": "147b5dc5-0759-43f0-83cc-c72bb620660e",
         "kind": "complete",
@@ -4543,6 +4815,16 @@
         "payload_json": "{\"authority_commit\": \"3f05cf2f35ffeebbd903f2b53526c3a2c1028f88\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"3cb2e71bbe117d0aaa7d75a0c33422f2b43e0336\", \"completion_gates\": [{\"evidence_id\": \"4c687afd-1f90-4303-b5f6-4cdfaaad1824\", \"evidence_revision\": 74, \"id\": \"GH-NF1-C03-ACCEPT\", \"input_fingerprint\": \"52a5bf5d2dffef48e0283d47789b8eda1507b0e0dce936e552bbb8991b323119\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"3cb2e71bbe117d0aaa7d75a0c33422f2b43e0336\"}], \"completion_revision\": 75, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1-C03-ACCEPT\", \"input_fingerprint\": \"52a5bf5d2dffef48e0283d47789b8eda1507b0e0dce936e552bbb8991b323119\", \"last_run_at\": \"2026-09-09T11:16:39Z\", \"revision\": 74, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"3cb2e71bbe117d0aaa7d75a0c33422f2b43e0336\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Typed calculation/time contracts and executable validation tests committed; discrete maps distinct from vector-field integration.\", \"producer_commit\": \"3cb2e71bbe117d0aaa7d75a0c33422f2b43e0336\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1\", \"resources\": [], \"task_id\": \"GH-NF1-C03\"}",
         "revision": 75,
         "task_id": "GH-NF1-C03"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-29T12:59:02Z",
+        "id": "2cc3e3e1-79dc-41b9-ad71-58724d40a2a3",
+        "kind": "complete",
+        "note": "Final GlassHelix reader/agent handoff accepted. Final package check passed, no unverified public result, normal/narrow render checked, static foundation compiled against explicitly stale Cellerator package with full link/runtime gap documented. ML2 queue preserved.",
+        "payload_json": "{\"authority_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"changed_owned_paths\": [\"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/AGENTS.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/CONTRIBUTING.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__archive__README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__overview.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__program.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__source-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__start.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__repository-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__results__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__status__current.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/AGENTS.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/CONTRIBUTING.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__archive__README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__overview.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__program.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__source-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__start.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__repository-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__results__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__status__current.txt\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/inputs/results/gh-discrimination.json\", \"planning/doc-refresh/inputs/results/gh-lifecycle.json\", \"planning/doc-refresh/inputs/review.json\", \"planning/doc-refresh/inputs/selection-notes.md\", \"planning/doc-refresh/staged-final/AGENTS.md\", \"planning/doc-refresh/staged-final/CONTRIBUTING.md\", \"planning/doc-refresh/staged-final/README.md\", \"planning/doc-refresh/staged-final/docs/archive/README.md\", \"planning/doc-refresh/staged-final/docs/design/overview.md\", \"planning/doc-refresh/staged-final/docs/design/program.md\", \"planning/doc-refresh/staged-final/docs/development/source-map.md\", \"planning/doc-refresh/staged-final/docs/development/start.md\", \"planning/doc-refresh/staged-final/docs/index.md\", \"planning/doc-refresh/staged-final/docs/results/index.md\", \"planning/doc-refresh/staged-final/docs/status/current.md\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"planning/doc-refresh/templates/docs/results/index.md\"], \"checkpoints\": [], \"completion_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"completion_gates\": [{\"evidence_id\": \"ffac689d-2213-4849-a884-51d71b448cc0\", \"evidence_revision\": 257, \"id\": \"GH-DOCS-90-CHECK\", \"input_fingerprint\": \"dd43047a14c68675bd7bef00e66df435da11f505ad00d4157b68e6a908efcf7d\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\"}], \"completion_revision\": 258, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-DOCS-90-CHECK\", \"input_fingerprint\": \"dd43047a14c68675bd7bef00e66df435da11f505ad00d4157b68e6a908efcf7d\", \"last_run_at\": \"2026-09-29T12:59:02Z\", \"revision\": 257, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json             | 589 ++++++++++++++++++---\\n AGENTS.md                                          |  62 +--\\n README.md                                          | 137 ++---\\n docs/repository-map.md                             |   2 +\\n planning/doc-refresh/inputs/bindings.json          |  20 +-\\n planning/doc-refresh/inputs/moves.json             |   9 +-\\n .../inputs/results/gh-discrimination.json          |   2 +-\\n .../doc-refresh/inputs/results/gh-lifecycle.json   |  13 +-\\n planning/doc-refresh/inputs/review.json            |  27 +-\\n planning/doc-refresh/inputs/selection-notes.md     |  11 +-\\n planning/doc-refresh/templates/AGENTS.md           |   2 +-\\n planning/doc-refresh/templates/README.md           |   1 -\\n .../templates/docs/development/source-map.md       |  23 +-\\n .../doc-refresh/templates/docs/results/index.md    |   2 +\\n todo-status.md                                     |  12 +-\\n todos.md                                           |  12 +-\\n todos/gh-docs-000.md                               |   4 +-\\n todos/gh-docs-10.md                                |  10 +-\\n todos/gh-docs-20.md                                |  10 +-\\n todos/gh-docs-30.md                                |  10 +-\\n todos/gh-docs-90.md                                |   8 +-\\n todos/gh-ml2-design.md                             |   6 +-\\n 22 files changed, 687 insertions(+), 285 deletions(-)\", \"git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Final GlassHelix reader/agent handoff accepted. Final package check passed, no unverified public result, normal/narrow render checked, static foundation compiled against explicitly stale Cellerator package with full link/runtime gap documented. ML2 queue preserved.\", \"producer_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-DOCS-90\"}",
+        "revision": 258,
+        "task_id": "GH-DOCS-90"
       },
       {
         "claim_id": null,
@@ -4686,6 +4968,16 @@
       },
       {
         "claim_id": null,
+        "created_at": "2026-09-29T12:38:40Z",
+        "id": "aa90cb16-b6b6-4920-832a-3a729c07e826",
+        "kind": "complete",
+        "note": "No source move; verified current GH foundation/build paths and preserved ML2 continuation. Updated path bindings, source map, build guide, and explicit delegation boundary. Local/package/link checks pass.",
+        "payload_json": "{\"authority_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"changed_owned_paths\": [\"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\"], \"checkpoints\": [], \"completion_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"completion_gates\": [{\"evidence_id\": \"c1b18198-01cb-4b4a-83d6-812fa4dc9653\", \"evidence_revision\": 249, \"id\": \"GH-DOCS-20-CHECK\", \"input_fingerprint\": \"e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\"}], \"completion_revision\": 250, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-DOCS-20-CHECK\", \"input_fingerprint\": \"e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041\", \"last_run_at\": \"2026-09-29T12:38:40Z\", \"revision\": 249, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json             | 401 ++++++++++++++++++---\\n AGENTS.md                                          |  62 ++--\\n README.md                                          | 137 ++-----\\n docs/repository-map.md                             |   2 +\\n planning/doc-refresh/inputs/bindings.json          |  18 +-\\n planning/doc-refresh/inputs/moves.json             |   9 +-\\n planning/doc-refresh/templates/AGENTS.md           |   2 +-\\n planning/doc-refresh/templates/README.md           |   1 -\\n .../templates/docs/development/source-map.md       |   2 +-\\n todo-status.md                                     |   8 +-\\n todos.md                                           |   8 +-\\n todos/gh-docs-000.md                               |   4 +-\\n todos/gh-docs-10.md                                |  10 +-\\n todos/gh-docs-20.md                                |   8 +-\\n todos/gh-docs-30.md                                |   4 +-\\n todos/gh-docs-90.md                                |   4 +-\\n todos/gh-ml2-design.md                             |   6 +-\\n 17 files changed, 466 insertions(+), 220 deletions(-)\", \"git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"No source move; verified current GH foundation/build paths and preserved ML2 continuation. Updated path bindings, source map, build guide, and explicit delegation boundary. Local/package/link checks pass.\", \"producer_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-DOCS-20\"}",
+        "revision": 250,
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "claim_id": null,
         "created_at": "2026-09-09T11:39:40Z",
         "id": "bcce1bd2-5293-4d7f-ac9f-e4c1b6461dec",
         "kind": "complete",
@@ -4716,6 +5008,16 @@
       },
       {
         "claim_id": null,
+        "created_at": "2026-09-29T12:33:44Z",
+        "id": "dd5f1aa2-44b6-4940-bbb4-832417d756d2",
+        "kind": "complete",
+        "note": "Applied current GlassHelix reader/developer/agent hierarchy with honest pending-results index; local check and links pass; ML2 queue remains intact.",
+        "payload_json": "{\"authority_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"changed_owned_paths\": [\"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/repository-map.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/tools/__pycache__/check.cpython-313.pyc\", \"planning/doc-refresh/tools/__pycache__/figures.cpython-313.pyc\"], \"checkpoints\": [], \"completion_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"completion_gates\": [{\"evidence_id\": \"dc95c68a-210b-4e72-87a6-0ae90502f5a8\", \"evidence_revision\": 245, \"id\": \"GH-DOCS-10-CHECK\", \"input_fingerprint\": \"1c90911c8494274b748622dedaa49da87327fddd1261698f4e66831f99521887\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\"}], \"completion_revision\": 246, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-DOCS-10-CHECK\", \"input_fingerprint\": \"1c90911c8494274b748622dedaa49da87327fddd1261698f4e66831f99521887\", \"last_run_at\": \"2026-09-29T12:33:44Z\", \"revision\": 245, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json    | 307 ++++++++++++++++++++++++++----\\n AGENTS.md                                 |  64 +++----\\n README.md                                 | 137 +++----------\\n docs/repository-map.md                    |   2 +\\n planning/doc-refresh/inputs/bindings.json |  20 +-\\n todo-status.md                            |   6 +-\\n todos.md                                  |   6 +-\\n todos/gh-docs-000.md                      |   4 +-\\n todos/gh-docs-10.md                       |   8 +-\\n todos/gh-docs-20.md                       |   4 +-\\n todos/gh-docs-30.md                       |   4 +-\\n todos/gh-docs-90.md                       |   4 +-\\n todos/gh-ml2-design.md                    |   6 +-\\n 13 files changed, 369 insertions(+), 203 deletions(-)\", \"git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Applied current GlassHelix reader/developer/agent hierarchy with honest pending-results index; local check and links pass; ML2 queue remains intact.\", \"producer_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-DOCS-10\"}",
+        "revision": 246,
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "claim_id": null,
         "created_at": "2026-09-21T19:01:19Z",
         "id": "e21f8008-1296-42ee-b431-b77d594a6efd",
         "kind": "complete",
@@ -4733,6 +5035,16 @@
         "payload_json": "{\"authority_commit\": \"3f05cf2f35ffeebbd903f2b53526c3a2c1028f88\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"bf1a6340963f95106b82e65aa5d6eaaf334071a5\", \"completion_gates\": [{\"evidence_id\": \"c27cc997-da37-46b6-88a1-98041c3a2990\", \"evidence_revision\": 66, \"id\": \"GH-NF1-C01-ACCEPT\", \"input_fingerprint\": \"47007179f9e5f3fb4b235cc3b957c9ffeedb9fa27916ca351857baf17e9de075\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"bf1a6340963f95106b82e65aa5d6eaaf334071a5\"}], \"completion_revision\": 67, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1-C01-ACCEPT\", \"input_fingerprint\": \"47007179f9e5f3fb4b235cc3b957c9ffeedb9fa27916ca351857baf17e9de075\", \"last_run_at\": \"2026-09-09T11:15:15Z\", \"revision\": 66, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"bf1a6340963f95106b82e65aa5d6eaaf334071a5\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Usable quantity contract composes canonical CE persistent identity; focused real C++20 negative-control test passed. Governance evidence only.\", \"producer_commit\": \"bf1a6340963f95106b82e65aa5d6eaaf334071a5\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1\", \"resources\": [], \"task_id\": \"GH-NF1-C01\"}",
         "revision": 67,
         "task_id": "GH-NF1-C01"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-09-29T12:59:15Z",
+        "id": "e6e7566d-d19e-4e7a-a0e8-420b27967ce7",
+        "kind": "complete",
+        "note": "GlassHelix DOCS outcomes 10/20/30/90 accepted with completed local handoff, honest no-public-result evidence disposition, no source move, bounded static build qualification and explicit full-link/runtime limitation; existing ML2 run remains active/continuable. Cross-project program receipt comparison remains coordinator work.",
+        "payload_json": "{\"authority_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"completion_gates\": [], \"completion_revision\": 260, \"finalized_checkpoints\": [], \"gates\": [], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json             | 683 ++++++++++++++++++---\\n AGENTS.md                                          |  62 +-\\n README.md                                          | 137 +----\\n docs/repository-map.md                             |   2 +\\n planning/doc-refresh/inputs/bindings.json          |  20 +-\\n planning/doc-refresh/inputs/moves.json             |   9 +-\\n .../inputs/results/gh-discrimination.json          |   2 +-\\n .../doc-refresh/inputs/results/gh-lifecycle.json   |  13 +-\\n planning/doc-refresh/inputs/review.json            |  27 +-\\n planning/doc-refresh/inputs/selection-notes.md     |  11 +-\\n planning/doc-refresh/templates/AGENTS.md           |   2 +-\\n planning/doc-refresh/templates/README.md           |   1 -\\n .../templates/docs/development/source-map.md       |  23 +-\\n .../doc-refresh/templates/docs/results/index.md    |   2 +\\n todo-status.md                                     |  14 +-\\n todos.md                                           |  14 +-\\n todos/gh-docs-000.md                               |   6 +-\\n todos/gh-docs-10.md                                |  10 +-\\n todos/gh-docs-20.md                                |  10 +-\\n todos/gh-docs-30.md                                |  10 +-\\n todos/gh-docs-90.md                                |  10 +-\\n todos/gh-ml2-design.md                             |   6 +-\\n 22 files changed, 776 insertions(+), 298 deletions(-)\", \"git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"GlassHelix DOCS outcomes 10/20/30/90 accepted with completed local handoff, honest no-public-result evidence disposition, no source move, bounded static build qualification and explicit full-link/runtime limitation; existing ML2 run remains active/continuable. Cross-project program receipt comparison remains coordinator work.\", \"producer_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-DOCS-000\"}",
+        "revision": 260,
+        "task_id": "GH-DOCS-000"
       },
       {
         "claim_id": null,
@@ -7937,6 +8249,58 @@
         "validation_git_head": "ce9eb73aa039fda2de76c91b61c67953a552755f"
       },
       {
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 246,
+        "evidence_id": "dc95c68a-210b-4e72-87a6-0ae90502f5a8",
+        "evidence_revision": 245,
+        "gate_id": "GH-DOCS-10-CHECK",
+        "input_fingerprint": "1c90911c8494274b748622dedaa49da87327fddd1261698f4e66831f99521887",
+        "provenance_json": "{\"claim_id\": \"83bdcc1c-174a-4747-9a36-d8747b327bd0\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"1c90911c8494274b748622dedaa49da87327fddd1261698f4e66831f99521887\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"f5763be287ca55f0ad8edc4a08630d3af55b19563b0e59d4104bd8aca0d7002c\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/repository-map.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/tools/__pycache__/check.cpython-313.pyc\", \"planning/doc-refresh/tools/__pycache__/figures.cpython-313.pyc\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"77291d155fef3b79a12aae7e9433df78ff1bbfbd0680cb6ebaca15d7f210dd94\"}, {\"path\": \"README.md\", \"sha256\": \"a42bc08e2871585dd73f2bd90d78da49fe6db509d50482bd1dfa0905c39d46a8\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 244}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/dc95c68a-210b-4e72-87a6-0ae90502f5a8\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-DOCS-10",
+        "valid": 1,
+        "validation_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c"
+      },
+      {
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 250,
+        "evidence_id": "c1b18198-01cb-4b4a-83d6-812fa4dc9653",
+        "evidence_revision": 249,
+        "gate_id": "GH-DOCS-20-CHECK",
+        "input_fingerprint": "e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041",
+        "provenance_json": "{\"claim_id\": \"476fe1c9-5b95-4857-be81-d257884421be\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"a2d7a0c16d46257c943623494992e1f9792eafca708a97897f153e41f7eb8edd\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b\"}, {\"path\": \"README.md\", \"sha256\": \"a42bc08e2871585dd73f2bd90d78da49fe6db509d50482bd1dfa0905c39d46a8\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 248}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/c1b18198-01cb-4b4a-83d6-812fa4dc9653\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-DOCS-20",
+        "valid": 1,
+        "validation_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c"
+      },
+      {
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 254,
+        "evidence_id": "0099df4b-a81d-44bb-803f-bf2eb8e3b659",
+        "evidence_revision": 253,
+        "gate_id": "GH-DOCS-30-CHECK",
+        "input_fingerprint": "cfcf0177ddadfc64643ba279ea045197f533d3d70b44766e7272f405be6494d2",
+        "provenance_json": "{\"claim_id\": \"7749e0d6-f8af-40ce-86c9-3e3c35543ed2\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"cfcf0177ddadfc64643ba279ea045197f533d3d70b44766e7272f405be6494d2\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"383ddfd5c28963356f9f6afa06b0cdbbf1ff0548e1b92ecf7e1e3fee5e048c3a\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/inputs/results/gh-discrimination.json\", \"planning/doc-refresh/inputs/results/gh-lifecycle.json\", \"planning/doc-refresh/inputs/review.json\", \"planning/doc-refresh/inputs/selection-notes.md\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"planning/doc-refresh/templates/docs/results/index.md\", \"planning/doc-refresh/tools/__pycache__/check.cpython-313.pyc\", \"planning/doc-refresh/tools/__pycache__/figures.cpython-313.pyc\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b\"}, {\"path\": \"README.md\", \"sha256\": \"f3e6ce4d4221c340cb81eacf701c98d9dae6ac7afbde1dd31ac0d20187fb4099\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 252}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/0099df4b-a81d-44bb-803f-bf2eb8e3b659\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-DOCS-30",
+        "valid": 1,
+        "validation_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c"
+      },
+      {
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 258,
+        "evidence_id": "ffac689d-2213-4849-a884-51d71b448cc0",
+        "evidence_revision": 257,
+        "gate_id": "GH-DOCS-90-CHECK",
+        "input_fingerprint": "dd43047a14c68675bd7bef00e66df435da11f505ad00d4157b68e6a908efcf7d",
+        "provenance_json": "{\"claim_id\": \"643b3989-53d5-457e-9822-7914bb588192\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--final\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"dd43047a14c68675bd7bef00e66df435da11f505ad00d4157b68e6a908efcf7d\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--final\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"ae04f5b27308631a8e385fc3c577fe40c31f94a3a46039fe0dae1c582c57e32e\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/AGENTS.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/CONTRIBUTING.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__archive__README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__overview.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__design__program.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__source-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__development__start.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__repository-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__results__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/narrow/docs__status__current.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/AGENTS.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/CONTRIBUTING.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__archive__README.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__overview.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__design__program.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__source-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__development__start.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__repository-map.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__results__index.txt\", \"planning/doc-refresh/evidence/gh-docs-90/normal/docs__status__current.txt\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/inputs/results/gh-discrimination.json\", \"planning/doc-refresh/inputs/results/gh-lifecycle.json\", \"planning/doc-refresh/inputs/review.json\", \"planning/doc-refresh/inputs/selection-notes.md\", \"planning/doc-refresh/staged-final/AGENTS.md\", \"planning/doc-refresh/staged-final/CONTRIBUTING.md\", \"planning/doc-refresh/staged-final/README.md\", \"planning/doc-refresh/staged-final/docs/archive/README.md\", \"planning/doc-refresh/staged-final/docs/design/overview.md\", \"planning/doc-refresh/staged-final/docs/design/program.md\", \"planning/doc-refresh/staged-final/docs/development/source-map.md\", \"planning/doc-refresh/staged-final/docs/development/start.md\", \"planning/doc-refresh/staged-final/docs/index.md\", \"planning/doc-refresh/staged-final/docs/results/index.md\", \"planning/doc-refresh/staged-final/docs/status/current.md\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"planning/doc-refresh/templates/docs/results/index.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b\"}, {\"path\": \"README.md\", \"sha256\": \"f3e6ce4d4221c340cb81eacf701c98d9dae6ac7afbde1dd31ac0d20187fb4099\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 256}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/ffac689d-2213-4849-a884-51d71b448cc0\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-DOCS-90",
+        "valid": 1,
+        "validation_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c"
+      },
+      {
         "completion_git_head": "43ca481ddd47a3696f2bda43cafb2c55a77e0025",
         "completion_revision": 29,
         "evidence_id": "a24fcf6d-633e-4f1f-a383-b5780af0a3a9",
@@ -9771,7 +10135,7 @@
         "checkpoint_id": null,
         "condition_json": "{}",
         "decision_id": null,
-        "id": 326,
+        "id": 329,
         "interface_id": null,
         "prerequisite_task_id": "GH-DOCS-10",
         "task_id": "GH-DOCS-20",
@@ -9782,7 +10146,7 @@
         "checkpoint_id": null,
         "condition_json": "{}",
         "decision_id": null,
-        "id": 327,
+        "id": 330,
         "interface_id": null,
         "prerequisite_task_id": "GH-DOCS-20",
         "task_id": "GH-DOCS-30",
@@ -9793,7 +10157,7 @@
         "checkpoint_id": null,
         "condition_json": "{}",
         "decision_id": null,
-        "id": 328,
+        "id": 331,
         "interface_id": null,
         "prerequisite_task_id": "GH-DOCS-30",
         "task_id": "GH-DOCS-90",
@@ -10205,9 +10569,9 @@
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 260,
         "created_at": "2026-09-29T11:59:51Z",
         "id": "GH-DOCS-000",
         "kind": "epic",
@@ -10219,20 +10583,20 @@
         "parallel_policy": "serial",
         "parent_id": null,
         "priority": 0,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{}",
-        "revision": 239,
-        "status": "planned",
+        "revision": 260,
+        "status": "done",
         "tags_json": "[]",
         "title": "GlassHelix documentation-first cleanup and selected evidence",
-        "updated_at": "2026-09-29T11:59:51Z",
-        "version": 1
+        "updated_at": "2026-09-29T12:59:15Z",
+        "version": 4
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 246,
         "created_at": "2026-09-29T11:59:51Z",
         "id": "GH-DOCS-10",
         "kind": "task",
@@ -10244,20 +10608,20 @@
         "parallel_policy": "serial",
         "parent_id": "GH-DOCS-000",
         "priority": 0,
-        "result": null,
+        "result": "implemented",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
-        "revision": 239,
-        "status": "planned",
+        "revision": 246,
+        "status": "done",
         "tags_json": "[]",
         "title": "Reconcile the current tree and apply the prewritten documentation",
-        "updated_at": "2026-09-29T11:59:51Z",
-        "version": 1
+        "updated_at": "2026-09-29T12:33:44Z",
+        "version": 4
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 250,
         "created_at": "2026-09-29T11:59:51Z",
         "id": "GH-DOCS-20",
         "kind": "task",
@@ -10269,20 +10633,20 @@
         "parallel_policy": "serial",
         "parent_id": "GH-DOCS-000",
         "priority": 0,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
-        "revision": 239,
-        "status": "planned",
+        "revision": 250,
+        "status": "done",
         "tags_json": "[]",
         "title": "Perform bounded moves and bind final source/build paths",
-        "updated_at": "2026-09-29T11:59:51Z",
-        "version": 1
+        "updated_at": "2026-09-29T12:38:41Z",
+        "version": 4
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 254,
         "created_at": "2026-09-29T11:59:51Z",
         "id": "GH-DOCS-30",
         "kind": "task",
@@ -10294,20 +10658,20 @@
         "parallel_policy": "serial",
         "parent_id": "GH-DOCS-000",
         "priority": 0,
-        "result": null,
+        "result": "evaluated_not_promoted",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
-        "revision": 239,
-        "status": "planned",
+        "revision": 254,
+        "status": "done",
         "tags_json": "[]",
         "title": "Qualify and curate the selected result displays",
-        "updated_at": "2026-09-29T11:59:51Z",
-        "version": 1
+        "updated_at": "2026-09-29T12:44:07Z",
+        "version": 4
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c",
+        "completion_revision": 258,
         "created_at": "2026-09-29T11:59:51Z",
         "id": "GH-DOCS-90",
         "kind": "task",
@@ -10319,14 +10683,14 @@
         "parallel_policy": "serial",
         "parent_id": "GH-DOCS-000",
         "priority": 0,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"evaluated_not_promoted\", \"no_change_required\"]}",
-        "revision": 239,
-        "status": "planned",
+        "revision": 258,
+        "status": "done",
         "tags_json": "[]",
         "title": "Validate the human/agent reading paths and publish the local handoff",
-        "updated_at": "2026-09-29T11:59:51Z",
-        "version": 1
+        "updated_at": "2026-09-29T12:59:03Z",
+        "version": 4
       },
       {
         "attention_reason": null,
@@ -10404,7 +10768,7 @@
         "version": 1
       },
       {
-        "attention_reason": null,
+        "attention_reason": "Incidental claim while selecting newly bootstrapped documentation epic; no ML2 work performed.",
         "completion_commit": null,
         "completion_git_head": null,
         "completion_revision": null,
@@ -10421,12 +10785,12 @@
         "priority": 100,
         "result": null,
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
-        "revision": 238,
-        "status": "planned",
+        "revision": 240,
+        "status": "in_progress",
         "tags_json": "[]",
         "title": "Choose and make executable one biology-purpose learning formulation",
-        "updated_at": "2026-09-27T12:53:37Z",
-        "version": 1
+        "updated_at": "2026-09-29T12:22:31Z",
+        "version": 3
       },
       {
         "attention_reason": null,
@@ -13158,6 +13522,125 @@
         "version": 1
       },
       {
+        "content_hash": "aa51293473e3cc637f81bd4fac228a595fcba555c6fad52caf7f68e070885100",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"ordered_tasks\":[\"GH-DOCS-10\",\"GH-DOCS-20\",\"GH-DOCS-30\",\"GH-DOCS-90\",\"GH-DOCS-000\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"exclusive\"}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "id": "GH-DOCS-RUN-V1:lane_brief:GH-DOCS-L-EXEC:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-DOCS-L-EXEC\",\"run_id\":\"GH-DOCS-RUN-V1\"}",
+        "run_id": "GH-DOCS-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "921ed2877fdd9f8b4509080a23e10b877fba822e2a1f95accc219490e14d1328",
+        "content_json": "{\"boundaries\":[\"Preserve all active and scheduled Todo work and keep it continuable after this epic.\",\"Keep this work within the documentation task scopes and separate repository authority.\",\"No automatic retirement or supersession of another run.\"],\"objective\":\"Complete the prepared documentation refresh and local evidence handoff.\",\"references\":[\"planning/doc-refresh/START_LOCAL.md\",\"planning/doc-refresh/shared/TASKS.md\"]}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "id": "GH-DOCS-RUN-V1:run_charter:-:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "run_charter",
+        "lane_id": null,
+        "owner_scope_json": "{\"run_id\":\"GH-DOCS-RUN-V1\"}",
+        "run_id": "GH-DOCS-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "7dc3460a7e0b21d52813e6514515c84de4ded0d3c6ece19f0c16ed56fba4a4f2",
+        "content_json": "{\"completion_contract\":null,\"forbidden_mutations\":[],\"gates\":[],\"next_action\":\"Apply the prewritten public/agent/developer/status hierarchy, perform only useful small moves, and qualify selected result displays. Part of DOCS-REFRESH-2026-09; authority remains local.\",\"objective\":\"Apply the prewritten public/agent/developer/status hierarchy, perform only useful small moves, and qualify selected result displays. Part of DOCS-REFRESH-2026-09; authority remains local.\",\"scope\":{},\"tests\":[]}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "id": "GH-DOCS-RUN-V1:task_brief:GH-DOCS-L-EXEC:GH-DOCS-000:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-DOCS-L-EXEC\",\"run_id\":\"GH-DOCS-RUN-V1\",\"task_id\":\"GH-DOCS-000\"}",
+        "run_id": "GH-DOCS-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-DOCS-000",
+        "version": 1
+      },
+      {
+        "content_hash": "ac15eb62573dbe46a824824c47c2d37578dfbc47c9c9bb3043ec61ca11cf5ef0",
+        "content_json": "{\"completion_contract\":null,\"forbidden_mutations\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"gates\":[\"GH-DOCS-10-CHECK\"],\"next_action\":\"Refresh source/claims after prior packages; classify important documents; stage the already-written README, design, status, source-map and agent pages without rederiving intent.\",\"objective\":\"Refresh source/claims after prior packages; classify important documents; stage the already-written README, design, status, source-map and agent pages without rederiving intent.\",\"scope\":{\"exclusive_paths\":[\"README.md\",\"AGENTS.md\",\"CONTRIBUTING.md\",\"docs\",\"planning/doc-refresh\"],\"forbidden_paths\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"read_paths\":[\"README.md\",\"AGENTS.md\",\"CMakeLists.txt\",\"docs\",\"planning\",\"include\",\"src\",\"tests\",\"bench\",\"examples\"]},\"tests\":[\"GH-DOCS-10-CHECK\"]}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "id": "GH-DOCS-RUN-V1:task_brief:GH-DOCS-L-EXEC:GH-DOCS-10:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-DOCS-L-EXEC\",\"run_id\":\"GH-DOCS-RUN-V1\",\"task_id\":\"GH-DOCS-10\"}",
+        "run_id": "GH-DOCS-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-DOCS-10",
+        "version": 1
+      },
+      {
+        "content_hash": "7aeb715787dc75b1e3eafb19e04f6c3dc90dfb90ab43bde8ca2f9d651fb567dd",
+        "content_json": "{\"completion_contract\":null,\"forbidden_mutations\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"gates\":[\"GH-DOCS-20-CHECK\"],\"next_action\":\"Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.\",\"objective\":\"Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.\",\"scope\":{\"exclusive_paths\":[\"README.md\",\"AGENTS.md\",\"CONTRIBUTING.md\",\"docs\",\"planning/doc-refresh\",\"include\",\"src\",\"tests\",\"bench\",\"examples\",\"tools\",\"bindings\",\"python\",\"cmake\",\"CMakeLists.txt\",\"archive\",\"Classifier\"],\"forbidden_paths\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"read_paths\":[\"README.md\",\"AGENTS.md\",\"CMakeLists.txt\",\"docs\",\"planning\",\"include\",\"src\",\"tests\",\"bench\",\"examples\"]},\"tests\":[\"GH-DOCS-20-CHECK\"]}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "id": "GH-DOCS-RUN-V1:task_brief:GH-DOCS-L-EXEC:GH-DOCS-20:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-DOCS-L-EXEC\",\"run_id\":\"GH-DOCS-RUN-V1\",\"task_id\":\"GH-DOCS-20\"}",
+        "run_id": "GH-DOCS-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-DOCS-20",
+        "version": 1
+      },
+      {
+        "content_hash": "2fa2c5ab62f65c080df1b655116860a8fa4230081327fdc02974a5dc45587147",
+        "content_json": "{\"completion_contract\":null,\"forbidden_mutations\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"gates\":[\"GH-DOCS-30-CHECK\"],\"next_action\":\"Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.\",\"objective\":\"Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.\",\"scope\":{\"exclusive_paths\":[\"README.md\",\"AGENTS.md\",\"CONTRIBUTING.md\",\"docs\",\"planning/doc-refresh\",\"include\",\"src\",\"tests\",\"bench\",\"examples\",\"tools\",\"bindings\",\"python\",\"cmake\",\"CMakeLists.txt\",\"archive\",\"Classifier\"],\"forbidden_paths\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"read_paths\":[\"README.md\",\"AGENTS.md\",\"CMakeLists.txt\",\"docs\",\"planning\",\"include\",\"src\",\"tests\",\"bench\",\"examples\"]},\"tests\":[\"GH-DOCS-30-CHECK\"]}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "id": "GH-DOCS-RUN-V1:task_brief:GH-DOCS-L-EXEC:GH-DOCS-30:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-DOCS-L-EXEC\",\"run_id\":\"GH-DOCS-RUN-V1\",\"task_id\":\"GH-DOCS-30\"}",
+        "run_id": "GH-DOCS-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-DOCS-30",
+        "version": 1
+      },
+      {
+        "content_hash": "acdad5e6d6aa8d103181b29e4799c36413cf6bd1dd0ce9d1a9320043a9654612",
+        "content_json": "{\"completion_contract\":null,\"forbidden_mutations\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"gates\":[\"GH-DOCS-90-CHECK\"],\"next_action\":\"Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.\",\"objective\":\"Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.\",\"scope\":{\"exclusive_paths\":[\"README.md\",\"AGENTS.md\",\"CONTRIBUTING.md\",\"docs\",\"planning/doc-refresh\",\"include\",\"src\",\"tests\",\"bench\",\"examples\",\"tools\",\"bindings\",\"python\",\"cmake\",\"CMakeLists.txt\",\"archive\",\"Classifier\"],\"forbidden_paths\":[\"todos.md\",\"todo-status.md\",\"todos\",\"extern\"],\"read_paths\":[\"README.md\",\"AGENTS.md\",\"CMakeLists.txt\",\"docs\",\"planning\",\"include\",\"src\",\"tests\",\"bench\",\"examples\"]},\"tests\":[\"GH-DOCS-90-CHECK\"]}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "id": "GH-DOCS-RUN-V1:task_brief:GH-DOCS-L-EXEC:GH-DOCS-90:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "owner_scope_json": "{\"lane_id\":\"GH-DOCS-L-EXEC\",\"run_id\":\"GH-DOCS-RUN-V1\",\"task_id\":\"GH-DOCS-90\"}",
+        "run_id": "GH-DOCS-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-DOCS-90",
+        "version": 1
+      },
+      {
         "content_hash": "cf6cad48cafef92a6fed43649e9f4462cb3ed083a2a277ed766c463b10d9afc2",
         "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"One writable main lane avoids an idle coordinator. Bounded delegates can handle independent files; genuine new lanes require an authorized plan amendment.\",\"ordered_tasks\":[\"GH-ML2-DESIGN\",\"GH-ML2-DATA\",\"GH-ML2-REPAIR\",\"GH-ML2-LEARN\",\"GH-ML2-PILOT\",\"GH-ML2-ACCEPT\",\"GH-ML2-0000\"],\"references\":[\"planning/learning-v2/START_CONTROLLER.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"exclusive\"}",
         "created_at": "2026-09-27T12:53:37Z",
@@ -15714,12 +16197,62 @@
     ],
     "workflow_lane_tasks": [
       {
+        "activated_at": "2026-09-29T12:28:12Z",
+        "completed_at": "2026-09-29T12:33:44Z",
+        "enqueued_at": "2026-09-29T12:27:21Z",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "position": 0,
+        "revision": 246,
+        "state": "completed",
+        "task_id": "GH-DOCS-10"
+      },
+      {
+        "activated_at": "2026-09-29T12:33:44Z",
+        "completed_at": "2026-09-29T12:38:40Z",
+        "enqueued_at": "2026-09-29T12:27:21Z",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "position": 1,
+        "revision": 250,
+        "state": "completed",
+        "task_id": "GH-DOCS-20"
+      },
+      {
+        "activated_at": "2026-09-29T12:38:41Z",
+        "completed_at": "2026-09-29T12:44:07Z",
+        "enqueued_at": "2026-09-29T12:27:21Z",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "position": 2,
+        "revision": 254,
+        "state": "completed",
+        "task_id": "GH-DOCS-30"
+      },
+      {
+        "activated_at": "2026-09-29T12:44:07Z",
+        "completed_at": "2026-09-29T12:59:03Z",
+        "enqueued_at": "2026-09-29T12:27:21Z",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "position": 3,
+        "revision": 258,
+        "state": "completed",
+        "task_id": "GH-DOCS-90"
+      },
+      {
+        "activated_at": "2026-09-29T12:59:03Z",
+        "completed_at": "2026-09-29T12:59:15Z",
+        "enqueued_at": "2026-09-29T12:27:21Z",
+        "lane_id": "GH-DOCS-L-EXEC",
+        "position": 4,
+        "revision": 260,
+        "state": "completed",
+        "task_id": "GH-DOCS-000"
+      },
+      {
         "activated_at": null,
         "completed_at": null,
         "enqueued_at": "2026-09-27T12:53:37Z",
         "lane_id": "GH-ML2-L-EXEC",
         "position": 0,
-        "revision": 238,
+        "revision": 241,
         "state": "queued",
         "task_id": "GH-ML2-DESIGN"
       },
@@ -16787,14 +17320,26 @@
     "workflow_lanes": [
       {
         "context_cursor": 0,
+        "created_at": "2026-09-29T12:27:21Z",
+        "id": "GH-DOCS-L-EXEC",
+        "parent_lane_id": null,
+        "revision": 260,
+        "role": "implementer",
+        "run_id": "GH-DOCS-RUN-V1",
+        "state": "closed",
+        "updated_at": "2026-09-29T12:59:15Z",
+        "workspace_mode": "exclusive"
+      },
+      {
+        "context_cursor": 0,
         "created_at": "2026-09-27T12:53:37Z",
         "id": "GH-ML2-L-EXEC",
         "parent_lane_id": null,
-        "revision": 238,
+        "revision": 241,
         "role": "implementer",
         "run_id": "GH-ML2-RUN-V1",
         "state": "ready",
-        "updated_at": "2026-09-27T12:53:37Z",
+        "updated_at": "2026-09-29T12:22:31Z",
         "workspace_mode": "exclusive"
       },
       {
@@ -17238,6 +17783,16 @@
     "workflow_rendezvous_participants": [],
     "workflow_run_charters": [
       {
+        "content_hash": "921ed2877fdd9f8b4509080a23e10b877fba822e2a1f95accc219490e14d1328",
+        "content_json": "{\"boundaries\":[\"Preserve all active and scheduled Todo work and keep it continuable after this epic.\",\"Keep this work within the documentation task scopes and separate repository authority.\",\"No automatic retirement or supersession of another run.\"],\"objective\":\"Complete the prepared documentation refresh and local evidence handoff.\",\"references\":[\"planning/doc-refresh/START_LOCAL.md\",\"planning/doc-refresh/shared/TASKS.md\"]}",
+        "created_at": "2026-09-29T12:27:21Z",
+        "creation_revision": 242,
+        "run_id": "GH-DOCS-RUN-V1",
+        "superseded_at": null,
+        "superseded_revision": null,
+        "version": 1
+      },
+      {
         "content_hash": "4aa16baa91d0236f48843440e9503161c18e094ff294b1190361532fea03ee37",
         "content_json": "{\"boundaries\":[\"GlassHelix owns scientific models, evidence and inference meaning; Torch supplies ordinary ML. CelleraTorch owns framework integration; native Cellerator owns reusable biological math, differentiation, parameter/value contracts, geometry, planning and compiler/runtime. No parallel GH ML runtime or CT kernel home.\",\"Preserve successful NF1A, compiler, relation, geometry and CelleraTorch work and separate Todo authorities. No retirement, runtime replacement, old-plan reapply, unrelated cleanup, preprint edits or Ampere-epic activation is authorized.\",\"Use coarse outcomes and evidence-selected alternatives. Reuse ordinary Torch and existing Cellerator compositions before new kernels. Easy work may proceed immediately. A costly design needs an explicit rationale, not a universal framework or mandatory survey.\"],\"delegated_judgment\":\"Main thread owns consequential design and cross-project acceptance. Use one writable implementer lane per authority and bounded children by default. Routine coding may be quick; do not turn the deeper design into repeated approval ceremonies.\",\"desired_end_state\":\"One useful fitted/conditioned scientific consumer, a real composable CT/CE training path, and one carefully reasoned structured-learning construction with honest qualification.\",\"objective\":\"Deliver biology-purpose scientific learning through GlassHelix, Torch/CelleraTorch and Cellerator without duplicating an ML runtime.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/BIOLOGICAL_ML.md\",\"planning/learning-v2/CROSS_PROJECT.md\"]}",
         "created_at": "2026-09-27T12:53:37Z",
@@ -17269,6 +17824,16 @@
       }
     ],
     "workflow_runs": [
+      {
+        "active_charter_version": 1,
+        "completed_at": null,
+        "created_at": "2026-09-29T12:27:21Z",
+        "id": "GH-DOCS-RUN-V1",
+        "revision": 260,
+        "root_task_id": "GH-DOCS-000",
+        "status": "completed",
+        "updated_at": "2026-09-29T12:59:15Z"
+      },
       {
         "active_charter_version": 1,
         "completed_at": null,

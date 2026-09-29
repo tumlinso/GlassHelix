@@ -1,16 +1,18 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-DOCS-30: Qualify and curate the selected result displays
 
-Task revision: `239`; current project revision is in `todo-status.md`.
+Task revision: `254`; current project revision is in `todo-status.md`.
 
 ## Objective
 Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `serial`
-- Result: `-`
+- Result: `evaluated_not_promoted`
 
 ## Next Action
 _None._
