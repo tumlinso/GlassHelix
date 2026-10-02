@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `369`
+Project revision: `377`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -26,8 +26,8 @@ Project revision: `369`
 - `GH-MOON-MERGE-ACTOR` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-MODELS` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-PLAIN` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
-- `GH-MOON-RECEIPT` | status: in_progress | execution: claimed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
-- `GH-MOON-REFACTOR` | status: in_progress | execution: idle | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-RECEIPT` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-REFACTOR` | status: in_progress | execution: claimed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-NF1-0000` | status: superseded | execution: closed | next: 
 - `GH-NF1A-ACCEPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ACCEPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1A-RELEASE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/RELEASE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -38,7 +38,7 @@ Project revision: `369`
 - `GH-DOCS-20` | status: done | execution: closed | next: Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.
 - `GH-DOCS-30` | status: done | execution: closed | next: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | status: done | execution: closed | next: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
-- `GH-ML2-0000` | status: planned | execution: inactive | next: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
+- `GH-ML2-0000` | status: done | execution: closed | next: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
 - `GH-MOON-0000` | status: planned | execution: inactive | next: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | status: done | execution: closed | next: 
 - `GH-NF1-A02` | status: done | execution: closed | next: 

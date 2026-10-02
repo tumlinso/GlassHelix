@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `369`
+Project revision: `377`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -26,7 +26,7 @@ Project revision: `369`
 - `GH-MOON-MERGE-ACTOR` | kind: task | status: done | parent: GH-MOON-0000 | objective: Make reviewed predecessor artifacts available in the integrator lineage before dependent lane creation.
 - `GH-MOON-MODELS` | kind: task | status: done | parent: GH-MOON-0000 | objective: Build plain matrix-native prediction and actor-local hidden-state consumers from the supplied Torch references.
 - `GH-MOON-PLAIN` | kind: task | status: done | parent: GH-MOON-0000 | objective: Build and train the plain scalar-coordinate matrix patch or exact-flow reference consumer.
-- `GH-MOON-RECEIPT` | kind: task | status: in_progress | parent: GH-MOON-0000 | objective: Block native GH integration until the actual CE/CT operation capability is supplied and verified.
+- `GH-MOON-RECEIPT` | kind: task | status: done | parent: GH-MOON-0000 | objective: Block native GH integration until the actual CE/CT operation capability is supplied and verified.
 - `GH-MOON-REFACTOR` | kind: task | status: in_progress | parent: GH-MOON-0000 | objective: Apply a supplied coordinate/refactoring map and continue residual learning with a newly explicit actor.
 - `GH-NF1-0000` | kind: epic | status: superseded | parent: - | objective: 
 - `GH-NF1A-ACCEPT` | kind: integration_task | status: done | parent: GH-NF1A-0000 | objective: Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.
@@ -38,7 +38,7 @@ Project revision: `369`
 - `GH-DOCS-20` | kind: task | status: done | parent: GH-DOCS-000 | objective: Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.
 - `GH-DOCS-30` | kind: task | status: done | parent: GH-DOCS-000 | objective: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | kind: task | status: done | parent: GH-DOCS-000 | objective: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
-- `GH-ML2-0000` | kind: epic | status: planned | parent: - | objective: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
+- `GH-ML2-0000` | kind: epic | status: done | parent: - | objective: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
 - `GH-MOON-0000` | kind: epic | status: planned | parent: - | objective: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-A02` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
