@@ -3,16 +3,16 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-ML2-DESIGN: Choose and make executable one biology-purpose learning formulation
 
-Task revision: `240`; current project revision is in `todo-status.md`.
+Task revision: `333`; current project revision is in `todo-status.md`.
 
 ## Objective
 Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.
 
 ## State
-- Lifecycle: `in_progress`
-- Execution: `idle`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `serial`
-- Result: `-`
+- Result: `validated`
 
 ## Next Action
 Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.

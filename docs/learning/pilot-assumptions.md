@@ -1,0 +1,11 @@
+# Bounded pilot interpretation
+
+The configured primary engineering arm is a blind cross-sectional population RNA response model over released time labels. It fits a shared-support relation with context modulation from permitted RNA/time inputs. This is an effective observation-level model; it does not establish a dynamical fate law or identify a molecular mechanism. A clone is sampled ancestry metadata, not one exact cell state or a complete trajectory. Mixed clone composition is retained as an abundance audit and is not interpreted as individual transition probability.
+
+A frozen training-only feature manifest declares three RNA source channels and two RNA target channels. Clone labels are excluded from predictors and only audit split isolation and sampled composition. ATAC values and derived features remain withheld; an ATAC probe would require separate calibration and evaluation groups and is not fitted by this missing-data fixture. Original time labels are preserved, including the unresolved day-11/day-12 provenance discrepancy. Perturbation arms are separate regimes and excluded from the nominal common regime.
+
+The structured and straightforward Torch computation evaluate exactly the same source/target activities, logical support, values and objective. Duplicate logical edges retain separate identities and contributions, while observations identify only their combined influence where endpoints coincide. Shared weight/activity scalings and unsupported context relations remain non-identifiabilities or model restrictions. Fitting coefficients to a synthetic response is an engineering check, not unique parameter recovery.
+
+Snapshot-only RNA and flexible RNA-plus-time controls address different information and model questions. Their synthetic scores do not rank biological mechanisms. Complete iteration/setup/transfer/update/synchronization cost and memory are reported independently of model fit. The CE BIO producer's retained evaluated-not-promoted disposition remains valid; a favorable isolated operation is not a whole-model speed claim.
+
+Actual CellTag observations and indispensable sample/cell/clone provenance are absent. The client supports configured processed-record invocation, but the present run is explicitly a synthetic format fixture and biological status remains not_run.

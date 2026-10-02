@@ -3,16 +3,16 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-ML2-ACCEPT: Qualify the composed toolkit and publish the handoff
 
-Task revision: `238`; current project revision is in `todo-status.md`.
+Task revision: `368`; current project revision is in `todo-status.md`.
 
 ## Objective
 Accept the installed scientific client, selected CT/CE implementation, native-foundation connection and evidence boundaries as one useful slice.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `serial`
-- Result: `-`
+- Result: `validated`
 
 ## Next Action
 Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.

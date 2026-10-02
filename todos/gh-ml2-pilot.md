@@ -3,16 +3,16 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-ML2-PILOT: Exercise the first scientific consumer
 
-Task revision: `238`; current project revision is in `todo-status.md`.
+Task revision: `363`; current project revision is in `todo-status.md`.
 
 ## Objective
 Run one supported CellTag protocol and appropriate controls through the independent experiment package, evaluating the selected biology-purpose computation without requiring a scientific victory.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `serial`
-- Result: `-`
+- Result: `validated`
 
 ## Next Action
 Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.

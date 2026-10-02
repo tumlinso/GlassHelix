@@ -3,16 +3,16 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-ML2-REPAIR: Repair the retained inference diagnostics
 
-Task revision: `238`; current project revision is in `todo-status.md`.
+Task revision: `343`; current project revision is in `todo-status.md`.
 
 ## Objective
 Recheck and repair the live nullspace extraction and candidate log-weight defects without changing GH scientific ontology.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `serial`
-- Result: `-`
+- Result: `validated`
 
 ## Next Action
 Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.

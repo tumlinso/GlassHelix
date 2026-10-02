@@ -92,8 +92,7 @@ class finite_candidates {
     double maximum = -std::numeric_limits<double>::infinity();
     for (std::size_t index = 0; index != candidates_.size(); ++index) {
       const auto prediction = map.evaluate(propagated_[index]);
-      const auto prior = candidates_[index].weight;
-      const auto log_weight = std::log(prior) + likelihood.log_likelihood(observation, prediction);
+      const auto log_weight = log_weights_[index] + likelihood.log_likelihood(observation, prediction);
       log_weights.push_back(log_weight);
       maximum = std::max(maximum, log_weight);
     }
@@ -101,10 +100,15 @@ class finite_candidates {
     double total = 0;
     for (const auto value : log_weights) total += std::exp(value - maximum);
     if (!(total > 0) || !std::isfinite(total)) throw std::domain_error("zero total likelihood");
-    for (std::size_t index = 0; index != candidates_.size(); ++index) {
-      candidates_[index].weight = std::exp(log_weights[index] - maximum) / total;
-    }
+    const auto log_total = std::log(total);
+    for (auto& value : log_weights) value = (value - maximum) - log_total;
+    // Allocate evidence storage before committing the posterior. Failed updates
+    // leave both the displayed weights and the authoritative log weights intact.
     evidence_history_.push_back(std::move(evidence_id));
+    log_weights_.swap(log_weights);
+    for (std::size_t index = 0; index != candidates_.size(); ++index) {
+      candidates_[index].weight = std::exp(log_weights_[index]);
+    }
   }
 
  private:
@@ -123,10 +127,19 @@ class finite_candidates {
       total += candidate_value.weight;
     }
     if (!(total > 0) || !std::isfinite(total)) throw std::invalid_argument("invalid candidate weights");
-    for (auto& candidate_value : candidates_) candidate_value.weight /= total;
+    log_weights_.reserve(candidates_.size());
+    for (auto& candidate_value : candidates_) {
+      // Capture the supplied prior before normalizing its display value: even
+      // initial normalization can underflow a positive prior to zero.
+      log_weights_.push_back(std::log(candidate_value.weight) - std::log(total));
+      candidate_value.weight /= total;
+    }
   }
 
   std::vector<candidate> candidates_;
+  // Ordinary weights are a display projection and may underflow. Only an
+  // explicitly zero supplied prior starts with a negative infinite log weight.
+  std::vector<double> log_weights_;
   std::vector<observation::engine_output> propagated_;
   std::vector<std::string> evidence_history_;
 };

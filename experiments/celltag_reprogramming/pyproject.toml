@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glasshelix-celltag-experiment"
+version = "0.1.0"
+description = "Independent standardized CellTag audit and shared-support reference"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+reference = ["torch==2.7.0"]
+
+[project.scripts]
+celltag-audit = "celltag_reprogramming.data:main"
+
+[tool.setuptools]
+packages = ["celltag_reprogramming"]
+package-dir = {celltag_reprogramming = "."}

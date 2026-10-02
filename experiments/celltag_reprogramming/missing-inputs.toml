@@ -1,0 +1,8 @@
+biological_status = "not_run"
+checked = "2026-10-02"
+reason = "Processed CellTag observations and indispensable clone/sample metadata absent locally; no biological fit performed."
+required = ["GSE216518 processed RNA counts", "original sample/cell/time/replicate/regime mapping", "corrected clone calls with original cell-ID join and provenance", "training-only frozen feature and clone split manifests"]
+independent_validation = ["GSE217119 processed ATAC counts", "ATAC sample/cell/clone provenance; no presumed same-cell join", "separate probe calibration and evaluation partitions if fitting an ATAC mapping"]
+rna_source = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE216518"
+atac_source = "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE217119"
+clone_call_archive_identity = "unverified; obtain released corrected membership and document derivation"

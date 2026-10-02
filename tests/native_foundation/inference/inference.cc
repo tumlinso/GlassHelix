@@ -1,6 +1,7 @@
 #include <GlassHelix/inference/inference.hh>
 
 #include <cmath>
+#include <limits>
 #include <stdexcept>
 
 namespace {
@@ -97,5 +98,78 @@ int main() {
   extremes.assimilate(extreme_evidence, observation::gaussian_noise{1.0, 2}, reporter, "extreme");
   if (!std::isfinite(extremes.values()[0].weight) || !std::isfinite(extremes.values()[1].weight) ||
       extremes.values()[0].weight != 1.0 || extremes.values()[1].weight != 0.0) return 6;
+
+  // A finite log-likelihood gap of 800 underflows the display weight. The
+  // independent opposite observation must still restore equal support.
+  const auto make_recoverable = [] {
+    inference::finite_candidates result{{{"left", "m-left", {0.0}, 0.5},
+                                           {"right", "m-right", {40.0}, 0.5}}};
+    result.propagate([](const inference::candidate& value) {
+      return observation::engine_output{value.joint_state, provenance()};
+    });
+    return result;
+  };
+  const observation::gaussian_noise unit_noise{1.0, 3};
+  auto opposite = evidence;
+  opposite.values[0] = 40.0;
+  auto recoverable = make_recoverable();
+  recoverable.assimilate(evidence, unit_noise, reporter, "left");
+  if (recoverable.values()[0].weight != 1.0 || recoverable.values()[1].weight != 0.0) return 7;
+  const auto before_failure = recoverable.values();
+  const auto history_before_failure = recoverable.evidence_history();
+  bool failed_update = false;
+  try { recoverable.assimilate(impossible, unit_noise, reporter, "failed"); }
+  catch (const std::domain_error&) { failed_update = true; }
+  if (!failed_update || recoverable.evidence_history() != history_before_failure ||
+      recoverable.values()[0].weight != before_failure[0].weight ||
+      recoverable.values()[1].weight != before_failure[1].weight) return 8;
+  // Reuse the failed ID to prove that failure did not record evidence. Recovery
+  // also proves that the internal log weights survived the failed update.
+  recoverable.assimilate(opposite, unit_noise, reporter, "failed");
+  if (std::abs(recoverable.values()[0].weight - .5) > 1e-12 ||
+      std::abs(recoverable.values()[1].weight - .5) > 1e-12) return 9;
+
+  auto reversed = make_recoverable();
+  reversed.assimilate(opposite, unit_noise, reporter, "right");
+  reversed.assimilate(evidence, unit_noise, reporter, "left");
+  const auto two_coordinates = observation::observation_map::partial(reporters, 2, {0, 1});
+  auto batch_evidence = paired_evidence;
+  batch_evidence.values = {0.0, 40.0};
+  inference::finite_candidates batched{{{"left", "m-left", {0.0, 0.0}, 0.5},
+                                         {"right", "m-right", {40.0, 40.0}, 0.5}}};
+  batched.propagate([](const inference::candidate& value) {
+    return observation::engine_output{value.joint_state, provenance()};
+  });
+  batched.assimilate(batch_evidence, unit_noise, two_coordinates, "batch");
+  for (std::size_t index = 0; index != 2; ++index) {
+    if (std::abs(reversed.values()[index].weight - recoverable.values()[index].weight) > 1e-12 ||
+        std::abs(batched.values()[index].weight - recoverable.values()[index].weight) > 1e-12) return 10;
+  }
+  recoverable.assimilate(opposite, unit_noise, reporter, "right-again");
+  if (recoverable.values()[1].weight != 1.0 || recoverable.values()[0].weight != 0.0) return 11;
+
+  inference::finite_candidates zero_prior{{{"included", "m-left", {0.0}, 1.0},
+                                            {"excluded", "m-right", {40.0}, 0.0}}};
+  zero_prior.propagate([](const inference::candidate& value) {
+    return observation::engine_output{value.joint_state, provenance()};
+  });
+  zero_prior.assimilate(opposite, unit_noise, reporter, "excluded-favored");
+  if (zero_prior.values()[0].weight != 1.0 || zero_prior.values()[1].weight != 0.0) return 12;
+
+  // Positive supplied priors also survive underflow during initial display
+  // normalization, before any evidence has been assimilated.
+  const auto tiny_prior = std::numeric_limits<double>::denorm_min();
+  const auto compensating_mean = std::sqrt(2.0 * (std::log(1e308) - std::log(tiny_prior)));
+  inference::finite_candidates tiny{{{"tiny", "m-tiny", {compensating_mean}, tiny_prior},
+                                      {"large", "m-large", {0.0}, 1e308}}};
+  if (tiny.values()[0].weight != 0.0 || tiny.values()[1].weight != 1.0) return 13;
+  tiny.propagate([](const inference::candidate& value) {
+    return observation::engine_output{value.joint_state, provenance()};
+  });
+  auto compensating_evidence = evidence;
+  compensating_evidence.values[0] = compensating_mean;
+  tiny.assimilate(compensating_evidence, unit_noise, reporter, "compensating");
+  if (std::abs(tiny.values()[0].weight - .5) > 1e-10 ||
+      std::abs(tiny.values()[1].weight - .5) > 1e-10) return 14;
   return 0;
 }
