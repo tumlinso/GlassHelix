@@ -1,14 +1,16 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-MOON-PLAIN: Build and train the plain scalar-coordinate matrix patch or exact-flow reference consumer.
 
-Task revision: `261`; current project revision is in `todo-status.md`.
+Task revision: `271`; current project revision is in `todo-status.md`.
 
 ## Objective
 Build and train the plain scalar-coordinate matrix patch or exact-flow reference consumer.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `in_progress`
+- Execution: `claimed`
 - Parallel policy: `parallel_safe`
 - Result: `-`
 
