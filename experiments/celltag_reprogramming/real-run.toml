@@ -1,0 +1,11 @@
+# Real processed records must be produced from verified count and metadata inputs.
+protocol = "blind_population_law"
+biological_status = "not_run"
+records = "inputs/celltag-common-forcing.csv"
+training_modality = "RNA"
+exclude_regime = "Zfp281_perturbation"
+feature_manifest = "inputs/training-only-features.txt"
+clone_call_provenance = "inputs/clone-call-provenance.json"
+source_provenance = "inputs/counts-and-metadata-sha256.json"
+validation_atac = "inputs/withheld-atac.csv"
+original_time_labels = true
