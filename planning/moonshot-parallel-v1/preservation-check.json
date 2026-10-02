@@ -1,0 +1,61 @@
+{
+  "before_revision": 260,
+  "after_revision": 261,
+  "tables": {
+    "tasks": {
+      "prior_rows": 115,
+      "removed_or_changed": 0,
+      "added": 9
+    },
+    "task_dependencies": {
+      "prior_rows": 142,
+      "removed_or_changed": 0,
+      "added": 10
+    },
+    "ownership_scopes": {
+      "prior_rows": 564,
+      "removed_or_changed": 0,
+      "added": 136
+    },
+    "gates": {
+      "prior_rows": 105,
+      "removed_or_changed": 0,
+      "added": 3
+    },
+    "task_completion_gates": {
+      "prior_rows": 31,
+      "removed_or_changed": 0,
+      "added": 0
+    },
+    "interfaces": {
+      "prior_rows": 6,
+      "removed_or_changed": 0,
+      "added": 0
+    },
+    "checkpoints": {
+      "prior_rows": 12,
+      "removed_or_changed": 0,
+      "added": 0
+    },
+    "workflow_runs": {
+      "prior_rows": 4,
+      "removed_or_changed": 0,
+      "added": 1
+    },
+    "workflow_lanes": {
+      "prior_rows": 25,
+      "removed_or_changed": 0,
+      "added": 5
+    },
+    "workflow_lane_tasks": {
+      "prior_rows": 112,
+      "removed_or_changed": 0,
+      "added": 9
+    },
+    "workflow_workspaces": {
+      "prior_rows": 12,
+      "removed_or_changed": 0,
+      "added": 0
+    }
+  }
+}

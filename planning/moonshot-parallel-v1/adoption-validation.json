@@ -1,0 +1,11 @@
+{
+  "record_kind": "gh_moonshot_adoption_validation",
+  "schema_version": 1,
+  "status": "passed",
+  "original_files_verified": 49,
+  "seed_files_verified": 3,
+  "source_commit_at_adoption": "34782c48d3d89465af0b635eb78b56d872c212ac",
+  "contract_sha256": "f245cbeae66edebcff3afed37ee7e2b5d78d13f1093518e485cd6dddca6b7c54",
+  "compute": "not_run",
+  "native_integration": "not_run"
+}

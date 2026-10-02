@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-02T13:42:50.927753+00:00",
+  "project": "glasshelix",
+  "run_id": "GH-MOON-RUN-V1",
+  "run_status": "active",
+  "task_count": 9,
+  "lane_count": 5,
+  "before_revision": 260,
+  "after_revision": 261,
+  "applied_modify": [],
+  "archive_sha256": "dd63f52ec2e25dfcbc3d06e3982a198c0a8b8bbe7575272cfadada545dca6b1a",
+  "original_archive_preserved": true,
+  "plan_sha256": "e112803bf3bbe200bf9b22a4a6e8f208abea4025191e5a6d1b166bcd65741934",
+  "backup": "/home/tumlinson/.codex/backups/moonshot-bootstrap-20261002T132920Z",
+  "implementation_started_by_this_bootstrap": false,
+  "next_task": {
+    "repo_root": "/home/tumlinson/GlassHelix",
+    "run_id": "GH-MOON-RUN-V1",
+    "task_id": "GH-MOON-ADOPT"
+  }
+}

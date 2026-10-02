@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "record_kind": "moonshot_immutable_seeds",
+  "package_manifest": "planning/moonshot-v1/MANIFEST.json",
+  "archive_sha256": "dd63f52ec2e25dfcbc3d06e3982a198c0a8b8bbe7575272cfadada545dca6b1a",
+  "glasshelix_source_commit": "34782c48d3d89465af0b635eb78b56d872c212ac",
+  "files": {
+    "glasshelix/actor_fields.py": {
+      "source": "payload/glasshelix/actor_fields.py",
+      "sha256": "9f7ffcfc31f3ee6dc292fffee6c4608e5859c01da777d9e50caadd0b3a263045"
+    },
+    "glasshelix/learn_toy.py": {
+      "source": "payload/glasshelix/learn_toy.py",
+      "sha256": "70f66dae9c4a45d3922f1ce36fe8e6314c8f05a18ef63044ef8a96c38b03bd34"
+    },
+    "glasshelix/smoke.py": {
+      "source": "payload/glasshelix/smoke.py",
+      "sha256": "ac471d3cc9dfee5037328bbf7fac866202d477d764170fbf1672fae02cce2bfa"
+    }
+  }
+}
