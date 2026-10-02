@@ -45,3 +45,44 @@ modality/replicate coverage, missingness, QC reasons and overlapping exclusion
 counts. A successful audit is engineering evidence; it does not establish that
 the cohort supports a biological fit. The supplied design reference is separate
 from Cellerator/CelleraTorch native or GPU acceptance.
+
+## Bounded population-response pilot
+
+The pilot predicts two declared RNA module responses from three other RNA
+modules and the released time label. It fits common-regime training observations
+through an explicit cutoff and evaluates clone-isolated test observations.
+This is a cross-sectional population response check. It does not infer cell
+trajectories or forecast an individual's fate. Clone IDs serve only audit and
+split checks; ATAC values stay withheld. An explicit frozen JSON feature manifest
+has `inputs` (three distinct RNA features) and `targets` (two other RNA features).
+Every selected feature must be observed in permitted training RNA through the
+cutoff. Missing targets use observation masks; cells with missing inputs are
+excluded and counted. Original time labels survive in the audit; the model's
+declared context scale is the numeric label divided by 12.
+
+```sh
+python -m experiments.celltag_reprogramming.pilot --fixture --output /tmp/pilot-fixture.json
+python -m unittest experiments.celltag_reprogramming.test_pilot -v
+python -m experiments.celltag_reprogramming.pilot --records inputs/celltag-common-forcing.csv --feature-manifest inputs/training-only-features.json --cutoff 12 --output /tmp/pilot-real.json
+```
+
+The CPU fixture fits the structured Torch reference, a snapshot-only control
+without time, and a flexible non-dynamical predictor with identical authorized
+RNA/time inputs. Their scores are synthetic engineering diagnostics. Duplicate
+edge coefficients identify only their sum; weight/activity scale can also remain
+ambiguous. Sampled clone abundance includes growth, survival and sampling and
+is not an individual transition probability. Missing real inputs fail explicitly
+with biological status `not_run`.
+
+Under the controller's GPU lease, add `--gpu` to compare installed CT
+`SharedSupportRelation` against the exact same Torch graph, initial parameters,
+masked objective and Adam updates. The fixture uses three sources, two targets,
+five distinct edge identities with duplicate endpoints, batch eight and tail
+three. The comparison includes source/target activity generators, full objective
+gradients, genuinely fitted native edge values, setup and five timed complete
+iterations including conversion, backward, guarded update and synchronization.
+Peak memory includes both resident graphs and is reported with its baseline.
+A slower result remains `evaluated_not_promoted`; even a faster tiny fixture
+does not establish a general speedup. Public GH is imported from the installed
+SDK via `--gh-prefix` (default `/tmp/gh-ml2-installed-sdk`); CT is installed
+separately and requires `CELLERATORCH_NATIVE_LIBRARY` for GPU execution.
