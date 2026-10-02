@@ -1,0 +1,11 @@
+Processing /tmp/gh-moon-package-input-pspst3yd/package
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: celleratorch
+  Building wheel for celleratorch (pyproject.toml): started
+  Building wheel for celleratorch (pyproject.toml): finished with status 'done'
+  Created wheel for celleratorch: filename=celleratorch-0.1.0-py3-none-any.whl size=15831 sha256=d928eac31dd6194dd8866d9fa71bb5752d3da71a0cf0b233f1262d798eb7dd18
+  Stored in directory: /tmp/pip-ephem-wheel-cache-d83q1esw/wheels/63/95/2f/0cb721edcf209f22e69b9fbc6ccdf28447bd6c170aef7805c1
+Successfully built celleratorch
+Installing collected packages: celleratorch
+Successfully installed celleratorch-0.1.0
