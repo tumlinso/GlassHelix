@@ -1,8 +1,19 @@
 """CPU qualification of bounded scientific permissions and inference."""
 import unittest
 from dataclasses import replace
+import os
+from pathlib import Path
+import sys
 
 import torch
+
+# The required bare-command gate exercises the installed public GH module.
+# An override names another explicitly installed SDK, never the source tree.
+_gh_prefix = Path(os.environ.get('GH_ML2_INSTALLED_PREFIX', '/tmp/gh-ml2-installed-sdk')).resolve()
+sys.path.insert(0, str(_gh_prefix / 'lib'))
+import glasshelix.learning as _installed_learning
+if not Path(_installed_learning.__file__).resolve().is_relative_to(_gh_prefix / 'lib'):
+    raise RuntimeError('learning tests require GH from the declared installed SDK prefix')
 
 from glasshelix.learning import (EvidencePermission, EvidenceView,
                                 ProductHypothesis, condition_local, fit_global,
