@@ -1,14 +1,16 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-MOON-CONSUMER: Publish a usable experimental model interface
 
-Task revision: `261`; current project revision is in `todo-status.md`.
+Task revision: `387`; current project revision is in `todo-status.md`.
 
 ## Objective
 Bind selected prototypes to existing GH roles and CE execution; document both plain and refactorable examples.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `in_progress`
+- Execution: `claimed`
 - Parallel policy: `integration_exclusive`
 - Result: `-`
 

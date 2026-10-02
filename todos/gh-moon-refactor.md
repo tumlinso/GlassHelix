@@ -3,16 +3,16 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-MOON-REFACTOR: Exercise learning-time extraction and regrowth
 
-Task revision: `315`; current project revision is in `todo-status.md`.
+Task revision: `386`; current project revision is in `todo-status.md`.
 
 ## Objective
 Apply a supplied coordinate/refactoring map and continue residual learning with a newly explicit actor.
 
 ## State
-- Lifecycle: `in_progress`
-- Execution: `idle`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `parallel_safe`
-- Result: `-`
+- Result: `implemented`
 
 ## Next Action
 Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
