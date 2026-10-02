@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `260`
+Project revision: `266`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -20,6 +20,14 @@ Project revision: `260`
 - `GH-ML2-LEARN` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Implement the smallest reusable GH evidence/hypothesis/conditioning/result layer and one fitted scientific model using ordinary Torch plus the qualified CT/CE path.
 - `GH-ML2-PILOT` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Run one supported CellTag protocol and appropriate controls through the independent experiment package, evaluating the selected biology-purpose computation without requiring a scientific victory.
 - `GH-ML2-REPAIR` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Recheck and repair the live nullspace extraction and candidate log-weight defects without changing GH scientific ontology.
+- `GH-MOON-ACTOR` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Build and train the actor-local private-port reference consumer.
+- `GH-MOON-ADOPT` | kind: task | status: done | parent: GH-MOON-0000 | objective: Refresh GH-ML2 design/learning boundaries and adopt the experimental package without retiring science obligations.
+- `GH-MOON-CONSUMER` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Bind selected prototypes to existing GH roles and CE execution; document both plain and refactorable examples.
+- `GH-MOON-MERGE-ACTOR` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Make reviewed predecessor artifacts available in the integrator lineage before dependent lane creation.
+- `GH-MOON-MODELS` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Build plain matrix-native prediction and actor-local hidden-state consumers from the supplied Torch references.
+- `GH-MOON-PLAIN` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Build and train the plain scalar-coordinate matrix patch or exact-flow reference consumer.
+- `GH-MOON-RECEIPT` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Block native GH integration until the actual CE/CT operation capability is supplied and verified.
+- `GH-MOON-REFACTOR` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Apply a supplied coordinate/refactoring map and continue residual learning with a newly explicit actor.
 - `GH-NF1-0000` | kind: epic | status: superseded | parent: - | objective: 
 - `GH-NF1A-ACCEPT` | kind: integration_task | status: done | parent: GH-NF1A-0000 | objective: Integrate SYSTEM first and other outcomes as available, run independent mathematical and lifetime counterexamples, native/Python/replay acceptance and bounded whole-workload measurements on the qualified Cellerator source.
 - `GH-NF1A-RELEASE` | kind: integration_task | status: done | parent: GH-NF1A-0000 | objective: Consume CE RELEASE, verify both published source revisions and all preservation dispositions, issue the final paired receipt and allow only owned verified-merged cleanup.
@@ -31,6 +39,7 @@ Project revision: `260`
 - `GH-DOCS-30` | kind: task | status: done | parent: GH-DOCS-000 | objective: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | kind: task | status: done | parent: GH-DOCS-000 | objective: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
 - `GH-ML2-0000` | kind: epic | status: planned | parent: - | objective: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
+- `GH-MOON-0000` | kind: epic | status: planned | parent: - | objective: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-A02` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-A03` | kind: task | status: done | parent: GH-NF1-0000 | objective: 

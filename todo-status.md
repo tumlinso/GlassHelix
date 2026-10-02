@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `260`
+Project revision: `266`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -20,6 +20,14 @@ Project revision: `260`
 - `GH-ML2-LEARN` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-PILOT` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-REPAIR` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-MOON-ACTOR` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-ADOPT` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-CONSUMER` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-MERGE-ACTOR` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-MODELS` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-PLAIN` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-RECEIPT` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-REFACTOR` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-NF1-0000` | status: superseded | execution: closed | next: 
 - `GH-NF1A-ACCEPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ACCEPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1A-RELEASE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/RELEASE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -31,6 +39,7 @@ Project revision: `260`
 - `GH-DOCS-30` | status: done | execution: closed | next: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | status: done | execution: closed | next: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
 - `GH-ML2-0000` | status: planned | execution: inactive | next: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
+- `GH-MOON-0000` | status: planned | execution: inactive | next: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | status: done | execution: closed | next: 
 - `GH-NF1-A02` | status: done | execution: closed | next: 
 - `GH-NF1-A03` | status: done | execution: closed | next: 
