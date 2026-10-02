@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "capability": "identified native product2 observation lowering",
+  "cellerator_source_commit": "1688030c27bd942f6ac3bf40312ba06472c99dbf",
+  "device": "cpu",
+  "precision": "float32",
+  "native_expression": "contribution_i = coefficient_i * hidden[source_i] * 1",
+  "observation_reduction": "Torch index_add sums separately identified contributions into explicit observation slots",
+  "forward": "qualified",
+  "input_vjp": "qualified",
+  "coefficient_vjp": "qualified",
+  "full_readout_jvp": "qualified",
+  "optimizer": "external Torch SGD/Adam",
+  "checkpoint": "same explicit identities and topology; external optimizer state",
+  "examples": ["MatrixPatchField trajectory with native readout", "supplied conjugate refactoring plus anonymous ResidualActor regrowth with native outgoing contributions"],
+  "transformation_scope": "equivalent selected readout lowering; existing field and refactoring calculations remain Torch",
+  "unsupported": ["Torch CUDA tensors", "mixed precision", "second-order differentiation", "automatic identity discovery", "native field/refactoring execution"],
+  "biology": "not_run",
+  "performance_claim": "none",
+  "evidence": "evidence/consumer-checks.json"
+}
