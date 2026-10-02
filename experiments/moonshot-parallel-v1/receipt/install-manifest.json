@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "source_commit": "1688030c27bd942f6ac3bf40312ba06472c99dbf",
+  "source_root": "/home/tumlinson/Cellerator",
+  "install_target": "/tmp/gh-moon-celleratorch",
+  "copied_build_inputs": "/tmp/gh-moon-package-input-pspst3yd/package",
+  "python": "/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python",
+  "argv": [
+    "/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-deps",
+    "--no-build-isolation",
+    "--target",
+    "/tmp/gh-moon-celleratorch",
+    "/tmp/gh-moon-package-input-pspst3yd/package"
+  ],
+  "exit_code": 0,
+  "package_files_sha256": {
+    "celleratorch/__init__.py": "3cf269bf8446e0a8d901dbbf88aad3497a91c837876061d52c6215b0aa1dd24a",
+    "celleratorch/mechanism.py": "d627e92d771ee7a917f57aadf03cf0537663c7fde882677c2b0d06195e9e6d43",
+    "celleratorch/biology.py": "e4a77615284fae67d608f9f00ca9ebbd23efcb51ce6305b46f0d1543bb5a2cf4",
+    "celleratorch/moonshot_product.py": "2f340e956bfb38a5f17335eadf32b57ca9a78af172ee249323f9bccb67215068"
+  },
+  "native_library": "/home/tumlinson/Cellerator/.git/todo-orchestrator/0ccaac37-dbbf-448e-a5f8-def197a70aba/workflow-workspaces/ce-moon-l-integrate-v1/build-product2-install/lib/libcellerator_product2.so",
+  "native_library_sha256": "651d7952be25a750dfacba52e49ae70caf5ed6f492d41f6a98bb26bb7206c125"
+}
