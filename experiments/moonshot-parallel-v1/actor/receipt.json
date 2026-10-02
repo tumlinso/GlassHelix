@@ -1,0 +1,83 @@
+{
+  "checks": [
+    "input_and_parameter_gradcheck",
+    "noncontiguous_input_gradcheck",
+    "repeated_edges_sum",
+    "repeated_cpu_forward_determinism",
+    "empty_topology",
+    "invalid_shapes_and_topology",
+    "zero_initial_regrowth_effect",
+    "live_outgoing_gradient",
+    "subsequent_feature_gradient",
+    "actor_rollout_learning",
+    "regrowth_learning"
+  ],
+  "device": "cpu",
+  "dtype": "float64",
+  "invocation": "CUDA_VISIBLE_DEVICES='' /home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python experiments/moonshot-parallel-v1/actor/check.py --receipt experiments/moonshot-parallel-v1/actor/receipt.json",
+  "learning": {
+    "actor": [
+      0.016954436510684682,
+      0.0005306968195368169
+    ],
+    "regrowth": [
+      0.04755258825953243,
+      3.409292098538266e-05
+    ],
+    "steps": 80
+  },
+  "meaning": "Synthetic engineering witnesses on whole supplied models; no biological evidence.",
+  "models": {
+    "ActorPortField": {
+      "callable": "actor/model.py:ActorPortField",
+      "edges": 4,
+      "parameter_gradchecks": [
+        "encoder",
+        "decoder",
+        "local",
+        "edge",
+        "readout"
+      ],
+      "port_shape": [
+        3,
+        2
+      ],
+      "state_shape": [
+        3,
+        2
+      ]
+    },
+    "RegrowthBranch": {
+      "callable": "actor/model.py:RegrowthBranch",
+      "capacity": 3,
+      "input_shape": [
+        3,
+        2
+      ],
+      "output_shape": [
+        3,
+        2
+      ],
+      "parameter_gradchecks": [
+        "inside.weight",
+        "outside.weight"
+      ]
+    }
+  },
+  "outgoing_gradient_norm": 0.12935819849624197,
+  "seed_sha256": "9f7ffcfc31f3ee6dc292fffee6c4608e5859c01da777d9e50caadd0b3a263045",
+  "source_sha256": {
+    "check.py": "5da5832563d45b177651be9b9c53b24df206b6e53c6619b722380fb44b4f9e85",
+    "model.py": "f405f2cc6f1e6aef0843cf36463660bb6f85859ac30b96dfef0c1b7da72173ce"
+  },
+  "status": "passed",
+  "subsequent_feature_gradient_norm": 4.403064784176047e-06,
+  "torch_version": "2.7.0+cu126",
+  "unsupported": [
+    "CUDA qualification",
+    "native CE execution",
+    "arbitrary nonlinear basis conjugacy",
+    "biological identification",
+    "performance claims"
+  ]
+}

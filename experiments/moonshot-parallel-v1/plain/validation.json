@@ -1,0 +1,107 @@
+{
+  "record_kind": "gh_moonshot_plain_reference_validation",
+  "schema_version": 1,
+  "status": "passed",
+  "tested_at_utc": "2026-10-02T13:55:54.542578+00:00",
+  "source": {
+    "git_parent_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
+    "files_sha256": {
+      "model.py": "650d8255e305c4eba3203b33e7f9e7b308df56c19446c89795a65e771f58c66d",
+      "test_models.py": "7e02065f9e9ca61e5dbdfe89045bdc8dfe2d5f958a5d4e1bd0945b2b0bc8ac42",
+      "validate.py": "42f8ff4b1a0b2c702f4f86b5e1cb4f5a04621ae254824a71e0c92983e210b523"
+    },
+    "immutable_seed_sha256": "9f7ffcfc31f3ee6dc292fffee6c4608e5859c01da777d9e50caadd0b3a263045"
+  },
+  "runtime": {
+    "torch": "2.7.0+cu126",
+    "device": "cpu",
+    "threads": 1,
+    "tested_dtypes": [
+      "float32",
+      "float64"
+    ]
+  },
+  "models": [
+    {
+      "class": "MatrixPatchField",
+      "callable_path": "plain/model.py:MatrixPatchField.forward",
+      "shape": "(patches,width,width)",
+      "tested_shapes": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ]
+      ],
+      "derivatives": [
+        "input VJP",
+        "left/right/decay parameter VJP"
+      ]
+    },
+    {
+      "class": "SylvesterFlow",
+      "callable_path": "plain/model.py:SylvesterFlow.forward",
+      "shape": "(width,width)",
+      "tested_shapes": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "derivatives": [
+        "input VJP",
+        "left/right parameter VJP",
+        "scalar dt VJP/JVP"
+      ],
+      "flow_conditions": "fixed autonomous L,R; torch.matrix_exp numerical evaluation"
+    }
+  ],
+  "checks": {
+    "tests_run": 7,
+    "log": "test_float32_forward_and_gradients (test_models.PlainModelsTest.test_float32_forward_and_gradients) ... ok\ntest_flow_fixed_generators_semigroup_identity_and_generator (test_models.PlainModelsTest.test_flow_fixed_generators_semigroup_identity_and_generator) ... ok\ntest_flow_input_generators_and_time_gradcheck (test_models.PlainModelsTest.test_flow_input_generators_and_time_gradcheck) ... ok\ntest_patch_input_and_all_parameter_gradcheck (test_models.PlainModelsTest.test_patch_input_and_all_parameter_gradcheck) ... ok\ntest_patch_seed_algebra_and_noncontiguous_input (test_models.PlainModelsTest.test_patch_seed_algebra_and_noncontiguous_input) ... ok\ntest_shape_dtype_and_dimension_contracts (test_models.PlainModelsTest.test_shape_dtype_and_dimension_contracts) ... ok\ntest_synthetic_learning_both_families (test_models.PlainModelsTest.test_synthetic_learning_both_families) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 1.850s\n\nOK\n",
+    "learning": {
+      "patch": {
+        "initial_loss": 0.0008232104816937764,
+        "final_loss": 1.018963348766997e-06,
+        "steps": 120,
+        "optimizer": "torch.optim.Adam"
+      },
+      "flow": {
+        "initial_loss": 0.0019903816556976197,
+        "final_loss": 2.4491962695409163e-09,
+        "steps": 120,
+        "optimizer": "torch.optim.Adam"
+      }
+    }
+  },
+  "argv": [
+    "/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python",
+    "-B",
+    "experiments/moonshot-parallel-v1/plain/validate.py"
+  ],
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "native_execution": "not_run",
+  "cuda_execution": "not_run",
+  "benchmark": "not_run",
+  "biological_validation": "not_run",
+  "unsupported_or_unqualified": [
+    "float16/bfloat16/complex",
+    "batched-cell inputs",
+    "time-varying/nonlinear exact flow",
+    "native CE/CelleraTorch adapter",
+    "CUDA execution",
+    "higher-order derivative qualification",
+    "performance claims"
+  ]
+}
