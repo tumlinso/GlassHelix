@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `325`
+Project revision: `369`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -14,19 +14,19 @@ Project revision: `325`
 - `GH-NF1A-OBSERVE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1-COORD` | status: superseded | execution: closed | next: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | status: done | execution: closed | next: Preserve unknown dirty work, fast-forward safely, add minimal authoritative documentation and semantic state, validate, commit, and verify through project-control.
-- `GH-ML2-ACCEPT` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
-- `GH-ML2-DATA` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
-- `GH-ML2-DESIGN` | status: in_progress | execution: idle | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
-- `GH-ML2-LEARN` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
-- `GH-ML2-PILOT` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
-- `GH-ML2-REPAIR` | status: planned | execution: ready | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-ML2-ACCEPT` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-ML2-DATA` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-ML2-DESIGN` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-ML2-LEARN` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-ML2-PILOT` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
+- `GH-ML2-REPAIR` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-MOON-ACTOR` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-ADOPT` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-CONSUMER` | status: planned | execution: ready | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-MERGE-ACTOR` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-MODELS` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-PLAIN` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
-- `GH-MOON-RECEIPT` | status: in_progress | execution: idle | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-RECEIPT` | status: in_progress | execution: claimed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-REFACTOR` | status: in_progress | execution: idle | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-NF1-0000` | status: superseded | execution: closed | next: 
 - `GH-NF1A-ACCEPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ACCEPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.

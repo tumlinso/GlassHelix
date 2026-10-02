@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `325`
+Project revision: `369`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -14,12 +14,12 @@ Project revision: `325`
 - `GH-NF1A-OBSERVE` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
 - `GH-NF1-COORD` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | kind: workstream | status: done | parent: - | objective: Reconcile and preserve repository state; establish authoritative scientific identity and four-project boundaries; bootstrap project and tool indexing; classify the archaeological repository without treating experiments as architecture.
-- `GH-ML2-ACCEPT` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Accept the installed scientific client, selected CT/CE implementation, native-foundation connection and evidence boundaries as one useful slice.
-- `GH-ML2-DATA` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Build the CellTag experiment adapter/client boundary and audit the actual cohort without inventing trajectories or paired modalities.
-- `GH-ML2-DESIGN` | kind: task | status: in_progress | parent: GH-ML2-0000 | objective: Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.
-- `GH-ML2-LEARN` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Implement the smallest reusable GH evidence/hypothesis/conditioning/result layer and one fitted scientific model using ordinary Torch plus the qualified CT/CE path.
-- `GH-ML2-PILOT` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Run one supported CellTag protocol and appropriate controls through the independent experiment package, evaluating the selected biology-purpose computation without requiring a scientific victory.
-- `GH-ML2-REPAIR` | kind: task | status: planned | parent: GH-ML2-0000 | objective: Recheck and repair the live nullspace extraction and candidate log-weight defects without changing GH scientific ontology.
+- `GH-ML2-ACCEPT` | kind: task | status: done | parent: GH-ML2-0000 | objective: Accept the installed scientific client, selected CT/CE implementation, native-foundation connection and evidence boundaries as one useful slice.
+- `GH-ML2-DATA` | kind: task | status: done | parent: GH-ML2-0000 | objective: Build the CellTag experiment adapter/client boundary and audit the actual cohort without inventing trajectories or paired modalities.
+- `GH-ML2-DESIGN` | kind: task | status: done | parent: GH-ML2-0000 | objective: Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.
+- `GH-ML2-LEARN` | kind: task | status: done | parent: GH-ML2-0000 | objective: Implement the smallest reusable GH evidence/hypothesis/conditioning/result layer and one fitted scientific model using ordinary Torch plus the qualified CT/CE path.
+- `GH-ML2-PILOT` | kind: task | status: done | parent: GH-ML2-0000 | objective: Run one supported CellTag protocol and appropriate controls through the independent experiment package, evaluating the selected biology-purpose computation without requiring a scientific victory.
+- `GH-ML2-REPAIR` | kind: task | status: done | parent: GH-ML2-0000 | objective: Recheck and repair the live nullspace extraction and candidate log-weight defects without changing GH scientific ontology.
 - `GH-MOON-ACTOR` | kind: task | status: done | parent: GH-MOON-0000 | objective: Build and train the actor-local private-port reference consumer.
 - `GH-MOON-ADOPT` | kind: task | status: done | parent: GH-MOON-0000 | objective: Refresh GH-ML2 design/learning boundaries and adopt the experimental package without retiring science obligations.
 - `GH-MOON-CONSUMER` | kind: task | status: planned | parent: GH-MOON-0000 | objective: Bind selected prototypes to existing GH roles and CE execution; document both plain and refactorable examples.
