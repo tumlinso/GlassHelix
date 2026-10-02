@@ -10,7 +10,7 @@ Apply a supplied coordinate/refactoring map and continue residual learning with 
 
 ## State
 - Lifecycle: `in_progress`
-- Execution: `claimed`
+- Execution: `idle`
 - Parallel policy: `parallel_safe`
 - Result: `-`
 

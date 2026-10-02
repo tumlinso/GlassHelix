@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `324`
+Project revision: `325`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
