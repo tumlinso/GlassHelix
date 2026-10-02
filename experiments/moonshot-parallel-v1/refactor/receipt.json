@@ -1,0 +1,98 @@
+{
+  "checks": [
+    "linear_flow_and_readout_correspondence",
+    "selected_response_jacobians",
+    "input_law_readout_gradcheck",
+    "invariant_quotient_flow",
+    "replica_adjoint_sum",
+    "off_manifold_and_noninvariant_rejection",
+    "invalid_maps",
+    "live_tape_publication_guard",
+    "initial_residual_zero_effect",
+    "live_outgoing_then_incoming_gradient",
+    "residual_learning"
+  ],
+  "device": "cpu",
+  "dtype": "float64",
+  "meaning": "Caller supplied maps; synthetic engineering evidence only. No approximation claimed.",
+  "migrations": [
+    {
+      "domain": "whole state space",
+      "label": "equivalent lowering",
+      "new_coordinates": [
+        "anonymous-actor:0",
+        "residual:0"
+      ],
+      "new_epoch": 2,
+      "old_coordinates": [
+        "s0",
+        "s1"
+      ],
+      "old_epoch": 1,
+      "optimizer_policy": "reset transformed parameter moments; retain untouched owners"
+    },
+    {
+      "domain": "supplied invariant manifold",
+      "label": "equivalent lowering",
+      "new_coordinates": [
+        "shared",
+        "other"
+      ],
+      "new_epoch": 2,
+      "old_coordinates": [
+        "copy0",
+        "copy1",
+        "other"
+      ],
+      "old_epoch": 1,
+      "optimizer_policy": "reset transformed parameter moments; retain untouched owners"
+    }
+  ],
+  "parameter_correspondence": {
+    "invertible": "A_new=T A_old T^-1; O_new=O_old T^-1",
+    "quotient": "A_new=P A_old E; O_new=O_old E"
+  },
+  "projection_rebuild": "cold rebuild migrated linear law/readout; no native caches in prototype",
+  "residual_actor": {
+    "behavior": "state trajectory law retained; learned readout changes",
+    "epoch": 3,
+    "hidden_shape": [
+      32,
+      4
+    ],
+    "id": "anonymous-residual-actor",
+    "label": "new model family",
+    "law": "h=tanh(U q); observed=O_new q+V h",
+    "loss_after": 6.609414074072031e-06,
+    "loss_before": 0.015241019264204299,
+    "optimizer": "fresh Adam for branch only; base law/readout frozen",
+    "outgoing_gradient_norm": 0.0702254806289752,
+    "steps": 120,
+    "subsequent_incoming_gradient_norm": 0.005705265701915345
+  },
+  "source_sha256": {
+    "actor/model.py": "f405f2cc6f1e6aef0843cf36463660bb6f85859ac30b96dfef0c1b7da72173ce",
+    "refactor/check.py": "3638d55b7d594601f10c49643a33719fd8857f03ddef6db691be9d0471c1eb70",
+    "refactor/model.py": "c3ea02b78be744fe13dee3a3ed6053f1d58b3ab6c7939ed81bb37fb340c10590"
+  },
+  "state_correspondence": {
+    "invertible": "q=T s",
+    "quotient": "s=E q; q=P s on invariant manifold"
+  },
+  "status": "passed",
+  "torch_version": "2.7.0+cu126",
+  "trajectory_max_abs_errors": [
+    2.220446049250313e-16,
+    3.3306690738754696e-16,
+    3.3306690738754696e-16,
+    1.6653345369377348e-16
+  ],
+  "unsupported": [
+    "native CE integration",
+    "CUDA",
+    "nonlinear discovery",
+    "biological identification",
+    "general optimizer-coordinate migration",
+    "performance"
+  ]
+}
