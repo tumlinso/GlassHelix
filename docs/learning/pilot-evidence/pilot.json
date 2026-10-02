@@ -1,0 +1,777 @@
+{
+  "audit_exclusions": {
+    "held_out_split": 18,
+    "missing_value": 1,
+    "non_common_regime": 1,
+    "withheld_ATAC": 11
+  },
+  "biological_status": "not_run",
+  "clone_abundance": [
+    {
+      "clone_id": "fixture_test_clone_4",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_2",
+      "sampled_abundance": 0.5,
+      "sampled_cells": 1,
+      "time_label": "11"
+    },
+    {
+      "clone_id": "fixture_test_clone_4",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_1",
+      "sampled_abundance": 0.3333333333333333,
+      "sampled_cells": 1,
+      "time_label": "3"
+    },
+    {
+      "clone_id": "fixture_test_clone_5",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_1",
+      "sampled_abundance": 0.5,
+      "sampled_cells": 1,
+      "time_label": "12"
+    },
+    {
+      "clone_id": "fixture_train_clone_0",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_2",
+      "sampled_abundance": 0.5,
+      "sampled_cells": 1,
+      "time_label": "11"
+    },
+    {
+      "clone_id": "fixture_train_clone_0",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_1",
+      "sampled_abundance": 0.3333333333333333,
+      "sampled_cells": 1,
+      "time_label": "3"
+    },
+    {
+      "clone_id": "fixture_train_clone_1",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_1",
+      "sampled_abundance": 0.5,
+      "sampled_cells": 1,
+      "time_label": "12"
+    },
+    {
+      "clone_id": "fixture_train_clone_1",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_2",
+      "sampled_abundance": 1.0,
+      "sampled_cells": 1,
+      "time_label": "3"
+    },
+    {
+      "clone_id": "fixture_train_clone_2",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_1",
+      "sampled_abundance": 1.0,
+      "sampled_cells": 1,
+      "time_label": "11"
+    },
+    {
+      "clone_id": "fixture_train_clone_2",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_2",
+      "sampled_abundance": 0.5,
+      "sampled_cells": 1,
+      "time_label": "12"
+    },
+    {
+      "clone_id": "fixture_train_clone_3",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_2",
+      "sampled_abundance": 0.5,
+      "sampled_cells": 1,
+      "time_label": "12"
+    },
+    {
+      "clone_id": "fixture_train_clone_3",
+      "interpretation": "sampled abundance; growth/survival/sampling unresolved",
+      "replicate": "fixture_rep_1",
+      "sampled_abundance": 0.3333333333333333,
+      "sampled_cells": 1,
+      "time_label": "3"
+    }
+  ],
+  "controls": {
+    "flexible_same_information": {
+      "CPU_fit_and_evaluation_seconds": 0.10320563200002653,
+      "evidence_manifest": {
+        "assumptions": [
+          "joint product response",
+          "one shared law coefficient",
+          "local activity and effective forcing are distinct unknowns"
+        ],
+        "domain_ids": [
+          "fixture_rna_x0",
+          "fixture_rna_x1",
+          "fixture_rna_x2",
+          "fixture_rna_y0",
+          "fixture_rna_y1"
+        ],
+        "evidence": {
+          "correspondence_ids": null,
+          "evidence_ids": [
+            "fixture_sample_11|fixture_cell_1|fixture_rep_2",
+            "fixture_sample_11|fixture_cell_4|fixture_rep_1",
+            "fixture_sample_12|fixture_cell_2|fixture_rep_1",
+            "fixture_sample_12|fixture_cell_5|fixture_rep_2",
+            "fixture_sample_12|fixture_cell_7|fixture_rep_2",
+            "fixture_sample_3|fixture_cell_0|fixture_rep_1",
+            "fixture_sample_3|fixture_cell_3|fixture_rep_2",
+            "fixture_sample_3|fixture_cell_6|fixture_rep_1"
+          ],
+          "mask": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              false
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ]
+          ],
+          "modality": "RNA",
+          "observed_values": [
+            0.2761670649051666,
+            0.15541324019432068,
+            0.304219126701355,
+            0.2604617476463318,
+            0.24112410843372345,
+            0.20524773001670837,
+            0.15421131253242493,
+            0.2756955623626709,
+            0.21819187700748444,
+            0.10695242881774902,
+            0.15088973939418793,
+            0.18232864141464233,
+            0.19022944569587708,
+            0.2296261042356491,
+            0.16927470266819
+          ],
+          "sha256": "1534fb9ee99ff2fe6a2e6153e899b638ecfea04a327a96798ea9d2d446d16334",
+          "source_id": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+          "split": "train",
+          "times": [
+            11.0,
+            11.0,
+            12.0,
+            12.0,
+            12.0,
+            3.0,
+            3.0,
+            3.0
+          ]
+        },
+        "final_loss": 5.8766572692547925e-06,
+        "format": "glasshelix-fitted-explanation-v1",
+        "global_frozen": false,
+        "hypothesis_id": "fixture-blind-population-flexible_same_information",
+        "initial_loss": 0.03889065608382225,
+        "input_sha256": "7b775587b81fcc6315f790e30b59cc38908b1e33eb54027aa234b370b6a7a360",
+        "question": "synthetic shared law calibration and local conditioning",
+        "scope": "controlled synthetic qualification; biological validation not_run"
+      },
+      "permitted_inputs": [
+        "fixture_rna_x0",
+        "fixture_rna_x1",
+        "fixture_rna_x2",
+        "released_time_label"
+      ],
+      "test_loss": 2.799425601551775e-05,
+      "train_loss": 5.8766572692547925e-06
+    },
+    "snapshot_only": {
+      "CPU_fit_and_evaluation_seconds": 0.10208586099906825,
+      "evidence_manifest": {
+        "assumptions": [
+          "joint product response",
+          "one shared law coefficient",
+          "local activity and effective forcing are distinct unknowns"
+        ],
+        "domain_ids": [
+          "fixture_rna_x0",
+          "fixture_rna_x1",
+          "fixture_rna_x2",
+          "fixture_rna_y0",
+          "fixture_rna_y1"
+        ],
+        "evidence": {
+          "correspondence_ids": null,
+          "evidence_ids": [
+            "fixture_sample_11|fixture_cell_1|fixture_rep_2",
+            "fixture_sample_11|fixture_cell_4|fixture_rep_1",
+            "fixture_sample_12|fixture_cell_2|fixture_rep_1",
+            "fixture_sample_12|fixture_cell_5|fixture_rep_2",
+            "fixture_sample_12|fixture_cell_7|fixture_rep_2",
+            "fixture_sample_3|fixture_cell_0|fixture_rep_1",
+            "fixture_sample_3|fixture_cell_3|fixture_rep_2",
+            "fixture_sample_3|fixture_cell_6|fixture_rep_1"
+          ],
+          "mask": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              false
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ]
+          ],
+          "modality": "RNA",
+          "observed_values": [
+            0.2761670649051666,
+            0.15541324019432068,
+            0.304219126701355,
+            0.2604617476463318,
+            0.24112410843372345,
+            0.20524773001670837,
+            0.15421131253242493,
+            0.2756955623626709,
+            0.21819187700748444,
+            0.10695242881774902,
+            0.15088973939418793,
+            0.18232864141464233,
+            0.19022944569587708,
+            0.2296261042356491,
+            0.16927470266819
+          ],
+          "sha256": "1534fb9ee99ff2fe6a2e6153e899b638ecfea04a327a96798ea9d2d446d16334",
+          "source_id": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+          "split": "train",
+          "times": [
+            11.0,
+            11.0,
+            12.0,
+            12.0,
+            12.0,
+            3.0,
+            3.0,
+            3.0
+          ]
+        },
+        "final_loss": 8.568608609493822e-05,
+        "format": "glasshelix-fitted-explanation-v1",
+        "global_frozen": false,
+        "hypothesis_id": "fixture-blind-population-snapshot_only",
+        "initial_loss": 0.1422034054994583,
+        "input_sha256": "7b775587b81fcc6315f790e30b59cc38908b1e33eb54027aa234b370b6a7a360",
+        "question": "synthetic shared law calibration and local conditioning",
+        "scope": "controlled synthetic qualification; biological validation not_run"
+      },
+      "permitted_inputs": [
+        "fixture_rna_x0",
+        "fixture_rna_x1",
+        "fixture_rna_x2"
+      ],
+      "test_loss": 5.0474056479288265e-05,
+      "train_loss": 8.568608609493822e-05
+    },
+    "structured_torch": {
+      "CPU_fit_and_evaluation_seconds": 0.9858499269976164,
+      "evidence_manifest": {
+        "assumptions": [
+          "joint product response",
+          "one shared law coefficient",
+          "local activity and effective forcing are distinct unknowns"
+        ],
+        "domain_ids": [
+          "fixture_rna_x0",
+          "fixture_rna_x1",
+          "fixture_rna_x2",
+          "fixture_rna_y0",
+          "fixture_rna_y1"
+        ],
+        "evidence": {
+          "correspondence_ids": null,
+          "evidence_ids": [
+            "fixture_sample_11|fixture_cell_1|fixture_rep_2",
+            "fixture_sample_11|fixture_cell_4|fixture_rep_1",
+            "fixture_sample_12|fixture_cell_2|fixture_rep_1",
+            "fixture_sample_12|fixture_cell_5|fixture_rep_2",
+            "fixture_sample_12|fixture_cell_7|fixture_rep_2",
+            "fixture_sample_3|fixture_cell_0|fixture_rep_1",
+            "fixture_sample_3|fixture_cell_3|fixture_rep_2",
+            "fixture_sample_3|fixture_cell_6|fixture_rep_1"
+          ],
+          "mask": [
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              false
+            ],
+            [
+              true,
+              true
+            ],
+            [
+              true,
+              true
+            ]
+          ],
+          "modality": "RNA",
+          "observed_values": [
+            0.2761670649051666,
+            0.15541324019432068,
+            0.304219126701355,
+            0.2604617476463318,
+            0.24112410843372345,
+            0.20524773001670837,
+            0.15421131253242493,
+            0.2756955623626709,
+            0.21819187700748444,
+            0.10695242881774902,
+            0.15088973939418793,
+            0.18232864141464233,
+            0.19022944569587708,
+            0.2296261042356491,
+            0.16927470266819
+          ],
+          "sha256": "1534fb9ee99ff2fe6a2e6153e899b638ecfea04a327a96798ea9d2d446d16334",
+          "source_id": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+          "split": "train",
+          "times": [
+            11.0,
+            11.0,
+            12.0,
+            12.0,
+            12.0,
+            3.0,
+            3.0,
+            3.0
+          ]
+        },
+        "final_loss": 4.15689246437978e-05,
+        "format": "glasshelix-fitted-explanation-v1",
+        "global_frozen": false,
+        "hypothesis_id": "fixture-blind-population-structured_torch",
+        "initial_loss": 0.01927541010081768,
+        "input_sha256": "7b775587b81fcc6315f790e30b59cc38908b1e33eb54027aa234b370b6a7a360",
+        "question": "synthetic shared law calibration and local conditioning",
+        "scope": "controlled synthetic qualification; biological validation not_run"
+      },
+      "permitted_inputs": [
+        "fixture_rna_x0",
+        "fixture_rna_x1",
+        "fixture_rna_x2",
+        "released_time_label"
+      ],
+      "test_loss": 4.580840686685406e-05,
+      "train_loss": 4.15689246437978e-05
+    }
+  },
+  "coverage": [
+    {
+      "cells": 1,
+      "clone_id": "fixture_p",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 1,
+      "replicate": "fixture_rep_1",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_test_clone_4",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_2",
+      "time_label": "11"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_test_clone_4",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_2",
+      "time_label": "11"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_test_clone_4",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_1",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_test_clone_4",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_1",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_test_clone_5",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_1",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_test_clone_5",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_1",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_0",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_2",
+      "time_label": "11"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_0",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_2",
+      "time_label": "11"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_0",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_1",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_0",
+      "missing": 1,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_1",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_1",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_1",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_1",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_1",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_1",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_2",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_1",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_2",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_2",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_1",
+      "time_label": "11"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_2",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_1",
+      "time_label": "11"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_2",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_2",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_2",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_2",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_3",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_2",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_3",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_2",
+      "time_label": "12"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_3",
+      "missing": 0,
+      "modality": "ATAC",
+      "records": 1,
+      "replicate": "fixture_rep_1",
+      "time_label": "3"
+    },
+    {
+      "cells": 1,
+      "clone_id": "fixture_train_clone_3",
+      "missing": 0,
+      "modality": "RNA",
+      "records": 5,
+      "replicate": "fixture_rep_1",
+      "time_label": "3"
+    }
+  ],
+  "cutoff": 12,
+  "feature_manifest": {
+    "inputs": [
+      "fixture_rna_x0",
+      "fixture_rna_x1",
+      "fixture_rna_x2"
+    ],
+    "sha256": "dfcc84ff700485cf5063bc39b70432f8f25c58caa32cba67882dc328efccb807",
+    "targets": [
+      "fixture_rna_y0",
+      "fixture_rna_y1"
+    ]
+  },
+  "fixture": true,
+  "installed_gh_sha256": "c94abed642bd1fc7d10c4fc49adf1a5f34350d3332fb03784907445afb6a1320",
+  "manifest_path": "/home/tumlinson/GlassHelix/docs/learning/pilot-evidence/pilot.manifest.json",
+  "manifest_sha256": "f40c3c2f023322a30aaa6cf4f5592265742308718a949708616d4dcd4673ad4e",
+  "native_comparison": {
+    "batch_sizes": [
+      8,
+      3
+    ],
+    "cost_comparison": "native_faster_in_bounded_fixture",
+    "costs": {
+      "native": {
+        "baseline_allocated_bytes": 17070080,
+        "first_training_iteration_after_equivalence_seconds": 0.08331053199799499,
+        "five_complete_iterations_seconds": 0.023239191999891773,
+        "mean_complete_iteration_seconds": 0.004647838399978355,
+        "model_setup_seconds": 0.0036705569982586894,
+        "optimizer_setup_seconds": 6.834199666627683e-05,
+        "peak_allocated_bytes": 17075712,
+        "peak_increment_bytes": 5632,
+        "peak_reserved_bytes": 23068672,
+        "resident_models": "both candidate graphs and optimizer states; memory is process allocation",
+        "setup_plus_first_training_iteration_seconds": 0.08704943099291995,
+        "setup_plus_five_iterations_seconds": 0.02697809099481674,
+        "setup_seconds": 0.0037388989949249662,
+        "timed_phases": [
+          "CPU-to-CUDA conversion",
+          "activity generation",
+          "relation forward",
+          "masked objective",
+          "backward",
+          "Adam/guarded publication",
+          "synchronize",
+          "scalar transfer"
+        ]
+      },
+      "torch": {
+        "baseline_allocated_bytes": 17062400,
+        "first_training_iteration_after_equivalence_seconds": 0.04463467299865442,
+        "five_complete_iterations_seconds": 0.02970760300013353,
+        "mean_complete_iteration_seconds": 0.005941520600026706,
+        "model_setup_seconds": 0.0026906860002782196,
+        "optimizer_setup_seconds": 9.13539988687262e-05,
+        "peak_allocated_bytes": 17068544,
+        "peak_increment_bytes": 6144,
+        "peak_reserved_bytes": 23068672,
+        "resident_models": "both candidate graphs and optimizer states; memory is process allocation",
+        "setup_plus_first_training_iteration_seconds": 0.04741671299780137,
+        "setup_plus_five_iterations_seconds": 0.03248964299928048,
+        "setup_seconds": 0.0027820399991469458,
+        "timed_phases": [
+          "CPU-to-CUDA conversion",
+          "activity generation",
+          "relation forward",
+          "masked objective",
+          "backward",
+          "Adam/guarded publication",
+          "synchronize",
+          "scalar transfer"
+        ]
+      }
+    },
+    "disposition": "evaluated_not_promoted",
+    "final_loss": {
+      "native": 3.882486271322705e-05,
+      "torch": 3.882485179929063e-05
+    },
+    "fitted_native_coefficients": [
+      0.2040456384420395,
+      0.2040456384420395,
+      0.30302494764328003,
+      0.49799397587776184,
+      0.00950581207871437
+    ],
+    "initial_loss": {
+      "native": 0.019275415688753128,
+      "torch": 0.019275415688753128
+    },
+    "initial_native_coefficients": [
+      0.10000000149011612,
+      0.10000000149011612,
+      0.10000000149011612,
+      0.10000000149011612,
+      0.10000000149011612
+    ],
+    "native_coefficients_trained": true,
+    "native_library_sha256": "79c21e4428d49a679cedbfcdb394d56ffe58382cb933db3f9abd554bee52a33b",
+    "producer_package_sha256": "3cf269bf8446e0a8d901dbbf88aad3497a91c837876061d52c6215b0aa1dd24a",
+    "promotion_limit": "small synthetic fixture; no general speedup or biological claim",
+    "same_graph_adam_update": true,
+    "same_graph_forward_and_objective_vjp": true,
+    "status": "passed"
+  },
+  "permissions": {
+    "ATAC_withheld": true,
+    "RNA_only": true,
+    "clone_ID_predictor": false,
+    "clone_split_isolation_audited": true,
+    "training_only_feature_manifest": true,
+    "training_time_cutoff": 12
+  },
+  "pilot_exclusions": {},
+  "pilot_source_sha256": "73da8d9f4fdd88e595387224b9366f4ae7ee5531190f4e6a834d3ee5a4018ca2",
+  "protocol": "blind_population_law",
+  "scientific_scope": "cross-sectional RNA population response; no individual trajectories or causal claim",
+  "source_commit": "854176133c96291269008fe36b8dc2abeb878ecd",
+  "source_hashes": {
+    "data": "0fbe6b083862bd1a2a473812ee95b5dd75a7f3a18d7dfa106513f34e9a56f62c",
+    "learning": "c94abed642bd1fc7d10c4fc49adf1a5f34350d3332fb03784907445afb6a1320",
+    "pilot": "73da8d9f4fdd88e595387224b9366f4ae7ee5531190f4e6a834d3ee5a4018ca2",
+    "reference": "3e4ab2e8507640b509417080cc3076c3e74a7ffb6c1c6ee083d35fc65178edc1",
+    "test_pilot": "967008f01d4972cd6e37c9a0a21df5d3e7b989c017bf195cdec9cf384bfa51ef"
+  },
+  "source_sha256": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+  "status": "passed",
+  "unresolved": [
+    "effective modules are not identified molecular regulation",
+    "duplicate endpoint coefficients identify only their sum",
+    "weight/activity scale transformations can preserve the response",
+    "population abundance mixes growth, survival, transitions and sampling",
+    "finite fits do not prove identifiability"
+  ]
+}
