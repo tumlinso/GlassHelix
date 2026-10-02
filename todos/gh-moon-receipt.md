@@ -1,14 +1,16 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-MOON-RECEIPT: Accept a current Cellerator capability receipt
 
-Task revision: `261`; current project revision is in `todo-status.md`.
+Task revision: `316`; current project revision is in `todo-status.md`.
 
 ## Objective
 Block native GH integration until the actual CE/CT operation capability is supplied and verified.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `in_progress`
+- Execution: `idle`
 - Parallel policy: `parallel_safe`
 - Result: `-`
 
