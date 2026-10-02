@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `400`
+Project revision: `404`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -39,7 +39,7 @@ Project revision: `400`
 - `GH-DOCS-30` | status: done | execution: closed | next: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | status: done | execution: closed | next: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
 - `GH-ML2-0000` | status: done | execution: closed | next: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
-- `GH-MOON-0000` | status: planned | execution: inactive | next: Closure-only aggregate; children do not depend on the epic.
+- `GH-MOON-0000` | status: done | execution: closed | next: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | status: done | execution: closed | next: 
 - `GH-NF1-A02` | status: done | execution: closed | next: 
 - `GH-NF1-A03` | status: done | execution: closed | next: 

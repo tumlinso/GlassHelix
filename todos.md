@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `400`
+Project revision: `404`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -39,7 +39,7 @@ Project revision: `400`
 - `GH-DOCS-30` | kind: task | status: done | parent: GH-DOCS-000 | objective: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | kind: task | status: done | parent: GH-DOCS-000 | objective: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
 - `GH-ML2-0000` | kind: epic | status: done | parent: - | objective: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
-- `GH-MOON-0000` | kind: epic | status: planned | parent: - | objective: Closure-only aggregate; children do not depend on the epic.
+- `GH-MOON-0000` | kind: epic | status: done | parent: - | objective: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-A02` | kind: task | status: done | parent: GH-NF1-0000 | objective: 
 - `GH-NF1-A03` | kind: task | status: done | parent: GH-NF1-0000 | objective: 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T16:08:18Z",
+  "generated_at": "2026-10-02T16:08:52Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 400,
+  "project_revision": 404,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -4277,6 +4277,46 @@
         "revision": 400,
         "seq": 400,
         "timestamp": "2026-10-02T16:08:18Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-L-INTEGRATE-V1",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-MOON-L-INTEGRATE-V1\", \"run_id\": \"GH-MOON-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-MOON-0000\"}",
+        "revision": 401,
+        "seq": 401,
+        "timestamp": "2026-10-02T16:08:33Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-CLOSURE-DONE",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-CLOSURE-DONE\"}",
+        "revision": 402,
+        "seq": 402,
+        "timestamp": "2026-10-02T16:08:52Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-CLOSURE-DONE",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"6cf913d4-1165-420f-bf56-40c484f9f0cd\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 403,
+        "seq": 403,
+        "timestamp": "2026-10-02T16:08:52Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-0000",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 404, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 404,
+        "seq": 404,
+        "timestamp": "2026-10-02T16:08:52Z"
       }
     ],
     "evidence": [
@@ -4655,6 +4695,19 @@
         "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-M00\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"08da2a1ed427badb7976284492752c0746f54c4898825872b19ec8dc849679f6\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-M00\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ec06f0028d31cbd32e3270f7760e83914ef94517\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"c03575fbd56363e044752f0ba6eca5616f62d2151ecc9c6d972801dc4aa273de\", \"started_revision\": 58, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-m-v1\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/68f407fc-a5c9-4e11-8b17-39c5f13a1fb4",
         "revision": 59,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T16:08:52Z",
+        "gate_id": "GH-MOON-CLOSURE-DONE",
+        "id": "6cf913d4-1165-420f-bf56-40c484f9f0cd",
+        "kind": "task_state",
+        "metadata_json": "{\"input_fingerprint\": \"0d4a047cf9dc3b41e9263de6b372bbd9c6a2d5a80feb634ccbf650d100baacda\", \"inputs\": {\"command_contract\": {\"status\": \"done\", \"task_id\": \"GH-MOON-CONSUMER\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"07ba953e0d5d56a430ee83e10cd5435598616002\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"result\": \"implemented\", \"source_identity\": \"34928622714c79e7125c4f8a23bf4922bf7d4a901fe0c5dbcdf89f43448e4e05\", \"started_revision\": 402, \"status\": \"done\", \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/6cf913d4-1165-420f-bf56-40c484f9f0cd",
+        "revision": 403,
         "status": "passed"
       },
       {
@@ -5443,14 +5496,14 @@
         "checkpoint_id": null,
         "config_json": "{\"status\": \"done\", \"task_id\": \"GH-MOON-CONSUMER\"}",
         "id": "GH-MOON-CLOSURE-DONE",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "0d4a047cf9dc3b41e9263de6b372bbd9c6a2d5a80feb634ccbf650d100baacda",
+        "last_run_at": "2026-10-02T16:08:52Z",
         "required": 1,
-        "revision": 261,
-        "status": "pending",
+        "revision": 403,
+        "status": "passed",
         "task_id": "GH-MOON-0000",
         "type": "task_state",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
@@ -7275,6 +7328,16 @@
         "payload_json": "{\"authority_commit\": \"e82540220117087105f64ddedbfe1f338de683b0\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"04c9d6af614ca941982fface62cdbf367ddba607\", \"completion_gates\": [{\"evidence_id\": \"34e64fcd-67a0-4f9c-a7b2-5cdc81faaba7\", \"evidence_revision\": 33, \"id\": \"GH-NF1-A02-ACCEPT\", \"input_fingerprint\": \"43089bd7f06289292c192bd27c00d6eee9baf19be401ffc80388d52871141f41\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"04c9d6af614ca941982fface62cdbf367ddba607\"}], \"completion_revision\": 34, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1-A02-ACCEPT\", \"input_fingerprint\": \"43089bd7f06289292c192bd27c00d6eee9baf19be401ffc80388d52871141f41\", \"last_run_at\": \"2026-09-09T11:00:06Z\", \"revision\": 33, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"04c9d6af614ca941982fface62cdbf367ddba607\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Mapped live independent authorities and both coordinator seats, installed service paths, managed workspaces, peer integration and native GPU lease/verification seam. Source inspected; no live GPU lease/calculation claimed. Governance record and authority observations committed.\", \"producer_commit\": \"04c9d6af614ca941982fface62cdbf367ddba607\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-a-v1\", \"resources\": [], \"task_id\": \"GH-NF1-A02\"}",
         "revision": 34,
         "task_id": "GH-NF1-A02"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-10-02T16:08:52Z",
+        "id": "ecadceac-7d8f-43fd-98a0-a2fb832bf670",
+        "kind": "complete",
+        "note": "All GH moonshot prototype tasks complete including real installed native receipt, supplied refactoring, and plain/refactorable native-backed consumers. Native CPU/Torch CPU derivative and continuation checks passed, postmerge gates recorded; CE and GH ML2 prerequisite campaigns closed. Main contains accepted source. Prototype engineering acceptance only; biological CellTag run not_run and no general performance promotion.",
+        "payload_json": "{\"authority_commit\": \"531f1f1f01c8272431ed70d41ee0adc92fe73a10\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"07ba953e0d5d56a430ee83e10cd5435598616002\", \"completion_gates\": [{\"evidence_id\": \"6cf913d4-1165-420f-bf56-40c484f9f0cd\", \"evidence_revision\": 403, \"id\": \"GH-MOON-CLOSURE-DONE\", \"input_fingerprint\": \"0d4a047cf9dc3b41e9263de6b372bbd9c6a2d5a80feb634ccbf650d100baacda\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"07ba953e0d5d56a430ee83e10cd5435598616002\"}], \"completion_revision\": 404, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-MOON-CLOSURE-DONE\", \"input_fingerprint\": \"0d4a047cf9dc3b41e9263de6b372bbd9c6a2d5a80feb634ccbf650d100baacda\", \"last_run_at\": \"2026-10-02T16:08:52Z\", \"revision\": 403, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"07ba953e0d5d56a430ee83e10cd5435598616002\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"All GH moonshot prototype tasks complete including real installed native receipt, supplied refactoring, and plain/refactorable native-backed consumers. Native CPU/Torch CPU derivative and continuation checks passed, postmerge gates recorded; CE and GH ML2 prerequisite campaigns closed. Main contains accepted source. Prototype engineering acceptance only; biological CellTag run not_run and no general performance promotion.\", \"producer_commit\": \"07ba953e0d5d56a430ee83e10cd5435598616002\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\", \"resources\": [], \"task_id\": \"GH-MOON-0000\"}",
+        "revision": 404,
+        "task_id": "GH-MOON-0000"
       },
       {
         "claim_id": null,
@@ -11346,6 +11409,19 @@
         "validation_git_head": "24cddcdbff108d5b1c0b9e9e5e66ece8500e0eed"
       },
       {
+        "completion_git_head": "07ba953e0d5d56a430ee83e10cd5435598616002",
+        "completion_revision": 404,
+        "evidence_id": "6cf913d4-1165-420f-bf56-40c484f9f0cd",
+        "evidence_revision": 403,
+        "gate_id": "GH-MOON-CLOSURE-DONE",
+        "input_fingerprint": "0d4a047cf9dc3b41e9263de6b372bbd9c6a2d5a80feb634ccbf650d100baacda",
+        "provenance_json": "{\"claim_id\": \"fdb80399-d89e-4781-8de4-1de86cbb767b\", \"evidence_content_hash\": null, \"evidence_kind\": \"task_state\", \"evidence_metadata\": {\"input_fingerprint\": \"0d4a047cf9dc3b41e9263de6b372bbd9c6a2d5a80feb634ccbf650d100baacda\", \"inputs\": {\"command_contract\": {\"status\": \"done\", \"task_id\": \"GH-MOON-CONSUMER\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"07ba953e0d5d56a430ee83e10cd5435598616002\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"result\": \"implemented\", \"source_identity\": \"34928622714c79e7125c4f8a23bf4922bf7d4a901fe0c5dbcdf89f43448e4e05\", \"started_revision\": 402, \"status\": \"done\", \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/6cf913d4-1165-420f-bf56-40c484f9f0cd\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-MOON-0000",
+        "valid": 1,
+        "validation_git_head": "07ba953e0d5d56a430ee83e10cd5435598616002"
+      },
+      {
         "completion_git_head": "a34a6bd6b69d4d53968801df3f3686f2d1700b8d",
         "completion_revision": 290,
         "evidence_id": "dc565048-cfe4-4b31-ba18-042ceffa55e8",
@@ -14282,9 +14358,9 @@
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "07ba953e0d5d56a430ee83e10cd5435598616002",
+        "completion_git_head": "07ba953e0d5d56a430ee83e10cd5435598616002",
+        "completion_revision": 404,
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-0000",
         "kind": "epic",
@@ -14296,14 +14372,14 @@
         "parallel_policy": "serial",
         "parent_id": null,
         "priority": 0,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
-        "revision": 261,
-        "status": "planned",
+        "revision": 404,
+        "status": "done",
         "tags_json": "[]",
         "title": "GlassHelix single-cell moonshot",
-        "updated_at": "2026-10-02T13:38:52Z",
-        "version": 1
+        "updated_at": "2026-10-02T16:08:52Z",
+        "version": 3
       },
       {
         "attention_reason": null,
@@ -20309,13 +20385,13 @@
         "task_id": "GH-MOON-CONSUMER"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-10-02T16:08:33Z",
+        "completed_at": "2026-10-02T16:08:52Z",
         "enqueued_at": "2026-10-02T13:38:52Z",
         "lane_id": "GH-MOON-L-INTEGRATE-V1",
         "position": 4,
-        "revision": 261,
-        "state": "queued",
+        "revision": 404,
+        "state": "completed",
         "task_id": "GH-MOON-0000"
       },
       {
@@ -21393,11 +21469,11 @@
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-L-INTEGRATE-V1",
         "parent_lane_id": "GH-MOON-L-ADOPT",
-        "revision": 400,
+        "revision": 404,
         "role": "integrator",
         "run_id": "GH-MOON-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-10-02T16:08:18Z",
+        "state": "closed",
+        "updated_at": "2026-10-02T16:08:52Z",
         "workspace_mode": "exclusive"
       },
       {
@@ -22018,10 +22094,10 @@
         "completed_at": null,
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-RUN-V1",
-        "revision": 261,
+        "revision": 404,
         "root_task_id": "GH-MOON-0000",
-        "status": "active",
-        "updated_at": "2026-10-02T13:38:52Z"
+        "status": "completed",
+        "updated_at": "2026-10-02T16:08:52Z"
       },
       {
         "active_charter_version": 1,

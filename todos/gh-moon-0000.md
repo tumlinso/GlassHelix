@@ -1,16 +1,18 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-MOON-0000: GlassHelix single-cell moonshot
 
-Task revision: `261`; current project revision is in `todo-status.md`.
+Task revision: `404`; current project revision is in `todo-status.md`.
 
 ## Objective
 Closure-only aggregate; children do not depend on the epic.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `inactive`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `serial`
-- Result: `-`
+- Result: `validated`
 
 ## Next Action
 _None._
