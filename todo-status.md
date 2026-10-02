@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `395`
+Project revision: `400`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -22,7 +22,7 @@ Project revision: `395`
 - `GH-ML2-REPAIR` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-MOON-ACTOR` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-ADOPT` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
-- `GH-MOON-CONSUMER` | status: in_progress | execution: claimed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
+- `GH-MOON-CONSUMER` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-MERGE-ACTOR` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-MODELS` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
 - `GH-MOON-PLAIN` | status: done | execution: closed | next: Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.

@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `395`
+Project revision: `400`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -22,7 +22,7 @@ Project revision: `395`
 - `GH-ML2-REPAIR` | kind: task | status: done | parent: GH-ML2-0000 | objective: Recheck and repair the live nullspace extraction and candidate log-weight defects without changing GH scientific ontology.
 - `GH-MOON-ACTOR` | kind: task | status: done | parent: GH-MOON-0000 | objective: Build and train the actor-local private-port reference consumer.
 - `GH-MOON-ADOPT` | kind: task | status: done | parent: GH-MOON-0000 | objective: Refresh GH-ML2 design/learning boundaries and adopt the experimental package without retiring science obligations.
-- `GH-MOON-CONSUMER` | kind: task | status: in_progress | parent: GH-MOON-0000 | objective: Bind selected prototypes to existing GH roles and CE execution; document both plain and refactorable examples.
+- `GH-MOON-CONSUMER` | kind: task | status: done | parent: GH-MOON-0000 | objective: Bind selected prototypes to existing GH roles and CE execution; document both plain and refactorable examples.
 - `GH-MOON-MERGE-ACTOR` | kind: task | status: done | parent: GH-MOON-0000 | objective: Make reviewed predecessor artifacts available in the integrator lineage before dependent lane creation.
 - `GH-MOON-MODELS` | kind: task | status: done | parent: GH-MOON-0000 | objective: Build plain matrix-native prediction and actor-local hidden-state consumers from the supplied Torch references.
 - `GH-MOON-PLAIN` | kind: task | status: done | parent: GH-MOON-0000 | objective: Build and train the plain scalar-coordinate matrix patch or exact-flow reference consumer.
