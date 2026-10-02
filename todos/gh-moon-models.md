@@ -1,16 +1,18 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-MOON-MODELS: Try two different single-cell model families
 
-Task revision: `261`; current project revision is in `todo-status.md`.
+Task revision: `312`; current project revision is in `todo-status.md`.
 
 ## Objective
 Build plain matrix-native prediction and actor-local hidden-state consumers from the supplied Torch references.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `parallel_safe`
-- Result: `-`
+- Result: `validated`
 
 ## Next Action
 Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.

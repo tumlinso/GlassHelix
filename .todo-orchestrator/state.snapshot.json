@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T13:56:31Z",
+  "generated_at": "2026-10-02T14:16:22Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 272,
+  "project_revision": 312,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -2997,6 +2997,406 @@
         "revision": 272,
         "seq": 272,
         "timestamp": "2026-10-02T13:56:31Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-PLAIN-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-PLAIN-MATH\"}",
+        "revision": 273,
+        "seq": 273,
+        "timestamp": "2026-10-02T13:56:50Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-PLAIN-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"98bbf7d3-dcca-448a-909a-355ee8870c8d\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 274,
+        "seq": 274,
+        "timestamp": "2026-10-02T13:56:54Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "dc8f9bb6-3da8-4d58-a294-90a7430c05be",
+        "entity_type": "workflow_patch_artifact",
+        "event_type": "workflow_patch_artifact_published",
+        "payload_json": "{\"content_hash\": \"142a50d307f2c78e3de4807644ed93ccb0366f3d6c73bd63d88c0c998a1e7923\", \"kind\": \"commit\", \"task_id\": \"GH-MOON-PLAIN\", \"workspace_id\": \"96e0ed9c-c5c9-4d6b-8aec-6fd0593a500b\"}",
+        "revision": 275,
+        "seq": 275,
+        "timestamp": "2026-10-02T13:56:54Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "797e1518-b213-46a0-9820-321487d32e76",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_reserved",
+        "payload_json": "{\"base_commit\": \"ffba8f98ca9ceeac1b62adec0cd2961295372c97\", \"lane_id\": \"GH-MOON-L-INTEGRATE-V1\", \"mode\": \"exclusive\", \"run_id\": \"GH-MOON-RUN-V1\"}",
+        "revision": 276,
+        "seq": 276,
+        "timestamp": "2026-10-02T13:58:58Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "797e1518-b213-46a0-9820-321487d32e76",
+        "entity_type": "workflow_workspace",
+        "event_type": "workflow_workspace_created",
+        "payload_json": "{\"base_commit\": \"ffba8f98ca9ceeac1b62adec0cd2961295372c97\", \"lane_id\": \"GH-MOON-L-INTEGRATE-V1\", \"mode\": \"exclusive\", \"run_id\": \"GH-MOON-RUN-V1\"}",
+        "revision": 277,
+        "seq": 277,
+        "timestamp": "2026-10-02T13:58:58Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-PLAIN-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-PLAIN-MATH\"}",
+        "revision": 278,
+        "seq": 278,
+        "timestamp": "2026-10-02T13:58:59Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-PLAIN-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"0237c1f3-13e3-40a4-a451-95e8834864ed\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 279,
+        "seq": 279,
+        "timestamp": "2026-10-02T13:59:02Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "3fb2bfde-e604-4095-bfdd-89fa24dc53ca",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_artifact_queued",
+        "payload_json": "{\"artifact_id\": \"dc8f9bb6-3da8-4d58-a294-90a7430c05be\", \"integration_task_id\": \"GH-MOON-MODELS\", \"integrator_lane_id\": \"GH-MOON-L-INTEGRATE-V1\"}",
+        "revision": 280,
+        "seq": 280,
+        "timestamp": "2026-10-02T13:59:02Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-PLAIN",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 281, \"disposition\": \"implemented\", \"reached_checkpoints\": []}",
+        "revision": 281,
+        "seq": 281,
+        "timestamp": "2026-10-02T13:59:02Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-L-ACTOR",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-MOON-L-ACTOR\", \"run_id\": \"GH-MOON-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-MOON-ACTOR\"}",
+        "revision": 282,
+        "seq": 282,
+        "timestamp": "2026-10-02T13:59:14Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "5d2c00bc-0eef-48ba-9627-33120c4cf7eb",
+        "entity_type": "gate_binding",
+        "event_type": "workflow.gates.bound",
+        "payload_json": "{\"gate_count\": 1}",
+        "revision": 283,
+        "seq": 283,
+        "timestamp": "2026-10-02T14:02:32Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-ACTOR-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-ACTOR-MATH\"}",
+        "revision": 284,
+        "seq": 284,
+        "timestamp": "2026-10-02T14:02:48Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-ACTOR-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"05346971-363c-459e-abdb-6ef33535f270\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 285,
+        "seq": 285,
+        "timestamp": "2026-10-02T14:02:51Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-ACTOR-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-ACTOR-MATH\"}",
+        "revision": 286,
+        "seq": 286,
+        "timestamp": "2026-10-02T14:03:03Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-ACTOR-MATH",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"dc565048-cfe4-4b31-ba18-042ceffa55e8\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 287,
+        "seq": 287,
+        "timestamp": "2026-10-02T14:03:06Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "6dab7c6e-9754-4ecb-bcfc-8440e61a6535",
+        "entity_type": "workflow_patch_artifact",
+        "event_type": "workflow_patch_artifact_published",
+        "payload_json": "{\"content_hash\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"kind\": \"commit\", \"task_id\": \"GH-MOON-ACTOR\", \"workspace_id\": \"337b37ca-cd9f-4e70-ba6d-434e03929f1a\"}",
+        "revision": 288,
+        "seq": 288,
+        "timestamp": "2026-10-02T14:03:06Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "ecb139c3-661b-4b2f-866b-1913df3a5bec",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_artifact_queued",
+        "payload_json": "{\"artifact_id\": \"6dab7c6e-9754-4ecb-bcfc-8440e61a6535\", \"integration_task_id\": \"GH-MOON-MERGE-ACTOR\", \"integrator_lane_id\": \"GH-MOON-L-INTEGRATE-V1\"}",
+        "revision": 289,
+        "seq": 289,
+        "timestamp": "2026-10-02T14:03:06Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-ACTOR",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 290, \"disposition\": \"implemented\", \"reached_checkpoints\": []}",
+        "revision": 290,
+        "seq": 290,
+        "timestamp": "2026-10-02T14:03:06Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-L-INTEGRATE-V1",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-MOON-L-INTEGRATE-V1\", \"run_id\": \"GH-MOON-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-MOON-MERGE-ACTOR\"}",
+        "revision": 291,
+        "seq": 291,
+        "timestamp": "2026-10-02T14:03:47Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "ecb139c3-661b-4b2f-866b-1913df3a5bec",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_integration_reserved",
+        "payload_json": "{\"state\": \"applying\"}",
+        "revision": 292,
+        "seq": 292,
+        "timestamp": "2026-10-02T14:04:05Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "ecb139c3-661b-4b2f-866b-1913df3a5bec",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_integration_applied",
+        "payload_json": "{\"conflict_paths\": [], \"state\": \"awaiting_gates\"}",
+        "revision": 293,
+        "seq": 293,
+        "timestamp": "2026-10-02T14:04:05Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "973bcef3-6478-46a6-9335-f035d1f54daf",
+        "entity_type": "gate_binding",
+        "event_type": "workflow.gates.bound",
+        "payload_json": "{\"gate_count\": 1}",
+        "revision": 294,
+        "seq": 294,
+        "timestamp": "2026-10-02T14:11:12Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-MERGE-ACTOR-POSTMERGE\"}",
+        "revision": 295,
+        "seq": 295,
+        "timestamp": "2026-10-02T14:11:12Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"45727090-b758-43fb-a760-a6abd90b522e\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 296,
+        "seq": 296,
+        "timestamp": "2026-10-02T14:11:16Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "ecb139c3-661b-4b2f-866b-1913df3a5bec",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_integration_finalization_reserved",
+        "payload_json": "{\"gate_count\": 1, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\"}",
+        "revision": 297,
+        "seq": 297,
+        "timestamp": "2026-10-02T14:11:16Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "ecb139c3-661b-4b2f-866b-1913df3a5bec",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_post_merge_gates_recorded",
+        "payload_json": "{\"gate_count\": 1, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"state\": \"integrated\"}",
+        "revision": 298,
+        "seq": 298,
+        "timestamp": "2026-10-02T14:11:16Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-MERGE-ACTOR-POSTMERGE\"}",
+        "revision": 299,
+        "seq": 299,
+        "timestamp": "2026-10-02T14:12:28Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"b5e22d82-2ebb-48b6-af84-d91902fb5f5b\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 300,
+        "seq": 300,
+        "timestamp": "2026-10-02T14:12:32Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MERGE-ACTOR",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 301, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 301,
+        "seq": 301,
+        "timestamp": "2026-10-02T14:12:32Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-L-INTEGRATE-V1",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-MOON-L-INTEGRATE-V1\", \"run_id\": \"GH-MOON-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-MOON-MODELS\"}",
+        "revision": 302,
+        "seq": 302,
+        "timestamp": "2026-10-02T14:12:32Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "afc36db7-c0ed-42a0-9915-0adf79c6b13d",
+        "entity_type": "gate_binding",
+        "event_type": "workflow.gates.bound",
+        "payload_json": "{\"gate_count\": 1}",
+        "revision": 303,
+        "seq": 303,
+        "timestamp": "2026-10-02T14:13:10Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "3fb2bfde-e604-4095-bfdd-89fa24dc53ca",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_integration_reserved",
+        "payload_json": "{\"state\": \"applying\"}",
+        "revision": 304,
+        "seq": 304,
+        "timestamp": "2026-10-02T14:13:10Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "3fb2bfde-e604-4095-bfdd-89fa24dc53ca",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_integration_applied",
+        "payload_json": "{\"conflict_paths\": [], \"state\": \"awaiting_gates\"}",
+        "revision": 305,
+        "seq": 305,
+        "timestamp": "2026-10-02T14:13:10Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MODELS-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-MODELS-POSTMERGE\"}",
+        "revision": 306,
+        "seq": 306,
+        "timestamp": "2026-10-02T14:13:10Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MODELS-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"3e3e6b40-ef69-46f6-b191-17db397676dc\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 307,
+        "seq": 307,
+        "timestamp": "2026-10-02T14:13:17Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "3fb2bfde-e604-4095-bfdd-89fa24dc53ca",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_integration_finalization_reserved",
+        "payload_json": "{\"gate_count\": 1, \"source_identity\": \"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\"}",
+        "revision": 308,
+        "seq": 308,
+        "timestamp": "2026-10-02T14:13:17Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "3fb2bfde-e604-4095-bfdd-89fa24dc53ca",
+        "entity_type": "workflow_integration_queue",
+        "event_type": "workflow_post_merge_gates_recorded",
+        "payload_json": "{\"gate_count\": 1, \"source_identity\": \"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\", \"state\": \"integrated\"}",
+        "revision": 309,
+        "seq": 309,
+        "timestamp": "2026-10-02T14:13:17Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MODELS-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-MOON-MODELS-POSTMERGE\"}",
+        "revision": 310,
+        "seq": 310,
+        "timestamp": "2026-10-02T14:16:15Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MODELS-POSTMERGE",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"836757ff-0bc3-4bd3-b1bd-f1db67b53d2d\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 311,
+        "seq": 311,
+        "timestamp": "2026-10-02T14:16:22Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-MOON-MODELS",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 312, \"disposition\": \"validated\", \"reached_checkpoints\": []}",
+        "revision": 312,
+        "seq": 312,
+        "timestamp": "2026-10-02T14:16:22Z"
       }
     ],
     "evidence": [
@@ -3011,6 +3411,32 @@
         "metadata_json": "{\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"cfcf0177ddadfc64643ba279ea045197f533d3d70b44766e7272f405be6494d2\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"planning/doc-refresh/tools/check.py\", \"--local\", \"--evidence\", \"--project\", \"glasshelix\", \"--repo\", \".\"], \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"383ddfd5c28963356f9f6afa06b0cdbbf1ff0548e1b92ecf7e1e3fee5e048c3a\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/inputs/results/gh-discrimination.json\", \"planning/doc-refresh/inputs/results/gh-lifecycle.json\", \"planning/doc-refresh/inputs/review.json\", \"planning/doc-refresh/inputs/selection-notes.md\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\", \"planning/doc-refresh/templates/docs/results/index.md\", \"planning/doc-refresh/tools/__pycache__/check.cpython-313.pyc\", \"planning/doc-refresh/tools/__pycache__/figures.cpython-313.pyc\", \"todo-status.md\", \"todos.md\", \"todos/gh-docs-000.md\", \"todos/gh-docs-10.md\", \"todos/gh-docs-20.md\", \"todos/gh-docs-30.md\", \"todos/gh-docs-90.md\", \"todos/gh-ml2-design.md\"], \"files\": [{\"path\": \"AGENTS.md\", \"sha256\": \"9df2befed06be5cfecf9ca8e89bde51da6647aadf190420ba27d7167b3d1881b\"}, {\"path\": \"README.md\", \"sha256\": \"f3e6ce4d4221c340cb81eacf701c98d9dae6ac7afbde1dd31ac0d20187fb4099\"}, {\"path\": \"docs\", \"sha256\": \"missing\"}, {\"path\": \"planning/doc-refresh\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 252}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/0099df4b-a81d-44bb-803f-bf2eb8e3b659",
         "revision": 253,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T13:59:02Z",
+        "gate_id": "GH-MOON-PLAIN-MATH",
+        "id": "0237c1f3-13e3-40a4-a451-95e8834864ed",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/plain/test_models.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"ed8c25218c5ee88dc91f625caad7ee0ff10497de906fb9dc28e72dbe6d698ac8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/plain/test_models.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/plain\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"3785308e7411a6e5b3d312b83426bf56069fd60e\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"142a50d307f2c78e3de4807644ed93ccb0366f3d6c73bd63d88c0c998a1e7923\", \"started_revision\": 278, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-plain\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/0237c1f3-13e3-40a4-a451-95e8834864ed",
+        "revision": 279,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T14:02:51Z",
+        "gate_id": "GH-MOON-ACTOR-MATH",
+        "id": "05346971-363c-459e-abdb-6ef33535f270",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"a34a6bd6b69d4d53968801df3f3686f2d1700b8d\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"started_revision\": 284, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-actor\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/05346971-363c-459e-abdb-6ef33535f270",
+        "revision": 285,
         "status": "passed"
       },
       {
@@ -3089,6 +3515,32 @@
         "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-A02\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"43089bd7f06289292c192bd27c00d6eee9baf19be401ffc80388d52871141f41\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-A02\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"04c9d6af614ca941982fface62cdbf367ddba607\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"02faa1a708f2d3ea6df16f75e31f8de2ace0ff574f8f8fbe239babc37fd14334\", \"started_revision\": 32, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-a-v1\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/34e64fcd-67a0-4f9c-a7b2-5cdc81faaba7",
         "revision": 33,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T14:13:17Z",
+        "gate_id": "GH-MOON-MODELS-POSTMERGE",
+        "id": "3e3e6b40-ef69-46f6-b191-17db397676dc",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"-c\", \"import subprocess,sys; [subprocess.run([sys.executable,'-B',p],check=True) for p in ['experiments/moonshot-parallel-v1/actor/check.py','experiments/moonshot-parallel-v1/plain/test_models.py']]\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"-c\", \"import subprocess,sys; [subprocess.run([sys.executable,'-B',p],check=True) for p in ['experiments/moonshot-parallel-v1/actor/check.py','experiments/moonshot-parallel-v1/plain/test_models.py']]\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"262d9881ce4276d55ed1467cf8fb57370177730cbb349ce6e4657123310fc994\", \"dirty_paths\": [\"experiments/moonshot-parallel-v1/plain/README.md\", \"experiments/moonshot-parallel-v1/plain/model.py\", \"experiments/moonshot-parallel-v1/plain/test_models.py\", \"experiments/moonshot-parallel-v1/plain/validate.py\", \"experiments/moonshot-parallel-v1/plain/validation.json\"], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}, {\"path\": \"experiments/moonshot-parallel-v1/plain\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"4984cae7cad0522fafec38e17c60368ef4dfd7e6\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\", \"started_revision\": 306, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/3e3e6b40-ef69-46f6-b191-17db397676dc",
+        "revision": 307,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T14:11:16Z",
+        "gate_id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "id": "45727090-b758-43fb-a760-a6abd90b522e",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"a45949d35fa72b8e7a14066ffa8eea3c5f917e8e7adff42e6ded5f76a149f3dd\", \"dirty_paths\": [\"experiments/moonshot-parallel-v1/actor/README.md\", \"experiments/moonshot-parallel-v1/actor/check.py\", \"experiments/moonshot-parallel-v1/actor/model.py\", \"experiments/moonshot-parallel-v1/actor/receipt.json\"], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"ffba8f98ca9ceeac1b62adec0cd2961295372c97\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"started_revision\": 295, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/45727090-b758-43fb-a760-a6abd90b522e",
+        "revision": 296,
         "status": "passed"
       },
       {
@@ -3199,6 +3651,19 @@
         "checkpoint_id": null,
         "claim_id": null,
         "content_hash": null,
+        "created_at": "2026-10-02T14:16:22Z",
+        "gate_id": "GH-MOON-MODELS-POSTMERGE",
+        "id": "836757ff-0bc3-4bd3-b1bd-f1db67b53d2d",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"-c\", \"import subprocess,sys; [subprocess.run([sys.executable,'-B',p],check=True) for p in ['experiments/moonshot-parallel-v1/actor/check.py','experiments/moonshot-parallel-v1/plain/test_models.py']]\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"-c\", \"import subprocess,sys; [subprocess.run([sys.executable,'-B',p],check=True) for p in ['experiments/moonshot-parallel-v1/actor/check.py','experiments/moonshot-parallel-v1/plain/test_models.py']]\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}, {\"path\": \"experiments/moonshot-parallel-v1/plain\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"e27643a9478ffda87b0d4cc6290e69eb54dd5bec\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"68716badb826f7457b6c90ca0e697ef3be371716353f10dabbea55e65b91fe65\", \"started_revision\": 310, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/836757ff-0bc3-4bd3-b1bd-f1db67b53d2d",
+        "revision": 311,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
         "created_at": "2026-09-21T19:05:31Z",
         "gate_id": "GH-NF1A-CONTROL-ACCEPT",
         "id": "922d276c-5bf7-4f4b-8848-cee48b03faa0",
@@ -3219,6 +3684,19 @@
         "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"644c796452a9203c38b2c43524b5b25f5393186030880dab2363a1f3be670db5\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-OBSERVE\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"e3fd58dc4e4a932d4e489950a4dc3b18f98a5759\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"9dc0c750444b7800291d02f7a9f522e8ef6f026fedaf4b833d06e9fde239e9ad\", \"started_revision\": 181, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-observe\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/9625fad0-7d8c-4aa1-af11-e4eaf6fa7593",
         "revision": 182,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T13:56:54Z",
+        "gate_id": "GH-MOON-PLAIN-MATH",
+        "id": "98bbf7d3-dcca-448a-909a-355ee8870c8d",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/plain/test_models.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"ed8c25218c5ee88dc91f625caad7ee0ff10497de906fb9dc28e72dbe6d698ac8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/plain/test_models.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/plain\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"3785308e7411a6e5b3d312b83426bf56069fd60e\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"142a50d307f2c78e3de4807644ed93ccb0366f3d6c73bd63d88c0c998a1e7923\", \"started_revision\": 273, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-plain\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/98bbf7d3-dcca-448a-909a-355ee8870c8d",
+        "revision": 274,
         "status": "passed"
       },
       {
@@ -3271,6 +3749,19 @@
         "metadata_json": "{\"found\": true, \"input_fingerprint\": \"ba5a0c887c375cae12968e8e5bf233967303f1ca8751ef229d5734977b72df4a\", \"inputs\": {\"command_contract\": {\"path\": \"README.md\", \"pattern\": \"Predictive accuracy is not automatically mechanistic validity\"}, \"diff_fingerprint\": \"158944d6d152ef2a9e4bceeb3028bcb2c06c373e2ed448829c5b214fa210ea9e\", \"dirty_paths\": [\".todo-orchestrator/project.json\", \".todo-orchestrator/state.snapshot.json\", \"AGENTS.md\", \"README.md\", \"docs/repository-map.md\", \"todo-status.md\", \"todos.md\", \"todos/gh-bootstrap.md\", \"todos/gh-science-foundations.md\"], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"ce9eb73aa039fda2de76c91b61c67953a552755f\"}, \"locks\": [], \"path\": \"README.md\", \"resources\": [], \"started_revision\": 14}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/b138d7e1-7065-49d9-b19e-1a39d9d1dfbc",
         "revision": 15,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T14:12:32Z",
+        "gate_id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "id": "b5e22d82-2ebb-48b6-af84-d91902fb5f5b",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"4984cae7cad0522fafec38e17c60368ef4dfd7e6\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"started_revision\": 299, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/b5e22d82-2ebb-48b6-af84-d91902fb5f5b",
+        "revision": 300,
         "status": "passed"
       },
       {
@@ -3362,6 +3853,19 @@
         "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-C07\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"3ee6a910aff57b93be56d0939b34593d4c8d66ad29fd2d2e7a28c4049a66b376\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/check_record.py\", \"--milestone\", \"GH-NF1-C07\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"37d06cfe56f980046560450fd5f3298fc2242fff\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"5c65dffdf4d9ef325aa367ded77857b9b3073d373b6757ec29bdcac3af5a5769\", \"started_revision\": 100, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/cf7f7044-bf84-4abd-8c43-67aa562e5fe2",
         "revision": 101,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-02T14:03:06Z",
+        "gate_id": "GH-MOON-ACTOR-MATH",
+        "id": "dc565048-cfe4-4b31-ba18-042ceffa55e8",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"a34a6bd6b69d4d53968801df3f3686f2d1700b8d\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"started_revision\": 286, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-actor\"}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/dc565048-cfe4-4b31-ba18-042ceffa55e8",
+        "revision": 287,
         "status": "passed"
       },
       {
@@ -3628,6 +4132,19 @@
       },
       {
         "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\", \"input_paths\": [\"experiments/moonshot-parallel-v1/actor\"]}",
+        "id": "GH-MOON-ACTOR-MATH",
+        "input_fingerprint": "814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6",
+        "last_run_at": "2026-10-02T14:03:06Z",
+        "required": 1,
+        "revision": 287,
+        "status": "passed",
+        "task_id": "GH-MOON-ACTOR",
+        "type": "command",
+        "valid": 1
+      },
+      {
+        "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/moonshot-parallel-v1/check_adoption.py\"], \"cwd\": \".\", \"input_paths\": [\"planning/moonshot-parallel-v1\", \"experiments/moonshot-parallel-v1/seeds\", \"experiments/moonshot-parallel-v1/interfaces\", \"planning/moonshot-v1\"]}",
         "id": "GH-MOON-ADOPT-INTEGRITY",
         "input_fingerprint": "e43438e0bd2054eed4a92f3634311d4e435d115246454e90850e7abfdcf46318",
@@ -3667,6 +4184,32 @@
       },
       {
         "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\", \"input_paths\": [\"experiments/moonshot-parallel-v1/actor\"]}",
+        "id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "input_fingerprint": "814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6",
+        "last_run_at": "2026-10-02T14:12:32Z",
+        "required": 1,
+        "revision": 300,
+        "status": "passed",
+        "task_id": "GH-MOON-MERGE-ACTOR",
+        "type": "command",
+        "valid": 1
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"-c\", \"import subprocess,sys; [subprocess.run([sys.executable,'-B',p],check=True) for p in ['experiments/moonshot-parallel-v1/actor/check.py','experiments/moonshot-parallel-v1/plain/test_models.py']]\"], \"cwd\": \".\", \"input_paths\": [\"experiments/moonshot-parallel-v1/actor\", \"experiments/moonshot-parallel-v1/plain\"]}",
+        "id": "GH-MOON-MODELS-POSTMERGE",
+        "input_fingerprint": "93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4",
+        "last_run_at": "2026-10-02T14:16:22Z",
+        "required": 1,
+        "revision": 311,
+        "status": "passed",
+        "task_id": "GH-MOON-MODELS",
+        "type": "command",
+        "valid": 1
+      },
+      {
+        "checkpoint_id": null,
         "config_json": "{\"status\": \"done\", \"task_id\": \"GH-ML2-ACCEPT\"}",
         "id": "GH-MOON-OLD-OWNER-DONE",
         "input_fingerprint": null,
@@ -3682,14 +4225,14 @@
         "checkpoint_id": null,
         "config_json": "{\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/plain/test_models.py\"], \"cwd\": \".\", \"input_paths\": [\"experiments/moonshot-parallel-v1/plain\"]}",
         "id": "GH-MOON-PLAIN-MATH",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "ed8c25218c5ee88dc91f625caad7ee0ff10497de906fb9dc28e72dbe6d698ac8",
+        "last_run_at": "2026-10-02T13:59:02Z",
         "required": 1,
-        "revision": 272,
-        "status": "pending",
+        "revision": 279,
+        "status": "passed",
         "task_id": "GH-MOON-PLAIN",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
@@ -5016,6 +5559,26 @@
       },
       {
         "claim_id": null,
+        "created_at": "2026-10-02T14:03:06Z",
+        "id": "2823e392-d42b-4cd3-b724-ef2108e186d7",
+        "kind": "complete",
+        "note": "Root explicitly accepted bounded engineering capability conditional on required gate passing. GH-MOON-ACTOR-MATH passed evidence 05346971-363c-459e-abdb-6ef33535f270. Scoped commit a34a6bd6b69d4d53968801df3f3686f2d1700b8d; actor/model.py, check.py, README.md and receipt.json only. CPU float64 input/all-parameter gradchecks, repeated directed-edge sums/determinism, zero-initial-effect live-gradient regrowth, synthetic actor and regrowth learning; no native/CUDA/biological or performance claim.",
+        "payload_json": "{\"authority_commit\": \"55bf5e8c1305519fd9b97b4105853f181dbb4d0b\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"a34a6bd6b69d4d53968801df3f3686f2d1700b8d\", \"completion_gates\": [{\"evidence_id\": \"dc565048-cfe4-4b31-ba18-042ceffa55e8\", \"evidence_revision\": 287, \"id\": \"GH-MOON-ACTOR-MATH\", \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"a34a6bd6b69d4d53968801df3f3686f2d1700b8d\"}], \"completion_revision\": 290, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-MOON-ACTOR-MATH\", \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"last_run_at\": \"2026-10-02T14:03:06Z\", \"revision\": 287, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"a34a6bd6b69d4d53968801df3f3686f2d1700b8d\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Root explicitly accepted bounded engineering capability conditional on required gate passing. GH-MOON-ACTOR-MATH passed evidence 05346971-363c-459e-abdb-6ef33535f270. Scoped commit a34a6bd6b69d4d53968801df3f3686f2d1700b8d; actor/model.py, check.py, README.md and receipt.json only. CPU float64 input/all-parameter gradchecks, repeated directed-edge sums/determinism, zero-initial-effect live-gradient regrowth, synthetic actor and regrowth learning; no native/CUDA/biological or performance claim.\", \"producer_commit\": \"a34a6bd6b69d4d53968801df3f3686f2d1700b8d\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-actor\", \"resources\": [], \"task_id\": \"GH-MOON-ACTOR\"}",
+        "revision": 290,
+        "task_id": "GH-MOON-ACTOR"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-10-02T14:12:32Z",
+        "id": "2ad5dc89-a719-4815-bb9a-7e316314aa5e",
+        "kind": "complete",
+        "note": "Actor artifact integrated at4984cae7 and required postmerge CPU gate passed. Root-approved append-only maintenance added missing gate; existing gates preserved. Dependent workspaces must include accepted actor commit before dispatch; root will verify at preparation.",
+        "payload_json": "{\"authority_commit\": \"55bf5e8c1305519fd9b97b4105853f181dbb4d0b\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"4984cae7cad0522fafec38e17c60368ef4dfd7e6\", \"completion_gates\": [{\"evidence_id\": \"b5e22d82-2ebb-48b6-af84-d91902fb5f5b\", \"evidence_revision\": 300, \"id\": \"GH-MOON-MERGE-ACTOR-POSTMERGE\", \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"4984cae7cad0522fafec38e17c60368ef4dfd7e6\"}], \"completion_revision\": 301, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-MOON-MERGE-ACTOR-POSTMERGE\", \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"last_run_at\": \"2026-10-02T14:12:32Z\", \"revision\": 300, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"4984cae7cad0522fafec38e17c60368ef4dfd7e6\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Actor artifact integrated at4984cae7 and required postmerge CPU gate passed. Root-approved append-only maintenance added missing gate; existing gates preserved. Dependent workspaces must include accepted actor commit before dispatch; root will verify at preparation.\", \"producer_commit\": \"4984cae7cad0522fafec38e17c60368ef4dfd7e6\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\", \"resources\": [], \"task_id\": \"GH-MOON-MERGE-ACTOR\"}",
+        "revision": 301,
+        "task_id": "GH-MOON-MERGE-ACTOR"
+      },
+      {
+        "claim_id": null,
         "created_at": "2026-09-29T12:59:02Z",
         "id": "2cc3e3e1-79dc-41b9-ad71-58724d40a2a3",
         "kind": "complete",
@@ -5096,6 +5659,16 @@
       },
       {
         "claim_id": null,
+        "created_at": "2026-10-02T14:16:22Z",
+        "id": "48d2aef2-a92c-4a76-984e-cb559a4c2d1c",
+        "kind": "complete",
+        "note": "Both model families integrated and postmerge tests passed; combined reference capability/usage receipt e27643a9 validates producer hashes and clearly marks native/biology pending. No old GH ML2 task altered.",
+        "payload_json": "{\"authority_commit\": \"55bf5e8c1305519fd9b97b4105853f181dbb4d0b\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"e27643a9478ffda87b0d4cc6290e69eb54dd5bec\", \"completion_gates\": [{\"evidence_id\": \"836757ff-0bc3-4bd3-b1bd-f1db67b53d2d\", \"evidence_revision\": 311, \"id\": \"GH-MOON-MODELS-POSTMERGE\", \"input_fingerprint\": \"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"e27643a9478ffda87b0d4cc6290e69eb54dd5bec\"}], \"completion_revision\": 312, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-MOON-MODELS-POSTMERGE\", \"input_fingerprint\": \"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\", \"last_run_at\": \"2026-10-02T14:16:22Z\", \"revision\": 311, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"e27643a9478ffda87b0d4cc6290e69eb54dd5bec\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Both model families integrated and postmerge tests passed; combined reference capability/usage receipt e27643a9 validates producer hashes and clearly marks native/biology pending. No old GH ML2 task altered.\", \"producer_commit\": \"e27643a9478ffda87b0d4cc6290e69eb54dd5bec\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\", \"resources\": [], \"task_id\": \"GH-MOON-MODELS\"}",
+        "revision": 312,
+        "task_id": "GH-MOON-MODELS"
+      },
+      {
+        "claim_id": null,
         "created_at": "2026-09-09T11:01:52Z",
         "id": "512511be-ce81-4235-8382-67f42be32967",
         "kind": "complete",
@@ -5173,6 +5746,16 @@
         "payload_json": "{\"authority_commit\": \"3f05cf2f35ffeebbd903f2b53526c3a2c1028f88\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"63beef6f9b2598a64d95cbc30f9c00b9f94ae5ca\", \"completion_gates\": [{\"evidence_id\": \"5823d815-a36b-4fb2-9f1f-080a188c365c\", \"evidence_revision\": 70, \"id\": \"GH-NF1-C02-ACCEPT\", \"input_fingerprint\": \"43b187f28b89c057af7493b689ea92089e2bafbc4f512a0602053bda4f1a1f9f\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"63beef6f9b2598a64d95cbc30f9c00b9f94ae5ca\"}], \"completion_revision\": 71, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-NF1-C02-ACCEPT\", \"input_fingerprint\": \"43b187f28b89c057af7493b689ea92089e2bafbc4f512a0602053bda4f1a1f9f\", \"last_run_at\": \"2026-09-09T11:15:56Z\", \"revision\": 70, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"63beef6f9b2598a64d95cbc30f9c00b9f94ae5ca\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Defined immutable scientific systems, n-ary mechanism roles and independent instances; compiled and executed contract checks. No numerical runtime claim.\", \"producer_commit\": \"63beef6f9b2598a64d95cbc30f9c00b9f94ae5ca\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-c-v1\", \"resources\": [], \"task_id\": \"GH-NF1-C02\"}",
         "revision": 71,
         "task_id": "GH-NF1-C02"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-10-02T13:59:02Z",
+        "id": "9d8e70d2-714d-41ec-b2f8-1d29c2a4dea7",
+        "kind": "complete",
+        "note": "CPU plain patch and exact-flow reference accepted after 7 required checks. Isolated scoped commit3785308e; artifact queued to GH-MOON-MODELS; native/biology unqualified.",
+        "payload_json": "{\"authority_commit\": \"55bf5e8c1305519fd9b97b4105853f181dbb4d0b\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"3785308e7411a6e5b3d312b83426bf56069fd60e\", \"completion_gates\": [{\"evidence_id\": \"0237c1f3-13e3-40a4-a451-95e8834864ed\", \"evidence_revision\": 279, \"id\": \"GH-MOON-PLAIN-MATH\", \"input_fingerprint\": \"ed8c25218c5ee88dc91f625caad7ee0ff10497de906fb9dc28e72dbe6d698ac8\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"3785308e7411a6e5b3d312b83426bf56069fd60e\"}], \"completion_revision\": 281, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-MOON-PLAIN-MATH\", \"input_fingerprint\": \"ed8c25218c5ee88dc91f625caad7ee0ff10497de906fb9dc28e72dbe6d698ac8\", \"last_run_at\": \"2026-10-02T13:59:02Z\", \"revision\": 279, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"3785308e7411a6e5b3d312b83426bf56069fd60e\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"CPU plain patch and exact-flow reference accepted after 7 required checks. Isolated scoped commit3785308e; artifact queued to GH-MOON-MODELS; native/biology unqualified.\", \"producer_commit\": \"3785308e7411a6e5b3d312b83426bf56069fd60e\", \"producer_root\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-plain\", \"resources\": [], \"task_id\": \"GH-MOON-PLAIN\"}",
+        "revision": 281,
+        "task_id": "GH-MOON-PLAIN"
       },
       {
         "claim_id": null,
@@ -9217,6 +9800,19 @@
         "validation_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c"
       },
       {
+        "completion_git_head": "a34a6bd6b69d4d53968801df3f3686f2d1700b8d",
+        "completion_revision": 290,
+        "evidence_id": "dc565048-cfe4-4b31-ba18-042ceffa55e8",
+        "evidence_revision": 287,
+        "gate_id": "GH-MOON-ACTOR-MATH",
+        "input_fingerprint": "814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6",
+        "provenance_json": "{\"claim_id\": \"5d2c00bc-0eef-48ba-9627-33120c4cf7eb\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"a34a6bd6b69d4d53968801df3f3686f2d1700b8d\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"started_revision\": 286, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-actor\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/dc565048-cfe4-4b31-ba18-042ceffa55e8\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-MOON-ACTOR",
+        "valid": 1,
+        "validation_git_head": "a34a6bd6b69d4d53968801df3f3686f2d1700b8d"
+      },
+      {
         "completion_git_head": "0f75e2370cc46defedf5e3399e1d99ecc9e56ebf",
         "completion_revision": 266,
         "evidence_id": "e080009a-6a76-422e-aa32-27d302d85fe2",
@@ -9228,6 +9824,45 @@
         "task_id": "GH-MOON-ADOPT",
         "valid": 1,
         "validation_git_head": "0f75e2370cc46defedf5e3399e1d99ecc9e56ebf"
+      },
+      {
+        "completion_git_head": "4984cae7cad0522fafec38e17c60368ef4dfd7e6",
+        "completion_revision": 301,
+        "evidence_id": "b5e22d82-2ebb-48b6-af84-d91902fb5f5b",
+        "evidence_revision": 300,
+        "gate_id": "GH-MOON-MERGE-ACTOR-POSTMERGE",
+        "input_fingerprint": "814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6",
+        "provenance_json": "{\"claim_id\": \"973bcef3-6478-46a6-9335-f035d1f54daf\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/actor/check.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"4984cae7cad0522fafec38e17c60368ef4dfd7e6\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\", \"started_revision\": 299, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/b5e22d82-2ebb-48b6-af84-d91902fb5f5b\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-MOON-MERGE-ACTOR",
+        "valid": 1,
+        "validation_git_head": "4984cae7cad0522fafec38e17c60368ef4dfd7e6"
+      },
+      {
+        "completion_git_head": "e27643a9478ffda87b0d4cc6290e69eb54dd5bec",
+        "completion_revision": 312,
+        "evidence_id": "836757ff-0bc3-4bd3-b1bd-f1db67b53d2d",
+        "evidence_revision": 311,
+        "gate_id": "GH-MOON-MODELS-POSTMERGE",
+        "input_fingerprint": "93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4",
+        "provenance_json": "{\"claim_id\": \"afc36db7-c0ed-42a0-9915-0adf79c6b13d\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"-c\", \"import subprocess,sys; [subprocess.run([sys.executable,'-B',p],check=True) for p in ['experiments/moonshot-parallel-v1/actor/check.py','experiments/moonshot-parallel-v1/plain/test_models.py']]\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"-c\", \"import subprocess,sys; [subprocess.run([sys.executable,'-B',p],check=True) for p in ['experiments/moonshot-parallel-v1/actor/check.py','experiments/moonshot-parallel-v1/plain/test_models.py']]\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/actor\", \"sha256\": \"missing\"}, {\"path\": \"experiments/moonshot-parallel-v1/plain\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"e27643a9478ffda87b0d4cc6290e69eb54dd5bec\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"68716badb826f7457b6c90ca0e697ef3be371716353f10dabbea55e65b91fe65\", \"started_revision\": 310, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/836757ff-0bc3-4bd3-b1bd-f1db67b53d2d\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-MOON-MODELS",
+        "valid": 1,
+        "validation_git_head": "e27643a9478ffda87b0d4cc6290e69eb54dd5bec"
+      },
+      {
+        "completion_git_head": "3785308e7411a6e5b3d312b83426bf56069fd60e",
+        "completion_revision": 281,
+        "evidence_id": "0237c1f3-13e3-40a4-a451-95e8834864ed",
+        "evidence_revision": 279,
+        "gate_id": "GH-MOON-PLAIN-MATH",
+        "input_fingerprint": "ed8c25218c5ee88dc91f625caad7ee0ff10497de906fb9dc28e72dbe6d698ac8",
+        "provenance_json": "{\"claim_id\": \"5b16a64e-ae6a-446f-a461-6cefd11274e7\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/plain/test_models.py\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"ed8c25218c5ee88dc91f625caad7ee0ff10497de906fb9dc28e72dbe6d698ac8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/usr/bin/env\", \"CUDA_VISIBLE_DEVICES=\", \"/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python\", \"-B\", \"experiments/moonshot-parallel-v1/plain/test_models.py\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [{\"path\": \"experiments/moonshot-parallel-v1/plain\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"3785308e7411a6e5b3d312b83426bf56069fd60e\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"142a50d307f2c78e3de4807644ed93ccb0366f3d6c73bd63d88c0c998a1e7923\", \"started_revision\": 278, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-plain\"}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/0237c1f3-13e3-40a4-a451-95e8834864ed\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-MOON-PLAIN",
+        "valid": 1,
+        "validation_git_head": "3785308e7411a6e5b3d312b83426bf56069fd60e"
       },
       {
         "completion_git_head": "43ca481ddd47a3696f2bda43cafb2c55a77e0025",
@@ -12061,9 +12696,9 @@
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "a34a6bd6b69d4d53968801df3f3686f2d1700b8d",
+        "completion_git_head": "a34a6bd6b69d4d53968801df3f3686f2d1700b8d",
+        "completion_revision": 290,
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-ACTOR",
         "kind": "task",
@@ -12075,14 +12710,14 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-MOON-0000",
         "priority": 100,
-        "result": null,
+        "result": "implemented",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
-        "revision": 261,
-        "status": "planned",
+        "revision": 290,
+        "status": "done",
         "tags_json": "[]",
         "title": "Build and train the actor-local private-port reference consumer.",
-        "updated_at": "2026-10-02T13:38:52Z",
-        "version": 1
+        "updated_at": "2026-10-02T14:03:06Z",
+        "version": 3
       },
       {
         "attention_reason": null,
@@ -12136,9 +12771,9 @@
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "4984cae7cad0522fafec38e17c60368ef4dfd7e6",
+        "completion_git_head": "4984cae7cad0522fafec38e17c60368ef4dfd7e6",
+        "completion_revision": 301,
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-MERGE-ACTOR",
         "kind": "task",
@@ -12150,20 +12785,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-MOON-0000",
         "priority": 100,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
-        "revision": 261,
-        "status": "planned",
+        "revision": 301,
+        "status": "done",
         "tags_json": "[]",
         "title": "Merge accepted isolated prototype artifacts: merge-actor",
-        "updated_at": "2026-10-02T13:38:52Z",
-        "version": 1
+        "updated_at": "2026-10-02T14:12:32Z",
+        "version": 3
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "e27643a9478ffda87b0d4cc6290e69eb54dd5bec",
+        "completion_git_head": "e27643a9478ffda87b0d4cc6290e69eb54dd5bec",
+        "completion_revision": 312,
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-MODELS",
         "kind": "task",
@@ -12175,20 +12810,20 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-MOON-0000",
         "priority": 100,
-        "result": null,
+        "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
-        "revision": 261,
-        "status": "planned",
+        "revision": 312,
+        "status": "done",
         "tags_json": "[]",
         "title": "Try two different single-cell model families",
-        "updated_at": "2026-10-02T13:38:52Z",
-        "version": 1
+        "updated_at": "2026-10-02T14:16:22Z",
+        "version": 3
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "3785308e7411a6e5b3d312b83426bf56069fd60e",
+        "completion_git_head": "3785308e7411a6e5b3d312b83426bf56069fd60e",
+        "completion_revision": 281,
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-PLAIN",
         "kind": "task",
@@ -12200,14 +12835,14 @@
         "parallel_policy": "parallel_safe",
         "parent_id": "GH-MOON-0000",
         "priority": 100,
-        "result": null,
+        "result": "implemented",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
-        "revision": 271,
-        "status": "in_progress",
+        "revision": 281,
+        "status": "done",
         "tags_json": "[]",
         "title": "Build and train the plain scalar-coordinate matrix patch or exact-flow reference consumer.",
-        "updated_at": "2026-10-02T13:51:33Z",
-        "version": 2
+        "updated_at": "2026-10-02T13:59:02Z",
+        "version": 3
       },
       {
         "attention_reason": null,
@@ -17752,6 +18387,19 @@
       },
       {
         "conflict_json": "{}",
+        "created_at": "2026-10-02T13:59:02Z",
+        "id": "3fb2bfde-e604-4095-bfdd-89fa24dc53ca",
+        "integration_task_id": "GH-MOON-MODELS",
+        "integrator_lane_id": "GH-MOON-L-INTEGRATE-V1",
+        "merge_result_json": "{\"apply_revision\":305,\"destination_worktree\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\",\"gates\":[{\"evidence_id\":\"3e3e6b40-ef69-46f6-b191-17db397676dc\",\"evidence_revision\":307,\"evidence_status\":\"passed\",\"gate_id\":\"GH-MOON-MODELS-POSTMERGE\",\"input_fingerprint\":\"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\",\"started_revision\":306,\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb.patch\",\"ref\":\"288b345b8a30c0ea1f06ee91b1dcaaaec5979d06\"},\"pre_apply_head\":\"4984cae7cad0522fafec38e17c60368ef4dfd7e6\",\"source_identity\":\"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\",\"state\":\"integrated\"}",
+        "patch_artifact_id": "dc8f9bb6-3da8-4d58-a294-90a7430c05be",
+        "position": 0,
+        "run_id": "GH-MOON-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-10-02T14:13:17Z"
+      },
+      {
+        "conflict_json": "{}",
         "created_at": "2026-09-21T16:42:55Z",
         "id": "5209b46c-cf15-41da-b786-815a2722c663",
         "integration_task_id": "GH-NF1A-ACCEPT",
@@ -17814,6 +18462,19 @@
         "run_id": "GH-NF1A-RUN-V1",
         "state": "integrated",
         "updated_at": "2026-09-21T18:58:14Z"
+      },
+      {
+        "conflict_json": "{}",
+        "created_at": "2026-10-02T14:03:06Z",
+        "id": "ecb139c3-661b-4b2f-866b-1913df3a5bec",
+        "integration_task_id": "GH-MOON-MERGE-ACTOR",
+        "integrator_lane_id": "GH-MOON-L-INTEGRATE-V1",
+        "merge_result_json": "{\"apply_revision\":293,\"destination_worktree\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\",\"gates\":[{\"evidence_id\":\"45727090-b758-43fb-a760-a6abd90b522e\",\"evidence_revision\":296,\"evidence_status\":\"passed\",\"gate_id\":\"GH-MOON-MERGE-ACTOR-POSTMERGE\",\"input_fingerprint\":\"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\",\"started_revision\":295,\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd.patch\",\"ref\":\"4984cae7cad0522fafec38e17c60368ef4dfd7e6\"},\"pre_apply_head\":\"ffba8f98ca9ceeac1b62adec0cd2961295372c97\",\"source_identity\":\"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\",\"state\":\"integrated\"}",
+        "patch_artifact_id": "6dab7c6e-9754-4ecb-bcfc-8440e61a6535",
+        "position": 0,
+        "run_id": "GH-MOON-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-10-02T14:11:16Z"
       },
       {
         "conflict_json": "{}",
@@ -17964,13 +18625,13 @@
         "task_id": "GH-ML2-0000"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-10-02T13:59:14Z",
+        "completed_at": "2026-10-02T14:03:06Z",
         "enqueued_at": "2026-10-02T13:38:52Z",
         "lane_id": "GH-MOON-L-ACTOR",
         "position": 0,
-        "revision": 261,
-        "state": "queued",
+        "revision": 290,
+        "state": "completed",
         "task_id": "GH-MOON-ACTOR"
       },
       {
@@ -17984,23 +18645,23 @@
         "task_id": "GH-MOON-ADOPT"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-10-02T14:03:47Z",
+        "completed_at": "2026-10-02T14:12:32Z",
         "enqueued_at": "2026-10-02T13:38:52Z",
         "lane_id": "GH-MOON-L-INTEGRATE-V1",
         "position": 0,
-        "revision": 261,
-        "state": "queued",
+        "revision": 301,
+        "state": "completed",
         "task_id": "GH-MOON-MERGE-ACTOR"
       },
       {
-        "activated_at": null,
-        "completed_at": null,
+        "activated_at": "2026-10-02T14:12:32Z",
+        "completed_at": "2026-10-02T14:16:22Z",
         "enqueued_at": "2026-10-02T13:38:52Z",
         "lane_id": "GH-MOON-L-INTEGRATE-V1",
         "position": 1,
-        "revision": 261,
-        "state": "queued",
+        "revision": 312,
+        "state": "completed",
         "task_id": "GH-MOON-MODELS"
       },
       {
@@ -18035,12 +18696,12 @@
       },
       {
         "activated_at": "2026-10-02T13:51:33Z",
-        "completed_at": null,
+        "completed_at": "2026-10-02T13:59:02Z",
         "enqueued_at": "2026-10-02T13:38:52Z",
         "lane_id": "GH-MOON-L-PLAIN",
         "position": 0,
-        "revision": 271,
-        "state": "active",
+        "revision": 281,
+        "state": "completed",
         "task_id": "GH-MOON-PLAIN"
       },
       {
@@ -19084,11 +19745,11 @@
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-L-ACTOR",
         "parent_lane_id": "GH-MOON-L-ADOPT",
-        "revision": 261,
+        "revision": 290,
         "role": "implementer",
         "run_id": "GH-MOON-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-10-02T13:38:52Z",
+        "state": "closed",
+        "updated_at": "2026-10-02T14:03:06Z",
         "workspace_mode": "isolated_merge"
       },
       {
@@ -19108,11 +19769,11 @@
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-L-INTEGRATE-V1",
         "parent_lane_id": "GH-MOON-L-ADOPT",
-        "revision": 261,
+        "revision": 312,
         "role": "integrator",
         "run_id": "GH-MOON-RUN-V1",
         "state": "ready",
-        "updated_at": "2026-10-02T13:38:52Z",
+        "updated_at": "2026-10-02T14:16:22Z",
         "workspace_mode": "exclusive"
       },
       {
@@ -19120,11 +19781,11 @@
         "created_at": "2026-10-02T13:38:52Z",
         "id": "GH-MOON-L-PLAIN",
         "parent_lane_id": "GH-MOON-L-ADOPT",
-        "revision": 271,
+        "revision": 281,
         "role": "implementer",
         "run_id": "GH-MOON-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-10-02T13:51:33Z",
+        "state": "closed",
+        "updated_at": "2026-10-02T13:59:02Z",
         "workspace_mode": "isolated_merge"
       },
       {
@@ -19476,6 +20137,17 @@
         "workspace_id": "e5f285d6-44c7-48ec-b1e9-2916a5de51b8"
       },
       {
+        "artifact_ref": "a34a6bd6b69d4d53968801df3f3686f2d1700b8d",
+        "base_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
+        "content_hash": "415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd",
+        "created_at": "2026-10-02T14:03:06Z",
+        "id": "6dab7c6e-9754-4ecb-bcfc-8440e61a6535",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-MOON-ACTOR",
+        "workspace_id": "337b37ca-cd9f-4e70-ba6d-434e03929f1a"
+      },
+      {
         "artifact_ref": "93988ed2fc7e179fa47fe71736935718e0d90538",
         "base_commit": "3f05cf2f35ffeebbd903f2b53526c3a2c1028f88",
         "content_hash": "8a98c4410182ff4a1f27e39d3c0c34c905b2db995efc9f2c82eed0ab4bafde77",
@@ -19496,6 +20168,17 @@
         "state": "rejected",
         "task_id": "GH-NF1-X01",
         "workspace_id": "1bb3307b-aee1-43c1-93d6-1ddc452bc32c"
+      },
+      {
+        "artifact_ref": "4984cae7cad0522fafec38e17c60368ef4dfd7e6",
+        "base_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
+        "content_hash": "415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd",
+        "created_at": "2026-10-02T14:11:16Z",
+        "id": "b7c5c2de-a7d1-4a5e-9ee3-93f7bba3896b",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-MOON-MERGE-ACTOR",
+        "workspace_id": "797e1518-b213-46a0-9820-321487d32e76"
       },
       {
         "artifact_ref": "46ba20712404a856a2bd5ceab649d83ff8d99957",
@@ -19520,6 +20203,17 @@
         "workspace_id": "989c2ade-bd25-40f6-8215-8d348fc56137"
       },
       {
+        "artifact_ref": "288b345b8a30c0ea1f06ee91b1dcaaaec5979d06",
+        "base_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
+        "content_hash": "768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb",
+        "created_at": "2026-10-02T14:13:17Z",
+        "id": "d83b6ab4-a51e-4c7b-8ef7-3496bb37f350",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-MOON-MODELS",
+        "workspace_id": "797e1518-b213-46a0-9820-321487d32e76"
+      },
+      {
         "artifact_ref": "d7b85a797f42925906ae6b12bac8a756d885239a",
         "base_commit": "e82540220117087105f64ddedbfe1f338de683b0",
         "content_hash": "bd2c8a52011713a6f327c55f41b8f3ca1a7b04991ed12bf7531e49328fe8f575",
@@ -19529,6 +20223,17 @@
         "state": "integrated",
         "task_id": "GH-NF1-A04",
         "workspace_id": "87da49e8-1809-4941-afe2-692aee335a95"
+      },
+      {
+        "artifact_ref": "3785308e7411a6e5b3d312b83426bf56069fd60e",
+        "base_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
+        "content_hash": "142a50d307f2c78e3de4807644ed93ccb0366f3d6c73bd63d88c0c998a1e7923",
+        "created_at": "2026-10-02T13:56:54Z",
+        "id": "dc8f9bb6-3da8-4d58-a294-90a7430c05be",
+        "kind": "commit",
+        "state": "integrated",
+        "task_id": "GH-MOON-PLAIN",
+        "workspace_id": "96e0ed9c-c5c9-4d6b-8aec-6fd0593a500b"
       }
     ],
     "workflow_recovery_audit": [
@@ -19703,22 +20408,22 @@
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-x-v1"
       },
       {
-        "artifact_kind": null,
-        "artifact_ref": null,
+        "artifact_kind": "commit",
+        "artifact_ref": "a34a6bd6b69d4d53968801df3f3686f2d1700b8d",
         "base_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
         "branch": "codex/gh-moon-l-actor",
         "cleanup_eligible": 0,
         "created_at": "2026-10-02T13:51:32Z",
-        "diff_hash": null,
+        "diff_hash": "415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd",
         "id": "337b37ca-cd9f-4e70-ba6d-434e03929f1a",
         "integration_task_id": "GH-MOON-MERGE-ACTOR",
         "lane_id": "GH-MOON-L-ACTOR",
-        "merge_result_json": "{}",
+        "merge_result_json": "{\"apply_revision\":293,\"destination_worktree\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\",\"gates\":[{\"evidence_id\":\"45727090-b758-43fb-a760-a6abd90b522e\",\"evidence_revision\":296,\"evidence_status\":\"passed\",\"gate_id\":\"GH-MOON-MERGE-ACTOR-POSTMERGE\",\"input_fingerprint\":\"814dadcdf7a5bc5196f7ab57ba9eea4d2f2909099299f08b8739df4b95bb13c6\",\"started_revision\":295,\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd.patch\",\"ref\":\"4984cae7cad0522fafec38e17c60368ef4dfd7e6\"},\"pre_apply_head\":\"ffba8f98ca9ceeac1b62adec0cd2961295372c97\",\"source_identity\":\"415019dc08f5b33a16db04f68b2ac3c1783c56ed4f1033ed22b8443f26541fbd\",\"state\":\"integrated\"}",
         "mode": "isolated_merge",
         "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
         "run_id": "GH-MOON-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-10-02T13:51:32Z",
+        "state": "integrated",
+        "updated_at": "2026-10-02T14:11:16Z",
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-actor"
       },
       {
@@ -19799,6 +20504,25 @@
       },
       {
         "artifact_kind": "commit",
+        "artifact_ref": "288b345b8a30c0ea1f06ee91b1dcaaaec5979d06",
+        "base_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
+        "branch": "codex/gh-moon-l-integrate-v1",
+        "cleanup_eligible": 0,
+        "created_at": "2026-10-02T13:58:58Z",
+        "diff_hash": "768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb",
+        "id": "797e1518-b213-46a0-9820-321487d32e76",
+        "integration_task_id": "GH-MOON-MODELS",
+        "lane_id": "GH-MOON-L-INTEGRATE-V1",
+        "merge_result_json": "{\"apply_revision\":305,\"destination_worktree\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\",\"gates\":[{\"evidence_id\":\"3e3e6b40-ef69-46f6-b191-17db397676dc\",\"evidence_revision\":307,\"evidence_status\":\"passed\",\"gate_id\":\"GH-MOON-MODELS-POSTMERGE\",\"input_fingerprint\":\"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\",\"started_revision\":306,\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb.patch\",\"ref\":\"288b345b8a30c0ea1f06ee91b1dcaaaec5979d06\"},\"pre_apply_head\":\"4984cae7cad0522fafec38e17c60368ef4dfd7e6\",\"source_identity\":\"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\",\"state\":\"integrated\"}",
+        "mode": "exclusive",
+        "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
+        "run_id": "GH-MOON-RUN-V1",
+        "state": "integrated",
+        "updated_at": "2026-10-02T14:13:17Z",
+        "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1"
+      },
+      {
+        "artifact_kind": "commit",
         "artifact_ref": "d7b85a797f42925906ae6b12bac8a756d885239a",
         "base_commit": "e82540220117087105f64ddedbfe1f338de683b0",
         "branch": "codex/gh-nf1-a-v1",
@@ -19817,22 +20541,22 @@
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-a-v1"
       },
       {
-        "artifact_kind": null,
-        "artifact_ref": null,
+        "artifact_kind": "commit",
+        "artifact_ref": "3785308e7411a6e5b3d312b83426bf56069fd60e",
         "base_commit": "ffba8f98ca9ceeac1b62adec0cd2961295372c97",
         "branch": "codex/gh-moon-l-plain",
         "cleanup_eligible": 0,
         "created_at": "2026-10-02T13:51:07Z",
-        "diff_hash": null,
+        "diff_hash": "142a50d307f2c78e3de4807644ed93ccb0366f3d6c73bd63d88c0c998a1e7923",
         "id": "96e0ed9c-c5c9-4d6b-8aec-6fd0593a500b",
         "integration_task_id": "GH-MOON-MODELS",
         "lane_id": "GH-MOON-L-PLAIN",
-        "merge_result_json": "{}",
+        "merge_result_json": "{\"apply_revision\":305,\"destination_worktree\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1\",\"gates\":[{\"evidence_id\":\"3e3e6b40-ef69-46f6-b191-17db397676dc\",\"evidence_revision\":307,\"evidence_status\":\"passed\",\"gate_id\":\"GH-MOON-MODELS-POSTMERGE\",\"input_fingerprint\":\"93e5e887d836e03ac15acc31063d879af9a32c28cca8499cf2869516b36384d4\",\"started_revision\":306,\"status\":\"passed\",\"valid\":true}],\"integrated_artifact\":{\"content_hash\":\"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\",\"kind\":\"commit\",\"patch_ref\":\"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/artifacts/integration-768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb.patch\",\"ref\":\"288b345b8a30c0ea1f06ee91b1dcaaaec5979d06\"},\"pre_apply_head\":\"4984cae7cad0522fafec38e17c60368ef4dfd7e6\",\"source_identity\":\"768bf46cfc45dfc2e8d3e4e0306f4c3790c3032ed58dfaf14211537f9fabefcb\",\"state\":\"integrated\"}",
         "mode": "isolated_merge",
         "repository_identity": "374da2a33b062f9afb30f4811b25150188c8af8dc9b3f5144642bff70168ea3e",
         "run_id": "GH-MOON-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-10-02T13:51:08Z",
+        "state": "integrated",
+        "updated_at": "2026-10-02T14:13:17Z",
         "worktree_path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-plain"
       },
       {

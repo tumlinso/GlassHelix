@@ -1,16 +1,18 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-MOON-ACTOR: Build and train the actor-local private-port reference consumer.
 
-Task revision: `261`; current project revision is in `todo-status.md`.
+Task revision: `290`; current project revision is in `todo-status.md`.
 
 ## Objective
 Build and train the actor-local private-port reference consumer.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `parallel_safe`
-- Result: `-`
+- Result: `implemented`
 
 ## Next Action
 Use the task brief and staged source; bind a small real check, implement, and report actual capability. Do not restart the broad design search.
