@@ -1,0 +1,213 @@
+{
+  "run_id": "GH-IS1-RUN-V1",
+  "root_task_id": "GH-IS1-000",
+  "root_lane_id": "GH-IS1-ADOPT-L",
+  "root_lane_role": "implementer",
+  "lanes": [
+    {
+      "id": "GH-IS1-ADOPT-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "exclusive"
+      },
+      "tasks": [
+        "GH-IS1-ADOPT"
+      ]
+    },
+    {
+      "id": "GH-IS1-SCIENCE-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "isolated_merge",
+        "integration_task_id": "GH-IS1-MERGE-A"
+      },
+      "tasks": [
+        "GH-IS1-SCIENCE"
+      ]
+    },
+    {
+      "id": "GH-IS1-DATA-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "isolated_merge",
+        "integration_task_id": "GH-IS1-MERGE-A"
+      },
+      "tasks": [
+        "GH-IS1-DATA"
+      ]
+    },
+    {
+      "id": "GH-IS1-MODELS-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "isolated_merge",
+        "integration_task_id": "GH-IS1-MERGE-A"
+      },
+      "tasks": [
+        "GH-IS1-MODELS"
+      ]
+    },
+    {
+      "id": "GH-IS1-ANALYSIS-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "isolated_merge",
+        "integration_task_id": "GH-IS1-MERGE-A"
+      },
+      "tasks": [
+        "GH-IS1-ANALYSIS"
+      ]
+    },
+    {
+      "id": "GH-IS1-BUILD-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "isolated_merge",
+        "integration_task_id": "GH-IS1-MERGE-A"
+      },
+      "tasks": [
+        "GH-IS1-BUILD"
+      ]
+    },
+    {
+      "id": "GH-IS1-QUALIFY-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "isolated_merge",
+        "integration_task_id": "GH-IS1-CLOSE"
+      },
+      "tasks": [
+        "GH-IS1-QUALIFY"
+      ]
+    },
+    {
+      "id": "GH-IS1-DOCS-L",
+      "role": "implementer",
+      "workspace": {
+        "mode": "isolated_merge",
+        "integration_task_id": "GH-IS1-CLOSE"
+      },
+      "tasks": [
+        "GH-IS1-DOCS"
+      ]
+    },
+    {
+      "id": "GH-IS1-INTEGRATOR-L",
+      "role": "integrator",
+      "workspace": {
+        "mode": "exclusive"
+      },
+      "tasks": [
+        "GH-IS1-MERGE-A",
+        "GH-IS1-BRIDGE",
+        "GH-IS1-PIPELINE",
+        "GH-IS1-JOINT",
+        "GH-IS1-CLOSE",
+        "GH-IS1-000"
+      ]
+    }
+  ],
+  "gate_bindings": [
+    {
+      "id": "GH-IS1-CLOSURE",
+      "type": "task_state",
+      "task_id": "GH-IS1-CLOSE",
+      "status": "done",
+      "required": true
+    },
+    {
+      "id": "GH-IS1-ADOPT-GLOBAL-BARRIER",
+      "type": "command",
+      "required": true,
+      "argv": [
+        "python3",
+        "-B",
+        "planning/integrated-substrate-v1/tools/gates.py",
+        "activation",
+        "--config",
+        "planning/integrated-substrate-v1/local-config.json"
+      ],
+      "cwd": ".",
+      "input_paths": [
+        "planning/integrated-substrate-v1/tools",
+        "planning/integrated-substrate-v1/local-config.json",
+        "planning/integrated-substrate-v1/machine"
+      ]
+    },
+    {
+      "id": "GH-IS1-BRIDGE-CELLERATOR-PROVIDER",
+      "type": "command",
+      "required": true,
+      "argv": [
+        "python3",
+        "-B",
+        "planning/integrated-substrate-v1/tools/gates.py",
+        "provider",
+        "--config",
+        "planning/integrated-substrate-v1/local-config.json",
+        "--consumer",
+        "GH-IS1-BRIDGE",
+        "--provider",
+        "cellerator"
+      ],
+      "cwd": ".",
+      "input_paths": [
+        "planning/integrated-substrate-v1/tools",
+        "planning/integrated-substrate-v1/local-config.json",
+        "planning/integrated-substrate-v1/machine"
+      ]
+    },
+    {
+      "id": "GH-IS1-JOINT-BASEPLANE-PROVIDER",
+      "type": "command",
+      "required": true,
+      "argv": [
+        "python3",
+        "-B",
+        "planning/integrated-substrate-v1/tools/gates.py",
+        "provider",
+        "--config",
+        "planning/integrated-substrate-v1/local-config.json",
+        "--consumer",
+        "GH-IS1-JOINT",
+        "--provider",
+        "baseplane"
+      ],
+      "cwd": ".",
+      "input_paths": [
+        "planning/integrated-substrate-v1/tools",
+        "planning/integrated-substrate-v1/local-config.json",
+        "planning/integrated-substrate-v1/machine"
+      ]
+    },
+    {
+      "id": "GH-IS1-JOINT-CELLERATOR-PROVIDER",
+      "type": "command",
+      "required": true,
+      "argv": [
+        "python3",
+        "-B",
+        "planning/integrated-substrate-v1/tools/gates.py",
+        "provider",
+        "--config",
+        "planning/integrated-substrate-v1/local-config.json",
+        "--consumer",
+        "GH-IS1-JOINT",
+        "--provider",
+        "cellerator"
+      ],
+      "cwd": ".",
+      "input_paths": [
+        "planning/integrated-substrate-v1/tools",
+        "planning/integrated-substrate-v1/local-config.json",
+        "planning/integrated-substrate-v1/machine"
+      ]
+    }
+  ],
+  "missing_gate_input_paths": [
+    "planning/integrated-substrate-v1/local-config.json",
+    "planning/integrated-substrate-v1/local-config.json",
+    "planning/integrated-substrate-v1/local-config.json",
+    "planning/integrated-substrate-v1/local-config.json"
+  ]
+}

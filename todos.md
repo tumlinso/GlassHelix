@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `404`
+Project revision: `405`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -14,6 +14,19 @@ Project revision: `404`
 - `GH-NF1A-OBSERVE` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
 - `GH-NF1-COORD` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | kind: workstream | status: done | parent: - | objective: Reconcile and preserve repository state; establish authoritative scientific identity and four-project boundaries; bootstrap project and tool indexing; classify the archaeological repository without treating experiments as architecture.
+- `GH-IS1-ADOPT` | kind: task | status: planned | parent: GH-IS1-000 | objective: After the global predecessor barrier, inventory the completed frontier, assign every useful behavior/unfinished obligation, and integrate the minimum contracts needed by parallel lanes.
+- `GH-IS1-ANALYSIS` | kind: task | status: planned | parent: GH-IS1-000 | objective: Unify response requests, perturbations, candidate comparison and evidence-labelled structural proposals.
+- `GH-IS1-BRIDGE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Bind scientific requests to a current, evidenced CE provider rather than a prototype receipt.
+- `GH-IS1-BUILD` | kind: task | status: planned | parent: GH-IS1-000 | objective: Integrate package entry points, installed CE consumption and reproducible result/replay paths.
+- `GH-IS1-CLOSE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Resolve final findings and publish what is integrated, experimental, measured or deliberately still open.
+- `GH-IS1-DATA` | kind: task | status: planned | parent: GH-IS1-000 | objective: Retain completed ML2 CellTag formulation/cohort work and make its evidence/splits reusable by experiment clients.
+- `GH-IS1-DOCS` | kind: task | status: planned | parent: GH-IS1-000 | objective: Publish intuitive scientific design, practical examples and supported results without disguising the unfinished frontier.
+- `GH-IS1-JOINT` | kind: task | status: planned | parent: GH-IS1-000 | objective: Run one bounded sequence-conditioned scientific witness through installed BP and CE components.
+- `GH-IS1-MERGE-A` | kind: task | status: planned | parent: GH-IS1-000 | objective: Merge independent specification/data/model/analysis/package work into the experiment built on Cellerator.
+- `GH-IS1-MODELS` | kind: task | status: planned | parent: GH-IS1-000 | objective: Consolidate plain matrix, actor-port and current ML2 model clients; extract reusable numerical logic downward.
+- `GH-IS1-PIPELINE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Exercise the current ML2 experiment and both useful moonshot model families through the integrated toolkit.
+- `GH-IS1-QUALIFY` | kind: task | status: planned | parent: GH-IS1-000 | objective: Check data/interpretation boundaries, requested derivatives and experiment-level costs with meaningful controls.
+- `GH-IS1-SCIENCE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Make observations, models, hypotheses, conditioning and scientific result scope coherent without introducing general numerical ownership.
 - `GH-ML2-ACCEPT` | kind: task | status: done | parent: GH-ML2-0000 | objective: Accept the installed scientific client, selected CT/CE implementation, native-foundation connection and evidence boundaries as one useful slice.
 - `GH-ML2-DATA` | kind: task | status: done | parent: GH-ML2-0000 | objective: Build the CellTag experiment adapter/client boundary and audit the actual cohort without inventing trajectories or paired modalities.
 - `GH-ML2-DESIGN` | kind: task | status: done | parent: GH-ML2-0000 | objective: Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.
@@ -38,6 +51,7 @@ Project revision: `404`
 - `GH-DOCS-20` | kind: task | status: done | parent: GH-DOCS-000 | objective: Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.
 - `GH-DOCS-30` | kind: task | status: done | parent: GH-DOCS-000 | objective: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | kind: task | status: done | parent: GH-DOCS-000 | objective: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
+- `GH-IS1-000` | kind: epic | status: planned | parent: - | objective: Closure-only aggregate; no child depends on this epic.
 - `GH-ML2-0000` | kind: epic | status: done | parent: - | objective: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
 - `GH-MOON-0000` | kind: epic | status: done | parent: - | objective: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | kind: task | status: done | parent: GH-NF1-0000 | objective: 

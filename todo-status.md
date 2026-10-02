@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `404`
+Project revision: `405`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -14,6 +14,19 @@ Project revision: `404`
 - `GH-NF1A-OBSERVE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1-COORD` | status: superseded | execution: closed | next: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | status: done | execution: closed | next: Preserve unknown dirty work, fast-forward safely, add minimal authoritative documentation and semantic state, validate, commit, and verify through project-control.
+- `GH-IS1-ADOPT` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-ANALYSIS` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-BRIDGE` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-BUILD` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-CLOSE` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-DATA` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-DOCS` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-JOINT` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-MERGE-A` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-MODELS` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-PIPELINE` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-QUALIFY` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-SCIENCE` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
 - `GH-ML2-ACCEPT` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-DATA` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
 - `GH-ML2-DESIGN` | status: done | execution: closed | next: Use the outcome brief and fetch its deeper references only as needed. Bind actual executable acceptance gates once commands exist; finish_task runs them. No inspect/build/retry microtasks.
@@ -38,6 +51,7 @@ Project revision: `404`
 - `GH-DOCS-20` | status: done | execution: closed | next: Move at most one useful mechanical source cluster by default, or keep source as-is; repair living docs/build/import/export references and preserve all semantic/evidence boundaries.
 - `GH-DOCS-30` | status: done | execution: closed | next: Verify existing result records, export portable raw evidence, and refresh only bounded selected cases when justified. Choose at most two public studies. Optional GH capability probe only; no broad benchmark or model work.
 - `GH-DOCS-90` | status: done | execution: closed | next: Apply reviewed final staged docs, validate local links/status/evidence and affected builds/tests, inspect rendered pages/figures, and write one authentic local handoff receipt.
+- `GH-IS1-000` | status: planned | execution: inactive | next: Closure-only aggregate; no child depends on this epic.
 - `GH-ML2-0000` | status: done | execution: closed | next: Closure-only aggregate for the verified local outcomes, not a coordinator seat or prerequisite of children.
 - `GH-MOON-0000` | status: done | execution: closed | next: Closure-only aggregate; children do not depend on the epic.
 - `GH-NF1-A01` | status: done | execution: closed | next: 

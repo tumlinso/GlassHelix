@@ -1,0 +1,36 @@
+{
+  "plan_digest": "1378f0a00c49b9606c9dbd666ee80f921b255691dc311d6a4561d7b3c31ac818",
+  "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+  "revision": 404,
+  "status": "validated",
+  "valid": true,
+  "validation": {
+    "barrier_count": 0,
+    "checkpoint_count": 0,
+    "gate_count": 6,
+    "interface_count": 0,
+    "task_count": 16,
+    "valid": true
+  },
+  "warnings": [],
+  "would_add": [
+    "GH-IS1-000",
+    "GH-IS1-ADOPT",
+    "GH-IS1-ANALYSIS",
+    "GH-IS1-BRIDGE",
+    "GH-IS1-BUILD",
+    "GH-IS1-CLOSE",
+    "GH-IS1-DATA",
+    "GH-IS1-DOCS",
+    "GH-IS1-JOINT",
+    "GH-IS1-MERGE-A",
+    "GH-IS1-MODELS",
+    "GH-IS1-PIPELINE",
+    "GH-IS1-QUALIFY",
+    "GH-IS1-SCIENCE"
+  ],
+  "would_modify": [
+    "GH-ML2-0000",
+    "GH-MOON-0000"
+  ]
+}

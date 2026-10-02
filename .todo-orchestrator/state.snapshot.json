@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T16:08:52Z",
+  "generated_at": "2026-10-02T16:38:41Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 404,
+  "project_revision": 405,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -4317,6 +4317,16 @@
         "revision": 404,
         "seq": 404,
         "timestamp": "2026-10-02T16:08:52Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+        "entity_type": "project",
+        "event_type": "plan.applied",
+        "payload_json": "{\"plan_digest\": \"1378f0a00c49b9606c9dbd666ee80f921b255691dc311d6a4561d7b3c31ac818\", \"source\": \"project-control\"}",
+        "revision": 405,
+        "seq": 405,
+        "timestamp": "2026-10-02T16:38:41Z"
       }
     ],
     "evidence": [
@@ -5338,6 +5348,71 @@
       },
       {
         "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"activation\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\"], \"cwd\": \".\", \"input_paths\": [\"planning/integrated-substrate-v1/tools\", \"planning/integrated-substrate-v1/local-config.json\", \"planning/integrated-substrate-v1/machine\"]}",
+        "id": "GH-IS1-ADOPT-GLOBAL-BARRIER",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 405,
+        "status": "pending",
+        "task_id": "GH-IS1-ADOPT",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"provider\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\", \"--consumer\", \"GH-IS1-BRIDGE\", \"--provider\", \"cellerator\"], \"cwd\": \".\", \"input_paths\": [\"planning/integrated-substrate-v1/tools\", \"planning/integrated-substrate-v1/local-config.json\", \"planning/integrated-substrate-v1/machine\"]}",
+        "id": "GH-IS1-BRIDGE-CELLERATOR-PROVIDER",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 405,
+        "status": "pending",
+        "task_id": "GH-IS1-BRIDGE",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"status\": \"done\", \"task_id\": \"GH-IS1-CLOSE\"}",
+        "id": "GH-IS1-CLOSURE",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 405,
+        "status": "pending",
+        "task_id": "GH-IS1-000",
+        "type": "task_state",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"provider\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\", \"--consumer\", \"GH-IS1-JOINT\", \"--provider\", \"baseplane\"], \"cwd\": \".\", \"input_paths\": [\"planning/integrated-substrate-v1/tools\", \"planning/integrated-substrate-v1/local-config.json\", \"planning/integrated-substrate-v1/machine\"]}",
+        "id": "GH-IS1-JOINT-BASEPLANE-PROVIDER",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 405,
+        "status": "pending",
+        "task_id": "GH-IS1-JOINT",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"provider\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\", \"--consumer\", \"GH-IS1-JOINT\", \"--provider\", \"cellerator\"], \"cwd\": \".\", \"input_paths\": [\"planning/integrated-substrate-v1/tools\", \"planning/integrated-substrate-v1/local-config.json\", \"planning/integrated-substrate-v1/machine\"]}",
+        "id": "GH-IS1-JOINT-CELLERATOR-PROVIDER",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 405,
+        "status": "pending",
+        "task_id": "GH-IS1-JOINT",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"-B\", \"docs/learning/check_acceptance.py\"], \"cwd\": \".\", \"input_paths\": [\"docs/learning/check_acceptance.py\", \"docs/learning/ACCEPT.md\", \"docs/learning/accept-evidence\", \"docs/learning/check_native_repairs.py\", \"docs/learning/verify_learn_evidence.py\", \"docs/learning/verify_pilot_evidence.py\", \"docs/learning/learn-evidence\", \"docs/learning/pilot-evidence\", \"include/GlassHelix/interrogation/diagnostics.hh\", \"include/GlassHelix/inference/inference.hh\", \"tests/native_foundation/interrogation/diagnostics.cc\", \"tests/native_foundation/inference/inference.cc\", \"python/glasshelix/learning.py\", \"tests/learning/test_learning.py\", \"tests/learning/installed_consumer.py\", \"experiments/celltag_reprogramming\"]}",
         "id": "GH-ML2-ACCEPT-INTEGRATED",
         "input_fingerprint": "07150fb30253598dbfde1b79cd70dc7d657120e99196c30e01168008258a2974",
@@ -5499,7 +5574,7 @@
         "input_fingerprint": "0d4a047cf9dc3b41e9263de6b372bbd9c6a2d5a80feb634ccbf650d100baacda",
         "last_run_at": "2026-10-02T16:08:52Z",
         "required": 1,
-        "revision": 403,
+        "revision": 405,
         "status": "passed",
         "task_id": "GH-MOON-0000",
         "type": "task_state",
@@ -7436,6 +7511,27 @@
       },
       {
         "enforcement": null,
+        "id": "GH-IS1-EXTEND",
+        "rule": "Keep the libraries easy to extend and fast. No compulsory Cellpack format, universal hidden axis, second general runtime, or unmeasured default. Distinguish equivalent lowering, model choices and approximations.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-IS1-OWNERSHIP",
+        "rule": "Cellerator owns reusable mathematical/dynamical computation; Baseplane owns sequence meaning and representations; GlassHelix owns scientific experiments. Reuse existing numerical/lifetime owners, preserve real consumers and separate Todo authorities.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
+        "id": "GH-IS1-PRESERVE",
+        "rule": "Execute only after the reviewed predecessor barrier. Preserve useful mechanisms, source, successful outcomes and negative evidence. No hand editing Todo/generated authority, no Ampere activation, no preprint edits, no CellShard authority changes.",
+        "scope_json": "{}",
+        "severity": "error"
+      },
+      {
+        "enforcement": null,
         "id": "GH-ML2-BIOLOGY",
         "rule": "A biology-purpose learning operation needs an explicit model assumption, semantic contract, exact reference and identified computational advantage to test. Biological labels or a generic ML kernel alone do not establish this. Model restrictions are hypotheses, not truths or hardware requirements.",
         "scope_json": "{}",
@@ -8290,6 +8386,1171 @@
         "mode": "read",
         "path": "tests",
         "task_id": "GH-DOCS-90"
+      },
+      {
+        "mode": "read",
+        "path": "planning/integrated-substrate-v1",
+        "task_id": "GH-IS1-000"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/integrated-substrate-v1",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix/analysis",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix/analysis",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix/refactoring",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/analysis",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/integrated-substrate-v1/receipts",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src/system",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/interop",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake/substrate",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix/cli",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/install",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/replay",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "components",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "examples",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/integrated-substrate-v1/receipts",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments/celltag_reprogramming/data_adapter",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix/data",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src/data",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/data",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "mode": "exclusive",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "README.md",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "docs",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "examples/substrate/joint",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/integrated-substrate-v1/receipts/joint",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/joint",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "mode": "exclusive",
+        "path": "CMakeLists.txt",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bindings",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "cmake",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "components",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "examples",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/integrated-substrate-v1/receipts",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix/models",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix/models",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/models",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "mode": "exclusive",
+        "path": "examples/substrate/scientific_tool",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "experiments/celltag_reprogramming/integrated",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/pipeline",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "bench/substrate",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "exclusive",
+        "path": "planning/integrated-substrate-v1/results/gh",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/qualification",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "mode": "exclusive",
+        "path": "include/GlassHelix/experiment",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "python/glasshelix/experiment",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "src/experiment",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "exclusive",
+        "path": "tests/substrate/science",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "forbidden",
+        "path": ".todo-orchestrator",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "preprint",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todo-status.md",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "forbidden",
+        "path": "todos.md",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "AGENTS.md",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "README.md",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "docs",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "experiments",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "include",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "planning",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "src",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "mode": "read",
+        "path": "tests",
+        "task_id": "GH-IS1-SCIENCE"
       },
       {
         "mode": "read",
@@ -13523,6 +14784,226 @@
         "prerequisite_task_id": "GH-MOON-MERGE-ACTOR",
         "task_id": "GH-MOON-REFACTOR",
         "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 342,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-ML2-0000",
+        "task_id": "GH-IS1-ADOPT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 343,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-MOON-0000",
+        "task_id": "GH-IS1-ADOPT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 344,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-ADOPT",
+        "task_id": "GH-IS1-ANALYSIS",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 345,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-MERGE-A",
+        "task_id": "GH-IS1-BRIDGE",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 346,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-ADOPT",
+        "task_id": "GH-IS1-BUILD",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 347,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-QUALIFY",
+        "task_id": "GH-IS1-CLOSE",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 348,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-DOCS",
+        "task_id": "GH-IS1-CLOSE",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 349,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-JOINT",
+        "task_id": "GH-IS1-CLOSE",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 350,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-ADOPT",
+        "task_id": "GH-IS1-DATA",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 351,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-PIPELINE",
+        "task_id": "GH-IS1-DOCS",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 352,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-PIPELINE",
+        "task_id": "GH-IS1-JOINT",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 353,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-SCIENCE",
+        "task_id": "GH-IS1-MERGE-A",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 354,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-DATA",
+        "task_id": "GH-IS1-MERGE-A",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 355,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-MODELS",
+        "task_id": "GH-IS1-MERGE-A",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 356,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-ANALYSIS",
+        "task_id": "GH-IS1-MERGE-A",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 357,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-BUILD",
+        "task_id": "GH-IS1-MERGE-A",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 358,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-ADOPT",
+        "task_id": "GH-IS1-MODELS",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 359,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-BRIDGE",
+        "task_id": "GH-IS1-PIPELINE",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 360,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-PIPELINE",
+        "task_id": "GH-IS1-QUALIFY",
+        "type": "task"
+      },
+      {
+        "barrier_id": null,
+        "checkpoint_id": null,
+        "condition_json": "{}",
+        "decision_id": null,
+        "id": 361,
+        "interface_id": null,
+        "prerequisite_task_id": "GH-IS1-ADOPT",
+        "task_id": "GH-IS1-SCIENCE",
+        "type": "task"
       }
     ],
     "task_invariants": [
@@ -13537,6 +15018,162 @@
       {
         "invariant_id": "science-before-architecture",
         "task_id": "GH-BOOTSTRAP"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "invariant_id": "GH-IS1-EXTEND",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "invariant_id": "GH-IS1-OWNERSHIP",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
+        "invariant_id": "GH-IS1-PRESERVE",
+        "task_id": "GH-IS1-SCIENCE"
       },
       {
         "invariant_id": "GH-ML2-BIOLOGY",
@@ -14183,6 +15820,356 @@
       },
       {
         "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-000",
+        "kind": "epic",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "",
+        "notes": "",
+        "objective": "Closure-only aggregate; no child depends on this epic.",
+        "parallel_policy": "serial",
+        "parent_id": null,
+        "priority": 0,
+        "result": null,
+        "result_policy_json": "{}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "GlassHelix integrated scientific experiment",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-ADOPT",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "After the global predecessor barrier, inventory the completed frontier, assign every useful behavior/unfinished obligation, and integrate the minimum contracts needed by parallel lanes.",
+        "parallel_policy": "integration_exclusive",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Reconcile finished predecessors and publish the small shared foundation",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-ANALYSIS",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Unify response requests, perturbations, candidate comparison and evidence-labelled structural proposals.",
+        "parallel_policy": "parallel_safe",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Integrate interrogation and scientific refactoring proposals",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-BRIDGE",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Bind scientific requests to a current, evidenced CE provider rather than a prototype receipt.",
+        "parallel_policy": "integration_exclusive",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Accept installed Cellerator mathematics and framework capabilities",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-BUILD",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Integrate package entry points, installed CE consumption and reproducible result/replay paths.",
+        "parallel_policy": "parallel_safe",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Make experiment execution and replay accessible",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-CLOSE",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Resolve final findings and publish what is integrated, experimental, measured or deliberately still open.",
+        "parallel_policy": "integration_exclusive",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Accept the scientific tool and the complete successor handoff",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-DATA",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Retain completed ML2 CellTag formulation/cohort work and make its evidence/splits reusable by experiment clients.",
+        "parallel_policy": "parallel_safe",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Integrate the actual predecessor cohort and experiment adapters",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-DOCS",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Publish intuitive scientific design, practical examples and supported results without disguising the unfinished frontier.",
+        "parallel_policy": "parallel_safe",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Explain the scientific experiment and its usable library path",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-JOINT",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Run one bounded sequence-conditioned scientific witness through installed BP and CE components.",
+        "parallel_policy": "integration_exclusive",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Prove the three tools can compose without losing meaning",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-MERGE-A",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Merge independent specification/data/model/analysis/package work into the experiment built on Cellerator.",
+        "parallel_policy": "integration_exclusive",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Integrate the scientific consumer surface",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-MODELS",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Consolidate plain matrix, actor-port and current ML2 model clients; extract reusable numerical logic downward.",
+        "parallel_policy": "parallel_safe",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Compose scientific models from Cellerator mathematics",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-PIPELINE",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Exercise the current ML2 experiment and both useful moonshot model families through the integrated toolkit.",
+        "parallel_policy": "integration_exclusive",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Deliver fitted/evaluated models and replayable scientific outputs",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-QUALIFY",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Check data/interpretation boundaries, requested derivatives and experiment-level costs with meaningful controls.",
+        "parallel_policy": "parallel_safe",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Evaluate scientific correctness, usability and total execution cost",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
+        "completion_commit": null,
+        "completion_git_head": null,
+        "completion_revision": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-SCIENCE",
+        "kind": "task",
+        "legacy_owner": null,
+        "legacy_payload_json": "{}",
+        "next_action": "Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.",
+        "notes": "",
+        "objective": "Make observations, models, hypotheses, conditioning and scientific result scope coherent without introducing general numerical ownership.",
+        "parallel_policy": "parallel_safe",
+        "parent_id": "GH-IS1-000",
+        "priority": 100,
+        "result": null,
+        "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
+        "revision": 405,
+        "status": "planned",
+        "tags_json": "[]",
+        "title": "Unify scientific specifications and whole-hypothesis results",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 1
+      },
+      {
+        "attention_reason": null,
         "completion_commit": "38bf7cd9627c265c96cc7ee805101c38e1484420",
         "completion_git_head": "38bf7cd9627c265c96cc7ee805101c38e1484420",
         "completion_revision": 376,
@@ -14199,12 +16186,12 @@
         "priority": 0,
         "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"validated\"]}",
-        "revision": 376,
+        "revision": 405,
         "status": "done",
         "tags_json": "[]",
         "title": "GlassHelix ML2 integration",
-        "updated_at": "2026-10-02T15:58:27Z",
-        "version": 3
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 4
       },
       {
         "attention_reason": null,
@@ -14374,12 +16361,12 @@
         "priority": 0,
         "result": "validated",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\"]}",
-        "revision": 404,
+        "revision": 405,
         "status": "done",
         "tags_json": "[]",
         "title": "GlassHelix single-cell moonshot",
-        "updated_at": "2026-10-02T16:08:52Z",
-        "version": 3
+        "updated_at": "2026-10-02T16:38:41Z",
+        "version": 4
       },
       {
         "attention_reason": null,
@@ -17355,6 +19342,414 @@
         "version": 1
       },
       {
+        "content_hash": "87558f597cd0ca8ed7685521410fe234a2c537c8e1664ed01946e8f1e8c674d9",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-ADOPT\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-ADOPT.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"exclusive\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-ADOPT-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-ADOPT-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-ADOPT-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "a26947c3ba934e0f8ab1b452b07d7bf0f3fa521cbe87c721de021acdb8af3805",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-ANALYSIS\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-ANALYSIS.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-ANALYSIS-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-ANALYSIS-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-ANALYSIS-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "3f4633cd40955533c43f59ed9f94588e55d2a8ea375a85233781cc3714e0e45d",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-BUILD\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-BUILD.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-BUILD-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-BUILD-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-BUILD-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "b268fb552c62dde1edbbb201462cf76f613cece43f1ef6b02071900e68e35d56",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-DATA\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-DATA.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-DATA-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-DATA-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-DATA-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "d34cfe9b35ef914dadd49285961320c01153836611fab4e0fd89a9d1835ce72c",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-DOCS\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-DOCS.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-DOCS-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-DOCS-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-DOCS-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "6dd7da1236a990b755a884c3a3164cadaa4de8130bd2a00ee321393ea3ff66f1",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"One owner for shared source, accepted lineage, intermediate integration and final capability receipts.\",\"ordered_tasks\":[\"GH-IS1-MERGE-A\",\"GH-IS1-BRIDGE\",\"GH-IS1-PIPELINE\",\"GH-IS1-JOINT\",\"GH-IS1-CLOSE\",\"GH-IS1-000\"],\"references\":[\"planning/integrated-substrate-v1/START_CONTROLLER.md\"],\"rendezvous\":[],\"role\":\"integrator\",\"workspace_mode\":\"exclusive\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-INTEGRATOR-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-INTEGRATOR-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "717902b6b4f3965df88cad77516d002728c5019953fd534d61782c785b943a28",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-MODELS\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-MODELS.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-MODELS-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-MODELS-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-MODELS-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "0644aca76339727fa5d17e4c2f969bfbede8474671a292f0b4e4627665a39ed9",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-QUALIFY\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-QUALIFY.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-QUALIFY-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-QUALIFY-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-QUALIFY-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "5b40e561a26ebdf8576b4401c01db5f033e439573d10e1d26176b68bacbcd332",
+        "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"Bounded domain ownership; root accepts patches and binds dependent worktrees to accepted commits.\",\"ordered_tasks\":[\"GH-IS1-SCIENCE\"],\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-SCIENCE.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"isolated_merge\"}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:lane_brief:GH-IS1-SCIENCE-L:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "lane_brief",
+        "lane_id": "GH-IS1-SCIENCE-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-SCIENCE-L\",\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "e0a5181ac72e19da1455ac9f55e1ceda21a11a112b0bcb60ce931bd422981d5e",
+        "content_json": "{\"boundaries\":[\"Cellerator owns reusable mathematical/dynamical computation; Baseplane owns sequence meaning and representations; GlassHelix owns scientific experiments. Reuse existing numerical/lifetime owners, preserve real consumers and separate Todo authorities.\",\"Execute only after the reviewed predecessor barrier. Preserve useful mechanisms, source, successful outcomes and negative evidence. No hand editing Todo/generated authority, no Ampere activation, no preprint edits, no CellShard authority changes.\",\"Keep the libraries easy to extend and fast. No compulsory Cellpack format, universal hidden axis, second general runtime, or unmeasured default. Distinguish equivalent lowering, model choices and approximations.\"],\"delegated_judgment\":\"Parallelize disjoint domains under a bounded total agent budget; serialize shared integration and clean GPU timing. Accept actual patches before creating dependent worktrees. Reconcile late predecessor work and claims first.\",\"desired_end_state\":\"Usable installed APIs, real composed execution, preserved research and easier future development.\",\"objective\":\"Integrate the completed frontier into deliberate, extensible, performant tools.\",\"references\":[\"planning/integrated-substrate-v1/START_CONTROLLER.md\",\"planning/integrated-substrate-v1/docs/01_CHARTER.md\"]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:run_charter:-:-:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "run_charter",
+        "lane_id": null,
+        "owner_scope_json": "{\"run_id\":\"GH-IS1-RUN-V1\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": null,
+        "version": 1
+      },
+      {
+        "content_hash": "9c2813ff6719326b7d25cb50f4cca8477174fb58ecf80dd3fa974b187cca012d",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Global activation gate passes against live authorities; current claims, pending patches and frozen interfaces are reconciled without taking over predecessor work.\",\"Expanded preservation and source-to-destination maps include all current predecessor outcomes and newly discovered work.\",\"Small contract and dependency-target decision is committed and available to every child worktree; no broad new framework or numerical reset.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[\"GH-IS1-ADOPT-GLOBAL-BARRIER\"],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"After the global predecessor barrier, inventory the completed frontier, assign every useful behavior/unfinished obligation, and integrate the minimum contracts needed by parallel lanes.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-ADOPT.md\"],\"scope\":{\"exclusive_paths\":[\"planning/integrated-substrate-v1\",\"include\",\"src\",\"CMakeLists.txt\",\"cmake\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[\"GH-IS1-ADOPT-GLOBAL-BARRIER\"]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-ADOPT-L:GH-IS1-ADOPT:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-ADOPT-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-ADOPT-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-ADOPT\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-ADOPT",
+        "version": 1
+      },
+      {
+        "content_hash": "d4b16382cc6b90baa72413efa35f23e710f8a6123be2c5570acf77c11c7e0f7a",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Requested responses use CE derivative capabilities without cloning differentiation or solver runtimes.\",\"Supplied basis/refactoring demonstrations and inferred mechanisms remain distinct.\",\"Uncertainty, readout/state migration and optimizer policy are explicit at the proposal boundary.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Unify response requests, perturbations, candidate comparison and evidence-labelled structural proposals.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-ANALYSIS.md\"],\"scope\":{\"exclusive_paths\":[\"python/glasshelix/analysis\",\"include/GlassHelix/analysis\",\"python/glasshelix/refactoring\",\"tests/substrate/analysis\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-ANALYSIS-L:GH-IS1-ANALYSIS:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-ANALYSIS-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-ANALYSIS-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-ANALYSIS\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-ANALYSIS",
+        "version": 1
+      },
+      {
+        "content_hash": "c7e84737dcf22aa3faa43c766f95eb68eeda2ae85960c83a3d711243edc722b4",
+        "content_json": "{\"completion_contract\":{\"required\":[\"A user can run/evaluate/replay an experiment without importing moonshot directories.\",\"Native and optional framework routes clearly expose dependencies and unsupported capabilities.\",\"Historical missing raw benchmark evidence is not reconstructed or promoted as authenticated.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Integrate package entry points, installed CE consumption and reproducible result/replay paths.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-BUILD.md\"],\"scope\":{\"exclusive_paths\":[\"cmake/substrate\",\"python/glasshelix/cli\",\"tests/substrate/install\",\"tests/substrate/replay\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-BUILD-L:GH-IS1-BUILD:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-BUILD-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-BUILD-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-BUILD\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-BUILD",
+        "version": 1
+      },
+      {
+        "content_hash": "2c4caa2e2d864da5c7a6bdc7dceb42d3344d0d6c95b644859442e1847e5a715d",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Actual cohort/source/split and observability restrictions are preserved; no fabricated individual trajectories or paired modalities.\",\"Preprocessing and sample/lineage/donor units are inspectable and replayable.\",\"External missing data remains an explicit limitation, not silent replacement by remembered datasets.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Retain completed ML2 CellTag formulation/cohort work and make its evidence/splits reusable by experiment clients.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-DATA.md\"],\"scope\":{\"exclusive_paths\":[\"python/glasshelix/data\",\"src/data\",\"experiments/celltag_reprogramming/data_adapter\",\"tests/substrate/data\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-DATA-L:GH-IS1-DATA:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-DATA-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-DATA-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-DATA\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-DATA",
+        "version": 1
+      },
+      {
+        "content_hash": "7078e1c9a2a7a7dc82a061b765ee78a8b2635aca1423d33d2029d24404206804",
+        "content_json": "{\"completion_contract\":{\"required\":[\"The README positions GH as a scientific experiment on CE, not a competing mathematical library.\",\"Native capability, fitted model, biological inference and speculation have distinct evidence.\",\"No stale mutable status table is replicated across human and agent documents.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Publish intuitive scientific design, practical examples and supported results without disguising the unfinished frontier.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-DOCS.md\"],\"scope\":{\"exclusive_paths\":[\"README.md\",\"AGENTS.md\",\"docs\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-DOCS-L:GH-IS1-DOCS:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-DOCS-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-DOCS-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-DOCS\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-DOCS",
+        "version": 1
+      },
+      {
+        "content_hash": "5713b9f1cdc2c13d36a4a279d12d15996e5038e442e77f230ff1f59f6a68b009",
+        "content_json": "{\"completion_contract\":{\"required\":[\"All local required outcomes are integrated and truthfully evidenced; preserve unfinished frontier work.\"]},\"forbidden_mutations\":[],\"gates\":[\"GH-IS1-CLOSURE\"],\"next_action\":\"Closure-only aggregate; no child depends on this epic.\",\"objective\":\"Closure-only aggregate; no child depends on this epic.\",\"scope\":{\"exclusive_paths\":[],\"read_paths\":[\"planning/integrated-substrate-v1\"]},\"tests\":[\"GH-IS1-CLOSURE\"]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-INTEGRATOR-L:GH-IS1-000:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-INTEGRATOR-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-000\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-000",
+        "version": 1
+      },
+      {
+        "content_hash": "43df7cce03027f670e56c8a15bb53f8901aad71ab3bbae2e45c6c13e2df5549a",
+        "content_json": "{\"completion_contract\":{\"required\":[\"External CE-INTEGRATE is effectively done; current source/build/capability evidence passes the provider gate.\",\"Ordered scientific roles and output effects survive native binding.\",\"Forward, requested state/parameter VJP and JVP use genuine supported native routes.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[\"GH-IS1-BRIDGE-CELLERATOR-PROVIDER\"],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Bind scientific requests to a current, evidenced CE provider rather than a prototype receipt.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-BRIDGE.md\"],\"scope\":{\"exclusive_paths\":[\"src/system\",\"bindings\",\"tests/substrate/interop\",\"planning/integrated-substrate-v1/receipts\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[\"GH-IS1-BRIDGE-CELLERATOR-PROVIDER\"]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-INTEGRATOR-L:GH-IS1-BRIDGE:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-INTEGRATOR-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-BRIDGE\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-BRIDGE",
+        "version": 1
+      },
+      {
+        "content_hash": "6c9293ca91b56a3c422ceda1a6ba90cf76de103c32472fdae83c3c309470e020",
+        "content_json": "{\"completion_contract\":{\"required\":[\"The GH vertical slice and joint installed-consumer witness pass with truthful scientific scope.\",\"All required migration/extension obligations are accounted for; no duplicate general math stack remains.\",\"Publish final three-project source/capability matrix; this does not close unrelated research questions.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Resolve final findings and publish what is integrated, experimental, measured or deliberately still open.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-CLOSE.md\"],\"scope\":{\"exclusive_paths\":[\"CMakeLists.txt\",\"cmake\",\"include\",\"src\",\"components\",\"tests\",\"examples\",\"experiments\",\"python\",\"bindings\",\"docs\",\"planning/integrated-substrate-v1/receipts\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-INTEGRATOR-L:GH-IS1-CLOSE:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-INTEGRATOR-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-CLOSE\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-CLOSE",
+        "version": 1
+      },
+      {
+        "content_hash": "119d769463cb3a6a41300e98e3aeeff22f9980c987b1c4dce2752382860c2b82",
+        "content_json": "{\"completion_contract\":{\"required\":[\"External BP-CLOSE provider and CE-INTEGRATE capabilities pass live/source-bound gates.\",\"Exact sequence provenance, CE numerical/derivative ownership and GH scientific meaning survive end to end.\",\"The witness is labelled engineering interoperability, not a compulsory model or genome-scale validation.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[\"GH-IS1-JOINT-BASEPLANE-PROVIDER\",\"GH-IS1-JOINT-CELLERATOR-PROVIDER\"],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Run one bounded sequence-conditioned scientific witness through installed BP and CE components.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-JOINT.md\"],\"scope\":{\"exclusive_paths\":[\"examples/substrate/joint\",\"tests/substrate/joint\",\"planning/integrated-substrate-v1/receipts/joint\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[\"GH-IS1-JOINT-BASEPLANE-PROVIDER\",\"GH-IS1-JOINT-CELLERATOR-PROVIDER\"]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-INTEGRATOR-L:GH-IS1-JOINT:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-INTEGRATOR-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-JOINT\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-JOINT",
+        "version": 1
+      },
+      {
+        "content_hash": "c36432e8570802cb4ef17bab517a56e882cf9c66187f98e15716c7e130a95839",
+        "content_json": "{\"completion_contract\":{\"required\":[\"A coherent experimental client is present in the accepted lineage, not several incompatible model demos.\",\"Reusable numerical ownership is downward in CE; any unresolved demand is visible before native binding.\",\"Dependent worktrees inherit integrated source and generated interface artifacts.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Merge independent specification/data/model/analysis/package work into the experiment built on Cellerator.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-MERGE-A.md\"],\"scope\":{\"exclusive_paths\":[\"CMakeLists.txt\",\"cmake\",\"include\",\"src\",\"components\",\"tests\",\"examples\",\"experiments\",\"python\",\"bindings\",\"planning/integrated-substrate-v1/receipts\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-INTEGRATOR-L:GH-IS1-MERGE-A:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-INTEGRATOR-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-MERGE-A\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-MERGE-A",
+        "version": 1
+      },
+      {
+        "content_hash": "069b4c2a8aa691c202adafc7a5b8d3133f2afef21f81fa373250e8e6fbd3237e",
+        "content_json": "{\"completion_contract\":{\"required\":[\"A supported fit/evaluation protocol, controls, checkpoint and replay work through installed components.\",\"A refactoring proposal executes via CE and preserves or explicitly changes the model as declared.\",\"No biological victory or unique mechanism is required for a valid experimental result.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Exercise the current ML2 experiment and both useful moonshot model families through the integrated toolkit.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-PIPELINE.md\"],\"scope\":{\"exclusive_paths\":[\"experiments/celltag_reprogramming/integrated\",\"examples/substrate/scientific_tool\",\"tests/substrate/pipeline\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-INTEGRATOR-L:GH-IS1-PIPELINE:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-INTEGRATOR-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-PIPELINE\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-PIPELINE",
+        "version": 1
+      },
+      {
+        "content_hash": "f9fd2032fcbb7c23954d0f2c7792527c5a44ee3c02efc7b6819746e6f28ab5d2",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Plain and actor-local model choices use the common experiment surface and declared native/provider capabilities.\",\"Generic math has a CE owner or a concrete CE extraction demand accepted at the foundation seam.\",\"Loss choice and biological interpretation stay scientific policy, not kernel selection.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Consolidate plain matrix, actor-port and current ML2 model clients; extract reusable numerical logic downward.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-MODELS.md\"],\"scope\":{\"exclusive_paths\":[\"python/glasshelix/models\",\"include/GlassHelix/models\",\"tests/substrate/models\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-MODELS-L:GH-IS1-MODELS:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-MODELS-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-MODELS-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-MODELS\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-MODELS",
+        "version": 1
+      },
+      {
+        "content_hash": "9110a6e1a1bd3a623db0ded9048ed5e71af292ac4b762b464f6813f61b3eeb6b",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Scientific units, leakage controls and whole-alternative semantics are tested, not assumed.\",\"Native speed and model quality/cost are reported separately; all evidence names exact sources.\",\"A new small scientific experiment is added without building new general math infrastructure.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Check data/interpretation boundaries, requested derivatives and experiment-level costs with meaningful controls.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-QUALIFY.md\"],\"scope\":{\"exclusive_paths\":[\"bench/substrate\",\"tests/substrate/qualification\",\"planning/integrated-substrate-v1/results/gh\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-QUALIFY-L:GH-IS1-QUALIFY:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-QUALIFY-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-QUALIFY-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-QUALIFY\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-QUALIFY",
+        "version": 1
+      },
+      {
+        "content_hash": "5af2a7d04a3b9ca8764042c2a0882500b311bb7483c5c900d3b02f9b789747f6",
+        "content_json": "{\"completion_contract\":{\"required\":[\"Measurement, state, parameters and mechanism interpretations remain distinct.\",\"Whole joint alternatives and non-identifiability are preserved through results and replay.\",\"One small experiment specification composes the predecessor native/model facilities.\"]},\"forbidden_mutations\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"gates\":[],\"next_action\":\"Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.\",\"objective\":\"Make observations, models, hypotheses, conditioning and scientific result scope coherent without introducing general numerical ownership.\",\"references\":[\"planning/integrated-substrate-v1/tasks/GH-IS1-SCIENCE.md\"],\"scope\":{\"exclusive_paths\":[\"include/GlassHelix/experiment\",\"src/experiment\",\"python/glasshelix/experiment\",\"tests/substrate/science\"],\"forbidden_paths\":[\".todo-orchestrator\",\"todos\",\"todos.md\",\"todo-status.md\",\"preprint\"],\"read_paths\":[\"AGENTS.md\",\"README.md\",\"include\",\"src\",\"planning\",\"experiments\",\"tests\",\"docs\"]},\"tests\":[]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "id": "GH-IS1-RUN-V1:task_brief:GH-IS1-SCIENCE-L:GH-IS1-SCIENCE:1",
+        "invalidated_at": null,
+        "invalidation_revision": null,
+        "kind": "task_brief",
+        "lane_id": "GH-IS1-SCIENCE-L",
+        "owner_scope_json": "{\"lane_id\":\"GH-IS1-SCIENCE-L\",\"run_id\":\"GH-IS1-RUN-V1\",\"task_id\":\"GH-IS1-SCIENCE\"}",
+        "run_id": "GH-IS1-RUN-V1",
+        "series_key": "",
+        "superseded_by": null,
+        "task_id": "GH-IS1-SCIENCE",
+        "version": 1
+      },
+      {
         "content_hash": "cf6cad48cafef92a6fed43649e9f4462cb3ed083a2a277ed766c463b10d9afc2",
         "content_json": "{\"authority\":\"server_enforced_role_and_task_scope\",\"interfaces\":[],\"motivation\":\"One writable main lane avoids an idle coordinator. Bounded delegates can handle independent files; genuine new lanes require an authorized plan amendment.\",\"ordered_tasks\":[\"GH-ML2-DESIGN\",\"GH-ML2-DATA\",\"GH-ML2-REPAIR\",\"GH-ML2-LEARN\",\"GH-ML2-PILOT\",\"GH-ML2-ACCEPT\",\"GH-ML2-0000\"],\"references\":[\"planning/learning-v2/START_CONTROLLER.md\"],\"rendezvous\":[],\"role\":\"implementer\",\"workspace_mode\":\"exclusive\"}",
         "created_at": "2026-09-27T12:53:37Z",
@@ -20255,6 +22650,146 @@
         "task_id": "GH-DOCS-000"
       },
       {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-ADOPT-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-ADOPT"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-ANALYSIS-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-ANALYSIS"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-BUILD-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-BUILD"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-DATA-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-DATA"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-DOCS-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-DOCS"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-MERGE-A"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "position": 1,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-BRIDGE"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "position": 2,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-PIPELINE"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "position": 3,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-JOINT"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "position": 4,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-CLOSE"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-INTEGRATOR-L",
+        "position": 5,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-000"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-MODELS-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-MODELS"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-QUALIFY-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-QUALIFY"
+      },
+      {
+        "activated_at": null,
+        "completed_at": null,
+        "enqueued_at": "2026-10-02T16:38:41Z",
+        "lane_id": "GH-IS1-SCIENCE-L",
+        "position": 0,
+        "revision": 405,
+        "state": "queued",
+        "task_id": "GH-IS1-SCIENCE"
+      },
+      {
         "activated_at": "2026-10-02T14:58:55Z",
         "completed_at": "2026-10-02T15:03:02Z",
         "enqueued_at": "2026-09-27T12:53:37Z",
@@ -21430,6 +23965,114 @@
       },
       {
         "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-ADOPT-L",
+        "parent_lane_id": null,
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "exclusive"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-ANALYSIS-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "isolated_merge"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-BUILD-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "isolated_merge"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-DATA-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "isolated_merge"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-DOCS-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "isolated_merge"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-INTEGRATOR-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "integrator",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "exclusive"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-MODELS-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "isolated_merge"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-QUALIFY-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "isolated_merge"
+      },
+      {
+        "context_cursor": 0,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-SCIENCE-L",
+        "parent_lane_id": "GH-IS1-ADOPT-L",
+        "revision": 405,
+        "role": "implementer",
+        "run_id": "GH-IS1-RUN-V1",
+        "state": "ready",
+        "updated_at": "2026-10-02T16:38:41Z",
+        "workspace_mode": "isolated_merge"
+      },
+      {
+        "context_cursor": 0,
         "created_at": "2026-09-27T12:53:37Z",
         "id": "GH-ML2-L-EXEC",
         "parent_lane_id": null,
@@ -22028,6 +24671,16 @@
         "version": 1
       },
       {
+        "content_hash": "e0a5181ac72e19da1455ac9f55e1ceda21a11a112b0bcb60ce931bd422981d5e",
+        "content_json": "{\"boundaries\":[\"Cellerator owns reusable mathematical/dynamical computation; Baseplane owns sequence meaning and representations; GlassHelix owns scientific experiments. Reuse existing numerical/lifetime owners, preserve real consumers and separate Todo authorities.\",\"Execute only after the reviewed predecessor barrier. Preserve useful mechanisms, source, successful outcomes and negative evidence. No hand editing Todo/generated authority, no Ampere activation, no preprint edits, no CellShard authority changes.\",\"Keep the libraries easy to extend and fast. No compulsory Cellpack format, universal hidden axis, second general runtime, or unmeasured default. Distinguish equivalent lowering, model choices and approximations.\"],\"delegated_judgment\":\"Parallelize disjoint domains under a bounded total agent budget; serialize shared integration and clean GPU timing. Accept actual patches before creating dependent worktrees. Reconcile late predecessor work and claims first.\",\"desired_end_state\":\"Usable installed APIs, real composed execution, preserved research and easier future development.\",\"objective\":\"Integrate the completed frontier into deliberate, extensible, performant tools.\",\"references\":[\"planning/integrated-substrate-v1/START_CONTROLLER.md\",\"planning/integrated-substrate-v1/docs/01_CHARTER.md\"]}",
+        "created_at": "2026-10-02T16:38:41Z",
+        "creation_revision": 405,
+        "run_id": "GH-IS1-RUN-V1",
+        "superseded_at": null,
+        "superseded_revision": null,
+        "version": 1
+      },
+      {
         "content_hash": "4aa16baa91d0236f48843440e9503161c18e094ff294b1190361532fea03ee37",
         "content_json": "{\"boundaries\":[\"GlassHelix owns scientific models, evidence and inference meaning; Torch supplies ordinary ML. CelleraTorch owns framework integration; native Cellerator owns reusable biological math, differentiation, parameter/value contracts, geometry, planning and compiler/runtime. No parallel GH ML runtime or CT kernel home.\",\"Preserve successful NF1A, compiler, relation, geometry and CelleraTorch work and separate Todo authorities. No retirement, runtime replacement, old-plan reapply, unrelated cleanup, preprint edits or Ampere-epic activation is authorized.\",\"Use coarse outcomes and evidence-selected alternatives. Reuse ordinary Torch and existing Cellerator compositions before new kernels. Easy work may proceed immediately. A costly design needs an explicit rationale, not a universal framework or mandatory survey.\"],\"delegated_judgment\":\"Main thread owns consequential design and cross-project acceptance. Use one writable implementer lane per authority and bounded children by default. Routine coding may be quick; do not turn the deeper design into repeated approval ceremonies.\",\"desired_end_state\":\"One useful fitted/conditioned scientific consumer, a real composable CT/CE training path, and one carefully reasoned structured-learning construction with honest qualification.\",\"objective\":\"Deliver biology-purpose scientific learning through GlassHelix, Torch/CelleraTorch and Cellerator without duplicating an ML runtime.\",\"references\":[\"planning/learning-v2/DESIGN.md\",\"planning/learning-v2/BIOLOGICAL_ML.md\",\"planning/learning-v2/CROSS_PROJECT.md\"]}",
         "created_at": "2026-09-27T12:53:37Z",
@@ -22078,6 +24731,16 @@
         "root_task_id": "GH-DOCS-000",
         "status": "completed",
         "updated_at": "2026-09-29T12:59:15Z"
+      },
+      {
+        "active_charter_version": 1,
+        "completed_at": null,
+        "created_at": "2026-10-02T16:38:41Z",
+        "id": "GH-IS1-RUN-V1",
+        "revision": 405,
+        "root_task_id": "GH-IS1-000",
+        "status": "active",
+        "updated_at": "2026-10-02T16:38:41Z"
       },
       {
         "active_charter_version": 1,

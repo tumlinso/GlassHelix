@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "before_revision": 404,
+  "after_revision": 405,
+  "existing_tasks_checked": 124,
+  "existing_interfaces_checked": 6,
+  "existing_runs_checked": 5,
+  "permitted_metadata_updates": [
+    "GH-ML2-0000",
+    "GH-MOON-0000"
+  ],
+  "errors": []
+}
