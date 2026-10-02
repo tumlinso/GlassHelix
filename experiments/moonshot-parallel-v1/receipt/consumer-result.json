@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "source_commit": "1688030c27bd942f6ac3bf40312ba06472c99dbf",
+  "consumer_sha256": "87a094735c05a45de8ed4659b59c1d14d2c9257daef3aaf93f3430e31583a0aa",
+  "install_manifest_sha256": "823718a896776bfa49457fde433b87c4deebe1732af1540239bc8152574a1153",
+  "adapter_file": "/tmp/gh-moon-celleratorch/celleratorch/moonshot_product.py",
+  "adapter_sha256": "2f340e956bfb38a5f17335eadf32b57ca9a78af172ee249323f9bccb67215068",
+  "native_library": "/home/tumlinson/Cellerator/.git/todo-orchestrator/0ccaac37-dbbf-448e-a5f8-def197a70aba/workflow-workspaces/ce-moon-l-integrate-v1/build-product2-install/lib/libcellerator_product2.so",
+  "native_library_sha256": "651d7952be25a750dfacba52e49ae70caf5ed6f492d41f6a98bb26bb7206c125",
+  "python": "/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python",
+  "torch_version": "2.7.0+cu126",
+  "device": "cpu",
+  "precision": "float32",
+  "fixture": {
+    "x": [
+      0.0,
+      2.0,
+      -1.0
+    ],
+    "k": [
+      1.5,
+      -2.0,
+      0.5,
+      3.0
+    ],
+    "a": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "b": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "cotangent": [
+      0.4000000059604645,
+      -0.699999988079071,
+      0.20000000298023224,
+      1.100000023841858
+    ],
+    "dx": [
+      0.30000001192092896,
+      -0.20000000298023224,
+      0.699999988079071
+    ],
+    "dk": [
+      0.10000000149011612,
+      0.20000000298023224,
+      -0.30000001192092896,
+      0.4000000059604645
+    ]
+  },
+  "results": {
+    "forward": [
+      0.0,
+      -8.0,
+      -1.0,
+      -0.0
+    ],
+    "input_vjp": [
+      -2.1000001430511475,
+      5.5,
+      0.20000000298023224
+    ],
+    "parameter_vjp": [
+      0.0,
+      -2.799999952316284,
+      -0.4000000059604645,
+      -0.0
+    ],
+    "jvp": [
+      0.9000000357627869,
+      2.4000000953674316,
+      1.4000000953674316,
+      -0.9000000357627869
+    ],
+    "adjoint_error": 5.960464477539063e-08
+  },
+  "checks": [
+    "independent scalar forward",
+    "repeated-index and zero input VJP",
+    "parameter VJP",
+    "full input and parameter JVP",
+    "finite difference",
+    "adjoint identity",
+    "installed Product2Module",
+    "external SGD consumes native VJP"
+  ],
+  "unsupported": [
+    "CUDA Torch tensors",
+    "mixed precision",
+    "second-order transforms",
+    "biological inference"
+  ]
+}
