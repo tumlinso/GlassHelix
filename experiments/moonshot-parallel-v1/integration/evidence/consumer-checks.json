@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checks": [
+    "forward_repeated_contributions",
+    "independent_input_and_coefficient_vjp_zero_coefficient",
+    "full_readout_jvp_independent_and_finite_difference",
+    "native_coefficients_actual_loss_reduction",
+    "checkpoint_adam_next_step_equivalence",
+    "identity_topology_and_checkpoint_rejection",
+    "plain_matrix_patch_trajectory_native_readout",
+    "supplied_refactoring_residual_actor_native_readout"
+  ],
+  "source_sha256": {
+    "check.py": "c8f5e84c5e93ee0c3280092fe6204a4d10fc44cbf03c8b4d8aa5017303ea7e29",
+    "model.py": "76f29006a21aadf5067fcca90aff98551599eaba9d5eca723424f80d473c6c85",
+    "examples.py": "73b8a7ba3bee320ae35cd1aec6e64e66cd8ad090f5ccb9a833f830c9475ab8f1",
+    "capability.json": "d8fb3b93626e9a80dd235682e9143681ba60fc50d56c3a5133a57386db958536",
+    "../plain/model.py": "650d8255e305c4eba3203b33e7f9e7b308df56c19446c89795a65e771f58c66d",
+    "../actor/model.py": "f405f2cc6f1e6aef0843cf36463660bb6f85859ac30b96dfef0c1b7da72173ce",
+    "../refactor/model.py": "c3ea02b78be744fe13dee3a3ed6053f1d58b3ab6c7939ed81bb37fb340c10590"
+  },
+  "cellerator_source_commit": "1688030c27bd942f6ac3bf40312ba06472c99dbf",
+  "install_manifest_sha256": "823718a896776bfa49457fde433b87c4deebe1732af1540239bc8152574a1153",
+  "adapter_sha256": "2f340e956bfb38a5f17335eadf32b57ca9a78af172ee249323f9bccb67215068",
+  "native_library": "/home/tumlinson/Cellerator/.git/todo-orchestrator/0ccaac37-dbbf-448e-a5f8-def197a70aba/workflow-workspaces/ce-moon-l-integrate-v1/build-product2-install/lib/libcellerator_product2.so",
+  "native_library_sha256": "651d7952be25a750dfacba52e49ae70caf5ed6f492d41f6a98bb26bb7206c125",
+  "device": "cpu",
+  "precision": "float32",
+  "biology": "not_run",
+  "argv": [
+    "/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python",
+    "-B",
+    "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-moon-l-integrate-v1/experiments/moonshot-parallel-v1/integration/check.py",
+    "--record"
+  ],
+  "examples": {
+    "plain": {
+      "example": "plain_matrix_patch_native_readout",
+      "biology": "not_run",
+      "dtype": "float32",
+      "device": "cpu",
+      "trajectory_steps": 3,
+      "loss_before": 1.2265429496765137,
+      "loss_after": 6.36284767097095e-08,
+      "training_steps": 12,
+      "field_gradient_l1": 0.00967659242451191,
+      "trajectory_gradient_max_error": 0.0,
+      "prediction": [
+        1.2497477531433105
+      ],
+      "hidden_jvp": [
+        1.9492179155349731
+      ],
+      "source_ids": [
+        "patch0:r0:c0",
+        "patch0:r0:c1",
+        "patch0:r1:c0",
+        "patch0:r1:c1"
+      ],
+      "observation_ids": [
+        "synthetic:measurement0"
+      ],
+      "contribution_ids": [
+        "term0",
+        "term1",
+        "term2"
+      ]
+    },
+    "refactorable": {
+      "example": "supplied_refactoring_native_regrowth",
+      "biology": "not_run",
+      "dtype": "float32",
+      "device": "cpu",
+      "migration_domain": "whole state space",
+      "old_coordinates": [
+        "old:s0",
+        "old:s1"
+      ],
+      "new_coordinates": [
+        "new:q0",
+        "new:q1"
+      ],
+      "initial_prediction_error": 0.0,
+      "initial_outgoing_gradient_l1": 0.04049079865217209,
+      "hidden_gradient_l1_by_step": [
+        0.0,
+        0.014433268457651138
+      ],
+      "final_prediction": [
+        0.6204586029052734
+      ],
+      "source_ids": [
+        "anonymous:regrowth0:h0",
+        "anonymous:regrowth0:h1"
+      ],
+      "observation_ids": [
+        "synthetic:measurement0"
+      ]
+    }
+  },
+  "coefficient_fit": {
+    "initial_loss": 0.8540999889373779,
+    "final_loss": 0.001573351677507162
+  }
+}
