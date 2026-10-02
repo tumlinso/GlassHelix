@@ -1,5 +1,6 @@
 """CPU qualification of bounded scientific permissions and inference."""
 import unittest
+from dataclasses import replace
 
 import torch
 
@@ -8,11 +9,12 @@ from glasshelix.learning import (EvidencePermission, EvidenceView,
                                 evidence_manifest)
 
 
-def evidence(values, *, split='train', modality='RNA', times=None, mask=None, kind='response'):
+def evidence(values, *, split='train', modality='RNA', times=None, mask=None, kind='response', correspondence_ids=None):
     values = torch.tensor(values, dtype=torch.float64).reshape(-1, 1)
     return EvidenceView(values, torch.ones_like(values, dtype=torch.bool) if mask is None else mask,
                         tuple(f'synthetic-{kind}-{i}' for i in range(len(values))), modality, split,
-                        tuple([3.] * len(values) if times is None else times), 'synthetic-fixture-v1')
+                        tuple([3.] * len(values) if times is None else times), 'synthetic-fixture-v1',
+                        correspondence_ids)
 
 
 class LearningTests(unittest.TestCase):
@@ -62,13 +64,38 @@ class LearningTests(unittest.TestCase):
     def test_independent_observation_distinguishes_activity_and_forcing(self):
         fitted = self.fit()
         x = torch.tensor([[1.3]], dtype=torch.float64)
-        response = evidence([1.7 * 1.3 * 0.8], split='conditioning')
-        measured_z = evidence([0.8], split='conditioning', kind='activity')
+        response = evidence([1.7 * 1.3 * 0.8], split='conditioning', correspondence_ids=('fixture-row-0',))
+        measured_z = evidence([0.8], split='conditioning', kind='activity', correspondence_ids=('fixture-row-0',))
         result = condition_local(fitted, x, response, EvidencePermission(cutoff=3), independent_z=measured_z)
         torch.testing.assert_close(result['z'], torch.tensor([[0.8]], dtype=torch.float64), rtol=1e-6, atol=1e-7)
         torch.testing.assert_close(result['forcing'], torch.ones_like(x), rtol=1e-6, atol=1e-7)
         self.assertIsNotNone(result['independent_z_evidence'])
         self.assertNotEqual((0.4 - 0.8) ** 2, (0.8 - 0.8) ** 2)
+
+    def assert_unpaired_rejected(self, change, message):
+        fitted = self.fit()
+        x = torch.tensor([[1.3], [1.4]], dtype=torch.float64)
+        response = evidence([1.7 * 1.3 * 0.8, 1.7 * 1.4 * 0.6], split='conditioning',
+                            correspondence_ids=('fixture-row-0', 'fixture-row-1'))
+        independent = evidence([0.8, 0.6], split='conditioning', kind='activity',
+                               correspondence_ids=('fixture-row-0', 'fixture-row-1'))
+        independent = replace(independent, **change)
+        with self.assertRaisesRegex(ValueError, message):
+            condition_local(fitted, x, response, EvidencePermission(cutoff=3), independent_z=independent)
+        self.assertFalse(fitted.manifest['global_frozen'])
+        self.assertTrue(fitted.hypothesis.coefficients.requires_grad)
+
+    def test_independent_observation_source_mismatch_rejected(self):
+        self.assert_unpaired_rejected({'source_id': 'other-fixture'}, 'source identity')
+
+    def test_independent_observation_time_mismatch_rejected(self):
+        self.assert_unpaired_rejected({'times': (2., 3.)}, 'row times')
+
+    def test_independent_observation_row_permutation_rejected(self):
+        self.assert_unpaired_rejected({'correspondence_ids': ('fixture-row-1', 'fixture-row-0')}, 'correspondence or order')
+
+    def test_independent_observation_without_correspondence_rejected(self):
+        self.assert_unpaired_rejected({'correspondence_ids': None}, 'explicit row correspondence')
 
     def test_missing_targets_and_manifest_identity(self):
         mask = torch.tensor([[True], [False]])

@@ -24,6 +24,7 @@ class EvidenceView:
     split: str
     times: tuple[float, ...]
     source_id: str
+    correspondence_ids: tuple[str, ...] | None = None
 
     def validate(self):
         if self.observed.dtype != torch.bool or self.values.shape != self.observed.shape:
@@ -34,6 +35,12 @@ class EvidenceView:
             raise ValueError('unique evidence IDs and source identity are required')
         if any(not math.isfinite(time) for time in self.times):
             raise ValueError('observation times must be finite')
+        if self.correspondence_ids is not None:
+            if (not isinstance(self.correspondence_ids, tuple)
+                    or len(self.correspondence_ids) != len(self.evidence_ids)
+                    or len(set(self.correspondence_ids)) != len(self.correspondence_ids)
+                    or any(not identity for identity in self.correspondence_ids)):
+                raise ValueError('correspondence IDs must be an immutable unique identity for each row')
         if not bool(self.observed.any()) or not bool(torch.isfinite(self.values[self.observed]).all()):
             raise ValueError('at least one finite observed value is required')
 
@@ -68,6 +75,7 @@ def evidence_manifest(view):
     payload = {'evidence_ids': list(view.evidence_ids), 'source_id': view.source_id,
                'modality': view.modality, 'split': view.split, 'times': list(view.times),
                'mask': view.observed.detach().cpu().tolist(),
+               'correspondence_ids': None if view.correspondence_ids is None else list(view.correspondence_ids),
                'observed_values': view.values[view.observed].detach().cpu().tolist()}
     encoded = json.dumps(payload, sort_keys=True, allow_nan=False).encode()
     return dict(payload, sha256=hashlib.sha256(encoded).hexdigest())
@@ -137,6 +145,16 @@ def condition_local(fitted, x, evidence, permission, *, initial_z=0.5,
     permission.authorize(evidence, 'conditioning')
     if independent_z is not None:
         permission.authorize(independent_z, 'conditioning')
+        if evidence.correspondence_ids is None or independent_z.correspondence_ids is None:
+            raise ValueError('independent observation requires explicit row correspondence IDs')
+        if evidence.correspondence_ids != independent_z.correspondence_ids:
+            raise ValueError('independent observation row correspondence or order differs')
+        if evidence.source_id != independent_z.source_id:
+            raise ValueError('independent observation source identity differs')
+        if evidence.times != independent_z.times:
+            raise ValueError('independent observation row times differ')
+        if independent_z.values.shape != x.shape:
+            raise ValueError('independent observation shape differs from local unknowns')
     fitted.freeze()
     global_before = [parameter.detach().clone() for parameter in fitted.hypothesis.parameters()]
     z = nn.Parameter(torch.full_like(x, initial_z))

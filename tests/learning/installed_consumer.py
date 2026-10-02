@@ -45,7 +45,8 @@ def view(values, *, split, kind='response'):
     tensor = torch.tensor(values, device='cuda', dtype=torch.float32).reshape(-1, 1)
     return EvidenceView(tensor, torch.ones_like(tensor, dtype=torch.bool),
                         tuple(f'synthetic-{kind}-evidence-{i}' for i in range(len(tensor))),
-                        'RNA', split, tuple(3. for _ in range(len(tensor))), 'controlled-product-fixture-v1')
+                        'RNA', split, tuple(3. for _ in range(len(tensor))), 'controlled-product-fixture-v1',
+                        tuple(f'fixture{i}' for i in range(len(tensor))))
 
 
 def sha(path):
@@ -155,7 +156,7 @@ def qualify(output, gh_prefix):
                   evidence_id=8001, structure_id=105, mechanism_id=501, mechanism_label='joint_product',
                   units='arbitrary', scale=1, state_generation=1,
                   parameter_generation=int(model[1]._native.generation()), tolerance=2e-5,
-                  modality='synthetic', time_units='hours', sampling_id='fixture0', time=0)
+                  modality='synthetic', time_units='hours', sampling_id='fixture0', time=3)
     native_library = Path(os.environ['CELLERATORCH_NATIVE_LIBRARY'])
     manifest = dict(fitted.manifest, source_commit=commit, bridge=bridge,
                     identity_mapping={'hypothesis': {'label': 'synthetic-product-7001-v1', 'system_id': 7001},
