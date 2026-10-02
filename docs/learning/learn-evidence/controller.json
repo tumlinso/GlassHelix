@@ -1,0 +1,15 @@
+{
+  "classification": "decision-result",
+  "evidence_id": "b7f98abb-d716-4821-aed7-2f0ecb2cd136",
+  "manifest_sha256": "0b73d8d94bf9f7664c392d133d3c1525bc5360461f323d7241035fae57fb5f44",
+  "ok": true,
+  "result_sha256": "5266321e2443949606c160896d68890f02a08cc29461b7a59021ecd7b76c6792",
+  "returncode": 0,
+  "source_hashes": {
+    "consumer": "28f55991181fdf380887a510561c26f8256fe0071ecebc1034c4cff36e34ba1d",
+    "learning": "c94abed642bd1fc7d10c4fc49adf1a5f34350d3332fb03784907445afb6a1320"
+  },
+  "status": "succeeded",
+  "stderr_sha256": "08067db6bff7fdffee551369486bcec7764a16a123c8d127c829106b37de0eee",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

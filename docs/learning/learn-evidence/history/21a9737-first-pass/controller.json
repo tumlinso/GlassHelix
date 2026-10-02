@@ -1,0 +1,15 @@
+{
+  "classification": "decision-result",
+  "evidence_id": "af697a89-b3e4-4a42-88dd-a6ddaebbb0b2",
+  "manifest_sha256": "3516a5d84058ff299c7bbe4688b1df3a0957e60d5ef644545e3a89cdf09b1de5",
+  "ok": true,
+  "result_sha256": "46e274468a8d2b487972d1e98c7f64f73f8b5884d2800ca327bddd74a861131a",
+  "returncode": 0,
+  "source_hashes": {
+    "consumer": "4106317a0ae0d8dc0e85f65588e5e7b5e444294cb9ac861993fe5e70d3c29141",
+    "learning": "9040e71fc1e7f9ae78adc9e10aa53fb7cf4418f0609e464e64fc070cd321a5aa"
+  },
+  "status": "succeeded",
+  "stderr_sha256": "08067db6bff7fdffee551369486bcec7764a16a123c8d127c829106b37de0eee",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

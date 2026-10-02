@@ -1,0 +1,158 @@
+{
+  "biological_status": "not_run",
+  "bridge": {
+    "coefficient_id": 401,
+    "derivative_z": 2.2100000381469727,
+    "domain_id": 101,
+    "evidence_id": 8001,
+    "expected_output": 1.7680000066757202,
+    "forcing": 1.0,
+    "geometry_id": 103,
+    "hypothesis_label": "synthetic-product-7001-v1",
+    "input_x": 1.2999999523162842,
+    "local_z": 0.800000011920929,
+    "mechanism_id": 501,
+    "mechanism_label": "joint_product",
+    "modality": "synthetic",
+    "model_id": 7001,
+    "model_revision": 1,
+    "observed_mask": 1,
+    "order_id": 102,
+    "parameter_domain_id": 301,
+    "parameter_extent": 1,
+    "parameter_generation": 401,
+    "parameter_geometry_id": 303,
+    "parameter_order_id": 302,
+    "parameter_partition_id": 304,
+    "partition_id": 104,
+    "sampling_id": "fixture0",
+    "scale": 1,
+    "shared_coefficient": 1.7000000476837158,
+    "source_extent": 2,
+    "state_generation": 1,
+    "structure_epoch": 1,
+    "structure_id": 105,
+    "target_domain_id": 201,
+    "target_extent": 1,
+    "target_geometry_id": 203,
+    "target_order_id": 202,
+    "target_partition_id": 204,
+    "time": 3,
+    "time_units": "hours",
+    "tolerance": 2e-05,
+    "units": "arbitrary"
+  },
+  "bridge_values": "docs/learning/learn-evidence/installed-consumer.bridge-values.txt",
+  "checkpoint": "docs/learning/learn-evidence/installed-consumer.pt",
+  "checkpoint_sha256": "d7a57baa02197b48d3e88267dc47d095163334210da16fc70adc6cd192bc6075",
+  "checks": {
+    "checkpoint_fresh_process": true,
+    "complete_objective_gradient": true,
+    "evidence_permissions": true,
+    "frozen_conditioning": true,
+    "global_fit": true,
+    "native_training": true
+  },
+  "final_loss": 0.0,
+  "fresh_process_replay": "docs/learning/learn-evidence/installed-consumer.replay.json",
+  "global_frozen": true,
+  "identity_mapping": {
+    "coefficient": {
+      "identity": [
+        401,
+        1401
+      ],
+      "label": "shared_k"
+    },
+    "hypothesis": {
+      "label": "synthetic-product-7001-v1",
+      "system_id": 7001
+    },
+    "mechanism": {
+      "identity": [
+        501,
+        1501
+      ],
+      "label": "joint_product"
+    },
+    "parameter_axis": {
+      "domain": [
+        301,
+        1301
+      ],
+      "geometry": [
+        303,
+        1303
+      ],
+      "order": [
+        302,
+        1302
+      ],
+      "partition": [
+        304,
+        1304
+      ],
+      "slots": [
+        "shared_k"
+      ]
+    },
+    "source_axis": {
+      "domain": [
+        101,
+        1101
+      ],
+      "geometry": [
+        103,
+        1103
+      ],
+      "order": [
+        102,
+        1102
+      ],
+      "partition": [
+        104,
+        1104
+      ],
+      "slots": [
+        "input_x",
+        "local_z*forcing"
+      ]
+    },
+    "target_axis": {
+      "domain": [
+        201,
+        1201
+      ],
+      "geometry": [
+        203,
+        1203
+      ],
+      "order": [
+        202,
+        1202
+      ],
+      "partition": [
+        204,
+        1204
+      ],
+      "slots": [
+        "response"
+      ]
+    }
+  },
+  "initial_loss": 1.7493337392807007,
+  "local_residual": 0.0,
+  "manifest": "docs/learning/learn-evidence/installed-consumer.manifest.json",
+  "native_joint_product_trained": true,
+  "native_library_sha256": "79c21e4428d49a679cedbfcdb394d56ffe58382cb933db3f9abd554bee52a33b",
+  "ok": true,
+  "producer_package_sha256": "3cf269bf8446e0a8d901dbbf88aad3497a91c837876061d52c6215b0aa1dd24a",
+  "scope": "synthetic installed consumer; biological validation not_run",
+  "shared_coefficient": 1.7000000476837158,
+  "source_commit": "9dcc8db54a0194408b50082394e2ed8ad576661b",
+  "source_hashes": {
+    "consumer": "28f55991181fdf380887a510561c26f8256fe0071ecebc1034c4cff36e34ba1d",
+    "learning": "c94abed642bd1fc7d10c4fc49adf1a5f34350d3332fb03784907445afb6a1320"
+  },
+  "status": "passed"
+}

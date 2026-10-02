@@ -1,0 +1,1 @@
+Historical successful installed GPU and fitted native bridge for source21a9737. Controlled aligned single-row fixture qualified; independent activity correspondence guards added afterward. Final acceptance uses the later current source-bound evidence.

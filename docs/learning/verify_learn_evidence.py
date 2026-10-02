@@ -73,6 +73,27 @@ def mapping():
     return result
 
 
+def verify_ce_bio(directory):
+    manifest_path = directory / 'ce-bio-manifest.json'
+    manifest = load(manifest_path)
+    receipt = load(directory / 'ce-bio-receipt.json')
+    require(manifest['task'] == receipt['task'] == 'CE-ML2-BIO'
+            and receipt['status'] == 'passed', 'CE BIO producer was not qualified')
+    require(receipt['evidence_sha256']['manifest.json'] == sha(manifest_path),
+            'CE BIO receipt does not bind retained manifest')
+    require(manifest['environment']['installed_package'] == str(CT_PACKAGE.parent),
+            'CE BIO installed package location differs')
+    # Hash only these pinned installed files; manifest input paths are lookup
+    # keys and cannot select arbitrary files to satisfy producer identity.
+    for path in (CT_PACKAGE, CT_PACKAGE.parent / 'mechanism.py',
+                 CT_PACKAGE.parent / 'biology.py', CT_NATIVE):
+        require(manifest['input_sha256'][str(path)] == sha(path),
+                f'CE BIO installed producer changed: {path.name}')
+    require(manifest['native_library']['path'] == str(CT_NATIVE)
+            and manifest['native_library']['sha256'] == sha(CT_NATIVE),
+            'CE BIO native library identity differs')
+
+
 def verify_controller(path, directory, result_path, manifest_path, sources):
     controller = load(path)
     require(controller['classification'] == 'decision-result', 'controller classification')
@@ -156,6 +177,7 @@ def verify(directory, controller_path, native_path, require_native):
             ('producer_package_sha256', 'celleratorch_source_sha256', CT_PACKAGE),
             ('native_library_sha256', 'native_library_sha256', CT_NATIVE)):
         require(result[field] == manifest[manifest_field] == sha(installed), f'installed {field} mismatch')
+    verify_ce_bio(directory)
     checkpoint_hash = sha(directory / 'installed-consumer.pt')
     require(result['checkpoint_sha256'] == manifest['checkpoint_sha256']
             == replay['checkpoint_sha256'] == checkpoint_hash, 'checkpoint identity mismatch')
