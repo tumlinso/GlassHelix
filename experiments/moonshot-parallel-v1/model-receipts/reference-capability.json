@@ -1,0 +1,163 @@
+{
+  "record_kind": "gh_moonshot_combined_reference_capability",
+  "schema_version": 1,
+  "status": "reference_models_qualified",
+  "accepted_source_commit": "288b345b8a30c0ea1f06ee91b1dcaaaec5979d06",
+  "producer_source_binding": "Accepted integrator source hashes verified against each committed producer receipt. Parent commit contains both implementations.",
+  "acceptance_context": {
+    "task_id": "GH-MOON-MODELS",
+    "run_id": "GH-MOON-RUN-V1",
+    "postmerge_test_suites": "passed, reported by root controller; this aggregation performed source-hash verification only"
+  },
+  "evidence": [
+    {
+      "family": "plain",
+      "path": "experiments/moonshot-parallel-v1/plain/validation.json",
+      "sha256": "00aa2d77ba1b5dfeb1cef406c778bb2589e13fd00cbfd1253c9779eaf00a7e08",
+      "source_sha256": {
+        "model.py": "650d8255e305c4eba3203b33e7f9e7b308df56c19446c89795a65e771f58c66d",
+        "test_models.py": "7e02065f9e9ca61e5dbdfe89045bdc8dfe2d5f958a5d4e1bd0945b2b0bc8ac42",
+        "validate.py": "42f8ff4b1a0b2c702f4f86b5e1cb4f5a04621ae254824a71e0c92983e210b523"
+      },
+      "invocation": "CUDA_VISIBLE_DEVICES='' /home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python -B experiments/moonshot-parallel-v1/plain/test_models.py",
+      "checks": 7,
+      "learning": {
+        "patch": {
+          "initial_loss": 0.0008232104816937764,
+          "final_loss": 1.018963348766997e-06,
+          "steps": 120,
+          "optimizer": "torch.optim.Adam"
+        },
+        "flow": {
+          "initial_loss": 0.0019903816556976197,
+          "final_loss": 2.4491962695409163e-09,
+          "steps": 120,
+          "optimizer": "torch.optim.Adam"
+        }
+      }
+    },
+    {
+      "family": "actor",
+      "path": "experiments/moonshot-parallel-v1/actor/receipt.json",
+      "sha256": "05063f98a1b3cb53fc781df3224563c2a04f7cd00fc1e4660a2833b8867a783e",
+      "source_sha256": {
+        "check.py": "5da5832563d45b177651be9b9c53b24df206b6e53c6619b722380fb44b4f9e85",
+        "model.py": "f405f2cc6f1e6aef0843cf36463660bb6f85859ac30b96dfef0c1b7da72173ce"
+      },
+      "invocation": "CUDA_VISIBLE_DEVICES='' /home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python experiments/moonshot-parallel-v1/actor/check.py --receipt experiments/moonshot-parallel-v1/actor/receipt.json",
+      "checks": [
+        "input_and_parameter_gradcheck",
+        "noncontiguous_input_gradcheck",
+        "repeated_edges_sum",
+        "repeated_cpu_forward_determinism",
+        "empty_topology",
+        "invalid_shapes_and_topology",
+        "zero_initial_regrowth_effect",
+        "live_outgoing_gradient",
+        "subsequent_feature_gradient",
+        "actor_rollout_learning",
+        "regrowth_learning"
+      ],
+      "learning": {
+        "actor": [
+          0.016954436510684682,
+          0.0005306968195368169
+        ],
+        "regrowth": [
+          0.04755258825953243,
+          3.409292098538266e-05
+        ],
+        "steps": 80
+      }
+    }
+  ],
+  "models": [
+    {
+      "class": "MatrixPatchField",
+      "module_path": "experiments/moonshot-parallel-v1/plain/model.py",
+      "constructor": "MatrixPatchField(patches,width=16)",
+      "input_shape": "(patches,width,width)",
+      "output_shape": "same as input",
+      "qualified_device": "cpu",
+      "qualified_dtypes": [
+        "float32",
+        "float64"
+      ],
+      "derivative_evidence": [
+        "input VJP",
+        "left/right/decay parameter VJP"
+      ],
+      "meaning": "one-cell internal patch layout, no biological coordinate identity"
+    },
+    {
+      "class": "SylvesterFlow",
+      "module_path": "experiments/moonshot-parallel-v1/plain/model.py",
+      "constructor": "SylvesterFlow(width=16)",
+      "input_shape": "(width,width)",
+      "call": "forward(x,dt)",
+      "output_shape": "same as input",
+      "qualified_device": "cpu",
+      "qualified_dtypes": [
+        "float32",
+        "float64"
+      ],
+      "derivative_evidence": [
+        "input VJP",
+        "left/right parameter VJP",
+        "scalar time VJP/JVP"
+      ],
+      "conditions": "Fixed autonomous dX/dt=LX+XR. Matrix exponential numerically evaluates exact formula. Semigroup requires unchanged L,R."
+    },
+    {
+      "class": "ActorPortField",
+      "module_path": "experiments/moonshot-parallel-v1/actor/model.py",
+      "constructor": "ActorPortField(actors,width,ports,(source,destination))",
+      "input_shape": "(actors,width)",
+      "output_shape": "(actors,width)",
+      "observation_shape": "(actors,) via observe(state)",
+      "qualified_device": "cpu",
+      "qualified_dtypes": [
+        "float64"
+      ],
+      "derivative_evidence": [
+        "input VJP",
+        "encoder/decoder/local/edge/readout parameter VJP"
+      ],
+      "conditions": "Supplied directed topology with separate contributions for repeated edges; private actor-local coordinates communicate through ports."
+    },
+    {
+      "class": "RegrowthBranch",
+      "module_path": "experiments/moonshot-parallel-v1/actor/model.py",
+      "constructor": "RegrowthBranch(input_width,capacity,output_width)",
+      "input_shape": "(...,input_width)",
+      "output_shape": "(...,output_width)",
+      "qualified_device": "cpu",
+      "qualified_dtypes": [
+        "float64"
+      ],
+      "derivative_evidence": [
+        "input VJP",
+        "inside.weight/outside.weight parameter VJP",
+        "zero-effect live outgoing gradients",
+        "feature gradients after outgoing update"
+      ],
+      "conditions": "Zero initial outgoing map preserves prediction contribution while remaining structurally trainable."
+    }
+  ],
+  "framework_path": "ordinary torch.nn.Module and torch.optim; explicit imports of the assigned model.py",
+  "native_call": null,
+  "native_status": "pending CE acceptance receipt and GH consumer integration",
+  "ce_receipt_status": "pending",
+  "biological_validation": "not_run",
+  "benchmark": "not_run",
+  "cuda_execution": "not_run",
+  "unsupported_or_unqualified": [
+    "native CE/CelleraTorch binding",
+    "biological identification or identifiability",
+    "generic nonlinear coordinate conjugacy",
+    "CUDA execution",
+    "throughput claims",
+    "higher-order derivative qualification"
+  ],
+  "scientific_scope": "Synthetic whole-model alternatives and supplied state/topology maps; models are distinct families, not interchangeable planner candidates. Existing ML2 obligations remain owned separately."
+}
