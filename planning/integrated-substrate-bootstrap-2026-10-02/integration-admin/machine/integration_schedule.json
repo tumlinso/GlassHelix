@@ -1,0 +1,14 @@
+{
+  "phases": [
+    {
+      "integration_task": "GH-IS1-MERGE-A",
+      "required_tasks": [
+        "GH-IS1-SCIENCE",
+        "GH-IS1-DATA",
+        "GH-IS1-MODELS",
+        "GH-IS1-ANALYSIS",
+        "GH-IS1-BUILD"
+      ]
+    }
+  ]
+}
