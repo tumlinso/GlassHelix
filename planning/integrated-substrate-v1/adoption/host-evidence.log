@@ -1,0 +1,86 @@
+metadata identities, whole candidates and claim misuse passed
+{
+  "status": "passed",
+  "scope": "host contracts and existing host consumers",
+  "ce_include": "/home/tumlinson/Software/cellerator-ml2-cpp/include",
+  "ce_libraries": {
+    "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a": "ecfa41d89c6b2933f8031a58cfa513e3fe3e502a31ecce4c951ef170d13c8576",
+    "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a": "74e21bf1f773b64eb292a956d295ee63bcfdf0fd389ff58338e40f46f433ae62"
+  },
+  "checks": [
+    {
+      "check": "metadata",
+      "command": [
+        "g++",
+        "-std=c++20",
+        "-O2",
+        "-UNDEBUG",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wl,--gc-sections",
+        "-I",
+        "/home/tumlinson/GlassHelix/include",
+        "-I",
+        "/home/tumlinson/Software/cellerator-ml2-cpp/include",
+        "/home/tumlinson/GlassHelix/planning/integrated-substrate-v1/adoption/host_contract.cc",
+        "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a",
+        "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a",
+        "-o",
+        "/tmp/gh-is1-host-0pa3bglj/metadata"
+      ],
+      "sources": {
+        "planning/integrated-substrate-v1/adoption/host_contract.cc": "a27cba0a66e87000d80927a06de13d90413b1cb543d74a7e36633897d3c2889e"
+      }
+    },
+    {
+      "check": "assembly",
+      "command": [
+        "g++",
+        "-std=c++20",
+        "-O2",
+        "-UNDEBUG",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wl,--gc-sections",
+        "-I",
+        "/home/tumlinson/GlassHelix/include",
+        "-I",
+        "/home/tumlinson/Software/cellerator-ml2-cpp/include",
+        "/home/tumlinson/GlassHelix/tests/native_foundation/system/s01.cc",
+        "/home/tumlinson/GlassHelix/src/system/assembly.cc",
+        "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a",
+        "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a",
+        "-o",
+        "/tmp/gh-is1-host-0pa3bglj/assembly"
+      ],
+      "sources": {
+        "tests/native_foundation/system/s01.cc": "544cf5690c1dde95c891abeedd0237ee92c9ea84c517770d8665d0f434e24ab3",
+        "src/system/assembly.cc": "7d1cc01c2ca769a7296bc9c8b565b79947f5a4e489bb70e40d795d1d6d490a37"
+      }
+    },
+    {
+      "check": "inference",
+      "command": [
+        "g++",
+        "-std=c++20",
+        "-O2",
+        "-UNDEBUG",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wl,--gc-sections",
+        "-I",
+        "/home/tumlinson/GlassHelix/include",
+        "-I",
+        "/home/tumlinson/Software/cellerator-ml2-cpp/include",
+        "/home/tumlinson/GlassHelix/tests/native_foundation/inference/inference.cc",
+        "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a",
+        "/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a",
+        "-o",
+        "/tmp/gh-is1-host-0pa3bglj/inference"
+      ],
+      "sources": {
+        "tests/native_foundation/inference/inference.cc": "5e88169317f0ec51307faf61d18ef96812055273c92aac208b0edf57bf4d101f"
+      }
+    }
+  ]
+}

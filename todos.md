@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `405`
+Project revision: `408`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
@@ -14,7 +14,7 @@ Project revision: `405`
 - `GH-NF1A-OBSERVE` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Implement distinct observation records and simple declared likelihoods, then propagate and reweight supplied finite candidates without losing joint identity or reporter correlations.
 - `GH-NF1-COORD` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | kind: workstream | status: done | parent: - | objective: Reconcile and preserve repository state; establish authoritative scientific identity and four-project boundaries; bootstrap project and tool indexing; classify the archaeological repository without treating experiments as architecture.
-- `GH-IS1-ADOPT` | kind: task | status: planned | parent: GH-IS1-000 | objective: After the global predecessor barrier, inventory the completed frontier, assign every useful behavior/unfinished obligation, and integrate the minimum contracts needed by parallel lanes.
+- `GH-IS1-ADOPT` | kind: task | status: in_progress | parent: GH-IS1-000 | objective: After the global predecessor barrier, inventory the completed frontier, assign every useful behavior/unfinished obligation, and integrate the minimum contracts needed by parallel lanes.
 - `GH-IS1-ANALYSIS` | kind: task | status: planned | parent: GH-IS1-000 | objective: Unify response requests, perturbations, candidate comparison and evidence-labelled structural proposals.
 - `GH-IS1-BRIDGE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Bind scientific requests to a current, evidenced CE provider rather than a prototype receipt.
 - `GH-IS1-BUILD` | kind: task | status: planned | parent: GH-IS1-000 | objective: Integrate package entry points, installed CE consumption and reproducible result/replay paths.

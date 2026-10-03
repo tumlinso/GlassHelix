@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T16:38:41Z",
+  "generated_at": "2026-10-03T09:27:51Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 405,
+  "project_revision": 408,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -4327,6 +4327,36 @@
         "revision": 405,
         "seq": 405,
         "timestamp": "2026-10-02T16:38:41Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT-L",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-IS1-ADOPT-L\", \"run_id\": \"GH-IS1-RUN-V1\", \"status\": \"claimed\", \"task_id\": \"GH-IS1-ADOPT\"}",
+        "revision": 406,
+        "seq": 406,
+        "timestamp": "2026-10-03T09:17:53Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT-L",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-IS1-ADOPT-L\", \"run_id\": \"GH-IS1-RUN-V1\", \"status\": \"resumed\", \"task_id\": \"GH-IS1-ADOPT\"}",
+        "revision": 407,
+        "seq": 407,
+        "timestamp": "2026-10-03T09:27:31Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "d5fa59c2-09b7-439f-8e3e-34ef2a4bc6e6",
+        "entity_type": "gate_binding",
+        "event_type": "workflow.gates.bound",
+        "payload_json": "{\"gate_count\": 1}",
+        "revision": 408,
+        "seq": 408,
+        "timestamp": "2026-10-03T09:27:51Z"
       }
     ],
     "evidence": [
@@ -5354,6 +5384,19 @@
         "last_run_at": null,
         "required": 1,
         "revision": 405,
+        "status": "pending",
+        "task_id": "GH-IS1-ADOPT",
+        "type": "command",
+        "valid": 0
+      },
+      {
+        "checkpoint_id": null,
+        "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/adoption/check_host.py\", \"--ce-include\", \"/home/tumlinson/Software/cellerator-ml2-cpp/include\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a\"], \"cwd\": \".\", \"input_paths\": [\"planning/integrated-substrate-v1/adoption\", \"include/GlassHelix\", \"src/system\", \"src/inference\"]}",
+        "id": "GH-IS1-ADOPT-HOST-FOUNDATION",
+        "input_fingerprint": null,
+        "last_run_at": null,
+        "required": 1,
+        "revision": 408,
         "status": "pending",
         "task_id": "GH-IS1-ADOPT",
         "type": "command",
@@ -15861,12 +15904,12 @@
         "priority": 100,
         "result": null,
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
-        "revision": 405,
-        "status": "planned",
+        "revision": 406,
+        "status": "in_progress",
         "tags_json": "[]",
         "title": "Reconcile finished predecessors and publish the small shared foundation",
-        "updated_at": "2026-10-02T16:38:41Z",
-        "version": 1
+        "updated_at": "2026-10-03T09:17:53Z",
+        "version": 2
       },
       {
         "attention_reason": null,
@@ -22650,13 +22693,13 @@
         "task_id": "GH-DOCS-000"
       },
       {
-        "activated_at": null,
+        "activated_at": "2026-10-03T09:17:53Z",
         "completed_at": null,
         "enqueued_at": "2026-10-02T16:38:41Z",
         "lane_id": "GH-IS1-ADOPT-L",
         "position": 0,
-        "revision": 405,
-        "state": "queued",
+        "revision": 406,
+        "state": "active",
         "task_id": "GH-IS1-ADOPT"
       },
       {
@@ -23968,11 +24011,11 @@
         "created_at": "2026-10-02T16:38:41Z",
         "id": "GH-IS1-ADOPT-L",
         "parent_lane_id": null,
-        "revision": 405,
+        "revision": 406,
         "role": "implementer",
         "run_id": "GH-IS1-RUN-V1",
-        "state": "ready",
-        "updated_at": "2026-10-02T16:38:41Z",
+        "state": "active",
+        "updated_at": "2026-10-03T09:17:53Z",
         "workspace_mode": "exclusive"
       },
       {

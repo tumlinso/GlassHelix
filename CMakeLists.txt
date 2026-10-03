@@ -47,7 +47,12 @@ set_target_properties(glasshelix_foundation PROPERTIES EXPORT_NAME foundation)
 target_compile_features(glasshelix_foundation PUBLIC cxx_std_20)
 target_link_libraries(glasshelix_foundation PUBLIC GlassHelix::core)
 
-set(_glasshelix_install_targets glasshelix_core glasshelix_foundation)
+add_library(glasshelix_experiment INTERFACE)
+add_library(GlassHelix::experiment ALIAS glasshelix_experiment)
+set_target_properties(glasshelix_experiment PROPERTIES EXPORT_NAME experiment)
+target_link_libraries(glasshelix_experiment INTERFACE GlassHelix::foundation)
+
+set(_glasshelix_install_targets glasshelix_core glasshelix_foundation glasshelix_experiment)
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/artifacts/nf1_replay.cc" AND
    EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/bindings/python/nf1_module.cc")
   find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
