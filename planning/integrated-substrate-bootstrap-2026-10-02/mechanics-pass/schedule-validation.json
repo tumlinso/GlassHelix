@@ -1,0 +1,56 @@
+{
+  "observed_at": "2026-10-03T13:19:07.208999+00:00",
+  "authority_revision": 493,
+  "authority_fingerprint": "195fb550480a7fd4cfbc68a8a6eb03bf46f58bb6c2b59fd5ce9667f8d09c65b2",
+  "source_head": "62336a3e295a729300f7333bac427578fc272aed",
+  "runtime_fingerprint": "15521b1576eab3f0f8aec70519cd2d06f52396db6d48b3a681d5bfb9e6a3464d",
+  "proposal_sha256": "930bebf967440fae49a6c7234d8dbe16a112b518f631367af70576b1312922f8",
+  "fresh_task_metadata_verified": 16,
+  "lane_order": [
+    {
+      "lane_id": "GH-IS1-ADOPT-L",
+      "state": "closed",
+      "current_order": [
+        "GH-IS1-ADOPT"
+      ],
+      "declared_prefix": [
+        "GH-IS1-ADOPT"
+      ],
+      "expected_order": [
+        "GH-IS1-ADOPT"
+      ]
+    },
+    {
+      "lane_id": "GH-IS1-INTEGRATOR-L",
+      "state": "ready",
+      "current_order": [
+        "GH-IS1-MERGE-A",
+        "GH-IS1-BRIDGE",
+        "GH-IS1-PIPELINE",
+        "GH-IS1-JOINT",
+        "GH-IS1-CLOSE",
+        "GH-IS1-000"
+      ],
+      "declared_prefix": [
+        "GH-IS1-MERGE-A",
+        "GH-IS1-PIPELINE"
+      ],
+      "expected_order": [
+        "GH-IS1-MERGE-A",
+        "GH-IS1-PIPELINE",
+        "GH-IS1-BRIDGE",
+        "GH-IS1-JOINT",
+        "GH-IS1-CLOSE",
+        "GH-IS1-000"
+      ]
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "task_count": 16,
+    "checkpoint_count": 0,
+    "gate_count": 15,
+    "barrier_count": 0,
+    "interface_count": 0
+  }
+}
