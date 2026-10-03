@@ -161,3 +161,10 @@ if(BUILD_TESTING)
     endif()
   endforeach()
 endif()
+
+# The substrate installer is an explicit component entry point. Its native
+# components consume qualified Cellerator packages through their own options.
+option(GLASSHELIX_BUILD_SUBSTRATE "Build/install the optional substrate components" OFF)
+if(GLASSHELIX_BUILD_SUBSTRATE)
+  add_subdirectory(cmake/substrate)
+endif()
