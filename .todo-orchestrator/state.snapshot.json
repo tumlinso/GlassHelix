@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T09:33:05Z",
+  "generated_at": "2026-10-03T09:33:50Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 411,
+  "project_revision": 416,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -4387,6 +4387,56 @@
         "revision": 411,
         "seq": 411,
         "timestamp": "2026-10-03T09:33:05Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT-GLOBAL-BARRIER",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-IS1-ADOPT-GLOBAL-BARRIER\"}",
+        "revision": 412,
+        "seq": 412,
+        "timestamp": "2026-10-03T09:33:22Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT-GLOBAL-BARRIER",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"7c817ac1-4174-4fd9-9885-ef06998f7594\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 413,
+        "seq": 413,
+        "timestamp": "2026-10-03T09:33:44Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT-HOST-FOUNDATION",
+        "entity_type": "gate",
+        "event_type": "gate.started",
+        "payload_json": "{\"gate_id\": \"GH-IS1-ADOPT-HOST-FOUNDATION\"}",
+        "revision": 414,
+        "seq": 414,
+        "timestamp": "2026-10-03T09:33:44Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT-HOST-FOUNDATION",
+        "entity_type": "gate",
+        "event_type": "gate.completed",
+        "payload_json": "{\"evidence_id\": \"30549641-2659-4e8d-812e-8093bc98e630\", \"status\": \"passed\", \"valid\": true}",
+        "revision": 415,
+        "seq": 415,
+        "timestamp": "2026-10-03T09:33:50Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT",
+        "entity_type": "task",
+        "event_type": "task.completed",
+        "payload_json": "{\"completion_revision\": 416, \"disposition\": \"implemented\", \"reached_checkpoints\": []}",
+        "revision": 416,
+        "seq": 416,
+        "timestamp": "2026-10-03T09:33:50Z"
       }
     ],
     "evidence": [
@@ -4531,6 +4581,19 @@
         "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/run_gate.py\", \"--group\", \"b01\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"e643d854ce3c249a167cc91d85e6e07800e19d30acee04cdde19b8b8b3a084d5\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/native-foundation-v1/scripts/run_gate.py\", \"--group\", \"b01\"], \"cwd\": \".\", \"env\": {\"NF1_EXECUTION_BINDINGS\": \"/home/tumlinson/.local/state/nf1-20260908-v1/gh/b01/bindings.json\"}}, \"diff_fingerprint\": \"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\", \"dirty_paths\": [], \"files\": [], \"interfaces\": [], \"recorded_git_head\": \"b4bc9590b22601477e1c7105512f41e330504fec\"}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"eb7e7379fe4903e0c1291910959b5342233086e6b9bf41cf4b77d7deb1bc2675\", \"started_revision\": 128, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1-b-v1\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/2b23daed-9087-494c-bf1e-8af63ab42f60",
         "revision": 129,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-03T09:33:50Z",
+        "gate_id": "GH-IS1-ADOPT-HOST-FOUNDATION",
+        "id": "30549641-2659-4e8d-812e-8093bc98e630",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/adoption/check_host.py\", \"--ce-include\", \"/home/tumlinson/Software/cellerator-ml2-cpp/include\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"0f10e56df921f8f8ea4684597cfe0192bdf9397dfb03f28de7ca2df580bb706b\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/adoption/check_host.py\", \"--ce-include\", \"/home/tumlinson/Software/cellerator-ml2-cpp/include\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"fb3231554be78dfba6423389a3e36dd9cfc6e09af0b0a1f72521a6d123923942\", \"dirty_paths\": [\"docs/learning/__pycache__/check_native_bridge.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/reference.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_design.cpython-313.pyc\"], \"files\": [{\"path\": \"include/GlassHelix\", \"sha256\": \"missing\"}, {\"path\": \"planning/integrated-substrate-v1/adoption\", \"sha256\": \"missing\"}, {\"path\": \"src/inference\", \"sha256\": \"missing\"}, {\"path\": \"src/system\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 414}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/30549641-2659-4e8d-812e-8093bc98e630",
+        "revision": 415,
         "status": "passed"
       },
       {
@@ -4817,6 +4880,19 @@
         "metadata_json": "{\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"22ba344bc7c3c59e5e1a9c492d08f768b665e23b791d1b76d43f6d16743c5be8\", \"inputs\": {\"command_contract\": {\"argv\": [\"/home/tumlinson/.local/share/project-control/candidates/pce2-round2-20260921/bin/python\", \"-B\", \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"--task\", \"GH-NF1A-ACCEPT\", \"--bindings\", \"/home/tumlinson/.local/state/project-control/nf1a-bootstrap-20260916/glasshelix-execution-bindings.json\"], \"cuda\": {\"cpu_threads\": 2, \"gpus\": 1, \"quiescence\": {\"consecutive_idle_samples\": 3, \"interval_seconds\": 0.1, \"timeout_seconds\": 60.0}}, \"cwd\": \".\", \"expected_exit_code\": 0}, \"diff_fingerprint\": \"48907805dc5bf7c3a38c3f69bfd7713cec63d7e0186cb77e93ac2c9604e68a78\", \"dirty_paths\": [\".todo-orchestrator/state.snapshot.json\", \"todo-status.md\", \"todos.md\", \"todos/gh-nf1a-0000.md\", \"todos/gh-nf1a-accept.md\", \"todos/gh-nf1a-access.md\", \"todos/gh-nf1a-analyze.md\", \"todos/gh-nf1a-control.md\", \"todos/gh-nf1a-observe.md\", \"todos/gh-nf1a-release.md\", \"todos/gh-nf1a-system.md\", \"todos/gh-preprint.md\"], \"files\": [{\"path\": \"planning/nf1-adaptive-v1/machine/outcomes.json\", \"sha256\": \"51e99de28ad337f23bbef01cca69817469fbd059b7071c3a31a099064ee18cc2\"}, {\"path\": \"planning/nf1-adaptive-v1/scripts/run_gate.py\", \"sha256\": \"b1ebaa6d9e1e60160a68451211c0f8693aa733035a5483312ac972ef6a4170a5\"}], \"interfaces\": [], \"recorded_git_head\": \"da97825a18206f1ec727ea59439ca694995d7b94\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"source_identity\": \"69ae7528dff71374279b6f37b5503c43157cf578bf45167f1799bd04dc845b9c\", \"started_revision\": 225, \"workspace_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-nf1a-l-accept\"}",
         "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/79966c83-80bc-436b-b957-56cb00c40d45",
         "revision": 226,
+        "status": "passed"
+      },
+      {
+        "checkpoint_id": null,
+        "claim_id": null,
+        "content_hash": null,
+        "created_at": "2026-10-03T09:33:44Z",
+        "gate_id": "GH-IS1-ADOPT-GLOBAL-BARRIER",
+        "id": "7c817ac1-4174-4fd9-9885-ef06998f7594",
+        "kind": "command",
+        "metadata_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"activation\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"946b49c0e241ec7ac44c9c47158365220e3dbedb4ab2a9aba5f8f7894f02842e\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"activation\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"fb3231554be78dfba6423389a3e36dd9cfc6e09af0b0a1f72521a6d123923942\", \"dirty_paths\": [\"docs/learning/__pycache__/check_native_bridge.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/reference.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_design.cpython-313.pyc\"], \"files\": [{\"path\": \"planning/integrated-substrate-v1/local-config.json\", \"sha256\": \"6affbf20eb5dc2444f45bab333a7ae3e0f0b55839994dd8e67f74b5cc4dfcc4a\"}, {\"path\": \"planning/integrated-substrate-v1/machine\", \"sha256\": \"missing\"}, {\"path\": \"planning/integrated-substrate-v1/tools\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 412}",
+        "path": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/7c817ac1-4174-4fd9-9885-ef06998f7594",
+        "revision": 413,
         "status": "passed"
       },
       {
@@ -5410,27 +5486,27 @@
         "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"activation\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\"], \"cwd\": \".\", \"input_paths\": [\"planning/integrated-substrate-v1/tools\", \"planning/integrated-substrate-v1/local-config.json\", \"planning/integrated-substrate-v1/machine\"]}",
         "id": "GH-IS1-ADOPT-GLOBAL-BARRIER",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "946b49c0e241ec7ac44c9c47158365220e3dbedb4ab2a9aba5f8f7894f02842e",
+        "last_run_at": "2026-10-03T09:33:44Z",
         "required": 1,
-        "revision": 405,
-        "status": "pending",
+        "revision": 413,
+        "status": "passed",
         "task_id": "GH-IS1-ADOPT",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
         "config_json": "{\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/adoption/check_host.py\", \"--ce-include\", \"/home/tumlinson/Software/cellerator-ml2-cpp/include\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a\"], \"cwd\": \".\", \"input_paths\": [\"planning/integrated-substrate-v1/adoption\", \"include/GlassHelix\", \"src/system\", \"src/inference\"]}",
         "id": "GH-IS1-ADOPT-HOST-FOUNDATION",
-        "input_fingerprint": null,
-        "last_run_at": null,
+        "input_fingerprint": "0f10e56df921f8f8ea4684597cfe0192bdf9397dfb03f28de7ca2df580bb706b",
+        "last_run_at": "2026-10-03T09:33:50Z",
         "required": 1,
-        "revision": 408,
-        "status": "pending",
+        "revision": 415,
+        "status": "passed",
         "task_id": "GH-IS1-ADOPT",
         "type": "command",
-        "valid": 0
+        "valid": 1
       },
       {
         "checkpoint_id": null,
@@ -7386,6 +7462,16 @@
         "payload_json": "{\"authority_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"changed_owned_paths\": [\"AGENTS.md\", \"CONTRIBUTING.md\", \"README.md\", \"docs/archive/README.md\", \"docs/design/overview.md\", \"docs/design/program.md\", \"docs/development/source-map.md\", \"docs/development/start.md\", \"docs/index.md\", \"docs/repository-map.md\", \"docs/results/index.md\", \"docs/status/current.md\", \"planning/doc-refresh/inputs/bindings.json\", \"planning/doc-refresh/inputs/moves.json\", \"planning/doc-refresh/staged/AGENTS.md\", \"planning/doc-refresh/staged/CONTRIBUTING.md\", \"planning/doc-refresh/staged/README.md\", \"planning/doc-refresh/staged/docs/archive/README.md\", \"planning/doc-refresh/staged/docs/design/overview.md\", \"planning/doc-refresh/staged/docs/design/program.md\", \"planning/doc-refresh/staged/docs/development/source-map.md\", \"planning/doc-refresh/staged/docs/development/start.md\", \"planning/doc-refresh/staged/docs/index.md\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-discrimination.svg\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.png\", \"planning/doc-refresh/staged/docs/results/assets/gh-lifecycle.svg\", \"planning/doc-refresh/staged/docs/results/gh-discrimination.md\", \"planning/doc-refresh/staged/docs/results/gh-lifecycle.md\", \"planning/doc-refresh/staged/docs/results/index.md\", \"planning/doc-refresh/staged/docs/status/current.md\", \"planning/doc-refresh/templates/AGENTS.md\", \"planning/doc-refresh/templates/README.md\", \"planning/doc-refresh/templates/docs/development/source-map.md\"], \"checkpoints\": [], \"completion_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"completion_gates\": [{\"evidence_id\": \"c1b18198-01cb-4b4a-83d6-812fa4dc9653\", \"evidence_revision\": 249, \"id\": \"GH-DOCS-20-CHECK\", \"input_fingerprint\": \"e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\"}], \"completion_revision\": 250, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-DOCS-20-CHECK\", \"input_fingerprint\": \"e7ee60048cfe6b65ce8379415e4ff438beee311fd527022c7ba516667a1dd041\", \"last_run_at\": \"2026-09-29T12:38:40Z\", \"revision\": 249, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \".todo-orchestrator/state.snapshot.json             | 401 ++++++++++++++++++---\\n AGENTS.md                                          |  62 ++--\\n README.md                                          | 137 ++-----\\n docs/repository-map.md                             |   2 +\\n planning/doc-refresh/inputs/bindings.json          |  18 +-\\n planning/doc-refresh/inputs/moves.json             |   9 +-\\n planning/doc-refresh/templates/AGENTS.md           |   2 +-\\n planning/doc-refresh/templates/README.md           |   1 -\\n .../templates/docs/development/source-map.md       |   2 +-\\n todo-status.md                                     |   8 +-\\n todos.md                                           |   8 +-\\n todos/gh-docs-000.md                               |   4 +-\\n todos/gh-docs-10.md                                |  10 +-\\n todos/gh-docs-20.md                                |   8 +-\\n todos/gh-docs-30.md                                |   4 +-\\n todos/gh-docs-90.md                                |   4 +-\\n todos/gh-ml2-design.md                             |   6 +-\\n 17 files changed, 466 insertions(+), 220 deletions(-)\", \"git_head\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"No source move; verified current GH foundation/build paths and preserved ML2 continuation. Updated path bindings, source map, build guide, and explicit delegation boundary. Local/package/link checks pass.\", \"producer_commit\": \"2e6d78a5be482e1e8741466706746741f1bad71c\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-DOCS-20\"}",
         "revision": 250,
         "task_id": "GH-DOCS-20"
+      },
+      {
+        "claim_id": null,
+        "created_at": "2026-10-03T09:33:50Z",
+        "id": "b2e1436d-3819-403d-8c0f-ac521a344fc7",
+        "kind": "complete",
+        "note": "Accepted scientific metadata foundation and exported experimenttarget, preserving assembledmechanism and finitewholecandidate owners. Expanded currentML2/moonshot source-disposition graph, retained explicit PILOTbiological:not_run. Threeactual hostconsumerspassed incl existing CEhostarchives with hashes. Acceptedfoundation2a25e29; freshglobalreview. InstalledCUDA/biology remains downstream.",
+        "payload_json": "{\"authority_commit\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"changed_owned_paths\": [], \"checkpoints\": [], \"completion_commit\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"completion_gates\": [{\"evidence_id\": \"7c817ac1-4174-4fd9-9885-ef06998f7594\", \"evidence_revision\": 413, \"id\": \"GH-IS1-ADOPT-GLOBAL-BARRIER\", \"input_fingerprint\": \"946b49c0e241ec7ac44c9c47158365220e3dbedb4ab2a9aba5f8f7894f02842e\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\"}, {\"evidence_id\": \"30549641-2659-4e8d-812e-8093bc98e630\", \"evidence_revision\": 415, \"id\": \"GH-IS1-ADOPT-HOST-FOUNDATION\", \"input_fingerprint\": \"0f10e56df921f8f8ea4684597cfe0192bdf9397dfb03f28de7ca2df580bb706b\", \"status\": \"passed\", \"valid\": true, \"validation_git_head\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\"}], \"completion_revision\": 416, \"finalized_checkpoints\": [], \"gates\": [{\"id\": \"GH-IS1-ADOPT-GLOBAL-BARRIER\", \"input_fingerprint\": \"946b49c0e241ec7ac44c9c47158365220e3dbedb4ab2a9aba5f8f7894f02842e\", \"last_run_at\": \"2026-10-03T09:33:44Z\", \"revision\": 413, \"status\": \"passed\", \"valid\": 1}, {\"id\": \"GH-IS1-ADOPT-HOST-FOUNDATION\", \"input_fingerprint\": \"0f10e56df921f8f8ea4684597cfe0192bdf9397dfb03f28de7ca2df580bb706b\", \"last_run_at\": \"2026-10-03T09:33:50Z\", \"revision\": 415, \"status\": \"passed\", \"valid\": 1}], \"git_diffstat\": \"\", \"git_head\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"integration_commit\": null, \"interfaces\": [], \"note\": \"Accepted scientific metadata foundation and exported experimenttarget, preserving assembledmechanism and finitewholecandidate owners. Expanded currentML2/moonshot source-disposition graph, retained explicit PILOTbiological:not_run. Threeactual hostconsumerspassed incl existing CEhostarchives with hashes. Acceptedfoundation2a25e29; freshglobalreview. InstalledCUDA/biology remains downstream.\", \"producer_commit\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"producer_root\": \"/home/tumlinson/GlassHelix\", \"resources\": [], \"task_id\": \"GH-IS1-ADOPT\"}",
+        "revision": 416,
+        "task_id": "GH-IS1-ADOPT"
       },
       {
         "claim_id": null,
@@ -12626,6 +12712,32 @@
         "validation_git_head": "2e6d78a5be482e1e8741466706746741f1bad71c"
       },
       {
+        "completion_git_head": "9d5b2e87574a969ac880bd0128abbf2a52c531ce",
+        "completion_revision": 416,
+        "evidence_id": "7c817ac1-4174-4fd9-9885-ef06998f7594",
+        "evidence_revision": 413,
+        "gate_id": "GH-IS1-ADOPT-GLOBAL-BARRIER",
+        "input_fingerprint": "946b49c0e241ec7ac44c9c47158365220e3dbedb4ab2a9aba5f8f7894f02842e",
+        "provenance_json": "{\"claim_id\": \"d5fa59c2-09b7-439f-8e3e-34ef2a4bc6e6\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"activation\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"946b49c0e241ec7ac44c9c47158365220e3dbedb4ab2a9aba5f8f7894f02842e\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/tools/gates.py\", \"activation\", \"--config\", \"planning/integrated-substrate-v1/local-config.json\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"fb3231554be78dfba6423389a3e36dd9cfc6e09af0b0a1f72521a6d123923942\", \"dirty_paths\": [\"docs/learning/__pycache__/check_native_bridge.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/reference.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_design.cpython-313.pyc\"], \"files\": [{\"path\": \"planning/integrated-substrate-v1/local-config.json\", \"sha256\": \"6affbf20eb5dc2444f45bab333a7ae3e0f0b55839994dd8e67f74b5cc4dfcc4a\"}, {\"path\": \"planning/integrated-substrate-v1/machine\", \"sha256\": \"missing\"}, {\"path\": \"planning/integrated-substrate-v1/tools\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 412}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/7c817ac1-4174-4fd9-9885-ef06998f7594\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-IS1-ADOPT",
+        "valid": 1,
+        "validation_git_head": "9d5b2e87574a969ac880bd0128abbf2a52c531ce"
+      },
+      {
+        "completion_git_head": "9d5b2e87574a969ac880bd0128abbf2a52c531ce",
+        "completion_revision": 416,
+        "evidence_id": "30549641-2659-4e8d-812e-8093bc98e630",
+        "evidence_revision": 415,
+        "gate_id": "GH-IS1-ADOPT-HOST-FOUNDATION",
+        "input_fingerprint": "0f10e56df921f8f8ea4684597cfe0192bdf9397dfb03f28de7ca2df580bb706b",
+        "provenance_json": "{\"claim_id\": \"d5fa59c2-09b7-439f-8e3e-34ef2a4bc6e6\", \"evidence_content_hash\": null, \"evidence_kind\": \"command\", \"evidence_metadata\": {\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/adoption/check_host.py\", \"--ce-include\", \"/home/tumlinson/Software/cellerator-ml2-cpp/include\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a\"], \"environment\": {}, \"expected_exit_code\": 0, \"input_fingerprint\": \"0f10e56df921f8f8ea4684597cfe0192bdf9397dfb03f28de7ca2df580bb706b\", \"inputs\": {\"command_contract\": {\"argv\": [\"python3\", \"-B\", \"planning/integrated-substrate-v1/adoption/check_host.py\", \"--ce-include\", \"/home/tumlinson/Software/cellerator-ml2-cpp/include\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_executable_program.a\", \"--ce-library\", \"/home/tumlinson/Cellerator/build-ml2-cpp/libcellerator_operation_core.a\"], \"cwd\": \".\"}, \"diff_fingerprint\": \"fb3231554be78dfba6423389a3e36dd9cfc6e09af0b0a1f72521a6d123923942\", \"dirty_paths\": [\"docs/learning/__pycache__/check_native_bridge.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/reference.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_data.cpython-313.pyc\", \"experiments/celltag_reprogramming/__pycache__/test_design.cpython-313.pyc\"], \"files\": [{\"path\": \"include/GlassHelix\", \"sha256\": \"missing\"}, {\"path\": \"planning/integrated-substrate-v1/adoption\", \"sha256\": \"missing\"}, {\"path\": \"src/inference\", \"sha256\": \"missing\"}, {\"path\": \"src/system\", \"sha256\": \"missing\"}], \"interfaces\": [], \"recorded_git_head\": \"9d5b2e87574a969ac880bd0128abbf2a52c531ce\", \"static_path\": null}, \"locks\": [], \"resources\": [], \"returncode\": 0, \"started_revision\": 414}, \"evidence_path\": \"/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/evidence/30549641-2659-4e8d-812e-8093bc98e630\", \"source\": \"completion_transaction\"}",
+        "status": "passed",
+        "task_id": "GH-IS1-ADOPT",
+        "valid": 1,
+        "validation_git_head": "9d5b2e87574a969ac880bd0128abbf2a52c531ce"
+      },
+      {
         "completion_git_head": "45ff08152c646f89108751749913b447ad9d66d4",
         "completion_revision": 368,
         "evidence_id": "f0a6ee4f-89fc-4cd9-8c86-eec27bbd5b46",
@@ -15918,9 +16030,9 @@
       },
       {
         "attention_reason": null,
-        "completion_commit": null,
-        "completion_git_head": null,
-        "completion_revision": null,
+        "completion_commit": "9d5b2e87574a969ac880bd0128abbf2a52c531ce",
+        "completion_git_head": "9d5b2e87574a969ac880bd0128abbf2a52c531ce",
+        "completion_revision": 416,
         "created_at": "2026-10-02T16:38:41Z",
         "id": "GH-IS1-ADOPT",
         "kind": "task",
@@ -15932,14 +16044,14 @@
         "parallel_policy": "integration_exclusive",
         "parent_id": "GH-IS1-000",
         "priority": 100,
-        "result": null,
+        "result": "implemented",
         "result_policy_json": "{\"allowed_dispositions\": [\"implemented\", \"validated\", \"no_change_required\"]}",
-        "revision": 406,
-        "status": "in_progress",
+        "revision": 416,
+        "status": "done",
         "tags_json": "[]",
         "title": "Reconcile finished predecessors and publish the small shared foundation",
-        "updated_at": "2026-10-03T09:17:53Z",
-        "version": 2
+        "updated_at": "2026-10-03T09:33:50Z",
+        "version": 3
       },
       {
         "attention_reason": null,
@@ -22724,12 +22836,12 @@
       },
       {
         "activated_at": "2026-10-03T09:17:53Z",
-        "completed_at": null,
+        "completed_at": "2026-10-03T09:33:50Z",
         "enqueued_at": "2026-10-02T16:38:41Z",
         "lane_id": "GH-IS1-ADOPT-L",
         "position": 0,
-        "revision": 406,
-        "state": "active",
+        "revision": 416,
+        "state": "completed",
         "task_id": "GH-IS1-ADOPT"
       },
       {
@@ -24041,11 +24153,11 @@
         "created_at": "2026-10-02T16:38:41Z",
         "id": "GH-IS1-ADOPT-L",
         "parent_lane_id": null,
-        "revision": 406,
+        "revision": 416,
         "role": "implementer",
         "run_id": "GH-IS1-RUN-V1",
-        "state": "active",
-        "updated_at": "2026-10-03T09:17:53Z",
+        "state": "closed",
+        "updated_at": "2026-10-03T09:33:50Z",
         "workspace_mode": "exclusive"
       },
       {

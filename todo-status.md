@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `411`
+Project revision: `416`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
@@ -14,7 +14,7 @@ Project revision: `411`
 - `GH-NF1A-OBSERVE` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/OBSERVE.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
 - `GH-NF1-COORD` | status: superseded | execution: closed | next: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | status: done | execution: closed | next: Preserve unknown dirty work, fast-forward safely, add minimal authoritative documentation and semantic state, validate, commit, and verify through project-control.
-- `GH-IS1-ADOPT` | status: in_progress | execution: claimed | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+- `GH-IS1-ADOPT` | status: done | execution: closed | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
 - `GH-IS1-ANALYSIS` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
 - `GH-IS1-BRIDGE` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
 - `GH-IS1-BUILD` | status: planned | execution: ready | next: Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
