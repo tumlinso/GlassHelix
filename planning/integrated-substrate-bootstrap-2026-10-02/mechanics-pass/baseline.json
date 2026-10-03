@@ -1,0 +1,132 @@
+{
+  "observed_at": "2026-10-03T12:53:39.510867+00:00",
+  "project": "glasshelix",
+  "authority_revision": 492,
+  "authority_fingerprint": "91f4beae41d7681dfefacacd4bd8c1055d2752270df26579da343068f89b5835",
+  "semantic_revision": 492,
+  "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
+  "runtime_fingerprint": "15521b1576eab3f0f8aec70519cd2d06f52396db6d48b3a681d5bfb9e6a3464d",
+  "runtime_package_root": "/home/tumlinson/.local/share/project-control/candidates/call-audit-256m-20260926/lib/python3.13/site-packages/todo_orchestrator",
+  "source_head": "93f0d7b9a0751fbaa22b6463b31758c6750e7fcb",
+  "applied_plan": "/home/tumlinson/GlassHelix/planning/integrated-substrate-bootstrap-2026-10-02/glasshelix.todo-plan.json",
+  "applied_plan_sha256": "36fb1a47fe2cbe6c5c368a982400a07750971117b49574fae206bcaf69bb0480",
+  "proposal_sha256": "f24e2acf7c0d7c1717a01d19cf0774dbd98b129e6919b1fd144710aa9d784bfd",
+  "selected_record_verification": [
+    {
+      "task_id": "GH-IS1-000",
+      "task_revision": 405,
+      "verified": [
+        "metadata",
+        "scope",
+        "dependencies",
+        "invariants",
+        "locks",
+        "resources",
+        "artifacts",
+        "gates",
+        "completion_contract",
+        "references"
+      ]
+    },
+    {
+      "task_id": "GH-IS1-BRIDGE",
+      "task_revision": 405,
+      "verified": [
+        "metadata",
+        "scope",
+        "dependencies",
+        "invariants",
+        "locks",
+        "resources",
+        "artifacts",
+        "gates",
+        "completion_contract",
+        "references"
+      ]
+    },
+    {
+      "task_id": "GH-IS1-PIPELINE",
+      "task_revision": 405,
+      "verified": [
+        "metadata",
+        "scope",
+        "dependencies",
+        "invariants",
+        "locks",
+        "resources",
+        "artifacts",
+        "gates",
+        "completion_contract",
+        "references"
+      ]
+    },
+    {
+      "task_id": "GH-IS1-QUALIFY",
+      "task_revision": 405,
+      "verified": [
+        "metadata",
+        "scope",
+        "dependencies",
+        "invariants",
+        "locks",
+        "resources",
+        "artifacts",
+        "gates",
+        "completion_contract",
+        "references"
+      ]
+    },
+    {
+      "task_id": "GH-IS1-DOCS",
+      "task_revision": 405,
+      "verified": [
+        "metadata",
+        "scope",
+        "dependencies",
+        "invariants",
+        "locks",
+        "resources",
+        "artifacts",
+        "gates",
+        "completion_contract",
+        "references"
+      ]
+    },
+    {
+      "task_id": "GH-IS1-JOINT",
+      "task_revision": 405,
+      "verified": [
+        "metadata",
+        "scope",
+        "dependencies",
+        "invariants",
+        "locks",
+        "resources",
+        "artifacts",
+        "gates",
+        "completion_contract",
+        "references"
+      ]
+    },
+    {
+      "task_id": "GH-IS1-CLOSE",
+      "task_revision": 405,
+      "verified": [
+        "metadata",
+        "scope",
+        "dependencies",
+        "invariants",
+        "locks",
+        "resources",
+        "artifacts",
+        "gates",
+        "completion_contract",
+        "references"
+      ]
+    }
+  ],
+  "current_claims": [],
+  "claim_scope": "GH-IS1-",
+  "excluded_claimed_task": null,
+  "read_capability": "SemanticReader.state plus public Service(read_only=True).export filtered in memory; SemanticReader.task unavailable"
+}

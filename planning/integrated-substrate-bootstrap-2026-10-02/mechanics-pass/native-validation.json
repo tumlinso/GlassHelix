@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/home/tumlinson/.local/share/project-control/candidates/call-audit-256m-20260926/bin/python",
+    "-m",
+    "project_control.cli",
+    "plan",
+    "validate",
+    "--project",
+    "glasshelix",
+    "--file",
+    "/home/tumlinson/GlassHelix/planning/integrated-substrate-bootstrap-2026-10-02/mechanics-pass/glasshelix.todo-plan.json"
+  ],
+  "returncode": 2,
+  "stdout": "",
+  "stderr": "project-control: Plan validation failed\n",
+  "public_validation_diagnostic": {
+    "code": "plan_validation_failed",
+    "message": "Plan validation failed",
+    "details": {
+      "errors": [
+        "task GH-IS1-BRIDGE has unknown task dependency GH-IS1-MERGE-A",
+        "task GH-IS1-PIPELINE has unknown task dependency GH-IS1-MERGE-A"
+      ]
+    }
+  }
+}
