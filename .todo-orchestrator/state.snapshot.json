@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T09:30:09Z",
+  "generated_at": "2026-10-03T09:31:45Z",
   "project": {
     "configuration": {
       "busy_timeout_ms": 5000,
@@ -18,7 +18,7 @@
     "project_uuid": "b2c4b239-f18d-4252-b388-fb9889e75efd",
     "schema_version": 2
   },
-  "project_revision": 409,
+  "project_revision": 410,
   "schema_version": 2,
   "snapshot_version": 3,
   "tables": {
@@ -4367,6 +4367,16 @@
         "revision": 409,
         "seq": 409,
         "timestamp": "2026-10-03T09:30:09Z"
+      },
+      {
+        "actor_session_id": null,
+        "entity_id": "GH-IS1-ADOPT-L",
+        "entity_type": "workflow_dispatch",
+        "event_type": "workflow.next_task",
+        "payload_json": "{\"lane_id\": \"GH-IS1-ADOPT-L\", \"run_id\": \"GH-IS1-RUN-V1\", \"status\": \"resumed\", \"task_id\": \"GH-IS1-ADOPT\"}",
+        "revision": 410,
+        "seq": 410,
+        "timestamp": "2026-10-03T09:31:45Z"
       }
     ],
     "evidence": [
