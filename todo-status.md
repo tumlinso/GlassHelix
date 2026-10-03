@@ -3,7 +3,7 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Status v2 Projection
 
-Project revision: `408`
+Project revision: `409`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | status: done | execution: closed | next: Read planning/nf1-adaptive-v1/outcomes/ADOPT.md and relevant source. Choose a short useful implementation loop; preserve actual acceptance.
