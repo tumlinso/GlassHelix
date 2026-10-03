@@ -1,0 +1,87 @@
+{
+  "observed_at": "2026-10-03T13:34:29.726464+00:00",
+  "authority_revision": 495,
+  "authority_fingerprint": "d955cea2ef072691cd9e50c29227a3a1e20a382b6d5c903728cf0b2c0db04fe1",
+  "source_head": "66da3a08ce6db16a2316ac8d58578d18bbbbbc0a",
+  "workspace": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-is1-integrator-l",
+  "workspace_head": "818c24159572d912271fdbef8ace9897def6046f",
+  "active_claim": {
+    "id": "56c78e0b-c8f1-4dac-b387-df9aa2147929",
+    "state": "active",
+    "baseline_head": "66da3a08ce6db16a2316ac8d58578d18bbbbbc0a",
+    "baseline_revision": 495
+  },
+  "task_status_preserved": "in_progress",
+  "proposal_sha256": "8f47aacf30acd77647a90e401b1a599e4d0583b9b06707e4f0fc3632755bbcc6",
+  "helper_sha256": "e14ac16434b61cd24481860ed854fee25d76488efcc51418de6e49f359a2d570",
+  "gate_changes": [
+    {
+      "id": "GH-IS1-PIPELINE-10-CE-NATIVE-CORE",
+      "type": "command",
+      "required": true,
+      "argv": [
+        "python3",
+        "-B",
+        "tests/substrate/pipeline/verify_native_core.py",
+        "--ce-root",
+        "/home/tumlinson/Cellerator",
+        "--ce-sdk",
+        "/tmp/ce-is1-sdk-b",
+        "--ce-core-commit",
+        "41952561a1fa9b2aab7d6d563fae2e2006b0850e"
+      ],
+      "cwd": ".",
+      "input_paths": [
+        "tests/substrate/pipeline/verify_native_core.py"
+      ],
+      "resources": []
+    },
+    {
+      "id": "GH-IS1-PIPELINE-20-FOCUSED",
+      "type": "command",
+      "required": true,
+      "argv": [
+        "python3",
+        "-B",
+        "tests/substrate/pipeline/check.py",
+        "--ce-sdk",
+        "/tmp/ce-is1-sdk-b",
+        "--ce-core-commit",
+        "41952561a1fa9b2aab7d6d563fae2e2006b0850e"
+      ],
+      "cwd": ".",
+      "input_paths": [
+        "experiments/celltag_reprogramming/integrated",
+        "examples/substrate/scientific_tool",
+        "tests/substrate/pipeline"
+      ],
+      "resources": []
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "task_count": 16,
+    "checkpoint_count": 0,
+    "gate_count": 17,
+    "barrier_count": 0,
+    "interface_count": 0
+  },
+  "readonly_script_check": {
+    "argv": [
+      "python3",
+      "-B",
+      "tests/substrate/pipeline/verify_native_core.py",
+      "--ce-root",
+      "/home/tumlinson/Cellerator",
+      "--ce-sdk",
+      "/tmp/ce-is1-sdk-b",
+      "--ce-core-commit",
+      "41952561a1fa9b2aab7d6d563fae2e2006b0850e"
+    ],
+    "cwd": "/home/tumlinson/GlassHelix/.git/todo-orchestrator/b2c4b239-f18d-4252-b388-fb9889e75efd/workflow-workspaces/gh-is1-integrator-l",
+    "returncode": 0,
+    "stdout": "{\"authority_revision\": 7872, \"completion_revision\": 7872, \"core_commit\": \"41952561a1fa9b2aab7d6d563fae2e2006b0850e\", \"evidence\": \"b738953a-3596-4d51-a4e0-718200c2089a\", \"gate\": \"CE-IS1-MERGE-B-10-NATIVE\", \"sdk\": \"/tmp/ce-is1-sdk-b\", \"status\": \"passed\", \"task\": \"CE-IS1-MERGE-B\", \"validation_revision\": 7871}\n",
+    "stderr": ""
+  },
+  "application_condition": "Root applies only after coding workers stop and both task claims are released; refresh task metadata/status at application."
+}
