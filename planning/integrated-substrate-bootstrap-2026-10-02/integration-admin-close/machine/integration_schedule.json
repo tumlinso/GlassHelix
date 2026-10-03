@@ -1,0 +1,11 @@
+{
+  "phases": [
+    {
+      "integration_task": "GH-IS1-CLOSE",
+      "required_tasks": [
+        "GH-IS1-QUALIFY",
+        "GH-IS1-DOCS"
+      ]
+    }
+  ]
+}
