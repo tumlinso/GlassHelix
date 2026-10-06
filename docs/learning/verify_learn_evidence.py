@@ -6,6 +6,7 @@ the source, installed package, native library, or SDK files being hashed.
 """
 import argparse
 import hashlib
+from importlib import metadata
 import json
 import math
 from pathlib import Path
@@ -15,8 +16,9 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[2]
 GH_PREFIX = Path('/tmp/gh-ml2-installed-sdk')
-CT_PACKAGE = Path('/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/lib/python3.13/site-packages/celleratorch/__init__.py')
-CT_NATIVE = Path('/home/tumlinson/Software/cellerator-ml2-python/lib/libcellera_torch_mechanism.so')
+# Exact paths for retained pre-absorption producer receipts only.
+HISTORICAL_TORCH_PACKAGE = Path('/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/lib/python3.13/site-packages/celleratorch/__init__.py')
+HISTORICAL_TORCH_NATIVE = Path('/home/tumlinson/Software/cellerator-ml2-python/lib/libcellera_torch_mechanism.so')
 CE_SDK = Path('/home/tumlinson/Cellerator/build-ml2-cpp')
 BRIDGE_WORK = Path('/tmp/gh-ml2-native-fitted')
 CHECKS = ('native_training', 'global_fit', 'frozen_conditioning',
@@ -41,6 +43,21 @@ def require(condition, message):
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def installed_cellerator_artifacts():
+    distribution = metadata.distribution('cellerator')
+    artifacts = {}
+    for relative in distribution.files or ():
+        relative = Path(relative)
+        if relative.parts[:1] != ('cellerator',):
+            continue
+        installed = Path(distribution.locate_file(relative)).resolve()
+        if installed.is_file():
+            artifacts[str(relative)] = sha(installed)
+    require(artifacts and any(Path(name).name.startswith('_native') for name in artifacts),
+            'installed Cellerator package or core extension is missing')
+    return distribution, artifacts
 
 
 def load(path):
@@ -81,17 +98,27 @@ def verify_ce_bio(directory):
             and receipt['status'] == 'passed', 'CE BIO producer was not qualified')
     require(receipt['evidence_sha256']['manifest.json'] == sha(manifest_path),
             'CE BIO receipt does not bind retained manifest')
-    require(manifest['environment']['installed_package'] == str(CT_PACKAGE.parent),
-            'CE BIO installed package location differs')
-    # Hash only these pinned installed files; manifest input paths are lookup
-    # keys and cannot select arbitrary files to satisfy producer identity.
-    for path in (CT_PACKAGE, CT_PACKAGE.parent / 'mechanism.py',
-                 CT_PACKAGE.parent / 'biology.py', CT_NATIVE):
-        require(manifest['input_sha256'][str(path)] == sha(path),
-                f'CE BIO installed producer changed: {path.name}')
-    require(manifest['native_library']['path'] == str(CT_NATIVE)
-            and manifest['native_library']['sha256'] == sha(CT_NATIVE),
-            'CE BIO native library identity differs')
+    if 'cellerator_artifacts_sha256' in manifest:
+        distribution, artifacts = installed_cellerator_artifacts()
+        require(manifest['cellerator_version'] == distribution.version
+                and manifest['cellerator_artifacts_sha256'] == artifacts,
+                'CE BIO installed Cellerator distribution differs')
+        native_path = Path(manifest['native_library']['path']).resolve()
+        installed_paths = {Path(distribution.locate_file(name)).resolve() for name in artifacts}
+        require(native_path in installed_paths
+                and manifest['native_library']['sha256'] == sha(native_path),
+                'CE BIO native extension identity differs')
+    else:
+        require(manifest['environment']['installed_package'] == str(HISTORICAL_TORCH_PACKAGE.parent),
+                'historical CE BIO installed package location differs')
+        # Retained evidence is tied to the exact pre-absorption installation.
+        for installed in (HISTORICAL_TORCH_PACKAGE, HISTORICAL_TORCH_PACKAGE.parent / 'mechanism.py',
+                          HISTORICAL_TORCH_PACKAGE.parent / 'biology.py', HISTORICAL_TORCH_NATIVE):
+            require(manifest['input_sha256'][str(installed)] == sha(installed),
+                    f'historical CE BIO producer changed: {installed.name}')
+        require(manifest['native_library']['path'] == str(HISTORICAL_TORCH_NATIVE)
+                and manifest['native_library']['sha256'] == sha(HISTORICAL_TORCH_NATIVE),
+                'historical CE BIO native library identity differs')
 
 
 def verify_controller(path, directory, result_path, manifest_path, sources):
@@ -173,10 +200,20 @@ def verify(directory, controller_path, native_path, require_native):
     require(manifest['gh_prefix'] == str(GH_PREFIX)
             and sha(GH_PREFIX / 'lib/glasshelix/learning.py') == sources['learning'],
             'installed GH learning identity mismatch')
-    for field, manifest_field, installed in (
-            ('producer_package_sha256', 'celleratorch_source_sha256', CT_PACKAGE),
-            ('native_library_sha256', 'native_library_sha256', CT_NATIVE)):
-        require(result[field] == manifest[manifest_field] == sha(installed), f'installed {field} mismatch')
+    if 'cellerator_artifacts_sha256' in manifest:
+        distribution, artifacts = installed_cellerator_artifacts()
+        require(manifest['cellerator_version'] == distribution.version
+                and result['cellerator_artifacts_sha256'] == manifest['cellerator_artifacts_sha256'] == artifacts,
+                'installed Cellerator distribution identity mismatch')
+        require(result['native_library_sha256'] == manifest['native_library_sha256']
+                and result['torch_adapter_sha256'] == manifest['torch_adapter_sha256'],
+                'installed Cellerator extension identity mismatch')
+    else:
+        # Legacy receipt path retained to verify source-bound pre-absorption evidence.
+        for field, manifest_field, installed in (
+                ('producer_package_sha256', 'celleratorch_source_sha256', HISTORICAL_TORCH_PACKAGE),
+                ('native_library_sha256', 'native_library_sha256', HISTORICAL_TORCH_NATIVE)):
+            require(result[field] == manifest[manifest_field] == sha(installed), f'historical {field} mismatch')
     verify_ce_bio(directory)
     checkpoint_hash = sha(directory / 'installed-consumer.pt')
     require(result['checkpoint_sha256'] == manifest['checkpoint_sha256']

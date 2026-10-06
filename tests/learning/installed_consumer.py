@@ -1,4 +1,4 @@
-"""Installed GH/CelleraTorch training, owner restore and fresh-process replay.
+"""Installed GH/Cellerator training, owner restore and fresh-process replay.
 
 Run --gpu only under the controller's assigned GPU lease. No skip can pass.
 """
@@ -7,18 +7,21 @@ from __future__ import annotations
 import argparse
 import hashlib
 import importlib
+from importlib import metadata
 import json
 import os
 from pathlib import Path
 import subprocess
 import sys
 
+import numpy as np
 import torch
 from torch import nn
 
 def make_model():
-    from celleratorch import (Axis, Identity, Incidence, Mechanism, MechanismModule,
-                             MechanismSpec, OutputContribution)
+    from cellerator import (Axis, Identity, Incidence, Mechanism,
+                            MechanismSpec, OutputContribution, prepare_mechanism)
+    from cellerator.torch import MechanismModule
     def identity(n):
         return Identity(n, n + 1000)
     def axis(base, extent):
@@ -27,8 +30,10 @@ def make_model():
                          (Mechanism(identity(501), identity(401),
                                     (Incidence(0, identity(601), 0), Incidence(1, identity(602), 1)),
                                     (OutputContribution(0, identity(701), 0, identity(801), 1.0),)),))
-    native = MechanismModule(spec, torch.tensor([0.1], device='cuda'),
-                             max_batch=8, max_live_forwards=8, precision='f32')
+    handle = prepare_mechanism(
+        spec, np.ascontiguousarray([0.1], dtype=np.float32), device='cuda:0',
+        max_batch=8, max_live_forwards=8, precision='f32')
+    native = MechanismModule.from_handle(handle)
     before = nn.Linear(2, 2, device='cuda')
     after = nn.Linear(1, 1, device='cuda')
     with torch.no_grad():
@@ -53,22 +58,50 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def installed_cellerator_artifacts():
+    distribution = metadata.distribution('cellerator')
+    artifacts = {}
+    artifact_paths = set()
+    for relative in distribution.files or ():
+        relative = Path(relative)
+        if relative.parts[:1] != ('cellerator',):
+            continue
+        installed = Path(distribution.locate_file(relative)).resolve()
+        if installed.is_file():
+            artifacts[str(relative)] = sha(installed)
+            artifact_paths.add(installed)
+    if not artifacts or not any(Path(name).name.startswith('_native') for name in artifacts):
+        raise RuntimeError('installed Cellerator package files or core extension are missing')
+    return distribution, artifacts, artifact_paths
+
+
 def write_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, sort_keys=True, indent=2, allow_nan=False) + '\n')
 
 
 def replay(checkpoint, manifest_path, output):
-    import celleratorch
-    from celleratorch import load_checkpoint
+    import cellerator
+    from cellerator import _native as cellerator_native
+    from cellerator.torch import _torch as cellerator_torch_native
+    from cellerator.torch import load_checkpoint
+    import cellerator.torch as cellerator_torch_adapter
+    distribution, artifacts, artifact_paths = installed_cellerator_artifacts()
     manifest = json.loads(manifest_path.read_text())
     if sha(checkpoint) != manifest['checkpoint_sha256']:
         raise ValueError('checkpoint identity differs from scientific manifest')
     if sha(learning_module.__file__) != manifest['learning_source_sha256']:
         raise ValueError('installed GH learning source differs from fitted source')
+    imported_modules = (cellerator.__file__, cellerator_native.__file__,
+                        cellerator_torch_adapter.__file__, cellerator_torch_native.__file__)
+    if any(Path(module_path).resolve() not in artifact_paths for module_path in imported_modules):
+        raise RuntimeError('imported Cellerator module is not listed in the installed distribution')
     if (sha(__file__) != manifest['consumer_source_sha256']
-            or sha(celleratorch.__file__) != manifest['celleratorch_source_sha256']
-            or sha(os.environ['CELLERATORCH_NATIVE_LIBRARY']) != manifest['native_library_sha256']):
+            or sha(cellerator.__file__) != manifest['cellerator_source_sha256']
+            or sha(cellerator_native.__file__) != manifest['native_library_sha256']
+            or sha(cellerator_torch_native.__file__) != manifest['torch_adapter_sha256']
+            or artifacts != manifest['cellerator_artifacts_sha256']
+            or distribution.version != manifest['cellerator_version']):
         raise ValueError('consumer or native producer differs from fitted source')
     model = make_model()
     optimizer = torch.optim.Adam([model[1].coefficients], lr=0.05)
@@ -90,8 +123,16 @@ def replay(checkpoint, manifest_path, output):
 
 
 def qualify(output, gh_prefix):
-    import celleratorch
-    from celleratorch import guarded_step, save_checkpoint
+    import cellerator
+    from cellerator import _native as cellerator_native
+    from cellerator.torch import _torch as cellerator_torch_native
+    from cellerator.torch import guarded_step, save_checkpoint
+    import cellerator.torch as cellerator_torch_adapter
+    distribution, artifacts, artifact_paths = installed_cellerator_artifacts()
+    imported_modules = (cellerator.__file__, cellerator_native.__file__,
+                        cellerator_torch_adapter.__file__, cellerator_torch_native.__file__)
+    if any(Path(module_path).resolve() not in artifact_paths for module_path in imported_modules):
+        raise RuntimeError('imported Cellerator module is not listed in the installed distribution')
     model = make_model()
     inputs = torch.tensor([[0.5, 1.], [1., 0.6], [1.5, 0.8]], device='cuda')
     calibration = view((1.7 * inputs[:, 0] * inputs[:, 1]).tolist(), split='train')
@@ -155,9 +196,9 @@ def qualify(output, gh_prefix):
                   hypothesis_label='synthetic-product-7001-v1',
                   evidence_id=8001, structure_id=105, mechanism_id=501, mechanism_label='joint_product',
                   units='arbitrary', scale=1, state_generation=1,
-                  parameter_generation=int(model[1]._native.generation()), tolerance=2e-5,
+                  parameter_generation=int(model[1]._native.generation), tolerance=2e-5,
                   modality='synthetic', time_units='hours', sampling_id='fixture0', time=3)
-    native_library = Path(os.environ['CELLERATORCH_NATIVE_LIBRARY'])
+    native_library = Path(cellerator_native.__file__)
     manifest = dict(fitted.manifest, source_commit=commit, bridge=bridge,
                     identity_mapping={'hypothesis': {'label': 'synthetic-product-7001-v1', 'system_id': 7001},
                                       'mechanism': {'label': 'joint_product', 'identity': [501, 1501]},
@@ -173,8 +214,11 @@ def qualify(output, gh_prefix):
                                                          'slots': ['shared_k']}},
                     checkpoint_sha256=sha(checkpoint), learning_source_sha256=sha(learning_module.__file__),
                     consumer_source_sha256=sha(__file__), gh_prefix=str(gh_prefix) if gh_prefix else None,
-                    celleratorch_source_sha256=sha(celleratorch.__file__),
+                    cellerator_source_sha256=sha(cellerator.__file__),
                     native_library_sha256=sha(native_library),
+                    torch_adapter_sha256=sha(cellerator_torch_native.__file__),
+                    cellerator_version=distribution.version,
+                    cellerator_artifacts_sha256=artifacts,
                     local_conditioning={key: value for key, value in local.items() if key not in ('z', 'forcing', 'prediction')})
     manifest_path = output.with_suffix('.manifest.json')
     write_json(manifest_path, manifest)
@@ -197,8 +241,11 @@ def qualify(output, gh_prefix):
                         'source_hashes': {'learning': manifest['learning_source_sha256'],
                                           'consumer': manifest['consumer_source_sha256']},
                         'checkpoint_sha256': manifest['checkpoint_sha256'],
-                        'producer_package_sha256': manifest['celleratorch_source_sha256'],
+                        'producer_package_sha256': manifest['cellerator_source_sha256'],
                         'native_library_sha256': manifest['native_library_sha256'],
+                        'torch_adapter_sha256': manifest['torch_adapter_sha256'],
+                        'cellerator_version': manifest['cellerator_version'],
+                        'cellerator_artifacts_sha256': manifest['cellerator_artifacts_sha256'],
                         'bridge': bridge, 'identity_mapping': manifest['identity_mapping'],
                         'source_commit': commit, 'initial_loss': fitted.manifest['initial_loss'],
                         'final_loss': fitted.manifest['final_loss'], 'shared_coefficient': shared_k,

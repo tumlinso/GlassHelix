@@ -16,7 +16,7 @@ These limits constrain interpretation; they do not imply that nothing is learnab
 
 The inspected native foundation has typed system/quantity/observation objects, supplied mechanisms, direct-map and selected dynamical execution, finite whole-candidate propagation and observation updates, interrogation/response tools, and replay/binding paths. Its Cellerator dependencies own numerical execution. A finite supplied candidate set is not general mechanism discovery, and a completed synthetic execution trace is not a fitted biological model.
 
-The current learning work should compose scientific hypotheses and evidence with ordinary framework facilities and Cellerator/CelleraTorch operations where structure helps. This does not require GlassHelix to own another tensor engine, compiler, optimizer or storage system. The precise supported learning path is bound to the implementation snapshot rather than declared complete by this design page.
+The current learning work should compose scientific hypotheses and evidence with ordinary framework facilities and Cellerator operations through the optional `cellerator.torch` adapter where structure helps. This does not require GlassHelix to own another tensor engine, compiler, optimizer or storage system. The precise supported learning path is bound to the implementation snapshot rather than declared complete by this design page.
 
 ## The intended feedback into execution
 

@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "status": "passed",
+  "checks": [
+    "forward_repeated_contributions",
+    "independent_input_and_coefficient_vjp_zero_coefficient",
+    "full_readout_jvp_independent_and_finite_difference",
+    "native_coefficients_actual_loss_reduction",
+    "checkpoint_adam_next_step_equivalence",
+    "identity_topology_and_checkpoint_rejection",
+    "plain_matrix_patch_trajectory_native_readout",
+    "supplied_refactoring_residual_actor_native_readout"
+  ],
+  "source_sha256": {
+    "check.py": "05ee335e3a453c176d8ee443dd087195199c54f9fd08fdc004c926e5530a6600",
+    "model.py": "96c483bc3ff1496e5c991711d642b56eae02092d82f7f2cd8b87f11cfc60180a",
+    "examples.py": "73b8a7ba3bee320ae35cd1aec6e64e66cd8ad090f5ccb9a833f830c9475ab8f1",
+    "capability.json": "d8fb3b93626e9a80dd235682e9143681ba60fc50d56c3a5133a57386db958536",
+    "../plain/model.py": "650d8255e305c4eba3203b33e7f9e7b308df56c19446c89795a65e771f58c66d",
+    "../actor/model.py": "f405f2cc6f1e6aef0843cf36463660bb6f85859ac30b96dfef0c1b7da72173ce",
+    "../refactor/model.py": "c3ea02b78be744fe13dee3a3ed6053f1d58b3ab6c7939ed81bb37fb340c10590"
+  },
+  "cellerator_version": "0.1.0",
+  "adapter_file": "/tmp/cellerator-final-torch-wheel-install/cellerator/torch/__init__.py",
+  "adapter_sha256": "1bdd755f7a66c9ea7e3b814b4ffcb542551414d297b4fe51b8de5d5438f317b1",
+  "native_extension": "/tmp/cellerator-final-torch-wheel-install/cellerator/_native.cpython-313-x86_64-linux-gnu.so",
+  "native_extension_sha256": "3372ece12178909ef989d725eea12d3135fc204308dd36cc9b6dbe205af8978a",
+  "native_artifacts_sha256": {
+    "cellerator/.libs/libcellerator_product2.so": "f2c907b06b00911e2952dc72d2391a35329c4794b330bc3abaa3fdafea71ac61",
+    "cellerator/_native.cpython-313-x86_64-linux-gnu.so": "3372ece12178909ef989d725eea12d3135fc204308dd36cc9b6dbe205af8978a",
+    "cellerator/torch/_torch.cpython-313-x86_64-linux-gnu.so": "1031aa8db19b9b638d3359d9abccfde51e328bc31e22554ea336f17431ca8edc"
+  },
+  "distribution_files_sha256": {
+    "cellerator-0.1.0.dist-info/INSTALLER": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+    "cellerator-0.1.0.dist-info/METADATA": "d0984868868c64eff8a9f28a973556dd234b2c909f36d85a2836575526372c74",
+    "cellerator-0.1.0.dist-info/RECORD": "2c31d26cc853debae1e5010565b5381db085de8edc00c5988a80f49b3f2d1370",
+    "cellerator-0.1.0.dist-info/REQUESTED": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cellerator-0.1.0.dist-info/WHEEL": "3f1b3dd841d77b342aebabe3abf2b8d8b07ea01f2eac894e8fdc298757b818b8",
+    "cellerator-0.1.0.dist-info/direct_url.json": "27cce252c5dc2e61c91a2962753cc851ccba99bc2f6cb64c2542883239c41968",
+    "cellerator/.libs/libcellerator_product2.so": "f2c907b06b00911e2952dc72d2391a35329c4794b330bc3abaa3fdafea71ac61",
+    "cellerator/__init__.py": "323723fec1bc5ceb717c47ce583abd5aeeaf9fa87243016cd63d929c0e1bb8e8",
+    "cellerator/__pycache__/__init__.cpython-313.pyc": "e4b3e065033d38c2907aac5d9bf86eeba89a56bf9954163be862cce4d1b653e2",
+    "cellerator/__pycache__/_declarations.cpython-313.pyc": "866491cff8a7c9e28b5ed803cd61ee316203f8aa8c4857182eb67ee027825c59",
+    "cellerator/_declarations.py": "605b0cb70415454224303d43b3ff52e2580bbc1813eff8079161f6031d253d93",
+    "cellerator/_native.cpython-313-x86_64-linux-gnu.so": "3372ece12178909ef989d725eea12d3135fc204308dd36cc9b6dbe205af8978a",
+    "cellerator/torch/__init__.py": "1bdd755f7a66c9ea7e3b814b4ffcb542551414d297b4fe51b8de5d5438f317b1",
+    "cellerator/torch/__pycache__/__init__.cpython-313.pyc": "eaa4aa9dbdd0730d85e15d3e9504d2fdf55f39b619c7244d76fb888d7bdd6224",
+    "cellerator/torch/__pycache__/biology.cpython-313.pyc": "4c264b1f4a4e1c1e1a87a76b10cccc42eef9abd6583877706afa7bc3da87bb6f",
+    "cellerator/torch/__pycache__/mechanism.cpython-313.pyc": "8dc92106fded840d79d91d10ae5bdbc62d87cb7e9efa2ed1b7c21cb2ba8539c8",
+    "cellerator/torch/__pycache__/product2.cpython-313.pyc": "29d0a8f70b89d62257ba86acb9f14303dfe220bc4313e6435e13c2f5facc635f",
+    "cellerator/torch/_torch.cpython-313-x86_64-linux-gnu.so": "1031aa8db19b9b638d3359d9abccfde51e328bc31e22554ea336f17431ca8edc",
+    "cellerator/torch/biology.py": "f70c90e2e980429bff9cb2442e8e9378479dd5420b4ce05c8d2c250dfe3d4741",
+    "cellerator/torch/mechanism.py": "c03bd8ac0c33c30354ee93df3e8482f32f513015b0378487dff7dd0bfe2b5e16",
+    "cellerator/torch/product2.py": "3aeb83378643ae90827e514be4db04546df5124549f1fec8b335bbfed0de4a72"
+  },
+  "device": "cpu",
+  "precision": "float32",
+  "biology": "not_run",
+  "argv": [
+    "/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python",
+    "-B",
+    "/home/tumlinson/GlassHelix/experiments/moonshot-parallel-v1/integration/check.py",
+    "--record"
+  ],
+  "examples": {
+    "plain": {
+      "example": "plain_matrix_patch_native_readout",
+      "biology": "not_run",
+      "dtype": "float32",
+      "device": "cpu",
+      "trajectory_steps": 3,
+      "loss_before": 1.2265429496765137,
+      "loss_after": 6.36284767097095e-08,
+      "training_steps": 12,
+      "field_gradient_l1": 0.00967659242451191,
+      "trajectory_gradient_max_error": 0.0,
+      "prediction": [
+        1.2497477531433105
+      ],
+      "hidden_jvp": [
+        1.9492179155349731
+      ],
+      "source_ids": [
+        "patch0:r0:c0",
+        "patch0:r0:c1",
+        "patch0:r1:c0",
+        "patch0:r1:c1"
+      ],
+      "observation_ids": [
+        "synthetic:measurement0"
+      ],
+      "contribution_ids": [
+        "term0",
+        "term1",
+        "term2"
+      ]
+    },
+    "refactorable": {
+      "example": "supplied_refactoring_native_regrowth",
+      "biology": "not_run",
+      "dtype": "float32",
+      "device": "cpu",
+      "migration_domain": "whole state space",
+      "old_coordinates": [
+        "old:s0",
+        "old:s1"
+      ],
+      "new_coordinates": [
+        "new:q0",
+        "new:q1"
+      ],
+      "initial_prediction_error": 0.0,
+      "initial_outgoing_gradient_l1": 0.04049079865217209,
+      "hidden_gradient_l1_by_step": [
+        0.0,
+        0.014433268457651138
+      ],
+      "final_prediction": [
+        0.6204586029052734
+      ],
+      "source_ids": [
+        "anonymous:regrowth0:h0",
+        "anonymous:regrowth0:h1"
+      ],
+      "observation_ids": [
+        "synthetic:measurement0"
+      ]
+    }
+  },
+  "coefficient_fit": {
+    "initial_loss": 0.8540999889373779,
+    "final_loss": 0.001573351677507162
+  }
+}

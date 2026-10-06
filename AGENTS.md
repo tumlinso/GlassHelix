@@ -12,7 +12,7 @@ Use the installed Project Control/Codex front door and this repository's Todo au
 
 - Keep measurement, state, model parameters, latent hypotheses and mechanistic interpretation distinct. Whole candidates must not be silently replaced by independently mixed coordinates.
 - Preserve evidence IDs, provenance and scope. Non-identifiability and deliberately open model choices are scientific state, not implementation debt.
-- Cellerator owns reusable numerical execution; CelleraTorch/framework facilities may supply the learning path without becoming the scientific ontology. Do not clone a runtime, general tensor engine or compiler here.
+- Cellerator owns reusable numerical execution; its optional `cellerator.torch` adapter may supply framework integration without becoming the scientific ontology. Do not clone a runtime, general tensor engine or compiler here.
 - Mechanism-to-execution promotion is an intended loop, not current universal functionality. Explicit variables may still require state estimation.
 - Preserve the actual native foundation and segregate old model/source experiments; do not keep the stale “everything is archaeological” rule.
 

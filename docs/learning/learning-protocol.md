@@ -1,6 +1,6 @@
 # Learning and conditioning protocol
 
-The first engineering qualification uses controlled, partial observations. Shared law values and local state/forcing quantities are declared independently from their inference treatment. An ordinary Torch optimizer fits them from permitted observations, with a sanctioned CelleraTorch update for native-owned values. This fixture is a test of the inference client and execution path, not a CellTag result.
+The first engineering qualification uses controlled, partial observations. Shared law values and local state/forcing quantities are declared independently from their inference treatment. An ordinary Torch optimizer fits them from permitted observations, with a guarded update through the optional `cellerator.torch` adapter for native-owned values. This fixture is a test of the inference client and execution path, not a CellTag result.
 
 Global fitting uses discovery evidence only. Local conditioning freezes shared parameters and checks the permitted modality, split and prospective cutoff. A held-out target or ATAC-derived input is rejected. Retrospective conditioning must explicitly name later supplied evidence; it is not prospective prediction. Zero observations remain observed, and absent channels are masked rather than asserted zero.
 

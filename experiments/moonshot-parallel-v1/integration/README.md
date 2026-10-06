@@ -16,18 +16,20 @@ refactoring calculations remain Torch. This is equivalent selected readout
 lowering, with synthetic observations and biology `not_run`. There is no
 performance claim, automatic identity discovery, or Torch CUDA qualification.
 
-Run the small actual consumer gate from the repository root:
+Run the installed consumer gate from a Python environment containing Cellerator
+and its optional Torch integration:
 
 ```sh
-/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python -B experiments/moonshot-parallel-v1/integration/check.py
+python -m pip install "/home/tumlinson/Cellerator[torch]"
+python -B experiments/moonshot-parallel-v1/integration/check.py --record
 ```
 
-The gate checks the existing receipt/install manifest, exact Cellerator commit,
-installed package bytes and native library hash before importing the installed
-adapter from `/tmp/gh-moon-celleratorch`. It never changes ML2 site-packages.
-Eight check groups cover independent forward/VJP/JVP references, finite
-differences, native coefficient learning, Adam checkpoint continuation,
-identity/topology rejection, trajectory gradients and refactoring/regrowth.
-A normal run leaves tracked evidence unchanged and checks recorded source
-hashes. `--record` explicitly records a fresh run in
-`evidence/consumer-checks.json`; use it after an intentional source change.
+The gate discovers the installed `cellerator` distribution through Python
+metadata, checks its packaged native files, and imports product2 through
+`cellerator.torch`. It records fresh consumer evidence separately at
+`evidence/consumer-checks-cellerator.json`, leaving the older component-era
+receipt untouched. Eight check groups cover independent forward/VJP/JVP
+references, finite differences, native coefficient learning, Adam checkpoint
+continuation, identity/topology rejection, trajectory gradients and
+refactoring/regrowth. A normal run requires matching current evidence and checks
+that the GH sources and installed package files have not changed.

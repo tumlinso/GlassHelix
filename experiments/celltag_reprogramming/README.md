@@ -7,7 +7,7 @@ authorization are unavailable; biological fitting is **not_run**.
 
 Install independently with `python -m pip install --no-deps ./experiments/celltag_reprogramming`.
 The audit uses the Python standard library; reference tests require Torch 2.7.0.
-Native GH/CelleraTorch integration belongs to later qualified public adapters.
+Native GH integration uses Cellerator’s optional `cellerator.torch` adapter when the selected path needs a shared native mechanism.
 
 Required CSV columns are `sample_id,cell_id,clone_id,time_label,modality,replicate,regime,split,feature_id,value`.
 Empty `value` means missing; numeric zero is observed. `clone_id` may be empty.
@@ -44,7 +44,7 @@ The report includes raw source and canonical record SHA256 hashes, clone/time/
 modality/replicate coverage, missingness, QC reasons and overlapping exclusion
 counts. A successful audit is engineering evidence; it does not establish that
 the cohort supports a biological fit. The supplied design reference is separate
-from Cellerator/CelleraTorch native or GPU acceptance.
+from Cellerator native or GPU acceptance.
 
 ## Bounded population-response pilot
 
@@ -74,8 +74,8 @@ ambiguous. Sampled clone abundance includes growth, survival and sampling and
 is not an individual transition probability. Missing real inputs fail explicitly
 with biological status `not_run`.
 
-Under the controller's GPU lease, add `--gpu` to compare installed CT
-`SharedSupportRelation` against the exact same Torch graph, initial parameters,
+Under the controller's GPU lease, add `--gpu` to compare Cellerator’s installed
+`cellerator.torch.SharedSupportRelation` against the exact same Torch graph, initial parameters,
 masked objective and Adam updates. The fixture uses three sources, two targets,
 five distinct edge identities with duplicate endpoints, batch eight and tail
 three. The comparison includes source/target activity generators, full objective
@@ -84,5 +84,4 @@ iterations including conversion, backward, guarded update and synchronization.
 Peak memory includes both resident graphs and is reported with its baseline.
 A slower result remains `evaluated_not_promoted`; even a faster tiny fixture
 does not establish a general speedup. Public GH is imported from the installed
-SDK via `--gh-prefix` (default `/tmp/gh-ml2-installed-sdk`); CT is installed
-separately and requires `CELLERATORCH_NATIVE_LIBRARY` for GPU execution.
+SDK via `--gh-prefix` (default `/tmp/gh-ml2-installed-sdk`). Install Cellerator and its optional Torch integration into the same Python environment; the installed package loads its matching native extension without a development-tree library path.

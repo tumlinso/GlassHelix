@@ -3,15 +3,14 @@
 import argparse
 import copy
 import hashlib
+import importlib
+from importlib import metadata
+import importlib.util
 import json
-import os
 from pathlib import Path
-import subprocess
 import sys
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
-CE_COMMIT = '1688030c27bd942f6ac3bf40312ba06472c99dbf'
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -24,22 +23,44 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--record', action='store_true')
     args = parser.parse_args()
-    receipt_dir = HERE.parent / 'receipt'
-    manifest_path = receipt_dir / 'install-manifest.json'
-    manifest = json.loads(manifest_path.read_text())
-    require(manifest['source_commit'] == CE_COMMIT, 'unexpected Cellerator pin')
-    subprocess.run([sys.executable, '-B', str(receipt_dir / 'verify_consumer_evidence.py')], check=True)
-    installed = Path(manifest['install_target'])
-    sys.path.insert(0, str(installed))
-    os.environ['CELLERATOR_PRODUCT2_LIBRARY'] = manifest['native_library']
     import torch
-    from celleratorch import moonshot_product
-    from model import NativeProductReadout
-    import examples
-    require(Path(moonshot_product.__file__).resolve() == (installed / 'celleratorch/moonshot_product.py').resolve(), 'wrong installed adapter')
+    distribution = metadata.distribution('cellerator')
+    package_spec = importlib.util.find_spec('cellerator')
+    require(package_spec is not None and package_spec.origin is not None,
+            'Cellerator must be installed in this Python environment')
+    import cellerator
+    from cellerator import _native as cellerator_native
+    import cellerator.torch as adapter
+    package_dir = Path(package_spec.origin).resolve().parent
+    require(Path(cellerator.__file__).resolve() == Path(package_spec.origin).resolve(),
+            'Cellerator package import differs from distribution metadata')
+    require(Path(adapter.__file__).resolve().is_relative_to(package_dir / 'torch'),
+            'Torch adapter was imported outside the installed Cellerator package')
+    require(Path(cellerator_native.__file__).resolve().is_relative_to(package_dir),
+            'native extension was imported outside the installed Cellerator package')
+    package_files = {}
+    native_artifacts = {}
+    distribution_paths = set()
+    for relative in distribution.files or ():
+        installed_file = Path(distribution.locate_file(relative)).resolve()
+        if installed_file.is_file():
+            package_files[str(relative)] = sha(installed_file)
+            distribution_paths.add(installed_file)
+            if installed_file.suffix.lower() in ('.so', '.pyd', '.dylib', '.dll'):
+                native_artifacts[str(relative)] = sha(installed_file)
+    imported_modules = (Path(cellerator.__file__).resolve(), Path(adapter.__file__).resolve(),
+                        Path(cellerator_native.__file__).resolve())
+    require(all(path in distribution_paths for path in imported_modules),
+            'an imported Cellerator module is not listed in the installed distribution')
+    require(native_artifacts, 'installed Cellerator distribution has no packaged native extension')
+    require(any(Path(name).name.startswith('_native') for name in native_artifacts),
+            'installed Cellerator core extension is missing from distribution files')
     files = ['check.py', 'model.py', 'examples.py', 'capability.json',
              '../plain/model.py', '../actor/model.py', '../refactor/model.py']
     before_sources = {f: sha(HERE / f) for f in files}
+    before_package = dict(package_files)
+    from model import NativeProductReadout
+    import examples
     torch.set_num_threads(1)
     torch.manual_seed(7)
     checks = []
@@ -146,25 +167,31 @@ def main():
             'regrowth hidden gradients did not become live after coefficient update')
     checks.extend(['plain_matrix_patch_trajectory_native_readout', 'supplied_refactoring_residual_actor_native_readout'])
     require(before_sources == {f: sha(HERE / f) for f in files}, 'source changed during execution')
-    require(sha(manifest['native_library']) == manifest['native_library_sha256'], 'native library changed during execution')
-    result = {'schema_version': 1, 'status': 'passed', 'checks': checks,
+    require(before_package == {name: sha(Path(distribution.locate_file(name)).resolve())
+                              for name in before_package},
+            'installed Cellerator distribution changed during execution')
+    result = {'schema_version': 2, 'status': 'passed', 'checks': checks,
               'source_sha256': {f: sha(HERE / f) for f in files},
-              'cellerator_source_commit': CE_COMMIT,
-              'install_manifest_sha256': sha(manifest_path),
-              'adapter_sha256': sha(moonshot_product.__file__),
-              'native_library': manifest['native_library'],
-              'native_library_sha256': sha(manifest['native_library']),
+              'cellerator_version': distribution.version,
+              'adapter_file': str(Path(adapter.__file__).resolve()),
+              'adapter_sha256': sha(adapter.__file__),
+              'native_extension': str(Path(cellerator_native.__file__).resolve()),
+              'native_extension_sha256': sha(cellerator_native.__file__),
+              'native_artifacts_sha256': native_artifacts,
+              'distribution_files_sha256': package_files,
               'device': 'cpu', 'precision': 'float32', 'biology': 'not_run',
               'argv': [sys.executable, '-B', str(HERE / 'check.py')] + (['--record'] if args.record else []),
               'examples': {'plain': plain, 'refactorable': refactor},
               'coefficient_fit': {'initial_loss': first, 'final_loss': last}}
-    evidence = HERE / 'evidence/consumer-checks.json'
+    evidence = HERE / 'evidence/consumer-checks-cellerator.json'
     if args.record:
         evidence.parent.mkdir(exist_ok=True)
         evidence.write_text(json.dumps(result, indent=2) + '\n')
     else:
         previous = json.loads(evidence.read_text())
-        for key in ('source_sha256', 'cellerator_source_commit', 'install_manifest_sha256', 'adapter_sha256', 'native_library_sha256', 'checks'):
+        for key in ('source_sha256', 'cellerator_version', 'adapter_sha256',
+                    'native_extension_sha256', 'native_artifacts_sha256',
+                    'distribution_files_sha256', 'checks'):
             require(previous[key] == result[key], 'recorded evidence differs: ' + key)
     print(json.dumps(result, sort_keys=True))
 

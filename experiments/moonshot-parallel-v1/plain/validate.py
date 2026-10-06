@@ -58,7 +58,7 @@ def main() -> None:
         "native_execution": "not_run", "cuda_execution": "not_run", "benchmark": "not_run",
         "biological_validation": "not_run",
         "unsupported_or_unqualified": ["float16/bfloat16/complex", "batched-cell inputs",
-            "time-varying/nonlinear exact flow", "native CE/CelleraTorch adapter",
+            "time-varying/nonlinear exact flow", "native Cellerator / optional `cellerator.torch` adapter",
             "CUDA execution", "higher-order derivative qualification", "performance claims"],
     }
     args.output.write_text(json.dumps(record, indent=2) + "\n")

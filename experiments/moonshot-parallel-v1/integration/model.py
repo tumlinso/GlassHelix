@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import torch
 from torch import nn
-from celleratorch.moonshot_product import Product2Module, product2_jvp
+from cellerator.torch import Product2Module, product2_jvp
 
 
 def _ids(values, name):

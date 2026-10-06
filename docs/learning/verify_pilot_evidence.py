@@ -3,6 +3,7 @@
 import argparse
 import csv
 import hashlib
+from importlib import metadata
 import json
 import math
 from pathlib import Path
@@ -12,8 +13,9 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[2]
 GH_LEARNING = Path('/tmp/gh-ml2-installed-sdk/lib/glasshelix/learning.py')
-CT_PACKAGE = Path('/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/lib/python3.13/site-packages/celleratorch')
-CT_NATIVE = Path('/home/tumlinson/Software/cellerator-ml2-python/lib/libcellera_torch_mechanism.so')
+# Exact paths for the retained pre-absorption evidence branch only.
+HISTORICAL_TORCH_PACKAGE = Path('/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/lib/python3.13/site-packages/celleratorch')
+HISTORICAL_TORCH_NATIVE = Path('/home/tumlinson/Software/cellerator-ml2-python/lib/libcellera_torch_mechanism.so')
 MARKER = 'GH_ML2_PILOT_EVIDENCE='
 PHASES = ['CPU-to-CUDA conversion', 'activity generation', 'relation forward',
           'masked objective', 'backward', 'Adam/guarded publication', 'synchronize', 'scalar transfer']
@@ -26,6 +28,21 @@ def require(condition, message):
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def installed_cellerator_artifacts():
+    distribution = metadata.distribution('cellerator')
+    artifacts = {}
+    for relative in distribution.files or ():
+        relative = Path(relative)
+        if relative.parts[:1] != ('cellerator',):
+            continue
+        installed = Path(distribution.locate_file(relative)).resolve()
+        if installed.is_file():
+            artifacts[str(relative)] = sha(installed)
+    require(artifacts and any(Path(name).name.startswith('_native') for name in artifacts),
+            'installed Cellerator package or core extension is missing')
+    return distribution, artifacts
 
 
 def load(path):
@@ -48,13 +65,26 @@ def producer(directory):
     require(manifest['task'] == receipt['task'] == 'CE-ML2-BIO'
             and receipt['status'] == 'passed', 'unqualified CE BIO producer')
     require(receipt['evidence_sha256']['manifest.json'] == sha(path), 'CE BIO manifest binding mismatch')
-    require(manifest['environment']['installed_package'] == str(CT_PACKAGE), 'installed CT package mismatch')
-    for installed in (CT_PACKAGE / '__init__.py', CT_PACKAGE / 'mechanism.py',
-                      CT_PACKAGE / 'biology.py', CT_NATIVE):
-        require(manifest['input_sha256'][str(installed)] == sha(installed),
-                f'installed producer changed: {installed.name}')
-    require(manifest['native_library']['path'] == str(CT_NATIVE)
-            and manifest['native_library']['sha256'] == sha(CT_NATIVE), 'native producer mismatch')
+    if 'cellerator_artifacts_sha256' in manifest:
+        distribution, artifacts = installed_cellerator_artifacts()
+        require(manifest['cellerator_version'] == distribution.version
+                and manifest['cellerator_artifacts_sha256'] == artifacts,
+                'installed Cellerator producer identity mismatch')
+        native_path = Path(manifest['native_library']['path']).resolve()
+        installed_paths = {Path(distribution.locate_file(name)).resolve() for name in artifacts}
+        require(native_path in installed_paths
+                and manifest['native_library']['sha256'] == sha(native_path),
+                'installed Cellerator native extension mismatch')
+    else:
+        require(manifest['environment']['installed_package'] == str(HISTORICAL_TORCH_PACKAGE),
+                'historical adapter package mismatch')
+        for installed in (HISTORICAL_TORCH_PACKAGE / '__init__.py', HISTORICAL_TORCH_PACKAGE / 'mechanism.py',
+                          HISTORICAL_TORCH_PACKAGE / 'biology.py', HISTORICAL_TORCH_NATIVE):
+            require(manifest['input_sha256'][str(installed)] == sha(installed),
+                    f'historical producer changed: {installed.name}')
+        require(manifest['native_library']['path'] == str(HISTORICAL_TORCH_NATIVE)
+                and manifest['native_library']['sha256'] == sha(HISTORICAL_TORCH_NATIVE),
+                'historical native producer mismatch')
 
 
 def controller(directory, result_path, manifest_path, sources):
@@ -186,8 +216,17 @@ def verify(directory):
     require(native['disposition'] == 'evaluated_not_promoted'
             and native['promotion_limit'] == 'small synthetic fixture; no general speedup or biological claim',
             'native promotion scope changed')
-    require(native['producer_package_sha256'] == sha(CT_PACKAGE / '__init__.py')
-            and native['native_library_sha256'] == sha(CT_NATIVE), 'native runtime identity mismatch')
+    if 'cellerator_artifacts_sha256' in native:
+        distribution, artifacts = installed_cellerator_artifacts()
+        require(native['cellerator_version'] == distribution.version
+                and native['cellerator_artifacts_sha256'] == artifacts,
+                'installed Cellerator distribution identity mismatch')
+    else:
+        # The retained result predates absorption and stays tied to its recorded
+        # installed component and binary hashes.
+        require(native['producer_package_sha256'] == sha(HISTORICAL_TORCH_PACKAGE / '__init__.py')
+                and native['native_library_sha256'] == sha(HISTORICAL_TORCH_NATIVE),
+                'historical native runtime identity mismatch')
     for name in ('native', 'torch'):
         require(number(native['final_loss'][name], 'final loss') < number(native['initial_loss'][name], 'initial loss'),
                 f'{name} training did not improve')

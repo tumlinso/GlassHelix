@@ -1,0 +1,177 @@
+{
+  "biological_status": "not_run",
+  "bridge": {
+    "coefficient_id": 401,
+    "derivative_z": 2.2100000381469727,
+    "domain_id": 101,
+    "evidence_id": 8001,
+    "expected_output": 1.7680000066757202,
+    "forcing": 1.0,
+    "geometry_id": 103,
+    "hypothesis_label": "synthetic-product-7001-v1",
+    "input_x": 1.2999999523162842,
+    "local_z": 0.800000011920929,
+    "mechanism_id": 501,
+    "mechanism_label": "joint_product",
+    "modality": "synthetic",
+    "model_id": 7001,
+    "model_revision": 1,
+    "observed_mask": 1,
+    "order_id": 102,
+    "parameter_domain_id": 301,
+    "parameter_extent": 1,
+    "parameter_generation": 401,
+    "parameter_geometry_id": 303,
+    "parameter_order_id": 302,
+    "parameter_partition_id": 304,
+    "partition_id": 104,
+    "sampling_id": "fixture0",
+    "scale": 1,
+    "shared_coefficient": 1.7000000476837158,
+    "source_extent": 2,
+    "state_generation": 1,
+    "structure_epoch": 1,
+    "structure_id": 105,
+    "target_domain_id": 201,
+    "target_extent": 1,
+    "target_geometry_id": 203,
+    "target_order_id": 202,
+    "target_partition_id": 204,
+    "time": 3,
+    "time_units": "hours",
+    "tolerance": 2e-05,
+    "units": "arbitrary"
+  },
+  "bridge_values": "/tmp/gh-native-owner.bridge-values.txt",
+  "cellerator_artifacts_sha256": {
+    "cellerator/.libs/libcellerator_product2.so": "f2c907b06b00911e2952dc72d2391a35329c4794b330bc3abaa3fdafea71ac61",
+    "cellerator/__init__.py": "323723fec1bc5ceb717c47ce583abd5aeeaf9fa87243016cd63d929c0e1bb8e8",
+    "cellerator/__pycache__/__init__.cpython-313.pyc": "e4b3e065033d38c2907aac5d9bf86eeba89a56bf9954163be862cce4d1b653e2",
+    "cellerator/__pycache__/_declarations.cpython-313.pyc": "866491cff8a7c9e28b5ed803cd61ee316203f8aa8c4857182eb67ee027825c59",
+    "cellerator/_declarations.py": "605b0cb70415454224303d43b3ff52e2580bbc1813eff8079161f6031d253d93",
+    "cellerator/_native.cpython-313-x86_64-linux-gnu.so": "3372ece12178909ef989d725eea12d3135fc204308dd36cc9b6dbe205af8978a",
+    "cellerator/torch/__init__.py": "1bdd755f7a66c9ea7e3b814b4ffcb542551414d297b4fe51b8de5d5438f317b1",
+    "cellerator/torch/__pycache__/__init__.cpython-313.pyc": "eaa4aa9dbdd0730d85e15d3e9504d2fdf55f39b619c7244d76fb888d7bdd6224",
+    "cellerator/torch/__pycache__/biology.cpython-313.pyc": "4c264b1f4a4e1c1e1a87a76b10cccc42eef9abd6583877706afa7bc3da87bb6f",
+    "cellerator/torch/__pycache__/mechanism.cpython-313.pyc": "8dc92106fded840d79d91d10ae5bdbc62d87cb7e9efa2ed1b7c21cb2ba8539c8",
+    "cellerator/torch/__pycache__/product2.cpython-313.pyc": "29d0a8f70b89d62257ba86acb9f14303dfe220bc4313e6435e13c2f5facc635f",
+    "cellerator/torch/_torch.cpython-313-x86_64-linux-gnu.so": "1031aa8db19b9b638d3359d9abccfde51e328bc31e22554ea336f17431ca8edc",
+    "cellerator/torch/biology.py": "f70c90e2e980429bff9cb2442e8e9378479dd5420b4ce05c8d2c250dfe3d4741",
+    "cellerator/torch/mechanism.py": "c03bd8ac0c33c30354ee93df3e8482f32f513015b0378487dff7dd0bfe2b5e16",
+    "cellerator/torch/product2.py": "3aeb83378643ae90827e514be4db04546df5124549f1fec8b335bbfed0de4a72"
+  },
+  "cellerator_version": "0.1.0",
+  "checkpoint": "/tmp/gh-native-owner.pt",
+  "checkpoint_sha256": "f9f8d61e331fa3047a834a9c06effcb27e2d38f6403a6ed0bf9c0a2dcd423916",
+  "checks": {
+    "checkpoint_fresh_process": true,
+    "complete_objective_gradient": true,
+    "evidence_permissions": true,
+    "frozen_conditioning": true,
+    "global_fit": true,
+    "native_training": true
+  },
+  "final_loss": 0.0,
+  "fresh_process_replay": "/tmp/gh-native-owner.replay.json",
+  "global_frozen": true,
+  "identity_mapping": {
+    "coefficient": {
+      "identity": [
+        401,
+        1401
+      ],
+      "label": "shared_k"
+    },
+    "hypothesis": {
+      "label": "synthetic-product-7001-v1",
+      "system_id": 7001
+    },
+    "mechanism": {
+      "identity": [
+        501,
+        1501
+      ],
+      "label": "joint_product"
+    },
+    "parameter_axis": {
+      "domain": [
+        301,
+        1301
+      ],
+      "geometry": [
+        303,
+        1303
+      ],
+      "order": [
+        302,
+        1302
+      ],
+      "partition": [
+        304,
+        1304
+      ],
+      "slots": [
+        "shared_k"
+      ]
+    },
+    "source_axis": {
+      "domain": [
+        101,
+        1101
+      ],
+      "geometry": [
+        103,
+        1103
+      ],
+      "order": [
+        102,
+        1102
+      ],
+      "partition": [
+        104,
+        1104
+      ],
+      "slots": [
+        "input_x",
+        "local_z*forcing"
+      ]
+    },
+    "target_axis": {
+      "domain": [
+        201,
+        1201
+      ],
+      "geometry": [
+        203,
+        1203
+      ],
+      "order": [
+        202,
+        1202
+      ],
+      "partition": [
+        204,
+        1204
+      ],
+      "slots": [
+        "response"
+      ]
+    }
+  },
+  "initial_loss": 1.7493337392807007,
+  "local_residual": 0.0,
+  "manifest": "/tmp/gh-native-owner.manifest.json",
+  "native_joint_product_trained": true,
+  "native_library_sha256": "3372ece12178909ef989d725eea12d3135fc204308dd36cc9b6dbe205af8978a",
+  "ok": true,
+  "producer_package_sha256": "323723fec1bc5ceb717c47ce583abd5aeeaf9fa87243016cd63d929c0e1bb8e8",
+  "scope": "synthetic installed consumer; biological validation not_run",
+  "shared_coefficient": 1.7000000476837158,
+  "source_commit": "550df30a247ef9c23c7e772c3492189cac840d8c",
+  "source_hashes": {
+    "consumer": "5263462bd8de149c3975aff8241f80f16c65d82fd65086288ebc4fff18e835ea",
+    "learning": "c94abed642bd1fc7d10c4fc49adf1a5f34350d3332fb03784907445afb6a1320"
+  },
+  "status": "passed",
+  "torch_adapter_sha256": "1031aa8db19b9b638d3359d9abccfde51e328bc31e22554ea336f17431ca8edc"
+}

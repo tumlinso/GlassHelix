@@ -6,6 +6,7 @@ from collections import defaultdict
 import csv
 import hashlib
 import importlib
+from importlib import metadata
 import json
 import math
 import os
@@ -14,6 +15,7 @@ import subprocess
 import sys
 import time
 
+import numpy as np
 import torch
 from torch import nn
 
@@ -126,13 +128,19 @@ class PopulationRelation(nn.Module):
         initial = torch.tensor([.1] * 5, device=device) if initial is None else initial.to(device)
         self.native = native
         if native:
-            from celleratorch import Axis, Identity
-            from celleratorch.biology import SharedSupportRelation, SharedSupportSpec
+            from cellerator import (Axis, Identity, SharedSupportSpec,
+                                    prepare_mechanism)
+            from cellerator.torch import SharedSupportRelation
             def axis(base, size):
                 return Axis(*(Identity(base + i, 1000 + base + i) for i in range(4)), size)
             spec = SharedSupportSpec(axis(10, 3), axis(20, 2), axis(30, 5),
                                      tuple(Identity(100 + i, 200 + i) for i in range(5)), SRC, DST)
-            self.relation = SharedSupportRelation(spec, initial, max_batch=8, max_live_forwards=8)
+            handle = prepare_mechanism(
+                spec.mechanism_spec(),
+                np.ascontiguousarray(initial.detach().cpu().numpy(), dtype=np.float32),
+                device=str(initial.device), max_batch=8, max_live_forwards=8,
+                precision='f32')
+            self.relation = SharedSupportRelation.from_handle(spec, handle)
         else:
             self.weights = nn.Parameter(initial.clone())
         self.register_buffer('src', torch.tensor(SRC, device=device))
@@ -214,8 +222,11 @@ def train_controls(problem, gh):
 
 def gpu_compare(problem):
     """Same graph, inputs, initialization, loss and Adam; complete cost interval."""
-    from celleratorch import guarded_step
-    import celleratorch
+    from cellerator import _native as cellerator_native
+    from cellerator.torch import _torch as cellerator_torch_native
+    from cellerator.torch import guarded_step
+    import cellerator
+    import cellerator.torch as cellerator_torch_adapter
     if len(problem['train']['inputs']) > 8 or len(problem['test']['inputs']) > 8:
         raise ValueError('bounded native pilot capacity is eight observations per split')
     models, setup = {}, {}
@@ -302,6 +313,22 @@ def gpu_compare(problem):
     with torch.no_grad():
         xx = problem['test']['inputs'].cuda()
         torch.testing.assert_close(models['native'](xx), models['torch'](xx), rtol=3e-4, atol=3e-5)
+    distribution = metadata.distribution('cellerator')
+    artifacts, artifact_paths = {}, set()
+    for relative in distribution.files or ():
+        relative = Path(relative)
+        if relative.parts[:1] != ('cellerator',):
+            continue
+        installed = Path(distribution.locate_file(relative)).resolve()
+        if installed.is_file():
+            artifacts[str(relative)] = hashlib.sha256(installed.read_bytes()).hexdigest()
+            artifact_paths.add(installed)
+    if not artifacts or not any(Path(name).name.startswith('_native') for name in artifacts):
+        raise RuntimeError('installed Cellerator package files or core extension are missing')
+    imported_modules = (cellerator.__file__, cellerator_native.__file__,
+                        cellerator_torch_adapter.__file__, cellerator_torch_native.__file__)
+    if any(Path(module_path).resolve() not in artifact_paths for module_path in imported_modules):
+        raise RuntimeError('imported Cellerator module is not listed in the installed distribution')
     return {'status': 'passed', 'initial_loss': initial, 'final_loss': final,
             'batch_sizes': [len(problem['train']['inputs']), len(problem['test']['inputs'])],
             'native_coefficients_trained': True, 'same_graph_forward_and_objective_vjp': True,
@@ -311,8 +338,11 @@ def gpu_compare(problem):
             'costs': costs, 'disposition': 'evaluated_not_promoted',
             'cost_comparison': 'native_slower' if costs['native']['setup_plus_five_iterations_seconds'] >= costs['torch']['setup_plus_five_iterations_seconds'] else 'native_faster_in_bounded_fixture',
             'promotion_limit': 'small synthetic fixture; no general speedup or biological claim',
-            'producer_package_sha256': hashlib.sha256(Path(celleratorch.__file__).read_bytes()).hexdigest(),
-            'native_library_sha256': hashlib.sha256(Path(os.environ['CELLERATORCH_NATIVE_LIBRARY']).read_bytes()).hexdigest()}
+            'producer_package_sha256': hashlib.sha256(Path(cellerator.__file__).read_bytes()).hexdigest(),
+            'native_library_sha256': hashlib.sha256(Path(cellerator_native.__file__).read_bytes()).hexdigest(),
+            'torch_adapter_sha256': hashlib.sha256(Path(cellerator_torch_native.__file__).read_bytes()).hexdigest(),
+            'cellerator_version': distribution.version,
+            'cellerator_artifacts_sha256': artifacts}
 
 
 def run(records, manifest, *, fixture=False, gpu=False, cutoff=12, gh_prefix='/tmp/gh-ml2-installed-sdk'):

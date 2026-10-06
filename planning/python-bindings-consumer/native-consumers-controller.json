@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "project_root": "/home/tumlinson/GlassHelix",
+  "command_cwd": "/home/tumlinson/GlassHelix",
+  "recipe": "baseline",
+  "argv": [
+    "/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python",
+    "-B",
+    "/home/tumlinson/GlassHelix/planning/python-bindings-consumer/validate_native_consumers.py"
+  ],
+  "resources": {
+    "gpus": 1,
+    "cpu_threads": 4
+  },
+  "paths": [
+    "tests/learning/installed_consumer.py",
+    "experiments/celltag_reprogramming/pilot.py",
+    "planning/python-bindings-consumer"
+  ],
+  "timeout": 1200
+}

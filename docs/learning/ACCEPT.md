@@ -4,7 +4,7 @@ Toolkit and independent client engineering are qualified on controlled fixtures.
 
 The selected construction is the shared-support effective relation `y=a*(W*(s*x))`, composed from native Cellerator and ordinary Torch activity functions. It retains duplicate logical edge identities and their gradient contributions. The separate joint-product TRAIN path actually fits a native-owned shared coefficient, freezes it for local state/forcing conditioning, preserves ambiguity, and resolves a controlled ambiguity with an aligned independent observation. Explicit row/source/time correspondence prevents unrelated activity measurements entering conditioning. Whole alternatives remain scientific state.
 
-Actual installed GH/CT GPU consumers trained coefficients, checked complete-objective gradients, saved through the native owner and reproduced predictions/selected responses in a fresh subprocess. An independently built public installed GH typed system/readout links to the published CE arithmetic/differential SDK and matches the same frozen scientific axes, checkpoint values, prediction and selected JVP. Neither client includes CE private source or supplies another numerical runtime.
+Retained installed GH and Cellerator-adapter GPU consumers trained coefficients, checked complete-objective gradients, saved through the native owner and reproduced predictions/selected responses in a fresh subprocess. Those receipts describe the pre-absorption package paths and remain historical evidence tied to their recorded hashes. An independently built public installed GH typed system/readout links to the published CE arithmetic/differential SDK and matches the same frozen scientific axes, checkpoint values, prediction and selected JVP. Neither client includes CE private source or supplies another numerical runtime.
 
 ## Qualified capabilities and costs
 
@@ -16,7 +16,7 @@ Memory fields measure the Torch process allocator with both graphs resident. Ext
 
 ## Reproduce or supply real inputs
 
-Pinned execution uses Python/Torch at `/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126`, native library `/home/tumlinson/Software/cellerator-ml2-python/lib/libcellera_torch_mechanism.so`, GH public SDK `/tmp/gh-ml2-installed-sdk`, and published CE SDK `/home/tumlinson/Cellerator/build-ml2-cpp`. Rebuild/reinstall the GH prefix with `docs/learning/check_native_bridge.py --fixture` if that temporary prefix expires. Final qualified numerical GH source is `9dcc8db54a0194408b50082394e2ed8ad576661b`; pilot source is `854176133c96291269008fe36b8dc2abeb878ecd`. CE SDK native build identity is `009a5579c1facec8c3bce3c36f6764c9f49ab97c`; the producer receipts pin actual wrapper/library/archive hashes rather than requiring unrelated latest commits to rebuild unchanged native code.
+The retained execution used Python/Torch at `/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126`, the recorded native adapter binary, GH public SDK `/tmp/gh-ml2-installed-sdk`, and published CE SDK `/home/tumlinson/Cellerator/build-ml2-cpp`. These paths identify the historical run only. Current consumers import the installed `cellerator` distribution and hash the imported `_native` and optional `_torch` modules. Rebuild/reinstall the GH prefix with `docs/learning/check_native_bridge.py --fixture` if that temporary prefix expires. Final qualified numerical GH source is `9dcc8db54a0194408b50082394e2ed8ad576661b`; pilot source is `854176133c96291269008fe36b8dc2abeb878ecd`. CE SDK native build identity is `009a5579c1facec8c3bce3c36f6764c9f49ab97c`; the producer receipts pin actual wrapper/library/archive hashes rather than requiring unrelated latest commits to rebuild unchanged native code.
 
 Read-only retained qualification:
 
@@ -25,13 +25,12 @@ python3 -B docs/learning/verify_learn_evidence.py --require-native
 python3 -B docs/learning/verify_pilot_evidence.py
 ```
 
-Under an assigned CUDA controller lease, the independent fixture invocation is:
+For a current native run, install Cellerator and its optional Torch integration in the same environment, then use the installed GH SDK. The package locates its native extensions through the installed distribution; no development-tree library variable is needed. Under an assigned CUDA controller lease, run:
 
 ```sh
-CELLERATORCH_NATIVE_LIBRARY=/home/tumlinson/Software/cellerator-ml2-python/lib/libcellera_torch_mechanism.so \
-/home/tumlinson/Software/venvs/cellerator-ml2-py313-cu126/bin/python -B \
--m experiments.celltag_reprogramming.pilot --fixture --gpu \
---gh-prefix /tmp/gh-ml2-installed-sdk --output docs/learning/pilot-evidence/pilot.json
+python -m pip install "/home/tumlinson/Cellerator[torch]"
+python -B -m experiments.celltag_reprogramming.pilot --fixture --gpu \
+  --gh-prefix /tmp/gh-ml2-installed-sdk --output /tmp/pilot-current.json
 ```
 
 For real data, replace `--fixture` with `--records` and `--feature-manifest`, using the documented processed CSV contract and a frozen training-only manifest. The client excludes perturbation arms and ATAC-derived features, preserves original labels and audits clone-disjoint splits. It fits a cross-sectional effective RNA response; it does not fabricate individual histories or infer fate probabilities from sampled clone abundance.

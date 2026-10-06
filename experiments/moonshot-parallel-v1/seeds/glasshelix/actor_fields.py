@@ -1,7 +1,7 @@
 """Ordinary Torch witnesses for two optional model families.
 
 No CE kernel duplicates, no inference of biological identity. Native integration
-belongs in CelleraTorch. These references do not silently choose native execution.
+belongs in the optional `cellerator.torch` adapter. These references do not silently choose native execution.
 """
 from __future__ import annotations
 import torch

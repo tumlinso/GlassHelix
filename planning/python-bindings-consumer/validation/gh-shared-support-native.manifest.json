@@ -1,0 +1,385 @@
+{
+  "biological_status": "not_run",
+  "data_source_sha256": "0fbe6b083862bd1a2a473812ee95b5dd75a7f3a18d7dfa106513f34e9a56f62c",
+  "feature_manifest": {
+    "inputs": [
+      "fixture_rna_x0",
+      "fixture_rna_x1",
+      "fixture_rna_x2"
+    ],
+    "sha256": "dfcc84ff700485cf5063bc39b70432f8f25c58caa32cba67882dc328efccb807",
+    "targets": [
+      "fixture_rna_y0",
+      "fixture_rna_y1"
+    ]
+  },
+  "fit_evidence": {
+    "flexible_same_information": {
+      "correspondence_ids": null,
+      "evidence_ids": [
+        "fixture_sample_11|fixture_cell_1|fixture_rep_2",
+        "fixture_sample_11|fixture_cell_4|fixture_rep_1",
+        "fixture_sample_12|fixture_cell_2|fixture_rep_1",
+        "fixture_sample_12|fixture_cell_5|fixture_rep_2",
+        "fixture_sample_12|fixture_cell_7|fixture_rep_2",
+        "fixture_sample_3|fixture_cell_0|fixture_rep_1",
+        "fixture_sample_3|fixture_cell_3|fixture_rep_2",
+        "fixture_sample_3|fixture_cell_6|fixture_rep_1"
+      ],
+      "mask": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      "modality": "RNA",
+      "observed_values": [
+        0.2761670649051666,
+        0.15541324019432068,
+        0.304219126701355,
+        0.2604617476463318,
+        0.24112410843372345,
+        0.20524773001670837,
+        0.15421131253242493,
+        0.2756955623626709,
+        0.21819187700748444,
+        0.10695242881774902,
+        0.15088973939418793,
+        0.18232864141464233,
+        0.19022944569587708,
+        0.2296261042356491,
+        0.16927470266819
+      ],
+      "sha256": "1534fb9ee99ff2fe6a2e6153e899b638ecfea04a327a96798ea9d2d446d16334",
+      "source_id": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+      "split": "train",
+      "times": [
+        11.0,
+        11.0,
+        12.0,
+        12.0,
+        12.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "snapshot_only": {
+      "correspondence_ids": null,
+      "evidence_ids": [
+        "fixture_sample_11|fixture_cell_1|fixture_rep_2",
+        "fixture_sample_11|fixture_cell_4|fixture_rep_1",
+        "fixture_sample_12|fixture_cell_2|fixture_rep_1",
+        "fixture_sample_12|fixture_cell_5|fixture_rep_2",
+        "fixture_sample_12|fixture_cell_7|fixture_rep_2",
+        "fixture_sample_3|fixture_cell_0|fixture_rep_1",
+        "fixture_sample_3|fixture_cell_3|fixture_rep_2",
+        "fixture_sample_3|fixture_cell_6|fixture_rep_1"
+      ],
+      "mask": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      "modality": "RNA",
+      "observed_values": [
+        0.2761670649051666,
+        0.15541324019432068,
+        0.304219126701355,
+        0.2604617476463318,
+        0.24112410843372345,
+        0.20524773001670837,
+        0.15421131253242493,
+        0.2756955623626709,
+        0.21819187700748444,
+        0.10695242881774902,
+        0.15088973939418793,
+        0.18232864141464233,
+        0.19022944569587708,
+        0.2296261042356491,
+        0.16927470266819
+      ],
+      "sha256": "1534fb9ee99ff2fe6a2e6153e899b638ecfea04a327a96798ea9d2d446d16334",
+      "source_id": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+      "split": "train",
+      "times": [
+        11.0,
+        11.0,
+        12.0,
+        12.0,
+        12.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "structured_torch": {
+      "correspondence_ids": null,
+      "evidence_ids": [
+        "fixture_sample_11|fixture_cell_1|fixture_rep_2",
+        "fixture_sample_11|fixture_cell_4|fixture_rep_1",
+        "fixture_sample_12|fixture_cell_2|fixture_rep_1",
+        "fixture_sample_12|fixture_cell_5|fixture_rep_2",
+        "fixture_sample_12|fixture_cell_7|fixture_rep_2",
+        "fixture_sample_3|fixture_cell_0|fixture_rep_1",
+        "fixture_sample_3|fixture_cell_3|fixture_rep_2",
+        "fixture_sample_3|fixture_cell_6|fixture_rep_1"
+      ],
+      "mask": [
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          false
+        ],
+        [
+          true,
+          true
+        ],
+        [
+          true,
+          true
+        ]
+      ],
+      "modality": "RNA",
+      "observed_values": [
+        0.2761670649051666,
+        0.15541324019432068,
+        0.304219126701355,
+        0.2604617476463318,
+        0.24112410843372345,
+        0.20524773001670837,
+        0.15421131253242493,
+        0.2756955623626709,
+        0.21819187700748444,
+        0.10695242881774902,
+        0.15088973939418793,
+        0.18232864141464233,
+        0.19022944569587708,
+        0.2296261042356491,
+        0.16927470266819
+      ],
+      "sha256": "1534fb9ee99ff2fe6a2e6153e899b638ecfea04a327a96798ea9d2d446d16334",
+      "source_id": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+      "split": "train",
+      "times": [
+        11.0,
+        11.0,
+        12.0,
+        12.0,
+        12.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "fixture": true,
+  "format": "celltag-pilot-evidence-v1",
+  "installed_gh_sha256": "c94abed642bd1fc7d10c4fc49adf1a5f34350d3332fb03784907445afb6a1320",
+  "native_comparison": {
+    "batch_sizes": [
+      8,
+      3
+    ],
+    "cellerator_artifacts_sha256": {
+      "cellerator/.libs/libcellerator_product2.so": "f2c907b06b00911e2952dc72d2391a35329c4794b330bc3abaa3fdafea71ac61",
+      "cellerator/__init__.py": "323723fec1bc5ceb717c47ce583abd5aeeaf9fa87243016cd63d929c0e1bb8e8",
+      "cellerator/__pycache__/__init__.cpython-313.pyc": "e4b3e065033d38c2907aac5d9bf86eeba89a56bf9954163be862cce4d1b653e2",
+      "cellerator/__pycache__/_declarations.cpython-313.pyc": "866491cff8a7c9e28b5ed803cd61ee316203f8aa8c4857182eb67ee027825c59",
+      "cellerator/_declarations.py": "605b0cb70415454224303d43b3ff52e2580bbc1813eff8079161f6031d253d93",
+      "cellerator/_native.cpython-313-x86_64-linux-gnu.so": "3372ece12178909ef989d725eea12d3135fc204308dd36cc9b6dbe205af8978a",
+      "cellerator/torch/__init__.py": "1bdd755f7a66c9ea7e3b814b4ffcb542551414d297b4fe51b8de5d5438f317b1",
+      "cellerator/torch/__pycache__/__init__.cpython-313.pyc": "eaa4aa9dbdd0730d85e15d3e9504d2fdf55f39b619c7244d76fb888d7bdd6224",
+      "cellerator/torch/__pycache__/biology.cpython-313.pyc": "4c264b1f4a4e1c1e1a87a76b10cccc42eef9abd6583877706afa7bc3da87bb6f",
+      "cellerator/torch/__pycache__/mechanism.cpython-313.pyc": "8dc92106fded840d79d91d10ae5bdbc62d87cb7e9efa2ed1b7c21cb2ba8539c8",
+      "cellerator/torch/__pycache__/product2.cpython-313.pyc": "29d0a8f70b89d62257ba86acb9f14303dfe220bc4313e6435e13c2f5facc635f",
+      "cellerator/torch/_torch.cpython-313-x86_64-linux-gnu.so": "1031aa8db19b9b638d3359d9abccfde51e328bc31e22554ea336f17431ca8edc",
+      "cellerator/torch/biology.py": "f70c90e2e980429bff9cb2442e8e9378479dd5420b4ce05c8d2c250dfe3d4741",
+      "cellerator/torch/mechanism.py": "c03bd8ac0c33c30354ee93df3e8482f32f513015b0378487dff7dd0bfe2b5e16",
+      "cellerator/torch/product2.py": "3aeb83378643ae90827e514be4db04546df5124549f1fec8b335bbfed0de4a72"
+    },
+    "cellerator_version": "0.1.0",
+    "cost_comparison": "native_faster_in_bounded_fixture",
+    "costs": {
+      "native": {
+        "baseline_allocated_bytes": 17070080,
+        "first_training_iteration_after_equivalence_seconds": 0.07286869300151011,
+        "five_complete_iterations_seconds": 0.02112426499661524,
+        "mean_complete_iteration_seconds": 0.004224852999323047,
+        "model_setup_seconds": 0.0026985400036210194,
+        "optimizer_setup_seconds": 6.302799738477916e-05,
+        "peak_allocated_bytes": 17075712,
+        "peak_increment_bytes": 5632,
+        "peak_reserved_bytes": 23068672,
+        "resident_models": "both candidate graphs and optimizer states; memory is process allocation",
+        "setup_plus_first_training_iteration_seconds": 0.07563026100251591,
+        "setup_plus_five_iterations_seconds": 0.023885832997621037,
+        "setup_seconds": 0.0027615680010057986,
+        "timed_phases": [
+          "CPU-to-CUDA conversion",
+          "activity generation",
+          "relation forward",
+          "masked objective",
+          "backward",
+          "Adam/guarded publication",
+          "synchronize",
+          "scalar transfer"
+        ]
+      },
+      "torch": {
+        "baseline_allocated_bytes": 17062400,
+        "first_training_iteration_after_equivalence_seconds": 0.04640535200451268,
+        "five_complete_iterations_seconds": 0.024176692000764888,
+        "mean_complete_iteration_seconds": 0.004835338400152977,
+        "model_setup_seconds": 0.0027963500033365563,
+        "optimizer_setup_seconds": 0.00010672800272004679,
+        "peak_allocated_bytes": 17068544,
+        "peak_increment_bytes": 6144,
+        "peak_reserved_bytes": 23068672,
+        "resident_models": "both candidate graphs and optimizer states; memory is process allocation",
+        "setup_plus_first_training_iteration_seconds": 0.04930843001056928,
+        "setup_plus_five_iterations_seconds": 0.02707977000682149,
+        "setup_seconds": 0.002903078006056603,
+        "timed_phases": [
+          "CPU-to-CUDA conversion",
+          "activity generation",
+          "relation forward",
+          "masked objective",
+          "backward",
+          "Adam/guarded publication",
+          "synchronize",
+          "scalar transfer"
+        ]
+      }
+    },
+    "disposition": "evaluated_not_promoted",
+    "final_loss": {
+      "native": 3.882486271322705e-05,
+      "torch": 3.882485179929063e-05
+    },
+    "fitted_native_coefficients": [
+      0.2040456384420395,
+      0.2040456384420395,
+      0.30302494764328003,
+      0.49799397587776184,
+      0.00950581207871437
+    ],
+    "initial_loss": {
+      "native": 0.019275415688753128,
+      "torch": 0.019275415688753128
+    },
+    "initial_native_coefficients": [
+      0.10000000149011612,
+      0.10000000149011612,
+      0.10000000149011612,
+      0.10000000149011612,
+      0.10000000149011612
+    ],
+    "native_coefficients_trained": true,
+    "native_library_sha256": "3372ece12178909ef989d725eea12d3135fc204308dd36cc9b6dbe205af8978a",
+    "producer_package_sha256": "323723fec1bc5ceb717c47ce583abd5aeeaf9fa87243016cd63d929c0e1bb8e8",
+    "promotion_limit": "small synthetic fixture; no general speedup or biological claim",
+    "same_graph_adam_update": true,
+    "same_graph_forward_and_objective_vjp": true,
+    "status": "passed",
+    "torch_adapter_sha256": "1031aa8db19b9b638d3359d9abccfde51e328bc31e22554ea336f17431ca8edc"
+  },
+  "permissions": {
+    "ATAC_withheld": true,
+    "RNA_only": true,
+    "clone_ID_predictor": false,
+    "clone_split_isolation_audited": true,
+    "training_only_feature_manifest": true,
+    "training_time_cutoff": 12
+  },
+  "pilot_source_sha256": "b032d13fb92d91714c8dbbee45247470d02843e86d40c781073e7d518a847a5b",
+  "protocol": "blind_population_law",
+  "records_path": "/tmp/gh-shared-support-native.records.csv",
+  "records_sha256": "ff7ddcf95dc5ca3a6a6b770f0430f2746cd688f4573a8d3d2c4b32759e36d73a",
+  "reference_source_sha256": "3e4ab2e8507640b509417080cc3076c3e74a7ffb6c1c6ee083d35fc65178edc1",
+  "source_commit": "550df30a247ef9c23c7e772c3492189cac840d8c",
+  "source_hashes": {
+    "data": "0fbe6b083862bd1a2a473812ee95b5dd75a7f3a18d7dfa106513f34e9a56f62c",
+    "learning": "c94abed642bd1fc7d10c4fc49adf1a5f34350d3332fb03784907445afb6a1320",
+    "pilot": "b032d13fb92d91714c8dbbee45247470d02843e86d40c781073e7d518a847a5b",
+    "reference": "3e4ab2e8507640b509417080cc3076c3e74a7ffb6c1c6ee083d35fc65178edc1",
+    "test_pilot": "967008f01d4972cd6e37c9a0a21df5d3e7b989c017bf195cdec9cf384bfa51ef"
+  },
+  "test_source_sha256": "967008f01d4972cd6e37c9a0a21df5d3e7b989c017bf195cdec9cf384bfa51ef"
+}
