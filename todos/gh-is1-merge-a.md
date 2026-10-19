@@ -1,16 +1,18 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-IS1-MERGE-A: Integrate the scientific consumer surface
 
-Task revision: `405`; current project revision is in `todo-status.md`.
+Task revision: `497`; current project revision is in `todo-status.md`.
 
 ## Objective
 Merge independent specification/data/model/analysis/package work into the experiment built on Cellerator.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `integration_exclusive`
-- Result: `-`
+- Result: `validated`
 
 ## Next Action
 Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.

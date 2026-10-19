@@ -1,16 +1,18 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-IS1-MODELS: Compose scientific models from Cellerator mathematics
 
-Task revision: `405`; current project revision is in `todo-status.md`.
+Task revision: `497`; current project revision is in `todo-status.md`.
 
 ## Objective
 Consolidate plain matrix, actor-port and current ML2 model clients; extract reusable numerical logic downward.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `parallel_safe`
-- Result: `-`
+- Result: `implemented`
 
 ## Next Action
 Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.

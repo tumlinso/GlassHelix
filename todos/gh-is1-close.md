@@ -1,19 +1,23 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-IS1-CLOSE: Accept the scientific tool and the complete successor handoff
 
-Task revision: `405`; current project revision is in `todo-status.md`.
+Task revision: `497`; current project revision is in `todo-status.md`.
 
 ## Objective
 Resolve final findings and publish what is integrated, experimental, measured or deliberately still open.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `blocked`
+- Execution: `blocked_dependency`
 - Parallel policy: `integration_exclusive`
 - Result: `-`
 
 ## Next Action
 Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
+
+User hold (2026-10-03): defer packaging, frontends, provider delivery and final qualification while continuing native mechanics. Resume only after an explicit user instruction to resume this deferred scope and owner review of current prerequisite evidence; retain all existing completion/provider contracts.
 
 ## Ownership
 - `exclusive`: `CMakeLists.txt`

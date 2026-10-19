@@ -3,10 +3,11 @@
 <!-- todo-orchestrator:v2-managed:start -->
 # Todo Orchestrator v2 Projection
 
-Project revision: `416`
+Project revision: `510`
 
 ## Workstreams
 - `GH-NF1A-ADOPT` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Verify both successor imports; preserve completed contracts and partial S01 source; reconcile stale NF1 authority and retire only superseded unfinished legacy records. Bind actual runtime and gate commands.
+- `GH-PYBIND-CONSUMERS` | kind: task | status: done | parent: - | objective: Repair existing imports, installed-consumer evidence commands and documentation for the explicitly authorized Cellerator Python binding absorption; preserve all scientific behavior, current data and unrelated holds.
 - `GH-NF1A-CONTROL` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Serve as the strategic root and ordinary GlassHelix coordinator, delegate bounded work intelligently, coordinate the Cellerator seat and finish only after local RELEASE.
 - `GH-NF1A-SYSTEM` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Finish native linking and preserved S01 assembly, lower supplied n-ary systems to Cellerator, bind independent instances and implement maps, forcing, RK4, resident rollout and bounded primal checkpoints.
 - `GH-NF1A-ACCESS` | kind: task | status: done | parent: GH-NF1A-0000 | objective: Expose the same native implementation in Python, with correct array and asynchronous ownership, capability/failure inspection, logical replay artifacts and useful examples.
@@ -15,18 +16,18 @@ Project revision: `416`
 - `GH-NF1-COORD` | kind: task | status: superseded | parent: GH-NF1-0000 | objective: Hold the local coordinator seat while first-class lanes execute the accepted NF1 program. Complete only after local M90 qualification and delivery are verified, then close the original epic.
 - `GH-BOOTSTRAP` | kind: workstream | status: done | parent: - | objective: Reconcile and preserve repository state; establish authoritative scientific identity and four-project boundaries; bootstrap project and tool indexing; classify the archaeological repository without treating experiments as architecture.
 - `GH-IS1-ADOPT` | kind: task | status: done | parent: GH-IS1-000 | objective: After the global predecessor barrier, inventory the completed frontier, assign every useful behavior/unfinished obligation, and integrate the minimum contracts needed by parallel lanes.
-- `GH-IS1-ANALYSIS` | kind: task | status: planned | parent: GH-IS1-000 | objective: Unify response requests, perturbations, candidate comparison and evidence-labelled structural proposals.
-- `GH-IS1-BRIDGE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Bind scientific requests to a current, evidenced CE provider rather than a prototype receipt.
-- `GH-IS1-BUILD` | kind: task | status: planned | parent: GH-IS1-000 | objective: Integrate package entry points, installed CE consumption and reproducible result/replay paths.
-- `GH-IS1-CLOSE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Resolve final findings and publish what is integrated, experimental, measured or deliberately still open.
-- `GH-IS1-DATA` | kind: task | status: planned | parent: GH-IS1-000 | objective: Retain completed ML2 CellTag formulation/cohort work and make its evidence/splits reusable by experiment clients.
-- `GH-IS1-DOCS` | kind: task | status: planned | parent: GH-IS1-000 | objective: Publish intuitive scientific design, practical examples and supported results without disguising the unfinished frontier.
-- `GH-IS1-JOINT` | kind: task | status: planned | parent: GH-IS1-000 | objective: Run one bounded sequence-conditioned scientific witness through installed BP and CE components.
-- `GH-IS1-MERGE-A` | kind: task | status: planned | parent: GH-IS1-000 | objective: Merge independent specification/data/model/analysis/package work into the experiment built on Cellerator.
-- `GH-IS1-MODELS` | kind: task | status: planned | parent: GH-IS1-000 | objective: Consolidate plain matrix, actor-port and current ML2 model clients; extract reusable numerical logic downward.
-- `GH-IS1-PIPELINE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Exercise the current ML2 experiment and both useful moonshot model families through the integrated toolkit.
-- `GH-IS1-QUALIFY` | kind: task | status: planned | parent: GH-IS1-000 | objective: Check data/interpretation boundaries, requested derivatives and experiment-level costs with meaningful controls.
-- `GH-IS1-SCIENCE` | kind: task | status: planned | parent: GH-IS1-000 | objective: Make observations, models, hypotheses, conditioning and scientific result scope coherent without introducing general numerical ownership.
+- `GH-IS1-ANALYSIS` | kind: task | status: done | parent: GH-IS1-000 | objective: Unify response requests, perturbations, candidate comparison and evidence-labelled structural proposals.
+- `GH-IS1-BRIDGE` | kind: task | status: blocked | parent: GH-IS1-000 | objective: Bind scientific requests to a current, evidenced CE provider rather than a prototype receipt.
+- `GH-IS1-BUILD` | kind: task | status: done | parent: GH-IS1-000 | objective: Integrate package entry points, installed CE consumption and reproducible result/replay paths.
+- `GH-IS1-CLOSE` | kind: task | status: blocked | parent: GH-IS1-000 | objective: Resolve final findings and publish what is integrated, experimental, measured or deliberately still open.
+- `GH-IS1-DATA` | kind: task | status: done | parent: GH-IS1-000 | objective: Retain completed ML2 CellTag formulation/cohort work and make its evidence/splits reusable by experiment clients.
+- `GH-IS1-DOCS` | kind: task | status: blocked | parent: GH-IS1-000 | objective: Publish intuitive scientific design, practical examples and supported results without disguising the unfinished frontier.
+- `GH-IS1-JOINT` | kind: task | status: blocked | parent: GH-IS1-000 | objective: Run one bounded sequence-conditioned scientific witness through installed BP and CE components.
+- `GH-IS1-MERGE-A` | kind: task | status: done | parent: GH-IS1-000 | objective: Merge independent specification/data/model/analysis/package work into the experiment built on Cellerator.
+- `GH-IS1-MODELS` | kind: task | status: done | parent: GH-IS1-000 | objective: Consolidate plain matrix, actor-port and current ML2 model clients; extract reusable numerical logic downward.
+- `GH-IS1-PIPELINE` | kind: task | status: done | parent: GH-IS1-000 | objective: Exercise the current ML2 experiment and both useful moonshot model families through the integrated toolkit.
+- `GH-IS1-QUALIFY` | kind: task | status: blocked | parent: GH-IS1-000 | objective: Check data/interpretation boundaries, requested derivatives and experiment-level costs with meaningful controls.
+- `GH-IS1-SCIENCE` | kind: task | status: done | parent: GH-IS1-000 | objective: Make observations, models, hypotheses, conditioning and scientific result scope coherent without introducing general numerical ownership.
 - `GH-ML2-ACCEPT` | kind: task | status: done | parent: GH-ML2-0000 | objective: Accept the installed scientific client, selected CT/CE implementation, native-foundation connection and evidence boundaries as one useful slice.
 - `GH-ML2-DATA` | kind: task | status: done | parent: GH-ML2-0000 | objective: Build the CellTag experiment adapter/client boundary and audit the actual cohort without inventing trajectories or paired modalities.
 - `GH-ML2-DESIGN` | kind: task | status: done | parent: GH-ML2-0000 | objective: Turn the supplied design study into one small scientific model/reference and an explicit GH/CT/CE demand. This is deliberation at the hard boundary, not a new universal ML architecture.

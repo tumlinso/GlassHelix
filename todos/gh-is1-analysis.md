@@ -1,16 +1,18 @@
+
+
 <!-- todo-orchestrator:v2-managed:start -->
 # GH-IS1-ANALYSIS: Integrate interrogation and scientific refactoring proposals
 
-Task revision: `405`; current project revision is in `todo-status.md`.
+Task revision: `497`; current project revision is in `todo-status.md`.
 
 ## Objective
 Unify response requests, perturbations, candidate comparison and evidence-labelled structural proposals.
 
 ## State
-- Lifecycle: `planned`
-- Execution: `ready`
+- Lifecycle: `done`
+- Execution: `closed`
 - Parallel policy: `parallel_safe`
-- Result: `-`
+- Result: `implemented`
 
 ## Next Action
 Use the task brief and accepted predecessor source. Implement a substantive integrated outcome; bind real acceptance commands before completion. Do not split ordinary inspect/build/retry work into procedural tasks.
